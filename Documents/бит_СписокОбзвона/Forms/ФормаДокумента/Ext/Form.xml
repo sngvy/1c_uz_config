@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="20"/>
+		</InputField>
+		<InputField name="Дата" id="3">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<Pages name="Вкладки" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вкладки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вкладки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ВкладкиРасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<Page name="ПодборДО" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подбор долговых обязательств</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подбор ДО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПодборДОРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<Table name="Объекты" id="45">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Объекты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбъектыКонтекстноеМеню" id="46"/>
+							<AutoCommandBar name="ОбъектыКоманднаяПанель" id="47">
+								<ChildItems>
+									<Button name="ОбъектыПодбор" id="94">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОбъектыПодборРасширеннаяПодсказка" id="95"/>
+									</Button>
+									<Button name="ОбъектыПодборПоНастройкам" id="112">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<ExtendedTooltip name="ОбъектыПодборПоНастройкамРасширеннаяПодсказка" id="113"/>
+									</Button>
+									<Button name="ОбъектыПодборИзФайла" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<ExtendedTooltip name="ОбъектыПодборИзФайлаРасширеннаяПодсказка" id="115"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОбъектыРасширеннаяПодсказка" id="48"/>
+							<SearchStringAddition name="ОбъектыСтрокаПоиска" id="49">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыСтрокаПоискаКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ОбъектыСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбъектыСостояниеПросмотра" id="52">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыСостояниеПросмотраКонтекстноеМеню" id="53"/>
+								<ExtendedTooltip name="ОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбъектыУправлениеПоиском" id="55">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыУправлениеПоискомКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="ОбъектыУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбъектыНомерСтроки" id="58">
+									<DataPath>Объект.Объекты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыНомерСтрокиКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ОбъектыНомерСтрокиРасширеннаяПодсказка" id="60"/>
+								</LabelField>
+								<InputField name="ОбъектыОбъект" id="61">
+									<DataPath>Объект.Объекты.Объект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыОбъектКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ОбъектыОбъектРасширеннаяПодсказка" id="63"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СписокКонтрагентов" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список контрагентов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список контрагентов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СписокКонтрагентовРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаВидыТелефонов" id="96">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры видов телефонов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа виды телефонов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаВидыТелефоновРасширеннаяПодсказка" id="97"/>
+							<ChildItems>
+								<RadioButtonField name="ВидыТелефонов" id="98">
+									<DataPath>ВидыТелефонов</DataPath>
+									<RadioButtonType>RadioButtons</RadioButtonType>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Все</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Выбрать тип</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВидыТелефоновКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ВидыТелефоновРасширеннаяПодсказка" id="100"/>
+									<Events>
+										<Event name="OnChange">ВидыТелефоновПриИзменении</Event>
+									</Events>
+								</RadioButtonField>
+								<InputField name="Тип" id="101">
+									<DataPath>Тип</DataPath>
+									<ContextMenu name="ТипКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="103"/>
+								</InputField>
+								<CheckBoxField name="ПервыйНомер" id="104">
+									<DataPath>ПервыйНомер</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПервыйНомерКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ПервыйНомерРасширеннаяПодсказка" id="106"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Список" id="5">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Список</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокКонтекстноеМеню" id="6"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="7">
+								<ChildItems>
+									<Button name="СписокДляАОСоздатьСписок" id="107">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.СоздатьСписок</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.РедактироватьФайл</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="СписокДляАОСоздатьСписокРасширеннаяПодсказка" id="108"/>
+									</Button>
+									<Button name="СписокКнопкаОчиститьФлагОбработки" id="19">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОчиститьФлагОбработки</CommandName>
+										<ExtendedTooltip name="СписокКнопкаОчиститьФлагОбработкиРасширеннаяПодсказка" id="23"/>
+									</Button>
+									<Button name="СписокКнопкаПодборКонтрагентов" id="18">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Command.ПодборКонтрагентов</CommandName>
+										<ExtendedTooltip name="СписокКнопкаПодборКонтрагентовРасширеннаяПодсказка" id="22"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="24"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="25">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="26"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="27"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="28">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="30"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="31">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="32"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="33"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="ChoiceProcessing">СписокОбработкаВыбора</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокНомерСтроки" id="8">
+									<DataPath>Объект.Список.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокНомерСтрокиКонтекстноеМеню" id="9"/>
+									<ExtendedTooltip name="СписокНомерСтрокиРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<InputField name="СписокКонтрагент" id="12">
+									<DataPath>Объект.Список.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокКонтрагентКонтекстноеМеню" id="13"/>
+									<ExtendedTooltip name="СписокКонтрагентРасширеннаяПодсказка" id="35"/>
+									<Events>
+										<Event name="OnChange">СписокКонтрагентПриИзменении</Event>
+										<Event name="StartChoice">СписокКонтрагентНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="СписокКонтактноеЛицо" id="16">
+									<DataPath>Объект.Список.КонтактноеЛицо</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Контрагент</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.Список.CurrentData.Контрагент</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="СписокКонтактноеЛицоКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="СписокКонтактноеЛицоРасширеннаяПодсказка" id="36"/>
+									<Events>
+										<Event name="OnChange">СписокКонтактноеЛицоПриИзменении</Event>
+										<Event name="StartChoice">СписокКонтактноеЛицоНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="СписокВидТелефона" id="109">
+									<DataPath>Объект.Список.ВидТелефона</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокВидТелефонаКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="СписокВидТелефонаРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="СписокНомерТелефона" id="10">
+									<DataPath>Объект.Список.НомерТелефона</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="СписокНомерТелефонаКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="СписокНомерТелефонаРасширеннаяПодсказка" id="37"/>
+									<Events>
+										<Event name="StartListChoice">СписокНомерТелефонаНачалоВыбораИзСписка</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="СписокОбработан" id="14">
+									<DataPath>Объект.Список.Обработан</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СписокОбработанКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="СписокОбработанРасширеннаяПодсказка" id="38"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.бит_СписокОбзвона</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ВидыТелефонов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды телефонов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Тип" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВидыТелефонов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПервыйНомер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первый номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодборКонтрагентов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор контрагентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборКонтрагентов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОчиститьФлагОбработки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить флаг обработки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить флаг обработки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьФлагОбработки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подбор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьСписок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьСписок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПодборПоНастройкам" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по настройкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодборПоНастройкам</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПодборИзФайла" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Найти_</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодборИзФайла</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Абонент</dataPath>
+			<field>Абонент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗвонка</dataPath>
+			<field>ТипЗвонка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДлительностьЗвонка</dataPath>
+			<field>ДлительностьЗвонка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Успешность</dataPath>
+			<field>Успешность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пользователь</dataPath>
+			<field>Пользователь</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаписьРазговора</dataPath>
+			<field>ЗаписьРазговора</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтактноеЛицо</dataPath>
+			<field>КонтактноеЛицо</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НабранныйНомер</dataPath>
+			<field>НабранныйНомер</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СвойНомер</dataPath>
+			<field>СвойНомер</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	бит_ИсторияЗвонков.Дата КАК Дата,
+	бит_ИсторияЗвонков.Номер КАК Номер,
+	бит_ИсторияЗвонков.Абонент КАК Абонент,
+	бит_ИсторияЗвонков.КонтактноеЛицо КАК КонтактноеЛицо,
+	бит_ИсторияЗвонков.ТипЗвонка КАК ТипЗвонка,
+	бит_ИсторияЗвонков.Успешность КАК Успешность,
+	бит_ИсторияЗвонков.ДлительностьЗвонка КАК ДлительностьЗвонка,
+	бит_ИсторияЗвонков.Пользователь КАК Пользователь,
+	бит_ИсторияЗвонков.ЗаписьРазговора КАК ЗаписьРазговора,
+	бит_ИсторияЗвонков.СвойНомер КАК СвойНомер,
+	бит_ИсторияЗвонков.НабранныйНомер КАК НабранныйНомер
+ИЗ
+	РегистрСведений.бит_ИсторияЗвонков КАК бит_ИсторияЗвонков</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ДлительностьЗвонка</dataPath>
+		<expression>Количество(ДлительностьЗвонка)</expression>
+		<group>Абонент</group>
+		<group>Пользователь</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Абонент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДлительностьЗвонка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Дата</dcsset:left>
+					<dcsset:comparisonType>Greater</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcsset:right>
+					<dcsset:userSettingID>56cd0708-0669-4ec6-8174-c4b45e4b24ab</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Пользователь</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>81321848-2fd9-409c-9407-68385f3527cb</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Пользователь</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Успешность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Успешность</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Pink</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Яркий</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>История звонков</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Пользователь</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипЗвонка</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Дата</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Номер</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Абонент</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДлительностьЗвонка</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

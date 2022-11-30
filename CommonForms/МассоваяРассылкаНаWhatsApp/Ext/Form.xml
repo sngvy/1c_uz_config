@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаОПрограмме" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа о программе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа о программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОПрограммеРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<PictureDecoration name="ОПрограммеИконка" id="24">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>О программе иконка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.WA_DGFinance</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ОПрограммеИконкаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ОПрограммеИконкаРасширеннаяПодсказка" id="26"/>
+				</PictureDecoration>
+				<LabelDecoration name="ОПрограмме" id="9">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интеграция с WhatsApp версия 4.0
+ООО «ДиДжи Финанс Рус»</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ОПрограммеКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ОПрограммеРасширеннаяПодсказка" id="11"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Действия" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<Button name="ВыгрузкаНомеров" id="12">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>21</Width>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.ВыгрузкаНомеров</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка номеров</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыгрузкаНомеровРасширеннаяПодсказка" id="13"/>
+				</Button>
+				<Button name="ВыгрузкаШаблона" id="14">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>21</Width>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.ВыгрузкаШаблона</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выгрузка шаблона</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ВыгрузкаШаблонаРасширеннаяПодсказка" id="15"/>
+				</Button>
+				<Button name="ОтправитьБезДокумента" id="18">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.ОтправитьБезДокумента</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить без документа</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОтправитьБезДокументаРасширеннаяПодсказка" id="19"/>
+				</Button>
+				<Button name="ОтправитьСДокументом" id="16">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.ОтправитьСДокументом</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Document</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправить с документом</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОтправитьСДокументомРасширеннаяПодсказка" id="17"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ВыгрузкаНомеров" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка номеров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка номеров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузкаНомеров</Action>
+		</Command>
+		<Command name="ВыгрузкаШаблона" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка шаблона</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузка шаблона</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузкаШаблона</Action>
+		</Command>
+		<Command name="ОтправитьСДокументом" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить с документом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить с документом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьСДокументом</Action>
+		</Command>
+		<Command name="ОтправитьБезДокумента" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить без документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить без документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьБезДокумента</Action>
+		</Command>
+	</Commands>
+</Form>

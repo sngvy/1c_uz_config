@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Список участков</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ВыбратьИЗакрыть" id="8">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ВыбратьИЗакрыть</CommandName>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ExtendedTooltip name="ВыбратьИЗакрытьРасширеннаяПодсказка" id="9"/>
+		</Button>
+		<Table name="Участки" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Участки</DataPath>
+			<BorderColor>style:BorderColor</BorderColor>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УчасткиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="УчасткиКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УчасткиРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="УчасткиСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>Участки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчасткиСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="УчасткиСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УчасткиСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Участки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчасткиСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="УчасткиСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УчасткиУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Участки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УчасткиУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="УчасткиУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="УчасткиВыбрать" id="6">
+					<DataPath>Участки.Выбрать</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УчасткиВыбратьКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="УчасткиВыбратьРасширеннаяПодсказка" id="20"/>
+				</CheckBoxField>
+				<InputField name="УчасткиУчасток" id="4">
+					<DataPath>Участки.Участок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УчасткиУчастокКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="УчасткиУчастокРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПакетноеВыполнениеМероприятий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Участки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Участок" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Участок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Отделы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выбрать" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокУчастков" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список участков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Отделы</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьИЗакрыть" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьИЗакрыть</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>90</Width>
+	<Height>20</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПоказатьВсеГруппы" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПоказатьВсеГруппы</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Показать все группы</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>az</v8:lang>
+						<v8:content>Bütün qrupları göstərmək</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПоказатьВсеГруппыExtendedTooltip" id="51"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерExtendedTooltip" id="52"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Nömrə</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="53"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Tarix</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="54"/>
+				</InputField>
+				<CheckBoxField name="НаСервере" id="93">
+					<DataPath>Объект.НаСервере</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Хранить на сервере</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НаСервереКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="НаСервереРасширеннаяПодсказка" id="95"/>
+				</CheckBoxField>
+				<InputField name="Каталог" id="96">
+					<DataPath>Объект.Каталог</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="КаталогКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="98"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="5">
+			<DataPath>Объект.Организация</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Təşkilat</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="55"/>
+		</InputField>
+		<InputField name="Подразделение" id="7">
+			<DataPath>Объект.Подразделение</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Filial</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="56"/>
+		</InputField>
+		<Pages name="ГруппаОбъектУчета" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа объект учета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа объект учета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаОбъектУчетаExtendedTooltip" id="57"/>
+			<ChildItems>
+				<Page name="ОбъектУчета_Контрагенты" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета контрагенты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_КонтрагентыExtendedTooltip" id="58"/>
+					<ChildItems>
+						<InputField name="Контрагент" id="33">
+							<DataPath>Контрагент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контрагент</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>Borcalan</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="КонтрагентExtendedTooltip" id="59"/>
+							<Events>
+								<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектУчета_ДоговорыКонтрагентов" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета договоры контрагентов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета договоры контрагентов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_ДоговорыКонтрагентовExtendedTooltip" id="60"/>
+					<ChildItems>
+						<InputField name="ДоговорКонтрагента" id="36">
+							<DataPath>ДоговорКонтрагента</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ДоговорКонтрагентаКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ДоговорКонтрагентаExtendedTooltip" id="61"/>
+							<Events>
+								<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектУчета_УслугиПоДоговорам" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета услуги по договорам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета услуги по договорам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_УслугиПоДоговорамExtendedTooltip" id="62"/>
+					<ChildItems>
+						<InputField name="УслугаПоДоговору" id="39">
+							<DataPath>УслугаПоДоговору</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="УслугаПоДоговоруКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="УслугаПоДоговоруExtendedTooltip" id="63"/>
+							<Events>
+								<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектУчета_ДолговыеОбязательства" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета долговые обязательства</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета долговые обязательства</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_ДолговыеОбязательстваExtendedTooltip" id="64"/>
+					<ChildItems>
+						<InputField name="ДолговоеОбязательство" id="42">
+							<DataPath>ДолговоеОбязательство</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ДолговоеОбязательствоExtendedTooltip" id="65"/>
+							<Events>
+								<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектУчета_ИсполнительныеДокументы" id="44">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета исполнительные документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета исполнительные документы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_ИсполнительныеДокументыExtendedTooltip" id="66"/>
+					<ChildItems>
+						<InputField name="ИсполнительныйДокумент" id="45">
+							<DataPath>ИсполнительныйДокумент</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="ИсполнительныйДокументКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ИсполнительныйДокументExtendedTooltip" id="67"/>
+							<Events>
+								<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектУчета_Пусто" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета - пусто</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_ПустоExtendedTooltip" id="68"/>
+					<ChildItems>
+						<InputField name="Объект" id="48">
+							<DataPath>Объект.Объект</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ОбъектКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="ОбъектExtendedTooltip" id="69"/>
+							<Events>
+								<Event name="OnChange">ОбъектПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ОбъектУчета_ПартионнаяПочта" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета партионная почта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект учета контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбъектУчета_ПартионнаяПочтаРасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<InputField name="ПочтоваяПартия" id="113">
+							<DataPath>ПочтоваяПартия</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ПочтоваяПартияКонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="ПочтоваяПартияРасширеннаяПодсказка" id="115"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="РегистраторКорреспонденции" id="108">
+			<DataPath>Объект.РегистраторКорреспонденции</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Корреспонденция</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="РегистраторКорреспонденцииКонтекстноеМеню" id="109"/>
+			<ExtendedTooltip name="РегистраторКорреспонденцииРасширеннаяПодсказка" id="110"/>
+		</InputField>
+		<Table name="Файлы" id="17">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Файлы</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ФайлыКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ФайлыКоманднаяПанель" id="19"/>
+			<ExtendedTooltip name="ФайлыExtendedTooltip" id="70"/>
+			<SearchStringAddition name="ФайлыSearchString" id="99">
+				<AdditionSource>
+					<Item>Файлы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФайлыSearchStringContextMenu" id="100"/>
+				<ExtendedTooltip name="ФайлыSearchStringExtendedTooltip" id="101"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ФайлыViewStatus" id="102">
+				<AdditionSource>
+					<Item>Файлы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ФайлыViewStatusContextMenu" id="103"/>
+				<ExtendedTooltip name="ФайлыViewStatusExtendedTooltip" id="104"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ФайлыSearchControl" id="105">
+				<AdditionSource>
+					<Item>Файлы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ФайлыSearchControlContextMenu" id="106"/>
+				<ExtendedTooltip name="ФайлыSearchControlExtendedTooltip" id="107"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ФайлыПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ФайлыНомерСтроки" id="20">
+					<DataPath>Объект.Файлы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФайлыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ФайлыНомерСтрокиExtendedTooltip" id="71"/>
+				</LabelField>
+				<InputField name="ФайлыТипФайла" id="22">
+					<DataPath>Объект.Файлы.ТипФайла</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип файла</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Faylın tipi</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФайлыТипФайлаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ФайлыТипФайлаExtendedTooltip" id="72"/>
+				</InputField>
+				<InputField name="ФайлыПуть" id="24">
+					<DataPath>Объект.Файлы.Путь</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Yol</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ФайлыПутьКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ФайлыПутьExtendedTooltip" id="73"/>
+					<Events>
+						<Event name="OnChange">ФайлыПутьПриИзменении</Event>
+						<Event name="StartChoice">ФайлыПутьНачалоВыбора</Event>
+						<Event name="Opening">ФайлыПутьОткрытие</Event>
+					</Events>
+				</InputField>
+				<CheckBoxField name="ФайлыЗагружен" id="90">
+					<DataPath>Объект.Файлы.Загружен</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФайлыЗагруженКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ФайлыЗагруженРасширеннаяПодсказка" id="92"/>
+				</CheckBoxField>
+				<LabelField name="ФайлыУИД" id="87">
+					<DataPath>Объект.Файлы.УИД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФайлыУИДКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ФайлыУИДРасширеннаяПодсказка" id="89"/>
+				</LabelField>
+				<InputField name="ФайлыРазмер" id="29">
+					<DataPath>Объект.Файлы.Размер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Ölçü</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ФайлыРазмерКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ФайлыРазмерExtendedTooltip" id="74"/>
+					<Events>
+						<Event name="OnChange">ФайлыРазмерПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Автор" id="9">
+			<DataPath>Объект.Автор</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Müəllif</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="АвторКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="АвторExtendedTooltip" id="76"/>
+		</InputField>
+		<InputField name="Комментарий" id="11">
+			<DataPath>Объект.Комментарий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Şərh</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="77"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПрикрепитьФайлы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.Файлы"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="УслугаПоДоговору" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Услуга по договору</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.УслугиПоДоговору</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Контрагент" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Borcalan</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсполнительныйДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительный документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>İcraçı sənəd</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИсполнительныеДокументы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДолговоеОбязательство" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долговое обязательство</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Borc öhdəliyi</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоговорКонтрагента" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Borcalanın müqaviləsi</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДоговорыКонтрагентов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПочтоваяПартия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Почтовая партия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ПартионнаяПочта</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПоказатьВсеГруппы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать все группы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать все группы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+				<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+				<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+				<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+				<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+				<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+				<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+				<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+				<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+				<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+				<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+			</Use>
+			<Action>ПоказатьВсеГруппы</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

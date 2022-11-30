@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ЗагруженныеДанные" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ЗагруженныеДанные</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗагруженныеДанныеКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ЗагруженныеДанныеКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ЗагруженныеДанныеРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ЗагруженныеДанныеСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ЗагруженныеДанные</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗагруженныеДанныеСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ЗагруженныеДанныеСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗагруженныеДанныеСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ЗагруженныеДанные</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗагруженныеДанныеСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ЗагруженныеДанныеСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗагруженныеДанныеУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ЗагруженныеДанные</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗагруженныеДанныеУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ЗагруженныеДанныеУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ЗагруженныеДанныеНомерСтроки" id="20">
+					<DataPath>Объект.ЗагруженныеДанные.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="ЗагруженныеДанныеДата" id="23">
+					<DataPath>Объект.ЗагруженныеДанные.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеДатаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеДатаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеСумма" id="26">
+					<DataPath>Объект.ЗагруженныеДанные.Сумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеСуммаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеСуммаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеЦессионарий" id="29">
+					<DataPath>Объект.ЗагруженныеДанные.Цессионарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеЦессионарийКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеЦессионарийРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеВидПлательщика" id="32">
+					<DataPath>Объект.ЗагруженныеДанные.ВидПлательщика</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеВидПлательщикаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеВидПлательщикаРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеПлательщик" id="35">
+					<DataPath>Объект.ЗагруженныеДанные.Плательщик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеПлательщикКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеПлательщикРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеНазначениеПлатежа" id="38">
+					<DataPath>Объект.ЗагруженныеДанные.НазначениеПлатежа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеНазначениеПлатежаКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеНазначениеПлатежаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеДолговоеОбязательство" id="41">
+					<DataPath>Объект.ЗагруженныеДанные.ДолговоеОбязательство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеДолговоеОбязательствоКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеДолговоеОбязательствоРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеСотрудник" id="50">
+					<DataPath>Объект.ЗагруженныеДанные.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеСотрудникКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеСотрудникРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеИсполнительныйДокумент" id="44">
+					<DataPath>Объект.ЗагруженныеДанные.ИсполнительныйДокумент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеИсполнительныйДокументКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеИсполнительныйДокументРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ЗагруженныеДанныеСтадияДО" id="47">
+					<DataPath>Объект.ЗагруженныеДанные.СтадияДО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗагруженныеДанныеСтадияДОКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ЗагруженныеДанныеСтадияДОРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РеестрПлатежей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

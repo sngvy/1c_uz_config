@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПогашениеЗадолженности" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПогашениеЗадолженности</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПогашениеЗадолженностиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПогашениеЗадолженностиКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ПогашениеЗадолженностиРасширеннаяПодсказка" id="26"/>
+			<SearchStringAddition name="ПогашениеЗадолженностиСтрокаПоиска" id="27">
+				<AdditionSource>
+					<Item>ПогашениеЗадолженности</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПогашениеЗадолженностиСтрокаПоискаКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ПогашениеЗадолженностиСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПогашениеЗадолженностиСостояниеПросмотра" id="30">
+				<AdditionSource>
+					<Item>ПогашениеЗадолженности</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПогашениеЗадолженностиСостояниеПросмотраКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ПогашениеЗадолженностиСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПогашениеЗадолженностиУправлениеПоиском" id="33">
+				<AdditionSource>
+					<Item>ПогашениеЗадолженности</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПогашениеЗадолженностиУправлениеПоискомКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ПогашениеЗадолженностиУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПогашениеЗадолженностиРегистратор" id="12">
+					<DataPath>ПогашениеЗадолженности.Регистратор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиРегистраторКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиРегистраторРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиДатаДокумента" id="4">
+					<DataPath>ПогашениеЗадолженности.ДатаДокумента</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиДатаДокументаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиДатаДокументаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиПериод" id="6">
+					<DataPath>ПогашениеЗадолженности.Период</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиПериодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиПериодРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиВидДвижения" id="8">
+					<DataPath>ПогашениеЗадолженности.ВидДвижения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиВидДвиженияКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиВидДвиженияРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиОсновнойДолг" id="10">
+					<DataPath>ПогашениеЗадолженности.ОсновнойДолг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиОсновнойДолгКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиОсновнойДолгРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиПроценты" id="14">
+					<DataPath>ПогашениеЗадолженности.Проценты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиПроцентыКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиПроцентыРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиШтрафы" id="16">
+					<DataPath>ПогашениеЗадолженности.Штрафы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиШтрафыКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиШтрафыРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиСталоОсновнойДолг" id="18">
+					<DataPath>ПогашениеЗадолженности.СталоОсновнойДолг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиСталоОсновнойДолгКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиСталоОсновнойДолгРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиСталоПроценты" id="20">
+					<DataPath>ПогашениеЗадолженности.СталоПроценты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиСталоПроцентыКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиСталоПроцентыРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиСталоШтрафы" id="22">
+					<DataPath>ПогашениеЗадолженности.СталоШтрафы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиСталоШтрафыКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиСталоШтрафыРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ПогашениеЗадолженностиСталоСумма" id="24">
+					<DataPath>ПогашениеЗадолженности.СталоСумма</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПогашениеЗадолженностиСталоСуммаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПогашениеЗадолженностиСталоСуммаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПогашениеПлатежей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погашение платежей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПогашениеЗадолженности" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погашение задолженности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ДатаДокумента" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата документа</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Sənədin tarixi</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Период" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Dövr</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидДвижения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид движения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОсновнойДолг" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной долг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Регистратор" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Регистратор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ПоступлениеПлатежей</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЗагрузкаЗадолженности</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Проценты" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проценты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Штрафы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Штрафы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СталоОсновнойДолг" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стало основной долг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СталоПроценты" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стало проценты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СталоШтрафы" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стало штрафы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СталоСумма" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стало сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

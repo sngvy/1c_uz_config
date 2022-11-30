@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаГоризонт" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНазначение" id="16">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНазначениеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДекорацияНазначениеРасширеннаяПодсказка" id="29"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаВертикаль" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертикаль</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вертикаль</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВертикальРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<CheckBoxField name="Контрагенты" id="19">
+							<DataPath>Объект.Контрагенты</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КонтрагентыКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="31"/>
+						</CheckBoxField>
+						<CheckBoxField name="Должники" id="21">
+							<DataPath>Объект.Должники</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДолжникиКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ДолжникиРасширеннаяПодсказка" id="32"/>
+						</CheckBoxField>
+						<CheckBoxField name="Кредиторы" id="23">
+							<DataPath>Объект.Кредиторы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КредиторыКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="КредиторыРасширеннаяПодсказка" id="33"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<CheckBoxField name="НаВсе" id="5">
+					<DataPath>Объект.НаВсе</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НаВсеКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="НаВсеРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТелефоныАдреса" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ТелефоныАдреса</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТелефоныАдресаКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТелефоныАдресаКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ТелефоныАдресаРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="ТелефоныАдресаСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>ТелефоныАдреса</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТелефоныАдресаСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ТелефоныАдресаСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТелефоныАдресаСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>ТелефоныАдреса</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТелефоныАдресаСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ТелефоныАдресаСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТелефоныАдресаУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>ТелефоныАдреса</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТелефоныАдресаУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ТелефоныАдресаУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТелефоныАдресаНомерСтроки" id="10">
+					<DataPath>Объект.ТелефоныАдреса.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефоныАдресаНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТелефоныАдресаНомерСтрокиРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<InputField name="ТелефоныАдресаСвойство" id="12">
+					<DataPath>Объект.ТелефоныАдреса.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефоныАдресаСвойствоКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ТелефоныАдресаСвойствоРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПоследовательностиКИ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

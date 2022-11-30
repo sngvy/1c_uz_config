@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>120</Width>
+	<Height>20</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="НаборЗаписей" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>НаборЗаписей</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НаборЗаписейКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="НаборЗаписейКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="НаборЗаписейРасширеннаяПодсказка" id="30"/>
+			<SearchStringAddition name="НаборЗаписейСтрокаПоиска" id="31">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСтрокаПоискаКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="НаборЗаписейСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НаборЗаписейСостояниеПросмотра" id="34">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейСостояниеПросмотраКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="НаборЗаписейСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НаборЗаписейУправлениеПоиском" id="37">
+				<AdditionSource>
+					<Item>НаборЗаписей</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НаборЗаписейУправлениеПоискомКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="НаборЗаписейУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НомерСтроки" id="4">
+					<DataPath>НаборЗаписей.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="Регистратор" id="6">
+					<DataPath>НаборЗаписей.Recorder</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РегистраторКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="РегистраторРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="Период" id="8">
+					<DataPath>НаборЗаписей.Period</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ВидДвижения" id="10">
+					<DataPath>НаборЗаписей.RecordType</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВидДвиженияКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ВидДвиженияРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="Должник" id="12">
+					<DataPath>1/0:38caa07b-e072-4cba-898c-5088a38046d8</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДолжникКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДолжникРасширеннаяПодсказка" id="44"/>
+				</InputField>
+				<InputField name="ДолговоеОбязательство" id="14">
+					<DataPath>НаборЗаписей.Объект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДолговоеОбязательствоРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ВалютаДО" id="16">
+					<DataPath>1/0:55d5c9bf-e02e-45f8-a84e-17215a039c76</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВалютаДОКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВалютаДОРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="УслугаПоДоговору" id="18">
+					<DataPath>1/0:cc19b7ea-2040-4210-b71d-30347e5b2120</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="УслугаПоДоговоруКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="УслугаПоДоговоруРасширеннаяПодсказка" id="47"/>
+				</InputField>
+				<InputField name="ПериодУслуги_" id="20">
+					<DataPath>1/0:0fbb90f2-223b-4b3c-a0ce-07d1f90ce551</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПериодУслугиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПериодУслуги_РасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="СуммаДО" id="22">
+					<DataPath>НаборЗаписей.СуммаДО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СуммаДОКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СуммаДОРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="СуммаРегл" id="24">
+					<DataPath>НаборЗаписей.СуммаРегл</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СуммаРеглКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="СуммаРеглРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="ВидДвиженияЗадолженности" id="26">
+					<DataPath>НаборЗаписей.ВидДвиженияЗадолженности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВидДвиженияЗадолженностиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ВидДвиженияЗадолженностиРасширеннаяПодсказка" id="51"/>
+				</InputField>
+				<InputField name="Документ" id="28">
+					<DataPath>НаборЗаписей.Документ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДокументКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборЗаписей" id="1">
+			<Type>
+				<v8:Type>cfg:AccumulationRegisterRecordSet.ЗадолженностьПоОбъектам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+</Form>

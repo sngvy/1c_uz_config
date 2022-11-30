@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<Group>Horizontal</Group>
+	<ChildItemsWidth>Equal</ChildItemsWidth>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>Top</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="30"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Description</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="31"/>
+				</LabelField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="32"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="17">
+					<DataPath>Список.Ref</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="33"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+		<Table name="Операторы" id="19">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Items.Список.CurrentData.Операторы</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОператорыКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="ОператорыКоманднаяПанель" id="21">
+				<ChildItems>
+					<Button name="ОператорыКнопкаНайти" id="28">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Операторы.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="ОператорыКнопкаНайтиExtendedTooltip" id="34"/>
+					</Button>
+					<Button name="ОператорыКнопкаОтменитьПоиск" id="29">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.Операторы.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="ОператорыКнопкаОтменитьПоискExtendedTooltip" id="35"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОператорыExtendedTooltip" id="36"/>
+			<SearchStringAddition name="ОператорыСтрокаПоиска" id="48">
+				<AdditionSource>
+					<Item>Операторы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОператорыСтрокаПоискаКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="ОператорыСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОператорыСостояниеПросмотра" id="51">
+				<AdditionSource>
+					<Item>Операторы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОператорыСостояниеПросмотраКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="ОператорыСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОператорыУправлениеПоиском" id="54">
+				<AdditionSource>
+					<Item>Операторы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОператорыУправлениеПоискомКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ОператорыУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ОператорыВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ОператорыНомерСтроки" id="22">
+					<DataPath>Items.Список.CurrentData.Операторы.LineNumber</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>N</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>3</Width>
+					<ContextMenu name="ОператорыНомерСтрокиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ОператорыНомерСтрокиExtendedTooltip" id="37"/>
+				</InputField>
+				<InputField name="ОператорыОператор" id="26">
+					<DataPath>Items.Список.CurrentData.Операторы.Оператор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОператорыОператорКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ОператорыОператорExtendedTooltip" id="38"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ГруппыОператоров</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

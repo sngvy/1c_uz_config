@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Пользователь" id="1">
+			<DataPath>Запись.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Запись.Дата</DataPath>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Абонент" id="7">
+			<DataPath>Запись.Абонент</DataPath>
+			<ContextMenu name="АбонентКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="АбонентРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="КонтактноеЛицо" id="10">
+			<DataPath>Запись.КонтактноеЛицо</DataPath>
+			<ContextMenu name="КонтактноеЛицоКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КонтактноеЛицоРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Номер" id="13">
+			<DataPath>Запись.Номер</DataPath>
+			<ContextMenu name="НомерКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ТипЗвонка" id="16">
+			<DataPath>Запись.ТипЗвонка</DataPath>
+			<ContextMenu name="ТипЗвонкаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТипЗвонкаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="Успешность" id="19">
+			<DataPath>Запись.Успешность</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="УспешностьКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="УспешностьРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<InputField name="ДлительностьЗвонка" id="22">
+			<DataPath>Запись.ДлительностьЗвонка</DataPath>
+			<ContextMenu name="ДлительностьЗвонкаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДлительностьЗвонкаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ЗаписьРазговора" id="25">
+			<DataPath>Запись.ЗаписьРазговора</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ContextMenu name="ЗаписьРазговораКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЗаписьРазговораРасширеннаяПодсказка" id="27"/>
+			<Events>
+				<Event name="StartChoice">ЗаписьРазговораНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.бит_ИсторияЗвонков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СсылкаНаФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка на файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

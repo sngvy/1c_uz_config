@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должник</dataPath>
+			<field>Должник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемаяДата</dataPath>
+			<field>ПланируемаяДата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планируемая дата</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерДоговора</dataPath>
+			<field>НомерДоговора</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер договора</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Мероприятие</dataPath>
+			<field>Мероприятие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Выполнена</dataPath>
+			<field>Выполнена</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Кредитор</dataPath>
+			<field>Кредитор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитор</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыполнения</dataPath>
+			<field>ДатаВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выполнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</title>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>СвязиПараметровВыбора</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:ChoiceParameterLinks">
+						<dcscor:item>
+							<dcscor:choiceParameter>Отбор.Владелец</dcscor:choiceParameter>
+							<dcscor:value>ТипМероприятия</dcscor:value>
+							<dcscor:mode xmlns:d8p1="http://v8.1c.ru/8.1/data/enterprise" xsi:type="d8p1:LinkedValueChangeMode">Clear</dcscor:mode>
+						</dcscor:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипМероприятия</dataPath>
+			<field>ТипМероприятия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип мероприятия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Пользователи.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ_Ответственный
+ИЗ
+	Справочник.Пользователи КАК Пользователи
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботеОстатки.Объект КАК Объект
+ПОМЕСТИТЬ ОбъектыВРаботе
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, Сотрудник &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ОбъектыВРаботеОстатки
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Ответственный КАК ВТ_Ответственный
+		ПО ОбъектыВРаботеОстатки.Сотрудник = ВТ_Ответственный.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Контрагенты.Ссылка
+ПОМЕСТИТЬ ОбъектыКонтрагент
+ИЗ
+	ОбъектыВРаботе КАК ОбъектыВРаботе
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Контрагенты КАК Контрагенты
+		ПО ОбъектыВРаботе.Объект = Контрагенты.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДоговорыКонтрагентов.Ссылка,
+	ДоговорыКонтрагентов.Контрагент
+ПОМЕСТИТЬ Объекты_ДогКонтрагентов_и_УслугПоДоговору
+ИЗ
+	ОбъектыКонтрагент КАК ОбъектыКонтрагент
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДоговорыКонтрагентов КАК ДоговорыКонтрагентов
+		ПО ОбъектыКонтрагент.Ссылка = ДоговорыКонтрагентов.Контрагент
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	УслугиПоДоговору.Ссылка,
+	УслугиПоДоговору.Контрагент
+ИЗ
+	ОбъектыКонтрагент КАК ОбъектыКонтрагент
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.УслугиПоДоговору КАК УслугиПоДоговору
+		ПО ОбъектыКонтрагент.Ссылка = УслугиПоДоговору.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсполнительныеДокументы.Ссылка КАК Объект,
+	ИсполнительныеДокументы.Владелец КАК Владелец
+ПОМЕСТИТЬ ВсеОбъектыВРаботе
+ИЗ
+	ОбъектыВРаботе КАК ОбъектыВРаботе
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИсполнительныеДокументы КАК ИсполнительныеДокументы
+		ПО ОбъектыВРаботе.Объект = ИсполнительныеДокументы.Владелец
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Объекты_ДогКонтрагентов_и_УслугПоДоговору.Ссылка,
+	Объекты_ДогКонтрагентов_и_УслугПоДоговору.Контрагент
+ИЗ
+	Объекты_ДогКонтрагентов_и_УслугПоДоговору КАК Объекты_ДогКонтрагентов_и_УслугПоДоговору
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОбъектыВРаботе.Объект,
+	NULL
+ИЗ
+	ОбъектыВРаботе КАК ОбъектыВРаботе
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВсеОбъектыВРаботе.Объект КАК Объект,
+	ВсеОбъектыВРаботе.Владелец,
+	БизнесПроцессы.Ссылка
+ПОМЕСТИТЬ БезПлохихБП
+ИЗ
+	ВсеОбъектыВРаботе КАК ВсеОбъектыВРаботе
+		ЛЕВОЕ СОЕДИНЕНИЕ БизнесПроцесс.БизнесПроцессы КАК БизнесПроцессы
+		ПО ВсеОбъектыВРаботе.Объект = БизнесПроцессы.Объект
+ГДЕ
+	(БизнесПроцессы.Ссылка ЕСТЬ NULL 
+			ИЛИ БизнесПроцессы.ПометкаУдаления = ЛОЖЬ
+				И БизнесПроцессы.Завершен = ЛОЖЬ)
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Мероприятие.Ссылка,
+	Мероприятие.Объект,
+	Мероприятие.ПланируемаяДата,
+	Мероприятие.ПланируемоеВремя КАК ВремяНачала,
+	Мероприятие.ТипМероприятия КАК ТипМероприятия,
+	Мероприятие.Ответственный,
+	Мероприятие.Выполнена,
+	БезПлохихБП.Владелец,
+	Мероприятие.ДатаВыполнения
+ПОМЕСТИТЬ МероприятияБезТиповМероприятий
+ИЗ
+	Задача.Мероприятие КАК Мероприятие
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ БезПлохихБП КАК БезПлохихБП
+		ПО Мероприятие.Объект = БезПлохихБП.Объект
+ГДЕ
+	Мероприятие.ПометкаУдаления = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	ТипМероприятия
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТипыМероприятий.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ДопустимыеТипыМероприятий
+ИЗ
+	Справочник.ТипыМероприятий КАК ТипыМероприятий
+ГДЕ
+	ТипыМероприятий.НеОтображатьВПланировщике = ЛОЖЬ
+	И ТипыМероприятий.ПометкаУдаления = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МероприятияБезТиповМероприятий.Ссылка,
+	МероприятияБезТиповМероприятий.Объект,
+	МероприятияБезТиповМероприятий.Ответственный КАК Ответственный,
+	МероприятияБезТиповМероприятий.ПланируемаяДата,
+	МероприятияБезТиповМероприятий.Выполнена,
+	МероприятияБезТиповМероприятий.ВремяНачала,
+	МероприятияБезТиповМероприятий.Владелец
+ПОМЕСТИТЬ МероприятияБезТипаСотрудника
+ИЗ
+	МероприятияБезТиповМероприятий КАК МероприятияБезТиповМероприятий
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ДопустимыеТипыМероприятий КАК ДопустимыеТипыМероприятий
+		ПО МероприятияБезТиповМероприятий.ТипМероприятия = ДопустимыеТипыМероприятий.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	МероприятияБезТиповМероприятий.Ссылка,
+	МероприятияБезТиповМероприятий.Объект,
+	МероприятияБезТиповМероприятий.Ответственный,
+	МероприятияБезТиповМероприятий.ПланируемаяДата,
+	МероприятияБезТиповМероприятий.Выполнена,
+	МероприятияБезТиповМероприятий.ВремяНачала,
+	МероприятияБезТиповМероприятий.Владелец
+
+ИНДЕКСИРОВАТЬ ПО
+	Ответственный
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МероприятияБезТипаСотрудника.Ссылка,
+	МероприятияБезТипаСотрудника.ПланируемаяДата,
+	МероприятияБезТипаСотрудника.Выполнена,
+	МероприятияБезТипаСотрудника.ВремяНачала,
+	МероприятияБезТипаСотрудника.Ответственный
+ПОМЕСТИТЬ ОтборПервый
+ИЗ
+	МероприятияБезТипаСотрудника КАК МероприятияБезТипаСотрудника
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Ответственный КАК ВТ_Ответственный
+		ПО МероприятияБезТипаСотрудника.Ответственный = ВТ_Ответственный.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТипыСотрудников.Ссылка КАК Ссылка,
+	ТипыСотрудников.Глубина,
+	ТипыСотрудников.РодителиШаблон
+ПОМЕСТИТЬ ПВХ_ТипСотрудника
+ИЗ
+	ПланВидовХарактеристик.ТипыСотрудников КАК ТипыСотрудников
+ГДЕ
+	ТипыСотрудников.ПометкаУдаления = ЛОЖЬ
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МероприятияБезТипаСотрудника.Ссылка,
+	ЕСТЬNULL(МероприятияБезТипаСотрудника.Владелец, МероприятияБезТипаСотрудника.Объект) КАК Объект,
+	МероприятияБезТипаСотрудника.ПланируемаяДата,
+	МероприятияБезТипаСотрудника.Выполнена,
+	МероприятияБезТипаСотрудника.ВремяНачала,
+	ПВХ_ТипСотрудника.РодителиШаблон,
+	ПВХ_ТипСотрудника.Глубина
+ПОМЕСТИТЬ Замена_Владельца_На_ДО
+ИЗ
+	МероприятияБезТипаСотрудника КАК МероприятияБезТипаСотрудника
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ПВХ_ТипСотрудника КАК ПВХ_ТипСотрудника
+		ПО МероприятияБезТипаСотрудника.Ответственный = ПВХ_ТипСотрудника.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Замена_Владельца_На_ДО.РодителиШаблон,
+	ОтветственныеСотрудники.ТипСотрудника КАК ТипСотрудника,
+	Замена_Владельца_На_ДО.Ссылка,
+	Замена_Владельца_На_ДО.ПланируемаяДата,
+	Замена_Владельца_На_ДО.Выполнена,
+	Замена_Владельца_На_ДО.ВремяНачала,
+	ОтветственныеСотрудники.Пользователь
+ПОМЕСТИТЬ Без_Шаблона_Отв_Сотр
+ИЗ
+	Замена_Владельца_На_ДО КАК Замена_Владельца_На_ДО
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеСотрудники КАК ОтветственныеСотрудники
+		ПО Замена_Владельца_На_ДО.Объект = ОтветственныеСотрудники.Объект
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	Замена_Владельца_На_ДО.РодителиШаблон,
+	СотрудникиВПомощь.ТипСотрудника,
+	Замена_Владельца_На_ДО.Ссылка,
+	Замена_Владельца_На_ДО.ПланируемаяДата,
+	Замена_Владельца_На_ДО.Выполнена,
+	Замена_Владельца_На_ДО.ВремяНачала,
+	СотрудникиВПомощь.Пользователь
+ИЗ
+	Замена_Владельца_На_ДО КАК Замена_Владельца_На_ДО
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СотрудникиВПомощь КАК СотрудникиВПомощь
+		ПО Замена_Владельца_На_ДО.Объект = СотрудникиВПомощь.Объект
+
+ИНДЕКСИРОВАТЬ ПО
+	ТипСотрудника
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПВХ_ТипСотрудника.Глубина КАК Глубина,
+	Без_Шаблона_Отв_Сотр.Пользователь,
+	Без_Шаблона_Отв_Сотр.Ссылка КАК Ссылка,
+	Без_Шаблона_Отв_Сотр.ПланируемаяДата,
+	Без_Шаблона_Отв_Сотр.Выполнена,
+	Без_Шаблона_Отв_Сотр.ВремяНачала
+ПОМЕСТИТЬ Без_Глубины
+ИЗ
+	Без_Шаблона_Отв_Сотр КАК Без_Шаблона_Отв_Сотр
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ПВХ_ТипСотрудника КАК ПВХ_ТипСотрудника
+		ПО Без_Шаблона_Отв_Сотр.ТипСотрудника = ПВХ_ТипСотрудника.Ссылка
+ГДЕ
+	Без_Шаблона_Отв_Сотр.РодителиШаблон ПОДОБНО ПВХ_ТипСотрудника.РодителиШаблон
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	Глубина
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Без_Глубины.Ссылка КАК Ссылка,
+	МАКСИМУМ(Без_Глубины.Глубина) КАК Глубина
+ПОМЕСТИТЬ Глубина_Макс
+ИЗ
+	Без_Глубины КАК Без_Глубины
+
+СГРУППИРОВАТЬ ПО
+	Без_Глубины.Ссылка
+
+ИНДЕКСИРОВАТЬ ПО
+	Ссылка,
+	Глубина
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Без_Глубины.Пользователь КАК Пользователь,
+	Без_Глубины.Ссылка,
+	Без_Глубины.ПланируемаяДата,
+	Без_Глубины.ВремяНачала,
+	Без_Глубины.Выполнена
+ПОМЕСТИТЬ Тип_Сотрудника_Без_Отбора_По_Пользователю
+ИЗ
+	Без_Глубины КАК Без_Глубины
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Глубина_Макс КАК Глубина_Макс
+		ПО Без_Глубины.Ссылка = Глубина_Макс.Ссылка
+			И Без_Глубины.Глубина = Глубина_Макс.Глубина
+
+ИНДЕКСИРОВАТЬ ПО
+	Пользователь
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Тип_Сотрудника_Без_Отбора_По_Пользователю.Ссылка КАК Мероприятие,
+	Тип_Сотрудника_Без_Отбора_По_Пользователю.ПланируемаяДата КАК ПланируемаяДата,
+	Тип_Сотрудника_Без_Отбора_По_Пользователю.ВремяНачала КАК ВремяНачала,
+	Тип_Сотрудника_Без_Отбора_По_Пользователю.Выполнена,
+	Тип_Сотрудника_Без_Отбора_По_Пользователю.Пользователь,
+	Тип_Сотрудника_Без_Отбора_По_Пользователю.Ссылка.ПланируемаяДата
+ПОМЕСТИТЬ Мероприятия
+ИЗ
+	Тип_Сотрудника_Без_Отбора_По_Пользователю КАК Тип_Сотрудника_Без_Отбора_По_Пользователю
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Ответственный КАК ВТ_Ответственный
+		ПО Тип_Сотрудника_Без_Отбора_По_Пользователю.Пользователь = ВТ_Ответственный.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ОтборПервый.Ссылка,
+	ОтборПервый.ПланируемаяДата,
+	ОтборПервый.ВремяНачала,
+	ОтборПервый.Выполнена,
+	ОтборПервый.Ответственный,
+	NULL
+ИЗ
+	ОтборПервый КАК ОтборПервый
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Мероприятия.Мероприятие.Объект КАК НомерДоговора,
+	ДОБАВИТЬКДАТЕ(ДОБАВИТЬКДАТЕ(Мероприятия.ПланируемаяДата, МИНУТА, МИНУТА(Мероприятия.Мероприятие.ПланируемоеВремя)), ЧАС, ЧАС(Мероприятия.Мероприятие.ПланируемоеВремя)) КАК ПланируемаяДата,
+	Мероприятия.Мероприятие.Объект.Должник КАК Должник,
+	Мероприятия.Мероприятие.Объект.Кредитор КАК Кредитор,
+	Мероприятия.Мероприятие,
+	Мероприятия.Пользователь КАК Ответственный,
+	Мероприятия.Мероприятие.Исполнитель КАК Исполнитель,
+	Мероприятия.Мероприятие.ДатаВыполнения КАК ДатаВыполнения,
+	Мероприятия.Выполнена,
+	Мероприятия.Мероприятие.Результат КАК Результат,
+	Мероприятия.Мероприятие.Комментарий КАК Комментарий,
+	Мероприятия.Пользователь.Организация КАК Организация,
+	Мероприятия.Пользователь.Подразделение КАК Подразделение,
+	Мероприятия.Мероприятие.ТипМероприятия КАК ТипМероприятия
+ИЗ
+	Мероприятия КАК Мероприятия
+ГДЕ
+	Мероприятия.ПланируемаяДата &gt;= &amp;НачалоПериода
+	И Мероприятия.ПланируемаяДата &lt;= &amp;КонецПериода</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПланируемаяДата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерДоговора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Должник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Кредитор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипМероприятия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Должник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>ba1da65a-9fa4-4d31-a4d5-6c702fcef458</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Кредитор</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>4c7311d6-480e-48b4-9f95-39e08de0d3e7</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Ответственный</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>f6759a43-14c2-4ee6-9506-2d10a6b27764</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">ТипМероприятия</dcsset:left>
+					<dcsset:comparisonType>InList</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:ValueListType">
+						<v8:valueType/>
+						<v8:lastId xsi:type="xs:decimal">-1</v8:lastId>
+					</dcsset:right>
+					<dcsset:userSettingID>b42c87ba-7656-41e3-8950-5a28814b7e9e</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Результат</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>3bef8ab9-a16b-4e19-bff4-1ce134476204</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>eb42f33d-0921-455d-b6ae-738a3c74e4fb</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>f67bcafb-b05c-4837-a980-bfdb23632119</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

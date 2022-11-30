@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Родитель" id="5">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="16"/>
+		</InputField>
+		<Table name="Маркеры" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Маркеры</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МаркерыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="МаркерыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="МаркерыРасширеннаяПодсказка" id="17"/>
+			<SearchStringAddition name="МаркерыСтрокаПоиска" id="18">
+				<AdditionSource>
+					<Item>Маркеры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаркерыСтрокаПоискаКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="МаркерыСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МаркерыСостояниеПросмотра" id="21">
+				<AdditionSource>
+					<Item>Маркеры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МаркерыСостояниеПросмотраКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="МаркерыСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МаркерыУправлениеПоиском" id="24">
+				<AdditionSource>
+					<Item>Маркеры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МаркерыУправлениеПоискомКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="МаркерыУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="МаркерыНомерСтроки" id="10">
+					<DataPath>Объект.Маркеры.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаркерыНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="МаркерыНомерСтрокиРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<InputField name="МаркерыМаркер" id="12">
+					<DataPath>Объект.Маркеры.Маркер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МаркерыМаркерКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="МаркерыМаркерРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Фокус_ПрофилиМаркеров</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

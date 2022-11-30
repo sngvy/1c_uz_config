@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="14"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="СписокФорм" id="5">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СписокФорм</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокФормКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="СписокФормКоманднаяПанель" id="7"/>
+			<ExtendedTooltip name="СписокФормРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="СписокФормСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>СписокФорм</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокФормСтрокаПоискаКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="СписокФормСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокФормСостояниеПросмотра" id="20">
+				<AdditionSource>
+					<Item>СписокФорм</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокФормСостояниеПросмотраКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="СписокФормСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокФормУправлениеПоиском" id="23">
+				<AdditionSource>
+					<Item>СписокФорм</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокФормУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="СписокФормУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокФормНомерСтроки" id="8">
+					<DataPath>Объект.СписокФорм.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокФормНомерСтрокиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="СписокФормНомерСтрокиРасширеннаяПодсказка" id="26"/>
+				</LabelField>
+				<InputField name="СписокФормФормаСНастройками" id="10">
+					<DataPath>Объект.СписокФорм.ФормаСНастройками</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокФормФормаСНастройкамиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СписокФормФормаСНастройкамиРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Интерфейсы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>120</Width>
+	<Height>20</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаЗакрыть" id="103">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="КнопкаЗакрытьExtendedTooltip" id="104"/>
+			</Button>
+			<Button name="Обновить" id="24">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Refresh</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ОбновитьExtendedTooltip" id="105"/>
+			</Button>
+			<Button name="ПакетноеВыполнение" id="26">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>DataProcessor.ПакетноеВыполнениеМероприятий.StandardCommand.Open</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.DataCompositionSelection</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ПакетноеВыполнениеExtendedTooltip" id="106"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="25">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1ExtendedTooltip" id="107"/>
+			<ChildItems>
+				<InputField name="Пользователь" id="22">
+					<DataPath>Пользователь</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПользовательExtendedTooltip" id="108"/>
+					<Events>
+						<Event name="OnChange">ПользовательПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ВыводитьГоризонтально" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить горизонтально</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выводить горизонтально</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ВыводитьГоризонтальноExtendedTooltip" id="109"/>
+			<ChildItems>
+				<Table name="ТипыМероприятия" id="1">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТипМероприятия</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТипыМероприятияКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="ТипыМероприятияКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="ТипыМероприятияНайти" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ТипыМероприятия.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="ТипыМероприятияНайтиExtendedTooltip" id="110"/>
+							</Button>
+							<Button name="ТипыМероприятияОтменитьПоиск" id="45">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ТипыМероприятия.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="ТипыМероприятияОтменитьПоискExtendedTooltip" id="111"/>
+							</Button>
+							<Button name="ТипыМероприятияКонтекстноеМенюСортироватьСписокПоВозрастанию" id="43">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ТипыМероприятия.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ТипыМероприятияКонтекстноеМенюСортироватьСписокПоВозрастаниюExtendedTooltip" id="112"/>
+							</Button>
+							<Button name="ТипыМероприятияСортироватьСписокПоУбыванию" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.ТипыМероприятия.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="ТипыМероприятияСортироватьСписокПоУбываниюExtendedTooltip" id="113"/>
+							</Button>
+							<Button name="ТипыМероприятияПометкаУдаления" id="42">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПометкаУдаления</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ТипыМероприятияПометкаУдаленияExtendedTooltip" id="114"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТипыМероприятияExtendedTooltip" id="115"/>
+					<SearchStringAddition name="ТипыМероприятияСтрокаПоиска" id="134">
+						<AdditionSource>
+							<Item>ТипыМероприятия</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыМероприятияСтрокаПоискаКонтекстноеМеню" id="135"/>
+						<ExtendedTooltip name="ТипыМероприятияСтрокаПоискаРасширеннаяПодсказка" id="136"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТипыМероприятияСостояниеПросмотра" id="137">
+						<AdditionSource>
+							<Item>ТипыМероприятия</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыМероприятияСостояниеПросмотраКонтекстноеМеню" id="138"/>
+						<ExtendedTooltip name="ТипыМероприятияСостояниеПросмотраРасширеннаяПодсказка" id="139"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТипыМероприятияУправлениеПоиском" id="140">
+						<AdditionSource>
+							<Item>ТипыМероприятия</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТипыМероприятияУправлениеПоискомКонтекстноеМеню" id="141"/>
+						<ExtendedTooltip name="ТипыМероприятияУправлениеПоискомРасширеннаяПодсказка" id="142"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">ПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">ПередУдалением</Event>
+						<Event name="OnActivateRow">ТипыМероприятияПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ТипМероприятия" id="4">
+							<DataPath>ТипМероприятия.ТипМероприятия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>false</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<OpenButton>false</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="ТипМероприятияКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ТипМероприятияExtendedTooltip" id="116"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="Контрагенты" id="6">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.Контрагент</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="КонтрагентыКонтекстноеМеню" id="7">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<AutoCommandBar name="КонтрагентыКоманднаяПанель" id="8">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="КонтрагентыНайти" id="47">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Контрагенты.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="КонтрагентыНайтиExtendedTooltip" id="117"/>
+							</Button>
+							<Button name="КонтрагентыОтменитьПоиск" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Контрагенты.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="КонтрагентыОтменитьПоискExtendedTooltip" id="118"/>
+							</Button>
+							<Button name="КонтрагентыСортироватьСписокПоВозрастанию" id="49">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Контрагенты.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="КонтрагентыСортироватьСписокПоВозрастаниюExtendedTooltip" id="119"/>
+							</Button>
+							<Button name="КонтрагентыСортироватьСписокПоУбыванию" id="50">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Контрагенты.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="КонтрагентыСортироватьСписокПоУбываниюExtendedTooltip" id="120"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="КонтрагентыExtendedTooltip" id="121"/>
+					<SearchStringAddition name="КонтрагентыСтрокаПоиска" id="143">
+						<AdditionSource>
+							<Item>Контрагенты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КонтрагентыСтрокаПоискаКонтекстноеМеню" id="144"/>
+						<ExtendedTooltip name="КонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="145"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="КонтрагентыСостояниеПросмотра" id="146">
+						<AdditionSource>
+							<Item>Контрагенты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="КонтрагентыСостояниеПросмотраКонтекстноеМеню" id="147"/>
+						<ExtendedTooltip name="КонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="148"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="КонтрагентыУправлениеПоиском" id="149">
+						<AdditionSource>
+							<Item>Контрагенты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="КонтрагентыУправлениеПоискомКонтекстноеМеню" id="150"/>
+						<ExtendedTooltip name="КонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="151"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">КонтрагентыВыбор</Event>
+						<Event name="BeforeAddRow">ПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">ПередУдалением</Event>
+						<Event name="OnActivateRow">КонтрагентыПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="КонтрагентыНомерСтроки" id="94">
+							<DataPath>Объект.Контрагент.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтрагентыНомерСтрокиКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="КонтрагентыНомерСтрокиExtendedTooltip" id="122"/>
+						</LabelField>
+						<InputField name="КонтрагентыКонтрагент" id="97">
+							<DataPath>Объект.Контрагент.Контрагент</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтрагентыКонтрагентКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="КонтрагентыКонтрагентExtendedTooltip" id="123"/>
+						</InputField>
+						<InputField name="КонтрагентыКонтрагентСсылка" id="100">
+							<DataPath>Объект.Контрагент.КонтрагентСсылка</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтрагентыКонтрагентСсылкаКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="КонтрагентыКонтрагентСсылкаExtendedTooltip" id="124"/>
+						</InputField>
+						<InputField name="КонтрагентыАдрес" id="131">
+							<DataPath>Объект.Контрагент.Адрес</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КонтрагентыАдресКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="КонтрагентыАдресРасширеннаяПодсказка" id="133"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="Мероприятия1" id="17">
+					<Representation>List</Representation>
+					<ReadOnly>true</ReadOnly>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Мероприятия</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="Мероприятия1КонтекстноеМеню" id="18">
+						<Autofill>false</Autofill>
+					</ContextMenu>
+					<AutoCommandBar name="Мероприятия1КоманднаяПанель" id="19">
+						<Autofill>false</Autofill>
+						<ChildItems>
+							<Button name="Мероприятия1Найти" id="51">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Мероприятия1.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="Мероприятия1НайтиExtendedTooltip" id="125"/>
+							</Button>
+							<Button name="Мероприятия1ОтменитьПоиск" id="52">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Мероприятия1.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="Мероприятия1ОтменитьПоискExtendedTooltip" id="126"/>
+							</Button>
+							<Button name="Мероприятия1СортироватьСписокПоВозрастанию" id="53">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Мероприятия1.StandardCommand.SortListAsc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="Мероприятия1СортироватьСписокПоВозрастаниюExtendedTooltip" id="127"/>
+							</Button>
+							<Button name="Мероприятия1СортироватьСписокПоУбыванию" id="54">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.Мероприятия1.StandardCommand.SortListDesc</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="Мероприятия1СортироватьСписокПоУбываниюExtendedTooltip" id="128"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="Мероприятия1ExtendedTooltip" id="129"/>
+					<SearchStringAddition name="Мероприятия1СтрокаПоиска" id="152">
+						<AdditionSource>
+							<Item>Мероприятия1</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="Мероприятия1СтрокаПоискаКонтекстноеМеню" id="153"/>
+						<ExtendedTooltip name="Мероприятия1СтрокаПоискаРасширеннаяПодсказка" id="154"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="Мероприятия1СостояниеПросмотра" id="155">
+						<AdditionSource>
+							<Item>Мероприятия1</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="Мероприятия1СостояниеПросмотраКонтекстноеМеню" id="156"/>
+						<ExtendedTooltip name="Мероприятия1СостояниеПросмотраРасширеннаяПодсказка" id="157"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="Мероприятия1УправлениеПоиском" id="158">
+						<AdditionSource>
+							<Item>Мероприятия1</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="Мероприятия1УправлениеПоискомКонтекстноеМеню" id="159"/>
+						<ExtendedTooltip name="Мероприятия1УправлениеПоискомРасширеннаяПодсказка" id="160"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">Мероприятия1Выбор</Event>
+						<Event name="BeforeAddRow">ПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">ПередУдалением</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="Мероприятия" id="20">
+							<DataPath>Мероприятия.Мероприятия</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceButton>false</ChoiceButton>
+							<OpenButton>false</OpenButton>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="МероприятияКонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="МероприятияExtendedTooltip" id="130"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПланированиеМероприятий2</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТипМероприятия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТипМероприятия" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТипыМероприятий</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Мероприятия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Мероприятия" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:TaskRef.Мероприятие</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗаполнитьЗапрос" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныйТипМероприятия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный тип мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТипыМероприятий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Пользователь" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыдаватьСообщение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выдавать сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыбранныйКонтрагент" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометкаУдаления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометка удаления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометка удаления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПометкаУдаления</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

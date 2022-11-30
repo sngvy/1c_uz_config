@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТипИсполнительныхДокументов" id="7">
+			<DataPath>Объект.ТипИсполнительныхДокументов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипИсполнительныхДокументовКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипИсполнительныхДокументовРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТипЗалогов" id="10">
+			<DataPath>Объект.ТипЗалогов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипЗалоговКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипЗалоговРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ТипКредиторов" id="13">
+			<DataPath>Объект.ТипКредиторов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипКредиторовКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТипКредиторовРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ТипКонтрагентов" id="16">
+			<DataPath>Объект.ТипКонтрагентов</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипКонтрагентовКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ТипКонтрагентовРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ТипУслуг" id="19">
+			<DataPath>Объект.ТипУслуг</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипУслугКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ТипУслугРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ТипДолжников" id="22">
+			<DataPath>Объект.ТипДолжников</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипДолжниковКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ТипДолжниковРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ТипДоговоров" id="25">
+			<DataPath>Объект.ТипДоговоров</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипДоговоровКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ТипДоговоровРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ТипДолговыхОбязательств" id="28">
+			<DataPath>Объект.ТипДолговыхОбязательств</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипДолговыхОбязательствКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ТипДолговыхОбязательствРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<Table name="НастройкаСоответствий" id="31">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.НастройкаСоответствий</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НастройкаСоответствийКонтекстноеМеню" id="32"/>
+			<AutoCommandBar name="НастройкаСоответствийКоманднаяПанель" id="33"/>
+			<ExtendedTooltip name="НастройкаСоответствийРасширеннаяПодсказка" id="34"/>
+			<SearchStringAddition name="НастройкаСоответствийСтрокаПоиска" id="35">
+				<AdditionSource>
+					<Item>НастройкаСоответствий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкаСоответствийСтрокаПоискаКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="НастройкаСоответствийСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НастройкаСоответствийСостояниеПросмотра" id="40">
+				<AdditionSource>
+					<Item>НастройкаСоответствий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкаСоответствийСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="НастройкаСоответствийСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НастройкаСоответствийУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>НастройкаСоответствий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкаСоответствийУправлениеПоискомКонтекстноеМеню" id="48"/>
+				<ExtendedTooltip name="НастройкаСоответствийУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НастройкаСоответствийНомерСтроки" id="50">
+					<DataPath>Объект.НастройкаСоответствий.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийНомерСтрокиКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="НастройкаСоответствийНомерСтрокиРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<InputField name="НастройкаСоответствийИмяСвойства" id="53">
+					<DataPath>Объект.НастройкаСоответствий.ИмяСвойства</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийИмяСвойстваКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="НастройкаСоответствийИмяСвойстваРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийНазначение" id="56">
+					<DataPath>Объект.НастройкаСоответствий.Назначение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийНазначениеКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="НастройкаСоответствийНазначениеРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийВидРеквизита" id="59">
+					<DataPath>Объект.НастройкаСоответствий.ВидРеквизита</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийВидРеквизитаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="НастройкаСоответствийВидРеквизитаРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийКодСвойства" id="62">
+					<DataPath>Объект.НастройкаСоответствий.КодСвойства</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийКодСвойстваКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="НастройкаСоответствийКодСвойстваРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийТипДанных" id="65">
+					<DataPath>Объект.НастройкаСоответствий.ТипДанных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийТипДанныхКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="НастройкаСоответствийТипДанныхРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийПараметрыСвязи" id="68">
+					<DataPath>Объект.НастройкаСоответствий.ПараметрыСвязи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийПараметрыСвязиКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="НастройкаСоответствийПараметрыСвязиРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<CheckBoxField name="НастройкаСоответствийОбновлять" id="71">
+					<DataPath>Объект.НастройкаСоответствий.Обновлять</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НастройкаСоответствийОбновлятьКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="НастройкаСоответствийОбновлятьРасширеннаяПодсказка" id="73"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<Table name="НастройкаСоответствийКонтакты" id="74">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.НастройкаСоответствийКонтакты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контакты должника</v8:content>
+				</v8:item>
+			</Title>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НастройкаСоответствийКонтактыКонтекстноеМеню" id="75"/>
+			<AutoCommandBar name="НастройкаСоответствийКонтактыКоманднаяПанель" id="76">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НастройкаСоответствийКонтактыРасширеннаяПодсказка" id="77"/>
+			<SearchStringAddition name="НастройкаСоответствийКонтактыСтрокаПоиска" id="78">
+				<AdditionSource>
+					<Item>НастройкаСоответствийКонтакты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкаСоответствийКонтактыСтрокаПоискаКонтекстноеМеню" id="79"/>
+				<ExtendedTooltip name="НастройкаСоответствийКонтактыСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НастройкаСоответствийКонтактыСостояниеПросмотра" id="81">
+				<AdditionSource>
+					<Item>НастройкаСоответствийКонтакты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкаСоответствийКонтактыСостояниеПросмотраКонтекстноеМеню" id="82"/>
+				<ExtendedTooltip name="НастройкаСоответствийКонтактыСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НастройкаСоответствийКонтактыУправлениеПоиском" id="84">
+				<AdditionSource>
+					<Item>НастройкаСоответствийКонтакты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НастройкаСоответствийКонтактыУправлениеПоискомКонтекстноеМеню" id="85"/>
+				<ExtendedTooltip name="НастройкаСоответствийКонтактыУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НастройкаСоответствийКонтактыНомерСтроки" id="87">
+					<DataPath>Объект.НастройкаСоответствийКонтакты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийКонтактыНомерСтрокиКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="НастройкаСоответствийКонтактыНомерСтрокиРасширеннаяПодсказка" id="89"/>
+				</LabelField>
+				<InputField name="НастройкаСоответствийКонтактыВидТелефона" id="90">
+					<DataPath>Объект.НастройкаСоответствийКонтакты.ВидТелефона</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийКонтактыВидТелефонаКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="НастройкаСоответствийКонтактыВидТелефонаРасширеннаяПодсказка" id="92"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийКонтактыНомер" id="93">
+					<DataPath>Объект.НастройкаСоответствийКонтакты.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийКонтактыНомерКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="НастройкаСоответствийКонтактыНомерРасширеннаяПодсказка" id="95"/>
+				</InputField>
+				<InputField name="НастройкаСоответствийКонтактыКонтактноеЛицо" id="96">
+					<DataPath>Объект.НастройкаСоответствийКонтакты.КонтактноеЛицо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НастройкаСоответствийКонтактыКонтактноеЛицоКонтекстноеМеню" id="97"/>
+					<ExtendedTooltip name="НастройкаСоответствийКонтактыКонтактноеЛицоРасширеннаяПодсказка" id="98"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиСоответствий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

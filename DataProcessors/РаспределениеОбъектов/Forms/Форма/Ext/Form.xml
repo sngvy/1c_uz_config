@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<Height>25</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ПередатьСотрудникам" id="45">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПередатьСотрудникам</CommandName>
+				<ExtendedTooltip name="ПередатьСотрудникамРасширеннаяПодсказка" id="51"/>
+			</Button>
+			<Button name="ФормаНастройкиАвтораспределения" id="48">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НастройкиАвтораспределения</CommandName>
+				<ExtendedTooltip name="ФормаНастройкиАвтораспределенияРасширеннаяПодсказка" id="52"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВариантРаспределения" id="3">
+			<DataPath>Объект.ВариантРаспределения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант распределения</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ВариантРаспределенияКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ВариантРаспределенияРасширеннаяПодсказка" id="53"/>
+		</InputField>
+		<InputField name="ТипСотрудника" id="49">
+			<DataPath>Объект.ТипСотрудника</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипСотрудникаКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ТипСотрудникаРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<Table name="Сотрудники" id="22">
+			<TitleLocation>Top</TitleLocation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Сотрудники</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СотрудникиКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="СотрудникиКоманднаяПанель" id="24"/>
+			<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="55"/>
+			<SearchStringAddition name="СотрудникиСтрокаПоиска" id="56">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСтрокаПоискаКонтекстноеМеню" id="57"/>
+				<ExtendedTooltip name="СотрудникиСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СотрудникиСостояниеПросмотра" id="59">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСостояниеПросмотраКонтекстноеМеню" id="60"/>
+				<ExtendedTooltip name="СотрудникиСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СотрудникиУправлениеПоиском" id="62">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиУправлениеПоискомКонтекстноеМеню" id="63"/>
+				<ExtendedTooltip name="СотрудникиУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">СотрудникиПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="СотрудникиНомерСтроки" id="25">
+					<DataPath>Объект.Сотрудники.LineNumber</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="СотрудникиНомерСтрокиКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="СотрудникиНомерСтрокиРасширеннаяПодсказка" id="65"/>
+				</LabelField>
+				<CheckBoxField name="СотрудникиУчаствуетВРаспределении" id="46">
+					<DataPath>Объект.Сотрудники.УчаствуетВРаспределении</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СотрудникиУчаствуетВРаспределенииКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="СотрудникиУчаствуетВРаспределенииРасширеннаяПодсказка" id="66"/>
+				</CheckBoxField>
+				<InputField name="СотрудникиСотрудник" id="27">
+					<DataPath>Объект.Сотрудники.Сотрудник</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиСотрудникКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="СотрудникиСотрудникРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="СотрудникиКоличествоДолговыхОбязательств" id="38">
+					<DataPath>Объект.Сотрудники.КоличествоДолговыхОбязательств</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="СотрудникиКоличествоДолговыхОбязательствКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СотрудникиКоличествоДолговыхОбязательствРасширеннаяПодсказка" id="68"/>
+				</InputField>
+				<InputField name="СотрудникиСуммаЗадолженности" id="40">
+					<DataPath>Объект.Сотрудники.СуммаЗадолженности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиСуммаЗадолженностиКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СотрудникиСуммаЗадолженностиРасширеннаяПодсказка" id="69"/>
+				</InputField>
+				<InputField name="СотрудникиРайон" id="29">
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиРайонКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СотрудникиРайонРасширеннаяПодсказка" id="70"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="Объекты" id="11">
+			<TitleLocation>Top</TitleLocation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Объекты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбъектыКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="ОбъектыКоманднаяПанель" id="13">
+				<ChildItems>
+					<Button name="РаспределитьПоСотрудникам" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РаспределитьПоСотрудникам</CommandName>
+						<ExtendedTooltip name="РаспределитьПоСотрудникамРасширеннаяПодсказка" id="71"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОбъектыРасширеннаяПодсказка" id="72"/>
+			<SearchStringAddition name="ОбъектыСтрокаПоиска" id="73">
+				<AdditionSource>
+					<Item>Объекты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектыСтрокаПоискаКонтекстноеМеню" id="74"/>
+				<ExtendedTooltip name="ОбъектыСтрокаПоискаРасширеннаяПодсказка" id="75"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбъектыСостояниеПросмотра" id="76">
+				<AdditionSource>
+					<Item>Объекты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектыСостояниеПросмотраКонтекстноеМеню" id="77"/>
+				<ExtendedTooltip name="ОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="78"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбъектыУправлениеПоиском" id="79">
+				<AdditionSource>
+					<Item>Объекты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектыУправлениеПоискомКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="ОбъектыУправлениеПоискомРасширеннаяПодсказка" id="81"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ОбъектыНомерСтроки" id="14">
+					<DataPath>Объект.Объекты.LineNumber</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектыНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ОбъектыНомерСтрокиРасширеннаяПодсказка" id="82"/>
+				</LabelField>
+				<InputField name="ОбъектыОбъект" id="31">
+					<DataPath>Объект.Объекты.Объект</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектыОбъектКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОбъектыОбъектРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="ОбъектыСуммаЗадолженности" id="42">
+					<DataPath>Объект.Объекты.СуммаЗадолженности</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ОбъектыСуммаЗадолженностиКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ОбъектыСуммаЗадолженностиРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="ОбъектыНовыйСотрудник" id="20">
+					<DataPath>Объект.Объекты.НовыйСотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>false</ChoiceButton>
+					<ContextMenu name="ОбъектыНовыйСотрудникКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОбъектыНовыйСотрудникРасширеннаяПодсказка" id="85"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаспределениеОбъектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокДолжников" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РаспределитьПоСотрудникам" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить по сотрудникам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить по сотрудникам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РаспределитьПоСотрудникам</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПередатьСотрудникам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать сотрудникам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать сотрудникам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьСотрудникам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиАвтораспределения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки автораспределения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки автораспределения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастройкиАвтораспределения</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

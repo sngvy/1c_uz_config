@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>70</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОк" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОкРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ДеревоБП" id="4">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ДеревоБП</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоБПКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ДеревоБПКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="ДеревоБПРасширеннаяПодсказка" id="30"/>
+			<SearchStringAddition name="ДеревоБПСтрокаПоиска" id="31">
+				<AdditionSource>
+					<Item>ДеревоБП</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоБПСтрокаПоискаКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ДеревоБПСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоБПСостояниеПросмотра" id="34">
+				<AdditionSource>
+					<Item>ДеревоБП</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоБПСостояниеПросмотраКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ДеревоБПСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоБПУправлениеПоиском" id="37">
+				<AdditionSource>
+					<Item>ДеревоБП</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоБПУправлениеПоискомКонтекстноеМеню" id="38"/>
+				<ExtendedTooltip name="ДеревоБПУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ДеревоБППриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДеревоБПСхема" id="7">
+					<DataPath>ДеревоБП.Схема</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Sxem</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоБПСхемаКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДеревоБПСхемаРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ДеревоБПОбъектРодитель" id="9">
+					<DataPath>ДеревоБП.ОбъектРодитель</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоБПОбъектРодительКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДеревоБПОбъектРодительРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ДеревоБПНаименование" id="11">
+					<DataPath>ДеревоБП.Наименование</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Ad</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоБПНаименованиеКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДеревоБПНаименованиеРасширеннаяПодсказка" id="42"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="ТекСхема" id="2">
+			<DataPath>ТекСхема</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТекСхемаКонтекстноеМеню" id="3"/>
+			<ExtendedTooltip name="ТекСхемаРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<InputField name="ТСТочка" id="15">
+			<DataPath>ТСТочка</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТСТочкаКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ТСТочкаРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<InputField name="ТСТипМероприятия" id="17">
+			<DataPath>ТСТипМероприятия</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТСТипМероприятияКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ТСТипМероприятияРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="ТССхема" id="19">
+			<DataPath>ТССхема</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТССхемаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ТССхемаРасширеннаяПодсказка" id="46"/>
+		</InputField>
+		<InputField name="ТСПуть" id="21">
+			<DataPath>ТСПуть</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Глубина схемы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Sxemin dərinliyi</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТСПутьКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ТСПутьРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="ТСОбъектРодитель" id="23">
+			<DataPath>ТСОбъектРодитель</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТСОбъектРодительКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ТСОбъектРодительРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ТСМероприятие" id="25">
+			<DataPath>ТСМероприятие</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Tədbir</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТСМероприятиеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ТСМероприятиеРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="ТСИсполнитель" id="27">
+			<DataPath>ТСИсполнитель</DataPath>
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТСИсполнительКонтекстноеМеню" id="28"/>
+			<ExtendedTooltip name="ТСИсполнительРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<GraphicalSchemaField name="Карта" id="13">
+			<DataPath>Карта</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="КартаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КартаРасширеннаяПодсказка" id="51"/>
+			<Events>
+				<Event name="Selection">КартаВыбор</Event>
+			</Events>
+		</GraphicalSchemaField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТСТочка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТСТочка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТСТипМероприятия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТСТип мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ТипыМероприятий</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТССхема" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТССхема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КартыМаршрутов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТСПуть" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Глубина схемы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТСОбъектРодитель" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТСОбъект родитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТСМероприятие" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Tədbir</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТСМассив" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТСМассив</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Идентификатор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>İdentifikator</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Схема" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КартыМаршрутов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОбъектРодитель" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТСИсполнитель" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТСИсполнитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ТипыСотрудников</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДеревоБП" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список дерево БП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Схема" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КартыМаршрутов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ОбъектРодитель" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Карта" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/graphscheme">d5p1:FlowchartContextType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоБП" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево БП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Схема" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КартыМаршрутов</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбъектРодитель" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекСхема" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тек схема</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КартыМаршрутов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтадииДляРаскраски" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица стадий для раскраски, для работы в тонком клиенте</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Идентификатор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>İdentifikator</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидСтадии" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид стадии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыСтадийБП</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗапретСтарта" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запрет старта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Seçmək</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ "Задания для автоинформирования "</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Результат</dataPath>
+			<field>Результат</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УИД1</dataPath>
+			<field>УИД1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во заданий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СостоянияПоАвтоинформированию.Период,
+	СостоянияПоАвтоинформированию.Регистратор,
+	СостоянияПоАвтоинформированию.Объект,
+	СостоянияПоАвтоинформированию.Действие,
+	СостоянияПоАвтоинформированию.УИД
+ПОМЕСТИТЬ Т_Т1000
+ИЗ
+	РегистрНакопления.СостоянияПоАвтоинформированию КАК СостоянияПоАвтоинформированию
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РезультатыАвтоинформированияРезультаты.УИД,
+	РезультатыАвтоинформированияРезультаты.Результат,
+	РезультатыАвтоинформированияРезультаты.Дата
+ПОМЕСТИТЬ Т_Т1001
+ИЗ
+	Т_Т1000 КАК Т_Т1000
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.РезультатыАвтоинформирования.Результаты КАК РезультатыАвтоинформированияРезультаты
+		ПО Т_Т1000.УИД = РезультатыАвтоинформированияРезультаты.УИД
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Т_Т1001.УИД,
+	МАКСИМУМ(Т_Т1001.Дата) КАК Дата
+ПОМЕСТИТЬ Т_Т1002
+ИЗ
+	Т_Т1001 КАК Т_Т1001
+
+СГРУППИРОВАТЬ ПО
+	Т_Т1001.УИД
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Т_Т1000.Период,
+	Т_Т1000.Регистратор,
+	Т_Т1000.УИД КАК УИД1,
+	ЕСТЬNULL(Т_Т1001.Результат, Значение(Перечисление.РезультатыАвтоинформирования.ОтправленоНаВыполнение) ) КАК Результат
+ИЗ
+	Т_Т1000 КАК Т_Т1000
+		ЛЕВОЕ СОЕДИНЕНИЕ Т_Т1002 КАК Т_Т1002
+			ЛЕВОЕ СОЕДИНЕНИЕ Т_Т1001 КАК Т_Т1001
+			ПО (Т_Т1001.УИД = Т_Т1002.УИД)
+				И (Т_Т1001.Дата = Т_Т1002.Дата)
+		ПО Т_Т1000.УИД = Т_Т1002.УИД</query>
+	</dataSet>
+	<totalField>
+		<dataPath>УИД1</dataPath>
+		<expression>Количество(УИД1)</expression>
+		<group>Регистратор</group>
+		<group>Результат</group>
+	</totalField>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">РезультатАИ</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:TextFont" kind="StyleItem"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>РезультатАИ</dcsat:name>
+			<dcsat:expression>Представление(Результат)</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Колво</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:TextFont" kind="StyleItem"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15.25</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">15.25</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Колво</dcsat:name>
+			<dcsat:expression>Представление(УИД1)</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Док_ЗАИ</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xsi:type="v8ui:Font" ref="style:TextFont" kind="StyleItem"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35.75</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+							<dcscor:value xsi:type="xs:decimal">35.75</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Док_ЗАИ</dcsat:name>
+			<dcsat:expression>Представление(Регистратор)</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>Результаты</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Документ_ЗадачаНаАвтоИнф</groupName>
+		<templateType>Header</templateType>
+		<template>Макет3</template>
+	</groupTemplate>
+	<totalFieldsTemplate>
+		<groupField1>Результат</groupField1>
+		<templateType1>Header</templateType1>
+		<groupField2>Регистратор</groupField2>
+		<templateType2>Header</templateType2>
+		<template>Макет2</template>
+	</totalFieldsTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Результат</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УИД1</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Регистратор.Шаблон</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>5fbf147e-531b-4e10-a53d-c4a8872c3da6</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">BeginAndEnd</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="7" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:name>Результаты</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Результат</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:name>Документ_ЗадачаНаАвтоИнф</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Регистратор</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

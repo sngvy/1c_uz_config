@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОткрытьМУПользователя" id="42">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ОткрытьМУПользователя</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.ExchangePlan</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаОткрытьМУПользователяРасширеннаяПодсказка" id="43"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Узел" id="1">
+			<DataPath>Объект.Узел</DataPath>
+			<ContextMenu name="УзелКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="УзелРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">УзелПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Принятое" id="4">
+			<DataPath>Принятое</DataPath>
+			<ContextMenu name="ПринятоеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПринятоеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Отправленное" id="7">
+			<DataPath>Отправленное</DataPath>
+			<ContextMenu name="ОтправленноеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОтправленноеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Button name="ИзменитьНомера" id="10">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.ИзменитьНомера</CommandName>
+			<Picture>
+				<xr:Ref>CommonPicture.ПользователиВыполнитьСинхронизацию</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ExtendedTooltip name="ИзменитьНомераРасширеннаяПодсказка" id="11"/>
+		</Button>
+		<Button name="очиститьРС" id="12">
+			<Type>UsualButton</Type>
+			<Visible>false</Visible>
+			<CommandName>Form.Command.очиститьРС</CommandName>
+			<ExtendedTooltip name="очиститьРСРасширеннаяПодсказка" id="13"/>
+		</Button>
+		<Button name="УдалитьРегистрацию" id="14">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.УдалитьРегистрацию</CommandName>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить регистрацию всех объектов</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="УдалитьРегистрациюРасширеннаяПодсказка" id="15"/>
+		</Button>
+		<Button name="ПервичнаяРегистрацияОбъектов" id="16">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<CommandName>Form.Command.ПервичнаяРегистрацияОбъектов</CommandName>
+			<Picture>
+				<xr:Ref>StdPicture.CreateInitialImage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ExtendedTooltip name="ПервичнаяРегистрацияОбъектовРасширеннаяПодсказка" id="17"/>
+		</Button>
+		<UsualGroup name="ГруппаНастройки" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИзменитьРегистрацию" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменить регистрацию</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изменить регистрацию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИзменитьРегистрациюРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<CheckBoxField name="УчитыватьНастройки" id="44">
+							<DataPath>УчитыватьНастройки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Учитывать Объекты-Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьНастройкиКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="УчитыватьНастройкиРасширеннаяПодсказка" id="46"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодобратьТекущиеОбъекты" id="61">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подобрать текущие объекты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подобрать текущие объекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПодобратьТекущиеОбъектыРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<CheckBoxField name="УчитыватьТолькоВыездныеМероприятия" id="54">
+							<DataPath>УчитыватьТолькоВыездныеМероприятия</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьТолькоВыездныеМероприятияКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="УчитыватьТолькоВыездныеМероприятияРасширеннаяПодсказка" id="56"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчитыватьИсториюФайлов" id="49">
+							<DataPath>УчитыватьИсториюФайлов</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьИсториюФайловКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="УчитыватьИсториюФайловРасширеннаяПодсказка" id="51"/>
+							<Events>
+								<Event name="OnChange">УчитыватьИсториюФайловПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="УчитыватьТолькоФайлыДляВыезда" id="63">
+							<DataPath>УчитыватьТолькоФайлыДляВыезда</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчитыватьТолькоФайлыДляВыездаКонтекстноеМеню" id="64"/>
+							<ExtendedTooltip name="УчитыватьТолькоФайлыДляВыездаРасширеннаяПодсказка" id="65"/>
+							<Events>
+								<Event name="OnChange">УчитыватьТолькоФайлыДляВыездаПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ОбъектывБазе" id="18">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ОбъектывБазе</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбъектывБазеКонтекстноеМеню" id="19"/>
+			<AutoCommandBar name="ОбъектывБазеКоманднаяПанель" id="20">
+				<ChildItems>
+					<Button name="ОбъектывБазеИзменитьРегистрацию" id="40">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ИзменитьРегистрацию</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ПараметрыОбменаДанными</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ОбъектывБазеИзменитьРегистрациюРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="ПодобратьТекущиеОбъекты" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодобратьТекущиеОбъекты</CommandName>
+						<ExtendedTooltip name="ПодобратьТекущиеОбъектыРасширеннаяПодсказка" id="48"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОбъектывБазеРасширеннаяПодсказка" id="21"/>
+			<SearchStringAddition name="ОбъектывБазеСтрокаПоиска" id="22">
+				<AdditionSource>
+					<Item>ОбъектывБазе</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектывБазеСтрокаПоискаКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="ОбъектывБазеСтрокаПоискаРасширеннаяПодсказка" id="24"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбъектывБазеСостояниеПросмотра" id="25">
+				<AdditionSource>
+					<Item>ОбъектывБазе</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектывБазеСостояниеПросмотраКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="ОбъектывБазеСостояниеПросмотраРасширеннаяПодсказка" id="27"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбъектывБазеУправлениеПоиском" id="28">
+				<AdditionSource>
+					<Item>ОбъектывБазе</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектывБазеУправлениеПоискомКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ОбъектывБазеУправлениеПоискомРасширеннаяПодсказка" id="30"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ОбъектывБазеСсылка" id="31">
+					<DataPath>ОбъектывБазе.Ссылка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектывБазеСсылкаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОбъектывБазеСсылкаРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<CheckBoxField name="ОбъектывБазеЗарегистрировать" id="34">
+					<DataPath>ОбъектывБазе.Зарегистрировать</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбъектывБазеЗарегистрироватьКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ОбъектывБазеЗарегистрироватьРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="OnChange">ОбъектывБазеЗарегистрироватьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ОбъектывБазеУдалить" id="37">
+					<DataPath>ОбъектывБазе.Удалить</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбъектывБазеУдалитьКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОбъектывБазеУдалитьРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="OnChange">ОбъектывБазеУдалитьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УправлениеМобильнымиУстройствами</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Принятое" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принятое</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Отправленное" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправленное</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбъектывБазе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объектыв базе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ТипыПрикрепляемыхФайлов</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЧекЛистыМероприятий</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОтсутствиеСотрудника</v8:Type>
+						<v8:Type>cfg:DocumentRef.ОбещанныеПлатежи</v8:Type>
+						<v8:Type>cfg:CatalogRef.ТипыМероприятий</v8:Type>
+						<v8:Type>cfg:CatalogRef.РезультатыМероприятий</v8:Type>
+						<v8:Type>cfg:CatalogRef.Маршруты</v8:Type>
+						<v8:Type>cfg:DocumentRef.ПрикрепитьФайлы</v8:Type>
+						<v8:Type>cfg:CatalogRef.КонтактныеЛицаПоДолжнику</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>cfg:CatalogRef.ТипыДолговыхОбязательств</v8:Type>
+						<v8:Type>cfg:CatalogRef.Категории</v8:Type>
+						<v8:Type>cfg:CatalogRef.ПунктыЧекЛистов</v8:Type>
+						<v8:Type>cfg:TaskRef.Мероприятие</v8:Type>
+						<v8:Type>cfg:CatalogRef.ВидыТелефонов</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЮрФизЛицо</v8:Type>
+						<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Зарегистрировать" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зарегистрировать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Удалить" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="УчитыватьНастройки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьИсториюФайлов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать историю файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьТолькоВыездныеМероприятия" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать только выездные мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчитыватьТолькоФайлыДляВыезда" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учитывать только файлы для выезда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОбъектывБазе</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ОбъектывБазе.Удалить</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ОбъектывБазе</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ОбъектывБазе.Зарегистрировать</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Aquamarine</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ИзменитьНомера" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить номера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить номера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьНомера</Action>
+		</Command>
+		<Command name="очиститьРС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить РС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить РС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>очиститьРС</Action>
+		</Command>
+		<Command name="УдалитьРегистрацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить регистрацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьРегистрацию</Action>
+		</Command>
+		<Command name="ПервичнаяРегистрацияОбъектов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первичная регистрация объектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первичная регистрация объектов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПервичнаяРегистрацияОбъектов</Action>
+		</Command>
+		<Command name="ИзменитьРегистрацию" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить регистрацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить регистрацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьРегистрацию</Action>
+		</Command>
+		<Command name="ОткрытьМУПользователя" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильные устройства пользователей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть МУПользователя</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьМУПользователя</Action>
+		</Command>
+		<Command name="ПодобратьТекущиеОбъекты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать текущие объекты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать текущие объекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СостояниеПользователя10</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодобратьТекущиеОбъекты</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

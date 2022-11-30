@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидТребований</dataPath>
+			<field>ВидТребований</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид требований</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЦенаИска</dataPath>
+			<field>ЦенаИска</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цена иска</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаТребований</dataPath>
+			<field>ДатаТребований</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата требований</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проценты</dataPath>
+			<field>Проценты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проценты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсновнойДолг</dataPath>
+			<field>ОсновнойДолг</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной долг</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПросроченныеПроценты</dataPath>
+			<field>ПросроченныеПроценты</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просроченные проценты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пени</dataPath>
+			<field>Пени</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пени</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Штрафы</dataPath>
+			<field>Штрафы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Штрафы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Госпошлина</dataPath>
+			<field>Госпошлина</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Госпошлина</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ОбъектыВРаботеОстатки.Объект КАК Объект
+ПОМЕСТИТЬ ОбъектыВРаботеВТ
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки КАК ОбъектыВРаботеОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	УдалитьИсковыеТребования.Период КАК Период,
+	УдалитьИсковыеТребования.Займ КАК Займ,
+	УдалитьИсковыеТребования.ВидТребований КАК ВидТребований,
+	УдалитьИсковыеТребования.СуммаОсновнойДолг КАК СуммаОсновнойДолг,
+	УдалитьИсковыеТребования.СуммаПроценты КАК СуммаПроценты,
+	УдалитьИсковыеТребования.СуммаПросроченныеПроценты КАК СуммаПросроченныеПроценты,
+	УдалитьИсковыеТребования.СуммаШтрафы КАК СуммаШтрафы,
+	УдалитьИсковыеТребования.СуммаПени КАК СуммаПени,
+	УдалитьИсковыеТребования.ЦенаИска КАК ЦенаИска,
+	УдалитьИсковыеТребования.СуммаГоспошлина КАК СуммаГоспошлина
+ПОМЕСТИТЬ ИсковыеТребованияВТ
+ИЗ
+	РегистрСведений.УдалитьИсковыеТребования КАК УдалитьИсковыеТребования
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботеВТ.Объект КАК Объект,
+	ЕСТЬNULL(ИсковыеТребованияВТ.Период, ДАТАВРЕМЯ(1, 1, 1, 0, 0, 0)) КАК ДатаТребований,
+	ЕСТЬNULL(ИсковыеТребованияВТ.ВидТребований, ЛОЖЬ) КАК ВидТребований,
+	ЕСТЬNULL(ИсковыеТребованияВТ.СуммаОсновнойДолг, 0) КАК ОсновнойДолг,
+	ЕСТЬNULL(ИсковыеТребованияВТ.СуммаПроценты,0) КАК Проценты,
+	ЕСТЬNULL(ИсковыеТребованияВТ.СуммаПросроченныеПроценты, 0) КАК ПросроченныеПроценты,
+	ЕСТЬNULL(ИсковыеТребованияВТ.СуммаШтрафы, 0) КАК Штрафы,
+	ЕСТЬNULL(ИсковыеТребованияВТ.СуммаПени, 0) КАК Пени,
+	ЕСТЬNULL(ИсковыеТребованияВТ.ЦенаИска, 0) КАК ЦенаИска,
+	ЕСТЬNULL(ИсковыеТребованияВТ.СуммаГоспошлина, 0) КАК Госпошлина
+ИЗ
+	ОбъектыВРаботеВТ КАК ОбъектыВРаботеВТ
+		ЛЕВОЕ СОЕДИНЕНИЕ ИсковыеТребованияВТ КАК ИсковыеТребованияВТ
+		ПО ОбъектыВРаботеВТ.Объект = ИсковыеТребованияВТ.Займ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ЦенаИска</dataPath>
+		<expression>Сумма(ЦенаИска)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Госпошлина</dataPath>
+		<expression>Сумма(Госпошлина)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидТребований</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаТребований</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОсновнойДолг</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Пени</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПросроченныеПроценты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Проценты</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Штрафы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЦенаИска</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Госпошлина</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДатаТребований</dcsset:left>
+					<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcsset:right>
+					<dcsset:userSettingID>e209a29b-1245-45cd-b2f1-76f5c457e63f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ДатаТребований</dcsset:left>
+					<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+					<dcsset:right xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+						<v8:date>0001-01-01T00:00:00</v8:date>
+					</dcsset:right>
+					<dcsset:userSettingID>8df6681b-027d-40d2-9230-dbebbb5d5759</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ЦенаИска</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>Госпошлина</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Объект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:conditionalAppearance>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>ДатаТребований</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ДФ=dd.MM.yyyy</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:selection>
+									<dcsset:item>
+										<dcsset:field>ОсновнойДолг</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>Пени</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>ПросроченныеПроценты</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>Проценты</dcsset:field>
+									</dcsset:item>
+									<dcsset:item>
+										<dcsset:field>Штрафы</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:filter/>
+								<dcsset:appearance>
+									<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+										<dcscor:parameter>Формат</dcscor:parameter>
+										<dcscor:value xsi:type="v8:LocalStringType">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>ЧДЦ=2</v8:content>
+											</v8:item>
+										</dcscor:value>
+									</dcscor:item>
+								</dcsset:appearance>
+							</dcsset:item>
+						</dcsset:conditionalAppearance>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

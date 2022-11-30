@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="103">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="104"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ВнешнийID" id="100">
+					<DataPath>Объект.ВнешнийID</DataPath>
+					<ContextMenu name="ВнешнийIDКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="ВнешнийIDРасширеннаяПодсказка" id="102"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Займ" id="7">
+			<DataPath>Объект.Займ</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЗаймКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ЗаймРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ИсполнительныйДокумент" id="10">
+			<DataPath>Объект.ИсполнительныйДокумент</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИсполнительныйДокументКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИсполнительныйДокументРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ВидПлательщика" id="13">
+			<DataPath>Объект.ВидПлательщика</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидПлательщикаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВидПлательщикаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Плательщик" id="90">
+			<DataPath>Объект.Плательщик</DataPath>
+			<ContextMenu name="ПлательщикКонтекстноеМеню" id="91"/>
+			<ExtendedTooltip name="ПлательщикРасширеннаяПодсказка" id="92"/>
+		</InputField>
+		<InputField name="ДатаПлатежа" id="93">
+			<DataPath>Объект.ДатаПлатежа</DataPath>
+			<ContextMenu name="ДатаПлатежаКонтекстноеМеню" id="94"/>
+			<ExtendedTooltip name="ДатаПлатежаРасширеннаяПодсказка" id="95"/>
+		</InputField>
+		<InputField name="СуммаПлатежа" id="19">
+			<DataPath>Объект.СуммаПлатежа</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СуммаПлатежаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СуммаПлатежаРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">СуммаПлатежаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВалютаПлатежа" id="22">
+			<DataPath>Объект.ВалютаПлатежа</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВалютаПлатежаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ВалютаПлатежаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="НеразнесеннаяСумма" id="84">
+			<DataPath>Объект.НеразнесеннаяСумма</DataPath>
+			<ContextMenu name="НеразнесеннаяСуммаКонтекстноеМеню" id="85"/>
+			<ExtendedTooltip name="НеразнесеннаяСуммаРасширеннаяПодсказка" id="86"/>
+		</InputField>
+		<InputField name="НазначениеПлатежа" id="87">
+			<DataPath>Объект.НазначениеПлатежа</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="НазначениеПлатежаКонтекстноеМеню" id="88"/>
+			<ExtendedTooltip name="НазначениеПлатежаРасширеннаяПодсказка" id="89"/>
+		</InputField>
+		<Pages name="ГруппаРазнесение" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа разнесение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа разнесение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаРазнесениеРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Page name="ГруппаРазнесениеПоСудебнымРешениям" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разнесение по судебным решениям</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа разнесение по судебным решениям</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРазнесениеПоСудебнымРешениямРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Button name="РазнестиПоСудебнымРешениям" id="96">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.РазнестиПоСудебнымРешениям</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.GanttChart</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разнести</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РазнестиПоСудебнымРешениямРасширеннаяПодсказка" id="97"/>
+						</Button>
+						<Table name="РазнесениеПоСудебнымРешениям" id="31">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РазнесениеПоСудебнымРешениям</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РазнесениеПоСудебнымРешениямКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="РазнесениеПоСудебнымРешениямКоманднаяПанель" id="33"/>
+							<ExtendedTooltip name="РазнесениеПоСудебнымРешениямРасширеннаяПодсказка" id="34"/>
+							<SearchStringAddition name="РазнесениеПоСудебнымРешениямСтрокаПоиска" id="35">
+								<AdditionSource>
+									<Item>РазнесениеПоСудебнымРешениям</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РазнесениеПоСудебнымРешениямСтрокаПоискаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="РазнесениеПоСудебнымРешениямСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РазнесениеПоСудебнымРешениямСостояниеПросмотра" id="38">
+								<AdditionSource>
+									<Item>РазнесениеПоСудебнымРешениям</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РазнесениеПоСудебнымРешениямСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="РазнесениеПоСудебнымРешениямСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РазнесениеПоСудебнымРешениямУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>РазнесениеПоСудебнымРешениям</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РазнесениеПоСудебнымРешениямУправлениеПоискомКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="РазнесениеПоСудебнымРешениямУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">РазнесениеПоСудебнымРешениямПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РазнесениеПоСудебнымРешениямНомерСтроки" id="44">
+									<DataPath>Объект.РазнесениеПоСудебнымРешениям.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоСудебнымРешениямНомерСтрокиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="РазнесениеПоСудебнымРешениямНомерСтрокиРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<InputField name="РазнесениеПоСудебнымРешениямРешение" id="47">
+									<DataPath>Объект.РазнесениеПоСудебнымРешениям.Решение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоСудебнымРешениямРешениеКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="РазнесениеПоСудебнымРешениямРешениеРасширеннаяПодсказка" id="49"/>
+								</InputField>
+								<InputField name="РазнесениеПоСудебнымРешениямЧастьРешения" id="50">
+									<DataPath>Объект.РазнесениеПоСудебнымРешениям.ЧастьРешения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоСудебнымРешениямЧастьРешенияКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="РазнесениеПоСудебнымРешениямЧастьРешенияРасширеннаяПодсказка" id="52"/>
+								</InputField>
+								<InputField name="РазнесениеПоСудебнымРешениямВидЗадолженности" id="53">
+									<DataPath>Объект.РазнесениеПоСудебнымРешениям.ТипЗадолженности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоСудебнымРешениямВидЗадолженностиКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="РазнесениеПоСудебнымРешениямВидЗадолженностиРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="РазнесениеПоСудебнымРешениямСумма" id="56">
+									<DataPath>Объект.РазнесениеПоСудебнымРешениям.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоСудебнымРешениямСуммаКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="РазнесениеПоСудебнымРешениямСуммаРасширеннаяПодсказка" id="58"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРазнесениеПоЗагруженнымОстаткам" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разнесение по внесудебке</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа разнесение по загруженным остаткам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРазнесениеПоЗагруженнымОстаткамРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<Button name="РазнестиПоВнесудебке" id="98">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.РазнестиПоВнесудебке</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.GanttChart</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разнести</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="РазнестиПоВнесудебкеРасширеннаяПодсказка" id="99"/>
+						</Button>
+						<Table name="РазнесениеПоЗагруженнымОстаткам" id="59">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РазнесениеПоВнесудебке</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РазнесениеПоЗагруженнымОстаткамКонтекстноеМеню" id="60"/>
+							<AutoCommandBar name="РазнесениеПоЗагруженнымОстаткамКоманднаяПанель" id="61"/>
+							<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамРасширеннаяПодсказка" id="62"/>
+							<SearchStringAddition name="РазнесениеПоЗагруженнымОстаткамСтрокаПоиска" id="63">
+								<AdditionSource>
+									<Item>РазнесениеПоЗагруженнымОстаткам</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РазнесениеПоЗагруженнымОстаткамСтрокаПоискаКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РазнесениеПоЗагруженнымОстаткамСостояниеПросмотра" id="66">
+								<AdditionSource>
+									<Item>РазнесениеПоЗагруженнымОстаткам</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РазнесениеПоЗагруженнымОстаткамСостояниеПросмотраКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РазнесениеПоЗагруженнымОстаткамУправлениеПоиском" id="69">
+								<AdditionSource>
+									<Item>РазнесениеПоЗагруженнымОстаткам</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РазнесениеПоЗагруженнымОстаткамУправлениеПоискомКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">РазнесениеПоЗагруженнымОстаткамПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="РазнесениеПоЗагруженнымОстаткамНомерСтроки" id="72">
+									<DataPath>Объект.РазнесениеПоВнесудебке.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоЗагруженнымОстаткамНомерСтрокиКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамНомерСтрокиРасширеннаяПодсказка" id="74"/>
+								</LabelField>
+								<InputField name="РазнесениеПоЗагруженнымОстаткамЗайм" id="75">
+									<DataPath>Объект.РазнесениеПоВнесудебке.Займ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоЗагруженнымОстаткамЗаймКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамЗаймРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="РазнесениеПоЗагруженнымОстаткамВидЗадолженности" id="78">
+									<DataPath>Объект.РазнесениеПоВнесудебке.ТипЗадолженности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоЗагруженнымОстаткамВидЗадолженностиКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамВидЗадолженностиРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="РазнесениеПоЗагруженнымОстаткамСумма" id="81">
+									<DataPath>Объект.РазнесениеПоВнесудебке.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РазнесениеПоЗагруженнымОстаткамСуммаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="РазнесениеПоЗагруженнымОстаткамСуммаРасширеннаяПодсказка" id="83"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Автор" id="105">
+			<DataPath>Объект.Автор</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="АвторКонтекстноеМеню" id="106"/>
+			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="107"/>
+		</InputField>
+		<InputField name="Сотрудник" id="111">
+			<DataPath>Объект.Сотрудник</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="112"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="113"/>
+		</InputField>
+		<InputField name="Комментарий" id="108">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="109"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="110"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПоступлениеПлатежа</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РазнестиПоСудебнымРешениям" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разнести по судебным решениям</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разнести по судебным решениям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазнестиПоСудебнымРешениям</Action>
+		</Command>
+		<Command name="РазнестиПоВнесудебке" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разнести по внесудебке</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разнести по судебным решениям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазнестиПоВнесудебке</Action>
+		</Command>
+	</Commands>
+</Form>

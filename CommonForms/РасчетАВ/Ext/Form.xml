@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Рассчитать" id="27">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Рассчитать</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Calculator</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="РассчитатьРасширеннаяПодсказка" id="28"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницаВводныхДанных" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница вводных данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница вводных данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаВводныхДанныхРасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<Page name="Платеж" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платеж</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платеж</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Post</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПлатежРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<InputField name="Сумма" id="34">
+							<DataPath>Сумма</DataPath>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<InputField name="ДнейНаДатуПередачи" id="17">
+							<DataPath>ДнейНаДатуПередачи</DataPath>
+							<ContextMenu name="ДнейНаДатуПередачиКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="ДнейНаДатуПередачиРасширеннаяПодсказка" id="19"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="Кредитор" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредитор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредитор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.Catalog</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="КредиторРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<CheckBoxField name="КвикМани" id="1">
+							<DataPath>КвикМани</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КвикМаниКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КвикМаниРасширеннаяПодсказка" id="3"/>
+						</CheckBoxField>
+						<CheckBoxField name="Микроклад" id="4">
+							<DataPath>Микроклад</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="МикрокладКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="МикрокладРасширеннаяПодсказка" id="6"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПраймЗайм" id="7">
+							<DataPath>ПраймЗайм</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПраймЗаймКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПраймЗаймРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<CheckBoxField name="ГлавколлектФастМани" id="10">
+							<DataPath>ГлавколлектФастМани</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ГлавколлектФастМаниКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ГлавколлектФастМаниРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="АгентскоеВознаграждение" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Агентское вознаграждение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Агентское вознаграждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="АгентскоеВознаграждениеРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<InputField name="СуммаАВ" id="31">
+					<DataPath>СуммаАВ</DataPath>
+					<ContextMenu name="СуммаАВКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СуммаАВРасширеннаяПодсказка" id="33"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КвикМани" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квик Мани</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Микроклад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Микроклад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПраймЗайм" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прайм Займ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ГлавколлектФастМани" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главколлект/Фаст Мани</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДнейНаДатуПередачи" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней на дату передачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаАВ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма АВ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сумма" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Рассчитать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рассчитать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Рассчитать</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВыборПЛ" id="16">
+			<DataPath>ВыборПЛ</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceButton>false</ChoiceButton>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="ВыборПЛКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВыборПЛРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="ChoiceProcessing">ВыборПЛОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<Table name="ТабМетаданные" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>тзМетаданные</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТабМетаданныеКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТабМетаданныеКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ТабМетаданныеРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ТабМетаданныеСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>ТабМетаданные</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабМетаданныеСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТабМетаданныеСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТабМетаданныеСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>ТабМетаданные</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабМетаданныеСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ТабМетаданныеСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТабМетаданныеУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>ТабМетаданные</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабМетаданныеУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ТабМетаданныеУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ТабМетаданныеВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="тзМетаданныеНомер" id="4">
+					<DataPath>тзМетаданные.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзМетаданныеНомерКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="тзМетаданныеНомерРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<InputField name="тзМетаданныеСиноним" id="6">
+					<DataPath>тзМетаданные.Синоним</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки таблици</v8:content>
+						</v8:item>
+					</ToolTip>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзМетаданныеСинонимКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="тзМетаданныеСинонимРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="тзМетаданныеПутьКРеквизиту" id="8">
+					<DataPath>тзМетаданные.ПутьКРеквизиту</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="тзМетаданныеПутьКРеквизитуКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="тзМетаданныеПутьКРеквизитуРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="StartChoice">тзМетаданныеПутьКРеквизитуНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="тзМетаданныеХранилище" id="10">
+					<DataPath>тзМетаданные.Хранилище</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзМетаданныеХранилищеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="тзМетаданныеХранилищеРасширеннаяПодсказка" id="32"/>
+				</InputField>
+				<InputField name="тзМетаданныеДополнительныйОтбор" id="12">
+					<DataPath>тзМетаданные.ДополнительныйОтбор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзМетаданныеДополнительныйОтборКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="тзМетаданныеДополнительныйОтборРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="тзМетаданныеСвязьСоСтрокойПоПолю" id="14">
+					<DataPath>тзМетаданные.СвязьСоСтрокойПоПолю</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="тзМетаданныеСвязьСоСтрокойПоПолюКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="тзМетаданныеСвязьСоСтрокойПоПолюРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВидСтроки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.тсВидыСтрокШаблонов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыборПЛ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Документ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Sənəd</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+				<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ДополнительныйОтбор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительный отбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьКРеквизиту" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к реквизиту</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитТЧ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит ТЧ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>150</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Свойство" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свойство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СвязьСоСтрокойПоПолю" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Связь со строкой по полю</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяТабличнаяЧасть" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая табличная часть</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="тзМетаданные" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тз метаданные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Nömrə</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Синоним" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синоним</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьКРеквизиту" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь к реквизиту</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Хранилище" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Хранилище</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДополнительныйОтбор" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительный отбор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СвязьСоСтрокойПоПолю" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Связь со строкой по полю</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Ad</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Хранилище" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ХранилищеДополнительногоОтбора" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище дополнительного отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтотОбъкт" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этот объкт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.тсШаблоныПечатныхДокументов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НазваниеТаблици" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Название таблици</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="НазваниеТаблици1">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="ИмяТаблици">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

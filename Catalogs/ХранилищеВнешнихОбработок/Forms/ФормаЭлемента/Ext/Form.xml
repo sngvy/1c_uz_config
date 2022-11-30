@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерExtendedTooltip" id="26"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="27"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="28"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ДекорацияВыгрузка" id="20">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсказка:
+ - Для выгрузки обработки в файл нажмите кнопку "лупа".
+ - Для указания внутренней обработки, выбирается ее имя в конфигурации, иначе по "..." выбирается внешняя обработки.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияВыгрузкаКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="ДекорацияВыгрузкаExtendedTooltip" id="29"/>
+		</LabelDecoration>
+		<InputField name="ПрикрепляемыйФайл" id="22">
+			<DataPath>Объект.ПрикрепляемыйФайл</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<DropListButton>true</DropListButton>
+			<ChoiceButton>true</ChoiceButton>
+			<OpenButton>true</OpenButton>
+			<TextEdit>false</TextEdit>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="ПрикрепляемыйФайлКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПрикрепляемыйФайлExtendedTooltip" id="30"/>
+			<Events>
+				<Event name="StartChoice">ПрикрепляемыйФайлНачалоВыбора</Event>
+				<Event name="Opening">ПрикрепляемыйФайлОткрытие</Event>
+				<Event name="ChoiceProcessing">ПрикрепляемыйФайлОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Расписание" id="18">
+			<DataPath>Расписание</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceButton>true</ChoiceButton>
+			<ChooseType>false</ChooseType>
+			<ContextMenu name="РасписаниеКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="РасписаниеExtendedTooltip" id="31"/>
+			<Events>
+				<Event name="StartChoice">РасписаниеНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="Используется" id="13">
+			<DataPath>Объект.Используется</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользуетсяКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИспользуетсяExtendedTooltip" id="32"/>
+		</CheckBoxField>
+		<InputField name="Комментарий" id="24">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>Left</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>3</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="33"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ХранилищеВнешнихОбработок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Расписание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресХранилища" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

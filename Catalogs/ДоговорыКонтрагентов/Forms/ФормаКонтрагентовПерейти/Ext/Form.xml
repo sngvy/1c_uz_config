@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>70</Width>
+	<Height>15</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Контрагенты" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Контрагенты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="КонтрагентыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="КонтрагентыКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="8"/>
+			<SearchStringAddition name="КонтрагентыСтрокаПоиска" id="9">
+				<AdditionSource>
+					<Item>Контрагенты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыСтрокаПоискаКонтекстноеМеню" id="10"/>
+				<ExtendedTooltip name="КонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="КонтрагентыСостояниеПросмотра" id="12">
+				<AdditionSource>
+					<Item>Контрагенты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыСостояниеПросмотраКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="КонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="КонтрагентыУправлениеПоиском" id="15">
+				<AdditionSource>
+					<Item>Контрагенты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="КонтрагентыУправлениеПоискомКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="КонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="КонтрагентыНомерСтроки" id="4">
+					<DataPath>Объект.Контрагенты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентыНомерСтрокиКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="КонтрагентыНомерСтрокиРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<InputField name="КонтрагентыКонтрагент" id="6">
+					<DataPath>Объект.Контрагенты.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентыКонтрагентКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КонтрагентыКонтрагентРасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДоговорыКонтрагентов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

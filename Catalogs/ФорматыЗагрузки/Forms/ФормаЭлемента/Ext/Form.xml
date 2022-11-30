@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<Height>15</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаГоризонтальная" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Horizontal qrup</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Horizontal qrup</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальнаяРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Назначение" id="5">
+			<DataPath>Объект.Назначение</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НазначениеКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<Table name="ВыборСоответствий" id="7">
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ВыборСоответствий</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ВыборСоответствийКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ВыборСоответствийКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ВыборСоответствийРасширеннаяПодсказка" id="29"/>
+			<SearchStringAddition name="ВыборСоответствийСтрокаПоиска" id="30">
+				<AdditionSource>
+					<Item>ВыборСоответствий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВыборСоответствийСтрокаПоискаКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ВыборСоответствийСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВыборСоответствийСостояниеПросмотра" id="33">
+				<AdditionSource>
+					<Item>ВыборСоответствий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВыборСоответствийСостояниеПросмотраКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ВыборСоответствийСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВыборСоответствийУправлениеПоиском" id="36">
+				<AdditionSource>
+					<Item>ВыборСоответствий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВыборСоответствийУправлениеПоискомКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ВыборСоответствийУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ВыборСоответствийНомерСтроки" id="10">
+					<DataPath>Объект.ВыборСоответствий.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыборСоответствийНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ВыборСоответствийНомерСтрокиРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<InputField name="ВыборСоответствийИмяДанных" id="12">
+					<DataPath>Объект.ВыборСоответствий.ИмяДанных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыборСоответствийИмяДанныхКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ВыборСоответствийИмяДанныхРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ВыборСоответствийТипДанных" id="14">
+					<DataPath>Объект.ВыборСоответствий.ТипДанных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыборСоответствийТипДанныхКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ВыборСоответствийТипДанныхРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<InputField name="ВыборСоответствийПараметрыСвязи" id="16">
+					<DataPath>Объект.ВыборСоответствий.ПараметрыСвязи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыборСоответствийПараметрыСвязиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ВыборСоответствийПараметрыСвязиРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ВыборСоответствийСправочникВладелец" id="22">
+					<DataPath>Объект.ВыборСоответствий.СправочникВладелец</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ВыборСоответствийСправочникВладелецКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВыборСоответствийСправочникВладелецРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФорматыЗагрузки</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

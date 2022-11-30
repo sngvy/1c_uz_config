@@ -1,0 +1,2094 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДОКонечныйОстаток</dataPath>
+			<field>СуммаДОКонечныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДОНачальныйОстаток</dataPath>
+			<field>СуммаДОНачальныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект_Оборот</dataPath>
+			<field>Поле1</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОбъектыВРаботеОстаткиИОбороты.Объект,
+	ОбъектыВРаботеОстаткиИОбороты.Организация
+ПОМЕСТИТЬ Табл3_Орг
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, Подразделение = ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе_Объект.Объект,
+	ОбъектыВРаботе_Объект.Организация,
+	ЕСТЬNULL(ОбъектыВРаботеОстаткиИОбороты.Подразделение, ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК Подразделение
+ПОМЕСТИТЬ Табл2_Подр
+ИЗ
+	Табл3_Орг КАК ОбъектыВРаботе_Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбъектыВРаботе.Остатки(
+				,
+				Подразделение &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+					И Сотрудник = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+		ПО ОбъектыВРаботе_Объект.Объект = ОбъектыВРаботеОстаткиИОбороты.Объект
+			И ОбъектыВРаботе_Объект.Организация = ОбъектыВРаботеОстаткиИОбороты.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе_Объект.Объект,
+	ОбъектыВРаботе_Объект.Организация,
+	ОбъектыВРаботе_Объект.Подразделение,
+	ЕСТЬNULL(ОбъектыВРаботеОстаткиИОбороты.Сотрудник, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК Сотрудник
+ПОМЕСТИТЬ ОбъектыВРаботе
+ИЗ
+	Табл2_Подр КАК ОбъектыВРаботе_Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбъектыВРаботе.Остатки(, Сотрудник &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+		ПО ОбъектыВРаботе_Объект.Объект = ОбъектыВРаботеОстаткиИОбороты.Объект
+			И ОбъектыВРаботе_Объект.Подразделение = ОбъектыВРаботеОстаткиИОбороты.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе.Объект,
+	ОбъектыВРаботе.Организация,
+	ОбъектыВРаботе.Подразделение,
+	ОбъектыВРаботе.Сотрудник,
+	ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0) КАК СуммаДОНачальныйОстаток,
+	ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0) КАК СуммаДОКонечныйОстаток,
+	ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0) - ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0) КАК Поле1
+ИЗ
+	ОбъектыВРаботе КАК ОбъектыВРаботе
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоОбъектам.ОстаткиИОбороты(
+				,
+				,
+				Период,
+				Движения,
+				Объект В
+					(ВЫБРАТЬ
+						ааа.Объект
+					ИЗ
+						ОбъектыВРаботе КАК ааа)) КАК ЗадолженностьПоОбъектамОстаткиИОбороты
+		ПО ОбъектыВРаботе.Объект = ЗадолженностьПоОбъектамОстаткиИОбороты.Объект
+ГДЕ
+	ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДООборот &lt;&gt; 0</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДОРасход</dataPath>
+			<field>СуммаДОРасход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДОПриход</dataPath>
+			<field>СуммаДОПриход</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДООборот</dataPath>
+			<field>СуммаДООборот</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗадолженностьПоОбъектамОбороты.Период,
+	ЗадолженностьПоОбъектамОбороты.Регистратор,
+	ЗадолженностьПоОбъектамОбороты.СуммаДООборот,
+	ЗадолженностьПоОбъектамОбороты.СуммаДОПриход,
+	ЗадолженностьПоОбъектамОбороты.СуммаДОРасход,
+	ЗадолженностьПоОбъектамОбороты.Объект
+ИЗ
+	РегистрНакопления.ЗадолженностьПоОбъектам.Обороты(, , Регистратор, ) КАК ЗадолженностьПоОбъектамОбороты</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Подр_Остатки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подр_Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подр_СуммаДОКонечныйОстаток</dataPath>
+			<field>СуммаДОКонечныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подр_СуммаДОНачальныйОстаток</dataPath>
+			<field>СуммаДОНачальныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подр_Оборот</dataPath>
+			<field>Оборот</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОбъектыВРаботеОстаткиИОбороты.Объект,
+	ОбъектыВРаботеОстаткиИОбороты.Организация
+ПОМЕСТИТЬ Табл3_Орг
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, Подразделение = ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе_Объект.Объект,
+	ОбъектыВРаботе_Объект.Организация,
+	ЕСТЬNULL(ОбъектыВРаботеОстаткиИОбороты.Подразделение, ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК Подразделение
+ПОМЕСТИТЬ Табл2_Подр
+ИЗ
+	Табл3_Орг КАК ОбъектыВРаботе_Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбъектыВРаботе.Остатки(
+				,
+				Подразделение &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+					И Сотрудник = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+		ПО ОбъектыВРаботе_Объект.Объект = ОбъектыВРаботеОстаткиИОбороты.Объект
+			И ОбъектыВРаботе_Объект.Организация = ОбъектыВРаботеОстаткиИОбороты.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе.Организация,
+	ОбъектыВРаботе.Подразделение,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0)) КАК СуммаДОНачальныйОстаток,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0)) КАК СуммаДОКонечныйОстаток,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0) - ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0)) КАК Оборот
+	
+ИЗ
+	Табл2_Подр КАК ОбъектыВРаботе
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоОбъектам.ОстаткиИОбороты(
+				,
+				,
+				Период,
+				Движения,
+				Объект В
+					(ВЫБРАТЬ
+						ааа.Объект
+					ИЗ
+						Табл2_Подр КАК ааа)) КАК ЗадолженностьПоОбъектамОстаткиИОбороты
+		ПО ОбъектыВРаботе.Объект = ЗадолженностьПоОбъектамОстаткиИОбороты.Объект
+ГДЕ
+	ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДООборот &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	ОбъектыВРаботе.Организация,
+	ОбъектыВРаботе.Подразделение</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Сотр_Остатки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотр_Оборот</dataPath>
+			<field>Поле1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотр_Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотр_СуммаДОКонечныйОстаток</dataPath>
+			<field>СуммаДОКонечныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотр_СуммаДОНачальныйОстаток</dataPath>
+			<field>СуммаДОНачальныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОбъектыВРаботеОстаткиИОбороты.Объект,
+	ОбъектыВРаботеОстаткиИОбороты.Организация
+ПОМЕСТИТЬ Табл3_Орг
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, Подразделение = ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе_Объект.Объект,
+	ОбъектыВРаботе_Объект.Организация,
+	ЕСТЬNULL(ОбъектыВРаботеОстаткиИОбороты.Подразделение, ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК Подразделение
+ПОМЕСТИТЬ Табл2_Подр
+ИЗ
+	Табл3_Орг КАК ОбъектыВРаботе_Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбъектыВРаботе.Остатки(
+				,
+				Подразделение &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+					И Сотрудник = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+		ПО ОбъектыВРаботе_Объект.Объект = ОбъектыВРаботеОстаткиИОбороты.Объект
+			И ОбъектыВРаботе_Объект.Организация = ОбъектыВРаботеОстаткиИОбороты.Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе_Объект.Объект,
+	ОбъектыВРаботе_Объект.Организация,
+	ОбъектыВРаботе_Объект.Подразделение,
+	ЕСТЬNULL(ОбъектыВРаботеОстаткиИОбороты.Сотрудник, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК Сотрудник
+ПОМЕСТИТЬ ОбъектыВРаботе
+ИЗ
+	Табл2_Подр КАК ОбъектыВРаботе_Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ОбъектыВРаботе.Остатки(, Сотрудник &lt;&gt; ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+		ПО ОбъектыВРаботе_Объект.Объект = ОбъектыВРаботеОстаткиИОбороты.Объект
+			И ОбъектыВРаботе_Объект.Подразделение = ОбъектыВРаботеОстаткиИОбороты.Подразделение
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе.Организация,
+	ОбъектыВРаботе.Подразделение,
+	ОбъектыВРаботе.Сотрудник,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0)) КАК СуммаДОНачальныйОстаток,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0)) КАК СуммаДОКонечныйОстаток,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0) - ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0)) КАК Поле1
+ИЗ
+	ОбъектыВРаботе КАК ОбъектыВРаботе
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоОбъектам.ОстаткиИОбороты(
+				,
+				,
+				Период,
+				Движения,
+				Объект В
+					(ВЫБРАТЬ
+						ааа.Объект
+					ИЗ
+						ОбъектыВРаботе КАК ааа)) КАК ЗадолженностьПоОбъектамОстаткиИОбороты
+		ПО ОбъектыВРаботе.Объект = ЗадолженностьПоОбъектамОстаткиИОбороты.Объект
+ГДЕ
+	ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДООборот &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	ОбъектыВРаботе.Организация,
+	ОбъектыВРаботе.Подразделение,
+	ОбъектыВРаботе.Сотрудник</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Орг_Остатки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Орг_Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Орг_Оборот</dataPath>
+			<field>Поле1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Орг_СуммаДОКонечныйОстаток</dataPath>
+			<field>СуммаДОКонечныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>ClosingBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Орг_СуммаДОНачальныйОстаток</dataPath>
+			<field>СуммаДОНачальныйОстаток</field>
+			<role>
+				<dcscom:balance>true</dcscom:balance>
+				<dcscom:balanceGroupName>СуммаДО</dcscom:balanceGroupName>
+				<dcscom:balanceType>OpeningBalance</dcscom:balanceType>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ОбъектыВРаботеОстаткиИОбороты.Объект,
+	ОбъектыВРаботеОстаткиИОбороты.Организация
+ПОМЕСТИТЬ Табл3_Орг
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, Подразделение = ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) КАК ОбъектыВРаботеОстаткиИОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ОбъектыВРаботе.Организация,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0)) КАК СуммаДОНачальныйОстаток,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0)) КАК СуммаДОКонечныйОстаток,
+	СУММА(ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОКонечныйОстаток, 0) - ЕСТЬNULL(ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДОНачальныйОстаток, 0)) КАК Поле1
+ИЗ
+	Табл3_Орг КАК ОбъектыВРаботе
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоОбъектам.ОстаткиИОбороты(
+				,
+				,
+				Период,
+				Движения,
+				Объект В
+					(ВЫБРАТЬ
+						ааа.Объект
+					ИЗ
+						Табл3_Орг КАК ааа)) КАК ЗадолженностьПоОбъектамОстаткиИОбороты
+		ПО ОбъектыВРаботе.Объект = ЗадолженностьПоОбъектамОстаткиИОбороты.Объект
+ГДЕ
+	ЗадолженностьПоОбъектамОстаткиИОбороты.СуммаДООборот &lt;&gt; 0
+
+СГРУППИРОВАТЬ ПО
+	ОбъектыВРаботе.Организация</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>Объект</sourceExpression>
+		<destinationExpression>Объект</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>Подр_Остатки</destinationDataSet>
+		<sourceExpression>Подразделение</sourceExpression>
+		<destinationExpression>Подр_Подразделение</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>Сотр_Остатки</destinationDataSet>
+		<sourceExpression>Сотрудник</sourceExpression>
+		<destinationExpression>Сотр_Сотрудник</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>Орг_Остатки</destinationDataSet>
+		<sourceExpression>Организация</sourceExpression>
+		<destinationExpression>Орг_Организация</destinationExpression>
+	</dataSetLink>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/colors/web" xsi:type="v8ui:Color">d8p1:Teal</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/colors/web" xsi:type="v8ui:Color">d8p1:Teal</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/colors/web" xsi:type="v8ui:Color">d8p1:Teal</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/colors/web" xsi:type="v8ui:Color">d8p1:Teal</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Оборот</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#000000</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xmlns:d8p1="http://v8.1c.ru/8.1/data/ui/colors/web" xsi:type="v8ui:Color">d8p1:Teal</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ДО</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Регистратор</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Период</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Остаток на начало</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма приход</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма расход</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Остаток на конец</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#9FBBD7</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item>
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" faceName="Arial" height="7" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>Размещение</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+				<dcsat:tableCell/>
+			</dcsat:item>
+		</template>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Организация</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#8FA9C2</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#8FA9C2</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#8FA9C2</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Орг_ОстН</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#8FA9C2</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Орг_Оборот</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#8FA9C2</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Орг_ОстК</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#8FA9C2</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Организация</dcsat:name>
+			<dcsat:expression>Представление(Организация)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Орг_ОстН</dcsat:name>
+			<dcsat:expression>Орг_СуммаДОНачальныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Орг_Оборот</dcsat:name>
+			<dcsat:expression>Орг_Оборот</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Орг_ОстК</dcsat:name>
+			<dcsat:expression>Орг_СуммаДОКонечныйОстаток</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Объект</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6EAFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6EAFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6EAFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ОстатокНаНачало</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6EAFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Объект_Оборот</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6EAFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ОстатокНаКонец</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#E6EAFF</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Объект</dcsat:name>
+			<dcsat:expression>Представление(Объект)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ОстатокНаНачало</dcsat:name>
+			<dcsat:expression>СуммаДОНачальныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ОстатокНаКонец</dcsat:name>
+			<dcsat:expression>СуммаДОКонечныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Объект_Оборот</dcsat:name>
+			<dcsat:expression>Объект_Оборот</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Регистратор</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#EEEFFC</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Период</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ДФ=dd.MM.yyyy</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#EEEFFC</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#EEEFFC</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">СуммаПриход</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#EEEFFC</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">СуммаРасход</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#EEEFFC</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#EEEFFC</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Регистратор</dcsat:name>
+			<dcsat:expression>Представление(Регистратор)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Период</dcsat:name>
+			<dcsat:expression>Период</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>СуммаПриход</dcsat:name>
+			<dcsat:expression>СуммаДОПриход</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>СуммаРасход</dcsat:name>
+			<dcsat:expression>СуммаДОРасход</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет5</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Подразделение</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#BCBFD0</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#BCBFD0</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#BCBFD0</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Подр_ОстНачало</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#BCBFD0</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Подр_Оборот</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#BCBFD0</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Подр_ОстКон</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#BCBFD0</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Подразделение</dcsat:name>
+			<dcsat:expression>Представление(Подразделение)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Подр_ОстНачало</dcsat:name>
+			<dcsat:expression>Подр_СуммаДОНачальныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Подр_ОстКон</dcsat:name>
+			<dcsat:expression>Подр_СуммаДОКонечныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Подр_Оборот</dcsat:name>
+			<dcsat:expression>Подр_Оборот</dcsat:expression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет6</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сотрудник</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#D3D7EA</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ВертикальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:VerticalAlign">Bottom</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#D3D7EA</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#D3D7EA</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сотр_ОстН</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#D3D7EA</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сотр_Оборот</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#D3D7EA</dcscor:value>
+						</dcscor:item>
+						<dcscor:item>
+							<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ОбъединятьПоГоризонтали</dcscor:parameter>
+							<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Сотр_ОстК</dcsat:value>
+						<dcsat:appearance>
+							<dcscor:item>
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="xs:string">ЧН=0</dcscor:value>
+							</dcscor:item>
+						</dcsat:appearance>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#D3D7EA</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сотрудник</dcsat:name>
+			<dcsat:expression>Представление(Сотрудник)</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сотр_ОстН</dcsat:name>
+			<dcsat:expression>Сотр_СуммаДОНачальныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сотр_ОстК</dcsat:name>
+			<dcsat:expression>Сотр_СуммаДОКонечныйОстаток</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Сотр_Оборот</dcsat:name>
+			<dcsat:expression>Сотр_Оборот</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>Организация</groupName>
+		<templateType>Header</templateType>
+		<template>Макет2</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Детальные</groupName>
+		<templateType>Header</templateType>
+		<template>Макет3</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Обороты</groupName>
+		<templateType>Header</templateType>
+		<template>Макет4</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Подразделение</groupName>
+		<templateType>Header</templateType>
+		<template>Макет5</template>
+	</groupTemplate>
+	<groupTemplate>
+		<groupName>Сотрудник</groupName>
+		<templateType>Header</templateType>
+		<template>Макет6</template>
+	</groupTemplate>
+	<groupHeaderTemplate>
+		<groupName>Организация</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupHeaderTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Объект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаДОНачальныйОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаДОКонечныйОстаток</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>9c9a1205-d4f6-4f02-9327-2511b308890b</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>94210bed-1ab0-4aa5-893a-951f9edd74ee</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>cf4695f6-3246-4760-bca3-d4a132024028</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Организация</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Орг_Оборот</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Орг_СуммаДОНачальныйОстаток</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Орг_СуммаДОКонечныйОстаток</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:field>Орг_Организация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:name>Подразделение</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подр_СуммаДОНачальныйОстаток</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подр_СуммаДОКонечныйОстаток</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Подр_Оборот</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Подразделение</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Подр_СуммаДОНачальныйОстаток</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Подр_СуммаДОКонечныйОстаток</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:name>Сотрудник</dcsset:name>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотрудник</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотр_СуммаДОНачальныйОстаток</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотр_СуммаДОКонечныйОстаток</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Сотр_Оборот</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+								<dcsset:use>false</dcsset:use>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Сотрудник</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:field>СуммаДОНачальныйОстаток</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:field>СуммаДОКонечныйОстаток</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:name>Детальные</dcsset:name>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Объект</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>СуммаДОНачальныйОстаток</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>СуммаДОКонечныйОстаток</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:name>Обороты</dcsset:name>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>Регистратор</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>Период</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>СуммаДОПриход</dcsset:field>
+									</dcsset:item>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>СуммаДОРасход</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

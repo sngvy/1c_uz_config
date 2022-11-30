@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="КнопкаПодборИзОКВ" id="8">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>true</xr:Common>
+					<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+					<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+					<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+					<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+					<xr:Value name="Role.ФактическаяДата">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+				</UserVisible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.КомандаПодборИзОКВ</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BackColor>style:ButtonBackColor</BackColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ExtendedTooltip name="КнопкаПодборИзОКВExtendedTooltip" id="45"/>
+			</Button>
+			<Button name="КнопкаЗагрузитьКурсы" id="3">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>true</xr:Common>
+					<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+					<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+					<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+					<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+					<xr:Value name="Role.ФактическаяДата">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+				</UserVisible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.КомандаЗагрузитьКурсы</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BackColor>style:ButtonBackColor</BackColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ExtendedTooltip name="КнопкаЗагрузитьКурсыExtendedTooltip" id="46"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСоздании</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Валюты" id="25">
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="ВалютыКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="ВалютыКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="ВалютыExtendedTooltip" id="47"/>
+			<SearchStringAddition name="ВалютыСтрокаПоиска" id="55">
+				<AdditionSource>
+					<Item>Валюты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВалютыСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="ВалютыСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ВалютыСостояниеПросмотра" id="58">
+				<AdditionSource>
+					<Item>Валюты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ВалютыСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="ВалютыСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ВалютыУправлениеПоиском" id="61">
+				<AdditionSource>
+					<Item>Валюты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ВалютыУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="ВалютыУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="Код" id="28">
+					<DataPath>Список.Code</DataPath>
+					<Width>3</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="КодКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="48"/>
+				</InputField>
+				<InputField name="Наименование" id="32">
+					<DataPath>Список.Description</DataPath>
+					<Width>5</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="49"/>
+				</InputField>
+				<InputField name="НаименованиеПолное" id="40">
+					<DataPath>Список.НаименованиеПолное</DataPath>
+					<Width>20</Width>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="НаименованиеПолноеExtendedTooltip" id="50"/>
+				</InputField>
+				<ColumnGroup name="КурсКратность" id="42">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Курс кратность</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="КурсКратностьExtendedTooltip" id="51"/>
+					<ChildItems>
+						<InputField name="Курс" id="38">
+							<DataPath>Список.Курс</DataPath>
+							<Width>8</Width>
+							<Wrap>false</Wrap>
+							<ContextMenu name="КурсКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="КурсExtendedTooltip" id="52"/>
+						</InputField>
+						<InputField name="Кратность" id="36">
+							<DataPath>Список.Кратность</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>кратность</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>кратность равная единице не отображается</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>5</Width>
+							<Wrap>false</Wrap>
+							<ContextMenu name="КратностьКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КратностьExtendedTooltip" id="53"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Ссылка" id="43">
+					<DataPath>Список.Ref</DataPath>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="СсылкаExtendedTooltip" id="54"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Валюты.ПометкаУдаления,
+	Валюты.Код,
+	Валюты.Наименование,
+	Валюты.НаименованиеПолное,
+	КурсыВалют.Курс,
+	ВЫБОР
+		КОГДА КурсыВалют.Кратность = 1
+			ТОГДА " "
+		ИНАЧЕ КурсыВалют.Кратность
+	КОНЕЦ КАК Кратность,
+	Валюты.Ссылка
+ИЗ
+	Справочник.Валюты КАК Валюты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КурсыВалют.СрезПоследних(&amp;КонецПериода, ) КАК КурсыВалют
+		ПО Валюты.Ссылка = КурсыВалют.Валюта</QueryText>
+				<MainTable>Catalog.Валюты</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаЗагрузитьКурсы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка курсов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить курсы валют с веб-сайта РБК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаЗагрузитьКурсыВыполнить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КомандаПодборИзОКВ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из классификатора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать валюты из Общероссийского классификатора валют</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПодборИзОКВВыполнить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

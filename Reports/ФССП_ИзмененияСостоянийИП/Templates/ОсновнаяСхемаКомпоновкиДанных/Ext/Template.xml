@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийСтатус</dataPath>
+			<field>ТекущийСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительноеПроизводство</dataPath>
+			<field>ИсполнительноеПроизводство</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИП</dataPath>
+			<field>ИП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредыдущийСтатус</dataPath>
+			<field>ПредыдущийСтатус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущий статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительныйДокумент</dataPath>
+			<field>ИсполнительныйДокумент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительный документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектИП</dataPath>
+			<field>ОбъектИП</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект ИП</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Должник</dataPath>
+			<field>Должник</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должник</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Операция</dataPath>
+			<field>Операция</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операция</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СостояниеПослеДаты.ИП КАК ИсполнительноеПроизводство,
+	ЕСТЬNULL(СостояниеДоДаты.СтатусИП, ЗНАЧЕНИЕ(Перечисление.ФССП_СтатусыИП.ПустаяСсылка)) КАК ПредыдущийСтатус,
+	ЕСТЬNULL(СостояниеПослеДаты.СтатусИП, ЗНАЧЕНИЕ(Перечисление.ФССП_СтатусыИП.ПустаяСсылка)) КАК ТекущийСтатус,
+	СостояниеПослеДаты.НомерИД КАК ИсполнительныйДокумент,
+	СостояниеПослеДаты.НомерИД.Владелец КАК ОбъектИП,
+	СостояниеПослеДаты.НомерИД.Должник КАК Должник,
+	СУММА(ЕСТЬNULL(ФССП_ЗадолженностьПоПредметамИП.Сумма, 0)) КАК Сумма,
+	ЕСТЬNULL(ФССП_ЗадолженностьПоПредметамИП.ВидДвиженияЗадолженности, "Нет") КАК Операция
+ИЗ
+	РегистрСведений.ФССП_СостояниеИП.СрезПоследних(&amp;ПослеДаты, ) КАК СостояниеПослеДаты
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФССП_СостояниеИП.СрезПоследних(&amp;ДоДаты, ) КАК СостояниеДоДаты
+		ПО СостояниеПослеДаты.ИП = СостояниеДоДаты.ИП
+			И СостояниеПослеДаты.СтатусИП &lt;&gt; СостояниеДоДаты.СтатусИП
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ФССП_ЗадолженностьПоПредметамИП КАК ФССП_ЗадолженностьПоПредметамИП
+		ПО СостояниеПослеДаты.ИП = ФССП_ЗадолженностьПоПредметамИП.ИсполнительноеПроизводство
+			И СостояниеПослеДаты.Регистратор = ФССП_ЗадолженностьПоПредметамИП.Регистратор
+
+СГРУППИРОВАТЬ ПО
+	СостояниеПослеДаты.ИП,
+	СостояниеПослеДаты.НомерИД,
+	СостояниеПослеДаты.НомерИД.Владелец,
+	СостояниеПослеДаты.НомерИД.Должник,
+	ЕСТЬNULL(СостояниеДоДаты.СтатусИП, ЗНАЧЕНИЕ(Перечисление.ФССП_СтатусыИП.ПустаяСсылка)),
+	ЕСТЬNULL(СостояниеПослеДаты.СтатусИП, ЗНАЧЕНИЕ(Перечисление.ФССП_СтатусыИП.ПустаяСсылка)),
+	ЕСТЬNULL(ФССП_ЗадолженностьПоПредметамИП.ВидДвиженияЗадолженности, "Нет")</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПослеДаты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>После даты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДоДаты</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>До даты</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсполнительноеПроизводство</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсполнительныйДокумент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Должник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПредыдущийСтатус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТекущийСтатус</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Операция</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НеПлатеж</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ПослеДаты</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfLastMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>8721ab3d-db8c-4951-8e2b-df39b554aef9</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДоДаты</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>208025f3-f41b-40c9-919d-cf54fa935865</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ОбъектИП</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

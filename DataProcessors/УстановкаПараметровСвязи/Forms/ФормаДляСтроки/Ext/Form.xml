@@ -1,0 +1,496 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>50</Width>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Button name="ОК" id="38">
+			<Type>UsualButton</Type>
+			<SkipOnInput>false</SkipOnInput>
+			<CommandName>Form.Command.ОК</CommandName>
+			<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="45"/>
+		</Button>
+		<UsualGroup name="Группа1" id="42">
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<UsualGroup name="Наименование" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<InputField name="Строка1Столб1" id="2">
+							<DataPath>Строка1Столб1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="Строка1Столб1КонтекстноеМеню" id="3"/>
+							<ExtendedTooltip name="Строка1Столб1РасширеннаяПодсказка" id="48"/>
+							<Events>
+								<Event name="ChoiceProcessing">Строка1Столб1ОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="Строка2Столб1" id="9">
+							<DataPath>Строка2Столб1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="Строка2Столб1КонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="Строка2Столб1РасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="Строка3Столб1" id="16">
+							<DataPath>Строка3Столб1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="Строка3Столб1КонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="Строка3Столб1РасширеннаяПодсказка" id="50"/>
+						</InputField>
+						<InputField name="Строка4Столб1" id="23">
+							<DataPath>Строка4Столб1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="Строка4Столб1КонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="Строка4Столб1РасширеннаяПодсказка" id="51"/>
+						</InputField>
+						<InputField name="Строка5Столб1" id="30">
+							<DataPath>Строка5Столб1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="Строка5Столб1КонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="Строка5Столб1РасширеннаяПодсказка" id="52"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="КоличествоСимволов" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество символов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество символов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="КоличествоСимволовРасширеннаяПодсказка" id="53"/>
+					<ChildItems>
+						<InputField name="Строка1Столб2" id="4">
+							<DataPath>Строка1Столб2</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Число символов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка1Столб2КонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="Строка1Столб2РасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="Строка2Столб2" id="11">
+							<DataPath>Строка2Столб2</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка2Столб2КонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="Строка2Столб2РасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<InputField name="Строка3Столб2" id="18">
+							<DataPath>Строка3Столб2</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка3Столб2КонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="Строка3Столб2РасширеннаяПодсказка" id="56"/>
+						</InputField>
+						<InputField name="Строка4Столб2" id="25">
+							<DataPath>Строка4Столб2</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка4Столб2КонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="Строка4Столб2РасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<InputField name="Строка5Столб2" id="32">
+							<DataPath>Строка5Столб2</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка5Столб2КонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="Строка5Столб2РасширеннаяПодсказка" id="58"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Разделитель" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделитель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделитель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="РазделительРасширеннаяПодсказка" id="59"/>
+					<ChildItems>
+						<InputField name="Строка1Столб3" id="6">
+							<DataPath>Строка1Столб3</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разделитель</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка1Столб3КонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="Строка1Столб3РасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<InputField name="Строка2Столб3" id="13">
+							<DataPath>Строка2Столб3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка2Столб3КонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="Строка2Столб3РасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="Строка3Столб3" id="20">
+							<DataPath>Строка3Столб3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка3Столб3КонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="Строка3Столб3РасширеннаяПодсказка" id="62"/>
+						</InputField>
+						<InputField name="Строка4Столб3" id="27">
+							<DataPath>Строка4Столб3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка4Столб3КонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="Строка4Столб3РасширеннаяПодсказка" id="63"/>
+						</InputField>
+						<InputField name="Строка5Столб3" id="34">
+							<DataPath>Строка5Столб3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="Строка5Столб3КонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="Строка5Столб3РасширеннаяПодсказка" id="64"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="Строка" id="43">
+			<DataPath>18</DataPath>
+			<ContextMenu name="СтрокаКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="СтрокаРасширеннаяПодсказка" id="65"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УстановкаПараметровСвязи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Строка1Столб1" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка1 столб1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка1Столб2" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка1 столб2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка1Столб3" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка1 столб3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка2Столб1" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка2 столб1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка2Столб2" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка2 столб2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка2Столб3" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка2 столб3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка3Столб1" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка3 столб1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка3Столб2" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка3 столб2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка3Столб3" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка4Столб1" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка4 столб1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка4Столб2" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка4 столб2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка4Столб3" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка4 столб3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка5Столб1" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка5 столб1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка5Столб2" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка5 столб2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Строка5Столб3" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка5 столб3</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокИменКолонокИсхТаблицы" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список имен колонок исх таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

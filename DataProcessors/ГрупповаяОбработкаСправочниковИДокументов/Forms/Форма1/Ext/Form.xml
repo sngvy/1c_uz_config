@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>80</Width>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа" id="1">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаExtendedTooltip" id="47"/>
+			<ChildItems>
+				<Page name="Группа1" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Seçim</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа1</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Группа1ExtendedTooltip" id="48"/>
+					<ChildItems>
+						<InputField name="ВыборОбъектов" id="22">
+							<DataPath>ВыборОбъектов</DataPath>
+							<ContextMenu name="ВыборОбъектовКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ВыборОбъектовExtendedTooltip" id="49"/>
+							<Events>
+								<Event name="OnChange">Реквизит1ПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Table name="Отбор" id="24">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Отбор</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОтборКонтекстноеМеню" id="25"/>
+							<AutoCommandBar name="ОтборКоманднаяПанель" id="26"/>
+							<ExtendedTooltip name="ОтборExtendedTooltip" id="50"/>
+							<SearchStringAddition name="ОтборSearchString" id="51">
+								<AdditionSource>
+									<Item>Отбор</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтборSearchStringContextMenu" id="52"/>
+								<ExtendedTooltip name="ОтборSearchStringExtendedTooltip" id="53"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОтборViewStatus" id="54">
+								<AdditionSource>
+									<Item>Отбор</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтборViewStatusContextMenu" id="55"/>
+								<ExtendedTooltip name="ОтборViewStatusExtendedTooltip" id="56"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОтборSearchControl" id="57">
+								<AdditionSource>
+									<Item>Отбор</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОтборSearchControlContextMenu" id="58"/>
+								<ExtendedTooltip name="ОтборSearchControlExtendedTooltip" id="59"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeRowChange">ОтборПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="ОтборИспользовать" id="27">
+									<DataPath>Отбор.Использовать</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОтборИспользоватьКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ОтборИспользоватьExtendedTooltip" id="60"/>
+								</CheckBoxField>
+								<InputField name="ОтборРеквизит" id="29">
+									<DataPath>Отбор.Реквизит</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОтборРеквизитКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ОтборРеквизитExtendedTooltip" id="61"/>
+								</InputField>
+								<InputField name="ОтборЗначение" id="31">
+									<DataPath>Отбор.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<QuickChoice>true</QuickChoice>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>БЛ=Нет; БИ=Да</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="ОтборЗначениеКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ОтборЗначениеExtendedTooltip" id="62"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="РезультатОтбора" id="33">
+							<Representation>List</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>РезультатОтбора</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РезультатОтбораКонтекстноеМеню" id="34"/>
+							<AutoCommandBar name="РезультатОтбораКоманднаяПанель" id="35"/>
+							<ExtendedTooltip name="РезультатОтбораExtendedTooltip" id="63"/>
+							<SearchStringAddition name="РезультатОтбораSearchString" id="64">
+								<AdditionSource>
+									<Item>РезультатОтбора</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатОтбораSearchStringContextMenu" id="65"/>
+								<ExtendedTooltip name="РезультатОтбораSearchStringExtendedTooltip" id="66"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РезультатОтбораViewStatus" id="67">
+								<AdditionSource>
+									<Item>РезультатОтбора</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатОтбораViewStatusContextMenu" id="68"/>
+								<ExtendedTooltip name="РезультатОтбораViewStatusExtendedTooltip" id="69"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РезультатОтбораSearchControl" id="70">
+								<AdditionSource>
+									<Item>РезультатОтбора</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатОтбораSearchControlContextMenu" id="71"/>
+								<ExtendedTooltip name="РезультатОтбораSearchControlExtendedTooltip" id="72"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">РезультатОтбораВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="РезультатОтбораВид" id="36">
+									<DataPath>РезультатОтбора.Вид</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатОтбораВидКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="РезультатОтбораВидExtendedTooltip" id="73"/>
+								</InputField>
+								<InputField name="РезультатОтбораСсылка" id="38">
+									<DataPath>РезультатОтбора.Ссылка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатОтбораСсылкаКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="РезультатОтбораСсылкаExtendedTooltip" id="74"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Button name="Отобрать" id="40">
+							<Type>UsualButton</Type>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.Отобрать</CommandName>
+							<ExtendedTooltip name="ОтобратьExtendedTooltip" id="75"/>
+						</Button>
+						<UsualGroup name="Группа3" id="45">
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="Группа3ExtendedTooltip" id="76"/>
+							<ChildItems>
+								<InputField name="ИзмРеквизит" id="41">
+									<DataPath>ИзмРеквизит</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Изменить Реквизит</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceButton>false</ChoiceButton>
+									<QuickChoice>true</QuickChoice>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Код</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:ValueList"/>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Наименование</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:ValueList"/>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Пометка Удаления</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xr:ValueList"/>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ChoiceListButton>true</ChoiceListButton>
+									<ContextMenu name="ИзмРеквизитКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ИзмРеквизитExtendedTooltip" id="77"/>
+									<Events>
+										<Event name="StartListChoice">ИзмРеквизитНачалоВыбораИзСписка</Event>
+										<Event name="ChoiceProcessing">ИзмРеквизитОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="Действие" id="43">
+									<DataPath>Действие</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<ChoiceButton>true</ChoiceButton>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧН=0; ЧГ=; БЛ=Ложь; БИ=Истина</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ДействиеКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ДействиеExtendedTooltip" id="78"/>
+									<Events>
+										<Event name="StartChoice">ДействиеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="Изменить" id="46">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.Изменить</CommandName>
+									<ExtendedTooltip name="ИзменитьExtendedTooltip" id="79"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа2" id="7">
+					<ExtendedTooltip name="Группа2ExtendedTooltip" id="80"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ГрупповаяОбработкаСправочниковИДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВыборОбъектов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:TypeDescription</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Отбор" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Seçim</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Использовать" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Реквизит" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизит</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РезультатОтбора" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Вид" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Növ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ссылка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Действие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИзмРеквизит" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изм реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отобрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отобрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отобрать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Изменить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Изменить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

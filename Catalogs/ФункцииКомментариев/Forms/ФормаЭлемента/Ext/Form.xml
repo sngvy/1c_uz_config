@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаГоризонтальнаяШапка" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальнаяШапкаРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="60"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="61"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНаПримере" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входные данные:</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Giriş məlumatlarları:</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа на примере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНаПримереРасширеннаяПодсказка" id="62"/>
+			<ChildItems>
+				<InputField name="Мероприятие" id="34">
+					<DataPath>Мероприятие</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="МероприятиеКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="МероприятиеРасширеннаяПодсказка" id="63"/>
+					<Events>
+						<Event name="OnChange">МероприятиеПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<TextDocumentField name="ПолеТекстовогоДокумента" id="8">
+			<DataPath>ПолеТекстовогоДокумента</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПолеТекстовогоДокументаКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="ПолеТекстовогоДокументаРасширеннаяПодсказка" id="64"/>
+			<Events>
+				<Event name="OnChange">ПолеТекстовогоДокументаПриИзменении</Event>
+			</Events>
+		</TextDocumentField>
+		<UsualGroup name="ГруппаГоризонтальнаяКнопки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальнаяКнопкиРасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<Button name="КонструкторЗапроса" id="10">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КонструкторЗапроса</CommandName>
+					<ExtendedTooltip name="КонструкторЗапросаРасширеннаяПодсказка" id="66"/>
+				</Button>
+				<Button name="Формат" id="11">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КонструкторФормата</CommandName>
+					<ExtendedTooltip name="ФорматРасширеннаяПодсказка" id="67"/>
+				</Button>
+				<Button name="Тест" id="20">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Тест</CommandName>
+					<ExtendedTooltip name="ТестРасширеннаяПодсказка" id="68"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПолученныйРеквизит" id="57">
+			<DataPath>ПолученныйРеквизит</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ПолученныйРеквизитКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="ПолученныйРеквизитРасширеннаяПодсказка" id="69"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФункцииКомментариев</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПолеТекстовогоДокумента" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле текстового документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Мероприятие" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МероприятиеТекущее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskRef.Мероприятие</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МероприятиеТекущее" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие текущее</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:TaskObject.Мероприятие</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолученныйРеквизит" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КонструкторЗапроса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонструкторЗапроса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КонструкторФормата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор формата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор формата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонструкторФормата</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Тест" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Тест</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьФормуМероприятия" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МероприятиеСледующее: ...</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму мероприятия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуМероприятия</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

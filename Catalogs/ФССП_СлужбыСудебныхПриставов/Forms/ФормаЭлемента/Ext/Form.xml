@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="КодРегиона" id="7">
+			<DataPath>Объект.КодРегиона</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодРегионаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КодРегионаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="КодТерриториальногоАгенства" id="10">
+			<DataPath>Объект.КодТерриториальногоАгенства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодТерриториальногоАгенстваКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КодТерриториальногоАгенстваРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="НаименованиеПолное" id="25">
+			<DataPath>Объект.НаименованиеПолное</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеПолноеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="НаименованиеПолноеРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ГрафикРаботы" id="16">
+			<DataPath>Объект.ГрафикРаботы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ГрафикРаботыКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ГрафикРаботыРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ТерриторияОбслуживания" id="19">
+			<DataPath>Объект.ТерриторияОбслуживания</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТерриторияОбслуживанияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ТерриторияОбслуживанияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Руководитель" id="22">
+			<DataPath>Объект.Руководитель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="РуководительКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="РуководительРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ПочтовыйАдрес" id="13">
+			<DataPath>Объект.ПочтовыйАдрес</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ПочтовыйАдресКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПочтовыйАдресРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="ТелефоныИФаксы" id="28">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТелефоныИФаксыКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ТелефоныИФаксыКоманднаяПанель" id="30"/>
+			<ExtendedTooltip name="ТелефоныИФаксыРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ТелефоныИФаксыСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ТелефоныИФаксы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТелефоныИФаксыСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ТелефоныИФаксыСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТелефоныИФаксыСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>ТелефоныИФаксы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТелефоныИФаксыСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ТелефоныИФаксыСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТелефоныИФаксыУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>ТелефоныИФаксы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТелефоныИФаксыУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ТелефоныИФаксыУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТелефоныИФаксыНомерСтроки" id="41">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефоныИФаксыНомерСтрокиКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТелефоныИФаксыНомерСтрокиРасширеннаяПодсказка" id="43"/>
+				</LabelField>
+				<InputField name="ТелефоныИФаксыВидТелефона" id="44">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефоныИФаксыВидТелефонаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТелефоныИФаксыВидТелефонаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ТелефоныИФаксыНомер" id="47">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТелефоныИФаксыНомерКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТелефоныИФаксыНомерРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФССП_СлужбыСудебныхПриставов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

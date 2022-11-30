@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИП</dataPath>
+			<field>ИП</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИсполнительныеДокументы</dataPath>
+			<field>ИсполнительныеДокументы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительные документы</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Мероприятие</dataPath>
+			<field>Мероприятие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пометка</dataPath>
+			<field>Пометка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтатусИП</dataPath>
+			<field>СтатусИП</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтделСудебныхПриставов</dataPath>
+			<field>ОтделСудебныхПриставов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СудебныйПриставИсполнитель</dataPath>
+			<field>СудебныйПриставИсполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВозбуждения</dataPath>
+			<field>ДатаВозбуждения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПричинаОкончания</dataPath>
+			<field>ПричинаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическоеПоложение</dataPath>
+			<field>ФактическоеПоложение</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактическое положение</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Действия</dataPath>
+			<field>Действия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СведенияИзПФР</dataPath>
+			<field>СведенияИзПФР</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сведения из ПФР</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫРАЗИТЬ(ОбъектыВРаботеОстатки.Объект КАК Справочник.ИсполнительныеДокументы) КАК ИсполнительныеДокументы
+ПОМЕСТИТЬ вт
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, ) КАК ОбъектыВРаботеОстатки
+ГДЕ
+	ТИПЗНАЧЕНИЯ(ОбъектыВРаботеОстатки.Объект) = ТИП(Справочник.ИсполнительныеДокументы)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	вт.ИсполнительныеДокументы КАК Объект,
+	вт.ИсполнительныеДокументы КАК ИсполнительныеДокументы,
+	ИСТИНА КАК Пометка,
+	ФССП_СостояниеИПСрезПоследних.ИП КАК ИП,
+	ФССП_СостояниеИПСрезПоследних.СтатусИП КАК СтатусИП,
+	ФССП_СостояниеИПСрезПоследних.ОтделСудебныхПриставов КАК ОтделСудебныхПриставов,
+	ФССП_СостояниеИПСрезПоследних.СудебныйПриставИсполнитель КАК СудебныйПриставИсполнитель,
+	ФССП_СостояниеИПСрезПоследних.ДатаВозбуждения КАК ДатаВозбуждения,
+	ФССП_СостояниеИПСрезПоследних.ДатаОкончания КАК ДатаОкончания,
+	ФССП_СостояниеИПСрезПоследних.ПричинаОкончания КАК ПричинаОкончания,
+	ВЫРАЗИТЬ(вт.ИсполнительныеДокументы.ФактическоеПоложение КАК СТРОКА(1000)) КАК ФактическоеПоложение,
+	ВЫРАЗИТЬ(вт.ИсполнительныеДокументы.Действия КАК СТРОКА(1000)) КАК Действия,
+	ВЫРАЗИТЬ(вт.ИсполнительныеДокументы.СведенияИзПФР КАК СТРОКА(1000)) КАК СведенияИзПФР
+ИЗ
+	вт КАК вт
+		ЛЕВОЕ СОЕДИНЕНИЕ Задача.Мероприятие КАК Мероприятие
+		ПО вт.ИсполнительныеДокументы = Мероприятие.Объект
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФССП_СостояниеИП.СрезПоследних КАК ФССП_СостояниеИПСрезПоследних
+		ПО вт.ИсполнительныеДокументы = ФССП_СостояниеИПСрезПоследних.ИП.НомерИД
+{ГДЕ
+	Мероприятие.Ссылка.* КАК Мероприятие}</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИсполнительныеДокументы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СтатусИП</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВозбуждения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтделСудебныхПриставов</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СудебныйПриставИсполнитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПричинаОкончания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Объект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Пометка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СведенияИзПФР</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Действия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ФактическоеПоложение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

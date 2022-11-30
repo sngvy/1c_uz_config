@@ -1,0 +1,771 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаПрекращатьНачисления" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прекращать начисления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прекращать начисления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПрекращатьНачисленияРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<CheckBoxField name="ПрекращатьНачисления" id="7">
+					<DataPath>Объект.ПрекращатьНачисления</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрекращатьНачисленияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПрекращатьНачисленияРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">ПрекращатьНачисленияПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаПрекращатьНачисленияВертикальная" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прекращать начисления вертикальная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа прекращать начисления вертикальная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПрекращатьНачисленияВертикальнаяРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПрекращатьНачисленияПослеВыдачиЗайма" id="29">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа прекращать начисления после выдачи займа</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа прекращать начисления после выдачи займа</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПрекращатьНачисленияПослеВыдачиЗаймаРасширеннаяПодсказка" id="30"/>
+							<ChildItems>
+								<InputField name="ПрекращатьНачисления_Количество" id="10">
+									<DataPath>Объект.ПрекращатьНачисления_Количество</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>через</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПрекращатьНачисления_КоличествоКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ПрекращатьНачисления_КоличествоРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="ПрекращатьНачисления_Период" id="13">
+									<DataPath>Объект.ПрекращатьНачисления_Период</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>true</DropListButton>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Дней</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Дней</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Месяцев</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Месяцев</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Лет</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Лет</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ПрекращатьНачисления_ПериодКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ПрекращатьНачисления_ПериодРасширеннаяПодсказка" id="15"/>
+								</InputField>
+								<LabelDecoration name="ПрекращатьНачисления_ПослеДатыВыдачиЗайма" id="24">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>после даты выдачи займа</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПрекращатьНачисления_ПослеДатыВыдачиЗаймаКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ПрекращатьНачисления_ПослеДатыВыдачиЗаймаРасширеннаяПодсказка" id="26"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПрекращатьНачисленияНаДеньПросрочки" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа прекращать начисления на день просрочки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа прекращать начисления на день просрочки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПрекращатьНачисленияНаДеньПросрочкиРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<InputField name="ПрекращатьНачисления_ДеньПросрочки" id="35">
+									<DataPath>Объект.ПрекращатьНачисления_ДеньПросрочки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>на</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПрекращатьНачисления_ДеньПросрочкиКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ПрекращатьНачисления_ДеньПросрочкиРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<LabelDecoration name="ПрекращатьНачисления_НаДеньПросрочки" id="38">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>день просрочки</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПрекращатьНачисления_НаДеньПросрочкиКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ПрекращатьНачисления_НаДеньПросрочкиРасширеннаяПодсказка" id="40"/>
+								</LabelDecoration>
+								<CheckBoxField name="ИзменитьСтавкуШтрафа" id="139">
+									<DataPath>Объект.ИзменитьСтавкуШтрафа</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИзменитьСтавкуШтрафаКонтекстноеМеню" id="140"/>
+									<ExtendedTooltip name="ИзменитьСтавкуШтрафаРасширеннаяПодсказка" id="141"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНачислятьПроценты" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа начислять проценты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа начислять проценты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНачислятьПроцентыРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<CheckBoxField name="НачислятьПроценты" id="67">
+					<DataPath>Объект.НачислятьПроценты</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НачислятьПроцентыКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="НачислятьПроцентыРасширеннаяПодсказка" id="69"/>
+					<Events>
+						<Event name="OnChange">НачислятьПроцентыПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="НачислятьПроценты_Количество" id="70">
+					<DataPath>Объект.НачислятьПроценты_Количество</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>на</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НачислятьПроценты_КоличествоКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="НачислятьПроценты_КоличествоРасширеннаяПодсказка" id="72"/>
+				</InputField>
+				<LabelDecoration name="НачислятьПроценты_ОтВыдачиЗайма" id="73">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>день со дня выдачи займа</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="НачислятьПроценты_ОтВыдачиЗаймаКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="НачислятьПроценты_ОтВыдачиЗаймаРасширеннаяПодсказка" id="75"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПорядокГашения" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа порядок гашения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа порядок гашения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПорядокГашенияРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<CheckBoxField name="ЗадатьПорядокГашения" id="60">
+					<DataPath>Объект.ЗадатьПорядокГашения</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗадатьПорядокГашенияКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ЗадатьПорядокГашенияРасширеннаяПодсказка" id="62"/>
+					<Events>
+						<Event name="OnChange">ЗадатьПорядокГашенияПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<Table name="ПорядокГашения" id="41">
+					<ChangeRowSet>false</ChangeRowSet>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ПорядокГашения</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ПорядокГашенияКонтекстноеМеню" id="42"/>
+					<AutoCommandBar name="ПорядокГашенияКоманднаяПанель" id="43"/>
+					<ExtendedTooltip name="ПорядокГашенияРасширеннаяПодсказка" id="44"/>
+					<SearchStringAddition name="ПорядокГашенияСтрокаПоиска" id="45">
+						<AdditionSource>
+							<Item>ПорядокГашения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПорядокГашенияСтрокаПоискаКонтекстноеМеню" id="46"/>
+						<ExtendedTooltip name="ПорядокГашенияСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ПорядокГашенияСостояниеПросмотра" id="48">
+						<AdditionSource>
+							<Item>ПорядокГашения</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ПорядокГашенияСостояниеПросмотраКонтекстноеМеню" id="49"/>
+						<ExtendedTooltip name="ПорядокГашенияСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ПорядокГашенияУправлениеПоиском" id="51">
+						<AdditionSource>
+							<Item>ПорядокГашения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ПорядокГашенияУправлениеПоискомКонтекстноеМеню" id="52"/>
+						<ExtendedTooltip name="ПорядокГашенияУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ПорядокГашенияНомерСтроки" id="54">
+							<DataPath>Объект.ПорядокГашения.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПорядокГашенияНомерСтрокиКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="ПорядокГашенияНомерСтрокиРасширеннаяПодсказка" id="56"/>
+						</LabelField>
+						<InputField name="ПорядокГашенияГашение" id="57">
+							<DataPath>Объект.ПорядокГашения.Гашение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Просроченные проценты</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ПросроченныеПроценты</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПорядокГашенияГашениеКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ПорядокГашенияГашениеРасширеннаяПодсказка" id="59"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВидПлатежа" id="76">
+			<DataPath>Объект.ВидПлатежа</DataPath>
+			<ContextMenu name="ВидПлатежаКонтекстноеМеню" id="77"/>
+			<ExtendedTooltip name="ВидПлатежаРасширеннаяПодсказка" id="78"/>
+		</InputField>
+		<InputField name="СпособПогашения" id="93">
+			<DataPath>Объект.СпособПогашения</DataPath>
+			<ContextMenu name="СпособПогашенияКонтекстноеМеню" id="94"/>
+			<ExtendedTooltip name="СпособПогашенияРасширеннаяПодсказка" id="95"/>
+		</InputField>
+		<UsualGroup name="ГруппаПериодичность" id="134">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа периодичность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа периодичность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПериодичностьРасширеннаяПодсказка" id="135"/>
+			<ChildItems>
+				<InputField name="ПериодичностьСрокаЗайма" id="79">
+					<DataPath>Объект.ПериодичностьСрокаЗайма</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Периодичность</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПериодичностьСрокаЗаймаКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ПериодичностьСрокаЗаймаРасширеннаяПодсказка" id="81"/>
+					<Events>
+						<Event name="OnChange">ПериодичностьСрокаЗаймаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КоличествоПериодовСрокаЗайма" id="136">
+					<DataPath>Объект.КоличествоПериодичностей</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="КоличествоПериодовСрокаЗаймаКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="КоличествоПериодовСрокаЗаймаРасширеннаяПодсказка" id="138"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СпособРазнесенияПлатежа" id="96">
+			<DataPath>Объект.СпособРазнесенияПлатежа</DataPath>
+			<ContextMenu name="СпособРазнесенияПлатежаКонтекстноеМеню" id="97"/>
+			<ExtendedTooltip name="СпособРазнесенияПлатежаРасширеннаяПодсказка" id="98"/>
+		</InputField>
+		<UsualGroup name="ГруппаПроцентнаяСтавка" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Процентная ставка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа процентная ставка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПроцентнаяСтавкаРасширеннаяПодсказка" id="86"/>
+			<ChildItems>
+				<InputField name="ВидПроцентнойСтавки" id="87">
+					<DataPath>Объект.ВидПроцентнойСтавки</DataPath>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Фиксированная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xr:DesignTimeRef">Enum.ВидыПроцентнойСтавки.EnumValue.ФиксированнаяПроцентнаяСтавка</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидПроцентнойСтавкиКонтекстноеМеню" id="88"/>
+					<ExtendedTooltip name="ВидПроцентнойСтавкиРасширеннаяПодсказка" id="89"/>
+				</InputField>
+				<InputField name="ПериодичностьПроцентнойСтавки" id="90">
+					<DataPath>Объект.ПериодичностьПроцентнойСтавки</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПериодичностьПроцентнойСтавкиКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ПериодичностьПроцентнойСтавкиРасширеннаяПодсказка" id="92"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПлавающаяПроцентнаяСтавкаЗависимаяОтСрока" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа плавающая процентная ставка зависимая от срока</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа срок займа горизонтально</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПлавающаяПроцентнаяСтавкаЗависимаяОтСрокаРасширеннаяПодсказка" id="143"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияЗаголовокИнтервалыПроцентнойСтавки" id="144">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставки:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияЗаголовокИнтервалыПроцентнойСтавкиКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="ДекорацияЗаголовокИнтервалыПроцентнойСтавкиРасширеннаяПодсказка" id="146"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияИнтервалыПроцентнойСтавки" id="147">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интервалы процентной ставки не указаны</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<ContextMenu name="ДекорацияИнтервалыПроцентнойСтавкиКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="ДекорацияИнтервалыПроцентнойСтавкиРасширеннаяПодсказка" id="149"/>
+					<Events>
+						<Event name="Click">ДекорацияИнтервалыПроцентнойСтавкиНажатие</Event>
+					</Events>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ИнтервалыПроцентнойСтавки" id="150">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ИнтервалыПроцентнойСтавки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИнтервалыПроцентнойСтавкиКонтекстноеМеню" id="151"/>
+			<AutoCommandBar name="ИнтервалыПроцентнойСтавкиКоманднаяПанель" id="152"/>
+			<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиРасширеннаяПодсказка" id="153"/>
+			<SearchStringAddition name="ИнтервалыПроцентнойСтавкиСтрокаПоиска" id="154">
+				<AdditionSource>
+					<Item>ИнтервалыПроцентнойСтавки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнтервалыПроцентнойСтавкиСтрокаПоискаКонтекстноеМеню" id="155"/>
+				<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиСтрокаПоискаРасширеннаяПодсказка" id="156"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИнтервалыПроцентнойСтавкиСостояниеПросмотра" id="157">
+				<AdditionSource>
+					<Item>ИнтервалыПроцентнойСтавки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнтервалыПроцентнойСтавкиСостояниеПросмотраКонтекстноеМеню" id="158"/>
+				<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиСостояниеПросмотраРасширеннаяПодсказка" id="159"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИнтервалыПроцентнойСтавкиУправлениеПоиском" id="160">
+				<AdditionSource>
+					<Item>ИнтервалыПроцентнойСтавки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИнтервалыПроцентнойСтавкиУправлениеПоискомКонтекстноеМеню" id="161"/>
+				<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиУправлениеПоискомРасширеннаяПодсказка" id="162"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ИнтервалыПроцентнойСтавкиНомерСтроки" id="163">
+					<DataPath>Объект.ИнтервалыПроцентнойСтавки.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнтервалыПроцентнойСтавкиНомерСтрокиКонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиНомерСтрокиРасширеннаяПодсказка" id="165"/>
+				</LabelField>
+				<InputField name="ИнтервалыПроцентнойСтавкиИнтервалОт" id="166">
+					<DataPath>Объект.ИнтервалыПроцентнойСтавки.ИнтервалОт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнтервалыПроцентнойСтавкиИнтервалОтКонтекстноеМеню" id="167"/>
+					<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиИнтервалОтРасширеннаяПодсказка" id="168"/>
+				</InputField>
+				<InputField name="ИнтервалыПроцентнойСтавкиИнтервалДо" id="169">
+					<DataPath>Объект.ИнтервалыПроцентнойСтавки.ИнтервалДо</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнтервалыПроцентнойСтавкиИнтервалДоКонтекстноеМеню" id="170"/>
+					<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиИнтервалДоРасширеннаяПодсказка" id="171"/>
+				</InputField>
+				<InputField name="ИнтервалыПроцентнойСтавкиПроцентнаяСтавка" id="172">
+					<DataPath>Объект.ИнтервалыПроцентнойСтавки.ПроцентнаяСтавка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИнтервалыПроцентнойСтавкиПроцентнаяСтавкаКонтекстноеМеню" id="173"/>
+					<ExtendedTooltip name="ИнтервалыПроцентнойСтавкиПроцентнаяСтавкаРасширеннаяПодсказка" id="174"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="ПотребительскийКредитДоОдногоГода" id="115">
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПотребительскийКредитДоОдногоГодаКонтекстноеМеню" id="116"/>
+			<ExtendedTooltip name="ПотребительскийКредитДоОдногоГодаРасширеннаяПодсказка" id="117"/>
+			<Events>
+				<Event name="OnChange">ПотребительскийКредитДоОдногоГодаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаСтавкаШтрафаПокаНачисляютсяПроценты" id="99">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка штрафа пока начисляются проценты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ставка штрафа пока начисляются проценты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСтавкаШтрафаПокаНачисляютсяПроцентыРасширеннаяПодсказка" id="100"/>
+			<ChildItems>
+				<InputField name="СтавкаШтрафаПокаНачисляютсяПроценты" id="101">
+					<DataPath>Объект.СтавкаШтрафаПокаНачисляютсяПроценты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтавкаШтрафаПокаНачисляютсяПроцентыКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="СтавкаШтрафаПокаНачисляютсяПроцентыРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<InputField name="ПериодичностьСтавкиШтрафаПокаНачисляютсяПроценты" id="104">
+					<DataPath>Объект.ПериодичностьСтавкиШтрафаПокаНачисляютсяПроценты</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПериодичностьСтавкиШтрафаПокаНачисляютсяПроцентыКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ПериодичностьСтавкиШтрафаПокаНачисляютсяПроцентыРасширеннаяПодсказка" id="106"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСтавкаШтрафаПослеНачисленияПроцентов" id="107">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка штрафа после начисления процентов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ставка штрафа после начисления процентов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСтавкаШтрафаПослеНачисленияПроцентовРасширеннаяПодсказка" id="108"/>
+			<ChildItems>
+				<InputField name="СтавкаШтрафаПослеНачисленияПроцентов" id="109">
+					<DataPath>Объект.СтавкаШтрафаПослеНачисленияПроцентов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтавкаШтрафаПослеНачисленияПроцентовКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="СтавкаШтрафаПослеНачисленияПроцентовРасширеннаяПодсказка" id="111"/>
+				</InputField>
+				<InputField name="ПериодичностьСтавкиШтрафаПослеНачисленияПроцентов" id="112">
+					<DataPath>Объект.ПериодичностьСтавкиШтрафаПослеНачисленияПроцентов</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПериодичностьСтавкиШтрафаПослеНачисленияПроцентовКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ПериодичностьСтавкиШтрафаПослеНачисленияПроцентовРасширеннаяПодсказка" id="114"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСтавкаШтрафаНаПроценты" id="126">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ставка штрафа на проценты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ставка штрафа потреб1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСтавкаШтрафаНаПроцентыРасширеннаяПодсказка" id="127"/>
+			<ChildItems>
+				<InputField name="СтавкаШтрафаНаПроценты" id="128">
+					<DataPath>Объект.СтавкаШтрафаНаПроценты</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ставка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СтавкаШтрафаНаПроцентыКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="СтавкаШтрафаНаПроцентыРасширеннаяПодсказка" id="130"/>
+				</InputField>
+				<InputField name="ПериодичностьСтавкиШтрафаНаПроценты" id="131">
+					<DataPath>Объект.ПериодичностьСтавкиШтрафаНаПроценты</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ПериодичностьСтавкиШтрафаНаПроцентыКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="ПериодичностьСтавкиШтрафаНаПроцентыРасширеннаяПодсказка" id="133"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПорядокОкругления" id="82">
+			<DataPath>Объект.ПорядокОкругления</DataPath>
+			<ContextMenu name="ПорядокОкругленияКонтекстноеМеню" id="83"/>
+			<ExtendedTooltip name="ПорядокОкругленияРасширеннаяПодсказка" id="84"/>
+		</InputField>
+		<UsualGroup name="ГруппаПользовательскаяПрограмма" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательская программа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательская программа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПользовательскаяПрограммаРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CheckBoxField name="ПользовательскаяПрограмма" id="16">
+					<DataPath>Объект.ПользовательскаяПрограмма</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПользовательскаяПрограммаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ПользовательскаяПрограммаРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">ПользовательскаяПрограммаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ИмяОбщегоМодуля" id="19">
+					<DataPath>Объект.ИмяОбщегоМодуля</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИмяОбщегоМодуляКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ИмяОбщегоМодуляРасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="БанковскаяПрограмма" id="175">
+			<DataPath>Объект.БанковскаяПрограмма</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для выключения органичений по начислениям, если долг - банковский продукт. Для продуктов микрозайма = Ложь.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="БанковскаяПрограммаКонтекстноеМеню" id="176"/>
+			<ExtendedTooltip name="БанковскаяПрограммаРасширеннаяПодсказка" id="177"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПрограммыРасчетаЗайма</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="АдресВременногоХранилища" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес временного хранилища</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

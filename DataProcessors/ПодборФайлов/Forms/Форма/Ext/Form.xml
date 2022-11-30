@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="НайтиФайлы" id="32">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.НайтиФайлы</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Найти_</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="НайтиФайлыРасширеннаяПодсказка" id="33"/>
+			</Button>
+			<Button name="ОтметитьВсе" id="34">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтметитьВсе</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.CheckAll</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ОтметитьВсеРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="ФормаСнятьВсе" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СнятьВсе</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаСнятьВсеРасширеннаяПодсказка" id="37"/>
+			</Button>
+			<Button name="ФормаДобавитьНаДругуюФорму" id="38">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ДобавитьНаДругуюФорму</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить и закрыть</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаДобавитьНаДругуюФормуРасширеннаяПодсказка" id="39"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Объект" id="1">
+			<DataPath>Объект.Объект</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="ОбъектКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Table name="ПодобранныеФайлы" id="4">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ПодобранныеФайлы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПодобранныеФайлыКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ПодобранныеФайлыКоманднаяПанель" id="6">
+				<ChildItems>
+					<Button name="ОткрытьФайлы" id="40">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ОткрытьФайлы</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.LevelUp</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Открыть файл</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ОткрытьФайлыРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Button name="ПрикрепитьФайлы" id="42">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПрикрепитьФайлы</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ДокументПроведенКоннекторНиз</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПрикрепитьФайлыРасширеннаяПодсказка" id="43"/>
+					</Button>
+					<Button name="СформироватьДокументы" id="44">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.СформироватьДокументы</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ФорматWord2007</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СформироватьДокументыРасширеннаяПодсказка" id="45"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПодобранныеФайлыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ПодобранныеФайлыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ПодобранныеФайлы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПодобранныеФайлыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ПодобранныеФайлыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПодобранныеФайлыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ПодобранныеФайлы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПодобранныеФайлыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ПодобранныеФайлыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПодобранныеФайлыУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ПодобранныеФайлы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПодобранныеФайлыУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПодобранныеФайлыУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПодобранныеФайлыНомерСтроки" id="17">
+					<DataPath>Объект.ПодобранныеФайлы.LineNumber</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодобранныеФайлыНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ПодобранныеФайлыНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="ПодобранныеФайлыФайл" id="20">
+					<DataPath>Объект.ПодобранныеФайлы.Файл</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодобранныеФайлыФайлКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПодобранныеФайлыФайлРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ПодобранныеФайлыТипФайла" id="26">
+					<DataPath>Объект.ПодобранныеФайлы.ТипФайла</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодобранныеФайлыТипФайлаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПодобранныеФайлыТипФайлаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ПодобранныеФайлыРегистратор" id="29">
+					<DataPath>Объект.ПодобранныеФайлы.Регистратор</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодобранныеФайлыРегистраторКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПодобранныеФайлыРегистраторРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<CheckBoxField name="ПодобранныеФайлыПометка" id="23">
+					<DataPath>Объект.ПодобранныеФайлы.Пометка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодобранныеФайлыПометкаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПодобранныеФайлыПометкаРасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">ПодобранныеФайлыПометкаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПодборФайлов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НайтиФайлы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиФайлыОбъект</Action>
+		</Command>
+		<Command name="ОтметитьВсе" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтметитьВсе</Action>
+		</Command>
+		<Command name="СнятьВсе" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьВсе</Action>
+		</Command>
+		<Command name="ДобавитьНаДругуюФорму" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить на другую форму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить на другую форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьНаДругуюФорму</Action>
+		</Command>
+		<Command name="ОткрытьФайлы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФайлы</Action>
+		</Command>
+		<Command name="ПрикрепитьФайлы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрикрепитьФайлы</Action>
+		</Command>
+		<Command name="СформироватьДокументы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать документы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать документы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьДокументы</Action>
+		</Command>
+	</Commands>
+</Form>

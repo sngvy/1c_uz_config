@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="14"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>50</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ОбъектУчета" id="5">
+			<DataPath>Объект.ОбъектУчета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>50</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<DropListButton>true</DropListButton>
+			<ChoiceButton>false</ChoiceButton>
+			<ClearButton>true</ClearButton>
+			<SpinButton>false</SpinButton>
+			<OpenButton>false</OpenButton>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="ОбъектУчетаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОбъектУчетаРасширеннаяПодсказка" id="16"/>
+			<Events>
+				<Event name="StartChoice">ОбъектУчетаНачалоВыбора</Event>
+				<Event name="StartListChoice">ОбъектУчетаНачалоВыбораИзСписка</Event>
+			</Events>
+		</InputField>
+		<Table name="ТипыФайлов" id="7">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ТипыФайлов</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТипыФайловКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТипыФайловКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ТипыФайловРасширеннаяПодсказка" id="17"/>
+			<SearchStringAddition name="ТипыФайловСтрокаПоиска" id="18">
+				<AdditionSource>
+					<Item>ТипыФайлов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТипыФайловСтрокаПоискаКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ТипыФайловСтрокаПоискаРасширеннаяПодсказка" id="20"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТипыФайловСостояниеПросмотра" id="21">
+				<AdditionSource>
+					<Item>ТипыФайлов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТипыФайловСостояниеПросмотраКонтекстноеМеню" id="22"/>
+				<ExtendedTooltip name="ТипыФайловСостояниеПросмотраРасширеннаяПодсказка" id="23"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТипыФайловУправлениеПоиском" id="24">
+				<AdditionSource>
+					<Item>ТипыФайлов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТипыФайловУправлениеПоискомКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ТипыФайловУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТипыФайловНомерСтроки" id="10">
+					<DataPath>Объект.ТипыФайлов.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТипыФайловНомерСтрокиКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ТипыФайловНомерСтрокиРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<InputField name="ТипыФайловТипФайла" id="12">
+					<DataPath>Объект.ТипыФайлов.ТипФайла</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТипыФайловТипФайлаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ТипыФайловТипФайлаРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.КомплектыФайловДляПечати</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

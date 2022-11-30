@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ТипМероприятия" id="7">
+			<DataPath>Объект.ТипМероприятия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипМероприятияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипМероприятияРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ТипМероприятияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОбъектУчета" id="19">
+			<DataPath>Объект.ОбъектУчета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОбъектУчетаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОбъектУчетаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="РезультатПоУмолчанию" id="10">
+			<DataPath>Объект.РезультатПоУмолчанию</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.Владелец</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Объект.ТипМероприятия</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="РезультатПоУмолчаниюКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РезультатПоУмолчаниюРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">РезультатПоУмолчаниюПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОбъектСтолбец" id="16">
+			<DataPath>Объект.ОбъектСтолбец</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОбъектСтолбецКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОбъектСтолбецРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ОбъектДата" id="44">
+			<DataPath>Объект.ОбъектДата</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОбъектДатаКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="ОбъектДатаРасширеннаяПодсказка" id="46"/>
+		</InputField>
+		<InputField name="ОбъектКомментарий" id="47">
+			<DataPath>Объект.ОбъектКомментарий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОбъектКомментарийКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="ОбъектКомментарийРасширеннаяПодсказка" id="49"/>
+		</InputField>
+		<InputField name="РезультатСтолбец" id="13">
+			<DataPath>Объект.РезультатСтолбец</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="РезультатСтолбецКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РезультатСтолбецРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="ДополнительныеРеквизиты" id="22">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеРеквизиты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеРеквизитыКонтекстноеМеню" id="23"/>
+			<AutoCommandBar name="ДополнительныеРеквизитыКоманднаяПанель" id="24"/>
+			<ExtendedTooltip name="ДополнительныеРеквизитыРасширеннаяПодсказка" id="25"/>
+			<SearchStringAddition name="ДополнительныеРеквизитыСтрокаПоиска" id="26">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСтрокаПоискаКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="28"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеРеквизитыСостояниеПросмотра" id="29">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСостояниеПросмотраКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="31"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеРеквизитыУправлениеПоиском" id="32">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыУправлениеПоискомКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="34"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДополнительныеРеквизитыНомерСтроки" id="35">
+					<DataPath>Объект.ДополнительныеРеквизиты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыНомерСтрокиКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыНомерСтрокиРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<InputField name="ДополнительныеРеквизитыСвойство" id="38">
+					<DataPath>Объект.ДополнительныеРеквизиты.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыСвойствоКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыСвойствоРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="ДополнительныеРеквизитыНомерСтолбца" id="41">
+					<DataPath>Объект.ДополнительныеРеквизиты.НомерСтолбца</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыНомерСтолбцаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыНомерСтолбцаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиЗагрузкиМероприятий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

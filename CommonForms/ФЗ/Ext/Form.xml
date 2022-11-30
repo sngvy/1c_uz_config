@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКнопки" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<Button name="ЗаполнитьПоУмолчанию" id="62">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.CheckAll</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="63"/>
+				</Button>
+				<Button name="ОтчетОтчетЧасовыеПоясаОткрыть" id="28">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Report.ОтчетЧасовыеПояса.StandardCommand.Open</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.GeographicalSchema</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОтчетОтчетЧасовыеПоясаОткрытьРасширеннаяПодсказка" id="29"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЧП" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часовые пояса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ЧП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаЧПРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛокация" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа локация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа локация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛокацияРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<CheckBoxField name="ЧасовойПоясЗвонка" id="4">
+							<DataPath>НаборКонстант.ЧасовойПоясЗвонка</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЧасовойПоясЗвонкаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ЧасовойПоясЗвонкаРасширеннаяПодсказка" id="6"/>
+						</CheckBoxField>
+						<InputField name="ЧасовойПояс" id="1">
+							<DataPath>НаборКонстант.ЧасовойПояс</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ContextMenu name="ЧасовойПоясКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="ЧасовойПоясРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="StartListChoice">ЧасовойПоясНачалоВыбораИзСписка</Event>
+							</Events>
+						</InputField>
+						<InputField name="АдресИндекс" id="9">
+							<DataPath>НаборКонстант.АдресИндекс</DataPath>
+							<ChoiceParameters>
+								<app:item name="Отбор.СправочникВладелец">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Контрагенты</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="АдресИндексКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="АдресИндексРасширеннаяПодсказка" id="11"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИнтервал" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа интервал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа интервал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИнтервалРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаБудни" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Будние дни</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа будни</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаБудниРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<InputField name="БудниВремяОт" id="16">
+							<DataPath>НаборКонстант.БудниВремяОт</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="БудниВремяОтКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="БудниВремяОтРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="БудниВремяДо" id="19">
+							<DataPath>НаборКонстант.БудниВремяДо</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="БудниВремяДоКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="БудниВремяДоРасширеннаяПодсказка" id="21"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВыходные" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выходные дни</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выходные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаВыходныеРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<InputField name="ВыходныеВремяОт" id="22">
+							<DataPath>НаборКонстант.ВыходныеВремяОт</DataPath>
+							<ContextMenu name="ВыходныеВремяОтКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ВыходныеВремяОтРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="ВыходныеВремяДо" id="25">
+							<DataPath>НаборКонстант.ВыходныеВремяДо</DataPath>
+							<ContextMenu name="ВыходныеВремяДоКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ВыходныеВремяДоРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВзаимодействие" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Взаимодействие с должником</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа взаимодействие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаВзаимодействиеРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПерсональныеДанные" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа персональные данные</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа персональные данные</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПерсональныеДанныеРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<CheckBoxField name="ОтзывПерсональныхДанных" id="64">
+							<DataPath>НаборКонстант.ОтзывПерсональныхДанных</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтзывПерсональныхДанныхКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ОтзывПерсональныхДанныхРасширеннаяПодсказка" id="66"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонтакт" id="73">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контакт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контакт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКонтактРасширеннаяПодсказка" id="74"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСообщения" id="44">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Взаимодействие с помощью сообщений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сообщения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаСообщенияРасширеннаяПодсказка" id="45"/>
+							<ChildItems>
+								<CheckBoxField name="КоличествоСМС" id="57">
+									<DataPath>НаборКонстант.КоличествоСМС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество сообщений</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КоличествоСМСКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="КоличествоСМСРасширеннаяПодсказка" id="59"/>
+								</CheckBoxField>
+								<InputField name="СообщенияДень" id="46">
+									<DataPath>НаборКонстант.СообщенияДень</DataPath>
+									<ContextMenu name="СообщенияДеньКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="СообщенияДеньРасширеннаяПодсказка" id="48"/>
+								</InputField>
+								<InputField name="СообщенияНеделя" id="52">
+									<DataPath>НаборКонстант.СообщенияНеделя</DataPath>
+									<ContextMenu name="СообщенияНеделяКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="СообщенияНеделяРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="СообщенияМесяц" id="49">
+									<DataPath>НаборКонстант.СообщенияМесяц</DataPath>
+									<ContextMenu name="СообщенияМесяцКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="СообщенияМесяцРасширеннаяПодсказка" id="51"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоличествоЗвонков" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Непосредственное взаимодействие</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа количество звонков</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКоличествоЗвонковРасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<CheckBoxField name="КоличествоРезультативныхЗвонков" id="32">
+									<DataPath>НаборКонстант.КоличествоРезультативныхЗвонков</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КоличествоРезультативныхЗвонковКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="КоличествоРезультативныхЗвонковРасширеннаяПодсказка" id="34"/>
+								</CheckBoxField>
+								<InputField name="ЗвонкиДень" id="35">
+									<DataPath>НаборКонстант.ЗвонкиДень</DataPath>
+									<ContextMenu name="ЗвонкиДеньКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ЗвонкиДеньРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ЗвонкиНеделя" id="38">
+									<DataPath>НаборКонстант.ЗвонкиНеделя</DataPath>
+									<ContextMenu name="ЗвонкиНеделяКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ЗвонкиНеделяРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ЗвонкиМесяц" id="41">
+									<DataPath>НаборКонстант.ЗвонкиМесяц</DataPath>
+									<ContextMenu name="ЗвонкиМесяцКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ЗвонкиМесяцРасширеннаяПодсказка" id="43"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ОткрытьКалендарь230ФЗ" id="75">
+			<Type>Hyperlink</Type>
+			<CommandName>Form.Command.ОткрытьКалендарь230ФЗ</CommandName>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь ФЗ 230</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОткрытьКалендарь230ФЗРасширеннаяПодсказка" id="76"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьКалендарь230ФЗ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть календарь 230 ФЗ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть календарь230 ФЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКалендарь230ФЗ</Action>
+		</Command>
+	</Commands>
+</Form>

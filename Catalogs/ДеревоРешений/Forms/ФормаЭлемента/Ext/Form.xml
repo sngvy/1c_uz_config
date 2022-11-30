@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<Height>25</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаГоризонтально" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтально</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтально</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальноРасширеннаяПодсказка" id="97"/>
+			<ChildItems>
+				<InputField name="Код" id="92">
+					<DataPath>Объект.Code</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="КодКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="98"/>
+				</InputField>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="99"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ТипМероприятия" id="95">
+			<DataPath>Объект.ТипМероприятия</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипМероприятияКонтекстноеМеню" id="96"/>
+			<ExtendedTooltip name="ТипМероприятияРасширеннаяПодсказка" id="100"/>
+			<Events>
+				<Event name="OnChange">ТипМероприятияПриИзменении</Event>
+				<Event name="StartChoice">ТипМероприятияНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<CommandBar name="ГруппаКоманднаяПанельКарта" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель карта</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель карта</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельКартаРасширеннаяПодсказка" id="101"/>
+			<ChildItems>
+				<Button name="ДобавитьВправо" id="10">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ДобавитьВправо</CommandName>
+					<ExtendedTooltip name="ДобавитьВправоРасширеннаяПодсказка" id="102"/>
+				</Button>
+				<Button name="ДобавитьВниз" id="11">
+					<Type>CommandBarButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ДобавитьВниз</CommandName>
+					<ExtendedTooltip name="ДобавитьВнизРасширеннаяПодсказка" id="103"/>
+				</Button>
+				<Button name="ДобавитьПеред" id="80">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ДобавитьПеред</CommandName>
+					<ExtendedTooltip name="ДобавитьПередРасширеннаяПодсказка" id="104"/>
+				</Button>
+				<Button name="ДобавитьПосле" id="82">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ДобавитьПосле</CommandName>
+					<ExtendedTooltip name="ДобавитьПослеРасширеннаяПодсказка" id="105"/>
+				</Button>
+				<Button name="ПереместитьВверх" id="13">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПереместитьВверх</CommandName>
+					<ExtendedTooltip name="ПереместитьВверхРасширеннаяПодсказка" id="106"/>
+				</Button>
+				<Button name="ПереместитьВниз" id="14">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПереместитьВниз</CommandName>
+					<ExtendedTooltip name="ПереместитьВнизРасширеннаяПодсказка" id="107"/>
+				</Button>
+				<Button name="ПосмотретьСвойства" id="79">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ПосмотретьСвойства</CommandName>
+					<ExtendedTooltip name="ПосмотретьСвойстваРасширеннаяПодсказка" id="108"/>
+				</Button>
+				<Button name="УдалитьЭлемент" id="85">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.УдалитьЭлемент</CommandName>
+					<ExtendedTooltip name="УдалитьЭлементРасширеннаяПодсказка" id="109"/>
+				</Button>
+				<Button name="УдалитьВетку" id="17">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.УдалитьВетку</CommandName>
+					<ExtendedTooltip name="УдалитьВеткуРасширеннаяПодсказка" id="110"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<GraphicalSchemaField name="Карта" id="6">
+			<DataPath>Карта</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КартаКонтекстноеМеню" id="7">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="КартаКонтекстноеМенюДобавитьВправо" id="8">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьВправо</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюДобавитьВправоРасширеннаяПодсказка" id="111"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюДобавитьВниз" id="9">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьВниз</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюДобавитьВнизРасширеннаяПодсказка" id="112"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюДобавитьПеред" id="81">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьПеред</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюДобавитьПередРасширеннаяПодсказка" id="113"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюДобавитьПосле" id="83">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДобавитьПосле</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюДобавитьПослеРасширеннаяПодсказка" id="114"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюПереместитьВверх" id="15">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПереместитьВверх</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюПереместитьВверхРасширеннаяПодсказка" id="115"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюПереместитьВниз" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПереместитьВниз</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюПереместитьВнизРасширеннаяПодсказка" id="116"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюПосмотретьСвойства" id="78">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПосмотретьСвойства</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюПосмотретьСвойстваРасширеннаяПодсказка" id="117"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюУдалитьЭлемент" id="84">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьЭлемент</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюУдалитьЭлементРасширеннаяПодсказка" id="118"/>
+					</Button>
+					<Button name="КартаКонтекстноеМенюУдалитьВетку" id="52">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьВетку</CommandName>
+						<ExtendedTooltip name="КартаКонтекстноеМенюУдалитьВеткуРасширеннаяПодсказка" id="119"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<ExtendedTooltip name="КартаРасширеннаяПодсказка" id="120"/>
+			<Events>
+				<Event name="Selection">КартаВыбор</Event>
+				<Event name="OnActivate">КартаПриАктивизации</Event>
+			</Events>
+		</GraphicalSchemaField>
+		<Table name="Дерево" id="53">
+			<Visible>false</Visible>
+			<ReadOnly>true</ReadOnly>
+			<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Дерево</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДеревоКонтекстноеМеню" id="54"/>
+			<AutoCommandBar name="ДеревоКоманднаяПанель" id="55">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="121"/>
+			<SearchStringAddition name="ДеревоСтрокаПоиска" id="122">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="123"/>
+				<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="124"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="125">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="126"/>
+				<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="127"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоУправлениеПоиском" id="128">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="129"/>
+				<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="130"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДеревоНомерСтроки" id="56">
+					<DataPath>Объект.Дерево.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоНомерСтрокиКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ДеревоНомерСтрокиРасширеннаяПодсказка" id="131"/>
+				</LabelField>
+				<InputField name="ДеревоИдентификатор" id="58">
+					<DataPath>Объект.Дерево.Идентификатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИдентификаторКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДеревоИдентификаторРасширеннаяПодсказка" id="132"/>
+				</InputField>
+				<InputField name="ДеревоУровень" id="60">
+					<DataPath>Объект.Дерево.Уровень</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоУровеньКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ДеревоУровеньРасширеннаяПодсказка" id="133"/>
+				</InputField>
+				<InputField name="ДеревоНомер" id="62">
+					<DataPath>Объект.Дерево.Номер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоНомерКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДеревоНомерРасширеннаяПодсказка" id="134"/>
+				</InputField>
+				<InputField name="ДеревоРодитель" id="64">
+					<DataPath>Объект.Дерево.Родитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРодительКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="ДеревоРодительРасширеннаяПодсказка" id="135"/>
+				</InputField>
+				<InputField name="ДеревоКоличествоДетей" id="66">
+					<DataPath>Объект.Дерево.КоличествоДетей</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</Format>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧН=</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДеревоКоличествоДетейКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ДеревоКоличествоДетейРасширеннаяПодсказка" id="136"/>
+				</InputField>
+				<InputField name="ДеревоНаименование" id="76">
+					<DataPath>Объект.Дерево.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоНаименованиеКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ДеревоНаименованиеРасширеннаяПодсказка" id="137"/>
+				</InputField>
+				<InputField name="ДеревоПодсказка" id="86">
+					<DataPath>Объект.Дерево.Подсказка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПодсказкаКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="ДеревоПодсказкаРасширеннаяПодсказка" id="138"/>
+				</InputField>
+				<InputField name="ДеревоВысота" id="68">
+					<DataPath>Объект.Дерево.Высота</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВысотаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДеревоВысотаРасширеннаяПодсказка" id="139"/>
+				</InputField>
+				<InputField name="ДеревоШирина" id="70">
+					<DataPath>Объект.Дерево.Ширина</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоШиринаКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ДеревоШиринаРасширеннаяПодсказка" id="140"/>
+				</InputField>
+				<InputField name="ДеревоВерх" id="72">
+					<DataPath>Объект.Дерево.Верх</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВерхКонтекстноеМеню" id="73"/>
+					<ExtendedTooltip name="ДеревоВерхРасширеннаяПодсказка" id="141"/>
+				</InputField>
+				<InputField name="ДеревоЛево" id="74">
+					<DataPath>Объект.Дерево.Лево</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоЛевоКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ДеревоЛевоРасширеннаяПодсказка" id="142"/>
+				</InputField>
+				<InputField name="ДеревоРезультатМероприятия" id="90">
+					<DataPath>Объект.Дерево.РезультатМероприятия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоРезультатМероприятияКонтекстноеМеню" id="91"/>
+					<ExtendedTooltip name="ДеревоРезультатМероприятияРасширеннаяПодсказка" id="143"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДеревоРешений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Карта" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/graphscheme">d5p1:FlowchartContextType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="МодифицированностьКарты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Модифицированность карты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполняетсяЗакрытие" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняется закрытие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьВправо" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вправо</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вправо</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВправо</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВправо</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьВниз" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВниз</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьВниз</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВверх" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вверх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВверх</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереместитьВниз" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВниз</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьВетку" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить ветку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить ветку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьВетку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПосмотретьСвойства" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть свойства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть свойства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПосмотретьСвойства</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьПеред" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить перед</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить перед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВлево</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьПеред</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьПосле" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить после</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить после</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВправо</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьПосле</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьЭлемент" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить элемент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить элемент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьЭлемент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

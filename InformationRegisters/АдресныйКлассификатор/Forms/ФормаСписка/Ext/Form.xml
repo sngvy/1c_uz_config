@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>120</Width>
+	<Height>20</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ЗагрузитьКлассификатор" id="28">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ЗагрузитьКлассификатор</CommandName>
+				<TextColor>style:ButtonTextColor</TextColor>
+				<BackColor>style:ButtonBackColor</BackColor>
+				<BorderColor>style:BorderColor</BorderColor>
+				<ExtendedTooltip name="ЗагрузитьКлассификаторExtendedTooltip" id="31"/>
+			</Button>
+			<Button name="ОчиститьКлассификатор" id="29">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>true</xr:Common>
+					<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+					<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+					<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+					<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+					<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+					<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+					<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+					<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+					<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+					<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+					<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+					<xr:Value name="Role.ФактическаяДата">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+				</UserVisible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ОчиститьКлассификатор</CommandName>
+				<ExtendedTooltip name="ОчиститьКлассификаторExtendedTooltip" id="32"/>
+			</Button>
+			<Button name="ПроверитьОбновление" id="30">
+				<Type>CommandBarButton</Type>
+				<UserVisible>
+					<xr:Common>true</xr:Common>
+					<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+					<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+					<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+					<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+					<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+					<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+					<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+					<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+					<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+					<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+					<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+					<xr:Value name="Role.ФактическаяДата">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+					<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+				</UserVisible>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ПроверитьОбновление</CommandName>
+				<ExtendedTooltip name="ПроверитьОбновлениеExtendedTooltip" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<HeightInTableRows>10</HeightInTableRows>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<BorderColor>style:BorderColor</BorderColor>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="34"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="46">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="48"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="49">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="52">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="53"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="54"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТипАдресногоЭлемента" id="4">
+					<DataPath>Список.ТипАдресногоЭлемента</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Height>1</Height>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="ТипАдресногоЭлементаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ТипАдресногоЭлементаExtendedTooltip" id="35"/>
+				</InputField>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Код</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=21; ЧВН=</v8:content>
+						</v8:item>
+					</Format>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодExtendedTooltip" id="36"/>
+				</LabelField>
+				<InputField name="КодАдресногоОбъектаВКоде" id="8">
+					<DataPath>~Список.КодРегионаВКоде</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>СС</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="КодАдресногоОбъектаВКодеКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="КодАдресногоОбъектаВКодеExtendedTooltip" id="37"/>
+				</InputField>
+				<InputField name="КодРайонаВКоде" id="10">
+					<DataPath>Список.КодРайонаВКоде</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>РРР</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="КодРайонаВКодеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="КодРайонаВКодеExtendedTooltip" id="38"/>
+				</InputField>
+				<InputField name="КодГородаВКоде" id="12">
+					<DataPath>Список.КодГородаВКоде</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ГГГ</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="КодГородаВКодеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="КодГородаВКодеExtendedTooltip" id="39"/>
+				</InputField>
+				<InputField name="КодНаселенногоПунктаВКоде" id="14">
+					<DataPath>Список.КодНаселенногоПунктаВКоде</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ППП</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="КодНаселенногоПунктаВКодеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="КодНаселенногоПунктаВКодеExtendedTooltip" id="40"/>
+				</InputField>
+				<InputField name="КодУлицыВКоде" id="16">
+					<DataPath>Список.КодУлицыВКоде</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>УУУУ</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="КодУлицыВКодеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КодУлицыВКодеExtendedTooltip" id="41"/>
+				</InputField>
+				<InputField name="Наименование" id="18">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="42"/>
+				</InputField>
+				<InputField name="Сокращение" id="20">
+					<DataPath>Список.Сокращение</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сокр.</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="СокращениеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СокращениеExtendedTooltip" id="43"/>
+				</InputField>
+				<InputField name="Индекс" id="22">
+					<DataPath>Список.Индекс</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Индекс</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>İndeks</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="ИндексКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ИндексExtendedTooltip" id="44"/>
+				</InputField>
+				<InputField name="АльтернативныеНазвания" id="24">
+					<DataPath>Список.АльтернативныеНазвания</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Альтернативные названия</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="АльтернативныеНазванияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="АльтернативныеНазванияExtendedTooltip" id="45"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.АдресныйКлассификатор</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОчиститьКлассификатор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить классификатор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить классификатор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.тсАдминистрирование">true</xr:Value>
+			</Use>
+			<Picture>
+				<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьКлассификаторВыполнить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьОбновление" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить обновление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить обновление адресных сведений на сайте 1С</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.тсАдминистрирование">true</xr:Value>
+			</Use>
+			<Picture>
+				<xr:Ref>StdPicture.ExchangePlan</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроверитьОбновление</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьКлассификатор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить классификатор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить классификатор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.тсАдминистрирование">true</xr:Value>
+			</Use>
+			<Picture>
+				<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьКлассификатор</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

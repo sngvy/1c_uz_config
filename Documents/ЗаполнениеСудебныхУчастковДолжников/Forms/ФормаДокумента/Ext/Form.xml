@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="79">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="80"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Статус" id="7">
+					<DataPath>Объект.Статус</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="СтатусКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<Button name="ОтправитьВСервис" id="120">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОтправитьВСервис</CommandName>
+					<ExtendedTooltip name="ОтправитьВСервисРасширеннаяПодсказка" id="121"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Page name="ГруппаОбъект" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа объект</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОбъектРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="Объекты" id="81">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Объекты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбъектыКонтекстноеМеню" id="82"/>
+							<AutoCommandBar name="ОбъектыКоманднаяПанель" id="83">
+								<ChildItems>
+									<Button name="ОбъектыПодбор" id="106">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<ExtendedTooltip name="ОбъектыПодборРасширеннаяПодсказка" id="107"/>
+									</Button>
+									<Button name="ОбъектыУстановитьФлажки" id="114">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьФлажки</CommandName>
+										<ExtendedTooltip name="ОбъектыУстановитьФлажкиРасширеннаяПодсказка" id="115"/>
+									</Button>
+									<Button name="ОбъектыСнятьФлажки" id="116">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СнятьФлажки</CommandName>
+										<ExtendedTooltip name="ОбъектыСнятьФлажкиРасширеннаяПодсказка" id="117"/>
+									</Button>
+									<Button name="ОбъектыУдалитьОбъектыСУ" id="118">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьОбъектыСУ</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Удалить объекты с заполненным судебным участком</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ОбъектыУдалитьОбъектыСУРасширеннаяПодсказка" id="119"/>
+									</Button>
+									<Button name="ОбъектыПрименитьСудебныеУчастки" id="122">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПрименитьСудебныеУчастки</CommandName>
+										<ExtendedTooltip name="ОбъектыПрименитьСудебныеУчасткиРасширеннаяПодсказка" id="123"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОбъектыРасширеннаяПодсказка" id="84"/>
+							<SearchStringAddition name="ОбъектыСтрокаПоиска" id="85">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыСтрокаПоискаКонтекстноеМеню" id="86"/>
+								<ExtendedTooltip name="ОбъектыСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбъектыСостояниеПросмотра" id="88">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыСостояниеПросмотраКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="ОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбъектыУправлениеПоиском" id="91">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыУправлениеПоискомКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="ОбъектыУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбъектыНомерСтроки" id="94">
+									<DataPath>Объект.Объекты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыНомерСтрокиКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ОбъектыНомерСтрокиРасширеннаяПодсказка" id="96"/>
+								</LabelField>
+								<InputField name="ОбъектыОбъект" id="97">
+									<DataPath>Объект.Объекты.Объект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ОбъектыОбъектКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ОбъектыОбъектРасширеннаяПодсказка" id="99"/>
+									<Events>
+										<Event name="OnChange">ОбъектыОбъектПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ОбъектыДолжник" id="108">
+									<DataPath>Объект.Объекты.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ОбъектыДолжникКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ОбъектыДолжникРасширеннаяПодсказка" id="110"/>
+								</InputField>
+								<InputField name="ОбъектыАдрес" id="100">
+									<DataPath>Объект.Объекты.Адрес</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыАдресКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ОбъектыАдресРасширеннаяПодсказка" id="102"/>
+								</InputField>
+								<CheckBoxField name="ОбъектыПометка" id="111">
+									<DataPath>Объект.Объекты.Пометка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОбъектыПометкаКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ОбъектыПометкаРасширеннаяПодсказка" id="113"/>
+								</CheckBoxField>
+								<InputField name="ОбъектыСудебныйУчасток" id="103">
+									<DataPath>Объект.Объекты.СудебныйУчасток</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ClearButton>true</ClearButton>
+									<ContextMenu name="ОбъектыСудебныйУчастокКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ОбъектыСудебныйУчастокРасширеннаяПодсказка" id="105"/>
+									<Events>
+										<Event name="StartChoice">ОбъектыСудебныйУчастокНачалоВыбора</Event>
+										<Event name="Clearing">ОбъектыСудебныйУчастокОчистка</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФорматАдреса" id="51">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формат адреса</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаФорматАдресаРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<Table name="ФорматАдреса" id="53">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ФорматАдреса</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФорматАдресаКонтекстноеМеню" id="54"/>
+							<AutoCommandBar name="ФорматАдресаКоманднаяПанель" id="55"/>
+							<ExtendedTooltip name="ФорматАдресаРасширеннаяПодсказка" id="56"/>
+							<SearchStringAddition name="ФорматАдресаСтрокаПоиска" id="57">
+								<AdditionSource>
+									<Item>ФорматАдреса</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФорматАдресаСтрокаПоискаКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ФорматАдресаСтрокаПоискаРасширеннаяПодсказка" id="59"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФорматАдресаСостояниеПросмотра" id="60">
+								<AdditionSource>
+									<Item>ФорматАдреса</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФорматАдресаСостояниеПросмотраКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="ФорматАдресаСостояниеПросмотраРасширеннаяПодсказка" id="62"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФорматАдресаУправлениеПоиском" id="63">
+								<AdditionSource>
+									<Item>ФорматАдреса</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФорматАдресаУправлениеПоискомКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ФорматАдресаУправлениеПоискомРасширеннаяПодсказка" id="65"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ФорматАдресаНомерСтроки" id="66">
+									<DataPath>Объект.ФорматАдреса.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФорматАдресаНомерСтрокиКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ФорматАдресаНомерСтрокиРасширеннаяПодсказка" id="68"/>
+								</LabelField>
+								<InputField name="ФорматАдресаВидФормата" id="69">
+									<DataPath>Объект.ФорматАдреса.ВидФормата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФорматАдресаВидФорматаКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="ФорматАдресаВидФорматаРасширеннаяПодсказка" id="71"/>
+								</InputField>
+								<InputField name="ФорматАдресаЗначениеФормата" id="72">
+									<DataPath>Объект.ФорматАдреса.ЗначениеФормата</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФорматАдресаЗначениеФорматаКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ФорматАдресаЗначениеФорматаРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ЗаполнениеСудебныхУчастковДолжников</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Подбор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="УстановитьФлажки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажки</Action>
+		</Command>
+		<Command name="СнятьФлажки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажки</Action>
+		</Command>
+		<Command name="УдалитьОбъектыСУ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить объекты СУ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить объекты СУ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCrossIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьОбъектыСУ</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОтправитьВСервис" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить в сервис</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить в сервис</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExchangePlan</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтправитьВСервис</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПрименитьСудебныеУчастки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить судебные участки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить судебные участки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПрименитьСудебныеУчастки</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

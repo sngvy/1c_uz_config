@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>80</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаГоризонтальная" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Horizontal qrup</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтальная</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Horizontal qrup</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальнаяРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="26"/>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="27"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ОбъектОбъект" id="7">
+			<DataPath>Объект.Объект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Отбор.Владелец</xr:Name>
+					<xr:DataPath xsi:type="xs:string">1/0:87112619-a8ad-4759-9223-fc16a474de0b</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ContextMenu name="ОбъектОбъектКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОбъектОбъектРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<Table name="ДатыИСуммы" id="9">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДатыИСуммы</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДатыИСуммыКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ДатыИСуммыКоманднаяПанель" id="11"/>
+			<ExtendedTooltip name="ДатыИСуммыРасширеннаяПодсказка" id="29"/>
+			<SearchStringAddition name="ДатыИСуммыСтрокаПоиска" id="30">
+				<AdditionSource>
+					<Item>ДатыИСуммы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДатыИСуммыСтрокаПоискаКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ДатыИСуммыСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДатыИСуммыСостояниеПросмотра" id="33">
+				<AdditionSource>
+					<Item>ДатыИСуммы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДатыИСуммыСостояниеПросмотраКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ДатыИСуммыСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДатыИСуммыУправлениеПоиском" id="36">
+				<AdditionSource>
+					<Item>ДатыИСуммы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДатыИСуммыУправлениеПоискомКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="ДатыИСуммыУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДатыИСуммыНомерСтроки" id="12">
+					<DataPath>Объект.ДатыИСуммы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатыИСуммыНомерСтрокиКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ДатыИСуммыНомерСтрокиРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<InputField name="ДатыИСуммыДата" id="14">
+					<DataPath>Объект.ДатыИСуммы.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатыИСуммыДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатыИСуммыДатаРасширеннаяПодсказка" id="40"/>
+					<Events>
+						<Event name="OnChange">ДатыИСуммыДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатыИСуммыВалюта" id="18">
+					<DataPath>Объект.ДатыИСуммы.Валюта</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">Catalog.Валюты.RUB</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ДатыИСуммыВалютаКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДатыИСуммыВалютаРасширеннаяПодсказка" id="41"/>
+					<Events>
+						<Event name="OnChange">ДатыИСуммыВалютаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатыИСуммыСуммаВВалюте" id="20">
+					<DataPath>Объект.ДатыИСуммы.СуммаВВалюте</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатыИСуммыСуммаВВалютеКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДатыИСуммыСуммаВВалютеРасширеннаяПодсказка" id="42"/>
+					<Events>
+						<Event name="OnChange">ДатыИСуммыСуммаВВалютеПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Автор" id="23">
+			<DataPath>Объект.Автор</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="АвторКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="43"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ОбещанныеПлатежи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

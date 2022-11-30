@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>50</Width>
+	<Height>5</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Закрыть" id="3">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="ЗагрузитьНастройки" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗагрузитьНастройки</CommandName>
+				<ExtendedTooltip name="ЗагрузитьНастройкиРасширеннаяПодсказка" id="14"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВариантНастройки" id="1">
+			<DataPath>ВариантНастройки</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ВариантНастройкиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВариантНастройкиРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ВариантНастройкиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="16"/>
+			<ChildItems>
+				<Page name="Группа_ЮрСлужба" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа юр служба</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа юр служба</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Группа_ЮрСлужбаРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<InputField name="ЮрСлужба_Рег" id="8">
+							<DataPath>ЮрСлужба_Рег</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЮрСлужба_РегКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ЮрСлужба_РегРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ЮрСлужба_Отв" id="10">
+							<DataPath>ЮрСлужба_Отв</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЮрСлужба_ОтвКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЮрСлужба_ОтвРасширеннаяПодсказка" id="19"/>
+						</InputField>
+						<InputField name="ЮрСлужба_Рук" id="6">
+							<DataPath>ЮрСлужба_Рук</DataPath>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ContextMenu name="ЮрСлужба_РукКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ЮрСлужба_РукРасширеннаяПодсказка" id="20"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ВариантНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВариантыНастроек</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЮрСлужба_Рук" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Руководитель подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ТипыСотрудников</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЮрСлужба_Отв" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный по делу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ТипыСотрудников</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЮрСлужба_Рег" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудник в регионе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.ТипыСотрудников</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSource</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьНастройки</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

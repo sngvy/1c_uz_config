@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<SpreadSheetDocumentField name="ПолеИсходнойТаблицы" id="1">
+			<DataPath>ПолеИсходнойТаблицы</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные из электронной таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сюда необходимо вставить данные из электронной таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ShowGrid>true</ShowGrid>
+			<ShowHeaders>true</ShowHeaders>
+			<VerticalScrollBar>true</VerticalScrollBar>
+			<HorizontalScrollBar>true</HorizontalScrollBar>
+			<Output>Enable</Output>
+			<Edit>true</Edit>
+			<ShowGroups>false</ShowGroups>
+			<EnableStartDrag>false</EnableStartDrag>
+			<EnableDrag>false</EnableDrag>
+			<ContextMenu name="ПолеИсходнойТаблицыКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПолеИсходнойТаблицыExtendedTooltip" id="3"/>
+		</SpreadSheetDocumentField>
+		<UsualGroup name="ГруппаКолонки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа колонки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКолонкиРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<InputField name="НомерДО" id="6">
+					<DataPath>Объект.НомерДО</DataPath>
+					<ContextMenu name="НомерДОКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НомерДОРасширеннаяПодсказка" id="8"/>
+				</InputField>
+				<InputField name="КодКонтрагента" id="9">
+					<DataPath>Объект.КодКонтрагента</DataPath>
+					<ContextMenu name="КодКонтрагентаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="КодКонтрагентаРасширеннаяПодсказка" id="11"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ФормаЗагрузить" id="12">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Загрузить</CommandName>
+			<ExtendedTooltip name="ФормаЗагрузитьРасширеннаяПодсказка" id="13"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗагрузкаПоручителей</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПолеИсходнойТаблицы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле исходной таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Загрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Загрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

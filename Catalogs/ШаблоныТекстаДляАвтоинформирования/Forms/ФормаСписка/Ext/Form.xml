@@ -1,0 +1,1013 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Шаблоны СМС</v8:content>
+		</v8:item>
+	</Title>
+	<Width>70</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<Pages name="Шаблоны" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблоны</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблоны</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="ШаблоныРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ШаблоныГлавколлект" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Главколлект</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ШаблоныГлавколлектРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="Главколлект" id="5">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Главколлект</DataPath>
+							<RowPictureDataPath>Главколлект.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ГлавколлектКонтекстноеМеню" id="6"/>
+							<AutoCommandBar name="ГлавколлектКоманднаяПанель" id="7">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ГлавколлектРасширеннаяПодсказка" id="8"/>
+							<SearchStringAddition name="ГлавколлектСтрокаПоиска" id="9">
+								<AdditionSource>
+									<Item>Главколлект</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавколлектСтрокаПоискаКонтекстноеМеню" id="10"/>
+								<ExtendedTooltip name="ГлавколлектСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГлавколлектСостояниеПросмотра" id="12">
+								<AdditionSource>
+									<Item>Главколлект</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавколлектСостояниеПросмотраКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="ГлавколлектСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГлавколлектУправлениеПоиском" id="15">
+								<AdditionSource>
+									<Item>Главколлект</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГлавколлектУправлениеПоискомКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="ГлавколлектУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГлавколлектНаименование" id="18">
+									<DataPath>Главколлект.Наименование</DataPath>
+									<ContextMenu name="ГлавколлектНаименованиеКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ГлавколлектНаименованиеРасширеннаяПодсказка" id="20"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ШаблоныКвикМани" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Квик Мани</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ШаблоныКвикМаниРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="КвикМани" id="26">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>КвикМани</DataPath>
+							<RowPictureDataPath>КвикМани.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="КвикМаниКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="КвикМаниКоманднаяПанель" id="28">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="КвикМаниРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="КвикМаниСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>КвикМани</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КвикМаниСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="КвикМаниСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КвикМаниСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>КвикМани</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КвикМаниСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="КвикМаниСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КвикМаниУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>КвикМани</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КвикМаниУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="КвикМаниУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="КвикМаниНаименование" id="39">
+									<DataPath>КвикМани.Наименование</DataPath>
+									<ContextMenu name="КвикМаниНаименованиеКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="КвикМаниНаименованиеРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ШаблоныМикроклад" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Микроклад</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ШаблоныМикрокладРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="Микроклад" id="44">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Микроклад</DataPath>
+							<RowPictureDataPath>Микроклад.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="МикрокладКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="МикрокладКоманднаяПанель" id="46">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МикрокладРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="МикрокладСтрокаПоиска" id="48">
+								<AdditionSource>
+									<Item>Микроклад</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МикрокладСтрокаПоискаКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="МикрокладСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МикрокладСостояниеПросмотра" id="51">
+								<AdditionSource>
+									<Item>Микроклад</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МикрокладСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="МикрокладСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МикрокладУправлениеПоиском" id="54">
+								<AdditionSource>
+									<Item>Микроклад</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МикрокладУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="МикрокладУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="МикрокладНаименование" id="57">
+									<DataPath>Микроклад.Наименование</DataPath>
+									<ContextMenu name="МикрокладНаименованиеКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="МикрокладНаименованиеРасширеннаяПодсказка" id="59"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ОбщиеШаблоны" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие шаблоны</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОбщиеШаблоныРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="Общие" id="62">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Общие</DataPath>
+							<RowPictureDataPath>Общие.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ОбщиеКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="ОбщиеКоманднаяПанель" id="64">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОбщиеРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="ОбщиеСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>Общие</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбщиеСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ОбщиеСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбщиеСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>Общие</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбщиеСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ОбщиеСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбщиеУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>Общие</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбщиеУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="ОбщиеУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбщиеНаименование" id="75">
+									<DataPath>Общие.Наименование</DataPath>
+									<ContextMenu name="ОбщиеНаименованиеКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="ОбщиеНаименованиеРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ШаблоныФаст585" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фаст Мани/585 Золотой</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ШаблоныФаст585РасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Table name="ПерФаст" id="82">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ПерФаст</DataPath>
+							<RowPictureDataPath>ПерФаст.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПерФастКонтекстноеМеню" id="83"/>
+							<AutoCommandBar name="ПерФастКоманднаяПанель" id="84">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПерФастРасширеннаяПодсказка" id="85"/>
+							<SearchStringAddition name="ПерФастСтрокаПоиска" id="86">
+								<AdditionSource>
+									<Item>ПерФаст</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерФастСтрокаПоискаКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="ПерФастСтрокаПоискаРасширеннаяПодсказка" id="88"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПерФастСостояниеПросмотра" id="89">
+								<AdditionSource>
+									<Item>ПерФаст</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерФастСостояниеПросмотраКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="ПерФастСостояниеПросмотраРасширеннаяПодсказка" id="91"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПерФастУправлениеПоиском" id="92">
+								<AdditionSource>
+									<Item>ПерФаст</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерФастУправлениеПоискомКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="ПерФастУправлениеПоискомРасширеннаяПодсказка" id="94"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПерФастНаименование" id="95">
+									<DataPath>ПерФаст.Наименование</DataPath>
+									<ContextMenu name="ПерФастНаименованиеКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ПерФастНаименованиеРасширеннаяПодсказка" id="97"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ШаблоныПраймЗайм" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прайм Займ</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ШаблоныПраймЗаймРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<Table name="ПраймЗайм" id="100">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ПраймЗайм</DataPath>
+							<RowPictureDataPath>ПраймЗайм.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ПраймЗаймКонтекстноеМеню" id="101"/>
+							<AutoCommandBar name="ПраймЗаймКоманднаяПанель" id="102">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПраймЗаймРасширеннаяПодсказка" id="103"/>
+							<SearchStringAddition name="ПраймЗаймСтрокаПоиска" id="104">
+								<AdditionSource>
+									<Item>ПраймЗайм</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПраймЗаймСтрокаПоискаКонтекстноеМеню" id="105"/>
+								<ExtendedTooltip name="ПраймЗаймСтрокаПоискаРасширеннаяПодсказка" id="106"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПраймЗаймСостояниеПросмотра" id="107">
+								<AdditionSource>
+									<Item>ПраймЗайм</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПраймЗаймСостояниеПросмотраКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="ПраймЗаймСостояниеПросмотраРасширеннаяПодсказка" id="109"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПраймЗаймУправлениеПоиском" id="110">
+								<AdditionSource>
+									<Item>ПраймЗайм</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПраймЗаймУправлениеПоискомКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="ПраймЗаймУправлениеПоискомРасширеннаяПодсказка" id="112"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПраймЗаймНаименование" id="113">
+									<DataPath>ПраймЗайм.Наименование</DataPath>
+									<ContextMenu name="ПраймЗаймНаименованиеКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ПраймЗаймНаименованиеРасширеннаяПодсказка" id="115"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="РеквизитыКредиторов" id="116">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Реквизиты кредиторов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="РеквизитыКредиторовРасширеннаяПодсказка" id="117"/>
+					<ChildItems>
+						<Table name="Реквизиты" id="118">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Реквизиты</DataPath>
+							<RowPictureDataPath>Реквизиты.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="РеквизитыКонтекстноеМеню" id="119"/>
+							<AutoCommandBar name="РеквизитыКоманднаяПанель" id="120">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="РеквизитыРасширеннаяПодсказка" id="121"/>
+							<SearchStringAddition name="РеквизитыСтрокаПоиска" id="122">
+								<AdditionSource>
+									<Item>Реквизиты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РеквизитыСтрокаПоискаКонтекстноеМеню" id="123"/>
+								<ExtendedTooltip name="РеквизитыСтрокаПоискаРасширеннаяПодсказка" id="124"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РеквизитыСостояниеПросмотра" id="125">
+								<AdditionSource>
+									<Item>Реквизиты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РеквизитыСостояниеПросмотраКонтекстноеМеню" id="126"/>
+								<ExtendedTooltip name="РеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="127"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РеквизитыУправлениеПоиском" id="128">
+								<AdditionSource>
+									<Item>Реквизиты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РеквизитыУправлениеПоискомКонтекстноеМеню" id="129"/>
+								<ExtendedTooltip name="РеквизитыУправлениеПоискомРасширеннаяПодсказка" id="130"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РеквизитыНаименование" id="131">
+									<DataPath>Реквизиты.Наименование</DataPath>
+									<ContextMenu name="РеквизитыНаименованиеКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="РеквизитыНаименованиеРасширеннаяПодсказка" id="133"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ШаблоныПоЦессии" id="134">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цессия</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шаблоны по цессии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ПодсистемаРаботаСФайлами</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ШаблоныПоЦессииРасширеннаяПодсказка" id="135"/>
+					<ChildItems>
+						<Table name="Цессия" id="136">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Цессия</DataPath>
+							<RowPictureDataPath>Цессия.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ЦессияКонтекстноеМеню" id="137"/>
+							<AutoCommandBar name="ЦессияКоманднаяПанель" id="138">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЦессияРасширеннаяПодсказка" id="139"/>
+							<SearchStringAddition name="ЦессияСтрокаПоиска" id="140">
+								<AdditionSource>
+									<Item>Цессия</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦессияСтрокаПоискаКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="ЦессияСтрокаПоискаРасширеннаяПодсказка" id="142"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЦессияСостояниеПросмотра" id="143">
+								<AdditionSource>
+									<Item>Цессия</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦессияСостояниеПросмотраКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="ЦессияСостояниеПросмотраРасширеннаяПодсказка" id="145"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЦессияУправлениеПоиском" id="146">
+								<AdditionSource>
+									<Item>Цессия</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЦессияУправлениеПоискомКонтекстноеМеню" id="147"/>
+								<ExtendedTooltip name="ЦессияУправлениеПоискомРасширеннаяПодсказка" id="148"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЦессияНаименование" id="149">
+									<DataPath>Цессия.Наименование</DataPath>
+									<ContextMenu name="ЦессияНаименованиеКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ЦессияНаименованиеРасширеннаяПодсказка" id="151"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Главколлект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главколлект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Главколлект%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Реквизиты%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КвикМани" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Квик Мани</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Квик%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Реквизиты%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Микроклад" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Микроклад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Микро%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Реквизиты%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПерФаст" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПерФаст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Перигелий%"
+	ИЛИ ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Золотой%" </QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПраймЗайм" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ПраймЗайм</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Прайм%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Реквизиты%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Цессия" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Цессия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Цессия%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Реквизиты%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Реквизиты" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование ПОДОБНО "%Реквизиты%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Общие" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ШаблоныТекстаДляАвтоинформирования.Наименование КАК Наименование
+ИЗ
+	Справочник.ШаблоныТекстаДляАвтоинформирования КАК ШаблоныТекстаДляАвтоинформирования
+ГДЕ
+	ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Главколлект%"
+    И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Квик%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Микро%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Перигелий%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Фаст%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Прайм%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Реквизиты%"
+	И ШаблоныТекстаДляАвтоинформирования.Наименование НЕ ПОДОБНО "%Цессия%"</QueryText>
+				<MainTable>Catalog.ШаблоныТекстаДляАвтоинформирования</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СкрытоеПолеНомерДО" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрытое поле номер ДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

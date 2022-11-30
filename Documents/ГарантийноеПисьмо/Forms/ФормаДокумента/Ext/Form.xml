@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Договор" id="7">
+			<DataPath>Объект.Договор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДоговорКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Должник" id="10">
+			<DataPath>Объект.Должник</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДолжникКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДолжникРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Цедент" id="13">
+			<DataPath>Объект.Цедент</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ЦедентКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ЦедентРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ДатаЦессии" id="16">
+			<DataPath>Объект.ДатаЦессии</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаЦессииКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДатаЦессииРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ДоговорЦессии" id="19">
+			<DataPath>Объект.ДоговорЦессии</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДоговорЦессииКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДоговорЦессииРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ДатаВыдачи" id="22">
+			<DataPath>Объект.ДатаВыдачи</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаВыдачиКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДатаВыдачиРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ДолгПоТелу" id="28">
+			<DataPath>Объект.ДолгПоТелу</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДолгПоТелуКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ДолгПоТелуРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ДолгПоПроцентам" id="31">
+			<DataPath>Объект.ДолгПоПроцентам</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДолгПоПроцентамКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ДолгПоПроцентамРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ПениШтрафы" id="34">
+			<DataPath>Объект.ПениШтрафы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПениШтрафыКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ПениШтрафыРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Сумма" id="37">
+			<DataPath>Объект.Сумма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СуммаКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="ДатаРождения" id="43">
+			<DataPath>Объект.ДатаРождения</DataPath>
+			<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="ДнейПросрочки" id="46">
+			<DataPath>Объект.ДнейПросрочки</DataPath>
+			<ContextMenu name="ДнейПросрочкиКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ДнейПросрочкиРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ДнейПросрочкиОбщее" id="49">
+			<DataPath>Объект.ДнейПросрочкиОбщее</DataPath>
+			<ContextMenu name="ДнейПросрочкиОбщееКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ДнейПросрочкиОбщееРасширеннаяПодсказка" id="51"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ГарантийноеПисьмо</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

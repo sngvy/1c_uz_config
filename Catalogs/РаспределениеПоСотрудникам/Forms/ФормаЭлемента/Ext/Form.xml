@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>70</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомер" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrə qrupu</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="Наименование" id="3">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="57">
+			<DataPath>Объект.Организация</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="59"/>
+		</InputField>
+		<InputField name="Пользователь" id="5">
+			<DataPath>Объект.Пользователь</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<InputField name="ТипСотрудника" id="7">
+			<DataPath>Объект.ТипСотрудника</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипСотрудникаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипСотрудникаРасширеннаяПодсказка" id="32"/>
+		</InputField>
+		<UsualGroup name="ГруппаАктПередачи" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Акт передачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа акт передачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаАктПередачиРасширеннаяПодсказка" id="73"/>
+			<ChildItems>
+				<InputField name="ПодразделениеПередающее" id="60">
+					<DataPath>Объект.ПодразделениеПередающее</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ПодразделениеПередающееКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ПодразделениеПередающееРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="ПользовательПередающий" id="80">
+					<DataPath>Объект.ПользовательПередающий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ПользовательПередающийКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="ПользовательПередающийРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="ТипСотрудникаПередающего" id="83">
+					<DataPath>Объект.ТипСотрудникаПередающего</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ТипСотрудникаПередающегоКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ТипСотрудникаПередающегоРасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="ПодразделениеПринимающее" id="69">
+					<DataPath>Объект.ПодразделениеПринимающее</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ПодразделениеПринимающееКонтекстноеМеню" id="70"/>
+					<ExtendedTooltip name="ПодразделениеПринимающееРасширеннаяПодсказка" id="71"/>
+				</InputField>
+				<InputField name="ПользовательПринимающий" id="63">
+					<DataPath>Объект.ПользовательПринимающий</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ПользовательПринимающийКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ПользовательПринимающийРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="ТипСотрудникаПринимающего" id="66">
+					<DataPath>Объект.ТипСотрудникаПринимающего</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ТипСотрудникаПринимающегоКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ТипСотрудникаПринимающегоРасширеннаяПодсказка" id="68"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="СпособРаспределения" id="13">
+			<DataPath>Объект.СпособРаспределения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ПоровнуПоСуммеДолга</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыРаспределения.EnumValue.ПоровнуПоСуммеДолга</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ПоровнуПоКоличеству</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыРаспределения.EnumValue.ПоровнуПоКоличеству</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ПоровнуПоСуммеДолгаИУбратьИзРаботы</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыРаспределения.EnumValue.ПоровнуПоСуммеДолгаИУбратьИзРаботы</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ПоровнуПоКоличествуИУбратьИзРаботы</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыРаспределения.EnumValue.ПоровнуПоКоличествуИУбратьИзРаботы</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ПередатьВсемВРаботу</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыРаспределения.EnumValue.ПередатьВсемВРаботу</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>АктПередачи</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СпособыРаспределения.EnumValue.АктПередачи</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СпособРаспределенияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СпособРаспределенияРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="OnChange">СпособРаспределенияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ПодборОбъектов" id="54">
+			<DataPath>Объект.ПодборОбъектов</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceParameters>
+				<app:item name="Отбор.Назначение">
+					<app:value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.НазначениеНастроекОтбора.EnumValue.ПодборДО</Value>
+					</app:value>
+				</app:item>
+			</ChoiceParameters>
+			<ContextMenu name="ПодборОбъектовКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="ПодборОбъектовРасширеннаяПодсказка" id="56"/>
+		</InputField>
+		<InputField name="Приоритет" id="51">
+			<DataPath>Объект.Приоритет</DataPath>
+			<TitleHeight>1</TitleHeight>
+			<Width>32</Width>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<HorizontalStretch>false</HorizontalStretch>
+			<SpinButton>true</SpinButton>
+			<ContextMenu name="ПриоритетКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="53"/>
+		</InputField>
+		<UsualGroup name="ГруппаИспользуется" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа используется</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа используется</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИспользуетсяРасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<CheckBoxField name="Используется" id="9">
+					<DataPath>Объект.Используется</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользуетсяКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ИспользуетсяРасширеннаяПодсказка" id="35"/>
+				</CheckBoxField>
+				<CheckBoxField name="УбратьИзРаботыПослеРаспределения" id="25">
+					<DataPath>Объект.УбратьИзРаботы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УбратьИзРаботыПослеРаспределенияКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="УбратьИзРаботыПослеРаспределенияРасширеннаяПодсказка" id="36"/>
+				</CheckBoxField>
+				<CheckBoxField name="РаспределятьПоДолям" id="77">
+					<DataPath>Объект.РаспределятьПоДолям</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаспределятьПоДолямКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="РаспределятьПоДолямРасширеннаяПодсказка" id="79"/>
+					<Events>
+						<Event name="OnChange">РаспределятьПоДолямПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Сотрудники" id="15">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Сотрудники</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СотрудникиКонтекстноеМеню" id="16"/>
+			<AutoCommandBar name="СотрудникиКоманднаяПанель" id="17"/>
+			<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="37"/>
+			<SearchStringAddition name="СотрудникиСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="СотрудникиСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СотрудникиСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="СотрудникиСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СотрудникиУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>Сотрудники</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СотрудникиУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СотрудникиУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СотрудникиНомерСтроки" id="18">
+					<DataPath>Объект.Сотрудники.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиНомерСтрокиКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="СотрудникиНомерСтрокиРасширеннаяПодсказка" id="47"/>
+				</LabelField>
+				<InputField name="СотрудникиСотрудник" id="20">
+					<DataPath>Объект.Сотрудники.Сотрудник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиСотрудникКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СотрудникиСотрудникРасширеннаяПодсказка" id="48"/>
+				</InputField>
+				<InputField name="СотрудникиТипСотрудника" id="22">
+					<DataPath>Объект.Сотрудники.ТипСотрудника</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиТипСотрудникаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СотрудникиТипСотрудникаРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="СотрудникиДоля" id="74">
+					<DataPath>Объект.Сотрудники.Доля</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СотрудникиДоляКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="СотрудникиДоляРасширеннаяПодсказка" id="76"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="11">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="50"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.РаспределениеПоСотрудникам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

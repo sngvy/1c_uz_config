@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.13">
+	<Item id="b298154d-0efc-4b93-84fe-f0612414eeef">
+		<Name>ПоследнееДействующееИП</Name>
+		<Code>000000002</Code>
+		<Description>Последнее действующее ИП</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФССП_ИсполнительноеПроизводство</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a7b96deb-a738-4242-bfb8-576dc6d2aada">
+		<Name>ПоследнееИП</Name>
+		<Code>000000001</Code>
+		<Description>Последнее ИП</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФССП_ИсполнительноеПроизводство</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="acfb2dff-3697-475b-b3b7-d0f46f10fe6b">
+		<Name>СД_ВидИска</Name>
+		<Code>000000005</Code>
+		<Description>Судебное дело: вид иска</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыИска</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e1e885de-733b-4874-af0e-66f37b1007f8">
+		<Name>СД_ВидТребований</Name>
+		<Code>000000006</Code>
+		<Description>Судебное дело: вид требований</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыИсковыхТребований</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="82513fdb-6ef8-43e3-bf6d-2cf7d45e8684">
+		<Name>СД_ДатаВступленияВЗаконнуюСилу</Name>
+		<Code>000000010</Code>
+		<Description>Судебное дело: дата вступления в законную силу</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыСудебногоДела</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ФССП_ИсполнительноеПроизводство</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СудебныеУчастки</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыИска</v8:Type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыИсковыхТребований</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>10</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+			<v8:StringQualifiers>
+				<v8:Length>50</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fec19da6-395e-44e7-a312-a8533df02d5a">
+		<Name>СД_ДатаИска</Name>
+		<Code>000000004</Code>
+		<Description>Судебное дело: дата иска</Description>
+		<Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="f1601017-bab8-4cec-a48a-6a9b8f45e5d3">
+		<Name>СД_ДатаРешения</Name>
+		<Code>000000009</Code>
+		<Description>Судебное дело: дата решения</Description>
+		<Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="be09e01e-a035-4f5e-860b-58b300ec135a">
+		<Name>СД_НомерДела</Name>
+		<Code>000000003</Code>
+		<Description>Судебное дело: номер дела</Description>
+		<Type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>50</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="61e9efc7-895c-40bc-800a-456707b565c4">
+		<Name>СД_Решение</Name>
+		<Code>000000008</Code>
+		<Description>Судебное дело: решение</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыСудебногоДела</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="fd36f9c0-a07d-489f-a621-606dfab19d67">
+		<Name>СД_Суд</Name>
+		<Code>000000007</Code>
+		<Description>Судебное дело: суд</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СудебныеУчастки</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0d9a2499-47ea-4b79-ab52-1d49f40b385a">
+		<Name>СД_СуммаРешения</Name>
+		<Code>000000011</Code>
+		<Description>Судебное дело: сумма решения</Description>
+		<Type>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>15</v8:Digits>
+				<v8:FractionDigits>2</v8:FractionDigits>
+				<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

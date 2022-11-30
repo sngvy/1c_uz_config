@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>90</Width>
+	<Height>20</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомера" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrələr qrupu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Nömrələr qrupu</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомераExtendedTooltip" id="45"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="46"/>
+				</InputField>
+				<InputField name="Дата" id="3">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ДатаExtendedTooltip" id="47"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="5">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="48"/>
+		</InputField>
+		<InputField name="Объект" id="11">
+			<DataPath>Объект.Объект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОбъектКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ОбъектExtendedTooltip" id="49"/>
+			<Events>
+				<Event name="OnChange">ОбъектПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПлатежи" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа платежи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа платежи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПлатежиExtendedTooltip" id="50"/>
+			<ChildItems>
+				<InputField name="Долг" id="43">
+					<DataPath>Долг</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ДолгКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДолгExtendedTooltip" id="51"/>
+				</InputField>
+				<InputField name="КоличествоМесяцев" id="15">
+					<DataPath>Объект.КоличествоМесяцев</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="КоличествоМесяцевКонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="КоличествоМесяцевExtendedTooltip" id="52"/>
+				</InputField>
+				<InputField name="ДатаПлатежей" id="13">
+					<DataPath>Объект.ДатаПлатежей</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ДатаПлатежейКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ДатаПлатежейExtendedTooltip" id="53"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Платежи" id="17">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Платежи</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПлатежиКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ПлатежиКоманднаяПанель" id="19">
+				<ChildItems>
+					<Button name="ЗаполнитьТаблицу" id="42">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьТаблицу</CommandName>
+						<ExtendedTooltip name="ЗаполнитьТаблицуExtendedTooltip" id="54"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ПлатежиExtendedTooltip" id="55"/>
+			<SearchStringAddition name="ПлатежиСтрокаПоиска" id="68">
+				<AdditionSource>
+					<Item>Платежи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлатежиСтрокаПоискаКонтекстноеМеню" id="69"/>
+				<ExtendedTooltip name="ПлатежиСтрокаПоискаРасширеннаяПодсказка" id="70"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПлатежиСостояниеПросмотра" id="71">
+				<AdditionSource>
+					<Item>Платежи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлатежиСостояниеПросмотраКонтекстноеМеню" id="72"/>
+				<ExtendedTooltip name="ПлатежиСостояниеПросмотраРасширеннаяПодсказка" id="73"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПлатежиУправлениеПоиском" id="74">
+				<AdditionSource>
+					<Item>Платежи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПлатежиУправлениеПоискомКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="ПлатежиУправлениеПоискомРасширеннаяПодсказка" id="76"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПлатежиНомерСтроки" id="20">
+					<DataPath>Объект.Платежи.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПлатежиНомерСтрокиExtendedTooltip" id="56"/>
+				</LabelField>
+				<InputField name="ПлатежиДата" id="22">
+					<DataPath>Объект.Платежи.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиДатаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПлатежиДатаExtendedTooltip" id="57"/>
+				</InputField>
+				<InputField name="ПлатежиВалютаЗагрузки" id="24">
+					<DataPath>Объект.Платежи.ВалютаЗагрузки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиВалютаЗагрузкиКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПлатежиВалютаЗагрузкиExtendedTooltip" id="58"/>
+				</InputField>
+				<InputField name="ПлатежиОсновнойДолг" id="26">
+					<DataPath>Объект.Платежи.ОсновнойДолг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиОсновнойДолгКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ПлатежиОсновнойДолгExtendedTooltip" id="59"/>
+				</InputField>
+				<InputField name="ПлатежиПроценты" id="28">
+					<DataPath>Объект.Платежи.Проценты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиПроцентыКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПлатежиПроцентыExtendedTooltip" id="60"/>
+				</InputField>
+				<InputField name="ПлатежиШтрафы" id="30">
+					<DataPath>Объект.Платежи.Штрафы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиШтрафыКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПлатежиШтрафыExtendedTooltip" id="61"/>
+				</InputField>
+				<InputField name="ПлатежиПени" id="32">
+					<DataPath>Объект.Платежи.Пени</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиПениКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПлатежиПениExtendedTooltip" id="62"/>
+				</InputField>
+				<InputField name="ПлатежиСоставляющая1" id="34">
+					<DataPath>Объект.Платежи.Составляющая1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиСоставляющая1КонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПлатежиСоставляющая1ExtendedTooltip" id="63"/>
+				</InputField>
+				<InputField name="ПлатежиСоставляющая2" id="36">
+					<DataPath>Объект.Платежи.Составляющая2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиСоставляющая2КонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ПлатежиСоставляющая2ExtendedTooltip" id="64"/>
+				</InputField>
+				<InputField name="ПлатежиСоставляющая3" id="38">
+					<DataPath>Объект.Платежи.Составляющая3</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПлатежиСоставляющая3КонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПлатежиСоставляющая3ExtendedTooltip" id="65"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Автор" id="7">
+			<DataPath>Объект.Автор</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="АвторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="АвторExtendedTooltip" id="66"/>
+		</InputField>
+		<InputField name="Комментарий" id="9">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="67"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УдалитьРеструктуризацияДолга</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="Долг" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьТаблицу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьТаблицу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.ЗадолженностьПоОбъектам.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

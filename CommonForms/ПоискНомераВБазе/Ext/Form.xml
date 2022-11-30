@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Group>AlwaysHorizontal</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Искать" id="141">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Искать</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.UserWithoutNecessaryProperties</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Искать</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ИскатьРасширеннаяПодсказка" id="142"/>
+			</Button>
+			<Button name="ФормаДолжникМероприятия" id="146">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ДолжникМероприятия</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Все мероприятия</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаДолжникМероприятияРасширеннаяПодсказка" id="147"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="143">
+			<DataPath>Номер</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>7</MaxWidth>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>7 п. цифр</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="НомерКонтекстноеМеню" id="144"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="145"/>
+			<Events>
+				<Event name="OnChange">НомерПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаРезультаты" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденные совпадения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результаты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаРезультатыРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<Table name="СписокДО" id="1">
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>СписокДО</DataPath>
+					<RowPictureDataPath>СписокДО.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="СписокДОКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="СписокДОКоманднаяПанель" id="3">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокДОРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="СписокДОСтрокаПоиска" id="5">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДО</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="СписокДОСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокДОСостояниеПросмотра" id="8">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДО</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="СписокДОСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокДОУправлениеПоиском" id="11">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДО</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="СписокДОУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="СписокДОСсылка" id="14">
+							<DataPath>СписокДО.Ссылка</DataPath>
+							<Hiperlink>true</Hiperlink>
+							<ContextMenu name="СписокДОСсылкаКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СписокДОСсылкаРасширеннаяПодсказка" id="16"/>
+						</LabelField>
+						<LabelField name="СписокДОСсылкаДолжник" id="72">
+							<DataPath>СписокДО.Ссылка.Должник</DataPath>
+							<ContextMenu name="СписокДОСсылкаДолжникКонтекстноеМеню" id="73"/>
+							<ExtendedTooltip name="СписокДОСсылкаДолжникРасширеннаяПодсказка" id="74"/>
+						</LabelField>
+						<LabelField name="СписокДОСсылкаКредитор" id="75">
+							<DataPath>СписокДО.Ссылка.Кредитор</DataPath>
+							<ContextMenu name="СписокДОСсылкаКредиторКонтекстноеМеню" id="76"/>
+							<ExtendedTooltip name="СписокДОСсылкаКредиторРасширеннаяПодсказка" id="77"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДолг" id="111">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о долге</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа долг</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДолгРасширеннаяПодсказка" id="112"/>
+			<ChildItems>
+				<Table name="СписокДОСсылкаДополнительныеРеквизиты" id="113">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Items.СписокДО.CurrentData.Ссылка.ДополнительныеРеквизиты</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокДОСсылкаДополнительныеРеквизитыКонтекстноеМеню" id="114"/>
+					<AutoCommandBar name="СписокДОСсылкаДополнительныеРеквизитыКоманднаяПанель" id="115">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокДОСсылкаДополнительныеРеквизитыРасширеннаяПодсказка" id="116"/>
+					<SearchStringAddition name="СписокДОСсылкаДополнительныеРеквизитыСтрокаПоиска" id="117">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДОСсылкаДополнительныеРеквизиты</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСсылкаДополнительныеРеквизитыСтрокаПоискаКонтекстноеМеню" id="118"/>
+						<ExtendedTooltip name="СписокДОСсылкаДополнительныеРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="119"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокДОСсылкаДополнительныеРеквизитыСостояниеПросмотра" id="120">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДОСсылкаДополнительныеРеквизиты</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСсылкаДополнительныеРеквизитыСостояниеПросмотраКонтекстноеМеню" id="121"/>
+						<ExtendedTooltip name="СписокДОСсылкаДополнительныеРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="122"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокДОСсылкаДополнительныеРеквизитыУправлениеПоиском" id="123">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДОСсылкаДополнительныеРеквизиты</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСсылкаДополнительныеРеквизитыУправлениеПоискомКонтекстноеМеню" id="124"/>
+						<ExtendedTooltip name="СписокДОСсылкаДополнительныеРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="125"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="СписокДОСсылкаДополнительныеРеквизитыЗначение" id="132">
+							<DataPath>Items.СписокДО.CurrentData.Ссылка.ДополнительныеРеквизиты.Значение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокДОСсылкаДополнительныеРеквизитыЗначениеКонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="СписокДОСсылкаДополнительныеРеквизитыЗначениеРасширеннаяПодсказка" id="134"/>
+						</InputField>
+						<InputField name="СписокДОСсылкаДополнительныеРеквизитыСвойство" id="135">
+							<DataPath>Items.СписокДО.CurrentData.Ссылка.ДополнительныеРеквизиты.Свойство</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокДОСсылкаДополнительныеРеквизитыСвойствоКонтекстноеМеню" id="136"/>
+							<ExtendedTooltip name="СписокДОСсылкаДополнительныеРеквизитыСвойствоРасширеннаяПодсказка" id="137"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСовпадения" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Совпадающие номера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа совпадения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСовпаденияРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<Table name="СписокДОСсылкаДолжникТелефоны" id="17">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Items.СписокДО.CurrentData.Ссылка.Должник.Телефоны</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокДОСсылкаДолжникТелефоныКонтекстноеМеню" id="18"/>
+					<AutoCommandBar name="СписокДОСсылкаДолжникТелефоныКоманднаяПанель" id="19">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокДОСсылкаДолжникТелефоныРасширеннаяПодсказка" id="20"/>
+					<SearchStringAddition name="СписокДОСсылкаДолжникТелефоныСтрокаПоиска" id="21">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДОСсылкаДолжникТелефоны</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСсылкаДолжникТелефоныСтрокаПоискаКонтекстноеМеню" id="22"/>
+						<ExtendedTooltip name="СписокДОСсылкаДолжникТелефоныСтрокаПоискаРасширеннаяПодсказка" id="23"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокДОСсылкаДолжникТелефоныСостояниеПросмотра" id="24">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДОСсылкаДолжникТелефоны</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСсылкаДолжникТелефоныСостояниеПросмотраКонтекстноеМеню" id="25"/>
+						<ExtendedTooltip name="СписокДОСсылкаДолжникТелефоныСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокДОСсылкаДолжникТелефоныУправлениеПоиском" id="27">
+						<Enabled>false</Enabled>
+						<AdditionSource>
+							<Item>СписокДОСсылкаДолжникТелефоны</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокДОСсылкаДолжникТелефоныУправлениеПоискомКонтекстноеМеню" id="28"/>
+						<ExtendedTooltip name="СписокДОСсылкаДолжникТелефоныУправлениеПоискомРасширеннаяПодсказка" id="29"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="СписокДОСсылкаДолжникТелефоныВидТелефона" id="39">
+							<DataPath>Items.СписокДО.CurrentData.Ссылка.Должник.Телефоны.ВидТелефона</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокДОСсылкаДолжникТелефоныВидТелефонаКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="СписокДОСсылкаДолжникТелефоныВидТелефонаРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<InputField name="СписокДОСсылкаДолжникТелефоныНомер" id="69">
+							<DataPath>Items.СписокДО.CurrentData.Ссылка.Должник.Телефоны.Номер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СписокДОСсылкаДолжникТелефоныНомерКонтекстноеМеню" id="70"/>
+							<ExtendedTooltip name="СписокДОСсылкаДолжникТелефоныНомерРасширеннаяПодсказка" id="71"/>
+							<Events>
+								<Event name="Opening">ПриОткрытии</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Номер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДО" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДолговыеОбязательства.Ссылка КАК Ссылка
+ИЗ
+	Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства</QueryText>
+				<MainTable>Catalog.ДолговыеОбязательства</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ЕстьСовпадения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть совпадения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Искать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Искать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Искать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Искать</Action>
+		</Command>
+		<Command name="ДолжникМероприятия" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должник мероприятия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДолжникМероприятия</Action>
+		</Command>
+	</Commands>
+</Form>

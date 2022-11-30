@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ФункцияНумерации" id="7">
+			<DataPath>1/0:916df70a-057a-413a-a710-1d9acd17b671</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ФункцияНумерацииКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ФункцияНумерацииРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Нумератор" id="35">
+			<DataPath>Объект.Нумератор</DataPath>
+			<ContextMenu name="НумераторКонтекстноеМеню" id="36"/>
+			<ExtendedTooltip name="НумераторРасширеннаяПодсказка" id="37"/>
+		</InputField>
+		<CheckBoxField name="КонтролироватьПрикрепление" id="38">
+			<DataPath>Объект.КонтролироватьПрикрепление</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="КонтролироватьПрикреплениеКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="КонтролироватьПрикреплениеРасширеннаяПодсказка" id="40"/>
+		</CheckBoxField>
+		<Table name="ДополнительныеРеквизиты" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеРеквизиты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеРеквизитыКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ДополнительныеРеквизитыКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ДополнительныеРеквизитыРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ДополнительныеРеквизитыСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеРеквизитыСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеРеквизитыУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДополнительныеРеквизитыНомерСтроки" id="23">
+					<DataPath>Объект.ДополнительныеРеквизиты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ДополнительныеРеквизитыСвойство" id="26">
+					<DataPath>Объект.ДополнительныеРеквизиты.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыСвойствоКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыСвойствоРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<CheckBoxField name="ДополнительныеРеквизитыОбязательное" id="29">
+					<DataPath>Объект.ДополнительныеРеквизиты.Обязательное</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДополнительныеРеквизитыОбязательноеКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыОбязательноеРасширеннаяПодсказка" id="31"/>
+				</CheckBoxField>
+				<InputField name="ДополнительныеРеквизитыЗаголовок" id="32">
+					<DataPath>Объект.ДополнительныеРеквизиты.Заголовок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыЗаголовокКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыЗаголовокРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТипыВходящихПисем</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

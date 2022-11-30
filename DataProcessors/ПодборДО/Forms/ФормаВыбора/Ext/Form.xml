@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор поля</v8:content>
+		</v8:item>
+	</Title>
+	<Height>14</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Выбрать" id="6">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Выбрать</CommandName>
+				<ExtendedTooltip name="ВыбратьРасширеннаяПодсказка" id="11"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Дерево" id="1">
+			<Representation>Tree</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Дерево</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<ContextMenu name="ДеревоКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ДеревоКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ДеревоРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="ДеревоСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ДеревоСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ДеревоСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>Дерево</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ДеревоУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДеревоВыбор</Event>
+				<Event name="BeforeExpand">ДеревоПередРазворачиванием</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДеревоПоле" id="4">
+					<DataPath>Дерево.Поле</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоПолеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДеревоПолеРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДеревоПолеРодитель" id="9">
+					<DataPath>Дерево.ПолеРодитель</DataPath>
+					<ContextMenu name="ДеревоПолеРодительКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="ДеревоПолеРодительРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="ДеревоТипПоля" id="7">
+					<DataPath>Дерево.ТипПоля</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоТипПоляКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДеревоТипПоляРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ДеревоВидСтроки" id="25">
+					<DataPath>Дерево.ВидСтроки</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВидСтрокиКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДеревоВидСтрокиРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ДеревоВидСтрокиРодитель" id="28">
+					<DataPath>Дерево.ВидСтрокиРодитель</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоВидСтрокиРодительКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ДеревоВидСтрокиРодительРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Дерево" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Поле" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:Type>v8:UUID</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипПоля" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип поля</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:TypeDescription</v8:Type>
+					</Type>
+				</Column>
+				<Column name="КодСвойства" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код свойства</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПолеРодитель" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидСтроки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыТипаСтрока</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидСтрокиРодитель" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид строки родитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыТипаСтрока</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидСоставляющей" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид составляющей</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Список" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПростыеТипы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Простые типы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:TypeDescription</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатДляОтображения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат для отображения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатДляВыполнения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат для выполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатТип" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат тип</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:TypeDescription</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПростыеТипы1" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Простые типы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:EnumRef</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатВидСтроки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат вид строки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыТипаСтрока</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатВидСоставляющей" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат вид составляющей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Выбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Seçmək</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Seçmək</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выбрать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

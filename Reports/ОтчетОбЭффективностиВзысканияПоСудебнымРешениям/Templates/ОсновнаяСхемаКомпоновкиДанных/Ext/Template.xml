@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокНаНачалоПериода</dataPath>
+			<field>ОстатокНаНачалоПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на начало периода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧастьРешения</dataPath>
+			<field>ЧастьРешения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Займ</dataPath>
+			<field>Займ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Решение</dataPath>
+			<field>Решение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОстатокНаКонецПериода</dataPath>
+			<field>ОстатокНаКонецПериода</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остаток на конец периода</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаОплат</dataPath>
+			<field>СуммаОплат</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма оплат</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗадолженности</dataPath>
+			<field>ТипЗадолженности</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИД</dataPath>
+			<field>ИД</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИД</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаРешений</dataPath>
+			<field>СуммаРешений</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма решений</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВЫРАЗИТЬ(ОбъектыВРаботеОстатки.Объект КАК Справочник.ДолговыеОбязательства) КАК ДолговыеОбязательства
+ПОМЕСТИТЬ вт
+ИЗ
+	РегистрНакопления.ОбъектыВРаботе.Остатки(, Сотрудник = &amp;Сотрудник) КАК ОбъектыВРаботеОстатки
+ГДЕ
+	ТИПЗНАЧЕНИЯ(ОбъектыВРаботеОстатки.Объект) = ТИП(Справочник.ДолговыеОбязательства)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсполнительныеДокументы.Ссылка КАК Ссылка,
+	вт.ДолговыеОбязательства КАК ДолговыеОбязательства,
+	ИсполнительныеДокументы.СудебноеРешение КАК СудебноеРешение,
+	ИсполнительныеДокументы.ЧастьРешения КАК ЧастьРешения
+ПОМЕСТИТЬ вт_ИД
+ИЗ
+	вт КАК вт
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ИсполнительныеДокументы КАК ИсполнительныеДокументы
+		ПО (ИсполнительныеДокументы.Владелец = вт.ДолговыеОбязательства)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт_ИД.Ссылка КАК Ссылка,
+	вт_ИД.ДолговыеОбязательства КАК ДолговыеОбязательства,
+	вт_ИД.СудебноеРешение КАК СудебноеРешение,
+	вт_ИД.ЧастьРешения КАК ЧастьРешения
+ПОМЕСТИТЬ вт_ИД_Активные
+ИЗ
+	вт_ИД КАК вт_ИД
+ГДЕ
+	вт_ИД.Ссылка.ПометкаУдаления = ЛОЖЬ
+	И вт_ИД.Ссылка.Утрачен = ЛОЖЬ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МАКСИМУМ(вт_ИД_Активные.Ссылка) КАК ИД,
+	вт_ИД_Активные.СудебноеРешение КАК СудебноеРешение,
+	вт_ИД_Активные.ЧастьРешения КАК ЧастьРешения
+ПОМЕСТИТЬ ИД_Максимум
+ИЗ
+	вт_ИД_Активные КАК вт_ИД_Активные
+
+СГРУППИРОВАТЬ ПО
+	вт_ИД_Активные.СудебноеРешение,
+	вт_ИД_Активные.ЧастьРешения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	СудебноеДелоЧастиРешения.Ссылка КАК Решение,
+	СудебноеДелоЧастиРешения.ЧастьРешения КАК ЧастьРешения,
+	ИД_Максимум.ИД КАК ИД
+ПОМЕСТИТЬ вт_Решения
+ИЗ
+	Документ.СудебноеДело.ЧастиРешения КАК СудебноеДелоЧастиРешения
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ИД_Максимум КАК ИД_Максимум
+		ПО СудебноеДелоЧастиРешения.Ссылка = ИД_Максимум.СудебноеРешение
+			И СудебноеДелоЧастиРешения.ЧастьРешения = ИД_Максимум.ЧастьРешения
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	вт_Решения.Решение КАК Решение,
+	вт_Решения.ЧастьРешения КАК ЧастьРешения,
+	вт_Решения.ИД КАК ИД,
+	ЕСТЬNULL(ЗадолженностьПоСудебнымРешениямОстатки.СуммаОстаток, 0) КАК ОстатокНаНачалоПериода,
+	ЕСТЬNULL(ЗадолженностьПоСудебнымРешениямОстатки1.СуммаОстаток, 0) КАК ОстатокНаКонецПериода,
+	ЕСТЬNULL(ЗадолженностьПоСудебнымРешениямОбороты.СуммаРасход, 0) КАК СуммаОплат,
+	ЕСТЬNULL(ЗадолженностьПоСудебнымРешениямОбороты1.СуммаПриход, 0) КАК СуммаРешений
+ИЗ
+	вт_Решения КАК вт_Решения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоСудебнымРешениям.Остатки(&amp;НачалоПериода, ) КАК ЗадолженностьПоСудебнымРешениямОстатки
+		ПО вт_Решения.Решение = ЗадолженностьПоСудебнымРешениямОстатки.Решение
+			И вт_Решения.ЧастьРешения = ЗадолженностьПоСудебнымРешениямОстатки.ЧастьРешения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоСудебнымРешениям.Остатки(&amp;КонецПериода, ) КАК ЗадолженностьПоСудебнымРешениямОстатки1
+		ПО вт_Решения.Решение = ЗадолженностьПоСудебнымРешениямОстатки1.Решение
+			И вт_Решения.ЧастьРешения = ЗадолженностьПоСудебнымРешениямОстатки1.ЧастьРешения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоСудебнымРешениям.Обороты({&amp;НачалоПериода}, {&amp;КонецПериода}, , ) КАК ЗадолженностьПоСудебнымРешениямОбороты
+		ПО вт_Решения.Решение = ЗадолженностьПоСудебнымРешениямОбороты.Решение
+			И вт_Решения.ЧастьРешения = ЗадолженностьПоСудебнымРешениямОбороты.ЧастьРешения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ЗадолженностьПоСудебнымРешениям.Обороты({&amp;НачалоПериода1}, {&amp;КонецПериода1}, , ) КАК ЗадолженностьПоСудебнымРешениямОбороты1
+		ПО вт_Решения.Решение = ЗадолженностьПоСудебнымРешениямОбороты1.Решение
+			И вт_Решения.ЧастьРешения = ЗадолженностьПоСудебнымРешениямОбороты1.ЧастьРешения</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ОстатокНаКонецПериода</dataPath>
+		<expression>Сумма(ОстатокНаКонецПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОстатокНаНачалоПериода</dataPath>
+		<expression>Сумма(ОстатокНаНачалоПериода)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаОплат</dataPath>
+		<expression>Сумма(СуммаОплат)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаРешений</dataPath>
+		<expression>Сумма(СуммаРешений)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Сотрудник</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сотрудник</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>КонецПериода1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">3990-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">1901-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИД</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Решение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЧастьРешения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаРешений</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокНаНачалоПериода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОстатокНаКонецПериода</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаОплат</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>47623a39-c8a7-4bc1-8147-7d9559a1212c</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>d5b55653-7e96-4b41-bb9a-998d485d0fab</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Сотрудник</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>58fb1ef4-3253-49ec-b893-186d21eb55fc</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>КонецПериода1</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">3990-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>33d0d1b4-5ec0-48e7-8d14-3d8182f6112f</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>НачалоПериода1</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">1901-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>157285da-5960-4197-9246-997d43f2b7f5</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Решение.Займ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

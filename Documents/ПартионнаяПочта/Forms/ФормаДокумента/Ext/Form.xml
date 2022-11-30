@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаИзменитьДатуОтправки" id="167">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ИзменитьДатуОтправки</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаИзменитьДатуОтправкиРасширеннаяПодсказка" id="168"/>
+			</Button>
+			<Button name="ФормаЗарегистрироватьВОПС" id="165">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ЗарегистрироватьВОПС</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Успешно</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗарегистрироватьВОПСРасширеннаяПодсказка" id="166"/>
+			</Button>
+			<Button name="ФормаПолучитьФорму103" id="169">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПолучитьФорму103</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ФорматPDF</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаПолучитьФорму103РасширеннаяПодсказка" id="170"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Организация" id="10">
+			<DataPath>Объект.Организация</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ИмяПартии" id="62">
+			<DataPath>Объект.ИмяПартии</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ИмяПартииКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="ИмяПартииРасширеннаяПодсказка" id="64"/>
+		</InputField>
+		<InputField name="КатегорияРПО" id="104">
+			<DataPath>Объект.КатегорияРПО</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КатегорияРПОКонтекстноеМеню" id="105"/>
+			<ExtendedTooltip name="КатегорияРПОРасширеннаяПодсказка" id="106"/>
+		</InputField>
+		<InputField name="ВидРПО" id="101">
+			<DataPath>Объект.ВидРПО</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ВидРПОКонтекстноеМеню" id="102"/>
+			<ExtendedTooltip name="ВидРПОРасширеннаяПодсказка" id="103"/>
+		</InputField>
+		<InputField name="ТипКонверта" id="107">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ТипКонвертаКонтекстноеМеню" id="108"/>
+			<ExtendedTooltip name="ТипКонвертаРасширеннаяПодсказка" id="109"/>
+		</InputField>
+		<Table name="СписокИсходящейКорреспонденции" id="25">
+			<Visible>false</Visible>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.СписокИсходящейКорреспонденции</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СписокИсходящейКорреспонденцииКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="СписокИсходящейКорреспонденцииКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="СписокИсходящейКорреспонденцииРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="СписокИсходящейКорреспонденцииСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>СписокИсходящейКорреспонденции</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИсходящейКорреспонденцииСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="СписокИсходящейКорреспонденцииСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокИсходящейКорреспонденцииСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>СписокИсходящейКорреспонденции</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИсходящейКорреспонденцииСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СписокИсходящейКорреспонденцииСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокИсходящейКорреспонденцииУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>СписокИсходящейКорреспонденции</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокИсходящейКорреспонденцииУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="СписокИсходящейКорреспонденцииУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СписокИсходящейКорреспонденцииНомерСтроки" id="38">
+					<DataPath>Объект.СписокИсходящейКорреспонденции.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииНомерСтрокиКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииНомерСтрокиРасширеннаяПодсказка" id="40"/>
+				</LabelField>
+				<InputField name="СписокИсходящейКорреспонденцииИсходящаяКорреспонденция" id="41">
+					<DataPath>Объект.СписокИсходящейКорреспонденции.ИсходящаяКорреспонденция</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииИсходящаяКорреспонденцияКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииИсходящаяКорреспонденцияРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="СписокИсходящейКорреспонденцииИдентификаторПочты" id="113">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииИдентификаторПочтыКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииИдентификаторПочтыРасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<InputField name="СписокИсходящейКорреспонденцииШПИ" id="110">
+					<DataPath>Объект.СписокИсходящейКорреспонденции.ШПИ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииШПИКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииШПИРасширеннаяПодсказка" id="112"/>
+				</InputField>
+				<InputField name="СписокИсходящейКорреспонденцииТариф" id="116">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииТарифКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииТарифРасширеннаяПодсказка" id="118"/>
+				</InputField>
+				<CheckBoxField name="СписокИсходящейКорреспонденцииКурьер" id="44">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокИсходящейКорреспонденцииКурьерКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииКурьерРасширеннаяПодсказка" id="46"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокИсходящейКорреспонденцииЗаказноеУведомление" id="47">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокИсходящейКорреспонденцииЗаказноеУведомлениеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииЗаказноеУведомлениеРасширеннаяПодсказка" id="49"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокИсходящейКорреспонденцииПростоеУведомление" id="50">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокИсходящейКорреспонденцииПростоеУведомлениеКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииПростоеУведомлениеРасширеннаяПодсказка" id="52"/>
+				</CheckBoxField>
+				<CheckBoxField name="СписокИсходящейКорреспонденцииХрупкое" id="53">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписокИсходящейКорреспонденцииХрупкоеКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииХрупкоеРасширеннаяПодсказка" id="55"/>
+				</CheckBoxField>
+				<InputField name="СписокИсходящейКорреспонденцииВесРПО" id="56">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииВесРПОКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииВесРПОРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="СписокИсходящейКорреспонденцииОЦ" id="59">
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокИсходящейКорреспонденцииОЦКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="СписокИсходящейКорреспонденцииОЦРасширеннаяПодсказка" id="61"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Автор" id="7">
+			<DataPath>Объект.Автор</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="АвторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Комментарий" id="13">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>229мм x 324мм (C4)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">C4</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>162мм x 229мм (C5)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">C5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>110мм x 220мм (DL)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">DL</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>105мм x 148мм (A6)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">A6</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>74мм x 105мм (A7)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">A7</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Table name="РС_СписокИсходящейКорреспонденции" id="119">
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>РС_СписокИсходящейКорреспонденции</DataPath>
+			<RowPictureDataPath>РС_СписокИсходящейКорреспонденции.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>ChangeHistory</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+				<ExcludedCommand>ListSettings</ExcludedCommand>
+				<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>Refresh</ExcludedCommand>
+				<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+				<ExcludedCommand>SearchHistory</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+			</CommandSet>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="РС_СписокИсходящейКорреспонденцииКонтекстноеМеню" id="120"/>
+			<AutoCommandBar name="РС_СписокИсходящейКорреспонденцииКоманднаяПанель" id="121"/>
+			<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииРасширеннаяПодсказка" id="122"/>
+			<SearchStringAddition name="РС_СписокИсходящейКорреспонденцииСтрокаПоиска" id="123">
+				<AdditionSource>
+					<Item>РС_СписокИсходящейКорреспонденции</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РС_СписокИсходящейКорреспонденцииСтрокаПоискаКонтекстноеМеню" id="124"/>
+				<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииСтрокаПоискаРасширеннаяПодсказка" id="125"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РС_СписокИсходящейКорреспонденцииСостояниеПросмотра" id="126">
+				<AdditionSource>
+					<Item>РС_СписокИсходящейКорреспонденции</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РС_СписокИсходящейКорреспонденцииСостояниеПросмотраКонтекстноеМеню" id="127"/>
+				<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииСостояниеПросмотраРасширеннаяПодсказка" id="128"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РС_СписокИсходящейКорреспонденцииУправлениеПоиском" id="129">
+				<AdditionSource>
+					<Item>РС_СписокИсходящейКорреспонденции</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РС_СписокИсходящейКорреспонденцииУправлениеПоискомКонтекстноеМеню" id="130"/>
+				<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииУправлениеПоискомРасширеннаяПодсказка" id="131"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииИсходящаяКорреспонденция" id="132">
+					<DataPath>РС_СписокИсходящейКорреспонденции.ИсходящаяКорреспонденция</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииИсходящаяКорреспонденцияКонтекстноеМеню" id="133"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииИсходящаяКорреспонденцияРасширеннаяПодсказка" id="134"/>
+				</LabelField>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииШПИ" id="156">
+					<DataPath>~РС_СписокИсходящейКорреспонденции.ШПИ</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииШПИКонтекстноеМеню" id="157"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииШПИРасширеннаяПодсказка" id="158"/>
+				</LabelField>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииИдентификаторПочты" id="159">
+					<DataPath>~РС_СписокИсходящейКорреспонденции.ИдентификаторПочты</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииИдентификаторПочтыКонтекстноеМеню" id="160"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииИдентификаторПочтыРасширеннаяПодсказка" id="161"/>
+				</LabelField>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииПартия" id="135">
+					<DataPath>РС_СписокИсходящейКорреспонденции.Партия</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииПартияКонтекстноеМеню" id="136"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииПартияРасширеннаяПодсказка" id="137"/>
+				</LabelField>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииТариф" id="162">
+					<DataPath>РС_СписокИсходящейКорреспонденции.Тариф</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииТарифКонтекстноеМеню" id="163"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииТарифРасширеннаяПодсказка" id="164"/>
+				</LabelField>
+				<CheckBoxField name="РС_СписокИсходящейКорреспонденцииКурьер" id="138">
+					<DataPath>РС_СписокИсходящейКорреспонденции.Курьер</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииКурьерКонтекстноеМеню" id="139"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииКурьерРасширеннаяПодсказка" id="140"/>
+				</CheckBoxField>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииВесРПО" id="150">
+					<DataPath>~РС_СписокИсходящейКорреспонденции.ВесРПО</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииВесРПОКонтекстноеМеню" id="151"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииВесРПОРасширеннаяПодсказка" id="152"/>
+				</LabelField>
+				<LabelField name="РС_СписокИсходящейКорреспонденцииОЦ" id="153">
+					<DataPath>~РС_СписокИсходящейКорреспонденции.ОЦ</DataPath>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииОЦКонтекстноеМеню" id="154"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииОЦРасширеннаяПодсказка" id="155"/>
+				</LabelField>
+				<CheckBoxField name="РС_СписокИсходящейКорреспонденцииЗаказноеУведомление" id="141">
+					<DataPath>РС_СписокИсходящейКорреспонденции.ЗаказноеУведомление</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииЗаказноеУведомлениеКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииЗаказноеУведомлениеРасширеннаяПодсказка" id="143"/>
+				</CheckBoxField>
+				<CheckBoxField name="РС_СписокИсходящейКорреспонденцииПростоеУведомление" id="144">
+					<DataPath>РС_СписокИсходящейКорреспонденции.ПростоеУведомление</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииПростоеУведомлениеКонтекстноеМеню" id="145"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииПростоеУведомлениеРасширеннаяПодсказка" id="146"/>
+				</CheckBoxField>
+				<CheckBoxField name="РС_СписокИсходящейКорреспонденцииХрупкое" id="147">
+					<DataPath>РС_СписокИсходящейКорреспонденции.Хрупкое</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииХрупкоеКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииХрупкоеРасширеннаяПодсказка" id="149"/>
+				</CheckBoxField>
+				<CheckBoxField name="РС_СписокИсходящейКорреспонденцииВозвратуНеПодлежит" id="171">
+					<DataPath>РС_СписокИсходящейКорреспонденции.ВозвратуНеПодлежит</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РС_СписокИсходящейКорреспонденцииВозвратуНеПодлежитКонтекстноеМеню" id="172"/>
+					<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииВозвратуНеПодлежитРасширеннаяПодсказка" id="173"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПартионнаяПочта</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="РС_СписокИсходящейКорреспонденции" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список исходящей корреспонденции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ПартииИсходящейКорреспонденции</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВесРПОДляВсех" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес РПО для всех</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес РПОДля всех</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВесРПОДляВсех</Action>
+		</Command>
+		<Command name="ОЦДляВсех" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объявленная ценность для всех</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОЦДля всех</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОЦДляВсех</Action>
+		</Command>
+		<Command name="ИзменитьДатуОтправки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить дату отправки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить дату отправки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьДатуОтправки</Action>
+		</Command>
+		<Command name="ЗарегистрироватьВОПС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать В ОПС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зарегистрировать ВОПС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗарегистрироватьВОПС</Action>
+		</Command>
+		<Command name="ПолучитьФорму103" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить форму103</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить форму103</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьФорму103</Action>
+		</Command>
+	</Commands>
+</Form>

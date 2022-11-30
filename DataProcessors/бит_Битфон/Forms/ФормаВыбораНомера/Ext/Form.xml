@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор номера телефона для звонка</v8:content>
+		</v8:item>
+	</Title>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКонтрагентыКонтактныеЛица" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контрагенты контактные лица</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контрагенты контактные лица</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтрагентыКонтактныеЛицаРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаКонтрагенты" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаКонтрагентыРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<Table name="Контрагенты" id="2">
+							<CommandBarLocation>None</CommandBarLocation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Контрагенты</DataPath>
+							<RowPictureDataPath>Контрагенты.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="КонтрагентыКонтекстноеМеню" id="3"/>
+							<AutoCommandBar name="КонтрагентыКоманднаяПанель" id="4"/>
+							<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="27"/>
+							<SearchStringAddition name="КонтрагентыСтрокаПоиска" id="28">
+								<AdditionSource>
+									<Item>Контрагенты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрагентыСтрокаПоискаКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="КонтрагентыСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтрагентыСостояниеПросмотра" id="31">
+								<AdditionSource>
+									<Item>Контрагенты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрагентыСостояниеПросмотраКонтекстноеМеню" id="32"/>
+								<ExtendedTooltip name="КонтрагентыСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтрагентыУправлениеПоиском" id="34">
+								<AdditionSource>
+									<Item>Контрагенты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтрагентыУправлениеПоискомКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="КонтрагентыУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">КонтрагентыВыбор</Event>
+								<Event name="OnActivateCell">КонтрагентыПриАктивизацииЯчейки</Event>
+							</Events>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКонтактныеЛицаКонтрагента" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контактные лица контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа контактные лица контрагента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаКонтактныеЛицаКонтрагентаРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<Table name="КонтактныеЛицаКонтрагента" id="5">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>КонтактныеЛицаКонтрагента</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="КонтактныеЛицаКонтрагентаКонтекстноеМеню" id="6"/>
+							<AutoCommandBar name="КонтактныеЛицаКонтрагентаКоманднаяПанель" id="7"/>
+							<ExtendedTooltip name="КонтактныеЛицаКонтрагентаРасширеннаяПодсказка" id="38"/>
+							<SearchStringAddition name="КонтактныеЛицаКонтрагентаСтрокаПоиска" id="39">
+								<AdditionSource>
+									<Item>КонтактныеЛицаКонтрагента</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактныеЛицаКонтрагентаСтрокаПоискаКонтекстноеМеню" id="40"/>
+								<ExtendedTooltip name="КонтактныеЛицаКонтрагентаСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="КонтактныеЛицаКонтрагентаСостояниеПросмотра" id="42">
+								<AdditionSource>
+									<Item>КонтактныеЛицаКонтрагента</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактныеЛицаКонтрагентаСостояниеПросмотраКонтекстноеМеню" id="43"/>
+								<ExtendedTooltip name="КонтактныеЛицаКонтрагентаСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="КонтактныеЛицаКонтрагентаУправлениеПоиском" id="45">
+								<AdditionSource>
+									<Item>КонтактныеЛицаКонтрагента</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="КонтактныеЛицаКонтрагентаУправлениеПоискомКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="КонтактныеЛицаКонтрагентаУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">КонтактныеЛицаКонтрагентаВыбор</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="КонтактныеЛицаКонтрагентаНаименование" id="18">
+									<DataPath>КонтактныеЛицаКонтрагента.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КонтактныеЛицаКонтрагентаНаименованиеКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="КонтактныеЛицаКонтрагентаНаименованиеРасширеннаяПодсказка" id="48"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТелефоны" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефоны контрагента или контактного лица</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа телефоны</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаТелефоныРасширеннаяПодсказка" id="49"/>
+			<ChildItems>
+				<Table name="Телефоны" id="10">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ReadOnly>true</ReadOnly>
+					<SelectionMode>SingleRow</SelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Телефоны</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТелефоныКонтекстноеМеню" id="11"/>
+					<AutoCommandBar name="ТелефоныКоманднаяПанель" id="12"/>
+					<ExtendedTooltip name="ТелефоныРасширеннаяПодсказка" id="50"/>
+					<SearchStringAddition name="ТелефоныСтрокаПоиска" id="51">
+						<AdditionSource>
+							<Item>Телефоны</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТелефоныСтрокаПоискаКонтекстноеМеню" id="52"/>
+						<ExtendedTooltip name="ТелефоныСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТелефоныСостояниеПросмотра" id="54">
+						<AdditionSource>
+							<Item>Телефоны</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТелефоныСостояниеПросмотраКонтекстноеМеню" id="55"/>
+						<ExtendedTooltip name="ТелефоныСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТелефоныУправлениеПоиском" id="57">
+						<AdditionSource>
+							<Item>Телефоны</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТелефоныУправлениеПоискомКонтекстноеМеню" id="58"/>
+						<ExtendedTooltip name="ТелефоныУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТелефоныВыбор</Event>
+						<Event name="OnActivateCell">ТелефоныПриАктивизацииЯчейки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ТелефоныНомер" id="13">
+							<DataPath>Телефоны.Номер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТелефоныНомерКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ТелефоныНомерРасширеннаяПодсказка" id="60"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНомер" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерРасширеннаяПодсказка" id="61"/>
+			<ChildItems>
+				<InputField name="ВыбранныйНомер" id="21">
+					<DataPath>ВыбранныйНомер</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ВыбранныйНомерКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ВыбранныйНомерРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<Button name="ВыбратьДляЗвонка" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ВыбратьДляЗвонка</CommandName>
+					<ExtendedTooltip name="ВыбратьДляЗвонкаРасширеннаяПодсказка" id="63"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.бит_Битфон</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Контрагенты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	NULL КАК Наименование
+</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="КонтактныеЛицаКонтрагента" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактные лица контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Телефоны" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефоны</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Номер" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ВыбранныйНомер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыбратьДляЗвонка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать для звонка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать для звонка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьДляЗвонка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

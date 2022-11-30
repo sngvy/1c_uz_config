@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<TextDocumentField name="ТекстЗапроса" id="1">
+			<DataPath>ТекстЗапроса</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТекстЗапросаExtendedTooltip" id="17"/>
+		</TextDocumentField>
+		<UsualGroup name="ГруппаКнопок" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКнопокExtendedTooltip" id="18"/>
+			<ChildItems>
+				<InputField name="ПараметрДата" id="12">
+					<DataPath>ПараметрДата</DataPath>
+					<ContextMenu name="ПараметрДатаКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ПараметрДатаExtendedTooltip" id="19"/>
+				</InputField>
+				<LabelDecoration name="Декорация1" id="15">
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="16"/>
+					<ExtendedTooltip name="Декорация1ExtendedTooltip" id="20"/>
+				</LabelDecoration>
+				<Button name="ИзменитьЗапрос" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ИзменитьЗапрос</CommandName>
+					<ExtendedTooltip name="ИзменитьЗапросExtendedTooltip" id="21"/>
+				</Button>
+				<Button name="Тест" id="8">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Тест</CommandName>
+					<ExtendedTooltip name="ТестExtendedTooltip" id="22"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПолученнаяТаблица" id="9">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПолученнаяТаблица</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПолученнаяТаблицаКонтекстноеМеню" id="10"/>
+			<AutoCommandBar name="ПолученнаяТаблицаКоманднаяПанель" id="11"/>
+			<ExtendedTooltip name="ПолученнаяТаблицаExtendedTooltip" id="23"/>
+			<SearchStringAddition name="ПолученнаяТаблицаСтрокаПоиска" id="27">
+				<AdditionSource>
+					<Item>ПолученнаяТаблица</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолученнаяТаблицаСтрокаПоискаКонтекстноеМеню" id="28"/>
+				<ExtendedTooltip name="ПолученнаяТаблицаСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПолученнаяТаблицаСостояниеПросмотра" id="30">
+				<AdditionSource>
+					<Item>ПолученнаяТаблица</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолученнаяТаблицаСостояниеПросмотраКонтекстноеМеню" id="31"/>
+				<ExtendedTooltip name="ПолученнаяТаблицаСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПолученнаяТаблицаУправлениеПоиском" id="33">
+				<AdditionSource>
+					<Item>ПолученнаяТаблица</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолученнаяТаблицаУправлениеПоискомКонтекстноеМеню" id="34"/>
+				<ExtendedTooltip name="ПолученнаяТаблицаУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+			</SearchControlAddition>
+		</Table>
+		<CommandBar name="ГруппаКП" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа КП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа КП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКПExtendedTooltip" id="24"/>
+			<ChildItems>
+				<Button name="ОК" id="4">
+					<Type>CommandBarButton</Type>
+					<DefaultButton>true</DefaultButton>
+					<CommandName>Form.Command.ОК</CommandName>
+					<ExtendedTooltip name="ОКExtendedTooltip" id="25"/>
+				</Button>
+				<Button name="Отмена" id="5">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<ExtendedTooltip name="ОтменаExtendedTooltip" id="26"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТекстЗапроса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолученнаяТаблица" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрДата" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр "&amp;ТекущаяДата"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИзменитьЗапрос" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьЗапрос</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОК" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Отмена" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>İmtina</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>İmtina</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Тест" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Тест</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

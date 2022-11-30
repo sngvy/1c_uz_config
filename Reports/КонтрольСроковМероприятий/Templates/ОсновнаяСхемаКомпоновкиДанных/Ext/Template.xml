@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БизнесПроцесс</dataPath>
+			<field>БизнесПроцесс</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполнитель</dataPath>
+			<field>Исполнитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаУстановки</dataPath>
+			<field>ДатаУстановки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемаяДата</dataPath>
+			<field>ПланируемаяДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СрокВыполнения</dataPath>
+			<field>СрокВыполнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Причина</dataPath>
+			<field>Причина</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемоеВремяКонца</dataPath>
+			<field>ПланируемоеВремяКонца</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсновнойОтветственный</dataPath>
+			<field>ОсновнойОтветственный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной ответственный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СотрудникиВПомощьТипСотрудника</dataPath>
+			<field>СотрудникиВПомощьТипСотрудника</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники в помощь тип сотрудника</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СотрудникиВПомощь</dataPath>
+			<field>СотрудникиВПомощь</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники в помощь</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Мероприятие</dataPath>
+			<field>Мероприятие</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мероприятие</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОсновнойСрокВыполнения</dataPath>
+			<field>ОсновнойСрокВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основной срок выполнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическаяДата</dataPath>
+			<field>ФактическаяДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыполнения</dataPath>
+			<field>ДатаВыполнения</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	МероприятиеПереносСроковВыполнения.Ссылка.Ссылка КАК Мероприятие,
+	МероприятиеПереносСроковВыполнения.Ссылка.БизнесПроцесс КАК БизнесПроцесс,
+	МАКСИМУМ(МероприятиеПереносСроковВыполнения.Ссылка.Ответственный) КАК Ответственный,
+	МероприятиеПереносСроковВыполнения.Ссылка.Исполнитель КАК Исполнитель,
+	ОтветственныеСотрудники.Пользователь КАК ОсновнойОтветственный,
+	СотрудникиВПомощь.ТипСотрудника КАК СотрудникиВПомощьТипСотрудника,
+	СотрудникиВПомощь.Пользователь КАК СотрудникиВПомощь,
+	МероприятиеПереносСроковВыполнения.Ссылка.Дата КАК Дата,
+	ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя)) КАК ПланируемаяДата,
+	ВЫБОР
+		КОГДА ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя)) &gt; ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца))
+			ТОГДА ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя))
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца))
+	КОНЕЦ КАК ПланируемоеВремяКонца,
+	МероприятиеПереносСроковВыполнения.Ссылка.Объект КАК Объект,
+	МероприятиеПереносСроковВыполнения.Ссылка.СрокВыполнения КАК ОсновнойСрокВыполнения,
+	МероприятиеПереносСроковВыполнения.ДатаУстановки КАК ДатаУстановки,
+	МероприятиеПереносСроковВыполнения.СрокВыполнения КАК СрокВыполнения,
+	МероприятиеПереносСроковВыполнения.Причина КАК Причина,
+	МероприятиеПереносСроковВыполнения.Ссылка.ДатаВыполнения КАК ДатаВыполнения,
+	МероприятиеПереносСроковВыполнения.Ссылка.ФактическаяДата КАК ФактическаяДата
+ИЗ
+	Задача.Мероприятие.ПереносСроковВыполнения КАК МероприятиеПереносСроковВыполнения
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОтветственныеСотрудники КАК ОтветственныеСотрудники
+		ПО МероприятиеПереносСроковВыполнения.Ссылка.Объект = ОтветственныеСотрудники.Объект
+			И МероприятиеПереносСроковВыполнения.Ссылка.Ответственный = ОтветственныеСотрудники.ТипСотрудника
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СотрудникиВПомощь КАК СотрудникиВПомощь
+		ПО МероприятиеПереносСроковВыполнения.Ссылка.Объект = СотрудникиВПомощь.Объект
+			И МероприятиеПереносСроковВыполнения.Ссылка.Ответственный = СотрудникиВПомощь.ТипСотрудника
+ГДЕ
+	МероприятиеПереносСроковВыполнения.Ссылка.Дата &gt;= &amp;ДатаНачала
+	И МероприятиеПереносСроковВыполнения.Ссылка.Дата &lt;= &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	МероприятиеПереносСроковВыполнения.Ссылка.Ссылка,
+	МероприятиеПереносСроковВыполнения.Ссылка.БизнесПроцесс,
+	МероприятиеПереносСроковВыполнения.Ссылка.Исполнитель,
+	МероприятиеПереносСроковВыполнения.ДатаУстановки,
+	МероприятиеПереносСроковВыполнения.СрокВыполнения,
+	МероприятиеПереносСроковВыполнения.Причина,
+	ОтветственныеСотрудники.Пользователь,
+	СотрудникиВПомощь.ТипСотрудника,
+	СотрудникиВПомощь.Пользователь,
+	МероприятиеПереносСроковВыполнения.Ссылка.Дата,
+	МероприятиеПереносСроковВыполнения.Ссылка.Объект,
+	МероприятиеПереносСроковВыполнения.Ссылка.СрокВыполнения,
+	ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя)),
+	ВЫБОР
+		КОГДА ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя)) &gt; ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца))
+			ТОГДА ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремя))
+		ИНАЧЕ ДОБАВИТЬКДАТЕ(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемаяДата, СЕКУНДА, ЧАС(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 3600 + МИНУТА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца) * 60 + СЕКУНДА(МероприятиеПереносСроковВыполнения.Ссылка.ПланируемоеВремяКонца))
+	КОНЕЦ,
+	МероприятиеПереносСроковВыполнения.Ссылка.ДатаВыполнения,
+	МероприятиеПереносСроковВыполнения.Ссылка.ФактическаяДата</query>
+	</dataSet>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;ДатаОкончания,"ДЕНЬ")</expression>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаУстановки</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата установки срока</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СрокВыполнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Причина</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Ответственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОсновнойОтветственныйТипСотрудника</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ОсновнойОтветственный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СотрудникиВПомощьТипСотрудника</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>СотрудникиВПомощь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>БизнесПроцесс</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Дата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Исполнитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Мероприятие</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Объект</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПланируемаяДата</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПланируемоеВремя</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ПланируемоеВремяКонца</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаНачала</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>485c8fe2-a070-479c-9c7c-f1d56372bcac</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаОкончания</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>c9c851d6-7cfd-4be3-afd1-89e1db25b99c</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ОсновнойСрокВыполнения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ФактическаяДата</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаВыполнения</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>OrGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ФактическаяДата</dcsset:left>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">ОсновнойСрокВыполнения</dcsset:right>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ДатаВыполнения</dcsset:left>
+								<dcsset:comparisonType>Greater</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:Field">ОсновнойСрокВыполнения</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветТекста</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Объект</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>БизнесПроцесс</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Мероприятие</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Ответственный</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ОсновнойОтветственный</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ПланируемаяДата</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:use>false</dcsset:use>
+									<dcsset:field>ПланируемоеВремяКонца</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ОсновнойСрокВыполнения</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ДатаВыполнения</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>ФактическаяДата</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item>
+								<dcsset:use>false</dcsset:use>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+									<dcsset:item xsi:type="dcsset:SelectedItemField">
+										<dcsset:field>СотрудникиВПомощь</dcsset:field>
+									</dcsset:item>
+								</dcsset:selection>
+								<dcsset:userSettingID>f42f60ef-c40f-4a7f-b562-de84920c5e68</dcsset:userSettingID>
+								<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Детализация по срокам</v8:content>
+									</v8:item>
+								</dcsset:userSettingPresentation>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

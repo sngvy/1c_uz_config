@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>70</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="16"/>
+		</InputField>
+		<InputField name="Дата" id="3">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<Table name="Результаты" id="5">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Результаты</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РезультатыКонтекстноеМеню" id="6"/>
+			<AutoCommandBar name="РезультатыКоманднаяПанель" id="7"/>
+			<ExtendedTooltip name="РезультатыРасширеннаяПодсказка" id="18"/>
+			<SearchStringAddition name="РезультатыСтрокаПоиска" id="19">
+				<AdditionSource>
+					<Item>Результаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыСтрокаПоискаКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="РезультатыСтрокаПоискаРасширеннаяПодсказка" id="21"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатыСостояниеПросмотра" id="22">
+				<AdditionSource>
+					<Item>Результаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыСостояниеПросмотраКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="РезультатыСостояниеПросмотраРасширеннаяПодсказка" id="24"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатыУправлениеПоиском" id="25">
+				<AdditionSource>
+					<Item>Результаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыУправлениеПоискомКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="РезультатыУправлениеПоискомРасширеннаяПодсказка" id="27"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeAddRow">РезультатыПередНачаломДобавления</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="РезультатыНомерСтроки" id="8">
+					<DataPath>Объект.Результаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыНомерСтрокиКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="РезультатыНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="РезультатыУИД" id="10">
+					<DataPath>Объект.Результаты.УИД</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыУИДКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="РезультатыУИДРасширеннаяПодсказка" id="29"/>
+				</InputField>
+				<InputField name="РезультатыРезультат" id="12">
+					<DataPath>Объект.Результаты.Результат</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыРезультатКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="РезультатыРезультатРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="РезультатыДата" id="14">
+					<DataPath>Объект.Результаты.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыДатаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="РезультатыДатаРасширеннаяПодсказка" id="31"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РезультатыАвтоинформирования</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

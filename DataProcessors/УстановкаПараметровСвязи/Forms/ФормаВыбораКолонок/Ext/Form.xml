@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>50</Width>
+	<Height>10</Height>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОК" id="10">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ОКРасширеннаяПодсказка" id="11"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПолеПараметров" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПолеПараметров</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПолеПараметровКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ПолеПараметровКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ПолеПараметровРасширеннаяПодсказка" id="12"/>
+			<SearchStringAddition name="ПолеПараметровСтрокаПоиска" id="13">
+				<AdditionSource>
+					<Item>ПолеПараметров</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолеПараметровСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ПолеПараметровСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПолеПараметровСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>ПолеПараметров</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолеПараметровСостояниеПросмотраКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ПолеПараметровСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПолеПараметровУправлениеПоиском" id="19">
+				<AdditionSource>
+					<Item>ПолеПараметров</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПолеПараметровУправлениеПоискомКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ПолеПараметровУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ИмяКолонки" id="4">
+					<DataPath>ПолеПараметров.ИмяКолонки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>true</DropListButton>
+					<TextEdit>false</TextEdit>
+					<ChoiceListButton>true</ChoiceListButton>
+					<ContextMenu name="ИмяКолонкиКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ИмяКолонкиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="КоличествоСимволов" id="6">
+					<DataPath>ПолеПараметров.КоличествоСимволов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="КоличествоСимволовКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КоличествоСимволовРасширеннаяПодсказка" id="23"/>
+				</InputField>
+				<InputField name="Разделитель" id="8">
+					<DataPath>ПолеПараметров.Разделитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>1</Width>
+					<ContextMenu name="РазделительКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="РазделительРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УстановкаПараметровСвязи</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПолеПараметров" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяКолонки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="КоличествоСимволов" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество символов</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Разделитель" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИзменяемыйЭлемент" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменяемый элемент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокПараметров" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список параметров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

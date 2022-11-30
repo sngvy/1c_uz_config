@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<CheckBoxField name="Используется" id="7">
+			<DataPath>Объект.Используется</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользуетсяКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИспользуетсяРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<InputField name="Порядок" id="10">
+			<DataPath>Объект.Порядок</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ПорядокКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ГруппаПользователей" id="13">
+			<DataPath>Объект.ГруппаПользователей</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ГруппаПользователейКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ГруппаПользователейРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="ОтображатьИсторию" id="16">
+			<DataPath>Объект.ОтображатьИсторию</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОтображатьИсториюКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОтображатьИсториюРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<CheckBoxField name="ГруппироватьМероприятия" id="19">
+			<DataPath>Объект.ГруппироватьМероприятия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ГруппироватьМероприятияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ГруппироватьМероприятияРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<Pages name="Страницы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Page name="ГруппаТипыМероприятий" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы мероприятий</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаТипыМероприятийРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="ТипыМероприятий" id="26">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ТипыМероприятий</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТипыМероприятийКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="ТипыМероприятийКоманднаяПанель" id="28"/>
+							<ExtendedTooltip name="ТипыМероприятийРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="ТипыМероприятийСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>ТипыМероприятий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыМероприятийСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ТипыМероприятийСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТипыМероприятийСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>ТипыМероприятий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыМероприятийСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ТипыМероприятийСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТипыМероприятийУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>ТипыМероприятий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыМероприятийУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ТипыМероприятийУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТипыМероприятийНомерСтроки" id="39">
+									<DataPath>Объект.ТипыМероприятий.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыМероприятийНомерСтрокиКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ТипыМероприятийНомерСтрокиРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<CheckBoxField name="ТипыМероприятийИспользуется" id="42">
+									<DataPath>Объект.ТипыМероприятий.Используется</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТипыМероприятийИспользуетсяКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ТипыМероприятийИспользуетсяРасширеннаяПодсказка" id="44"/>
+								</CheckBoxField>
+								<InputField name="ТипыМероприятийТипМероприятия" id="45">
+									<DataPath>Объект.ТипыМероприятий.ТипМероприятия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыМероприятийТипМероприятияКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ТипыМероприятийТипМероприятияРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<InputField name="ТипыМероприятийЗаголовок" id="48">
+									<DataPath>Объект.ТипыМероприятий.Заголовок</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыМероприятийЗаголовокКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ТипыМероприятийЗаголовокРасширеннаяПодсказка" id="50"/>
+								</InputField>
+								<CheckBoxField name="ТипыМероприятийДолжник" id="51">
+									<DataPath>Объект.ТипыМероприятий.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТипыМероприятийДолжникКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ТипыМероприятийДолжникРасширеннаяПодсказка" id="53"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСхемы" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Схемы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаСхемыРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="Схемы" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Схемы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СхемыКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="СхемыКоманднаяПанель" id="58"/>
+							<ExtendedTooltip name="СхемыРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="СхемыСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>Схемы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="СхемыСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СхемыСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>Схемы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СхемыСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СхемыУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>Схемы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СхемыУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="СхемыУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СхемыНомерСтроки" id="69">
+									<DataPath>Объект.Схемы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СхемыНомерСтрокиКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="СхемыНомерСтрокиРасширеннаяПодсказка" id="71"/>
+								</LabelField>
+								<CheckBoxField name="СхемыИспользуется" id="72">
+									<DataPath>Объект.Схемы.Используется</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СхемыИспользуетсяКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="СхемыИспользуетсяРасширеннаяПодсказка" id="74"/>
+								</CheckBoxField>
+								<InputField name="СхемыСхема" id="75">
+									<DataPath>Объект.Схемы.Схема</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СхемыСхемаКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="СхемыСхемаРасширеннаяПодсказка" id="77"/>
+								</InputField>
+								<InputField name="СхемыЗаголовок" id="78">
+									<DataPath>Объект.Схемы.Заголовок</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СхемыЗаголовокКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="СхемыЗаголовокРасширеннаяПодсказка" id="80"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТипыПрикрепляемыхФайлов" id="81">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Типы прикрепляемых файлов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаТипыПрикрепляемыхФайловРасширеннаяПодсказка" id="82"/>
+					<ChildItems>
+						<Table name="ТипыПрикрепляемыхФайлов" id="83">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ТипыПрикрепляемыхФайлов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТипыПрикрепляемыхФайловКонтекстноеМеню" id="84"/>
+							<AutoCommandBar name="ТипыПрикрепляемыхФайловКоманднаяПанель" id="85"/>
+							<ExtendedTooltip name="ТипыПрикрепляемыхФайловРасширеннаяПодсказка" id="86"/>
+							<SearchStringAddition name="ТипыПрикрепляемыхФайловСтрокаПоиска" id="87">
+								<AdditionSource>
+									<Item>ТипыПрикрепляемыхФайлов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыПрикрепляемыхФайловСтрокаПоискаКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="ТипыПрикрепляемыхФайловСтрокаПоискаРасширеннаяПодсказка" id="89"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТипыПрикрепляемыхФайловСостояниеПросмотра" id="90">
+								<AdditionSource>
+									<Item>ТипыПрикрепляемыхФайлов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыПрикрепляемыхФайловСостояниеПросмотраКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="ТипыПрикрепляемыхФайловСостояниеПросмотраРасширеннаяПодсказка" id="92"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТипыПрикрепляемыхФайловУправлениеПоиском" id="93">
+								<AdditionSource>
+									<Item>ТипыПрикрепляемыхФайлов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТипыПрикрепляемыхФайловУправлениеПоискомКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ТипыПрикрепляемыхФайловУправлениеПоискомРасширеннаяПодсказка" id="95"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТипыПрикрепляемыхФайловНомерСтроки" id="96">
+									<DataPath>Объект.ТипыПрикрепляемыхФайлов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыПрикрепляемыхФайловНомерСтрокиКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ТипыПрикрепляемыхФайловНомерСтрокиРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+								<InputField name="ТипыПрикрепляемыхФайловТипФайла" id="99">
+									<DataPath>Объект.ТипыПрикрепляемыхФайлов.ТипФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТипыПрикрепляемыхФайловТипФайлаКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ТипыПрикрепляемыхФайловТипФайлаРасширеннаяПодсказка" id="101"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВкладкиДляДопРеквизитов" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вкладки для доп реквизитов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаВкладкиДляДопРеквизитовРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<Table name="ВкладкиДляДопРеквизитов" id="104">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ВкладкиДляДопРеквизитов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВкладкиДляДопРеквизитовКонтекстноеМеню" id="105"/>
+							<AutoCommandBar name="ВкладкиДляДопРеквизитовКоманднаяПанель" id="106"/>
+							<ExtendedTooltip name="ВкладкиДляДопРеквизитовРасширеннаяПодсказка" id="107"/>
+							<SearchStringAddition name="ВкладкиДляДопРеквизитовСтрокаПоиска" id="108">
+								<AdditionSource>
+									<Item>ВкладкиДляДопРеквизитов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВкладкиДляДопРеквизитовСтрокаПоискаКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="ВкладкиДляДопРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="110"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВкладкиДляДопРеквизитовСостояниеПросмотра" id="111">
+								<AdditionSource>
+									<Item>ВкладкиДляДопРеквизитов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВкладкиДляДопРеквизитовСостояниеПросмотраКонтекстноеМеню" id="112"/>
+								<ExtendedTooltip name="ВкладкиДляДопРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="113"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВкладкиДляДопРеквизитовУправлениеПоиском" id="114">
+								<AdditionSource>
+									<Item>ВкладкиДляДопРеквизитов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВкладкиДляДопРеквизитовУправлениеПоискомКонтекстноеМеню" id="115"/>
+								<ExtendedTooltip name="ВкладкиДляДопРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="116"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВкладкиДляДопРеквизитовНомерСтроки" id="117">
+									<DataPath>Объект.ВкладкиДляДопРеквизитов.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВкладкиДляДопРеквизитовНомерСтрокиКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ВкладкиДляДопРеквизитовНомерСтрокиРасширеннаяПодсказка" id="119"/>
+								</LabelField>
+								<InputField name="ВкладкиДляДопРеквизитовВкладка" id="120">
+									<DataPath>Объект.ВкладкиДляДопРеквизитов.Вкладка</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВкладкиДляДопРеквизитовВкладкаКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ВкладкиДляДопРеквизитовВкладкаРасширеннаяПодсказка" id="122"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СтадииПроизводства</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

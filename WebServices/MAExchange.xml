@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WebService uuid="04e805ee-3efe-4a72-881c-44424abe43ff">
+		<Properties>
+			<Name>MAExchange</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MAExchange</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<Namespace>http://localhost/wsExchange</Namespace>
+			<XDTOPackages>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xr:MDObjectRef">XDTOPackage.ОбменДанными</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xs:string">http://v8.1c.ru/8.1/data-composition-system/details</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xs:string">http://v8.1c.ru/8.1/data/core</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xs:string">http://v8.1c.ru/8.1/data/enterprise/current-config</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xs:string">http://v8.1c.ru/8.2/data/spreadsheet</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xs:string">http://v8.1c.ru/8.3/data/ext</xr:Value>
+				</xr:Item>
+			</XDTOPackages>
+			<DescriptorFileName>wsExchange.1cws</DescriptorFileName>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<Operation uuid="3c6d2999-7cae-426f-b1a8-58d87ac325f8">
+				<Properties>
+					<Name>НачатьОбмен</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начать обмен</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>xs:string</XDTOReturningValueType>
+					<Nillable>true</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>НачатьОбмен</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="829d0139-03f5-492b-8cf2-933f1ba81850">
+						<Properties>
+							<Name>КодУзла</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код узла</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="990c8e75-4060-445b-b6ae-8fc2d23488e7">
+						<Properties>
+							<Name>НомерОтправленного</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер отправленного</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:decimal</XDTOValueType>
+							<Nillable>true</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="0045df3b-f3d8-4ee6-a54f-6b3cc9dac5b8">
+						<Properties>
+							<Name>НомерПринятого</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер принятого</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:decimal</XDTOValueType>
+							<Nillable>true</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="d5987598-dcae-4fe6-846b-e1f51b7c8d96">
+				<Properties>
+					<Name>ПолучитьДанные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить данные</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>v8:ValueStorage</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПолучитьДанные</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="3add389b-7325-4654-8e89-29093b7ffd69">
+						<Properties>
+							<Name>КодУзла</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код узла</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="e5805509-1de2-4ec9-b158-d46a6f9dc0c9">
+				<Properties>
+					<Name>ЗаписатьДанные</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать данные</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>xs:string</XDTOReturningValueType>
+					<Nillable>true</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ЗаписатьДанные</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="0dd26f5b-9909-45ee-819b-e1cd3995f5b9">
+						<Properties>
+							<Name>КодУзла</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код узла</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="94005671-8959-42aa-bac9-c690e2033fd8">
+						<Properties>
+							<Name>ДанныеМобильногоПриложения</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные мобильного приложения</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>v8:ValueStorage</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="813711a9-5c21-45e9-b847-f0b077beeb1c">
+				<Properties>
+					<Name>ПолучитьДополнительнуюИнформациюДО</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить дополнительную информацию ДО</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>v8:ValueTable</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПолучитьДополнительнуюИнформациюДО</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="e29213e0-1575-4c56-b6bb-8e091c6d47d0">
+						<Properties>
+							<Name>КодДО</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код ДО</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="197d8d8f-d0a0-49e9-9531-9163e77db09a">
+				<Properties>
+					<Name>НовыйИдентификаторПодписчикаУведомлений</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новый идентификатор подписчика уведомлений</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>xs:string</XDTOReturningValueType>
+					<Nillable>true</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>НовыйИдентификаторПодписчикаУведомлений</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="b230e7af-1173-4719-b6e2-435d6e8e26e1">
+						<Properties>
+							<Name>КодУзла</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код узла</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="7ed1b87e-e338-4c5f-b2b2-3a1149bbd9fa">
+						<Properties>
+							<Name>ИдентификаторXDTO</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификатор XDTO</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://v8.1c.ru/8.3/data/ext">d8p1:DeliverableNotificationSubscriberID</XDTOValueType>
+							<Nillable>true</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="17d9b48c-a86d-47da-94df-c046af7a1991">
+				<Properties>
+					<Name>ПолучитьДополнительнуюИнформациюКА</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить дополнительную информацию КА</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>v8:ValueTable</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПолучитьДополнительнуюИнформациюКА</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="0c886e97-b61d-46ba-bbe3-0cdaf5f2b811">
+						<Properties>
+							<Name>КодКА</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код КА</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="1e72d945-c093-467b-a381-848bdcb45469">
+				<Properties>
+					<Name>ПолучитьЗадолженностьДО</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить задолженность ДО</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПолучитьЗадолженностьДО</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="44f48a84-9cf1-4706-a5fa-4b0a4edc74c0">
+						<Properties>
+							<Name>КодДО</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код ДО</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="0a73aed7-8a03-4718-a150-df3c27d63b52">
+				<Properties>
+					<Name>ПолучитьАдресаВыездов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить адреса выездов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>v8:ValueTable</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПолучитьАдресаВыездов</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="2151f377-914a-44f3-82e6-bbb3274d1b1f">
+						<Properties>
+							<Name>ТЗКодовОбъектов</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ТЗКодов объектов</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>v8:ValueTable</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="4d3eda65-845a-42b2-b2f7-7251cd1f9f7c">
+				<Properties>
+					<Name>ПолучитьЭлектроннуюПочту</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить электронную почту</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>v8:ValueTable</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПолучитьЭлектроннуюПочту</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="0f469422-3f10-4497-a2f3-6f6e43c5f4d5">
+						<Properties>
+							<Name>ТЗКодовОбъектов</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ТЗКодов объектов</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>v8:ValueTable</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="e6bf3096-6c28-43f8-b87d-bd179ab94074">
+				<Properties>
+					<Name>ПроверитьУстройствоВУЗ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверить устройство В УЗ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>xs:boolean</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПроверитьУстройствоВУЗ</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="d6fa12eb-bb99-409a-9944-adf6323233d9">
+						<Properties>
+							<Name>КодУзла</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Код узла</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="8942cc95-092e-4d2b-98bc-77e8a2f5c5ef">
+						<Properties>
+							<Name>IDМобильногоУстройства</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>IDМобильного устройства</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType>xs:string</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="3f67c6b0-81bf-4cd6-b278-90ea2a7d29f1">
+				<Properties>
+					<Name>ПроверитьЛицензиюМП</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверить лицензию МП</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType>xs:boolean</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>ПроверитьЛицензиюМП</ProcedureName>
+					<DataLockControlMode>Managed</DataLockControlMode>
+				</Properties>
+				<ChildObjects/>
+			</Operation>
+		</ChildObjects>
+	</WebService>
+</MetaDataObject>

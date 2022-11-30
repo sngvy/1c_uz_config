@@ -1,0 +1,448 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<Height>15</Height>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ПользователиИнфБазыСоздатьНовый" id="49">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьНовый</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыСоздатьНовыйРасширеннаяПодсказка" id="93"/>
+			</Button>
+			<Button name="ПользователиИнфБазыСоздатьНовыйКопированием" id="50">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьНовыйКопированием</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыСоздатьНовыйКопированиемРасширеннаяПодсказка" id="94"/>
+			</Button>
+			<Button name="ПользователиИнфБазыИзменитьИлиОткрытьТекущий" id="18">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ИзменитьИлиОткрытьТекущий</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыИзменитьИлиОткрытьТекущийРасширеннаяПодсказка" id="95"/>
+			</Button>
+			<Button name="ПользователиИнфБазыПометитьТекущийНаУдаление" id="40">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ПометитьТекущийНаУдаление</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыПометитьТекущийНаУдалениеРасширеннаяПодсказка" id="96"/>
+			</Button>
+			<Button name="ПользователиИнфБазыНайти" id="20">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.ПользователиИнфБазы.StandardCommand.Find</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыНайтиРасширеннаяПодсказка" id="97"/>
+			</Button>
+			<Button name="ПользователиИнфБазыОтменитьПоиск" id="21">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.ПользователиИнфБазы.StandardCommand.CancelSearch</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыОтменитьПоискРасширеннаяПодсказка" id="98"/>
+			</Button>
+			<Button name="ПользователиИнфБазыОбновитьСписок" id="31">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.ОбновитьСписок</CommandName>
+				<ExtendedTooltip name="ПользователиИнфБазыОбновитьСписокРасширеннаяПодсказка" id="99"/>
+			</Button>
+			<Button name="ПользователиИнфБазыСортироватьПоВозрастанию" id="33">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.ПользователиИнфБазы.StandardCommand.SortListAsc</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПользователиИнфБазыСортироватьПоВозрастаниюРасширеннаяПодсказка" id="100"/>
+			</Button>
+			<Button name="ПользователиИнфБазыСортироватьПоУбыванию" id="34">
+				<Type>CommandBarButton</Type>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Item.ПользователиИнфБазы.StandardCommand.SortListDesc</CommandName>
+				<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПользователиИнфБазыСортироватьПоУбываниюРасширеннаяПодсказка" id="101"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ПользователиИнфБазы" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ReadOnly>true</ReadOnly>
+			<SkipOnInput>false</SkipOnInput>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Row</RowSelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей</DataPath>
+			<RowPictureDataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.Картинка</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.СостоянияПользователей</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<CommandSet>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПользователиИнфБазыКонтекстноеМеню" id="2">
+				<ChildItems>
+					<Button name="КонтекстноеМенюПользователиИнфБазыИзменить" id="48">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.ИзменитьИлиОткрытьТекущий</CommandName>
+						<ExtendedTooltip name="КонтекстноеМенюПользователиИнфБазыИзменитьРасширеннаяПодсказка" id="102"/>
+					</Button>
+					<Button name="КонтекстноеМенюПользователиИнфБазыОбновить" id="39">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Command.ОбновитьСписок</CommandName>
+						<ExtendedTooltip name="КонтекстноеМенюПользователиИнфБазыОбновитьРасширеннаяПодсказка" id="103"/>
+					</Button>
+					<Button name="КонтекстноеМенюПользователиИнфБазыУдалить" id="41">
+						<Type>CommandBarButton</Type>
+						<SkipOnInput>false</SkipOnInput>
+						<CommandName>Form.Item.ПользователиИнфБазы.StandardCommand.Delete</CommandName>
+						<ExtendedTooltip name="КонтекстноеМенюПользователиИнфБазыУдалитьРасширеннаяПодсказка" id="104"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ПользователиИнфБазыКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ПользователиИнфБазыРасширеннаяПодсказка" id="105"/>
+			<SearchStringAddition name="ПользователиИнфБазыСтрокаПоиска" id="106">
+				<AdditionSource>
+					<Item>ПользователиИнфБазы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиИнфБазыСтрокаПоискаКонтекстноеМеню" id="107"/>
+				<ExtendedTooltip name="ПользователиИнфБазыСтрокаПоискаРасширеннаяПодсказка" id="108"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПользователиИнфБазыСостояниеПросмотра" id="109">
+				<AdditionSource>
+					<Item>ПользователиИнфБазы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиИнфБазыСостояниеПросмотраКонтекстноеМеню" id="110"/>
+				<ExtendedTooltip name="ПользователиИнфБазыСостояниеПросмотраРасширеннаяПодсказка" id="111"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПользователиИнфБазыУправлениеПоиском" id="112">
+				<AdditionSource>
+					<Item>ПользователиИнфБазы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПользователиИнфБазыУправлениеПоискомКонтекстноеМеню" id="113"/>
+				<ExtendedTooltip name="ПользователиИнфБазыУправлениеПоискомРасширеннаяПодсказка" id="114"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ПользователиИнфБазыВыбор</Event>
+				<Event name="BeforeDeleteRow">ПользователиИнфБазыПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПользователиИнфБазыНомерСтроки" id="51">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыНомерСтрокиКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ПользователиИнфБазыНомерСтрокиРасширеннаяПодсказка" id="115"/>
+				</LabelField>
+				<InputField name="ПользователиИнфБазыИмя" id="53">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.Имя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыИмяКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПользователиИнфБазыИмяРасширеннаяПодсказка" id="116"/>
+				</InputField>
+				<InputField name="ПользователиИнфБазыПолноеИмя" id="55">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.ПолноеИмя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыПолноеИмяКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ПользователиИнфБазыПолноеИмяРасширеннаяПодсказка" id="117"/>
+				</InputField>
+				<InputField name="ПользователиИнфБазыКодПроблемы" id="83">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.КодПроблемы</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыКодПроблемыКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="ПользователиИнфБазыКодПроблемыРасширеннаяПодсказка" id="118"/>
+				</InputField>
+				<InputField name="ПользователиИнфБазыСсылка" id="85">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.Ссылка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыСсылкаКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="ПользователиИнфБазыСсылкаРасширеннаяПодсказка" id="119"/>
+				</InputField>
+				<InputField name="ПользователиИнфБазыКартинка" id="89">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.Картинка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыКартинкаКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ПользователиИнфБазыКартинкаРасширеннаяПодсказка" id="120"/>
+				</InputField>
+				<InputField name="ПользователиИнфБазыИдентификаторПользователяИБ" id="91">
+					<DataPath>ПользователиИнфБазы.ТабличнаяЧастьПользователей.ИдентификаторПользователяИБ</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПользователиИнфБазыИдентификаторПользователяИБКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ПользователиИнфБазыИдентификаторПользователяИБРасширеннаяПодсказка" id="121"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПользователиИнфБазы" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи инф базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.СписокПользователейБД</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПолноеИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>Имя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АутентификацияСтандартная</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АутентификацияОС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПользовательОС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПользователиИнфБазы.КодПроблемы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПолноеИмя</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПользователиИнфБазы.КодПроблемы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПолноеИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>Имя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АутентификацияСтандартная</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АутентификацияОС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПользовательОС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПользователиИнфБазы.КодПроблемы</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSlateGray</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПолноеИмя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>Имя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АутентификацияСтандартная</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>АутентификацияОС</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ПользовательОС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ПользователиИнфБазы.ПометкаУдаления</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:LightSlateGray</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьСписок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСписок</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИзменитьИлиОткрытьТекущий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить или открыть текущий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить или открыть текущий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F2</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьИлиОткрытьТекущий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПометитьТекущийНаУдаление" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить текущий на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить текущий на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьТекущийНаУдаление</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьНовый" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьНовый</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьНовыйКопированием" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый копированием</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать новый копированием</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CloneListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьНовыйКопированием</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Отбор">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

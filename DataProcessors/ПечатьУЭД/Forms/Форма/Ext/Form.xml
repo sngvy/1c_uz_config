@@ -1,0 +1,863 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<Group>Horizontal</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИЗакрыть" id="16">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьExtendedTooltip" id="64"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="14">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ЗаписатьДанные</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьExtendedTooltip" id="65"/>
+			</Button>
+			<Button name="ФормаПечать" id="15">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.Печать</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Print</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаПечатьExtendedTooltip" id="66"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ОсновнаяГруппа" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная группа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОсновнаяГруппаExtendedTooltip" id="67"/>
+			<ChildItems>
+				<CheckBoxField name="РаспечататьСформированныеДокументы" id="62">
+					<DataPath>РаспечататьСформированныеДокументы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РаспечататьСформированныеДокументыКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="РаспечататьСформированныеДокументыExtendedTooltip" id="68"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПрикрепитьФайлы" id="109">
+					<DataPath>ПрикрепитьФайлы</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПрикрепитьФайлыКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ПрикрепитьФайлыРасширеннаяПодсказка" id="111"/>
+				</CheckBoxField>
+				<InputField name="Шаблон" id="1">
+					<DataPath>Объект.Шаблон</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ШаблонКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ШаблонExtendedTooltip" id="69"/>
+					<Events>
+						<Event name="OnChange">РеквизитыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДолговоеОбязательство" id="58">
+					<DataPath>ДолговоеОбязательство</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ДолговоеОбязательствоExtendedTooltip" id="70"/>
+					<Events>
+						<Event name="OnChange">РеквизитыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ИсполнительныйДокумент" id="60">
+					<DataPath>ИсполнительныйДокумент</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">ДолговоеОбязательство</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ИсполнительныйДокументКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ИсполнительныйДокументExtendedTooltip" id="71"/>
+					<Events>
+						<Event name="OnChange">РеквизитыПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Table name="СписокСвойств" id="3">
+					<Representation>List</Representation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>СписокСвойств</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>CancelSearch</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>Find</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>OutputList</ExcludedCommand>
+						<ExcludedCommand>SelectAll</ExcludedCommand>
+						<ExcludedCommand>SortListAsc</ExcludedCommand>
+						<ExcludedCommand>SortListDesc</ExcludedCommand>
+					</CommandSet>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокСвойствКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="СписокСвойствКоманднаяПанель" id="5"/>
+					<ExtendedTooltip name="СписокСвойствExtendedTooltip" id="72"/>
+					<SearchStringAddition name="СписокСвойствSearchString" id="73">
+						<AdditionSource>
+							<Item>СписокСвойств</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствSearchStringContextMenu" id="74"/>
+						<ExtendedTooltip name="СписокСвойствSearchStringExtendedTooltip" id="75"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСвойствViewStatus" id="76">
+						<AdditionSource>
+							<Item>СписокСвойств</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствViewStatusContextMenu" id="77"/>
+						<ExtendedTooltip name="СписокСвойствViewStatusExtendedTooltip" id="78"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокСвойствSearchControl" id="79">
+						<AdditionSource>
+							<Item>СписокСвойств</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствSearchControlContextMenu" id="80"/>
+						<ExtendedTooltip name="СписокСвойствSearchControlExtendedTooltip" id="81"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnStartEdit">СписокСвойствПриНачалеРедактирования</Event>
+						<Event name="OnChange">СписокСвойствПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СписокСвойствЗаголовок" id="21">
+							<DataPath>СписокСвойств.Заголовок</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ContextMenu name="СписокСвойствЗаголовокКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="СписокСвойствЗаголовокExtendedTooltip" id="82"/>
+						</InputField>
+						<InputField name="СписокСвойствЗначение" id="8">
+							<DataPath>СписокСвойств.Значение</DataPath>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Items.СписокСвойств.CurrentData.Свойство</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="СписокСвойствЗначениеКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="СписокСвойствЗначениеExtendedTooltip" id="83"/>
+							<Events>
+								<Event name="OnChange">СписокСвойствЗначениеПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДолжники" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа должники</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Qrup borclular</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа должники</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Qrup borclular</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДолжникиExtendedTooltip" id="84"/>
+			<ChildItems>
+				<Table name="СписокСвойствДолжника" id="40">
+					<Representation>Tree</Representation>
+					<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>СписокСвойствДолжника</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="СписокСвойствДолжникаКонтекстноеМеню" id="41"/>
+					<AutoCommandBar name="СписокСвойствДолжникаКоманднаяПанель" id="42"/>
+					<ExtendedTooltip name="СписокСвойствДолжникаExtendedTooltip" id="85"/>
+					<SearchStringAddition name="СписокСвойствДолжникаSearchString" id="86">
+						<AdditionSource>
+							<Item>СписокСвойствДолжника</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствДолжникаSearchStringContextMenu" id="87"/>
+						<ExtendedTooltip name="СписокСвойствДолжникаSearchStringExtendedTooltip" id="88"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСвойствДолжникаViewStatus" id="89">
+						<AdditionSource>
+							<Item>СписокСвойствДолжника</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствДолжникаViewStatusContextMenu" id="90"/>
+						<ExtendedTooltip name="СписокСвойствДолжникаViewStatusExtendedTooltip" id="91"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокСвойствДолжникаSearchControl" id="92">
+						<AdditionSource>
+							<Item>СписокСвойствДолжника</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствДолжникаSearchControlContextMenu" id="93"/>
+						<ExtendedTooltip name="СписокСвойствДолжникаSearchControlExtendedTooltip" id="94"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">СписокСвойствДолжникаПередНачаломДобавления</Event>
+						<Event name="OnActivateRow">СписокСвойствДКПриАктивизацииСтроки</Event>
+						<Event name="OnStartEdit">СписокСвойствДолжникаПриНачалеРедактирования</Event>
+						<Event name="OnActivateCell">СписокСвойствДолжникаПриАктивизацииЯчейки</Event>
+						<Event name="OnChange">СписокСвойствДКПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СписокСвойствДолжникаЗаголовок" id="54">
+							<DataPath>СписокСвойствДолжника.Заголовок</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="СписокСвойствДолжникаЗаголовокКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="СписокСвойствДолжникаЗаголовокExtendedTooltip" id="95"/>
+						</InputField>
+						<InputField name="СписокСвойствДолжникаЗначение" id="45">
+							<DataPath>СписокСвойствДолжника.Значение</DataPath>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ClearButton>true</ClearButton>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="СписокСвойствДолжникаЗначениеКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="СписокСвойствДолжникаЗначениеExtendedTooltip" id="96"/>
+							<Events>
+								<Event name="OnChange">СписокСвойствКАЗначениеПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<Table name="СписокСвойствКредитора" id="47">
+					<Representation>Tree</Representation>
+					<HorizontalScrollBar>DontUse</HorizontalScrollBar>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>СписокСвойствКредитора</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<ContextMenu name="СписокСвойствКредитораКонтекстноеМеню" id="48"/>
+					<AutoCommandBar name="СписокСвойствКредитораКоманднаяПанель" id="49"/>
+					<ExtendedTooltip name="СписокСвойствКредитораExtendedTooltip" id="97"/>
+					<SearchStringAddition name="СписокСвойствКредитораSearchString" id="98">
+						<AdditionSource>
+							<Item>СписокСвойствКредитора</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствКредитораSearchStringContextMenu" id="99"/>
+						<ExtendedTooltip name="СписокСвойствКредитораSearchStringExtendedTooltip" id="100"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСвойствКредитораViewStatus" id="101">
+						<AdditionSource>
+							<Item>СписокСвойствКредитора</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствКредитораViewStatusContextMenu" id="102"/>
+						<ExtendedTooltip name="СписокСвойствКредитораViewStatusExtendedTooltip" id="103"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокСвойствКредитораSearchControl" id="104">
+						<AdditionSource>
+							<Item>СписокСвойствКредитора</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСвойствКредитораSearchControlContextMenu" id="105"/>
+						<ExtendedTooltip name="СписокСвойствКредитораSearchControlExtendedTooltip" id="106"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="BeforeAddRow">СписокСвойствКредитораПередНачаломДобавления</Event>
+						<Event name="OnActivateRow">СписокСвойствДКПриАктивизацииСтроки</Event>
+						<Event name="OnStartEdit">СписокСвойствКредитораПриНачалеРедактирования</Event>
+						<Event name="OnActivateCell">СписокСвойствКредитораПриАктивизацииЯчейки</Event>
+						<Event name="OnChange">СписокСвойствДКПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="СписокСвойствКредитораЗаголовок" id="56">
+							<DataPath>СписокСвойствКредитора.Заголовок</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="СписокСвойствКредитораЗаголовокКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="СписокСвойствКредитораЗаголовокExtendedTooltip" id="107"/>
+						</InputField>
+						<InputField name="СписокСвойствКредитораЗначение" id="52">
+							<DataPath>СписокСвойствКредитора.Значение</DataPath>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ClearButton>true</ClearButton>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="СписокСвойствКредитораЗначениеКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СписокСвойствКредитораЗначениеExtendedTooltip" id="108"/>
+							<Events>
+								<Event name="OnChange">СписокСвойствКАЗначениеПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПечатьУЭД</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокСвойств" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Заголовок" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокСвойствДолжника" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список свойств должника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Заголовок" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФункцияОтказа" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функция отказа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФункцииСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отказ" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отказ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокСвойствКредитора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица свойств должника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</v8:Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.ДополнительныеРеквизитыИСведения</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Заголовок" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФункцияОтказа" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функция отказа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФункцииСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отказ" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отказ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДолговоеОбязательство" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долговое обязательство</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>Borc öhdəliyi</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсполнительныйДокумент" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительный документ</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>az</v8:lang>
+					<v8:content>İcraçı sənəd</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИсполнительныеДокументы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокФункций" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список результатов функций, динамический</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Функция" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФункцииСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Результат" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокФункцийД" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список результатов функций, динамический</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Функция" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФункцииСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Результат" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокФункцийК" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список результатов функций, динамический</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Функция" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Функция</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ФункцииСвойств</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Результат" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="РаспечататьСформированныеДокументы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать сформированные документы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрикрепитьФайлы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокСвойствДолжникаЗначение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокСвойствДолжника.Отказ</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СписокСвойствКредитораЗначение</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">СписокСвойствКредитора.Отказ</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveFile</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаписатьДанные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Печать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать УЭД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Печать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписатьИЗакрыть" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

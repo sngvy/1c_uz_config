@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПериод" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа период</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияНаПериод" id="19">
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>На период с</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияНаПериодКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДекорацияНаПериодРасширеннаяПодсказка" id="27"/>
+				</LabelDecoration>
+				<InputField name="Период" id="1">
+					<DataPath>Запись.Period</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ПериодДействия" id="7">
+					<DataPath>Запись.ПериодДействия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>по</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<ContextMenu name="ПериодДействияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ПериодДействияРасширеннаяПодсказка" id="29"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаИНН" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ИНН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ИНН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИННРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияРазрешитьПроводитьОперации" id="17">
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разрешить проводить операции по ИНН</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияРазрешитьПроводитьОперацииКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДекорацияРазрешитьПроводитьОперацииРасширеннаяПодсказка" id="31"/>
+				</LabelDecoration>
+				<InputField name="ИНН" id="3">
+					<DataPath>Запись.ИНН</DataPath>
+					<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<TitleLocation>None</TitleLocation>
+					<Width>14</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<ContextMenu name="ИННКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="32"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ДополнительноеУсловие" id="9">
+			<DataPath>Запись.ДополнительноеУсловие</DataPath>
+			<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+			<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+			<ContextMenu name="ДополнительноеУсловиеКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ДополнительноеУсловиеРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<LabelDecoration name="ДекорацияДопУсловиеКомментарий" id="23">
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Font faceName="Segoe UI" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработку дополнительных условий необходимо реализовать через Подключаемый модуль</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияДопУсловиеКомментарийКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ДекорацияДопУсловиеКомментарийРасширеннаяПодсказка" id="34"/>
+		</LabelDecoration>
+		<InputField name="Комментарий" id="15">
+			<DataPath>Запись.Комментарий</DataPath>
+			<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+			<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="35"/>
+		</InputField>
+		<UsualGroup name="ГруппаОтветственный" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ответственный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаОтветственныйРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<LabelField name="ДатаЗаписи" id="11">
+					<DataPath>Запись.ДатаЗаписи</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<ContextMenu name="ДатаЗаписиКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДатаЗаписиРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="Ответственный" id="13">
+					<DataPath>Запись.Ответственный</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Автор</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<Font faceName="Segoe UI" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Фокус_ОперацияРазрешена</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

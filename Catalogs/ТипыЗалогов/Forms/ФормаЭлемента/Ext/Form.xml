@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="5"/>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ДополнительныеРеквизиты" id="7">
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеРеквизиты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеРеквизитыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ДополнительныеРеквизитыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="ДополнительныеРеквизитыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ДополнительныеРеквизитыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСтрокаПоискаКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеРеквизитыСостояниеПросмотра" id="16">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыСостояниеПросмотраКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеРеквизитыУправлениеПоиском" id="21">
+				<AdditionSource>
+					<Item>ДополнительныеРеквизиты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеРеквизитыУправлениеПоискомКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ДополнительныеРеквизитыУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДополнительныеРеквизитыНомерСтроки" id="26">
+					<DataPath>Объект.ДополнительныеРеквизиты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыНомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыНомерСтрокиРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<InputField name="ДополнительныеРеквизитыСвойство" id="29">
+					<DataPath>Объект.ДополнительныеРеквизиты.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameters>
+						<app:item name="Отбор.ЭтоДополнительноеСведение">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">false</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.СправочникВладелец">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Залоги</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="ДополнительныеРеквизитыСвойствоКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыСвойствоРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<CheckBoxField name="ДополнительныеРеквизитыОбязательное" id="32">
+					<DataPath>Объект.ДополнительныеРеквизиты.Обязательное</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДополнительныеРеквизитыОбязательноеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыОбязательноеРасширеннаяПодсказка" id="34"/>
+				</CheckBoxField>
+				<InputField name="ДополнительныеРеквизитыЗаголовок" id="35">
+					<DataPath>Объект.ДополнительныеРеквизиты.Заголовок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеРеквизитыЗаголовокКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДополнительныеРеквизитыЗаголовокРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ДополнительныеСведения" id="38">
+			<TitleLocation>Top</TitleLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДополнительныеСведения</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДополнительныеСведенияКонтекстноеМеню" id="39"/>
+			<AutoCommandBar name="ДополнительныеСведенияКоманднаяПанель" id="40"/>
+			<ExtendedTooltip name="ДополнительныеСведенияРасширеннаяПодсказка" id="41"/>
+			<SearchStringAddition name="ДополнительныеСведенияСтрокаПоиска" id="42">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияСтрокаПоискаКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ДополнительныеСведенияСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДополнительныеСведенияСостояниеПросмотра" id="47">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияСостояниеПросмотраКонтекстноеМеню" id="50"/>
+				<ExtendedTooltip name="ДополнительныеСведенияСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДополнительныеСведенияУправлениеПоиском" id="52">
+				<AdditionSource>
+					<Item>ДополнительныеСведения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДополнительныеСведенияУправлениеПоискомКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="ДополнительныеСведенияУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДополнительныеСведенияНомерСтроки" id="57">
+					<DataPath>Объект.ДополнительныеСведения.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеСведенияНомерСтрокиКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ДополнительныеСведенияНомерСтрокиРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<InputField name="ДополнительныеСведенияСвойство" id="60">
+					<DataPath>Объект.ДополнительныеСведения.Свойство</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameters>
+						<app:item name="Отбор.ЭтоДополнительноеСведение">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:boolean">true</Value>
+							</app:value>
+						</app:item>
+						<app:item name="Отбор.СправочникВладелец">
+							<app:value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Залоги</Value>
+							</app:value>
+						</app:item>
+					</ChoiceParameters>
+					<ContextMenu name="ДополнительныеСведенияСвойствоКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ДополнительныеСведенияСвойствоРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<CheckBoxField name="ДополнительныеСведенияОбязательное" id="63">
+					<DataPath>Объект.ДополнительныеСведения.Обязательное</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДополнительныеСведенияОбязательноеКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="ДополнительныеСведенияОбязательноеРасширеннаяПодсказка" id="65"/>
+				</CheckBoxField>
+				<InputField name="ДополнительныеСведенияЗаголовок" id="66">
+					<DataPath>Объект.ДополнительныеСведения.Заголовок</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДополнительныеСведенияЗаголовокКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="ДополнительныеСведенияЗаголовокРасширеннаяПодсказка" id="68"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ТипыЗалогов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

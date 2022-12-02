@@ -31,6 +31,16 @@
 				</Title>
 				<ExtendedTooltip name="ФормаВыполнитьИЗакрытьExtendedTooltip" id="136"/>
 			</Button>
+			<Button name="ФормаЗапланироватьИЗакрыть" id="428">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ЗапланироватьИЗакрыть</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Органайзер</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗапланироватьИЗакрытьРасширеннаяПодсказка" id="429"/>
+			</Button>
 			<Button name="ФормаКнопкаСохранить" id="78">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Write</CommandName>
@@ -3469,6 +3479,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапланироватьВЦ</Action>
+		</Command>
+		<Command name="ЗапланироватьИЗакрыть" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запланировать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запланировать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапланироватьИЗакрыть</Action>
 		</Command>
 	</Commands>
 	<Parameters>

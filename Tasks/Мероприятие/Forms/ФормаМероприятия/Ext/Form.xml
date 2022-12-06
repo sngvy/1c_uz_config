@@ -369,6 +369,12 @@
 									<ContextMenu name="ДолговоеОбязательствоДолжникКонтекстноеМеню" id="354"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоДолжникРасширеннаяПодсказка" id="355"/>
 								</InputField>
+								<InputField name="ДолговоеОбязательствоСуммаОстатка" id="430">
+									<DataPath>ДолговоеОбязательствоСуммаОстатка</DataPath>
+									<TextEdit>false</TextEdit>
+									<ContextMenu name="ДолговоеОбязательствоСуммаОстаткаКонтекстноеМеню" id="431"/>
+									<ExtendedTooltip name="ДолговоеОбязательствоСуммаОстаткаРасширеннаяПодсказка" id="432"/>
+								</InputField>
 								<InputField name="ДолговоеОбязательствоОтветственный" id="425">
 									<DataPath>ДолговоеОбязательствоОтветственный</DataPath>
 									<Title>
@@ -689,7 +695,7 @@
 							<CommandName>CommonCommand.ДополнительныеСведения</CommandName>
 							<DataPath>ДолговоеОбязательство</DataPath>
 							<Picture>
-								<xr:Ref>StdPicture.Properties</xr:Ref>
+								<xr:Ref>CommonPicture.Сумма</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -848,6 +854,24 @@
 								</v8:item>
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
+						</Button>
+						<Button name="ПроверкаПоКАД" id="433">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.ПроверкаПоКАД</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ЗначокЩита</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка по КАД</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПроверкаПоКАДРасширеннаяПодсказка" id="434"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -2815,7 +2839,7 @@
 			</Title>
 			<Type/>
 		</Attribute>
-		<Attribute name="СуммаОстатка" id="25">
+		<Attribute name="ДолговоеОбязательствоСуммаОстатка" id="25">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -3494,6 +3518,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапланироватьИЗакрыть</Action>
+		</Command>
+		<Command name="ПроверкаПоКАД" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по КАД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по КАД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаПоКАД</Action>
 		</Command>
 	</Commands>
 	<Parameters>

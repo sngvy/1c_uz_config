@@ -369,13 +369,6 @@
 									<ContextMenu name="ДолговоеОбязательствоДолжникКонтекстноеМеню" id="354"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоДолжникРасширеннаяПодсказка" id="355"/>
 								</InputField>
-								<InputField name="ДолговоеОбязательствоСуммаОстатка" id="430">
-									<DataPath>ДолговоеОбязательствоСуммаОстатка</DataPath>
-									<ReadOnly>true</ReadOnly>
-									<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
-									<ContextMenu name="ДолговоеОбязательствоСуммаОстаткаКонтекстноеМеню" id="431"/>
-									<ExtendedTooltip name="ДолговоеОбязательствоСуммаОстаткаРасширеннаяПодсказка" id="432"/>
-								</InputField>
 								<InputField name="ДолговоеОбязательствоОтветственный" id="425">
 									<DataPath>ДолговоеОбязательствоОтветственный</DataPath>
 									<Title>
@@ -389,6 +382,52 @@
 									<ContextMenu name="ДолговоеОбязательствоОтветственныйКонтекстноеМеню" id="426"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоОтветственныйРасширеннаяПодсказка" id="427"/>
 								</InputField>
+								<UsualGroup name="ГруппаЗадолженность" id="438">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Задолженность</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа задолженность</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="439"/>
+									<ChildItems>
+										<InputField name="ДолговоеОбязательствоСуммаОстатка" id="430">
+											<DataPath>ДолговоеОбязательствоСуммаОстатка</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма остатка</v8:content>
+												</v8:item>
+											</Title>
+											<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ДолговоеОбязательствоСуммаОстаткаКонтекстноеМеню" id="431"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоСуммаОстаткаРасширеннаяПодсказка" id="432"/>
+										</InputField>
+										<InputField name="ДолговоеОбязательствоДнейПросрочки" id="435">
+											<DataPath>ДолговоеОбязательствоДнейПросрочки</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дней просрочки</v8:content>
+												</v8:item>
+											</Title>
+											<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ДолговоеОбязательствоДнейПросрочкиКонтекстноеМеню" id="436"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоДнейПросрочкиРасширеннаяПодсказка" id="437"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</Page>
 						<Page name="ОбъектУчета_ИсполнительныеДокументы" id="106">
@@ -2844,7 +2883,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма остатка</v8:content>
+					<v8:content>Долговое обязательство сумма остатка</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2911,6 +2950,22 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="ДолговоеОбязательствоДнейПросрочки" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долговое обязательство дней просрочки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>4</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

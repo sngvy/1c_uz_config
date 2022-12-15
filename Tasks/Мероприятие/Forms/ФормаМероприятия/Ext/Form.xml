@@ -413,6 +413,19 @@
 											<ContextMenu name="ДолговоеОбязательствоСуммаОстаткаКонтекстноеМеню" id="431"/>
 											<ExtendedTooltip name="ДолговоеОбязательствоСуммаОстаткаРасширеннаяПодсказка" id="432"/>
 										</InputField>
+										<InputField name="ДолговоеОбязательствоДатаВыдачи" id="440">
+											<DataPath>ДолговоеОбязательствоДатаВыдачи</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата выдачи</v8:content>
+												</v8:item>
+											</Title>
+											<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ДолговоеОбязательствоДатаВыдачиКонтекстноеМеню" id="441"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоДатаВыдачиРасширеннаяПодсказка" id="442"/>
+										</InputField>
 										<InputField name="ДолговоеОбязательствоДнейПросрочки" id="435">
 											<DataPath>ДолговоеОбязательствоДнейПросрочки</DataPath>
 											<ReadOnly>true</ReadOnly>
@@ -1175,6 +1188,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаНапоминание" id="52">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1195,7 +1209,6 @@
 					<ChildItems>
 						<CheckBoxField name="Оповещение" id="37">
 							<DataPath>Объект.Оповещение</DataPath>
-							<Visible>false</Visible>
 							<EditMode>EnterOnInput</EditMode>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="ОповещениеКонтекстноеМеню" id="38"/>
@@ -1203,7 +1216,6 @@
 						</CheckBoxField>
 						<InputField name="СрокОповещения" id="39">
 							<DataPath>Объект.СрокОповещения</DataPath>
-							<Visible>false</Visible>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="СрокОповещенияКонтекстноеМеню" id="40"/>
 							<ExtendedTooltip name="СрокОповещенияExtendedTooltip" id="177"/>
@@ -2965,6 +2977,20 @@
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДолговоеОбязательствоДатаВыдачи" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долговое обязательство дата выдачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>

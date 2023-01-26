@@ -18,7 +18,10 @@
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ВыполнитьИЗакрыть</CommandName>
-				<Font height="8" kind="AutoFont"/>
+				<Picture>
+					<xr:Ref>StdPicture.WriteAndClose</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
@@ -36,18 +39,20 @@
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ЗапланироватьИЗакрыть</CommandName>
 				<Picture>
-					<xr:Ref>CommonPicture.Органайзер</xr:Ref>
+					<xr:Ref>CommonPicture.ОтложитьРассмотрениеВзаимодействия</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаЗапланироватьИЗакрытьРасширеннаяПодсказка" id="429"/>
 			</Button>
 			<Button name="ФормаКнопкаСохранить" id="78">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.Write</CommandName>
 				<ExtendedTooltip name="ФормаКнопкаСохранитьExtendedTooltip" id="137"/>
 			</Button>
 			<Button name="ФормаКнопкаВыполнить" id="79">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.StandardCommand.Execute</CommandName>
 				<Title>
 					<v8:item>
@@ -89,6 +94,7 @@
 			</Button>
 			<Button name="ФормаПоказатьВсеГруппы" id="130">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.ПоказатьВсеГруппы</CommandName>
 				<Title>
 					<v8:item>
@@ -682,24 +688,24 @@
 			<Representation>StrongSeparation</Representation>
 			<ExtendedTooltip name="ИнструментыРасширеннаяПодсказка" id="408"/>
 			<ChildItems>
-				<UsualGroup name="ДополнительнаяИнформация" id="358">
+				<UsualGroup name="Информация" id="358">
 					<EnableContentChange>true</EnableContentChange>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительная информация</v8:content>
+							<v8:content>Информация</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дополнительная информация</v8:content>
+							<v8:content>Информация</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="ДополнительнаяИнформацияРасширеннаяПодсказка" id="359"/>
+					<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="359"/>
 					<ChildItems>
 						<Button name="Мероприятия" id="356">
 							<Type>UsualButton</Type>
@@ -845,7 +851,7 @@
 							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<CommandName>Form.Command.РасчетУсловий</CommandName>
 							<Picture>
-								<xr:Ref>StdPicture.Calculator</xr:Ref>
+								<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="РасчетУсловийРасширеннаяПодсказка" id="406"/>
@@ -1245,6 +1251,12 @@
 						</LabelField>
 						<LabelField name="ВремяРаботы" id="350">
 							<DataPath>Объект.ВремяРаботы</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время работы (сек.)</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ВремяРаботыКонтекстноеМеню" id="351"/>
 							<ExtendedTooltip name="ВремяРаботыРасширеннаяПодсказка" id="352"/>
 						</LabelField>
@@ -1806,7 +1818,7 @@
 							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ВходящийЗвонокПриИзменении</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.бит_ПодсистемаБитТелефония</xr:Ref>
+								<xr:Ref>CommonPicture.ТелефонныйЗвонок</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>

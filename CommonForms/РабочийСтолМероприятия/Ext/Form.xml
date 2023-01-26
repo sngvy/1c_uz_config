@@ -366,7 +366,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.РасчетАВ</CommandName>
 						<Picture>
-							<xr:Ref>StdPicture.Calculator</xr:Ref>
+							<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="РасчетАВРасширеннаяПодсказка" id="586"/>
@@ -387,7 +387,7 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>StdPicture.Parameters</xr:Ref>
+					<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаСлужебныеРасширеннаяПодсказка" id="592"/>
@@ -658,25 +658,7 @@
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
 									<ContextMenu name="СписокДОКонтекстноеМеню" id="130"/>
-									<AutoCommandBar name="СписокДОКоманднаяПанель" id="131">
-										<ChildItems>
-											<ButtonGroup name="СписокДОГруппа" id="201">
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Список ДОГруппа</v8:content>
-													</v8:item>
-												</Title>
-												<ToolTip>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Список ДОГруппа</v8:content>
-													</v8:item>
-												</ToolTip>
-												<ExtendedTooltip name="СписокДОГруппаExtendedTooltip" id="223"/>
-											</ButtonGroup>
-										</ChildItems>
-									</AutoCommandBar>
+									<AutoCommandBar name="СписокДОКоманднаяПанель" id="131"/>
 									<ExtendedTooltip name="СписокДОExtendedTooltip" id="225"/>
 									<SearchStringAddition name="СписокДОСтрокаПоиска" id="279">
 										<AdditionSource>
@@ -4568,6 +4550,16 @@
 				</Page>
 			</ChildItems>
 		</Pages>
+		<LabelDecoration name="Версия" id="1408">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия конфигурации: 3.1.26.4</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ВерсияКонтекстноеМеню" id="1409"/>
+			<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="1410"/>
+		</LabelDecoration>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Дерево" id="1">

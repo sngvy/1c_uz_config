@@ -122,6 +122,19 @@
 		<Event name="BeforeExecute">ПередВыполнением</Event>
 	</Events>
 	<ChildItems>
+		<LabelDecoration name="НомерЮД" id="443">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextColor>web:Red</TextColor>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Если вам поступил входящий звонок, сообщите должнику номер 8 (812) 2005007 (добавочный 9004) для уточнения подробностей в юридическом департаменте</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="НомерЮДКонтекстноеМеню" id="444"/>
+			<ExtendedTooltip name="НомерЮДРасширеннаяПодсказка" id="445"/>
+		</LabelDecoration>
 		<UsualGroup name="ГруппаШапка" id="73">
 			<Title>
 				<v8:item>
@@ -2919,11 +2932,11 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ТипЗаявка" id="30">
+		<Attribute name="ТипЗаявкаЗакрепление" id="30">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Тип заявка</v8:content>
+					<v8:content>Тип заявка закрепление</v8:content>
 				</v8:item>
 			</Title>
 			<Type/>
@@ -3004,6 +3017,15 @@
 					<v8:DateFractions>Date</v8:DateFractions>
 				</v8:DateQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="ТипЗаявкаОткрепление" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип заявка открепление</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
 		</Attribute>
 	</Attributes>
 	<Commands>

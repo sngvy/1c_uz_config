@@ -6,7 +6,6 @@
 			<v8:content>Шаблоны СМС</v8:content>
 		</v8:item>
 	</Title>
-	<Width>70</Width>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -44,6 +43,7 @@
 					<ExtendedTooltip name="ШаблоныГлавколлектРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
 						<Table name="Главколлект" id="5">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -119,6 +119,7 @@
 					<ExtendedTooltip name="ШаблоныКвикМаниРасширеннаяПодсказка" id="25"/>
 					<ChildItems>
 						<Table name="КвикМани" id="26">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -193,6 +194,7 @@
 					<ExtendedTooltip name="ШаблоныМикрокладРасширеннаяПодсказка" id="43"/>
 					<ChildItems>
 						<Table name="Микроклад" id="44">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -273,6 +275,7 @@
 					<ExtendedTooltip name="ОбщиеШаблоныРасширеннаяПодсказка" id="61"/>
 					<ChildItems>
 						<Table name="Общие" id="62">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -347,12 +350,13 @@
 					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ШаблоныФаст585РасширеннаяПодсказка" id="81"/>
 					<ChildItems>
-						<Table name="ПерФаст" id="82">
+						<Table name="Фаст585" id="82">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
-							<DataPath>ПерФаст</DataPath>
-							<RowPictureDataPath>ПерФаст.DefaultPicture</RowPictureDataPath>
+							<DataPath>Фаст585</DataPath>
+							<RowPictureDataPath>Фаст585.DefaultPicture</RowPictureDataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -369,38 +373,38 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<ContextMenu name="ПерФастКонтекстноеМеню" id="83"/>
-							<AutoCommandBar name="ПерФастКоманднаяПанель" id="84">
+							<ContextMenu name="Фаст585КонтекстноеМеню" id="83"/>
+							<AutoCommandBar name="Фаст585КоманднаяПанель" id="84">
 								<Autofill>false</Autofill>
 							</AutoCommandBar>
-							<ExtendedTooltip name="ПерФастРасширеннаяПодсказка" id="85"/>
-							<SearchStringAddition name="ПерФастСтрокаПоиска" id="86">
+							<ExtendedTooltip name="Фаст585РасширеннаяПодсказка" id="85"/>
+							<SearchStringAddition name="Фаст585СтрокаПоиска" id="86">
 								<AdditionSource>
-									<Item>ПерФаст</Item>
+									<Item>Фаст585</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ПерФастСтрокаПоискаКонтекстноеМеню" id="87"/>
-								<ExtendedTooltip name="ПерФастСтрокаПоискаРасширеннаяПодсказка" id="88"/>
+								<ContextMenu name="Фаст585СтрокаПоискаКонтекстноеМеню" id="87"/>
+								<ExtendedTooltip name="Фаст585СтрокаПоискаРасширеннаяПодсказка" id="88"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ПерФастСостояниеПросмотра" id="89">
+							<ViewStatusAddition name="Фаст585СостояниеПросмотра" id="89">
 								<AdditionSource>
-									<Item>ПерФаст</Item>
+									<Item>Фаст585</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ПерФастСостояниеПросмотраКонтекстноеМеню" id="90"/>
-								<ExtendedTooltip name="ПерФастСостояниеПросмотраРасширеннаяПодсказка" id="91"/>
+								<ContextMenu name="Фаст585СостояниеПросмотраКонтекстноеМеню" id="90"/>
+								<ExtendedTooltip name="Фаст585СостояниеПросмотраРасширеннаяПодсказка" id="91"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ПерФастУправлениеПоиском" id="92">
+							<SearchControlAddition name="Фаст585УправлениеПоиском" id="92">
 								<AdditionSource>
-									<Item>ПерФаст</Item>
+									<Item>Фаст585</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ПерФастУправлениеПоискомКонтекстноеМеню" id="93"/>
-								<ExtendedTooltip name="ПерФастУправлениеПоискомРасширеннаяПодсказка" id="94"/>
+								<ContextMenu name="Фаст585УправлениеПоискомКонтекстноеМеню" id="93"/>
+								<ExtendedTooltip name="Фаст585УправлениеПоискомРасширеннаяПодсказка" id="94"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ПерФастНаименование" id="95">
-									<DataPath>ПерФаст.Наименование</DataPath>
+									<DataPath>Фаст585.Наименование</DataPath>
 									<ContextMenu name="ПерФастНаименованиеКонтекстноеМеню" id="96"/>
 									<ExtendedTooltip name="ПерФастНаименованиеРасширеннаяПодсказка" id="97"/>
 								</LabelField>
@@ -423,6 +427,7 @@
 					<ExtendedTooltip name="ШаблоныПраймЗаймРасширеннаяПодсказка" id="99"/>
 					<ChildItems>
 						<Table name="ПраймЗайм" id="100">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -504,6 +509,7 @@
 					<ExtendedTooltip name="РеквизитыКредиторовРасширеннаяПодсказка" id="117"/>
 					<ChildItems>
 						<Table name="Реквизиты" id="118">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -564,7 +570,7 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ШаблоныПоЦессии" id="134">
+				<Page name="ШаблоныЦессия" id="134">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -574,7 +580,7 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Шаблоны по цессии</v8:content>
+							<v8:content>Шаблоны цессия</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Picture>
@@ -582,9 +588,10 @@
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<Group>HorizontalIfPossible</Group>
-					<ExtendedTooltip name="ШаблоныПоЦессииРасширеннаяПодсказка" id="135"/>
+					<ExtendedTooltip name="ШаблоныЦессияРасширеннаяПодсказка" id="135"/>
 					<ChildItems>
 						<Table name="Цессия" id="136">
+							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -778,7 +785,7 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
-		<Attribute name="ПерФаст" id="4">
+		<Attribute name="Фаст585" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>

@@ -226,6 +226,16 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаЗадачи" id="1406">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.Задачи</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.ActivateTask</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗадачиРасширеннаяПодсказка" id="1407"/>
+			</Button>
 			<Popup name="ФормаГруппаЗадачи" id="1404">
 				<Title>
 					<v8:item>
@@ -245,28 +255,6 @@
 				</Picture>
 				<Representation>PictureAndText</Representation>
 				<ExtendedTooltip name="ФормаГруппаЗадачиРасширеннаяПодсказка" id="1405"/>
-				<ChildItems>
-					<Button name="ФормаНоваяЗадача" id="561">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.НоваяЗадача</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.ActivateTask</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаНоваяЗадачаРасширеннаяПодсказка" id="562"/>
-					</Button>
-					<Button name="ФормаВсеЗадачи" id="1406">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ВсеЗадачи</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.ActivateTask</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаВсеЗадачиРасширеннаяПодсказка" id="1407"/>
-					</Button>
-				</ChildItems>
 			</Popup>
 			<Popup name="ФормаГруппаПланировщик" id="205">
 				<Title>
@@ -635,6 +623,7 @@
 									</Events>
 								</InputField>
 								<Table name="СписокДО" id="129">
+									<CommandBarLocation>None</CommandBarLocation>
 									<DefaultItem>true</DefaultItem>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<InitialListView>Beginning</InitialListView>
@@ -3803,11 +3792,15 @@
 							<ExtendedTooltip name="ГруппаОбещанияСегодняРасширеннаяПодсказка" id="1237"/>
 							<ChildItems>
 								<Table name="ОбещанияСегодня" id="1238">
+									<CommandBarLocation>None</CommandBarLocation>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<InitialListView>Beginning</InitialListView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<DataPath>ОбещанияСегодня</DataPath>
 									<RowPictureDataPath>ОбещанияСегодня.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
 									<AutoRefresh>false</AutoRefresh>
 									<AutoRefreshPeriod>60</AutoRefreshPeriod>
 									<Period>
@@ -3878,12 +3871,16 @@
 								</Table>
 								<Table name="ОбещанияСегодняДатыИСуммы" id="1376">
 									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<InitialListView>Beginning</InitialListView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<DataPath>Items.ОбещанияСегодня.CurrentData.ДатыИСуммы</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ОбещанияСегодняДатыИСуммыКонтекстноеМеню" id="1377"/>
 									<AutoCommandBar name="ОбещанияСегодняДатыИСуммыКоманднаяПанель" id="1378">
@@ -3952,11 +3949,15 @@
 							<ExtendedTooltip name="ГруппаОбещанияМесяцРасширеннаяПодсказка" id="1267"/>
 							<ChildItems>
 								<Table name="ОбещанияМесяц" id="1268">
+									<CommandBarLocation>None</CommandBarLocation>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<InitialListView>Beginning</InitialListView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<DataPath>ОбещанияМесяц</DataPath>
 									<RowPictureDataPath>ОбещанияМесяц.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
 									<AutoRefresh>false</AutoRefresh>
 									<AutoRefreshPeriod>60</AutoRefreshPeriod>
 									<Period>
@@ -4027,12 +4028,16 @@
 								</Table>
 								<Table name="ОбещанияМесяцДатыИСуммы" id="1348">
 									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<InitialListView>Beginning</InitialListView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<DataPath>Items.ОбещанияМесяц.CurrentData.ДатыИСуммы</DataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ОбещанияМесяцДатыИСуммыКонтекстноеМеню" id="1349"/>
 									<AutoCommandBar name="ОбещанияМесяцДатыИСуммыКоманднаяПанель" id="1350">
@@ -4554,7 +4559,7 @@
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Версия конфигурации: 3.1.26.4</v8:content>
+					<v8:content>Версия конфигурации: 3.1.30</v8:content>
 				</v8:item>
 			</Title>
 			<ContextMenu name="ВерсияКонтекстноеМеню" id="1409"/>
@@ -6440,21 +6445,6 @@
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="НоваяЗадача" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Новая задача</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Новая задача</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>НоваяЗадача</Action>
-		</Command>
 		<Command name="ОтправитьСМС" id="6">
 			<Title>
 				<v8:item>
@@ -7245,20 +7235,20 @@
 			</ToolTip>
 			<Action>ОткрытьВЦ</Action>
 		</Command>
-		<Command name="ВсеЗадачи" id="16">
+		<Command name="Задачи" id="16">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Все задачи</v8:content>
+					<v8:content>Задачи</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Все задачи</v8:content>
+					<v8:content>Задачи</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ВсеЗадачи</Action>
+			<Action>Задачи</Action>
 		</Command>
 	</Commands>
 </Form>

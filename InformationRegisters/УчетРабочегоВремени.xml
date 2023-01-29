@@ -66,16 +66,16 @@
 		<ChildObjects>
 			<Resource uuid="b6116f46-2252-43b1-be0d-32cf85e0cb4b">
 				<Properties>
-					<Name>Событие</Name>
+					<Name>ТипЗадачи</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Событие</v8:content>
+							<v8:content>Тип задачи</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>cfg:EnumRef.СобытияСотрудников</v8:Type>
+						<v8:Type>cfg:EnumRef.ТипыЗадачСотрудников</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
@@ -156,11 +156,7 @@
 					</Synonym>
 					<Comment/>
 					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>10</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
+						<v8:Type>cfg:EnumRef.СостоянияЗадачСотрудников</v8:Type>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>

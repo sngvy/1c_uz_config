@@ -14,10 +14,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Событие</dataPath>
-			<field>Событие</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>Дата</dataPath>
 			<field>Дата</field>
 			<role>
@@ -32,12 +28,22 @@
 			<dataPath>Время</dataPath>
 			<field>Время</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗадачаи</dataPath>
+			<field>ТипЗадачаи</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип задачаи</v8:content>
+				</v8:item>
+			</title>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	УчетРабочегоВремени.Сотрудник КАК Сотрудник,
 	УчетРабочегоВремени.Дата КАК Дата,
 	УчетРабочегоВремени.Время КАК Время,
-	УчетРабочегоВремени.Событие КАК Событие,
+	УчетРабочегоВремени.ТипЗадачи КАК ТипЗадачаи,
 	УчетРабочегоВремени.Состояние КАК Состояние
 ИЗ
 	РегистрСведений.УчетРабочегоВремени КАК УчетРабочегоВремени
@@ -46,7 +52,7 @@
 	УчетРабочегоВремени.Сотрудник,
 	УчетРабочегоВремени.Дата,
 	УчетРабочегоВремени.Время,
-	УчетРабочегоВремени.Событие,
+	УчетРабочегоВремени.ТипЗадачи,
 	УчетРабочегоВремени.Состояние
 
 УПОРЯДОЧИТЬ ПО
@@ -68,7 +74,7 @@
 					<dcsset:field>Время</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Событие</dcsset:field>
+					<dcsset:field>ТипЗадачаи</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Состояние</dcsset:field>

@@ -19,7 +19,6 @@
 		</UsualGroup>
 		<Table name="Список" id="3">
 			<Representation>Tree</Representation>
-			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialListView>Beginning</InitialListView>
@@ -30,7 +29,7 @@
 			<SearchStringLocation>None</SearchStringLocation>
 			<ViewStatusLocation>None</ViewStatusLocation>
 			<SearchControlLocation>None</SearchControlLocation>
-			<AutoRefresh>false</AutoRefresh>
+			<AutoRefresh>true</AutoRefresh>
 			<AutoRefreshPeriod>60</AutoRefreshPeriod>
 			<Period>
 				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -101,11 +100,11 @@
 					<ContextMenu name="ВремяКонтекстноеМеню" id="32"/>
 					<ExtendedTooltip name="ВремяРасширеннаяПодсказка" id="33"/>
 				</LabelField>
-				<LabelField name="Событие" id="22">
-					<DataPath>Список.Событие</DataPath>
+				<LabelField name="ТипЗадачи" id="22">
+					<DataPath>Список.ТипЗадачи</DataPath>
 					<DefaultItem>true</DefaultItem>
-					<ContextMenu name="СобытиеКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="СобытиеРасширеннаяПодсказка" id="24"/>
+					<ContextMenu name="ТипЗадачиКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТипЗадачиРасширеннаяПодсказка" id="24"/>
 				</LabelField>
 				<LabelField name="Состояние" id="28">
 					<DataPath>Список.Состояние</DataPath>
@@ -149,13 +148,13 @@
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
 									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
 									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:string">Выполнена</dcsset:right>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЗадачСотрудников.Начата</dcsset:right>
 								</dcsset:item>
 							</dcsset:filter>
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
@@ -165,13 +164,13 @@
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
 									<dcsset:left xsi:type="dcscor:Field">Состояние</dcsset:left>
 									<dcsset:comparisonType>Equal</dcsset:comparisonType>
-									<dcsset:right xsi:type="xs:string">Начата</dcsset:right>
+									<dcsset:right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЗадачСотрудников.Выполнена</dcsset:right>
 								</dcsset:item>
 							</dcsset:filter>
 							<dcsset:appearance>
 								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 									<dcscor:parameter>ЦветТекста</dcscor:parameter>
-									<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+									<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>

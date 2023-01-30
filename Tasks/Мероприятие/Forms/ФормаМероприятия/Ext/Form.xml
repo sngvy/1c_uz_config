@@ -364,7 +364,6 @@
 									<DataPath>ДолговоеОбязательство</DataPath>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<ClearButton>false</ClearButton>
-									<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="127"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоExtendedTooltip" id="157"/>
 									<Events>
@@ -376,7 +375,6 @@
 								<InputField name="ДолговоеОбязательствоКредитор" id="392">
 									<DataPath>ДолговоеОбязательство.Кредитор</DataPath>
 									<ChoiceButton>false</ChoiceButton>
-									<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="ДолговоеОбязательствоКредиторКонтекстноеМеню" id="393"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоКредиторРасширеннаяПодсказка" id="394"/>
 								</InputField>
@@ -384,7 +382,6 @@
 									<DataPath>ДолговоеОбязательство.Должник</DataPath>
 									<ChoiceButton>false</ChoiceButton>
 									<OpenButton>true</OpenButton>
-									<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 									<ContextMenu name="ДолговоеОбязательствоДолжникКонтекстноеМеню" id="354"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоДолжникРасширеннаяПодсказка" id="355"/>
 								</InputField>
@@ -428,7 +425,6 @@
 													<v8:content>Сумма остатка</v8:content>
 												</v8:item>
 											</Title>
-											<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="ДолговоеОбязательствоСуммаОстаткаКонтекстноеМеню" id="431"/>
 											<ExtendedTooltip name="ДолговоеОбязательствоСуммаОстаткаРасширеннаяПодсказка" id="432"/>
 										</InputField>
@@ -441,7 +437,6 @@
 													<v8:content>Дата выдачи</v8:content>
 												</v8:item>
 											</Title>
-											<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="ДолговоеОбязательствоДатаВыдачиКонтекстноеМеню" id="441"/>
 											<ExtendedTooltip name="ДолговоеОбязательствоДатаВыдачиРасширеннаяПодсказка" id="442"/>
 										</InputField>
@@ -454,7 +449,6 @@
 													<v8:content>Дней просрочки</v8:content>
 												</v8:item>
 											</Title>
-											<Font ref="style:TextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 											<ContextMenu name="ДолговоеОбязательствоДнейПросрочкиКонтекстноеМеню" id="436"/>
 											<ExtendedTooltip name="ДолговоеОбязательствоДнейПросрочкиРасширеннаяПодсказка" id="437"/>
 										</InputField>
@@ -556,7 +550,7 @@
 							<v8:content>Неизвестный номер</v8:content>
 						</v8:item>
 					</Title>
-					<TitleTextColor>#FF0000</TitleTextColor>
+					<TitleTextColor>web:Red</TitleTextColor>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -600,6 +594,8 @@
 					</Title>
 					<EditMode>EnterOnInput</EditMode>
 					<AutoMaxWidth>false</AutoMaxWidth>
+					<DropListButton>false</DropListButton>
+					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 					<OpenButton>false</OpenButton>
 					<ContextMenu name="ТипМероприятияКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="ТипМероприятияExtendedTooltip" id="162"/>
@@ -944,6 +940,18 @@
 								</v8:item>
 							</Title>
 							<ExtendedTooltip name="ПроверкаПоКАДРасширеннаяПодсказка" id="434"/>
+						</Button>
+						<Button name="ПроверкаПоФССП" id="446">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.ПроверкаПоФССП</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ЗначокЩита</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ПроверкаПоФССПРасширеннаяПодсказка" id="447"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -1815,7 +1823,8 @@
 							</Title>
 							<EditMode>EnterOnInput</EditMode>
 							<AutoMaxWidth>false</AutoMaxWidth>
-							<ChoiceButton>true</ChoiceButton>
+							<DropListButton>false</DropListButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 							<OpenButton>false</OpenButton>
 							<AutoMarkIncomplete>true</AutoMarkIncomplete>
 							<ChooseType>false</ChooseType>
@@ -3649,6 +3658,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверкаПоКАД</Action>
+		</Command>
+		<Command name="ПроверкаПоФССП" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по ФССП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по ФССП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаПоФССП</Action>
 		</Command>
 	</Commands>
 	<Parameters>

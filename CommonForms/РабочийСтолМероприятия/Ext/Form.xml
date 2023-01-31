@@ -226,6 +226,22 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаКонтрольСроков" id="1411">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.КонтрольСроков</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Today</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Контроль сроков</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаКонтрольСроковРасширеннаяПодсказка" id="1412"/>
+			</Button>
 			<Button name="ФормаЗадачи" id="1406">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -4559,7 +4575,7 @@
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Версия 3.1.30.1</v8:content>
+					<v8:content>Версия 3.1.31</v8:content>
 				</v8:item>
 			</Title>
 			<ContextMenu name="ВерсияКонтекстноеМеню" id="1409"/>
@@ -6284,6 +6300,15 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="КатегорияРучнойОбзвон" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категория ручной обзвон</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -7249,6 +7274,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Задачи</Action>
+		</Command>
+		<Command name="КонтрольСроков" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль сроков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контроль сроков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонтрольСроков</Action>
 		</Command>
 	</Commands>
 </Form>

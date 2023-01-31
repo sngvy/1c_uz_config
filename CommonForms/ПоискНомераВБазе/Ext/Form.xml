@@ -39,9 +39,6 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
-	<Events>
-		<Event name="OnOpen">ПриОткрытии</Event>
-	</Events>
 	<ChildItems>
 		<InputField name="Номер" id="143">
 			<DataPath>Номер</DataPath>
@@ -51,20 +48,16 @@
 					<v8:content>Номер</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<MaxWidth>7</MaxWidth>
 			<InputHint>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>7 п. цифр</v8:content>
+					<v8:content>7 посл. ц.</v8:content>
 				</v8:item>
 			</InputHint>
 			<ContextMenu name="НомерКонтекстноеМеню" id="144"/>
 			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="145"/>
-			<Events>
-				<Event name="OnChange">НомерПриИзменении</Event>
-			</Events>
 		</InputField>
 		<UsualGroup name="ГруппаРезультаты" id="78">
 			<Title>
@@ -87,6 +80,7 @@
 				<Table name="СписокДО" id="1">
 					<CommandBarLocation>None</CommandBarLocation>
 					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialListView>Beginning</InitialListView>
 					<EnableStartDrag>true</EnableStartDrag>
 					<DataPath>СписокДО</DataPath>
 					<RowPictureDataPath>СписокДО.DefaultPicture</RowPictureDataPath>

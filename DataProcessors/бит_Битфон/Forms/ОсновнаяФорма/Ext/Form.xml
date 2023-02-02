@@ -1369,7 +1369,6 @@
 															<Width>14</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<MultiLine>true</MultiLine>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковВходящиеАбонентКонтекстноеМеню" id="114"/>
 															<ExtendedTooltip name="ИсторияЗвонковВходящиеАбонентРасширеннаяПодсказка" id="398"/>
 														</InputField>
@@ -1392,7 +1391,6 @@
 																</v8:item>
 															</EditFormat>
 															<TextColor>#1919F8</TextColor>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковВходящиеДатаКонтекстноеМеню" id="112"/>
 															<ExtendedTooltip name="ИсторияЗвонковВходящиеДатаРасширеннаяПодсказка" id="399"/>
 														</InputField>
@@ -1435,12 +1433,12 @@
 																	<v8:content>ЧН=-</v8:content>
 																</v8:item>
 															</EditFormat>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковВходящиеДлительностьЗвонкаКонтекстноеМеню" id="173"/>
 															<ExtendedTooltip name="ИсторияЗвонковВходящиеДлительностьЗвонкаРасширеннаяПодсказка" id="402"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковВходящиеКонтактноеЛицо" id="201">
 															<DataPath>Объект.ИсторияЗвонковВходящие.КонтактноеЛицо</DataPath>
+															<Visible>false</Visible>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>15</Width>
@@ -1584,7 +1582,6 @@
 															<MultiLine>true</MultiLine>
 															<ChoiceButton>true</ChoiceButton>
 															<SpinButton>true</SpinButton>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковИсходящиеАбонентКонтекстноеМеню" id="101"/>
 															<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентРасширеннаяПодсказка" id="421"/>
 														</InputField>
@@ -1607,7 +1604,6 @@
 																</v8:item>
 															</EditFormat>
 															<TextColor>#1919F8</TextColor>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковИсходящиеДатаКонтекстноеМеню" id="99"/>
 															<ExtendedTooltip name="ИсторияЗвонковИсходящиеДатаРасширеннаяПодсказка" id="422"/>
 														</InputField>
@@ -1650,12 +1646,12 @@
 																	<v8:content>ЧН=-</v8:content>
 																</v8:item>
 															</EditFormat>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="false" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковИсходящиеДлительностьЗвонкаКонтекстноеМеню" id="175"/>
 															<ExtendedTooltip name="ИсторияЗвонковИсходящиеДлительностьЗвонкаРасширеннаяПодсказка" id="425"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковИсходящиеКонтактноеЛицо" id="203">
 															<DataPath>Объект.ИсторияЗвонковИсходящие.КонтактноеЛицо</DataPath>
+															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>15</Width>
 															<Font ref="sys:DefaultGUIFont" height="11" kind="WindowsFont"/>
@@ -1818,8 +1814,10 @@
 													<v8:content>Имя</v8:content>
 												</v8:item>
 											</Title>
+											<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 											<Width>4</Width>
 											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
 											<ContextMenu name="ИзбранноеНаименованиеКонтекстноеМеню" id="156"/>
 											<ExtendedTooltip name="ИзбранноеНаименованиеРасширеннаяПодсказка" id="447"/>
 										</LabelField>
@@ -1831,8 +1829,10 @@
 													<v8:content>Номер</v8:content>
 												</v8:item>
 											</Title>
-											<Width>3</Width>
+											<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
+											<Width>4</Width>
 											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="style:NormalTextFont" kind="StyleItem"/>
 											<ContextMenu name="ИзбранноеНомерКонтекстноеМеню" id="162"/>
 											<ExtendedTooltip name="ИзбранноеНомерРасширеннаяПодсказка" id="448"/>
 										</LabelField>

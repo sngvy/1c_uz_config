@@ -4,7 +4,7 @@
 	<Group>AlwaysHorizontal</Group>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="Искать" id="141">
+			<Button name="ФормаИскать" id="141">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
@@ -19,7 +19,23 @@
 						<v8:content>Искать</v8:content>
 					</v8:item>
 				</Title>
-				<ExtendedTooltip name="ИскатьРасширеннаяПодсказка" id="142"/>
+				<ExtendedTooltip name="ФормаИскатьРасширеннаяПодсказка" id="142"/>
+			</Button>
+			<Button name="ФормаПозвонитьДолжнику" id="148">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПозвонитьДолжнику</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Исходящий звонок</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПозвонитьДолжникуРасширеннаяПодсказка" id="149"/>
 			</Button>
 			<Button name="ФормаДолжникМероприятия" id="146">
 				<Type>CommandBarButton</Type>
@@ -409,6 +425,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДолжникМероприятия</Action>
+		</Command>
+		<Command name="ПозвонитьДолжнику" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить должнику</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить должнику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПозвонитьДолжнику</Action>
 		</Command>
 	</Commands>
 </Form>

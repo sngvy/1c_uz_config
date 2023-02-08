@@ -28,7 +28,7 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаДосудебнаяРасширеннаяПодсказка" id="879"/>
 				<ChildItems>
-					<Button name="ПроверкаПоКАД" id="882">
+					<Button name="ФормаПроверкаПоКАД" id="882">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ПроверкаПоКАД</CommandName>
@@ -42,9 +42,9 @@
 								<v8:content>Проверка по КАД</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="ПроверкаПоКАДРасширеннаяПодсказка" id="883"/>
+						<ExtendedTooltip name="ФормаПроверкаПоКАДРасширеннаяПодсказка" id="883"/>
 					</Button>
-					<Button name="ЗапроситьДокумент" id="880">
+					<Button name="ФормаЗапросДокументов" id="880">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ЗапроситьДокумент</CommandName>
@@ -55,10 +55,10 @@
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Запросить документ</v8:content>
+								<v8:content>Запрос документов</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="ЗапроситьДокументРасширеннаяПодсказка" id="881"/>
+						<ExtendedTooltip name="ФормаЗапросДокументовРасширеннаяПодсказка" id="881"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -2530,6 +2530,12 @@
 						<CheckBoxField name="АвтообзвонЗапрещен" id="923">
 							<DataPath>Объект.АвтообзвонЗапрещен</DataPath>
 							<Enabled>false</Enabled>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Установлен запрет автообзвона</v8:content>
+								</v8:item>
+							</Title>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="АвтообзвонЗапрещенКонтекстноеМеню" id="924"/>
 							<ExtendedTooltip name="АвтообзвонЗапрещенРасширеннаяПодсказка" id="925"/>

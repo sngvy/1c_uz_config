@@ -187,7 +187,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.НаписатьВВЦ</CommandName>
 						<Picture>
-							<xr:Ref>CommonPicture.WA_DGFinance</xr:Ref>
+							<xr:Ref>CommonPicture.NC_WA</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -371,21 +371,21 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>StdPicture.ActiveUsers</xr:Ref>
+					<xr:Ref>StdPicture.SettingsStorage</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаСлужебныеРасширеннаяПодсказка" id="592"/>
 				<ChildItems>
-					<Button name="ПосчитатьДолжников" id="1332">
+					<Button name="ФормаПосчитатьДолжников" id="1332">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ПосчитатьДолжников</CommandName>
 						<Picture>
 							<xr:Ref>CommonPicture.Сумма</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<ExtendedTooltip name="ПосчитатьДолжниковРасширеннаяПодсказка" id="1333"/>
+						<ExtendedTooltip name="ФормаПосчитатьДолжниковРасширеннаяПодсказка" id="1333"/>
 					</Button>
-					<Button name="ОбновитьПортфель" id="587">
+					<Button name="ФормаОбновитьПортфель" id="587">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ОбновитьПортфель</CommandName>
@@ -399,9 +399,9 @@
 								<v8:content>Обновить портфель</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="ОбновитьПортфельРасширеннаяПодсказка" id="588"/>
+						<ExtendedTooltip name="ФормаОбновитьПортфельРасширеннаяПодсказка" id="588"/>
 					</Button>
-					<Button name="ВходНаАТС" id="583">
+					<Button name="ФормаВходНаАТС" id="583">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ВходНаАТС</CommandName>
@@ -409,7 +409,7 @@
 							<xr:Ref>StdPicture.EventLog</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<ExtendedTooltip name="ВходНаАТСРасширеннаяПодсказка" id="584"/>
+						<ExtendedTooltip name="ФормаВходНаАТСРасширеннаяПодсказка" id="584"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -418,7 +418,7 @@
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ОткрытьВЦ</CommandName>
 				<Picture>
-					<xr:Ref>CommonPicture.WA_DGFinance</xr:Ref>
+					<xr:Ref>CommonPicture.NC_WA</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ОткрытьВЦРасширеннаяПодсказка" id="1347"/>
@@ -4555,7 +4555,7 @@
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Версия 3.2.7</v8:content>
+					<v8:content>Версия 3.2.9</v8:content>
 				</v8:item>
 			</Title>
 			<ContextMenu name="ВерсияКонтекстноеМеню" id="1409"/>
@@ -6415,7 +6415,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Позвонить</v8:content>
+					<v8:content>Позвонить должнику</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

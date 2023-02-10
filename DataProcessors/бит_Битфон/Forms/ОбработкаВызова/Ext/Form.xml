@@ -53,6 +53,7 @@
 		</LabelField>
 		<InputField name="КонтактноеЛицо" id="9">
 			<DataPath>КонтактноеЛицо</DataPath>
+			<Visible>false</Visible>
 			<ReadOnly>true</ReadOnly>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
@@ -66,6 +67,7 @@
 		</InputField>
 		<InputField name="НабранныйНомер" id="33">
 			<DataPath>НабранныйНомер</DataPath>
+			<Visible>false</Visible>
 			<ReadOnly>true</ReadOnly>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
@@ -83,13 +85,14 @@
 					<Type>UsualButton</Type>
 					<Representation>Picture</Representation>
 					<DefaultButton>true</DefaultButton>
-					<Width>12</Width>
-					<Height>6</Height>
+					<Width>10</Width>
+					<Height>4</Height>
 					<CommandName>Form.Command.ПринятьВызов</CommandName>
 					<Picture>
-						<xr:Ref>CommonPicture.бит_ОбработкаВходящегоВызоваПринять</xr:Ref>
+						<xr:Ref>CommonPicture.NC_Позвонить</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
+					<Shape>Oval</Shape>
 					<ExtendedTooltip name="ПринятьВызовРасширеннаяПодсказка" id="40"/>
 				</Button>
 				<LabelDecoration name="Декорация1" id="5">
@@ -99,13 +102,14 @@
 				<Button name="ОтклонитьВызов" id="3">
 					<Type>UsualButton</Type>
 					<Representation>Picture</Representation>
-					<Width>12</Width>
-					<Height>6</Height>
+					<Width>10</Width>
+					<Height>4</Height>
 					<CommandName>Form.Command.ОтклонитьВызов</CommandName>
 					<Picture>
-						<xr:Ref>CommonPicture.бит_ОбработкаВходящегоВызоваОтклонить</xr:Ref>
+						<xr:Ref>CommonPicture.NC_Отбой</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
+					<Shape>Oval</Shape>
 					<ExtendedTooltip name="ОтклонитьВызовРасширеннаяПодсказка" id="42"/>
 				</Button>
 				<LabelDecoration name="Декорация2" id="7">
@@ -115,13 +119,14 @@
 				<Button name="ОткрытьКарточкуКлиента" id="4">
 					<Type>UsualButton</Type>
 					<Representation>Picture</Representation>
-					<Width>12</Width>
-					<Height>6</Height>
+					<Width>10</Width>
+					<Height>4</Height>
 					<CommandName>Form.Command.ОткрытьКарточкуКлиента</CommandName>
 					<Picture>
-						<xr:Ref>CommonPicture.бит_ОбработкаВходящегоВызоваОткрытьКарточку</xr:Ref>
+						<xr:Ref>CommonPicture.NC_РозыскДолжника</xr:Ref>
 						<xr:LoadTransparent>false</xr:LoadTransparent>
 					</Picture>
+					<Shape>Oval</Shape>
 					<ExtendedTooltip name="ОткрытьКарточкуКлиентаРасширеннаяПодсказка" id="44"/>
 				</Button>
 				<UsualGroup name="ГруппаДокументыАбонента" id="30">

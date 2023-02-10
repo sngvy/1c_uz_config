@@ -1650,7 +1650,7 @@
 								</v8:item>
 							</Title>
 							<Picture>
-								<xr:Ref>CommonPicture.ПодсистемаБизнесПроцессыИЗадачи</xr:Ref>
+								<xr:Ref>CommonPicture.NC_МероприятиеВыполнено</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ContextMenu name="ДекорацияВыполненоКонтекстноеМеню" id="72"/>
@@ -1745,7 +1745,7 @@
 							<AutoMaxHeight>false</AutoMaxHeight>
 							<CommandName>Form.Command.ПозвонитьДолжнику</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.бит_НачатьРазговор</xr:Ref>
+								<xr:Ref>CommonPicture.NC_Позвонить</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -1754,6 +1754,7 @@
 									<v8:content>Zəng etmək</v8:content>
 								</v8:item>
 							</Title>
+							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ФормаПозвонитьДолжникуExtendedTooltip" id="141"/>
 						</Button>
 						<Button name="ЗавершитьРазговор" id="368">
@@ -1762,9 +1763,10 @@
 							<Height>2</Height>
 							<CommandName>Form.Command.ЗавершитьРазговор</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.бит_ЗавершитьРазговор</xr:Ref>
+								<xr:Ref>CommonPicture.NC_Отбой</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ЗавершитьРазговорРасширеннаяПодсказка" id="369"/>
 						</Button>
 						<Button name="ОтключитьМикрофон" id="386">
@@ -1773,9 +1775,10 @@
 							<Height>2</Height>
 							<CommandName>Form.Command.ОтключитьМикрофон</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.бит_МикрофонВключен</xr:Ref>
+								<xr:Ref>CommonPicture.NC_Микрофон</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ОтключитьМикрофонРасширеннаяПодсказка" id="387"/>
 						</Button>
 						<Button name="УдержаниеВызова" id="388">
@@ -1784,9 +1787,10 @@
 							<Height>2</Height>
 							<CommandName>Form.Command.УдержаниеВызова</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.бит_УдержатьВызов</xr:Ref>
+								<xr:Ref>CommonPicture.NC_Удержание</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Shape>Oval</Shape>
 							<ExtendedTooltip name="УдержаниеВызоваРасширеннаяПодсказка" id="389"/>
 						</Button>
 					</ChildItems>
@@ -1887,21 +1891,25 @@
 						<Button name="ОтправитьСМС" id="213">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
-							<Width>6</Width>
 							<Height>2</Height>
 							<CommandName>Form.Command.ОтправитьСМС</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_СМС</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ОтправитьСМСРасширеннаяПодсказка" id="214"/>
 						</Button>
 						<Button name="НаписатьВВЦ" id="409">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
-							<Width>6</Width>
 							<Height>2</Height>
 							<CommandName>Form.Command.НаписатьВВЦ</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.NC_WA</xr:Ref>
+								<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
+							<Shape>Oval</Shape>
 							<ExtendedTooltip name="НаписатьВВЦРасширеннаяПодсказка" id="410"/>
 						</Button>
 					</ChildItems>

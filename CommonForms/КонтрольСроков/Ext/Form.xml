@@ -34,6 +34,7 @@
 	<ChildItems>
 		<Table name="СписокДО" id="1">
 			<CommandBarLocation>None</CommandBarLocation>
+			<RowSelectionMode>Row</RowSelectionMode>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialListView>Beginning</InitialListView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -101,16 +102,16 @@
 					<ContextMenu name="СписокДОСсылкаКредиторКонтекстноеМеню" id="24"/>
 					<ExtendedTooltip name="СписокДОСсылкаКредиторРасширеннаяПодсказка" id="25"/>
 				</LabelField>
-				<LabelField name="СписокДОДата" id="14">
-					<DataPath>СписокДО.Дата</DataPath>
-					<Title>
+				<LabelField name="СписокДОДатаВыполнения" id="36">
+					<DataPath>СписокДО.ДатаВыполнения</DataPath>
+					<Format>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дата создания</v8:content>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
 						</v8:item>
-					</Title>
-					<ContextMenu name="СписокДОДатаКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="СписокДОДатаРасширеннаяПодсказка" id="16"/>
+					</Format>
+					<ContextMenu name="СписокДОДатаВыполненияКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="СписокДОДатаВыполненияРасширеннаяПодсказка" id="38"/>
 				</LabelField>
 			</ChildItems>
 		</Table>
@@ -130,18 +131,15 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
-		ДолговыеОбязательства.Ссылка КАК Ссылка,
-		МАКСИМУМ(Мероприятие.Дата) КАК Дата
-	ИЗ
-		Задача.Мероприятие КАК Мероприятие
-			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
-			ПО Мероприятие.Объект = ДолговыеОбязательства.Ссылка
-	
-	СГРУППИРОВАТЬ ПО
-		ДолговыеОбязательства.Ссылка
-	
-	УПОРЯДОЧИТЬ ПО
-		Дата</QueryText>
+	ДолговыеОбязательства.Ссылка КАК Ссылка,
+	МАКСИМУМ(Мероприятие.ДатаВыполнения) КАК ДатаВыполнения
+ИЗ
+	Задача.Мероприятие КАК Мероприятие
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
+		ПО Мероприятие.Объект = ДолговыеОбязательства.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ДолговыеОбязательства.Ссылка</QueryText>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -149,7 +147,7 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>Дата</dcsset:field>
+							<dcsset:field>ДатаВыполнения</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -160,7 +158,7 @@
 							<dcsset:selection/>
 							<dcsset:filter>
 								<dcsset:item xsi:type="dcsset:FilterItemComparison">
-									<dcsset:left xsi:type="dcscor:Field">Дата</dcsset:left>
+									<dcsset:left xsi:type="dcscor:Field">ДатаВыполнения</dcsset:left>
 									<dcsset:comparisonType>Less</dcsset:comparisonType>
 									<dcsset:right xsi:type="v8:StandardBeginningDate">
 										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant>
@@ -174,8 +172,25 @@
 								</dcscor:item>
 							</dcsset:appearance>
 						</dcsset:item>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ДатаВыполнения</dcsset:left>
+									<dcsset:comparisonType>GreaterOrEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="v8:StandardBeginningDate">
+										<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisMonth</v8:variant>
+									</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
-						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
 					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
 					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>

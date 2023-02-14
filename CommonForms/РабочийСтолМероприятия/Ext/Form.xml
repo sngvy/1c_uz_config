@@ -371,7 +371,7 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>StdPicture.SettingsStorage</xr:Ref>
+					<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаСлужебныеРасширеннаяПодсказка" id="592"/>
@@ -390,7 +390,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ОбновитьПортфель</CommandName>
 						<Picture>
-							<xr:Ref>CommonPicture.СостояниеПользователя04</xr:Ref>
+							<xr:Ref>StdPicture.Reread</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -4134,7 +4134,7 @@
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
-							<AutoRefresh>false</AutoRefresh>
+							<AutoRefresh>true</AutoRefresh>
 							<AutoRefreshPeriod>60</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
@@ -4551,16 +4551,13 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<LabelDecoration name="Версия" id="1408">
-			<Title formatted="false">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Версия 3.2.11</v8:content>
-				</v8:item>
-			</Title>
-			<ContextMenu name="ВерсияКонтекстноеМеню" id="1409"/>
-			<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="1410"/>
-		</LabelDecoration>
+		<LabelField name="Версия" id="1413">
+			<DataPath>Версия</DataPath>
+			<Enabled>false</Enabled>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ВерсияКонтекстноеМеню" id="1414"/>
+			<ExtendedTooltip name="ВерсияРасширеннаяПодсказка" id="1415"/>
+		</LabelField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Дерево" id="1">
@@ -6288,6 +6285,21 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="Версия" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

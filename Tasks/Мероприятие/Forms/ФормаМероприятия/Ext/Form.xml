@@ -378,13 +378,45 @@
 									<ContextMenu name="ДолговоеОбязательствоКредиторКонтекстноеМеню" id="393"/>
 									<ExtendedTooltip name="ДолговоеОбязательствоКредиторРасширеннаяПодсказка" id="394"/>
 								</InputField>
-								<InputField name="ДолговоеОбязательствоДолжник" id="353">
-									<DataPath>ДолговоеОбязательство.Должник</DataPath>
-									<ChoiceButton>false</ChoiceButton>
-									<OpenButton>true</OpenButton>
-									<ContextMenu name="ДолговоеОбязательствоДолжникКонтекстноеМеню" id="354"/>
-									<ExtendedTooltip name="ДолговоеОбязательствоДолжникРасширеннаяПодсказка" id="355"/>
-								</InputField>
+								<UsualGroup name="ГруппаДолжникИнформация" id="453">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Должник</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа должник информация</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаДолжникИнформацияРасширеннаяПодсказка" id="454"/>
+									<ChildItems>
+										<InputField name="ДолговоеОбязательствоДолжник" id="353">
+											<DataPath>ДолговоеОбязательство.Должник</DataPath>
+											<ChoiceButton>false</ChoiceButton>
+											<OpenButton>true</OpenButton>
+											<ContextMenu name="ДолговоеОбязательствоДолжникКонтекстноеМеню" id="354"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоДолжникРасширеннаяПодсказка" id="355"/>
+										</InputField>
+										<InputField name="ДолговоеОбязательствоДолжникВозраст" id="450">
+											<DataPath>ДолговоеОбязательствоДолжникВозраст</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возраст</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДолговоеОбязательствоДолжникВозрастКонтекстноеМеню" id="451"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоДолжникВозрастРасширеннаяПодсказка" id="452"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="ГруппаЗадолженность" id="448">
 									<Title>
 										<v8:item>
@@ -717,7 +749,7 @@
 					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="359"/>
 					<ChildItems>
-						<Button name="Мероприятия" id="356">
+						<Button name="ДолжникМероприятия" id="356">
 							<Type>UsualButton</Type>
 							<Representation>PictureAndText</Representation>
 							<Width>20</Width>
@@ -731,10 +763,10 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Мероприятия</v8:content>
+									<v8:content>Все мероприятия</v8:content>
 								</v8:item>
 							</Title>
-							<ExtendedTooltip name="МероприятияРасширеннаяПодсказка" id="357"/>
+							<ExtendedTooltip name="ДолжникМероприятияРасширеннаяПодсказка" id="357"/>
 						</Button>
 						<Button name="ДолговыеОбязательства" id="360">
 							<Type>UsualButton</Type>
@@ -853,6 +885,24 @@
 							</Title>
 							<ExtendedTooltip name="ПогашенияРасширеннаяПодсказка" id="379"/>
 						</Button>
+						<Button name="ПогашенияПоСуду" id="455">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.ДолжникПогашенияСудебные</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Post</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Погашения по суду</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ПогашенияПоСудуРасширеннаяПодсказка" id="456"/>
+						</Button>
 						<Button name="РасчетУсловий" id="405">
 							<Type>UsualButton</Type>
 							<Representation>PictureAndText</Representation>
@@ -894,7 +944,7 @@
 							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<CommandName>Form.Command.ПоискНомераВБазе</CommandName>
 							<Picture>
-								<xr:Ref>StdPicture.UserWithoutNecessaryProperties</xr:Ref>
+								<xr:Ref>CommonPicture.ТелефонныйЗвонок</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -924,6 +974,18 @@
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
 						</Button>
+						<Button name="ПроверкаПоФССП" id="446">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.ПроверкаПоФССП</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Find</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ПроверкаПоФССПРасширеннаяПодсказка" id="447"/>
+						</Button>
 						<Button name="ПроверкаПоКАД" id="433">
 							<Type>UsualButton</Type>
 							<Representation>PictureAndText</Representation>
@@ -931,7 +993,7 @@
 							<Height>2</Height>
 							<CommandName>Form.Command.ПроверкаПоКАД</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.ЗначокЩита</xr:Ref>
+								<xr:Ref>StdPicture.Find</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -941,18 +1003,6 @@
 								</v8:item>
 							</Title>
 							<ExtendedTooltip name="ПроверкаПоКАДРасширеннаяПодсказка" id="434"/>
-						</Button>
-						<Button name="ПроверкаПоФССП" id="446">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<Width>20</Width>
-							<Height>2</Height>
-							<CommandName>Form.Command.ПроверкаПоФССП</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.ЗначокЩита</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="ПроверкаПоФССПРасширеннаяПодсказка" id="447"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -1845,7 +1895,7 @@
 							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ВходящийЗвонокПриИзменении</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.ТелефонныйЗвонок</xr:Ref>
+								<xr:Ref>CommonPicture.Позвонить</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -3045,6 +3095,22 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="ДолговоеОбязательствоДолжникВозраст" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долговое обязательство должник возраст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоДереву" id="1">
@@ -3682,6 +3748,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверкаПоФССП</Action>
+		</Command>
+		<Command name="ДолжникПогашенияСудебные" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должник погашения судебные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погашения по должнику судебные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДолжникПогашенияСудебные</Action>
 		</Command>
 	</Commands>
 	<Parameters>

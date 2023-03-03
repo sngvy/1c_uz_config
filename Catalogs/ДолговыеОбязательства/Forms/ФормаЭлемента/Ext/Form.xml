@@ -23,17 +23,33 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>CommonPicture.Администратор</xr:Ref>
+					<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаДосудебнаяРасширеннаяПодсказка" id="879"/>
 				<ChildItems>
+					<Button name="ФормаПроверкаПоФССП" id="926">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПроверкаПоФССП</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Find</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Проверка по ФССП</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаПроверкаПоФССПРасширеннаяПодсказка" id="927"/>
+					</Button>
 					<Button name="ФормаПроверкаПоКАД" id="882">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ПроверкаПоКАД</CommandName>
 						<Picture>
-							<xr:Ref>CommonPicture.ЗначокЩита</xr:Ref>
+							<xr:Ref>StdPicture.Find</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -2533,7 +2549,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Установлен запрет автообзвона</v8:content>
+									<v8:content>Автообзвон запрещен</v8:content>
 								</v8:item>
 							</Title>
 							<CheckBoxType>Auto</CheckBoxType>
@@ -2743,7 +2759,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>CommonPicture.ЗначокЩита</xr:Ref>
+						<xr:Ref>CommonPicture.Информация_0</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="ГруппаДанныеОБанкротствеРасширеннаяПодсказка" id="788"/>
@@ -4106,6 +4122,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапроситьДокумент</Action>
+		</Command>
+		<Command name="ПроверкаПоФССП" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по ФССП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по ФССП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаПоФССП</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

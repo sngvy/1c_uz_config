@@ -345,6 +345,21 @@
 						</Title>
 						<ExtendedTooltip name="ФормаДолжникПогашенияРасширеннаяПодсказка" id="582"/>
 					</Button>
+					<Button name="ФормаДолжникПогашенияСудебные" id="1416">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ДолжникПогашенияСудебные</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Post</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Погашения по суду</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаДолжникПогашенияСудебныеРасширеннаяПодсказка" id="1417"/>
+					</Button>
 					<Button name="ФормаРасчетАВ" id="585">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -7281,6 +7296,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КонтрольСроков</Action>
+		</Command>
+		<Command name="ДолжникПогашенияСудебные" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должник погашения судебные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погашения по должнику судебные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДолжникПогашенияСудебные</Action>
 		</Command>
 	</Commands>
 </Form>

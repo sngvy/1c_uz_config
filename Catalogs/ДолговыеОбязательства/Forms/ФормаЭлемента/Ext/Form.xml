@@ -23,7 +23,7 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>CommonPicture.Предупреждение</xr:Ref>
+					<xr:Ref>StdPicture.Properties</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаДосудебнаяРасширеннаяПодсказка" id="879"/>
@@ -59,6 +59,22 @@
 							</v8:item>
 						</Title>
 						<ExtendedTooltip name="ФормаПроверкаПоКАДРасширеннаяПодсказка" id="883"/>
+					</Button>
+					<Button name="ФормаРасчетУсловий" id="928">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.РасчетУсловий</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Расчет условий</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаРасчетУсловийРасширеннаяПодсказка" id="929"/>
 					</Button>
 					<Button name="ФормаЗапросДокументов" id="880">
 						<Type>CommandBarButton</Type>
@@ -2961,7 +2977,9 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<ContextMenu name="ДокументыКонтекстноеМеню" id="890"/>
+							<ContextMenu name="ДокументыКонтекстноеМеню" id="890">
+								<Autofill>false</Autofill>
+							</ContextMenu>
 							<AutoCommandBar name="ДокументыКоманднаяПанель" id="891"/>
 							<ExtendedTooltip name="ДокументыРасширеннаяПодсказка" id="892"/>
 							<SearchStringAddition name="ДокументыСтрокаПоиска" id="893">
@@ -3068,7 +3086,9 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
-							<ContextMenu name="ДисконтИРестрктуризацияКонтекстноеМеню" id="830"/>
+							<ContextMenu name="ДисконтИРестрктуризацияКонтекстноеМеню" id="830">
+								<Autofill>false</Autofill>
+							</ContextMenu>
 							<AutoCommandBar name="ДисконтИРестрктуризацияКоманднаяПанель" id="831">
 								<Autofill>false</Autofill>
 							</AutoCommandBar>
@@ -3885,6 +3905,22 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="ДолговоеОбязательствоСуммаОстатка" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Долговое обязательство сумма остатка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПечатьУЭД" id="4">
@@ -4137,6 +4173,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверкаПоФССП</Action>
+		</Command>
+		<Command name="РасчетУсловий" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет условий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расчет условий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РасчетУсловий</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

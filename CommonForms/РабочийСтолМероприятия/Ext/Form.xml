@@ -4146,6 +4146,27 @@
 							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>Мероприятия</DataPath>
 							<RowPictureDataPath>Мероприятия.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>ChangeHistory</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Create</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>Refresh</ExcludedCommand>
+								<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>SetDateInterval</ExcludedCommand>
+								<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+							</CommandSet>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -4163,9 +4184,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="МероприятияКонтекстноеМеню" id="24"/>
-							<AutoCommandBar name="МероприятияКоманднаяПанель" id="25">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="МероприятияКоманднаяПанель" id="25"/>
 							<ExtendedTooltip name="МероприятияExtendedTooltip" id="245"/>
 							<SearchStringAddition name="МероприятияСтрокаПоиска" id="297">
 								<AdditionSource>
@@ -4441,7 +4460,6 @@
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСобытия" id="163">
-					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -4461,6 +4479,7 @@
 					<ExtendedTooltip name="ГруппаСобытияExtendedTooltip" id="258"/>
 					<ChildItems>
 						<Table name="События" id="164">
+							<Visible>false</Visible>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<EnableStartDrag>true</EnableStartDrag>
 							<FileDragMode>AsFile</FileDragMode>

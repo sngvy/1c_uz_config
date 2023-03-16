@@ -2559,19 +2559,44 @@
 					</Picture>
 					<ExtendedTooltip name="ГруппаТелефонныеНомераРасширеннаяПодсказка" id="544"/>
 					<ChildItems>
-						<CheckBoxField name="АвтообзвонЗапрещен" id="923">
-							<DataPath>Объект.АвтообзвонЗапрещен</DataPath>
+						<UsualGroup name="ГруппаКонтактностьНомеров" id="933">
 							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Автообзвон запрещен</v8:content>
+									<v8:content>Контактность</v8:content>
 								</v8:item>
 							</Title>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="АвтообзвонЗапрещенКонтекстноеМеню" id="924"/>
-							<ExtendedTooltip name="АвтообзвонЗапрещенРасширеннаяПодсказка" id="925"/>
-						</CheckBoxField>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа контактность номеров</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКонтактностьНомеровРасширеннаяПодсказка" id="934"/>
+							<ChildItems>
+								<CheckBoxField name="ЗапретАвтообзвона" id="923">
+									<DataPath>Объект.ЗапретАвтообзвона</DataPath>
+									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗапретАвтообзвонаКонтекстноеМеню" id="924"/>
+									<ExtendedTooltip name="ЗапретАвтообзвонаРасширеннаяПодсказка" id="925"/>
+								</CheckBoxField>
+								<CheckBoxField name="НеконтактныеНомера" id="930">
+									<DataPath>Объект.НеконтактныеНомера</DataPath>
+									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НеконтактныеНомераКонтекстноеМеню" id="931"/>
+									<ExtendedTooltip name="НеконтактныеНомераРасширеннаяПодсказка" id="932"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="ДолжникТелефоны" id="200">
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<VerticalStretch>false</VerticalStretch>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаСписокИзменений" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список изменений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список изменений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокИзмененийРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<PictureDecoration name="ОбновлениеИконка" id="1">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновление иконка</v8:content>
+						</v8:item>
+					</Title>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Обновление</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ContextMenu name="ОбновлениеИконкаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ОбновлениеИконкаРасширеннаяПодсказка" id="3"/>
+				</PictureDecoration>
+				<LabelDecoration name="ОбновлениеВерсия" id="4">
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Обновление&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt; 3.3.18&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 14&gt;Список изменений:&lt;/&gt;&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<ContextMenu name="ОбновлениеВерсияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОбновлениеВерсияРасширеннаяПодсказка" id="6"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="ОбновлениеСписокИзменений" id="9">
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;В карту мероприятия добавлена возможность смотреть погашения по судебным решениям &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;(для ЮД функция продублирована в портфеле)&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Для удобства работы в раздел &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Досудебная стадия&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt; карты долга добавлена часть функций из карты мероприятия&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Для руководителей добавлена возможность просмотра заблокированных по причине неконтактности дел &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;(Настройки автообзвона - Сервис - Заблокированные дела)&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;В карту мероприятия добавлен возраст должника&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Доработан механизм работы с картами мероприятий&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Доработан механизм обновления остатков по ЮД &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;(только по полю Сумма)&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Доработан механизм проведения документов&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Доработан механизм формирования списков дел для автообзвона&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Доработаны отчеты по истории звонков, обещаниям, платежам и учету рабочего времени: добавлены новые фильтры и учет по подразделениям &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;(КЦ/ЮД)&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Улучшен внешний вид отчета по суммам в карте долга&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Подсистема &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Досудебная стадия&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt; переименована в &lt;/&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #333333&gt;Документооборот&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Другие невидимые, но важные исправления и улучшения&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОбновлениеСписокИзмененийКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ОбновлениеСписокИзмененийРасширеннаяПодсказка" id="11"/>
+		</LabelDecoration>
+		<Button name="ОтключитьПоказСписка" id="12">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<CommandName>Form.Command.ОтключитьПоказСписка</CommandName>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не показывать для данной версии</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ОтключитьПоказСпискаРасширеннаяПодсказка" id="13"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ОтключитьПоказСписка" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить показ списка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить показ списка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьПоказСписка</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -4585,7 +4585,7 @@
 				</Page>
 			</ChildItems>
 		</Pages>
-		<UsualGroup name="ГруппаВерсияКонфиграции" id="1423">
+		<UsualGroup name="ГруппаСлужебная" id="1423">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -4595,13 +4595,13 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа версия конфиграции</v8:content>
+					<v8:content>Группа служебная</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаВерсияКонфиграцииРасширеннаяПодсказка" id="1424"/>
+			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1424"/>
 			<ChildItems>
 				<LabelField name="ВерсияКонфигурацииNC" id="1418">
 					<DataPath>ВерсияКонфигурацииNC</DataPath>
@@ -4633,6 +4633,22 @@
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ПоказатьСписокИзмененийРасширеннаяПодсказка" id="1422"/>
+				</Button>
+				<Button name="ПроверкаПодключения" id="1427">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Подключение</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -7400,6 +7416,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСписокИзменений</Action>
+		</Command>
+		<Command name="ПроверитьПодключение" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодключение</Action>
 		</Command>
 	</Commands>
 </Form>

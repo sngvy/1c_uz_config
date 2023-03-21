@@ -1313,6 +1313,7 @@
 							<v8:content>Группа время работы</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<Behavior>Usual</Behavior>
 					<ExtendedTooltip name="ГруппаВремяРаботыРасширеннаяПодсказка" id="346"/>
 					<ChildItems>
@@ -1320,6 +1321,11 @@
 							<DataPath>Объект.ВремяСоздания</DataPath>
 							<ContextMenu name="ВремяСозданияКонтекстноеМеню" id="348"/>
 							<ExtendedTooltip name="ВремяСозданияРасширеннаяПодсказка" id="349"/>
+						</LabelField>
+						<LabelField name="ДлительностьРазговора" id="457">
+							<DataPath>Объект.ДлительностьРазговора</DataPath>
+							<ContextMenu name="ДлительностьРазговораКонтекстноеМеню" id="458"/>
+							<ExtendedTooltip name="ДлительностьРазговораРасширеннаяПодсказка" id="459"/>
 						</LabelField>
 						<LabelField name="ВремяРаботы" id="350">
 							<DataPath>Объект.ВремяРаботы</DataPath>
@@ -1765,7 +1771,6 @@
 					<Behavior>Usual</Behavior>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ThroughAlign>Use</ThroughAlign>
 					<ExtendedTooltip name="ГруппаКонтактРасширеннаяПодсказка" id="231"/>
 					<ChildItems>
 						<RadioButtonField name="Контакт" id="17">
@@ -1790,6 +1795,7 @@
 						<Button name="ПозвонитьДолжнику" id="74">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
+							<Width>6</Width>
 							<AutoMaxWidth>false</AutoMaxWidth>
 							<Height>2</Height>
 							<AutoMaxHeight>false</AutoMaxHeight>
@@ -1810,6 +1816,7 @@
 						<Button name="ЗавершитьРазговор" id="368">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
+							<Width>6</Width>
 							<Height>2</Height>
 							<CommandName>Form.Command.ЗавершитьРазговор</CommandName>
 							<Picture>
@@ -1822,6 +1829,7 @@
 						<Button name="ОтключитьМикрофон" id="386">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
+							<Width>6</Width>
 							<Height>2</Height>
 							<CommandName>Form.Command.ОтключитьМикрофон</CommandName>
 							<Picture>
@@ -1834,6 +1842,7 @@
 						<Button name="УдержаниеВызова" id="388">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
+							<Width>6</Width>
 							<Height>2</Height>
 							<CommandName>Form.Command.УдержаниеВызова</CommandName>
 							<Picture>

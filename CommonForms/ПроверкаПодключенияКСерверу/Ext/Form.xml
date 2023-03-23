@@ -24,6 +24,9 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<PictureDecoration name="ДекорацияСервер" id="6">
 			<Title formatted="false">
@@ -40,13 +43,46 @@
 			<ContextMenu name="ДекорацияСерверКонтекстноеМеню" id="7"/>
 			<ExtendedTooltip name="ДекорацияСерверРасширеннаяПодсказка" id="8"/>
 		</PictureDecoration>
-		<LabelField name="РезультатПроверки" id="3">
-			<DataPath>РезультатПроверки</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<HorizontalAlign>Center</HorizontalAlign>
-			<ContextMenu name="РезультатПроверкиКонтекстноеМеню" id="4"/>
-			<ExtendedTooltip name="РезультатПроверкиРасширеннаяПодсказка" id="5"/>
-		</LabelField>
+		<UsualGroup name="ГруппаРезультатПроверки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результат проверки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результат проверки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаРезультатПроверкиРасширеннаяПодсказка" id="13"/>
+			<ChildItems>
+				<PictureField name="РезультатПроверкиИконка" id="9">
+					<DataPath>РезультатПроверкиИконка</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleLocation>None</TitleLocation>
+					<Width>1</Width>
+					<Height>1</Height>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="РезультатПроверкиИконкаКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="РезультатПроверкиИконкаРасширеннаяПодсказка" id="11"/>
+				</PictureField>
+				<LabelField name="РезультатПроверки" id="3">
+					<DataPath>РезультатПроверки</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="РезультатПроверкиКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="РезультатПроверкиРасширеннаяПодсказка" id="5"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="РезультатПроверки" id="1">
@@ -62,6 +98,17 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатПроверкиИконка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат проверки иконка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:Picture</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

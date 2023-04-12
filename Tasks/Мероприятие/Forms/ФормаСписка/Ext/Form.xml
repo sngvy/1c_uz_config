@@ -85,6 +85,22 @@
 						</Title>
 						<ExtendedTooltip name="ФормаЗакрепитьДолжникаРасширеннаяПодсказка" id="103"/>
 					</Button>
+					<Button name="ФормаДолжникМероприятия" id="104">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ДолжникМероприятия</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Task</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Все мероприятия</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаДолжникМероприятияРасширеннаяПодсказка" id="105"/>
+					</Button>
 				</ChildItems>
 			</Popup>
 			<Button name="ФормаОтменитьВыполнение" id="73">
@@ -703,6 +719,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрепитьДолжника</Action>
+		</Command>
+		<Command name="ДолжникМероприятия" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все мероприятия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все мероприятия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДолжникМероприятия</Action>
 		</Command>
 	</Commands>
 </Form>

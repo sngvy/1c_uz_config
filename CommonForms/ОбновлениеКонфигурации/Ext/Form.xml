@@ -44,7 +44,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Обновление&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt; 3.4.12&lt;/&gt;&lt;/&gt;
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Обновление&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt; 3.4.12.1&lt;/&gt;&lt;/&gt;
 
 &lt;fontsize 14&gt;Список изменений:&lt;/&gt;</v8:content>
 						</v8:item>
@@ -58,35 +58,42 @@
 			<Title formatted="true">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Добавлена возможность смотреть все мероприятия по должнику из общего списка мероприятий &lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;(Избранные мероприятия — Все мероприятия)
-&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Добавлена возможность разблокировать все неконтактные дела сразу &lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;(Настройки автообзвона — Сервис — Заблокированные дела — Разблокировать все)&lt;/&gt;&lt;/&gt;
+					<v8:content>&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Добавлена возможность смотреть все мероприятия по должнику из общего списка мероприятий &lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;(Избранные мероприятия — Все мероприятия)&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Добавлена возможность разблокировать все неконтактные дела сразу &lt;/&gt;&lt;fontsize 10&gt;&lt;b&gt;(Настройки автообзвона — Сервис — Заблокированные дела — Разблокировать все)&lt;/&gt;&lt;/&gt;
 &lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Обновлены статусы подключения к АТС&lt;/&gt;
 &lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Исправлено некорректное отображение подписи в сформированных документах&lt;/&gt;
-&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Исправлен выход Битфона за границы окна 1С на рабочих местах с маленьким монитором&lt;/&gt;</v8:content>
+&lt;fontsize 10&gt;● &lt;/&gt;&lt;fontsize 10&gt;Исправлен выход Битфона за границы окна 1С на рабочих местах с маленьким монитором&lt;/&gt;
+&lt;fontsize 10&gt;● Добавлены дата и время к названию файла документа
+&lt;/&gt;&lt;fontsize 10&gt;● Исправлены некритичные ошибки&lt;/&gt;</v8:content>
 				</v8:item>
 			</Title>
 			<ContextMenu name="ОбновлениеСписокИзмененийКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="ОбновлениеСписокИзмененийРасширеннаяПодсказка" id="11"/>
 		</LabelDecoration>
-		<Button name="ОтключитьПоказСписка" id="12">
-			<Type>UsualButton</Type>
-			<Representation>PictureAndText</Representation>
+		<CheckBoxField name="НеПоказыватьДляДаннойВерсии" id="14">
+			<DataPath>НеПоказыватьДляДаннойВерсии</DataPath>
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-			<CommandName>Form.Command.ОтключитьПоказСписка</CommandName>
-			<Picture>
-				<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
+			<CheckBoxType>CheckBox</CheckBoxType>
+			<ContextMenu name="НеПоказыватьДляДаннойВерсииКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="НеПоказыватьДляДаннойВерсииРасширеннаяПодсказка" id="16"/>
+			<Events>
+				<Event name="OnChange">ОтключитьПоказСписка</Event>
+			</Events>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НеПоказыватьДляДаннойВерсии" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Не показывать для данной версии</v8:content>
 				</v8:item>
 			</Title>
-			<ExtendedTooltip name="ОтключитьПоказСпискаРасширеннаяПодсказка" id="13"/>
-		</Button>
-	</ChildItems>
-	<Attributes/>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
 	<Commands>
 		<Command name="ОтключитьПоказСписка" id="1">
 			<Title>

@@ -355,7 +355,7 @@
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Погашения по суду</v8:content>
+								<v8:content>Погашения (судебные)</v8:content>
 							</v8:item>
 						</Title>
 						<ExtendedTooltip name="ФормаДолжникПогашенияСудебныеРасширеннаяПодсказка" id="1417"/>
@@ -416,15 +416,21 @@
 						</Title>
 						<ExtendedTooltip name="ФормаОбновитьПортфельРасширеннаяПодсказка" id="588"/>
 					</Button>
-					<Button name="ФормаВходНаАТС" id="583">
+					<Button name="ФормаОтчетыАТС" id="583">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ВходНаАТС</CommandName>
+						<CommandName>Form.Command.ОтчетыАТС</CommandName>
 						<Picture>
 							<xr:Ref>StdPicture.EventLog</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
-						<ExtendedTooltip name="ФормаВходНаАТСРасширеннаяПодсказка" id="584"/>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отчеты БИТ.АТС</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаОтчетыАТСРасширеннаяПодсказка" id="584"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -6828,20 +6834,20 @@
 			</ToolTip>
 			<Action>ДолжникПогашения</Action>
 		</Command>
-		<Command name="ВходНаАТС" id="14">
+		<Command name="ОтчетыАТС" id="14">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Вход на АТС</v8:content>
+					<v8:content>Отчеты АТС</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Вход на АТС</v8:content>
+					<v8:content>Отчеты АТС</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ВходНаАТС</Action>
+			<Action>ОтчетыАТС</Action>
 		</Command>
 		<Command name="РасчетАВ" id="11">
 			<Title>

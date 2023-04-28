@@ -44,7 +44,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Обновление&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt; 3.4.26&lt;/&gt;&lt;/&gt;
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt; 3.4.28&lt;/&gt;&lt;/&gt;
 
 &lt;fontsize 14&gt;Список изменений:&lt;/&gt;</v8:content>
 						</v8:item>
@@ -69,37 +69,16 @@
 &lt;fontsize 10&gt;● Добавлен журнал документооборота для просмотра истории созданных документов&lt;/&gt;
 &lt;fontsize 10&gt;● Улучшена проверка прав доступа к некоторым разделам и функциям&lt;/&gt;
 &lt;fontsize 10&gt;● Новая общая схема раскраски мероприятий&lt;/&gt;
-&lt;fontsize 10&gt;● Исправлена проблема, из-за которой в портфеле могли отображаться архивные дела
-● Обновлены алгоритмы блокировщика дел для автообзвона&lt;/&gt;</v8:content>
+&lt;fontsize 10&gt;● Исправлена проблема, из-за которой в портфеле могли отображаться архивные дела&lt;/&gt;
+&lt;fontsize 10&gt;● Обновлены алгоритмы блокировщика дел для автообзвона&lt;/&gt;
+&lt;fontsize 10&gt;● Добавлено сообщение об обновлении конфигурации&lt;/&gt;</v8:content>
 				</v8:item>
 			</Title>
 			<ContextMenu name="ОбновлениеСписокИзмененийКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="ОбновлениеСписокИзмененийРасширеннаяПодсказка" id="11"/>
 		</LabelDecoration>
-		<CheckBoxField name="НеПоказыватьДляДаннойВерсии" id="14">
-			<DataPath>НеПоказыватьДляДаннойВерсии</DataPath>
-			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-			<CheckBoxType>CheckBox</CheckBoxType>
-			<ContextMenu name="НеПоказыватьДляДаннойВерсииКонтекстноеМеню" id="15"/>
-			<ExtendedTooltip name="НеПоказыватьДляДаннойВерсииРасширеннаяПодсказка" id="16"/>
-			<Events>
-				<Event name="OnChange">ОтключитьПоказСписка</Event>
-			</Events>
-		</CheckBoxField>
 	</ChildItems>
-	<Attributes>
-		<Attribute name="НеПоказыватьДляДаннойВерсии" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Не показывать для данной версии</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-	</Attributes>
+	<Attributes/>
 	<Commands>
 		<Command name="ОтключитьПоказСписка" id="1">
 			<Title>

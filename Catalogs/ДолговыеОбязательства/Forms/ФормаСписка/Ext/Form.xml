@@ -16,7 +16,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Избранные мероприятия</v8:content>
+						<v8:content>Мероприятия</v8:content>
 					</v8:item>
 				</Title>
 				<ToolTip>
@@ -26,7 +26,7 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+					<xr:Ref>StdPicture.Task</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<Representation>PictureAndText</Representation>
@@ -78,6 +78,16 @@
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="ФормаЗакрепитьДолжникаРасширеннаяПодсказка" id="47"/>
+					</Button>
+					<Button name="ФормаЗапросКредитору" id="52">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ЗапросКредитору</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЭлектронноеПисьмо</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаЗапросКредиторуРасширеннаяПодсказка" id="53"/>
 					</Button>
 					<Button name="ФормаДолжникМероприятия" id="50">
 						<Type>CommandBarButton</Type>
@@ -278,6 +288,15 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="ТипЗапросКредитору" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип запрос кредитору</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПозвонитьДолжнику" id="1">
@@ -374,6 +393,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДолжникМероприятия</Action>
+		</Command>
+		<Command name="ЗапросКредитору" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос кредитору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос кредитору</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросКредитору</Action>
 		</Command>
 	</Commands>
 	<Parameters>

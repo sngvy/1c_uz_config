@@ -134,7 +134,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Избранные мероприятия</v8:content>
+						<v8:content>Мероприятия</v8:content>
 					</v8:item>
 				</Title>
 				<ToolTip>
@@ -144,7 +144,7 @@
 					</v8:item>
 				</ToolTip>
 				<Picture>
-					<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+					<xr:Ref>StdPicture.Task</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаМероприятияРасширеннаяПодсказка" id="578"/>
@@ -223,6 +223,15 @@
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="ФормаКонтрольОплатыРасширеннаяПодсказка" id="572"/>
+					</Button>
+					<Button name="ФормаЗапросКредитору" id="1431">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗапросКредитору</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЭлектронноеПисьмо</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаЗапросКредиторуРасширеннаяПодсказка" id="1432"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -452,6 +461,12 @@
 					<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>WhatsApp</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ОткрытьВЦРасширеннаяПодсказка" id="1347"/>
 			</Button>
 		</ChildItems>
@@ -4167,7 +4182,7 @@
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<AutoRefresh>true</AutoRefresh>
-							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<AutoRefreshPeriod>10</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
 								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
@@ -4614,7 +4629,7 @@
 					<ContextMenu name="ВерсияКонфигурацииNCКонтекстноеМеню" id="1419"/>
 					<ExtendedTooltip name="ВерсияКонфигурацииNCРасширеннаяПодсказка" id="1420"/>
 				</LabelField>
-				<Button name="ПоказатьСписокИзменений" id="1421">
+				<Button name="ОВерсии" id="1421">
 					<Type>UsualButton</Type>
 					<Representation>PictureAndText</Representation>
 					<Width>10</Width>
@@ -4629,7 +4644,7 @@
 							<v8:content>О версии</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="ПоказатьСписокИзмененийРасширеннаяПодсказка" id="1422"/>
+					<ExtendedTooltip name="ОВерсииРасширеннаяПодсказка" id="1422"/>
 				</Button>
 				<Button name="ПроверкаПодключения" id="1427">
 					<Type>UsualButton</Type>
@@ -6588,6 +6603,15 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ТипЗапросКредитору" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип запрос кредитору</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -7628,6 +7652,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьОстатки</Action>
+		</Command>
+		<Command name="ЗапросКредитору" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос кредитору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос кредитору</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросКредитору</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -8,10 +8,12 @@
 	</Title>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
+	<CommandBarLocation>None</CommandBarLocation>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
-		<Autofill>false</Autofill>
-	</AutoCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<Pages name="Шаблоны" id="1">
 			<Title>
@@ -66,9 +68,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ГлавколлектКонтекстноеМеню" id="6"/>
-							<AutoCommandBar name="ГлавколлектКоманднаяПанель" id="7">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="ГлавколлектКоманднаяПанель" id="7"/>
 							<ExtendedTooltip name="ГлавколлектРасширеннаяПодсказка" id="8"/>
 							<SearchStringAddition name="ГлавколлектСтрокаПоиска" id="9">
 								<AdditionSource>
@@ -142,9 +142,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="КвикМаниКонтекстноеМеню" id="27"/>
-							<AutoCommandBar name="КвикМаниКоманднаяПанель" id="28">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="КвикМаниКоманднаяПанель" id="28"/>
 							<ExtendedTooltip name="КвикМаниРасширеннаяПодсказка" id="29"/>
 							<SearchStringAddition name="КвикМаниСтрокаПоиска" id="30">
 								<AdditionSource>
@@ -217,9 +215,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="МикрокладКонтекстноеМеню" id="45"/>
-							<AutoCommandBar name="МикрокладКоманднаяПанель" id="46">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="МикрокладКоманднаяПанель" id="46"/>
 							<ExtendedTooltip name="МикрокладРасширеннаяПодсказка" id="47"/>
 							<SearchStringAddition name="МикрокладСтрокаПоиска" id="48">
 								<AdditionSource>
@@ -298,9 +294,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ОбщиеКонтекстноеМеню" id="63"/>
-							<AutoCommandBar name="ОбщиеКоманднаяПанель" id="64">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="ОбщиеКоманднаяПанель" id="64"/>
 							<ExtendedTooltip name="ОбщиеРасширеннаяПодсказка" id="65"/>
 							<SearchStringAddition name="ОбщиеСтрокаПоиска" id="66">
 								<AdditionSource>
@@ -374,9 +368,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="Фаст585КонтекстноеМеню" id="83"/>
-							<AutoCommandBar name="Фаст585КоманднаяПанель" id="84">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="Фаст585КоманднаяПанель" id="84"/>
 							<ExtendedTooltip name="Фаст585РасширеннаяПодсказка" id="85"/>
 							<SearchStringAddition name="Фаст585СтрокаПоиска" id="86">
 								<AdditionSource>
@@ -416,7 +408,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Прайм Займ</v8:content>
+							<v8:content>Прайм Займ/МаниМэн</v8:content>
 						</v8:item>
 					</Title>
 					<Picture>
@@ -450,9 +442,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ПраймЗаймКонтекстноеМеню" id="101"/>
-							<AutoCommandBar name="ПраймЗаймКоманднаяПанель" id="102">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="ПраймЗаймКоманднаяПанель" id="102"/>
 							<ExtendedTooltip name="ПраймЗаймРасширеннаяПодсказка" id="103"/>
 							<SearchStringAddition name="ПраймЗаймСтрокаПоиска" id="104">
 								<AdditionSource>
@@ -532,9 +522,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="РеквизитыКонтекстноеМеню" id="119"/>
-							<AutoCommandBar name="РеквизитыКоманднаяПанель" id="120">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="РеквизитыКоманднаяПанель" id="120"/>
 							<ExtendedTooltip name="РеквизитыРасширеннаяПодсказка" id="121"/>
 							<SearchStringAddition name="РеквизитыСтрокаПоиска" id="122">
 								<AdditionSource>
@@ -614,9 +602,7 @@
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
 							<ContextMenu name="ЦессияКонтекстноеМеню" id="137"/>
-							<AutoCommandBar name="ЦессияКоманднаяПанель" id="138">
-								<Autofill>false</Autofill>
-							</AutoCommandBar>
+							<AutoCommandBar name="ЦессияКоманднаяПанель" id="138"/>
 							<ExtendedTooltip name="ЦессияРасширеннаяПодсказка" id="139"/>
 							<SearchStringAddition name="ЦессияСтрокаПоиска" id="140">
 								<AdditionSource>
@@ -654,6 +640,43 @@
 				</Page>
 			</ChildItems>
 		</Pages>
+		<UsualGroup name="НастройкиРедактирования" id="157">
+			<Enabled>false</Enabled>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки редактирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="НастройкиРедактированияРасширеннаяПодсказка" id="158"/>
+			<ChildItems>
+				<CheckBoxField name="РазрешитьРедактированиеШаблоновСМС" id="152">
+					<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСМС</DataPath>
+					<Enabled>false</Enabled>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазрешитьРедактированиеШаблоновСМСКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСМСРасширеннаяПодсказка" id="154"/>
+				</CheckBoxField>
+				<Button name="СохранитьНастройки" id="155">
+					<Type>UsualButton</Type>
+					<Representation>Picture</Representation>
+					<CommandName>Form.Command.СохранитьНастройки</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Write</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="156"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Главколлект" id="1">
@@ -1017,5 +1040,45 @@
 				<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="НаборКонстант" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Набор констант</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РольАБД" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль АБД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+		</Command>
+	</Commands>
 </Form>

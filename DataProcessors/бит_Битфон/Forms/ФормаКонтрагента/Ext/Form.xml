@@ -27,7 +27,7 @@
 				<LabelDecoration name="Декорация1" id="1">
 					<HorizontalStretch>true</HorizontalStretch>
 					<VerticalStretch>false</VerticalStretch>
-					<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<Font ref="style:NormalTextFont" height="0" kind="StyleItem"/>
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -38,25 +38,13 @@
 					<ContextMenu name="Декорация1КонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="55"/>
 				</LabelDecoration>
-				<InputField name="Контрагент" id="4">
+				<LabelField name="Контрагент" id="4">
 					<DataPath>Контрагент</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<HorizontalAlign>Center</HorizontalAlign>
-					<Height>1</Height>
-					<MultiLine>true</MultiLine>
-					<ChoiceButton>false</ChoiceButton>
-					<ClearButton>false</ClearButton>
-					<SpinButton>false</SpinButton>
-					<OpenButton>true</OpenButton>
-					<ChooseType>false</ChooseType>
-					<ChoiceListButton>false</ChoiceListButton>
-					<TextColor>#1904F8</TextColor>
-					<BackColor>style:FormBackColor</BackColor>
-					<BorderColor>style:FormBackColor</BorderColor>
-					<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 					<ContextMenu name="КонтрагентКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="56"/>
-				</InputField>
+				</LabelField>
 				<InputField name="КонтактноеЛицо" id="44">
 					<DataPath>КонтактноеЛицо</DataPath>
 					<AutoMaxWidth>false</AutoMaxWidth>

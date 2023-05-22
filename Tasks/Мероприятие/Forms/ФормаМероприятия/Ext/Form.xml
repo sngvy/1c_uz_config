@@ -1824,6 +1824,19 @@
 							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ЗавершитьРазговорРасширеннаяПодсказка" id="369"/>
 						</Button>
+						<Button name="ПереводЗвонка" id="460">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<Width>6</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.ПереводЗвонка</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Перевод</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Shape>Oval</Shape>
+							<ExtendedTooltip name="ПереводЗвонкаРасширеннаяПодсказка" id="461"/>
+						</Button>
 						<Button name="ОтключитьМикрофон" id="386">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
@@ -3770,6 +3783,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДолжникПогашенияСудебные</Action>
+		</Command>
+		<Command name="ПереводЗвонка" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевод звонка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевод звонка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереводЗвонка</Action>
 		</Command>
 	</Commands>
 	<Parameters>

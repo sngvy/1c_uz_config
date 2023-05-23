@@ -638,45 +638,48 @@
 						</Table>
 					</ChildItems>
 				</Page>
-			</ChildItems>
-		</Pages>
-		<UsualGroup name="НастройкиРедактирования" id="157">
-			<Enabled>false</Enabled>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки редактирования</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки редактирования</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Usual</Behavior>
-			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="НастройкиРедактированияРасширеннаяПодсказка" id="158"/>
-			<ChildItems>
-				<CheckBoxField name="РазрешитьРедактированиеШаблоновСМС" id="152">
-					<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСМС</DataPath>
+				<Page name="НастройкиРедактирования" id="157">
 					<Enabled>false</Enabled>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="РазрешитьРедактированиеШаблоновСМСКонтекстноеМеню" id="153"/>
-					<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСМСРасширеннаяПодсказка" id="154"/>
-				</CheckBoxField>
-				<Button name="СохранитьНастройки" id="155">
-					<Type>UsualButton</Type>
-					<Representation>Picture</Representation>
-					<CommandName>Form.Command.СохранитьНастройки</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки редактирования</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки редактирования</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Picture>
-						<xr:Ref>StdPicture.Write</xr:Ref>
+						<xr:Ref>CommonPicture.NC_НастройкиРедактированияШаблонов</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="156"/>
-				</Button>
+					<ExtendedTooltip name="НастройкиРедактированияРасширеннаяПодсказка" id="158"/>
+					<ChildItems>
+						<Button name="СохранитьНастройки" id="155">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.СохранитьНастройки</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Write</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="156"/>
+						</Button>
+						<CheckBoxField name="РазрешитьРедактированиеШаблоновСМС" id="152">
+							<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСМС</DataPath>
+							<Enabled>false</Enabled>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РазрешитьРедактированиеШаблоновСМСКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСМСРасширеннаяПодсказка" id="154"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Главколлект" id="1">
@@ -1069,7 +1072,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сохранить настройки</v8:content>
+					<v8:content>Сохранить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>

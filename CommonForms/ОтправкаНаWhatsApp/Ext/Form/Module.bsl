@@ -6,7 +6,7 @@
 	USERPROFILE = Shell.ExpandEnvironmentStrings("%USERPROFILE%");
 	EXE = Новый Файл(USERPROFILE + "\AppData\Local\WhatsApp\WhatsApp.exe");
 	Если EXE.Существует() Тогда
-		Предупреждение("Выполняется отправка сообщения...",1,"Интеграция с WhatsApp");
+		Предупреждение("Отправка сообщения...",1,"Интеграция с WhatsApp");
 		КомандаОтправить = "whatsapp://send/?phone="+Номер+"&text="+Сообщение;
 		ЗапуститьПриложение(КомандаОтправить);
 		Оповестить("ШаблонИзмененВЦ");

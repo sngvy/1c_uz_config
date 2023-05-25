@@ -48,10 +48,9 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>&lt;fontsize 14&gt;Интеграция с WhatsApp&lt;/&gt;
 
-&lt;fontsize 14&gt;Версия: 3.5.21&lt;/&gt;</v8:content>
+&lt;fontsize 14&gt;Версия: 3.5.26&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
-					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 					<ContextMenu name="ИнтеграцияВерсияКонтекстноеМеню" id="10"/>
 					<ExtendedTooltip name="ИнтеграцияВерсияРасширеннаяПодсказка" id="11"/>
 				</LabelDecoration>
@@ -92,60 +91,61 @@
 					<ContextMenu name="СообщениеКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="СообщениеРасширеннаяПодсказка" id="16"/>
 				</InputField>
-				<UsualGroup name="Действия" id="29">
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Действия" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<Button name="ШаблоныСМС" id="20">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<Width>15</Width>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.ШаблоныСМС</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.Catalog</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Действия</v8:content>
+							<v8:content>Шаблоны СМС</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Действия</v8:content>
-						</v8:item>
-					</ToolTip>
+					<ExtendedTooltip name="ШаблоныСМСРасширеннаяПодсказка" id="21"/>
+				</Button>
+				<Button name="Отправить" id="7">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<Width>15</Width>
+					<Height>2</Height>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-					<Group>Vertical</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="30"/>
-					<ChildItems>
-						<Button name="ШаблоныСМС" id="20">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<Width>15</Width>
-							<Height>2</Height>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<CommandName>Form.Command.ШаблоныСМС</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.Catalog</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Шаблоны СМС</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ШаблоныСМСРасширеннаяПодсказка" id="21"/>
-						</Button>
-						<Button name="Отправить" id="7">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<DefaultButton>true</DefaultButton>
-							<Width>15</Width>
-							<Height>2</Height>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<CommandName>Form.Command.Отправить</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="8"/>
-						</Button>
-					</ChildItems>
-				</UsualGroup>
+					<CommandName>Form.Command.Отправить</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="8"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

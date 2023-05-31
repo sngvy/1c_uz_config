@@ -26,26 +26,6 @@
 			</appearance>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ОбъектВх</dataPath>
-			<field>ОбъектВх</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Займ</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СуммаДО</dataPath>
-			<field>СуммаДО</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сумма платежа</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>МесяцПлатежа</dataPath>
 			<field>МесяцПлатежа</field>
 			<role>
@@ -64,11 +44,19 @@
 				</dcscor:item>
 			</appearance>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Займ</dataPath>
+			<field>Займ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПлатежа</dataPath>
+			<field>СуммаПлатежа</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗадолженностьПоОбъектам.Период КАК ДатаПлатежа,
-	ЗадолженностьПоОбъектам.Объект КАК ОбъектВх,
-	ЗадолженностьПоОбъектам.СуммаДО КАК СуммаДО
+	ЗадолженностьПоОбъектам.Объект КАК Займ,
+	ЗадолженностьПоОбъектам.СуммаДО КАК СуммаПлатежа
 ПОМЕСТИТЬ ВТПлатежи
 ИЗ
 	РегистрНакопления.ЗадолженностьПоОбъектам КАК ЗадолженностьПоОбъектам
@@ -111,8 +99,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ
 	ВТПлатежи.ДатаПлатежа КАК ДатаПлатежа,
-	ВТПлатежи.ОбъектВх КАК ОбъектВх,
-	ВТПлатежи.СуммаДО КАК СуммаДО,
+	ВТПлатежи.Займ КАК Займ,
+	ВТПлатежи.СуммаПлатежа КАК СуммаПлатежа,
 	НАЧАЛОПЕРИОДА(ВТПлатежи.ДатаПлатежа, МЕСЯЦ) КАК МесяцПлатежа
 ИЗ
 	ВТПлатежи КАК ВТПлатежи
@@ -146,22 +134,10 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>ДатаПлатежа</dataPath>
 			<field>ДатаПлатежа</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дата платежа</v8:content>
-				</v8:item>
-			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ОбъектВх</dataPath>
-			<field>ОбъектВх</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Займ</v8:content>
-				</v8:item>
-			</title>
+			<dataPath>Займ</dataPath>
+			<field>Займ</field>
 			<role>
 				<dcscom:dimension>true</dcscom:dimension>
 			</role>
@@ -171,7 +147,7 @@
 	&amp;ДатаПлатежа КАК ДатаПлатежа,
 	ЕСТЬNULL(ОбъектыВРаботеОстатки.Подразделение, "Нет Закрепления") КАК Подразделение,
 	ЕСТЬNULL(ОбъектыВРаботеОстатки.Сотрудник, "Нет Закрепления") КАК Сотрудник,
-	ОбъектыВРаботеОстатки.Объект КАК ОбъектВх
+	ОбъектыВРаботеОстатки.Объект КАК Займ
 ИЗ
 	РегистрНакопления.ОбъектыВРаботе.Остатки(
 			&amp;ДатаПлатежа,
@@ -189,16 +165,16 @@
 	<dataSetLink>
 		<sourceDataSet>НаборДанных1</sourceDataSet>
 		<destinationDataSet>НаборДанных2</destinationDataSet>
-		<sourceExpression>ОбъектВх</sourceExpression>
-		<destinationExpression>ОбъектВх</destinationExpression>
+		<sourceExpression>Займ</sourceExpression>
+		<destinationExpression>Займ</destinationExpression>
 		<parameter>Об</parameter>
 		<parameterListAllowed>true</parameterListAllowed>
 	</dataSetLink>
 	<totalField>
-		<dataPath>СуммаДО</dataPath>
-		<expression>Сумма(СуммаДО)</expression>
+		<dataPath>СуммаПлатежа</dataPath>
+		<expression>Сумма(СуммаПлатежа)</expression>
+		<group>Займ</group>
 		<group>МесяцПлатежа</group>
-		<group>ОбъектВх</group>
 		<group>Сотрудник</group>
 		<group>ОбщийИтог</group>
 	</totalField>
@@ -295,23 +271,23 @@
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СуммаДО</dcsset:field>
+					<dcsset:field>СуммаПлатежа</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ОбъектВх</dcsset:field>
+					<dcsset:field>Займ</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ОбъектВх</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">Займ</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ДолговыеОбязательства.ПустаяСсылка</dcsset:right>
 					<dcsset:userSettingID>b08ea3ab-375c-4312-8f18-1e05b346ddec</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ОбъектВх.Кредитор</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">Займ.Кредитор</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
 					<dcsset:userSettingID>a170c10c-ce34-46db-804c-e5b87c82d605</dcsset:userSettingID>
@@ -430,24 +406,6 @@
 					<dcsset:selection>
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
-					<dcsset:item>
-						<dcsset:use>false</dcsset:use>
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Сотрудник</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
-						<dcsset:order>
-							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-						</dcsset:order>
-						<dcsset:selection>
-							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-						</dcsset:selection>
-					</dcsset:item>
 				</dcsset:point>
 				<dcsset:series>
 					<dcsset:groupItems>
@@ -466,10 +424,9 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 					<dcsset:item>
-						<dcsset:use>false</dcsset:use>
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>Сотрудник</dcsset:field>
+								<dcsset:field>Сотрудник.Подразделение</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -482,28 +439,11 @@
 						<dcsset:selection>
 							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 						</dcsset:selection>
-						<dcsset:item>
-							<dcsset:groupItems>
-								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>Подразделение</dcsset:field>
-									<dcsset:groupType>Items</dcsset:groupType>
-									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-								</dcsset:item>
-							</dcsset:groupItems>
-							<dcsset:order>
-								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
-							</dcsset:order>
-							<dcsset:selection>
-								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
-							</dcsset:selection>
-						</dcsset:item>
 					</dcsset:item>
 				</dcsset:series>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemField">
-						<dcsset:field>СуммаДО</dcsset:field>
+						<dcsset:field>СуммаПлатежа</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:outputParameters>
@@ -596,7 +536,7 @@
 						<dcsset:item>
 							<dcsset:groupItems>
 								<dcsset:item xsi:type="dcsset:GroupItemField">
-									<dcsset:field>ОбъектВх.Кредитор</dcsset:field>
+									<dcsset:field>Займ.Кредитор</dcsset:field>
 									<dcsset:groupType>Items</dcsset:groupType>
 									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
@@ -612,7 +552,7 @@
 							<dcsset:item>
 								<dcsset:groupItems>
 									<dcsset:item xsi:type="dcsset:GroupItemField">
-										<dcsset:field>ОбъектВх</dcsset:field>
+										<dcsset:field>Займ</dcsset:field>
 										<dcsset:groupType>Items</dcsset:groupType>
 										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

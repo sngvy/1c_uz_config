@@ -434,6 +434,15 @@
 						</Title>
 						<ExtendedTooltip name="ФормаОбновитьПортфельРасширеннаяПодсказка" id="588"/>
 					</Button>
+					<Button name="ФормаПроверкаПо230ФЗ" id="1439">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПроверкаПо230ФЗ</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Constant</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаПроверкаПо230ФЗРасширеннаяПодсказка" id="1440"/>
+					</Button>
 					<Button name="ФормаОбновитьОстатки" id="1429">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -7830,6 +7839,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗвонокКредитору</Action>
+		</Command>
+		<Command name="ПроверкаПо230ФЗ" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по 230-ФЗ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка по230 ФЗ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаПо230ФЗ</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -106,6 +106,7 @@
 			</Button>
 			<Button name="ФормаПечатьУЭД" id="59">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.ПечатьУЭД</CommandName>
 				<ExtendedTooltip name="ФормаПечатьУЭДExtendedTooltip" id="109"/>
 			</Button>
@@ -121,12 +122,14 @@
 			</Button>
 			<Button name="ФормаКалькулятор" id="362">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.Калькулятор</CommandName>
 				<ExtendedTooltip name="ФормаКалькуляторРасширеннаяПодсказка" id="363"/>
 			</Button>
 			<Button name="ФормаОперацииПлатежныхСистем" id="755">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ОперацииПлатежныхСистем</CommandName>
 				<Picture>
@@ -2948,6 +2951,9 @@
 								<ContextMenu name="ФайлыУправлениеПоискомКонтекстноеМеню" id="984"/>
 								<ExtendedTooltip name="ФайлыУправлениеПоискомРасширеннаяПодсказка" id="985"/>
 							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ФайлыВыбор</Event>
+							</Events>
 							<ChildItems>
 								<LabelField name="ФайлыПериод" id="986">
 									<DataPath>Файлы.Period</DataPath>
@@ -3390,26 +3396,23 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаДополнительныеРеквизиты" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные реквизиты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные реквизиты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="123"/>
+				</Page>
 			</ChildItems>
 		</Pages>
-		<UsualGroup name="ГруппаДополнительныеРеквизиты" id="13">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Дополнительные реквизиты</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа дополнительные реквизиты</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Vertical</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="123"/>
-		</UsualGroup>
 		<Table name="События" id="17">
 			<Visible>false</Visible>
 			<RowSelectionMode>Row</RowSelectionMode>

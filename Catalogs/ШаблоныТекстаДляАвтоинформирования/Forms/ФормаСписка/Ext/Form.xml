@@ -1,10 +1,32 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Шаблоны сообщений</v8:content>
+		</v8:item>
+	</Title>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
-	<CommandBarLocation>None</CommandBarLocation>
+	<AutoTitle>false</AutoTitle>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранитьНастройки" id="155">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.СохранитьНастройки</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Write</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="156"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
@@ -16,12 +38,6 @@
 					<v8:content>Шаблоны</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Шаблоны</v8:content>
-				</v8:item>
-			</ToolTip>
 			<PagesRepresentation>TabsOnRightHorizontal</PagesRepresentation>
 			<ExtendedTooltip name="ШаблоныРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
@@ -36,6 +52,7 @@
 						<xr:Ref>CommonPicture.NC_Папка</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ШаблоныГлавколлектРасширеннаяПодсказка" id="4"/>
 					<ChildItems>
 						<Table name="Главколлект" id="5">
@@ -183,6 +200,7 @@
 						<xr:Ref>CommonPicture.NC_Папка</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ШаблоныМикрокладРасширеннаяПодсказка" id="43"/>
 					<ChildItems>
 						<Table name="Микроклад" id="44">
@@ -252,16 +270,11 @@
 							<v8:content>Общие</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Общие шаблоны</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.NC_Папка</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
+					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ОбщиеШаблоныРасширеннаяПодсказка" id="61"/>
 					<ChildItems>
 						<Table name="Общие" id="62">
@@ -479,12 +492,6 @@
 							<v8:content>Реквизиты</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Реквизиты кредиторов</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.NC_Папка</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -559,12 +566,6 @@
 							<v8:content>Цессия</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Шаблоны цессия</v8:content>
-						</v8:item>
-					</ToolTip>
 					<Picture>
 						<xr:Ref>CommonPicture.NC_Папка</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -632,48 +633,34 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="НастройкиРедактирования" id="157">
-					<Enabled>false</Enabled>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки редактирования</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки редактирования</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>CommonPicture.NC_НастройкиРедактированияШаблонов</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="НастройкиРедактированияРасширеннаяПодсказка" id="158"/>
-					<ChildItems>
-						<Button name="СохранитьНастройки" id="155">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<DefaultButton>true</DefaultButton>
-							<CommandName>Form.Command.СохранитьНастройки</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.Write</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="СохранитьНастройкиРасширеннаяПодсказка" id="156"/>
-						</Button>
-						<CheckBoxField name="РазрешитьРедактированиеШаблоновСМС" id="152">
-							<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСМС</DataPath>
-							<Enabled>false</Enabled>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="РазрешитьРедактированиеШаблоновСМСКонтекстноеМеню" id="153"/>
-							<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСМСРасширеннаяПодсказка" id="154"/>
-						</CheckBoxField>
-					</ChildItems>
-				</Page>
 			</ChildItems>
 		</Pages>
+		<UsualGroup name="ГруппаНастройки" id="157">
+			<Enabled>false</Enabled>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="158"/>
+			<ChildItems>
+				<CheckBoxField name="РазрешитьРедактированиеШаблоновСообщений" id="152">
+					<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСообщений</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="РазрешитьРедактированиеШаблоновСообщенийКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСообщенийРасширеннаяПодсказка" id="154"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Главколлект" id="1">

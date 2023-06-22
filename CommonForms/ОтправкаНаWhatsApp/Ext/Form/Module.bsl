@@ -1,9 +1,10 @@
 ﻿
 &НаКлиенте
 Процедура Отправить(Команда)
-	// Отправить сообщение через API
+	// Отправить сообщение через API	
 	UWP = Новый Файл("C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2322.2.0_x64__cv1g1gvanyjgm\WhatsApp.exe");
-	Если UWP.Существует() Тогда
+	UWP2 = Новый Файл("C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2323.2.0_x64__cv1g1gvanyjgm\WhatsApp.exe");
+	Если UWP.Существует() ИЛИ UWP2.Существует() Тогда
 		Для Счетчик = 1 По 100 Цикл
 			Состояние("Отправка сообщения", Счетчик, "Пожалуйста, подождите...", БиблиотекаКартинок.NC_ПодсистемаИнтеграцияСWhatsApp);
 		КонецЦикла;
@@ -23,7 +24,8 @@
 Процедура ПоискДолжника(Команда) Экспорт
 	// Найти контакт через API
 	UWP = Новый Файл("C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2322.2.0_x64__cv1g1gvanyjgm\WhatsApp.exe");
-	Если UWP.Существует() Тогда
+	UWP2 = Новый Файл("C:\Program Files\WindowsApps\5319275A.WhatsAppDesktop_2.2323.2.0_x64__cv1g1gvanyjgm\WhatsApp.exe");
+	Если UWP.Существует() ИЛИ UWP2.Существует() Тогда
 		КомандаПоиск = "whatsapp://send/?phone="+Номер;
 		ЗапуститьПриложение(КомандаПоиск);
 	Иначе

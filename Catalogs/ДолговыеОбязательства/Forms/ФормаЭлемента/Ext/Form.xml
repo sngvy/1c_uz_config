@@ -2232,7 +2232,6 @@
 											<ExtendedTooltip name="ГруппаЦенаИскаРасширеннаяПодсказка" id="656"/>
 											<ChildItems>
 												<LabelDecoration name="ДекорацияЦенаИскаНаим" id="585">
-													<TextColor>style:FieldSelectionBackColor</TextColor>
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -2243,7 +2242,6 @@
 													<ExtendedTooltip name="ДекорацияЦенаИскаНаимРасширеннаяПодсказка" id="587"/>
 												</LabelDecoration>
 												<LabelDecoration name="ДекорацияЦенаИска" id="614">
-													<TextColor>style:FieldSelectionBackColor</TextColor>
 													<Title formatted="false">
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -2628,17 +2626,17 @@
 							<AutoCommandBar name="ДолжникТелефоныКоманднаяПанель" id="202">
 								<Autofill>false</Autofill>
 								<ChildItems>
-									<Button name="ДолжникТелефоныИсходящийЗвонокТЧ" id="249">
+									<Button name="ФормаДолжникТелефоныИсходящийЗвонокТЧ" id="249">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ИсходящийЗвонокТЧ</CommandName>
-										<ExtendedTooltip name="ДолжникТелефоныИсходящийЗвонокТЧРасширеннаяПодсказка" id="250"/>
+										<ExtendedTooltip name="ФормаДолжникТелефоныИсходящийЗвонокТЧРасширеннаяПодсказка" id="250"/>
 									</Button>
-									<Button name="ДолжникТелефоныОтправитьСМС" id="251">
+									<Button name="ФормаДолжникТелефоныОтправитьСМС" id="251">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ОтправитьСМС</CommandName>
-										<ExtendedTooltip name="ДолжникТелефоныОтправитьСМСРасширеннаяПодсказка" id="252"/>
+										<ExtendedTooltip name="ФормаДолжникТелефоныОтправитьСМСРасширеннаяПодсказка" id="252"/>
 									</Button>
-									<Button name="НайтиВWhatsApp" id="823">
+									<Button name="ФормаНайтиВWhatsApp" id="823">
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.НайтиВВЦ</CommandName>
@@ -2652,9 +2650,9 @@
 												<v8:content>Найти в WhatsApp</v8:content>
 											</v8:item>
 										</Title>
-										<ExtendedTooltip name="НайтиВWhatsAppРасширеннаяПодсказка" id="824"/>
+										<ExtendedTooltip name="ФормаНайтиВWhatsAppРасширеннаяПодсказка" id="824"/>
 									</Button>
-									<Button name="ФормаОбщаяФормаРассылкаНаWhatsAppОткрыть" id="819">
+									<Button name="ФормаНаписатьВWhatsApp" id="819">
 										<Type>CommandBarButton</Type>
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.НаписатьВВЦ</CommandName>
@@ -2668,9 +2666,9 @@
 												<v8:content>Написать в WhatsApp</v8:content>
 											</v8:item>
 										</Title>
-										<ExtendedTooltip name="ФормаОбщаяФормаРассылкаНаWhatsAppОткрытьРасширеннаяПодсказка" id="820"/>
+										<ExtendedTooltip name="ФормаНаписатьВWhatsAppРасширеннаяПодсказка" id="820"/>
 									</Button>
-									<Button name="ДолжникТелефоныОтправитьEmail" id="320">
+									<Button name="ФормаДолжникТелефоныОтправитьEmail" id="320">
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
 										<Representation>PictureAndText</Representation>
@@ -2679,17 +2677,7 @@
 											<xr:Ref>CommonPicture.ОтправитьЭлектронноеПисьмо</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="ДолжникТелефоныОтправитьEmailРасширеннаяПодсказка" id="321"/>
-									</Button>
-									<Button name="РозыскДолжника" id="825">
-										<Type>CommandBarButton</Type>
-										<Representation>PictureAndText</Representation>
-										<CommandName>Form.Command.РозыскДолжника</CommandName>
-										<Picture>
-											<xr:Ref>CommonPicture.КонтактнаяИнформацияПерейтиПоСсылке</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
-										<ExtendedTooltip name="РозыскДолжникаРасширеннаяПодсказка" id="826"/>
+										<ExtendedTooltip name="ФормаДолжникТелефоныОтправитьEmailРасширеннаяПодсказка" id="321"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -4486,21 +4474,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверкаПоКАД</Action>
-		</Command>
-		<Command name="РозыскДолжника" id="13">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Розыск должника</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Розыск должника</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>РозыскДолжника</Action>
 		</Command>
 		<Command name="ЗапроситьДокумент" id="3">
 			<Title>

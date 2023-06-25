@@ -33,6 +33,16 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаУдалитьСпискиРасширеннаяПодсказка" id="28"/>
 			</Button>
+			<Button name="ФормаРазблокироватьВсе" id="31">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.РазблокироватьВсе</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ОсвободитьФайл</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаРазблокироватьВсеРасширеннаяПодсказка" id="32"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -216,6 +226,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Обновить</Action>
+		</Command>
+		<Command name="РазблокироватьВсе" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разблокировать все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разблокировать все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазблокироватьВсе</Action>
 		</Command>
 	</Commands>
 </Form>

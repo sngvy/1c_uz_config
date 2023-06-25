@@ -29,6 +29,16 @@
 				</Title>
 				<ExtendedTooltip name="ФормаДолжникМероприятияРасширеннаяПодсказка" id="37"/>
 			</Button>
+			<Button name="ФормаСформироватьСписок" id="43">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.СформироватьСписок</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.QueryWizard</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаСформироватьСписокРасширеннаяПодсказка" id="44"/>
+			</Button>
 			<Button name="ФормаРазблокировать" id="34">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -51,6 +61,9 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<Table name="СписокДО" id="1">
 			<CommandBarLocation>None</CommandBarLocation>
@@ -106,37 +119,31 @@
 				<Event name="Selection">СписокДОВыбор</Event>
 			</Events>
 			<ChildItems>
-				<LabelField name="ЗаблокированныеДелаСсылка" id="17">
+				<LabelField name="СписокДОСсылка" id="17">
 					<DataPath>СписокДО.Ссылка</DataPath>
-					<ContextMenu name="ЗаблокированныеДелаСсылкаКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ЗаблокированныеДелаСсылкаРасширеннаяПодсказка" id="19"/>
+					<ContextMenu name="СписокДОСсылкаКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="СписокДОСсылкаРасширеннаяПодсказка" id="19"/>
 				</LabelField>
-				<InputField name="ЗаблокированныеДелаСсылкаДолжник" id="20">
+				<InputField name="СписокДОСсылкаДолжник" id="20">
 					<DataPath>СписокДО.Ссылка.Должник</DataPath>
-					<ContextMenu name="ЗаблокированныеДелаСсылкаДолжникКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ЗаблокированныеДелаСсылкаДолжникРасширеннаяПодсказка" id="22"/>
+					<ContextMenu name="СписокДОСсылкаДолжникКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="СписокДОСсылкаДолжникРасширеннаяПодсказка" id="22"/>
 				</InputField>
-				<InputField name="ЗаблокированныеДелаСсылкаКредитор" id="23">
+				<InputField name="СписокДОСсылкаКредитор" id="23">
 					<DataPath>СписокДО.Ссылка.Кредитор</DataPath>
-					<ContextMenu name="ЗаблокированныеДелаСсылкаКредиторКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ЗаблокированныеДелаСсылкаКредиторРасширеннаяПодсказка" id="25"/>
+					<ContextMenu name="СписокДОСсылкаКредиторКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СписокДОСсылкаКредиторРасширеннаяПодсказка" id="25"/>
 				</InputField>
-				<LabelField name="ЗаблокированныеДелаРезультативныйКонтакт" id="26">
-					<DataPath>СписокДО.РезультативныйКонтакт</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Попыток дозвона</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ЗаблокированныеДелаРезультативныйКонтактКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ЗаблокированныеДелаРезультативныйКонтактРасширеннаяПодсказка" id="28"/>
+				<LabelField name="СписокДОПопытокДозвона" id="40">
+					<DataPath>СписокДО.ПопытокДозвона</DataPath>
+					<ContextMenu name="СписокДОПопытокДозвонаКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="СписокДОПопытокДозвонаРасширеннаяПодсказка" id="42"/>
 				</LabelField>
-				<CheckBoxField name="ЗаблокированныеДелаСсылкаЗапретАвтообзвона" id="29">
+				<CheckBoxField name="СписокДОСсылкаЗапретАвтообзвона" id="29">
 					<DataPath>СписокДО.Ссылка.ЗапретАвтообзвона</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ЗаблокированныеДелаСсылкаЗапретАвтообзвонаКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="ЗаблокированныеДелаСсылкаЗапретАвтообзвонаРасширеннаяПодсказка" id="31"/>
+					<ContextMenu name="СписокДОСсылкаЗапретАвтообзвонаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="СписокДОСсылкаЗапретАвтообзвонаРасширеннаяПодсказка" id="31"/>
 				</CheckBoxField>
 			</ChildItems>
 		</Table>
@@ -157,20 +164,15 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ДолговыеОбязательства.Ссылка КАК Ссылка,
-	КОЛИЧЕСТВО(Мероприятие.Результат.РезультативныйКонтакт) КАК РезультативныйКонтакт
+	КОЛИЧЕСТВО(Мероприятие.Результат.РезультативныйКонтакт) КАК ПопытокДозвона
 ИЗ
 	Задача.Мероприятие КАК Мероприятие
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
 		ПО Мероприятие.Объект = ДолговыеОбязательства.Ссылка
 ГДЕ
-	(ДолговыеОбязательства.ДополнительныеРеквизиты.Значение.Наименование = "В работе"
-				И ДолговыеОбязательства.ЗапретАвтообзвона = ИСТИНА
-				И ДолговыеОбязательства.НеконтактныеНомера = ИСТИНА
-				И Мероприятие.Результат.РезультативныйКонтакт = ЛОЖЬ
-			ИЛИ ДолговыеОбязательства.ДополнительныеРеквизиты.Значение.Наименование = "Новые"
-				И ДолговыеОбязательства.ЗапретАвтообзвона = ИСТИНА
-				И ДолговыеОбязательства.НеконтактныеНомера = ИСТИНА
-				И Мероприятие.Результат.РезультативныйКонтакт = ЛОЖЬ)
+	ДолговыеОбязательства.ЗапретАвтообзвона = ИСТИНА
+	И ДолговыеОбязательства.НеконтактныеНомера = ИСТИНА
+	И Мероприятие.ТипМероприятия.Наименование = "Телефонный звонок исходящий"
 
 СГРУППИРОВАТЬ ПО
 	ДолговыеОбязательства.Ссылка</QueryText>
@@ -181,7 +183,7 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>РезультативныйКонтакт</dcsset:field>
+							<dcsset:field>ПопытокДозвона</dcsset:field>
 							<dcsset:orderType>Asc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
@@ -205,6 +207,17 @@
 			</Title>
 			<Type>
 				<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РольАБД" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль АБД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -268,6 +281,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РазблокироватьВсе</Action>
+		</Command>
+		<Command name="СформироватьСписок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьСписок</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -4,7 +4,63 @@
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ФормаГруппаМероприятия" id="32">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Мероприятия</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа мероприятия</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.Task</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаГруппаМероприятияРасширеннаяПодсказка" id="33"/>
+				<ChildItems>
+					<Button name="ФормаПозвонитьДолжнику" id="34">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПозвонитьДолжнику</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Исходящий звонок</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаПозвонитьДолжникуРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="ФормаНаписатьВWhatsApp" id="36">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.НаписатьВВЦ</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>WhatsApp</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаНаписатьВWhatsAppРасширеннаяПодсказка" id="37"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<Table name="Список" id="1">
 			<CommandBarLocation>None</CommandBarLocation>
@@ -135,7 +191,63 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<Attribute name="ТипВЦ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ВЦ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РезультатОтправлено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат отправлено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ПозвонитьДолжнику" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить должнику</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить должнику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПозвонитьДолжнику</Action>
+		</Command>
+		<Command name="НаписатьВВЦ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать ВВЦ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать ВВЦ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаписатьВВЦ</Action>
+		</Command>
+	</Commands>
 	<CommandInterface>
 		<CommandBar>
 			<Item>

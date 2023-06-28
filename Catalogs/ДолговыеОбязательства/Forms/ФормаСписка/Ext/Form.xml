@@ -53,7 +53,7 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаОтправитьСМСРасширеннаяПодсказка" id="43"/>
 					</Button>
-					<Button name="ФормаНаписатьВWhatsApp" id="44">
+					<Button name="ФормаWhatsApp" id="44">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.НаписатьВВЦ</CommandName>
@@ -67,7 +67,7 @@
 								<v8:content>WhatsApp</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="ФормаНаписатьВWhatsAppРасширеннаяПодсказка" id="45"/>
+						<ExtendedTooltip name="ФормаWhatsAppРасширеннаяПодсказка" id="45"/>
 					</Button>
 					<Button name="ФормаЗакрепитьДолжника" id="46">
 						<Type>CommandBarButton</Type>
@@ -120,6 +120,7 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>

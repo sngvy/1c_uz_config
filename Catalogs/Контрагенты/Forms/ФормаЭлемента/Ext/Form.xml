@@ -370,10 +370,10 @@
 							<ContextMenu name="ТелефоныКонтекстноеМеню" id="188"/>
 							<AutoCommandBar name="ТелефоныКоманднаяПанель" id="189">
 								<ChildItems>
-									<Button name="ТелефоныИсходящийЗвонокТЧ" id="221">
+									<Button name="ФормаТелефоныИсходящийЗвонокТЧ" id="221">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ИсходящийЗвонокТЧ</CommandName>
-										<ExtendedTooltip name="ТелефоныИсходящийЗвонокТЧРасширеннаяПодсказка" id="222"/>
+										<ExtendedTooltip name="ФормаТелефоныИсходящийЗвонокТЧРасширеннаяПодсказка" id="222"/>
 									</Button>
 									<Button name="ТелефоныДобавитьТелефон" id="226">
 										<Type>CommandBarButton</Type>
@@ -381,6 +381,48 @@
 										<Representation>PictureAndText</Representation>
 										<CommandName>Form.Command.ДобавитьТелефон</CommandName>
 										<ExtendedTooltip name="ТелефоныДобавитьТелефонРасширеннаяПодсказка" id="227"/>
+									</Button>
+									<Button name="ФормаДолжникТелефоныОтправитьСМС" id="285">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ОтправитьСМС</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ФормаДолжникТелефоныОтправитьСМСРасширеннаяПодсказка" id="286"/>
+									</Button>
+									<Button name="ФормаНайтиВWhatsApp" id="287">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.НайтиВВЦ</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Найти в WhatsApp</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФормаНайтиВWhatsAppРасширеннаяПодсказка" id="288"/>
+									</Button>
+									<Button name="ФормаWhatsApp" id="289">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.НаписатьВВЦ</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>WhatsApp</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФормаWhatsAppРасширеннаяПодсказка" id="290"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -836,6 +878,35 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="РезультатОтправлено" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат отправлено</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТипВЦ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ВЦ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РольЮД" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль ЮД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ИсходящийЗвонокТЧ" id="1">
@@ -912,6 +983,51 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗапросНаБанкротство</Action>
+		</Command>
+		<Command name="ОтправитьСМС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить СМС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить СМС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьСМС</Action>
+		</Command>
+		<Command name="НаписатьВВЦ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать в WhatsApp</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать в WhatsApp</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаписатьВВЦ</Action>
+		</Command>
+		<Command name="НайтиВВЦ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в WhatsApp</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в WhatsApp</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиВВЦ</Action>
 		</Command>
 	</Commands>
 	<Parameters>

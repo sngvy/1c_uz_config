@@ -73,10 +73,10 @@
 				<ExtendedTooltip name="СписокНомеровУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<ChildItems>
-				<LabelField name="СписокНомеровНаименование" id="14">
-					<DataPath>СписокНомеров.Наименование</DataPath>
-					<ContextMenu name="СписокНомеровНаименованиеКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="СписокНомеровНаименованиеРасширеннаяПодсказка" id="16"/>
+				<LabelField name="СписокНомеровСотрудник" id="14">
+					<DataPath>СписокНомеров.Сотрудник</DataPath>
+					<ContextMenu name="СписокНомеровСотрудникКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокНомеровСотрудникРасширеннаяПодсказка" id="16"/>
 				</LabelField>
 				<LabelField name="СписокНомеровНомер" id="17">
 					<DataPath>СписокНомеров.Номер</DataPath>
@@ -106,7 +106,7 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
-	бит_БитфонИзбранное.Наименование КАК Наименование,
+	бит_БитфонИзбранное.Наименование КАК Сотрудник,
 	бит_БитфонИзбранное.Номер КАК Номер
 ИЗ
 	Справочник.бит_БитфонИзбранное КАК бит_БитфонИзбранное</QueryText>

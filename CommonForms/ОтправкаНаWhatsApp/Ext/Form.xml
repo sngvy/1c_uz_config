@@ -5,6 +5,9 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаИнтеграция" id="34">
 			<Title>
@@ -43,7 +46,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;fontsize 14&gt;Версия: 3.6.23&lt;/&gt;</v8:content>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия: 3.7.3&lt;/&gt;&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -73,6 +76,7 @@
 			<ChildItems>
 				<InputField name="Номер" id="1">
 					<DataPath>Номер</DataPath>
+					<BackColor>web:WhiteSmoke</BackColor>
 					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
 				</InputField>
@@ -84,6 +88,7 @@
 				<InputField name="Сообщение" id="14">
 					<DataPath>Сообщение</DataPath>
 					<MultiLine>true</MultiLine>
+					<BackColor>web:WhiteSmoke</BackColor>
 					<ContextMenu name="СообщениеКонтекстноеМеню" id="15"/>
 					<ExtendedTooltip name="СообщениеРасширеннаяПодсказка" id="16"/>
 				</InputField>

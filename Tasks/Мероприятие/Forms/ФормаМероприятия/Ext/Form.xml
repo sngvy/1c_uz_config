@@ -1824,18 +1824,18 @@
 							<Shape>Oval</Shape>
 							<ExtendedTooltip name="ЗавершитьРазговорРасширеннаяПодсказка" id="369"/>
 						</Button>
-						<Button name="ПереводЗвонка" id="460">
+						<Button name="ПереводВызова" id="460">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
 							<Width>6</Width>
 							<Height>2</Height>
-							<CommandName>Form.Command.ПереводЗвонка</CommandName>
+							<CommandName>Form.Command.ПереводВызова</CommandName>
 							<Picture>
 								<xr:Ref>CommonPicture.NC_Перевод</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ПереводЗвонкаРасширеннаяПодсказка" id="461"/>
+							<ExtendedTooltip name="ПереводВызоваРасширеннаяПодсказка" id="461"/>
 						</Button>
 						<Button name="ОтключитьМикрофон" id="386">
 							<Type>UsualButton</Type>
@@ -1928,6 +1928,7 @@
 						</Button>
 						<Button name="ОткрытьИнструментПлатежныеСистемы" id="299">
 							<Type>UsualButton</Type>
+							<Visible>false</Visible>
 							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ОткрытьИнструментПлатежныеСистемы</CommandName>
 							<Picture>
@@ -1944,6 +1945,7 @@
 						</Button>
 						<Button name="ФормаПечатьУЭД" id="131">
 							<Type>UsualButton</Type>
+							<Visible>false</Visible>
 							<Height>1</Height>
 							<CommandName>Form.Command.ПечатьУЭД</CommandName>
 							<Title>
@@ -2076,6 +2078,7 @@
 						</InputField>
 						<Button name="ПрикрепитьАктПередачи" id="281">
 							<Type>UsualButton</Type>
+							<Visible>false</Visible>
 							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ПрикрепитьАктПередачи</CommandName>
 							<Picture>
@@ -3131,6 +3134,15 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="РезультатПеревод" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат перевод</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоДереву" id="1">
@@ -3784,20 +3796,20 @@
 			</ToolTip>
 			<Action>ДолжникПогашенияСудебные</Action>
 		</Command>
-		<Command name="ПереводЗвонка" id="39">
+		<Command name="ПереводВызова" id="39">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перевод звонка</v8:content>
+					<v8:content>Перевод вызова</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перевод звонка</v8:content>
+					<v8:content>Перевод вызова</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ПереводЗвонка</Action>
+			<Action>ПереводВызова</Action>
 		</Command>
 	</Commands>
 	<Parameters>

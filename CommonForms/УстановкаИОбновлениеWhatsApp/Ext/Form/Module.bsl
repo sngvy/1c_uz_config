@@ -8,15 +8,16 @@
 &НаКлиенте
 Процедура ЗакрытьФорму()
 	Shell = Новый COMОбъект("WScript.Shell");
-	USERPROFILE = Shell.ExpandEnvironmentStrings("%USERPROFILE%");
+	TEMP = Shell.ExpandEnvironmentStrings("%TEMP%");
+	УстановочныйФайл = "\WhatsAppSetup64.exe";
+	ПолныйПуть = TEMP + УстановочныйФайл;
 	Соединение = Новый HTTPСоединение("f0821791.xsph.ru");
-	Соединение.Получить("/WhatsAppSetup64.exe", USERPROFILE +"\AppData\Local\Temp\WhatsAppSetup64.exe");		
-	UWP = Новый Файл(USERPROFILE + "\AppData\Local\Temp\WhatsAppSetup64.exe");
-	Пока UWP.Размер() <> "100 890 469" Цикл
+	Соединение.Получить(УстановочныйФайл, ПолныйПуть);		
+	EXE = Новый Файл(ПолныйПуть);
+	Пока EXE.Размер() <> "106 813 413" Цикл
 		Прервать;
 	КонецЦикла;
-	КомандаУстановитьВЦ = USERPROFILE + "\AppData\Local\Temp\WhatsAppSetup64.exe";
-	ЗапуститьПриложение(КомандаУстановитьВЦ);
+	ЗапуститьПриложение(ПолныйПуть);
 	ПоказатьОповещениеПользователя("Интеграция с WhatsApp",,"Запуск установщика...",БиблиотекаКартинок.NC_ПодсистемаИнтеграцияСWhatsApp);
 	ЭтаФорма.Закрыть();
 КонецПроцедуры

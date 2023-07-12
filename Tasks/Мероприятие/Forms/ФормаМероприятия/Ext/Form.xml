@@ -189,6 +189,7 @@
 					<ChildItems>
 						<LabelField name="Организация" id="75">
 							<DataPath>Объект.Организация</DataPath>
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -204,6 +205,7 @@
 						</LabelField>
 						<LabelField name="Номер" id="93">
 							<DataPath>Объект.Number</DataPath>
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -221,6 +223,7 @@
 				</UsualGroup>
 				<LabelField name="Подразделение" id="33">
 					<DataPath>Объект.Подразделение</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -266,27 +269,46 @@
 							</ToolTip>
 							<ExtendedTooltip name="ОбъектУчета_КонтрагентыExtendedTooltip" id="150"/>
 							<ChildItems>
-								<InputField name="Контрагент" id="120">
-									<DataPath>Контрагент</DataPath>
+								<UsualGroup name="ГруппаКонтрагент" id="464">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Контрагент</v8:content>
 										</v8:item>
-										<v8:item>
-											<v8:lang>az</v8:lang>
-											<v8:content>Borcalan</v8:content>
-										</v8:item>
 									</Title>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<ClearButton>true</ClearButton>
-									<ContextMenu name="КонтрагентКонтекстноеМеню" id="121"/>
-									<ExtendedTooltip name="КонтрагентExtendedTooltip" id="151"/>
-									<Events>
-										<Event name="OnChange">ОбъектПростойПриИзменении</Event>
-										<Event name="Clearing">ПолеОчистка</Event>
-									</Events>
-								</InputField>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа контрагент</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаКонтрагентРасширеннаяПодсказка" id="465"/>
+									<ChildItems>
+										<InputField name="Контрагент" id="120">
+											<DataPath>Контрагент</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Контрагент</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>az</v8:lang>
+													<v8:content>Borcalan</v8:content>
+												</v8:item>
+											</Title>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="КонтрагентКонтекстноеМеню" id="121"/>
+											<ExtendedTooltip name="КонтрагентExtendedTooltip" id="151"/>
+											<Events>
+												<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+												<Event name="Clearing">ПолеОчистка</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</Page>
 						<Page name="ОбъектУчета_ДоговорыКонтрагентов" id="103">
@@ -360,24 +382,43 @@
 							</ToolTip>
 							<ExtendedTooltip name="ОбъектУчета_ДолговыеОбязательстваExtendedTooltip" id="156"/>
 							<ChildItems>
-								<InputField name="ДолговоеОбязательство" id="126">
-									<DataPath>ДолговоеОбязательство</DataPath>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<ClearButton>false</ClearButton>
-									<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="127"/>
-									<ExtendedTooltip name="ДолговоеОбязательствоExtendedTooltip" id="157"/>
-									<Events>
-										<Event name="OnChange">ОбъектПростойПриИзменении</Event>
-										<Event name="Clearing">ПолеОчистка</Event>
-										<Event name="ChoiceProcessing">ДолговоеОбязательствоОбработкаВыбора</Event>
-									</Events>
-								</InputField>
-								<InputField name="ДолговоеОбязательствоКредитор" id="392">
-									<DataPath>ДолговоеОбязательство.Кредитор</DataPath>
-									<ChoiceButton>false</ChoiceButton>
-									<ContextMenu name="ДолговоеОбязательствоКредиторКонтекстноеМеню" id="393"/>
-									<ExtendedTooltip name="ДолговоеОбязательствоКредиторРасширеннаяПодсказка" id="394"/>
-								</InputField>
+								<UsualGroup name="ГруппаДоговор" id="462">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Договор</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа договор</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаДоговорРасширеннаяПодсказка" id="463"/>
+									<ChildItems>
+										<InputField name="ДолговоеОбязательство" id="126">
+											<DataPath>ДолговоеОбязательство</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ClearButton>false</ClearButton>
+											<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="127"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоExtendedTooltip" id="157"/>
+											<Events>
+												<Event name="OnChange">ОбъектПростойПриИзменении</Event>
+												<Event name="Clearing">ПолеОчистка</Event>
+												<Event name="ChoiceProcessing">ДолговоеОбязательствоОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="ДолговоеОбязательствоКредитор" id="392">
+											<DataPath>ДолговоеОбязательство.Кредитор</DataPath>
+											<ChoiceButton>false</ChoiceButton>
+											<ContextMenu name="ДолговоеОбязательствоКредиторКонтекстноеМеню" id="393"/>
+											<ExtendedTooltip name="ДолговоеОбязательствоКредиторРасширеннаяПодсказка" id="394"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="ГруппаДолжникИнформация" id="453">
 									<Title>
 										<v8:item>
@@ -562,15 +603,34 @@
 							</ToolTip>
 							<ExtendedTooltip name="ОбъектУчета_ПустоExtendedTooltip" id="160"/>
 							<ChildItems>
-								<InputField name="Объект" id="118">
-									<DataPath>Объект.Объект</DataPath>
-									<AutoMaxWidth>false</AutoMaxWidth>
-									<ContextMenu name="ОбъектКонтекстноеМеню" id="119"/>
-									<ExtendedTooltip name="ОбъектExtendedTooltip" id="161"/>
-									<Events>
-										<Event name="OnChange">ОбъектПриИзменении</Event>
-									</Events>
-								</InputField>
+								<UsualGroup name="ГруппаОбъект" id="466">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Объект</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа объект</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаОбъектРасширеннаяПодсказка" id="467"/>
+									<ChildItems>
+										<InputField name="Объект" id="118">
+											<DataPath>Объект.Объект</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ОбъектКонтекстноеМеню" id="119"/>
+											<ExtendedTooltip name="ОбъектExtendedTooltip" id="161"/>
+											<Events>
+												<Event name="OnChange">ОбъектПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</Page>
 					</ChildItems>
@@ -663,6 +723,7 @@
 				</InputField>
 				<LabelField name="Ответственный" id="64">
 					<DataPath>Объект.Ответственный</DataPath>
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -678,6 +739,7 @@
 				</LabelField>
 				<LabelField name="Исполнитель" id="31">
 					<DataPath>Объект.Исполнитель</DataPath>
+					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
@@ -695,6 +757,7 @@
 				</LabelField>
 				<LabelField name="Автор" id="13">
 					<DataPath>Объект.Автор</DataPath>
+					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<Title>
 						<v8:item>
@@ -746,7 +809,6 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ИнформацияРасширеннаяПодсказка" id="359"/>
 					<ChildItems>
 						<Button name="ДолжникМероприятия" id="356">
@@ -844,7 +906,6 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ОбещанияИПлатежиРасширеннаяПодсказка" id="402"/>
 					<ChildItems>
 						<Button name="ОбещанныеПлатежи" id="380">
@@ -933,7 +994,6 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ВнешниеСвязиРасширеннаяПодсказка" id="400"/>
 					<ChildItems>
 						<Button name="ПоискНомераВБазе" id="395">
@@ -1021,7 +1081,6 @@
 					</ToolTip>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
-					<Representation>StrongSeparation</Representation>
 					<ExtendedTooltip name="ПланировщикРасширеннаяПодсказка" id="418"/>
 					<ChildItems>
 						<Button name="ЗапланироватьЗвонок" id="419">
@@ -1529,6 +1588,7 @@
 			<ExtendedTooltip name="ГруппаДопДанныеExtendedTooltip" id="178"/>
 		</UsualGroup>
 		<LabelDecoration name="Инструкция" id="234">
+			<Visible>false</Visible>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<Title formatted="false">
 				<v8:item>
@@ -2994,15 +3054,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Тип ВЦ</v8:content>
-				</v8:item>
-			</Title>
-			<Type/>
-		</Attribute>
-		<Attribute name="НеопознанныйОбъект" id="29">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Неопознанный объект</v8:content>
 				</v8:item>
 			</Title>
 			<Type/>

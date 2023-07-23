@@ -7,8 +7,8 @@
 		</v8:item>
 	</Title>
 	<Width>20</Width>
-	<Height>10</Height>
-	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<Height>12</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
@@ -76,7 +76,7 @@
 		<UsualGroup name="ГруппаОбработкаЗвонка" id="1">
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
+			<Representation>NormalSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаОбработкаЗвонкаРасширеннаяПодсказка" id="39"/>
 			<ChildItems>
@@ -244,6 +244,64 @@
 						</LabelDecoration>
 					</ChildItems>
 				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПодписиКнопок" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подписи кнопок</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подписи кнопок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодписиКнопокРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияПринятьЗвонок" id="51">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Принять звонок</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияПринятьЗвонокКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ДекорацияПринятьЗвонокРасширеннаяПодсказка" id="53"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияРазделитель" id="62">
+					<ContextMenu name="ДекорацияРазделительКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ДекорацияРазделительРасширеннаяПодсказка" id="64"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияОтклонитьЗвонок" id="56">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отклонить звонок</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОтклонитьЗвонокКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ДекорацияОтклонитьЗвонокРасширеннаяПодсказка" id="58"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияРазделитель2" id="65">
+					<ContextMenu name="ДекорацияРазделитель2КонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ДекорацияРазделитель2РасширеннаяПодсказка" id="67"/>
+				</LabelDecoration>
+				<LabelDecoration name="ДекорацияОткрытьДоговор" id="59">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть договор</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОткрытьДоговорКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДекорацияОткрытьДоговорРасширеннаяПодсказка" id="61"/>
+				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

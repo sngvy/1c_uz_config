@@ -114,6 +114,20 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ДействияРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
+				<Button name="Отправить" id="7">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<Width>15</Width>
+					<Height>2</Height>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<CommandName>Form.Command.Отправить</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="8"/>
+				</Button>
 				<Button name="Шаблоны" id="20">
 					<Type>UsualButton</Type>
 					<Representation>PictureAndText</Representation>
@@ -132,20 +146,6 @@
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ШаблоныРасширеннаяПодсказка" id="21"/>
-				</Button>
-				<Button name="Отправить" id="7">
-					<Type>UsualButton</Type>
-					<Representation>PictureAndText</Representation>
-					<DefaultButton>true</DefaultButton>
-					<Width>15</Width>
-					<Height>2</Height>
-					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-					<CommandName>Form.Command.Отправить</CommandName>
-					<Picture>
-						<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="ОтправитьРасширеннаяПодсказка" id="8"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>

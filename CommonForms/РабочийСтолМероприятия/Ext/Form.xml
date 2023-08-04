@@ -3875,9 +3875,7 @@
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
 									<ContextMenu name="ОбещанияСегодняКонтекстноеМеню" id="1239"/>
-									<AutoCommandBar name="ОбещанияСегодняКоманднаяПанель" id="1240">
-										<Autofill>false</Autofill>
-									</AutoCommandBar>
+									<AutoCommandBar name="ОбещанияСегодняКоманднаяПанель" id="1240"/>
 									<ExtendedTooltip name="ОбещанияСегодняРасширеннаяПодсказка" id="1241"/>
 									<SearchStringAddition name="ОбещанияСегодняСтрокаПоиска" id="1242">
 										<AdditionSource>
@@ -3943,9 +3941,7 @@
 									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ОбещанияСегодняДатыИСуммыКонтекстноеМеню" id="1377"/>
-									<AutoCommandBar name="ОбещанияСегодняДатыИСуммыКоманднаяПанель" id="1378">
-										<Autofill>false</Autofill>
-									</AutoCommandBar>
+									<AutoCommandBar name="ОбещанияСегодняДатыИСуммыКоманднаяПанель" id="1378"/>
 									<ExtendedTooltip name="ОбещанияСегодняДатыИСуммыРасширеннаяПодсказка" id="1379"/>
 									<SearchStringAddition name="ОбещанияСегодняДатыИСуммыСтрокаПоиска" id="1380">
 										<AdditionSource>
@@ -4032,9 +4028,7 @@
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
 									<ContextMenu name="ОбещанияМесяцКонтекстноеМеню" id="1269"/>
-									<AutoCommandBar name="ОбещанияМесяцКоманднаяПанель" id="1270">
-										<Autofill>false</Autofill>
-									</AutoCommandBar>
+									<AutoCommandBar name="ОбещанияМесяцКоманднаяПанель" id="1270"/>
 									<ExtendedTooltip name="ОбещанияМесяцРасширеннаяПодсказка" id="1271"/>
 									<SearchStringAddition name="ОбещанияМесяцСтрокаПоиска" id="1272">
 										<AdditionSource>
@@ -4100,9 +4094,7 @@
 									<SearchControlLocation>None</SearchControlLocation>
 									<RowFilter xsi:nil="true"/>
 									<ContextMenu name="ОбещанияМесяцДатыИСуммыКонтекстноеМеню" id="1349"/>
-									<AutoCommandBar name="ОбещанияМесяцДатыИСуммыКоманднаяПанель" id="1350">
-										<Autofill>false</Autofill>
-									</AutoCommandBar>
+									<AutoCommandBar name="ОбещанияМесяцДатыИСуммыКоманднаяПанель" id="1350"/>
 									<ExtendedTooltip name="ОбещанияМесяцДатыИСуммыРасширеннаяПодсказка" id="1351"/>
 									<SearchStringAddition name="ОбещанияМесяцДатыИСуммыСтрокаПоиска" id="1352">
 										<AdditionSource>
@@ -4145,24 +4137,107 @@
 								</Table>
 							</ChildItems>
 						</Page>
-						<Page name="ГруппаКонтрольСроков" id="1435">
+						<Page name="ГруппаПогашенияМесяц" id="1435">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа контроль сроков</v8:content>
+									<v8:content>Погашения за месяц</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа контроль сроков</v8:content>
+									<v8:content>Группа погашения месяц</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Picture>
-								<xr:Ref>StdPicture.Today</xr:Ref>
+								<xr:Ref>StdPicture.Post</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
-							<ExtendedTooltip name="ГруппаКонтрольСроковРасширеннаяПодсказка" id="1436"/>
+							<ExtendedTooltip name="ГруппаПогашенияМесяцРасширеннаяПодсказка" id="1436"/>
+							<ChildItems>
+								<Table name="ПогашенияМесяц" id="1441">
+									<CommandBarLocation>None</CommandBarLocation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialListView>Beginning</InitialListView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>ПогашенияМесяц</DataPath>
+									<RowPictureDataPath>ПогашенияМесяц.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПогашенияМесяцКонтекстноеМеню" id="1442"/>
+									<AutoCommandBar name="ПогашенияМесяцКоманднаяПанель" id="1443"/>
+									<ExtendedTooltip name="ПогашенияМесяцРасширеннаяПодсказка" id="1444"/>
+									<SearchStringAddition name="ПогашенияМесяцСтрокаПоиска" id="1445">
+										<AdditionSource>
+											<Item>ПогашенияМесяц</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПогашенияМесяцСтрокаПоискаКонтекстноеМеню" id="1446"/>
+										<ExtendedTooltip name="ПогашенияМесяцСтрокаПоискаРасширеннаяПодсказка" id="1447"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПогашенияМесяцСостояниеПросмотра" id="1448">
+										<AdditionSource>
+											<Item>ПогашенияМесяц</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПогашенияМесяцСостояниеПросмотраКонтекстноеМеню" id="1449"/>
+										<ExtendedTooltip name="ПогашенияМесяцСостояниеПросмотраРасширеннаяПодсказка" id="1450"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПогашенияМесяцУправлениеПоиском" id="1451">
+										<AdditionSource>
+											<Item>ПогашенияМесяц</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПогашенияМесяцУправлениеПоискомКонтекстноеМеню" id="1452"/>
+										<ExtendedTooltip name="ПогашенияМесяцУправлениеПоискомРасширеннаяПодсказка" id="1453"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateCell">СписокДОПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ПогашенияМесяцДатаПлатежа" id="1478">
+											<DataPath>ПогашенияМесяц.ДатаПлатежа</DataPath>
+											<ContextMenu name="ПогашенияМесяцДатаПлатежаКонтекстноеМеню" id="1479"/>
+											<ExtendedTooltip name="ПогашенияМесяцДатаПлатежаРасширеннаяПодсказка" id="1480"/>
+										</LabelField>
+										<LabelField name="ПогашенияМесяцЗайм" id="1463">
+											<DataPath>ПогашенияМесяц.Займ</DataPath>
+											<ContextMenu name="ПогашенияМесяцЗаймКонтекстноеМеню" id="1464"/>
+											<ExtendedTooltip name="ПогашенияМесяцЗаймРасширеннаяПодсказка" id="1465"/>
+										</LabelField>
+										<LabelField name="ПогашенияМесяцЗаймКредитор" id="1484">
+											<DataPath>ПогашенияМесяц.Займ.Кредитор</DataPath>
+											<ContextMenu name="ПогашенияМесяцЗаймКредиторКонтекстноеМеню" id="1485"/>
+											<ExtendedTooltip name="ПогашенияМесяцЗаймКредиторРасширеннаяПодсказка" id="1486"/>
+										</LabelField>
+										<LabelField name="ПогашенияМесяцЗаймДолжник" id="1481">
+											<DataPath>ПогашенияМесяц.Займ.Должник</DataPath>
+											<ContextMenu name="ПогашенияМесяцЗаймДолжникКонтекстноеМеню" id="1482"/>
+											<ExtendedTooltip name="ПогашенияМесяцЗаймДолжникРасширеннаяПодсказка" id="1483"/>
+										</LabelField>
+										<LabelField name="ПогашенияМесяцСуммаПлатежа" id="1472">
+											<DataPath>ПогашенияМесяц.СуммаПлатежа</DataPath>
+											<ContextMenu name="ПогашенияМесяцСуммаПлатежаКонтекстноеМеню" id="1473"/>
+											<ExtendedTooltip name="ПогашенияМесяцСуммаПлатежаРасширеннаяПодсказка" id="1474"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
 						</Page>
 					</ChildItems>
 				</Pages>
@@ -6806,6 +6881,42 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="ПогашенияМесяц" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Погашения месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.ПоступлениеПлатежа</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПлатежа</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

@@ -150,6 +150,122 @@
 				<CommandName>Form.Command.ЗапросНаБанкротство</CommandName>
 				<ExtendedTooltip name="ФормаЗапросНаБанкротствоРасширеннаяПодсказка" id="786"/>
 			</Button>
+			<Popup name="ФормаГруппаСлужебные" id="998">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Служебные</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа служебные</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>StdPicture.UserWithAuthentication</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаГруппаСлужебныеРасширеннаяПодсказка" id="999"/>
+				<ChildItems>
+					<Button name="ПередатьВБанкротные" id="1000">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВБанкротные</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ПодсистемаБанкротство</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьВБанкротныеРасширеннаяПодсказка" id="1001"/>
+					</Button>
+					<Button name="ПередатьВИзъятые" id="1002">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВИзъятые</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ЗвонокКредитору16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьВИзъятыеРасширеннаяПодсказка" id="1003"/>
+					</Button>
+					<Button name="ПередатьВНеконструктивные" id="1004">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПередатьВНеконструктивные</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_Неконструктивные16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьВНеконструктивныеРасширеннаяПодсказка" id="1005"/>
+					</Button>
+					<Button name="ПередатьВПогашенные" id="1006">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВПогашенные</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Post</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьВПогашенныеРасширеннаяПодсказка" id="1007"/>
+					</Button>
+					<Button name="ПередатьВРаботу" id="1008">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВРаботу</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Catalog</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьВРаботуРасширеннаяПодсказка" id="1009"/>
+					</Button>
+					<Button name="ПередатьВПроцессБанкротства" id="1012">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВПроцессБанкротства</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ПроверкаПоКАД</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьВПроцессБанкротстваРасширеннаяПодсказка" id="1013"/>
+					</Button>
+					<Button name="ПередатьВоВременныйСТОП" id="1010">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВоВременныйСТОП</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ВременныйСТОП16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Передать во временный СТОП</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПередатьВоВременныйСТОПРасширеннаяПодсказка" id="1011"/>
+					</Button>
+					<Button name="ПередатьПоОтказуОтВзаимодействия" id="1014">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьПоОтказуОтВзаимодействия</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_Предупреждение</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьПоОтказуОтВзаимодействияРасширеннаяПодсказка" id="1015"/>
+					</Button>
+					<Button name="ПередатьПоПричинеСмерти" id="1016">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьПоПричинеСмерти</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_Смерть16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПередатьПоПричинеСмертиРасширеннаяПодсказка" id="1017"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -4519,6 +4635,141 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РасчетУсловий</Action>
+		</Command>
+		<Command name="ПередатьВБанкротные" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в банкротные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в банкротные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВБанкротные</Action>
+		</Command>
+		<Command name="ПередатьВИзъятые" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в изъятые</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в изъятые</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВИзъятые</Action>
+		</Command>
+		<Command name="ПередатьВНеконструктивные" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в неконструктивные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в неконструктивные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВНеконструктивные</Action>
+		</Command>
+		<Command name="ПередатьВПогашенные" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в погашенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в погашенные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВПогашенные</Action>
+		</Command>
+		<Command name="ПередатьВРаботу" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в работу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в работу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВРаботу</Action>
+		</Command>
+		<Command name="ПередатьВоВременныйСТОП" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать во временный СТОП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать во временный СТОП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВоВременныйСТОП</Action>
+		</Command>
+		<Command name="ПередатьВПроцессБанкротства" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в процесс банкротства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать в процесс банкротства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВПроцессБанкротства</Action>
+		</Command>
+		<Command name="ПередатьПоОтказуОтВзаимодействия" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать по отказу от взаимодействия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать по отказу от взаимодействия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьПоОтказуОтВзаимодействия</Action>
+		</Command>
+		<Command name="ПередатьПоПричинеСмерти" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать по причине смерти</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать по причине смерти</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьПоПричинеСмерти</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

@@ -31,140 +31,63 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<Pages name="СтраницаВводныхДанных" id="55">
+		<UsualGroup name="ГруппаЗадолженность" id="26">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страница вводных данных</v8:content>
+					<v8:content>Задолженность</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страница вводных данных</v8:content>
+					<v8:content>Группа задолженность</v8:content>
 				</v8:item>
 			</ToolTip>
-			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-			<PagesRepresentation>TabsOnTop</PagesRepresentation>
-			<ExtendedTooltip name="СтраницаВводныхДанныхРасширеннаяПодсказка" id="56"/>
-			<ChildItems>
-				<Page name="Задолженность" id="26">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Задолженность</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Задолженность</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.Post</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="ЗадолженностьРасширеннаяПодсказка" id="27"/>
-					<ChildItems>
-						<InputField name="СуммаОстатка" id="28">
-							<DataPath>СуммаОстатка</DataPath>
-							<ContextMenu name="СуммаОстаткаКонтекстноеМеню" id="29"/>
-							<ExtendedTooltip name="СуммаОстаткаРасширеннаяПодсказка" id="30"/>
-						</InputField>
-						<InputField name="СрокПогашения" id="31">
-							<DataPath>СрокПогашения</DataPath>
-							<BackColor>web:WhiteSmoke</BackColor>
-							<ContextMenu name="СрокПогашенияКонтекстноеМеню" id="32"/>
-							<ExtendedTooltip name="СрокПогашенияРасширеннаяПодсказка" id="33"/>
-						</InputField>
-					</ChildItems>
-				</Page>
-				<Page name="Кредитор" id="3">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Кредитор</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Кредитор</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>StdPicture.Catalog</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="КредиторРасширеннаяПодсказка" id="4"/>
-					<ChildItems>
-						<CheckBoxField name="Быстроденьги" id="5">
-							<DataPath>Быстроденьги</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="БыстроденьгиКонтекстноеМеню" id="6"/>
-							<ExtendedTooltip name="БыстроденьгиРасширеннаяПодсказка" id="7"/>
-						</CheckBoxField>
-						<CheckBoxField name="ФинКоллект" id="23">
-							<DataPath>ФинКоллект</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ФинКоллектКонтекстноеМеню" id="24"/>
-							<ExtendedTooltip name="ФинКоллектРасширеннаяПодсказка" id="25"/>
-						</CheckBoxField>
-						<CheckBoxField name="ЛигаДенег" id="14">
-							<DataPath>ЛигаДенег</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ЛигаДенегКонтекстноеМеню" id="15"/>
-							<ExtendedTooltip name="ЛигаДенегРасширеннаяПодсказка" id="16"/>
-						</CheckBoxField>
-						<CheckBoxField name="Турбозайм" id="20">
-							<DataPath>Турбозайм</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ТурбозаймКонтекстноеМеню" id="21"/>
-							<ExtendedTooltip name="ТурбозаймРасширеннаяПодсказка" id="22"/>
-						</CheckBoxField>
-						<CheckBoxField name="ГлавныйЗайм" id="8">
-							<DataPath>ГлавныйЗайм</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ГлавныйЗаймКонтекстноеМеню" id="9"/>
-							<ExtendedTooltip name="ГлавныйЗаймРасширеннаяПодсказка" id="10"/>
-						</CheckBoxField>
-						<CheckBoxField name="ДжетМани" id="11">
-							<DataPath>ДжетМани</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ДжетМаниКонтекстноеМеню" id="12"/>
-							<ExtendedTooltip name="ДжетМаниРасширеннаяПодсказка" id="13"/>
-						</CheckBoxField>
-						<CheckBoxField name="Мили" id="17">
-							<DataPath>Мили</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="МилиКонтекстноеМеню" id="18"/>
-							<ExtendedTooltip name="МилиРасширеннаяПодсказка" id="19"/>
-						</CheckBoxField>
-					</ChildItems>
-				</Page>
-			</ChildItems>
-		</Pages>
-		<UsualGroup name="РезультатыРасчетов" id="34">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Результаты расчетов</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Результаты расчетов</v8:content>
-				</v8:item>
-			</ToolTip>
-			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="РезультатыРасчетовРасширеннаяПодсказка" id="35"/>
+			<ExtendedTooltip name="ГруппаЗадолженностьРасширеннаяПодсказка" id="27"/>
 			<ChildItems>
-				<UsualGroup name="Дисконт" id="51">
+				<InputField name="Кредитор" id="62">
+					<DataPath>Кредитор</DataPath>
+					<DropListButton>false</DropListButton>
+					<OpenButton>false</OpenButton>
+					<ContextMenu name="КредиторКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="КредиторРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="СуммаОстатка" id="28">
+					<DataPath>СуммаОстатка</DataPath>
+					<ContextMenu name="СуммаОстаткаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СуммаОстаткаРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="СрокПогашения" id="31">
+					<DataPath>СрокПогашения</DataPath>
+					<BackColor>web:WhiteSmoke</BackColor>
+					<ContextMenu name="СрокПогашенияКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="СрокПогашенияРасширеннаяПодсказка" id="33"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаРезультатыРасчетов" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результаты расчетов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа результаты расчетов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаРезультатыРасчетовРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаДисконт" id="51">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -174,14 +97,14 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Дисконт</v8:content>
+							<v8:content>Группа дисконт</v8:content>
 						</v8:item>
 					</ToolTip>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="ДисконтРасширеннаяПодсказка" id="52"/>
+					<ExtendedTooltip name="ГруппаДисконтРасширеннаяПодсказка" id="52"/>
 					<ChildItems>
 						<InputField name="СуммаКЗакрытиюДисконт" id="39">
 							<DataPath>СуммаКЗакрытиюДисконт</DataPath>
@@ -195,7 +118,7 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="Реструктуризация" id="53">
+				<UsualGroup name="ГруппаРеструктуризация" id="53">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -205,14 +128,14 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Реструктуризация</v8:content>
+							<v8:content>Группа реструктуризация</v8:content>
 						</v8:item>
 					</ToolTip>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
 					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
 					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="РеструктуризацияРасширеннаяПодсказка" id="54"/>
+					<ExtendedTooltip name="ГруппаРеструктуризацияРасширеннаяПодсказка" id="54"/>
 					<ChildItems>
 						<InputField name="СуммаКЗакрытиюРеструктуризация" id="36">
 							<DataPath>СуммаКЗакрытиюРеструктуризация</DataPath>
@@ -235,83 +158,6 @@
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
-		<Attribute name="Быстроденьги" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Быстроденьги (до 6 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ДжетМани" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Джет Мани (до 6 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ЛигаДенег" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Лига Денег (до 8 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="Турбозайм" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Турбозайм (до 8 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ФинКоллект" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>ФинКоллект (до 8 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="Мили" id="6">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Мили (до 8 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ГлавныйЗайм" id="7">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Главный Займ (до 8 мес.)</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="СуммаОстатка" id="8">
 			<Title>
 				<v8:item>
@@ -461,6 +307,32 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="СкрытоеПолеКодКредитора" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрытое поле код кредитора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Кредитор" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

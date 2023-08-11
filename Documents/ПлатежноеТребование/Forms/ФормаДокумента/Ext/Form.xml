@@ -40,11 +40,6 @@
 			<ContextMenu name="ЦедентКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ЦедентРасширеннаяПодсказка" id="15"/>
 		</InputField>
-		<InputField name="КодКредитора" id="28">
-			<DataPath>Объект.КодКредитора</DataPath>
-			<ContextMenu name="КодКредитораКонтекстноеМеню" id="29"/>
-			<ExtendedTooltip name="КодКредитораРасширеннаяПодсказка" id="30"/>
-		</InputField>
 		<InputField name="ТелефонКредитора" id="25">
 			<DataPath>Объект.ТелефонКредитора</DataPath>
 			<ContextMenu name="ТелефонКредитораКонтекстноеМеню" id="26"/>
@@ -66,6 +61,21 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="СкрытоеПолеКодКредитора" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрытое поле код кредитора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 </Form>

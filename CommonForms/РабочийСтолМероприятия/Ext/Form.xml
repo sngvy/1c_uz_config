@@ -6,6 +6,7 @@
 			<v8:content>Рабочий стол</v8:content>
 		</v8:item>
 	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
 	<VerticalSpacing>Half</VerticalSpacing>
@@ -4739,29 +4740,28 @@
 					<ContextMenu name="ВерсияКонфигурацииNCКонтекстноеМеню" id="1419"/>
 					<ExtendedTooltip name="ВерсияКонфигурацииNCРасширеннаяПодсказка" id="1420"/>
 				</LabelField>
-				<Button name="СписокИзменений" id="1421">
+				<Button name="ФормаИнформацияОВерсии" id="1421">
 					<Type>UsualButton</Type>
-					<Representation>PictureAndText</Representation>
-					<Width>16</Width>
+					<Representation>Picture</Representation>
 					<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
 					<Picture>
-						<xr:Ref>CommonPicture.NC_Информация</xr:Ref>
+						<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Список изменений</v8:content>
+							<v8:content>Информация о версии</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="СписокИзмененийРасширеннаяПодсказка" id="1422"/>
+					<ExtendedTooltip name="ФормаИнформацияОВерсииРасширеннаяПодсказка" id="1422"/>
 				</Button>
-				<Button name="ПроверкаПодключения" id="1427">
+				<Button name="ФормаПроверкаПодключения" id="1427">
 					<Type>UsualButton</Type>
-					<Representation>PictureAndText</Representation>
+					<Representation>Picture</Representation>
 					<CommandName>Form.Command.ПроверитьПодключение</CommandName>
 					<Picture>
-						<xr:Ref>CommonPicture.NC_Подключение</xr:Ref>
+						<xr:Ref>CommonPicture.NC_Подключение16</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<Title>
@@ -4770,7 +4770,7 @@
 							<v8:content>Проверка подключения</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="ПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
+					<ExtendedTooltip name="ФормаПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -6802,6 +6802,9 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<Save>
+				<Field>ВерсияКонфигурацииNC</Field>
+			</Save>
 		</Attribute>
 		<Attribute name="РольРКЦ" id="70">
 			<Title>

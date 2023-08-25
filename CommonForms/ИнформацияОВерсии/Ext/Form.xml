@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
-	<Width>35</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
 	<CommandBarLocation>None</CommandBarLocation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
-	<Events>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
-	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаСписокИзменений" id="7">
 			<Title>
@@ -27,30 +25,30 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСписокИзмененийРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
-				<PictureDecoration name="ОбновлениеИконка" id="1">
+				<PictureDecoration name="ИнформацияОВерсииИконка" id="1">
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Обновление иконка</v8:content>
+							<v8:content>Информация о версии иконка</v8:content>
 						</v8:item>
 					</Title>
 					<Picture>
-						<xr:Ref>CommonPicture.NC_Обновление</xr:Ref>
+						<xr:Ref>CommonPicture.NC_ИнформацияОВерсии</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
-					<ContextMenu name="ОбновлениеИконкаКонтекстноеМеню" id="2"/>
-					<ExtendedTooltip name="ОбновлениеИконкаРасширеннаяПодсказка" id="3"/>
+					<ContextMenu name="ИнформацияОВерсииИконкаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИнформацияОВерсииИконкаРасширеннаяПодсказка" id="3"/>
 				</PictureDecoration>
-				<LabelDecoration name="ОбновлениеВерсия" id="4">
+				<LabelDecoration name="ИнформацияОВерсииВерсия" id="4">
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 3.8.22&lt;/&gt;&lt;/&gt;</v8:content>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 3.8.22.1 от 27.08.2023&lt;/&gt;&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
-					<ContextMenu name="ОбновлениеВерсияКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ОбновлениеВерсияРасширеннаяПодсказка" id="6"/>
+					<ContextMenu name="ИнформацияОВерсииВерсияКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ИнформацияОВерсииВерсияРасширеннаяПодсказка" id="6"/>
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
@@ -71,7 +69,7 @@
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="13"/>
 			<ChildItems>
-				<LabelDecoration name="ОбновлениеИсправления" id="14">
+				<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -82,8 +80,8 @@
 ● Повышена стабильность работы БИТ.Phone</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ОбновлениеИсправленияКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ОбновлениеИсправленияРасширеннаяПодсказка" id="16"/>
+					<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
@@ -104,7 +102,7 @@
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
 			<ChildItems>
-				<LabelDecoration name="ОбновлениеНовое" id="19">
+				<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -123,8 +121,8 @@
 ● Добавлен отчет "Проведенные платежи"</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ОбновлениеНовоеКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ОбновлениеНовоеРасширеннаяПодсказка" id="21"/>
+					<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
@@ -145,7 +143,7 @@
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="23"/>
 			<ChildItems>
-				<LabelDecoration name="ОбновлениеИзменения" id="24">
+				<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -158,13 +156,28 @@
 ● Улучшена логика блокировщика неконтактных дел</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ОбновлениеИзмененияКонтекстноеМеню" id="25"/>
-					<ExtendedTooltip name="ОбновлениеИзмененияРасширеннаяПодсказка" id="26"/>
+					<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
-	<Attributes/>
+	<Attributes>
+		<Attribute name="ПоказыватьПриЗапуске" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать при запуске</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ПоказыватьПриЗапуске</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
 	<Commands>
 		<Command name="ОтключитьПоказСписка" id="1">
 			<Title>

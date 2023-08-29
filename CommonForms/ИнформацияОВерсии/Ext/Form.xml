@@ -43,7 +43,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 3.8.22.1 от 27.08.2023&lt;/&gt;&lt;/&gt;</v8:content>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 3.8.22.2 от 29.08.2023&lt;/&gt;&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -52,61 +52,81 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаИсправления" id="12">
+		<UsualGroup name="ГруппаСлужебная" id="27">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Исправления</v8:content>
+					<v8:content>Группа служебная</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа исправления</v8:content>
+					<v8:content>Группа служебная</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Behavior>Collapsible</Behavior>
-			<ControlRepresentation>Picture</ControlRepresentation>
-			<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="13"/>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="28"/>
 			<ChildItems>
-				<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
-					<Title formatted="false">
+				<UsualGroup name="ГруппаИсправления" id="12">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>● Исправлены ошибки при создании мероприятия из формы долгового обязательства
+							<v8:content>Исправления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исправления</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>● Исправлены ошибки при создании мероприятия из формы долгового обязательства
 
 ● Исправлены ошибки при работе с портфелем
 
 ● Повышена стабильность работы БИТ.Phone</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
-					<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
-				</LabelDecoration>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаНовое" id="17">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Новое</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа новое</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Collapsible</Behavior>
-			<ControlRepresentation>Picture</ControlRepresentation>
-			<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
-			<ChildItems>
-				<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
-					<Title formatted="false">
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНовое" id="17">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>● При поиске номера телефона по базе добавлена возможность создавать мероприятия из списка всех мероприятий по найденному договору
+							<v8:content>Новое</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа новое</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>● При поиске номера телефона по базе добавлена возможность создавать мероприятия из списка всех мероприятий по найденному договору
 
 ● В форме долгового обязательства добавлены служебные функции РКЦ для быстрого перевода договора в другую категорию
 
@@ -119,46 +139,49 @@
 ● На рабочем столе добавлена возможность просмотра погашений за текущий месяц
 
 ● Добавлен отчет "Проведенные платежи"</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
-				</LabelDecoration>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаИзменения" id="22">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Изменения</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа изменения</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Collapsible</Behavior>
-			<ControlRepresentation>Picture</ControlRepresentation>
-			<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="23"/>
-			<ChildItems>
-				<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
-					<Title formatted="false">
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИзменения" id="22">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>● Переработана форма контроля сроков для разделения на обработанные и просроченные дела
+							<v8:content>Изменения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изменения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ControlRepresentation>Picture</ControlRepresentation>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>● Переработана форма контроля сроков для разделения на обработанные и просроченные дела
 
 ● Отключено голосовое оповещение об изменении статуса "Не беспокоить" в БИТ.Phone
 
 ● В формах расчета АВ и расчета условий кредитор теперь выбирается автоматически
 
 ● Улучшена логика блокировщика неконтактных дел</v8:content>
-						</v8:item>
-					</Title>
-					<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
-					<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
-				</LabelDecoration>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

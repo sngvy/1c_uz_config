@@ -43,7 +43,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 3.8.31.1 от 01.09.2023&lt;/&gt;&lt;/&gt;</v8:content>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 3.9.5 от 05.09.2023&lt;/&gt;&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -70,124 +70,107 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="28"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаИсправления" id="12">
+				<Pages name="ГруппаСлужебнаяСтраницы" id="29">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Исправления</v8:content>
+							<v8:content>Группа служебная страницы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа исправления</v8:content>
+							<v8:content>Группа служебная страницы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Behavior>Usual</Behavior>
-					<ControlRepresentation>Picture</ControlRepresentation>
-					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="13"/>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСлужебнаяСтраницыРасширеннаяПодсказка" id="30"/>
 					<ChildItems>
-						<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
-							<Title formatted="false">
+						<Page name="ГруппаИсправления" id="31">
+							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Исправлена ошибка, при которой в форме мероприятия отображалась пустая информация о должнике и задолженности, если договор не был опознан
-
-● Исправлена ошибка администрирования звонков, если сотрудник находится в статусе "Не беспокоить"
-
-● Исправлены ошибки при создании мероприятия из формы долгового обязательства
-
-● Исправлены ошибки при работе с портфелем
-
-● Повышена стабильность работы БИТ.Phone</v8:content>
+									<v8:content>Исправления</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
-							<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
-						</LabelDecoration>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаНовое" id="17">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Новое</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа новое</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Behavior>Usual</Behavior>
-					<ControlRepresentation>Picture</ControlRepresentation>
-					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
-					<ChildItems>
-						<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
-							<Title formatted="false">
+							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● При поиске номера телефона по базе добавлена возможность создавать мероприятия из списка всех мероприятий по найденному договору
-
-● В форме долгового обязательства добавлены служебные функции РКЦ для перевода договора в другую категорию
-
-● Обновлена логика формирования списков автообзвона для более равномерного распределения дел по кредиторам
-
-● При проверке на банкротство добавлена возможность выбрать источник поиска информации
-
-● В поле Контакт формы мероприятия добавлено отображение комментариев к номерам
-
-● На рабочем столе добавлена возможность просмотра погашений за текущий месяц
-
-● В форме мероприятия добавлена подсветка кнопок набора и сброса звонка
-
-● Добавлен отчет "Проведенные платежи"</v8:content>
+									<v8:content>Группа исправления</v8:content>
 								</v8:item>
-							</Title>
-							<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
-							<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
-						</LabelDecoration>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаИзменения" id="22">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Изменения</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа изменения</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Behavior>Usual</Behavior>
-					<ControlRepresentation>Picture</ControlRepresentation>
-					<Representation>StrongSeparation</Representation>
-					<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="23"/>
-					<ChildItems>
-						<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
-							<Title formatted="false">
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Group>HorizontalIfPossible</Group>
+							<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="32"/>
+							<ChildItems>
+								<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>● Исправлены ошибки и повышена стабильность работы</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаНовое" id="17">
+							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Переработана форма контроля сроков для разделения на обработанные и просроченные дела
-
-● Отключено голосовое оповещение об изменении статуса "Не беспокоить" в БИТ.Phone
-
-● В формах расчета АВ и расчета условий кредитор выбирается автоматически
-
-● Улучшена логика блокировщика неконтактных дел</v8:content>
+									<v8:content>Новое</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
-							<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
-						</LabelDecoration>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа новое</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Group>HorizontalIfPossible</Group>
+							<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
+							<ChildItems>
+								<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
+									<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаИзменения" id="33">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа изменения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="34"/>
+							<ChildItems>
+								<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
+									<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
 					</ChildItems>
-				</UsualGroup>
+				</Pages>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>

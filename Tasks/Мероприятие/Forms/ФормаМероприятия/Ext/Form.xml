@@ -2040,6 +2040,19 @@
 							<Shape>Oval</Shape>
 							<ExtendedTooltip name="НаписатьВWhatsAppРасширеннаяПодсказка" id="410"/>
 						</Button>
+						<Button name="НаписатьВViber" id="470">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<Width>6</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.НаписатьВВайбер</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСViber</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Shape>Oval</Shape>
+							<ExtendedTooltip name="НаписатьВViberРасширеннаяПодсказка" id="471"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 				<InputField name="КонтактноеЛицо" id="19">
@@ -3201,6 +3214,15 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ТипВайбер" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип Вайбер</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоДереву" id="1">
@@ -3868,6 +3890,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверкаНаБанкротство</Action>
+		</Command>
+		<Command name="НаписатьВВайбер" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать в Вайбер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать в Viber</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаписатьВВайбер</Action>
 		</Command>
 	</Commands>
 	<Parameters>

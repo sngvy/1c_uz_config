@@ -2760,12 +2760,6 @@
 											<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Найти в WhatsApp</v8:content>
-											</v8:item>
-										</Title>
 										<ExtendedTooltip name="ФормаНайтиВWhatsAppРасширеннаяПодсказка" id="824"/>
 									</Button>
 									<Button name="ФормаWhatsApp" id="819">
@@ -2776,13 +2770,17 @@
 											<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСWhatsApp</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Написать в WhatsApp</v8:content>
-											</v8:item>
-										</Title>
 										<ExtendedTooltip name="ФормаWhatsAppРасширеннаяПодсказка" id="820"/>
+									</Button>
+									<Button name="ФормаViber" id="1018">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.НаписатьВВайбер</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.NC_ПодсистемаИнтеграцияСViber</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ФормаViberРасширеннаяПодсказка" id="1019"/>
 									</Button>
 									<Button name="ФормаДолжникТелефоныОтправитьEmail" id="320">
 										<Type>CommandBarButton</Type>
@@ -4383,6 +4381,15 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<Attribute name="ТипВайбер" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип Вайбер</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПечатьУЭД" id="4">
@@ -4770,6 +4777,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПередатьПоПричинеСмерти</Action>
+		</Command>
+		<Command name="НаписатьВВайбер" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать в Viber</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать в Viber</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НаписатьВВайбер</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

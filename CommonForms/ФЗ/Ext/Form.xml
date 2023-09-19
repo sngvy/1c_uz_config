@@ -266,7 +266,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Взаимодействие с помощью сообщений</v8:content>
+									<v8:content>Взаимодействие с помощью СМС</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -361,7 +361,7 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Взаимодействе через whats app</v8:content>
+									<v8:content>Взаимодействе через WhatsApp</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Behavior>Usual</Behavior>
@@ -393,6 +393,51 @@
 									<DataPath>НаборКонстант.ВЦМесяц</DataPath>
 									<ContextMenu name="ВЦМесяцКонтекстноеМеню" id="86"/>
 									<ExtendedTooltip name="ВЦМесяцРасширеннаяПодсказка" id="87"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ВзаимодействеЧерезViber" id="91">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Взаимодействе через Viber</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Взаимодействе через Viber</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ВзаимодействеЧерезViberРасширеннаяПодсказка" id="92"/>
+							<ChildItems>
+								<CheckBoxField name="КоличествоВайбер" id="93">
+									<DataPath>НаборКонстант.КоличествоВайбер</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество Viber</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="КоличествоВайберКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="КоличествоВайберРасширеннаяПодсказка" id="95"/>
+								</CheckBoxField>
+								<InputField name="ВайберДень" id="96">
+									<DataPath>НаборКонстант.ВайберДень</DataPath>
+									<ContextMenu name="ВайберДеньКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="ВайберДеньРасширеннаяПодсказка" id="98"/>
+								</InputField>
+								<InputField name="ВайберНеделя" id="102">
+									<DataPath>НаборКонстант.ВайберНеделя</DataPath>
+									<ContextMenu name="ВайберНеделяКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ВайберНеделяРасширеннаяПодсказка" id="104"/>
+								</InputField>
+								<InputField name="ВайберМесяц" id="99">
+									<DataPath>НаборКонстант.ВайберМесяц</DataPath>
+									<ContextMenu name="ВайберМесяцКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ВайберМесяцРасширеннаяПодсказка" id="101"/>
 								</InputField>
 							</ChildItems>
 						</UsualGroup>

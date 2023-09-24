@@ -470,6 +470,16 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаОбновитьОстаткиРасширеннаяПодсказка" id="1430"/>
 					</Button>
+					<Button name="ФормаОбновитьОстаткиЮД" id="1489">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ОбновитьОстаткиЮД</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Post</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаОбновитьОстаткиЮДРасширеннаяПодсказка" id="1490"/>
+					</Button>
 					<Button name="ФормаОтчетыАТС" id="583">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -8046,6 +8056,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НаписатьВВайбер</Action>
+		</Command>
+		<Command name="ОбновитьОстаткиЮД" id="59">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить остатки ЮД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить остатки ЮД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьОстаткиЮД</Action>
 		</Command>
 	</Commands>
 </Form>

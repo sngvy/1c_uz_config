@@ -2782,6 +2782,22 @@
 										</Picture>
 										<ExtendedTooltip name="ФормаViberРасширеннаяПодсказка" id="1019"/>
 									</Button>
+									<Button name="ФормаЗапросДокументовНаНомер" id="1020">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ЗапроситьДокументНаНомер</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Document</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Запросить документы на номер</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ФормаЗапросДокументовНаНомерРасширеннаяПодсказка" id="1021"/>
+									</Button>
 									<Button name="ФормаДолжникТелефоныОтправитьEmail" id="320">
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
@@ -4792,6 +4808,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НаписатьВВайбер</Action>
+		</Command>
+		<Command name="ЗапроситьДокументНаНомер" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить документ на номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запросить документ на номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапроситьДокументНаНомер</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

@@ -6,8 +6,8 @@
 			<v8:content>БИТфон: входящий звонок</v8:content>
 		</v8:item>
 	</Title>
-	<Width>20</Width>
-	<Height>12</Height>
+	<Width>60</Width>
+	<Height>14</Height>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<Customizable>false</Customizable>
@@ -31,19 +31,48 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Абонент" id="11">
-			<DataPath>Абонент</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ChoiceButton>false</ChoiceButton>
-			<ClearButton>false</ClearButton>
-			<SpinButton>false</SpinButton>
-			<OpenButton>true</OpenButton>
-			<ChoiceListButton>false</ChoiceListButton>
-			<ContextMenu name="АбонентКонтекстноеМеню" id="12"/>
-			<ExtendedTooltip name="АбонентРасширеннаяПодсказка" id="35"/>
-		</InputField>
+		<UsualGroup name="ГруппаКонтактнаяИнформация" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контактная информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа контактная информация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКонтактнаяИнформацияРасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<LabelField name="Абонент" id="11">
+					<DataPath>Абонент</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<Font ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ContextMenu name="АбонентКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="АбонентРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="ДолговоеОбязательство" id="68">
+					<DataPath>ДолговоеОбязательство</DataPath>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<Font ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ContextMenu name="ДолговоеОбязательствоКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ДолговоеОбязательствоРасширеннаяПодсказка" id="70"/>
+				</LabelField>
+				<LabelField name="Кредитор" id="71">
+					<DataPath>Кредитор</DataPath>
+					<TitleFont ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<Font ref="style:NormalTextFont" height="0" kind="StyleItem"/>
+					<ContextMenu name="КредиторКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="КредиторРасширеннаяПодсказка" id="73"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 		<LabelField name="ТипАбонента" id="31">
 			<DataPath>ТипАбонента</DataPath>
 			<Visible>false</Visible>
@@ -64,16 +93,15 @@
 			<ContextMenu name="КонтактноеЛицоКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="КонтактноеЛицоРасширеннаяПодсказка" id="37"/>
 		</InputField>
-		<InputField name="НабранныйНомер" id="33">
+		<LabelField name="НабранныйНомер" id="33">
 			<DataPath>НабранныйНомер</DataPath>
 			<Visible>false</Visible>
 			<ReadOnly>true</ReadOnly>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="НабранныйНомерКонтекстноеМеню" id="34"/>
 			<ExtendedTooltip name="НабранныйНомерРасширеннаяПодсказка" id="38"/>
-		</InputField>
+		</LabelField>
 		<UsualGroup name="ГруппаОбработкаЗвонка" id="1">
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>NormalSeparation</Representation>
@@ -259,6 +287,7 @@
 					<v8:content>Группа подписи кнопок</v8:content>
 				</v8:item>
 			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<ShowTitle>false</ShowTitle>
@@ -316,7 +345,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Абонент</v8:content>
+					<v8:content>Контакт</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -385,6 +414,15 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Долговое обязательство</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="Кредитор" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитор</v8:content>
 				</v8:item>
 			</Title>
 			<Type/>

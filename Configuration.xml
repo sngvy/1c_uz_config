@@ -53,7 +53,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</xr:Item>
 			</DefaultRoles>
 			<Vendor>"БИТ"</Vendor>
-			<Version>3.6.1.18</Version>
+			<Version>3.7.6.18</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -213,8 +213,7 @@
 			<DetailedInformation>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>БИТ: Управление задолженностью, редакция 3.02
-Copyright © 2011 - 2021, ООО "Индустрия автоматизации". Все права защищены.</v8:content>
+					<v8:content>БИТ: Управление задолженностью, редакция для ООО «НОРД КОЛЛЕКТ»</v8:content>
 				</v8:item>
 			</DetailedInformation>
 			<Copyright>
@@ -269,6 +268,8 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Subsystem>КонтурФокус</Subsystem>
 			<Subsystem>ИнтеграцияСWhatsApp</Subsystem>
 			<Subsystem>Документооборот</Subsystem>
+			<Subsystem>сл2</Subsystem>
+			<Subsystem>Госуслуги</Subsystem>
 			<StyleItem>ВыполненнаяЗадача</StyleItem>
 			<StyleItem>НеСтартованныйБизнесПроцесс</StyleItem>
 			<StyleItem>ПользовательВыбранный</StyleItem>
@@ -306,6 +307,19 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<StyleItem>ЦветТекстаНевыбраннойКартинки</StyleItem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ОсновнойЭлементСписка</StyleItem>
+			<StyleItem>ЦветВсплывающейГруппы</StyleItem>
+			<StyleItem>ЦветСтрокиВМакете</StyleItem>
+			<StyleItem>ШрифтТекстКнопки</StyleItem>
+			<StyleItem>ШрифтТекстРеквизитов</StyleItem>
+			<StyleItem>ШрифтТекстРеквизитовВажный</StyleItem>
+			<StyleItem>ШрифтТекстДекорацииСправка</StyleItem>
+			<StyleItem>ЦветТекстДекорацииСправка</StyleItem>
+			<StyleItem>ШрифтТекстКнопкиМаленький</StyleItem>
+			<StyleItem>ЦветВажнойНадписи</StyleItem>
+			<StyleItem>ШрифтТекстРабочийСтол</StyleItem>
+			<StyleItem>сл2_ОбычныйШрифтЭлементовUI</StyleItem>
+			<StyleItem>сл2_ШрифтВажныхЗаголовков</StyleItem>
+			<StyleItem>ЗаявлениеНаВыпускСертификатаЗаголовокКлючевогоПоляШрифт</StyleItem>
 			<Style>Основной</Style>
 			<Style>NC</Style>
 			<CommonPicture>ПодсистемаАнкетирование</CommonPicture>
@@ -471,19 +485,19 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonPicture>бит_ОбработкаВходящегоВызоваОткрытьКарточку</CommonPicture>
 			<CommonPicture>бит_ОбработкаВходящегоВызоваПринять</CommonPicture>
 			<CommonPicture>бит_ПеревестиЗвонок</CommonPicture>
+			<CommonPicture>бит_ПерехватЗвонка</CommonPicture>
 			<CommonPicture>бит_ПодсистемаБитТелефония</CommonPicture>
 			<CommonPicture>бит_СМС</CommonPicture>
-			<CommonPicture>бит_Статусы</CommonPicture>
 			<CommonPicture>бтПодсистемаБИТАТС</CommonPicture>
+			<CommonPicture>бит_Статусы</CommonPicture>
 			<CommonPicture>бит_СтатусыAMI</CommonPicture>
-			<CommonPicture>бит_Телефон</CommonPicture>
 			<CommonPicture>ПапкиЭлектронныхПисем</CommonPicture>
 			<CommonPicture>ПереместитьВЗакладкиВзаимодействия</CommonPicture>
 			<CommonPicture>ПереместитьВПапкуПисем</CommonPicture>
 			<CommonPicture>ПереслатьПисьмоКакВложение</CommonPicture>
 			<CommonPicture>ПереслатьЭлектронноеПисьмо</CommonPicture>
+			<CommonPicture>бит_Телефон</CommonPicture>
 			<CommonPicture>бит_УдержатьВызов</CommonPicture>
-			<CommonPicture>бит_Факс</CommonPicture>
 			<CommonPicture>СписокТелефонов</CommonPicture>
 			<CommonPicture>ВидыНавигацииПоВзаимодействиямОтРеквизитаПредмета</CommonPicture>
 			<CommonPicture>GoogleMaps</CommonPicture>
@@ -652,7 +666,6 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonPicture>NC_СМС</CommonPicture>
 			<CommonPicture>NC_Наушники</CommonPicture>
 			<CommonPicture>NC_Перевод</CommonPicture>
-			<CommonPicture>NC_Папка</CommonPicture>
 			<CommonPicture>NC_Разблокировано</CommonPicture>
 			<CommonPicture>NC_ИнформацияОВерсии</CommonPicture>
 			<CommonPicture>NC_ИнформацияОВерсии16</CommonPicture>
@@ -688,7 +701,25 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonPicture>NC_НоваяЗадача</CommonPicture>
 			<CommonPicture>NC_Оффлайн</CommonPicture>
 			<CommonPicture>NC_ПодсистемаИнтеграцияСViber</CommonPicture>
-			<SessionParameter>ТекущийПользователь</SessionParameter>
+			<CommonPicture>ВыпадающийСписок</CommonPicture>
+			<CommonPicture>ЗаявлениеНаВыпускСертификатаКлюча</CommonPicture>
+			<CommonPicture>КомпьютерКлиент</CommonPicture>
+			<CommonPicture>КомпьютерСервер</CommonPicture>
+			<CommonPicture>ПодписанЭП</CommonPicture>
+			<CommonPicture>СертификатКлюча</CommonPicture>
+			<CommonPicture>ПроверкаСертификатаНеВыполнялась</CommonPicture>
+			<CommonPicture>ПроверкаСертификатаОшибка</CommonPicture>
+			<CommonPicture>ПроверкаСертификатаПредупреждение</CommonPicture>
+			<CommonPicture>ПроверкаСертификатаУспех</CommonPicture>
+			<CommonPicture>ПиктограммаАрхивZIP</CommonPicture>
+			<CommonPicture>бит_Факс</CommonPicture>
+			<CommonPicture>NC_Прослушка</CommonPicture>
+			<CommonPicture>NC_СМС16</CommonPicture>
+			<CommonPicture>NC_Создать16</CommonPicture>
+			<CommonPicture>NC_Контакт16</CommonPicture>
+			<CommonPicture>NC_Прослушать16</CommonPicture>
+			<CommonPicture>NC_Онлайн</CommonPicture>
+			<SessionParameter>бит_СМС_КорректировкаUTC</SessionParameter>
 			<SessionParameter>ТекущееПодразделение</SessionParameter>
 			<SessionParameter>ТекущийIPАдрес</SessionParameter>
 			<SessionParameter>АдресОбъектаЦКТ</SessionParameter>
@@ -698,11 +729,11 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<SessionParameter>бит_сл_ОбработкаЛицензирования</SessionParameter>
 			<SessionParameter>бит_сл_БуферЛицензирования</SessionParameter>
 			<SessionParameter>бит_сл_БуферЛицензированияВторой</SessionParameter>
-			<SessionParameter>БИТ_СМС_НомерСессии</SessionParameter>
-			<SessionParameter>БИТ_СМС_Пользователь</SessionParameter>
-			<SessionParameter>БИТ_СМС_Пароль</SessionParameter>
-			<SessionParameter>БИТ_СМС_ОсновнойСервер</SessionParameter>
-			<SessionParameter>БИТ_СМС_КорректировкаUTC</SessionParameter>
+			<SessionParameter>ТекущийПользователь</SessionParameter>
+			<SessionParameter>бит_СМС_НомерСессии</SessionParameter>
+			<SessionParameter>бит_СМС_ОсновнойСервер</SessionParameter>
+			<SessionParameter>бит_СМС_Пароль</SessionParameter>
+			<SessionParameter>бит_СМС_Пользователь</SessionParameter>
 			<SessionParameter>бит_сл_ИдНастроек</SessionParameter>
 			<SessionParameter>АвторизованныйПользователь</SessionParameter>
 			<SessionParameter>БуферОбмена</SessionParameter>
@@ -715,7 +746,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<SessionParameter>ПодключенныеРасширения</SessionParameter>
 			<SessionParameter>ТекущийВнешнийПользователь</SessionParameter>
 			<SessionParameter>УстановленныеРасширения</SessionParameter>
-			<Role>тсАдминистрирование</Role>
+			<Role>бит_АдминистраторБитАТС</Role>
 			<Role>ДоступКДаннымПоПользователю</Role>
 			<Role>ПолныеПрава</Role>
 			<Role>ДоступКДаннымПоОрганизации</Role>
@@ -733,9 +764,9 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Role>ВебИнтерфейс</Role>
 			<Role>бит_сл_Администратор</Role>
 			<Role>бит_сл_Пользователь</Role>
-			<Role>бит_ПользовательБитфон</Role>
+			<Role>тсАдминистрирование</Role>
 			<Role>бит_ПользовательБитАТС</Role>
-			<Role>бит_АдминистраторБитАТС</Role>
+			<Role>бит_ПользовательБитфон</Role>
 			<Role>узРабочийСтол</Role>
 			<Role>узРабочийСтолПользователь</Role>
 			<Role>узПланированиеМероприятий</Role>
@@ -896,7 +927,16 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Role>ЗРКЦ</Role>
 			<Role>АБД</Role>
 			<Role>ЮД</Role>
-			<CommonTemplate>КомпонентаСклоненияФИО</CommonTemplate>
+			<Role>ПарсингДокументов</Role>
+			<Role>ОператорНБКИ</Role>
+			<Role>Подсистема_ВспомогательныеДокументы</Role>
+			<Role>сл2_Администратор</Role>
+			<Role>сл2_Пользователь</Role>
+			<Role>узМобильныйОбмен</Role>
+			<Role>ПодключениеИнтернетПоддержки</Role>
+			<Role>узРасчетЗадолженностиМФО</Role>
+			<Role>ДобавлениеИзменениеЭлектронныхПодписейИШифрование</Role>
+			<CommonTemplate>бит_КомпонентаУправлениеАТС</CommonTemplate>
 			<CommonTemplate>ИЗоВДиОВнаЗНИ_</CommonTemplate>
 			<CommonTemplate>ИЗобОВ</CommonTemplate>
 			<CommonTemplate>ИЗобОВсНС</CommonTemplate>
@@ -906,14 +946,15 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonTemplate>КомпонентаЗащиты_Win64</CommonTemplate>
 			<CommonTemplate>ЗаявлениеССП</CommonTemplate>
 			<CommonTemplate>бтУдалитьКлиентСервераЛицензий</CommonTemplate>
+			<CommonTemplate>КомпонентаСклоненияФИО</CommonTemplate>
 			<CommonTemplate>бит_Софтфон</CommonTemplate>
-			<CommonTemplate>бит_КомпонентаУправлениеАТС</CommonTemplate>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
 			<CommonTemplate>КомпонентаTWAIN</CommonTemplate>
+			<CommonTemplate>сл2</CommonTemplate>
+			<CommonTemplate>Макет</CommonTemplate>
 			<FilterCriterion>ФайлыВТоме</FilterCriterion>
-			<CommonModule>АдресныйКлассификатор</CommonModule>
+			<CommonModule>бит_АТСВебСервисы</CommonModule>
 			<CommonModule>АдресныйКлассификаторКлиент</CommonModule>
-			<CommonModule>АдресныйКлассификаторКлиентСервер</CommonModule>
 			<CommonModule>бит_сл_клиент</CommonModule>
 			<CommonModule>Автоинформирование</CommonModule>
 			<CommonModule>УдалитьАдресныйКлассификатор</CommonModule>
@@ -988,21 +1029,20 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonModule>УправлениеКонтактнойИнформациейКлиент</CommonModule>
 			<CommonModule>УправлениеПользователями</CommonModule>
 			<CommonModule>УправлениеСвойствами</CommonModule>
-			<CommonModule>УЭДКлиент</CommonModule>
 			<CommonModule>УЭДСервер</CommonModule>
 			<CommonModule>УЭДФункцииДляШаблонов</CommonModule>
 			<CommonModule>ФоновыеЗаданияМодуль</CommonModule>
 			<CommonModule>ФункционалБП</CommonModule>
 			<CommonModule>ЭлектроннаяПочта</CommonModule>
 			<CommonModule>КомпонентаСклоненияФИО</CommonModule>
+			<CommonModule>АдресныйКлассификатор</CommonModule>
+			<CommonModule>бит_АТСВыгрузкаИзменений</CommonModule>
 			<CommonModule>бит_АТСКлиент</CommonModule>
 			<CommonModule>бит_АТССервер</CommonModule>
-			<CommonModule>бит_БитфонСервер</CommonModule>
-			<CommonModule>бит_ТелефонияСерверПереопределяемый</CommonModule>
 			<CommonModule>бит_БитфонКлиент</CommonModule>
 			<CommonModule>ПрикреплениеФайлов</CommonModule>
-			<CommonModule>бит_ТелефонияКлиентПереопределяемый</CommonModule>
-			<CommonModule>бит_ТелефонияКлиент</CommonModule>
+			<CommonModule>бит_БитфонСервер</CommonModule>
+			<CommonModule>бит_ОтправкаSMSКлиент</CommonModule>
 			<CommonModule>Рассылка</CommonModule>
 			<CommonModule>АдминистрированиеКластераCOMКлиентСервер</CommonModule>
 			<CommonModule>АдминистрированиеКластераRASКлиентСервер</CommonModule>
@@ -1038,13 +1078,13 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonModule>ОбновлениеИнформационнойБазыСлужебный</CommonModule>
 			<CommonModule>ОбновлениеИнформационнойБазыСлужебныйВызовСервера</CommonModule>
 			<CommonModule>ОбновлениеИнформационнойБазыСлужебныйПовтИсп</CommonModule>
-			<CommonModule>бит_СМС_Коммуникатор</CommonModule>
+			<CommonModule>бит_ОтправкаSMSСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияВызовСервера</CommonModule>
 			<CommonModule>ОбщегоНазначенияГлобальный</CommonModule>
-			<CommonModule>бит_ТелефонияКлиентСервер</CommonModule>
+			<CommonModule>бит_СМС_Коммуникатор</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентПереопределяемый</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентПовтИсп</CommonModule>
-			<CommonModule>бит_ТелефонияСервер</CommonModule>
+			<CommonModule>бит_ТелефонияКлиент</CommonModule>
 			<CommonModule>РегламентныеЗаданияМодуль</CommonModule>
 			<CommonModule>ОбщегоНазначенияПовтИсп</CommonModule>
 			<CommonModule>ОбщегоНазначенияСлужебныйКлиент</CommonModule>
@@ -1060,6 +1100,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonModule>КонтрольСобытий</CommonModule>
 			<CommonModule>SMS4B</CommonModule>
 			<CommonModule>ПечатьЭлектронныхДокументовКлиент</CommonModule>
+			<CommonModule>ПечатьЭлектронныхДокументовСервер</CommonModule>
 			<CommonModule>ПолучениеФайловИзИнтернетаСлужебный</CommonModule>
 			<CommonModule>ПользователиКлиентСервер</CommonModule>
 			<CommonModule>ПользователиПереопределяемый</CommonModule>
@@ -1083,7 +1124,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonModule>СтандартныеПодсистемыПовтИсп</CommonModule>
 			<CommonModule>СтандартныеПодсистемыСервер</CommonModule>
 			<CommonModule>бит_сл_глобальный</CommonModule>
-			<CommonModule>бит_АТСВыгрузкаИзменений</CommonModule>
+			<CommonModule>бит_ТелефонияКлиентПереопределяемый</CommonModule>
 			<CommonModule>ФЗ_230</CommonModule>
 			<CommonModule>УправлениеКонтактнойИнформациейКлиентСервер</CommonModule>
 			<CommonModule>УправлениеКонтактнойИнформациейСлужебный</CommonModule>
@@ -1197,6 +1238,80 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonModule>ОбщегоНазначенияУТКлиент</CommonModule>
 			<CommonModule>ОбщегоНазначенияУТКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияУТВызовСервера</CommonModule>
+			<CommonModule>ШаблоныДокументовКлиент</CommonModule>
+			<CommonModule>УправлениеПечатью</CommonModule>
+			<CommonModule>УправлениеПечатьюСлужебный</CommonModule>
+			<CommonModule>УправлениеПечатьюКлиентСервер</CommonModule>
+			<CommonModule>УправлениеПечатьюПереопределяемый</CommonModule>
+			<CommonModule>КонструкторФормул</CommonModule>
+			<CommonModule>КонструкторФормулСлужебный</CommonModule>
+			<CommonModule>ФайловаяСистемаУдалить</CommonModule>
+			<CommonModule>СтроковыеФункцииУдалить</CommonModule>
+			<CommonModule>ФайловаяСистемаСлужебныйКлиентСерверУдалить</CommonModule>
+			<CommonModule>ОбщегоНазначенияСлужебныйКлиентСерверУдалить</CommonModule>
+			<CommonModule>ШаблоныДокументовСервер</CommonModule>
+			<CommonModule>тсВидыПечатныхДокументовКлиент</CommonModule>
+			<CommonModule>ТаймаутСоединения</CommonModule>
+			<CommonModule>КомпоновкаДанныхКлиентСервер</CommonModule>
+			<CommonModule>ОткрытиеФормКлиент</CommonModule>
+			<CommonModule>АдресныйКлассификаторКлиентСервер</CommonModule>
+			<CommonModule>КредитныеИстории</CommonModule>
+			<CommonModule>сл2_Переопределяемый</CommonModule>
+			<CommonModule>сл2_Глобальный</CommonModule>
+			<CommonModule>сл2_Клиент</CommonModule>
+			<CommonModule>сл2_Общий</CommonModule>
+			<CommonModule>сл2_Сервер</CommonModule>
+			<CommonModule>сл2_СерверКэшируемый</CommonModule>
+			<CommonModule>сл2_Внешний</CommonModule>
+			<CommonModule>сл2_МодульПродуктаУЗ</CommonModule>
+			<CommonModule>КонструкторыКлиент</CommonModule>
+			<CommonModule>КоллекцииСервер</CommonModule>
+			<CommonModule>УправлениеЗагрузкойКлиент</CommonModule>
+			<CommonModule>ФоновыеЗаданияCBR</CommonModule>
+			<CommonModule>ОбращениеСЦентробанкомНаСервере</CommonModule>
+			<CommonModule>ДополнительныеРеквизитыИСведения</CommonModule>
+			<CommonModule>Проверки</CommonModule>
+			<CommonModule>ЭлектроннаяПодпись</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьКлиент</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьКлиентПереопределяемый</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьКлиентСервер</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьКлиентСерверЛокализация</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьПереопределяемый</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьСлужебный</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьСлужебныйВызовСервера</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьСлужебныйКлиент</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьСлужебныйКлиентСервер</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьСлужебныйПовтИсп</CommonModule>
+			<CommonModule>ЗаявлениеНаСертификатПереопределяемый</CommonModule>
+			<CommonModule>СтандартныеПодсистемы</CommonModule>
+			<CommonModule>УправлениеДоступами</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьПослеВызоваКоманд</CommonModule>
+			<CommonModule>ОбработкаБезопасноеХранилище</CommonModule>
+			<CommonModule>УправлениеСКД</CommonModule>
+			<CommonModule>ЭлектроннаяПодписьПослеВызоваКомандСервер</CommonModule>
+			<CommonModule>бит_ТелефонияКлиентСервер</CommonModule>
+			<CommonModule>бит_ТелефонияСервер</CommonModule>
+			<CommonModule>бит_ТелефонияСерверПереопределяемый</CommonModule>
+			<CommonModule>УправлениеФайловаяСистема</CommonModule>
+			<CommonModule>УправлениеЗагрузкойСервер</CommonModule>
+			<CommonModule>КредитныеИсторииИзменения</CommonModule>
+			<CommonModule>УправлениеЧтениеФайловКлиент</CommonModule>
+			<CommonModule>УправлениеОжиданиемПотоков</CommonModule>
+			<CommonModule>УправлениеПотоками</CommonModule>
+			<CommonModule>ФункцииРазбораТекста</CommonModule>
+			<CommonModule>Проверка_ПолученияДанныхОбщий</CommonModule>
+			<CommonModule>Проверка_ПолученияКодаСправочника</CommonModule>
+			<CommonModule>Проверка_ПолученияДаты</CommonModule>
+			<CommonModule>Проверка_ПолученияЧисла</CommonModule>
+			<CommonModule>УправлениеИмуществомСервер</CommonModule>
+			<CommonModule>УправлениеИмуществомКлиент</CommonModule>
+			<CommonModule>УправлениеСтроками</CommonModule>
+			<CommonModule>УправлениеДанными</CommonModule>
+			<CommonModule>УправленияСообщениями</CommonModule>
+			<CommonModule>УправлениеЗаполнением</CommonModule>
+			<CommonModule>ОбработатьПереносДанныхИзГосуслуг</CommonModule>
+			<CommonModule>БЛогер_ЛогерПоУмолчанию</CommonModule>
+			<CommonModule>БЛогер_Логирование</CommonModule>
 			<ExchangePlan>бит_ОбменАТС</ExchangePlan>
 			<ExchangePlan>ОбновлениеИнформационнойБазы</ExchangePlan>
 			<ExchangePlan>Мобильные</ExchangePlan>
@@ -1211,6 +1326,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<HTTPService>MandarinCallBackManager</HTTPService>
 			<WSReference>бит_СМС_SMS4B</WSReference>
 			<WSReference>бит_СМС_SMS4BРезерв</WSReference>
+			<WSReference>CBR_DailyInfoWebServ</WSReference>
 			<EventSubscription>КонтурФокусПроверкаДокументаПередЗаписью</EventSubscription>
 			<EventSubscription>ПолучениеПредставленияВзаимодействия</EventSubscription>
 			<EventSubscription>ПолучениеПолейПредставленияВзаимодействия</EventSubscription>
@@ -1223,7 +1339,10 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<EventSubscription>ОбработкаПроверкиЗаполненияПрисоединенногоФайла</EventSubscription>
 			<EventSubscription>СкопироватьРеквизитыВерсииФайловВФайл</EventSubscription>
 			<EventSubscription>УстановитьПометкуУдаленияПрисоединенныхФайлов</EventSubscription>
-			<ScheduledJob>ЗагрузкаКурсовВалют</ScheduledJob>
+			<EventSubscription>ПроверкаЛицензииПроф</EventSubscription>
+			<EventSubscription>ПроверкаЛицензииСтандарт</EventSubscription>
+			<EventSubscription>ПроверкаЛицензииМобильный</EventSubscription>
+			<ScheduledJob>бит_СинхронизацияНомеровСотрудников</ScheduledJob>
 			<ScheduledJob>ЗагрузкаДанных</ScheduledJob>
 			<ScheduledJob>ЗагрузкаРеестров</ScheduledJob>
 			<ScheduledJob>РегламентныеДействияПоКатегориям</ScheduledJob>
@@ -1234,7 +1353,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<ScheduledJob>ОбработкаОчередиЗаданий</ScheduledJob>
 			<ScheduledJob>СинхронизацияРегистров</ScheduledJob>
 			<ScheduledJob>КонтрольБП</ScheduledJob>
-			<ScheduledJob>бит_СинхронизацияСАТС</ScheduledJob>
+			<ScheduledJob>ЗагрузкаКурсовВалют</ScheduledJob>
 			<ScheduledJob>ВходящиеСМС</ScheduledJob>
 			<ScheduledJob>ОбновлениеСтатусов</ScheduledJob>
 			<ScheduledJob>ОтложенныеСМС</ScheduledJob>
@@ -1271,6 +1390,12 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<ScheduledJob>РазблокировкаНеконтактныхДелДляАвтообзвона</ScheduledJob>
 			<ScheduledJob>РазблокировкаДелДляАвтообзвона</ScheduledJob>
 			<ScheduledJob>ПересчетИтоговРегистров</ScheduledJob>
+			<ScheduledJob>НБКИRUTDF</ScheduledJob>
+			<ScheduledJob>сл2_МенеджерСеансов</ScheduledJob>
+			<ScheduledJob>РоботФССП</ScheduledJob>
+			<ScheduledJob>ЗагрузкаКлючевойСтавки</ScheduledJob>
+			<ScheduledJob>бит_СинхронизацияСАТС</ScheduledJob>
+			<ScheduledJob>ОбработатьПереносДанныхИзГосуслуг</ScheduledJob>
 			<SettingsStorage>ХранилищеНастроек</SettingsStorage>
 			<FunctionalOption>УчетПоДоговорам</FunctionalOption>
 			<FunctionalOption>УчетПоИД</FunctionalOption>
@@ -1314,6 +1439,16 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<FunctionalOption>ИспользоватьСинхронизациюФайлов</FunctionalOption>
 			<FunctionalOption>ХранитьФайлыВТомахНаДиске</FunctionalOption>
 			<FunctionalOption>ИспользоватьСтандартныйУчетЗадолженности</FunctionalOption>
+			<FunctionalOption>ИспользоватьНБКИRUTDF</FunctionalOption>
+			<FunctionalOption>ИспользоватьШифрование</FunctionalOption>
+			<FunctionalOption>ИспользоватьЭлектронныеПодписи</FunctionalOption>
+			<FunctionalOption>ПроверятьЭлектронныеПодписиНаСервере</FunctionalOption>
+			<FunctionalOption>СоздаватьЭлектронныеПодписиНаСервере</FunctionalOption>
+			<FunctionalOption>ИспользоватьСборИнформации</FunctionalOption>
+			<FunctionalOption>ВспомогательныеНБКИ</FunctionalOption>
+			<FunctionalOption>СценарииДиалога</FunctionalOption>
+			<FunctionalOption>РаспределениеОбъектов</FunctionalOption>
+			<FunctionalOption>ОпциональныеПодсистемы</FunctionalOption>
 			<DefinedType>ВладелецКонтактнойИнформации</DefinedType>
 			<DefinedType>ВнешнийПользователь</DefinedType>
 			<DefinedType>ВнешнийПользовательОбъект</DefinedType>
@@ -1332,15 +1467,23 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<DefinedType>ВладелецФайлов</DefinedType>
 			<DefinedType>ПрисоединенныйФайл</DefinedType>
 			<DefinedType>ПрисоединенныйФайлОбъект</DefinedType>
-			<CommonCommand>ДополнительныеСведения</CommonCommand>
+			<DefinedType>ХранилищеЗадолженности</DefinedType>
+			<DefinedType>ПрограммаЭлектроннойПодписи</DefinedType>
+			<DefinedType>ПодписанныйОбъект</DefinedType>
+			<DefinedType>Недвижимость</DefinedType>
+			<DefinedType>Транспорт</DefinedType>
+			<DefinedType>Имущество</DefinedType>
+			<DefinedType>Сумма</DefinedType>
+			<DefinedType>Кредитор</DefinedType>
+			<CommonCommand>бит_ОтправитьSMS</CommonCommand>
 			<CommonCommand>бит_сл_ОткрытьФормуКлиентаЛицензирования</CommonCommand>
 			<CommonCommand>ОткрытьЗадолженностьПоОбъектам</CommonCommand>
 			<CommonCommand>ОткрытьОбъектыВРаботе</CommonCommand>
 			<CommonCommand>ОткрытьСостоянияПоКатегориям</CommonCommand>
 			<CommonCommand>ДополнительныеСведенияДолжника</CommonCommand>
+			<CommonCommand>ДополнительныеСведения</CommonCommand>
 			<CommonCommand>бит_ПозвонитьБитфон</CommonCommand>
 			<CommonCommand>бит_ПозвонитьСоСтационарного</CommonCommand>
-			<CommonCommand>бит_ОтправитьSMSБитфон</CommonCommand>
 			<CommonCommand>ВремяТекущегоСеанса</CommonCommand>
 			<CommonCommand>ПерсональнаяНастройкаПроксиСервера</CommonCommand>
 			<CommonCommand>ПредупрежденияПриЗавершенииРаботы</CommonCommand>
@@ -1356,6 +1499,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonCommand>СозданиеНачальногоОбразаСФайлами</CommonCommand>
 			<CommonCommand>ФайлыВТоме</CommonCommand>
 			<CommonCommand>СообщенияSMS</CommonCommand>
+			<CommonCommand>сл2_ОткрытьФормуКлиентаЛицензирования</CommonCommand>
 			<CommandGroup>Взаимодействия</CommandGroup>
 			<CommandGroup>Информация</CommandGroup>
 			<CommandGroup>Органайзер</CommandGroup>
@@ -1532,6 +1676,38 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Constant>ВайберМесяц</Constant>
 			<Constant>ВайберНеделя</Constant>
 			<Constant>КоличествоВайбер</Constant>
+			<Constant>ImageMagickConvert</Constant>
+			<Constant>Tesseract</Constant>
+			<Constant>ПарсингДокументов</Constant>
+			<Constant>ИспользоватьНБКИRUTDF</Constant>
+			<Constant>сл2_Кэш</Constant>
+			<Constant>СистемаЛицензирования</Constant>
+			<Constant>ApiKeyRuCaptcha</Constant>
+			<Constant>IPSelenium</Constant>
+			<Constant>PortSelenium</Constant>
+			<Constant>ОжиданиеЗагрузкиФССП</Constant>
+			<Constant>ИспользоватьПрокси</Constant>
+			<Constant>ИскатьПоВсемРегионамФССП</Constant>
+			<Constant>ПаузаТехническихРаботФССП</Constant>
+			<Constant>КоличествоОбработокЗапросаНаДолжникаФССП</Constant>
+			<Constant>КоличествоБезрезультатноВведенныхКапчФССП</Constant>
+			<Constant>ПроверятьЭлектронныеПодписиНаСервере</Constant>
+			<Constant>СоздаватьЭлектронныеПодписиНаСервере</Constant>
+			<Constant>ИспользоватьШифрование</Constant>
+			<Constant>ИспользоватьЭлектронныеПодписи</Constant>
+			<Constant>КлассификаторОшибокКриптографии</Constant>
+			<Constant>ДатаПоследнегоОбновленияКлассификатораОшибок</Constant>
+			<Constant>ОтчетДляДОПлатежи</Constant>
+			<Constant>ТелефонныйНомерПользователя</Constant>
+			<Constant>ДатаНачисленияПросуженнойЗадолженности</Constant>
+			<Constant>РежимОтладки</Constant>
+			<Constant>ИспользоватьСборИнформации</Constant>
+			<Constant>ДатаПоследнегоОбновленияРеквизитовПоГосуслугам</Constant>
+			<Constant>БЛогер_ТекущийУровень</Constant>
+			<Constant>УчетВспомогательныеНБКИ</Constant>
+			<Constant>ВключитьСценарииДиалога</Constant>
+			<Constant>ВключитьРаспределениеОбъектов</Constant>
+			<Constant>ВключитьОпциональныеПодсистемы</Constant>
 			<CommonForm>Вопрос</CommonForm>
 			<CommonForm>ВводАдреса</CommonForm>
 			<CommonForm>РабочийСтолМероприятия</CommonForm>
@@ -1604,28 +1780,33 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<CommonForm>НастройкиПроведенияТехническихРабот</CommonForm>
 			<CommonForm>ТехническиеРаботы</CommonForm>
 			<CommonForm>РезультатыПроверкиПо230ФЗ</CommonForm>
-			<Catalog>Валюты</Catalog>
-			<Catalog>Банки</Catalog>
-			<Catalog>ВерсииРасширений</Catalog>
-			<Catalog>ВидыКонтактнойИнформации</Catalog>
-			<Catalog>ДоговорыКонтрагентов</Catalog>
-			<Catalog>ДолговыеОбязательства</Catalog>
-			<Catalog>Залоги</Catalog>
+			<CommonForm>ФССП_НастройкаРобота</CommonForm>
+			<CommonForm>НастройкиЭлектроннойПодписиИШифрования</CommonForm>
+			<CommonForm>Сертификат</CommonForm>
+			<CommonForm>СохранениеВместеСЭлектроннойПодписью</CommonForm>
+			<CommonForm>ВопросОбУстановкеРасширенияРаботыСКриптографией</CommonForm>
+			<CommonForm>ДобавлениеЭлектроннойПодписиИзФайла</CommonForm>
+			<CommonForm>ОтчетОСохраненииФайловЭлектронныхПодписей</CommonForm>
+			<CommonForm>РасширенноеПредставлениеОшибки</CommonForm>
+			<CommonForm>РезультатПроверки</CommonForm>
+			<CommonForm>ЭлектроннаяПодпись</CommonForm>
+			<CommonForm>НастройкаВидимостиМодулей</CommonForm>
+			<Catalog>Организации</Catalog>
 			<Catalog>ЗвуковыеФайлы</Catalog>
-			<Catalog>Интерфейсы</Catalog>
+			<Catalog>Банки</Catalog>
 			<Catalog>ИсполнительныеДокументы</Catalog>
-			<Catalog>ВнешниеПользователи</Catalog>
-			<Catalog>КартыМаршрутов</Catalog>
-			<Catalog>Категории</Catalog>
-			<Catalog>КонтактныеЛицаПоДолжнику</Catalog>
+			<Catalog>ДолговыеОбязательства</Catalog>
 			<Catalog>Контрагенты</Catalog>
-			<Catalog>ГруппыВнешнихПользователей</Catalog>
+			<Catalog>КартыМаршрутов</Catalog>
+			<Catalog>ВерсииРасширений</Catalog>
+			<Catalog>КонтактныеЛицаПоДолжнику</Catalog>
+			<Catalog>ВидыКонтактнойИнформации</Catalog>
 			<Catalog>НастройкиПодборДО</Catalog>
 			<Catalog>ОперацииБП</Catalog>
-			<Catalog>Организации</Catalog>
+			<Catalog>ВнешниеПользователи</Catalog>
 			<Catalog>Отделы</Catalog>
 			<Catalog>ПодразделенияОрганизаций</Catalog>
-			<Catalog>ГруппыПользователей</Catalog>
+			<Catalog>ГруппыВнешнихПользователей</Catalog>
 			<Catalog>ПоследовательностиКИ</Catalog>
 			<Catalog>РаспределениеПоСотрудникам</Catalog>
 			<Catalog>Регионы</Catalog>
@@ -1634,7 +1815,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Catalog>РезультатыОперацийБП</Catalog>
 			<Catalog>СправочникFTP</Catalog>
 			<Catalog>СправочникЦКТ</Catalog>
-			<Catalog>тсЗначенияСвойствОбъектов</Catalog>
+			<Catalog>ГруппыПользователей</Catalog>
 			<Catalog>СудебныеПриставы</Catalog>
 			<Catalog>СудебныеУчастки</Catalog>
 			<Catalog>ТипыДоговоровКонтрагентов</Catalog>
@@ -1647,11 +1828,11 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Catalog>ТипыПрикрепляемыхФайлов</Catalog>
 			<Catalog>ТипыУслуг</Catalog>
 			<Catalog>тсВидыПечатныхДокументов</Catalog>
-			<Catalog>ИдентификаторыОбъектовМетаданных</Catalog>
+			<Catalog>ЗакладкиВзаимодействий</Catalog>
 			<Catalog>тсШаблоныПечатныхДокументов</Catalog>
 			<Catalog>УслугиПоДоговору</Catalog>
 			<Catalog>УчетныеЗаписиSMS4B</Catalog>
-			<Catalog>ИдентификаторыОбъектовРасширений</Catalog>
+			<Catalog>тсЗначенияСвойствОбъектов</Catalog>
 			<Catalog>ФорматыЗагрузки</Catalog>
 			<Catalog>Формы</Catalog>
 			<Catalog>ФункцииБизнесПроцессов</Catalog>
@@ -1691,12 +1872,12 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Catalog>бит_ТелефонныеСтанцииБитАТС</Catalog>
 			<Catalog>НастройкиПодключенияКСерверу</Catalog>
 			<Catalog>СписокДляАвтообзвона</Catalog>
+			<Catalog>ИдентификаторыОбъектовМетаданных</Catalog>
+			<Catalog>ИдентификаторыОбъектовРасширений</Catalog>
 			<Catalog>Календари</Catalog>
-			<Catalog>НаборыСвойств</Catalog>
-			<Catalog>Пользователи</Catalog>
 			<Catalog>ВидыКИ</Catalog>
-			<Catalog>СтраныМира</Catalog>
-			<Catalog>УчетныеЗаписиЭлектроннойПочты</Catalog>
+			<Catalog>НаборыСвойств</Catalog>
+			<Catalog>ПапкиФайлов</Catalog>
 			<Catalog>ФССП_ИсполнительноеПроизводство</Catalog>
 			<Catalog>ФССП_ПрофилиДляПодключенияКФССП</Catalog>
 			<Catalog>ФССП_СлужбыСудебныхПриставов</Catalog>
@@ -1718,24 +1899,51 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Catalog>ДелоОБанкротстве</Catalog>
 			<Catalog>БанкротствоИерархияСвойств</Catalog>
 			<Catalog>БанкротствоЗначенияСвойств</Catalog>
+			<Catalog>ПапкиЭлектронныхПисем</Catalog>
+			<Catalog>Пользователи</Catalog>
+			<Catalog>ПравилаОбработкиЭлектроннойПочты</Catalog>
+			<Catalog>ПрограммыЭлектроннойПодписиИШифрования</Catalog>
+			<Catalog>ПроизводственныеКалендари</Catalog>
+			<Catalog>СертификатыКлючейЭлектроннойПодписиИШифрования</Catalog>
 			<Catalog>Фокус_СписокКонтрагентов</Catalog>
 			<Catalog>Фокус_ДополнительныеСправочники</Catalog>
 			<Catalog>Фокус_Маркеры</Catalog>
 			<Catalog>Фокус_ТэгиМаркеров</Catalog>
 			<Catalog>Фокус_ПрофилиМаркеров</Catalog>
-			<Catalog>ПроизводственныеКалендари</Catalog>
-			<Catalog>ЗакладкиВзаимодействий</Catalog>
-			<Catalog>ПапкиЭлектронныхПисем</Catalog>
-			<Catalog>ПравилаОбработкиЭлектроннойПочты</Catalog>
 			<Catalog>СообщениеSMSПрисоединенныеФайлы</Catalog>
+			<Catalog>СтраныМира</Catalog>
 			<Catalog>СтроковыеКонтактыВзаимодействий</Catalog>
-			<Catalog>ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</Catalog>
-			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
-			<Catalog>ВерсииФайлов</Catalog>
-			<Catalog>ПапкиФайлов</Catalog>
 			<Catalog>ТомаХраненияФайлов</Catalog>
 			<Catalog>УчетныеЗаписиСинхронизацииФайлов</Catalog>
+			<Catalog>УчетныеЗаписиЭлектроннойПочты</Catalog>
 			<Catalog>Файлы</Catalog>
+			<Catalog>НастройкиПарсингаДокументов</Catalog>
+			<Catalog>КредитныеИсторииСобытияСубъекта</Catalog>
+			<Catalog>КредитныеИсторииСобытияСделки</Catalog>
+			<Catalog>ДелоОНедееспособностиСубъекта</Catalog>
+			<Catalog>ПричиныПрекращенияОбеспечительства</Catalog>
+			<Catalog>ПредметыЗалога</Catalog>
+			<Catalog>НастройкиВыгрузкиНБКИ_RUTDF</Catalog>
+			<Catalog>НеденежныеОбязательства</Catalog>
+			<Catalog>ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</Catalog>
+			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
+			<Catalog>УдалитьИнтерфейс_Файлы</Catalog>
+			<Catalog>ЛьготноеФинансированиеСГосПоддержкой</Catalog>
+			<Catalog>ЦелиКредита</Catalog>
+			<Catalog>КредитныеИсторииСобытияИсключенияАннулированияКорректировки</Catalog>
+			<Catalog>Валюты</Catalog>
+			<Catalog>ДоговорыКонтрагентов</Catalog>
+			<Catalog>Залоги</Catalog>
+			<Catalog>Интерфейсы</Catalog>
+			<Catalog>ВерсииФайлов</Catalog>
+			<Catalog>Категории</Catalog>
+			<Catalog>ИсточникиСведений</Catalog>
+			<Catalog>Транспорт</Catalog>
+			<Catalog>Помещения</Catalog>
+			<Catalog>ЗемельныеУчастки</Catalog>
+			<Catalog>Счета</Catalog>
+			<Catalog>ОбщиеСвойства</Catalog>
+			<Catalog>ФункцииКонвертацииСвойств</Catalog>
 			<Document>АктПередачи</Document>
 			<Document>АктуализацияЗадолженности</Document>
 			<Document>ЗавершениеРаботыОрганизации</Document>
@@ -1800,6 +2008,16 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Document>СправкаОбОтсутствииЗадолженности</Document>
 			<Document>ПлатежноеТребование</Document>
 			<Document>ПлатежноеТребованиеЦессия</Document>
+			<Document>Обеспечительства</Document>
+			<Document>СведенияОбИзмененииДоговора</Document>
+			<Document>НБКИДокументRUTDF</Document>
+			<Document>ФССП_ОчередьЗагрузкиДолжников</Document>
+			<Document>ФССП_ТехническийОчередьЗагрузкиДолжников</Document>
+			<Document>НБКИДокументКорректировкаRUTDF</Document>
+			<Document>СведенияОбИмуществе</Document>
+			<Document>ОстаткиСчетов</Document>
+			<Document>СведенияОСчетах</Document>
+			<Document>СправочныеСведения</Document>
 			<DocumentJournal>Взаимодействия</DocumentJournal>
 			<DocumentJournal>ЖурналДокументооборота</DocumentJournal>
 			<Enum>ВариантыSMTPАутентификации</Enum>
@@ -1844,7 +2062,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Enum>бит_ТипПереводаЗвонка</Enum>
 			<Enum>СтатусыРассылки</Enum>
 			<Enum>бит_УдалитьТипПодключенияСтатуса</Enum>
-			<Enum>бит_ТипПриемаЗвонка</Enum>
+			<Enum>бит_УдалитьТипПриемаЗвонка</Enum>
 			<Enum>ВидыРеквизитов</Enum>
 			<Enum>СервисыРассылкиСМС</Enum>
 			<Enum>ВидыКорреспонденции</Enum>
@@ -1940,13 +2158,34 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Enum>ТипыДокументовПоДоговору</Enum>
 			<Enum>СостоянияОтправкиДокументов</Enum>
 			<Enum>СостоянияЗадачСотрудников</Enum>
+			<Enum>ТипыПечати</Enum>
+			<Enum>АдресаСерверов</Enum>
+			<Enum>ВидыРешенияДееспособностьСубъекта</Enum>
+			<Enum>ВидыОперацийОтчетаRUTDF</Enum>
+			<Enum>ВидыОбеспечения</Enum>
+			<Enum>КредитныеИсторииВидыАдресов</Enum>
+			<Enum>СтатусыОтчетаНБКИ</Enum>
+			<Enum>НБКИ_ТипыИзмененияДоговора</Enum>
+			<Enum>НБКИ_ТипыПриобретателейПравТребований</Enum>
+			<Enum>НБКИ_ТипыОтказов</Enum>
+			<Enum>СистемыЛицензирования</Enum>
+			<Enum>СостоянияЗаявленияНаВыпускСертификата</Enum>
+			<Enum>ДатыНачисленияПросуженнойЗадолженности</Enum>
+			<Enum>ВерсияRUTDF</Enum>
+			<Enum>ВидыОперацийИсправленияИУдаленияRUTDF</Enum>
+			<Enum>РежимыОтладки</Enum>
+			<Enum>ТипыФайловДляВыбора</Enum>
+			<Enum>ДействияКорректировкиКИRUTDF</Enum>
+			<Enum>ЧастиКИДляКорректировкиRUTDF</Enum>
+			<Enum>ВидыИмущества</Enum>
+			<Enum>НазначениеЗемельныхУчастков</Enum>
+			<Enum>ТипыДокументовПолученияСведенийОСчетах</Enum>
+			<Enum>СтандартныеФункцииКонвертации</Enum>
+			<Enum>БЛогер_Уровни</Enum>
 			<Report>РезультатыАвтоинформирования</Report>
 			<Report>бит_ИсторияЗвонков</Report>
-			<Report>Отчет_ЮрСлужба</Report>
-			<Report>ВедомостьЗадолженности</Report>
-			<Report>МировыеСоглашения</Report>
 			<Report>ОтчетПоИсковому</Report>
-			<Report>ОтчетПоИсполнительному</Report>
+			<Report>ВедомостьЗадолженности</Report>
 			<Report>ОтчетПоВыполненнымМероприятиям</Report>
 			<Report>ДинамикаРаботы</Report>
 			<Report>ЭффективностьРаботы</Report>
@@ -1971,16 +2210,22 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<Report>ОтчетОбЭффективностиВзысканияПоСудебнымРешениям</Report>
 			<Report>СостояниеАктуальныхДоБНаДату</Report>
 			<Report>СостояниеДоБЗаПериод</Report>
-			<Report>ПлатежиСрез</Report>
-			<Report>УчетРабочегоВремениСотрудников</Report>
 			<Report>КонтрольСроковМероприятий</Report>
 			<Report>ОбъемНенужныхФайлов</Report>
 			<Report>ПроверкаЦелостностиТома</Report>
+			<Report>ПлатежиСрез</Report>
+			<Report>УчетРабочегоВремениСотрудников</Report>
 			<Report>ФССП_ИзмененияСостоянийИП</Report>
+			<Report>Отчет_ЮрСлужба</Report>
+			<Report>МировыеСоглашения</Report>
+			<Report>ОтчетПоИсполнительному</Report>
 			<Report>ПлатежиПоПериодам</Report>
 			<Report>ПроведенныеПлатежи</Report>
 			<Report>РезультативностьМероприятий</Report>
 			<Report>ОстаткиПоДоговорам</Report>
+			<Report>ДашбордРасшифровка</Report>
+			<Report>ПлатежиПоДО</Report>
+			<Report>СведенияОбИмуществе</Report>
 			<DataProcessor>АктивныеПользователи</DataProcessor>
 			<DataProcessor>ЖурналРегистрации</DataProcessor>
 			<DataProcessor>бит_сл_КлиентЛицензирования</DataProcessor>
@@ -2014,6 +2259,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<DataProcessor>смсРаботаССервисомSMS4B</DataProcessor>
 			<DataProcessor>ПодборДолговыхОбязательств</DataProcessor>
 			<DataProcessor>КонсольЗапросов</DataProcessor>
+			<DataProcessor>КонсольЗапросов_Новая</DataProcessor>
 			<DataProcessor>РаботаСXML</DataProcessor>
 			<DataProcessor>ВводКонтактнойИнформации</DataProcessor>
 			<DataProcessor>НастройкиПользователей</DataProcessor>
@@ -2048,7 +2294,18 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<DataProcessor>РаботаСФайлами</DataProcessor>
 			<DataProcessor>Сканирование</DataProcessor>
 			<DataProcessor>ПанельАдминистрированияБСП</DataProcessor>
-			<InformationRegister>АдресныеОбъекты</InformationRegister>
+			<DataProcessor>ПарсингДокументов</DataProcessor>
+			<DataProcessor>сл2_КлиентЛицензирования</DataProcessor>
+			<DataProcessor>сл2_АвтономноеЛицензирование</DataProcessor>
+			<DataProcessor>ДашбордРуководителя</DataProcessor>
+			<DataProcessor>ВыгрузкаВКлиентБакнк</DataProcessor>
+			<DataProcessor>ФССП_Робот</DataProcessor>
+			<DataProcessor>ПарсингИсполнительныхДокументов</DataProcessor>
+			<DataProcessor>ЗаявлениеНаВыпускНовогоКвалифицированногоСертификата</DataProcessor>
+			<DataProcessor>ПрограммыЭлектроннойПодписиИШифрования</DataProcessor>
+			<DataProcessor>Интерфейс_Файлы</DataProcessor>
+			<DataProcessor>бит_БитфонОбщее</DataProcessor>
+			<InformationRegister>бит_БитАТСНастройки</InformationRegister>
 			<InformationRegister>БезопасноеХранилищеДанныхОбластейДанных</InformationRegister>
 			<InformationRegister>АдресныйКлассификатор</InformationRegister>
 			<InformationRegister>ВерсииОбъектовАдресногоКлассификатора</InformationRegister>
@@ -2079,17 +2336,17 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<InformationRegister>СотрудникиВПомощь</InformationRegister>
 			<InformationRegister>ХранилищеДанныхАвтоинформирования</InformationRegister>
 			<InformationRegister>ХранилищеДанныхТабличныхДокументов</InformationRegister>
+			<InformationRegister>АдресныеОбъекты</InformationRegister>
 			<InformationRegister>бит_БитфонНастройки</InformationRegister>
 			<InformationRegister>бит_ИсторияЗвонков</InformationRegister>
-			<InformationRegister>бит_СпискиОбзвона</InformationRegister>
 			<InformationRegister>ОчередьЗаданий</InformationRegister>
 			<InformationRegister>бтЛогиныАстериск</InformationRegister>
 			<InformationRegister>НастройкаРассылкиИзБП</InformationRegister>
 			<InformationRegister>ЗагруженныеОбъекты</InformationRegister>
 			<InformationRegister>Нумерация</InformationRegister>
 			<InformationRegister>Поручительства</InformationRegister>
-			<InformationRegister>бит_БитАТСНастройки</InformationRegister>
 			<InformationRegister>бит_НабранныеНомера</InformationRegister>
+			<InformationRegister>бит_ОтправкаSMSНастройки</InformationRegister>
 			<InformationRegister>СообщенияСМС</InformationRegister>
 			<InformationRegister>ОтложенныеСообщенияСМС</InformationRegister>
 			<InformationRegister>УдалитьЗаданияДляРассылки</InformationRegister>
@@ -2196,6 +2453,33 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<InformationRegister>СтатусыСинхронизацииФайловСОблачнымСервисом</InformationRegister>
 			<InformationRegister>ФайлыВРабочемКаталоге</InformationRegister>
 			<InformationRegister>УдалитьХранимыеФайлыВерсий</InformationRegister>
+			<InformationRegister>СклонениеФИО</InformationRegister>
+			<InformationRegister>ОчередьНаСклонениеФИО</InformationRegister>
+			<InformationRegister>ФиксированиеПогашенийОбеспечительством</InformationRegister>
+			<InformationRegister>КредитныеИсторииДанныеФизЛица</InformationRegister>
+			<InformationRegister>КредитныеИсторииСтруктураАдреса</InformationRegister>
+			<InformationRegister>КредитныеИсторииДанныеЮрЛица</InformationRegister>
+			<InformationRegister>КредитныеИсторииДанныеСделки</InformationRegister>
+			<InformationRegister>ЖурналВыгрузокНБКИRUTDF</InformationRegister>
+			<InformationRegister>ТипДолжникаПризнак</InformationRegister>
+			<InformationRegister>КредитныеИстории_СобытияИГруппыБлоков</InformationRegister>
+			<InformationRegister>ДатыВыгрузкиВКлиентБанк</InformationRegister>
+			<InformationRegister>ГоспошлинаДляКлиентБанка</InformationRegister>
+			<InformationRegister>ФССП_ОчередьЗагрузкиДолжников</InformationRegister>
+			<InformationRegister>СписокПрокси</InformationRegister>
+			<InformationRegister>ПутиКПрограммамЭлектроннойПодписиИШифрованияНаСерверахLinux</InformationRegister>
+			<InformationRegister>СертификатыШифрования</InformationRegister>
+			<InformationRegister>ЭлектронныеПодписи</InformationRegister>
+			<InformationRegister>бит_СпискиОбзвона</InformationRegister>
+			<InformationRegister>ОчередьПерепроведенияЗадолженности</InformationRegister>
+			<InformationRegister>КредитныеИсторииКонтрольВерсий</InformationRegister>
+			<InformationRegister>СтадииЗадолженности</InformationRegister>
+			<InformationRegister>КредитныеИсторииДействияКорректировкиКИ</InformationRegister>
+			<InformationRegister>СведенияОбИмуществе</InformationRegister>
+			<InformationRegister>БанковскиеСчета</InformationRegister>
+			<InformationRegister>ОстаткиНаСчетах</InformationRegister>
+			<InformationRegister>СведенияОСчетах</InformationRegister>
+			<InformationRegister>ОбщиеСведения</InformationRegister>
 			<AccumulationRegister>ЗадолженностьПоОбъектам</AccumulationRegister>
 			<AccumulationRegister>ОбъектыВРаботе</AccumulationRegister>
 			<AccumulationRegister>СобытияПоОбъектам</AccumulationRegister>
@@ -2209,6 +2493,7 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<AccumulationRegister>ЗадолженностьПоОбъектамВнесудебная</AccumulationRegister>
 			<AccumulationRegister>ЗадолженностьПоСудебнымРешениям</AccumulationRegister>
 			<AccumulationRegister>ФССП_ЗадолженностьПоПредметамИП</AccumulationRegister>
+			<AccumulationRegister>ФССПОчередьЗагрузкиДолжников</AccumulationRegister>
 			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>НастройкиПользователей</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ТипыСотрудников</ChartOfCharacteristicTypes>
@@ -2219,6 +2504,10 @@ Copyright © 2011 - 2021, ООО "Индустрия автоматизации"
 			<ChartOfCharacteristicTypes>ХарактеристикиИД</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ТипыЗадолженностиПоРешению</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ДО_СудебныеДела</ChartOfCharacteristicTypes>
+			<ChartOfCharacteristicTypes>СвойстваИмущества</ChartOfCharacteristicTypes>
+			<ChartOfCharacteristicTypes>Имущество</ChartOfCharacteristicTypes>
+			<ChartOfCharacteristicTypes>СвойстваСчетов</ChartOfCharacteristicTypes>
+			<ChartOfCharacteristicTypes>ОбщиеСвойстваГосуслуги</ChartOfCharacteristicTypes>
 			<BusinessProcess>БизнесПроцессы</BusinessProcess>
 			<BusinessProcess>КампанииОбзвона</BusinessProcess>
 			<Task>Мероприятие</Task>

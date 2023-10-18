@@ -7,6 +7,75 @@
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Popup name="ФормаГруппаКомандЭлектроннаяПодписьИШифрование" id="59">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Электронная подпись и шифрование</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды электронной подписи и шифрования</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.ПодписанЗашифрованЗаголовок</xr:Ref>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ФормаГруппаКомандЭлектроннаяПодписьИШифрованиеРасширеннаяПодсказка" id="60"/>
+				<ChildItems>
+					<ButtonGroup name="ФормаГруппаКомандЭлектроннаяПодпись" id="61">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа команд электронная подпись</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаГруппаКомандЭлектроннаяПодписьРасширеннаяПодсказка" id="62"/>
+						<ChildItems>
+							<Button name="ФормаПодписать" id="80">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Подписать</CommandName>
+								<ExtendedTooltip name="ФормаПодписатьРасширеннаяПодсказка" id="81"/>
+							</Button>
+							<Button name="ФормаСохранитьВместеСПодписью" id="67">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СохранитьВместеСПодписью</CommandName>
+								<ExtendedTooltip name="ФормаСохранитьВместеСПодписьюРасширеннаяПодсказка" id="68"/>
+							</Button>
+							<Button name="ФормаОткрытьКарточкуФайлов" id="89">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьКарточкуФайлов</CommandName>
+								<ExtendedTooltip name="ФормаОткрытьКарточкуФайловРасширеннаяПодсказка" id="90"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ФормаГруппаКомандШифрование" id="69">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Шифрование</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаГруппаКомандШифрованиеРасширеннаяПодсказка" id="70"/>
+						<ChildItems>
+							<Button name="ФормаЗашифроватьФайлы" id="82">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗашифроватьФайлы</CommandName>
+								<ExtendedTooltip name="ФормаЗашифроватьФайлыРасширеннаяПодсказка" id="83"/>
+							</Button>
+							<Button name="ФормаРасшифроватьФайлы" id="87">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.РасшифроватьФайлы</CommandName>
+								<ExtendedTooltip name="ФормаРасшифроватьФайлыРасширеннаяПодсказка" id="88"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
 			<Button name="ФормаПрикрепитьФайлы" id="16">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ПрикрепитьФайлы</CommandName>
@@ -58,6 +127,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -120,6 +190,12 @@
 				<Event name="Selection">СписокВыбор</Event>
 			</Events>
 			<ChildItems>
+				<CheckBoxField name="Подписан" id="77">
+					<DataPath>Список.Подписан</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодписанКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ПодписанРасширеннаяПодсказка" id="79"/>
+				</CheckBoxField>
 				<LabelField name="Период" id="17">
 					<DataPath>Список.Период</DataPath>
 					<ContextMenu name="ПериодКонтекстноеМеню" id="18"/>
@@ -168,6 +244,11 @@
 					<ContextMenu name="НомерСтрокиКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="НомерСтрокиExtendedTooltip" id="39"/>
 				</LabelField>
+				<LabelField name="ЭлементФайлы" id="84">
+					<DataPath>Список.ЭлементФайлы</DataPath>
+					<ContextMenu name="ЭлементФайлыКонтекстноеМеню" id="85"/>
+					<ExtendedTooltip name="ЭлементФайлыРасширеннаяПодсказка" id="86"/>
+				</LabelField>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -188,17 +269,27 @@
 	РегистрСведенийПрикрепляемыеФайлы.ТипФайла КАК ТипФайла,
 	РегистрСведенийПрикрепляемыеФайлы.ИмяФайла КАК ИмяФайла,
 	РегистрСведенийПрикрепляемыеФайлы.Период КАК Период,
-	РегистрСведенийПрикрепляемыеФайлы.РазмерФайла КАК РазмерФайла
+	РегистрСведенийПрикрепляемыеФайлы.РазмерФайла КАК РазмерФайла,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(РегистрСведенийПрикрепляемыеФайлы.ЭлементФайлы, ЗНАЧЕНИЕ(Справочник.Файлы.ПустаяСсылка)) = ЗНАЧЕНИЕ(Справочник.Файлы.ПустаяСсылка)
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК Подписан,
+	РегистрСведенийПрикрепляемыеФайлы.ЭлементФайлы КАК ЭлементФайлы
 ИЗ
 	РегистрСведений.ПрикрепляемыеФайлы КАК РегистрСведенийПрикрепляемыеФайлы
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
-			ПрикрепляемыеФайлы.Период КАК Период,
+			МАКСИМУМ(ПрикрепляемыеФайлы.Период) КАК Период,
 			ПрикрепляемыеФайлы.ТипФайла КАК ТипФайла,
 			ПрикрепляемыеФайлы.Объект КАК Объект
 		ИЗ
 			РегистрСведений.ПрикрепляемыеФайлы КАК ПрикрепляемыеФайлы
 		ГДЕ
-			ПрикрепляемыеФайлы.ТипФайла.АктуаленПоследний) КАК ВложенныйЗапрос
+			ПрикрепляемыеФайлы.ТипФайла.АктуаленПоследний
+		
+		СГРУППИРОВАТЬ ПО
+			ПрикрепляемыеФайлы.Объект,
+			ПрикрепляемыеФайлы.ТипФайла) КАК ВложенныйЗапрос
 		ПО (РегистрСведенийПрикрепляемыеФайлы.ТипФайла.АктуаленПоследний)
 			И РегистрСведенийПрикрепляемыеФайлы.ТипФайла = ВложенныйЗапрос.ТипФайла
 			И РегистрСведенийПрикрепляемыеФайлы.Период = ВложенныйЗапрос.Период
@@ -317,6 +408,95 @@
 			</Picture>
 			<Action>Изменить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Подписать" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подписать</Action>
+		</Command>
+		<Command name="ЗашифроватьФайлы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зашифровать файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зашифровать файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Зашифровать</Action>
+		</Command>
+		<Command name="РасшифроватьФайлы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расшифровать файлы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расшифровать файлы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Расшифровать</Action>
+		</Command>
+		<Command name="СохранитьВместеСПодписью" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить вместе с подписью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить вместе с подписью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьВместеСПодписью</Action>
+		</Command>
+		<Command name="ОткрытьКарточку" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ОткрытьКарточкуФайлов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть карточку файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьКарточкуФайлов</Action>
 		</Command>
 	</Commands>
 </Form>

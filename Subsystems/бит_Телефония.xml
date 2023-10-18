@@ -44,11 +44,11 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_СМС_Коммуникатор</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">WSReference.бит_СМС_SMS4B</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">WSReference.бит_СМС_SMS4BРезерв</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.БИТ_СМС_НомерСессии</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.БИТ_СМС_Пользователь</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.БИТ_СМС_Пароль</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.БИТ_СМС_ОсновнойСервер</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.БИТ_СМС_КорректировкаUTC</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.бит_СМС_НомерСессии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.бит_СМС_Пользователь</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.бит_СМС_Пароль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.бит_СМС_ОсновнойСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.бит_СМС_КорректировкаUTC</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Document.бит_СписокОбзвона</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.бит_СпискиОбзвона</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.бит_Софтфон</xr:Item>
@@ -61,10 +61,9 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.бит_ОбработкаВходящегоВызоваПринять</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.бит_ОбработкаВходящегоВызоваОтклонить</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.бит_ОбработкаВходящегоВызоваОткрытьКарточку</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.бит_УдалитьТипПодключенияСтатуса</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.бит_ФорматЗаписи</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_ТелефонияКлиентСервер</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Enum.бит_ТипПриемаЗвонка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.бит_УдалитьТипПриемаЗвонка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.бит_Статусы</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.бит_ТипПереводаЗвонка</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_ТелефонияКлиент</xr:Item>
@@ -73,6 +72,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_АТСВыгрузкаИзменений</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_АТСКлиент</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_АТССервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.бит_АдминистраторБитАТС</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">Role.бит_ПользовательБитАТС</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.бит_ОбменАТС</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.бит_СинхронизацияСАТС</xr:Item>
@@ -87,8 +87,15 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Enum.бит_ПрофилиНастроекБИТPhone</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.бит_ПозвонитьБитфон</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.бит_ПозвонитьСоСтационарного</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.бит_ОтправитьSMSБитфон</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.бит_ОтправитьSMS</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.бит_НабранныеНомера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.бит_СинхронизацияНомеровСотрудников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.бит_ПерехватЗвонка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_АТСВебСервисы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.бит_ОтправкаSMSНастройки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_ОтправкаSMSСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.бит_ОтправкаSMSКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.бит_БитфонОбщее</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects>

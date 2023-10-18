@@ -1,0 +1,769 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнитьПоУмолчанию" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновныеНастройки" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основные настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаОсновныеНастройкиРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="ВыполнятьНа" id="177">
+					<DataPath>Объект.ВыполнятьНа</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сервере</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Клиенте</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВыполнятьНаКонтекстноеМеню" id="178"/>
+					<ExtendedTooltip name="ВыполнятьНаРасширеннаяПодсказка" id="179"/>
+					<Events>
+						<Event name="OnChange">ВыполнятьНаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ImageMagickConvert" id="180">
+					<DataPath>Объект.ImageMagickConvert</DataPath>
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Image Magick Convert</v8:content>
+						</v8:item>
+					</Title>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ImageMagickConvertКонтекстноеМеню" id="181"/>
+					<ExtendedTooltip name="ImageMagickConvertРасширеннаяПодсказка" id="182"/>
+					<Events>
+						<Event name="StartChoice">ImageMagickConvertНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="Tesseract" id="183">
+					<DataPath>Объект.Tesseract</DataPath>
+					<Visible>false</Visible>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="TesseractКонтекстноеМеню" id="184"/>
+					<ExtendedTooltip name="TesseractРасширеннаяПодсказка" id="185"/>
+					<Events>
+						<Event name="StartChoice">TesseractНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидНастройки" id="157">
+					<DataPath>Объект.ВидНастройки</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Парсинг Документов</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Парсинг Исполнительных документов</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидНастройкиКонтекстноеМеню" id="158"/>
+					<ExtendedTooltip name="ВидНастройкиРасширеннаяПодсказка" id="159"/>
+					<Events>
+						<Event name="OnChange">ВидНастройкиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="КаталогДокументовПоУмолчанию" id="104">
+					<DataPath>Объект.КаталогДокументовПоУмолчанию</DataPath>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="КаталогДокументовПоУмолчаниюКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="КаталогДокументовПоУмолчаниюРасширеннаяПодсказка" id="106"/>
+					<Events>
+						<Event name="StartChoice">КаталогДокументовПоУмолчаниюНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ЧитаемыеСимволы" id="7">
+					<DataPath>Объект.ЧитаемыеСимволы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЧитаемыеСимволыКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ЧитаемыеСимволыРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="ИсключениеТочки" id="139">
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ContextMenu name="ИсключениеТочкиКонтекстноеМеню" id="140"/>
+					<ExtendedTooltip name="ИсключениеТочкиРасширеннаяПодсказка" id="141" DisplayImportance="High">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Рекомендуемое значение символ точки "." , если точка может использоваться в номере ДО или ИД или ИП тогда рекомендуется символ точка пробел ". "</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</InputField>
+				<InputField name="ТипыЭлДок" id="154">
+					<DataPath>Объект.ТипыЭлДок</DataPath>
+					<ContextMenu name="ТипыЭлДокКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="ТипыЭлДокРасширеннаяПодсказка" id="156"/>
+				</InputField>
+				<InputField name="ТипыПрикрепляемыхФайлов" id="160">
+					<DataPath>Объект.ТипыПрикрепляемыхФайлов</DataPath>
+					<ContextMenu name="ТипыПрикрепляемыхФайловКонтекстноеМеню" id="161"/>
+					<ExtendedTooltip name="ТипыПрикрепляемыхФайловРасширеннаяПодсказка" id="162"/>
+				</InputField>
+				<InputField name="ДлинаСловаВСимволах" id="10">
+					<DataPath>Объект.ДлинаСловаВСимволах</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Длина слова в символах от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДлинаСловаВСимволахКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ДлинаСловаВСимволахРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="ДоСтраницы" id="39">
+					<DataPath>Объект.ДоСтраницы</DataPath>
+					<ContextMenu name="ДоСтраницыКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДоСтраницыРасширеннаяПодсказка" id="41"/>
+				</InputField>
+				<CheckBoxField name="ВключатьВложенныеКаталоги" id="151">
+					<DataPath>Объект.ВключатьВложенныеКаталоги</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВключатьВложенныеКаталогиКонтекстноеМеню" id="152"/>
+					<ExtendedTooltip name="ВключатьВложенныеКаталогиРасширеннаяПодсказка" id="153"/>
+				</CheckBoxField>
+				<CheckBoxField name="НеУдалятьВременныеФайлы" id="88">
+					<DataPath>Объект.НеУдалятьВременныеФайлы</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НеУдалятьВременныеФайлыКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="НеУдалятьВременныеФайлыРасширеннаяПодсказка" id="90"/>
+				</CheckBoxField>
+				<CheckBoxField name="ЗаглавныеБуквыЦифры" id="91">
+					<DataPath>Объект.ЗаглавныеБуквыЦифры</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаглавныеБуквыЦифрыКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ЗаглавныеБуквыЦифрыРасширеннаяПодсказка" id="93"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПоказатьДокумент" id="133">
+					<DataPath>Объект.ПоказатьДокумент</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Просмотр документов </v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоказатьДокументКонтекстноеМеню" id="134"/>
+					<ExtendedTooltip name="ПоказатьДокументРасширеннаяПодсказка" id="135"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсключитьКонтрагент" id="136">
+					<DataPath>Объект.ИсключитьКонтрагент</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсключитьКонтрагентКонтекстноеМеню" id="137"/>
+					<ExtendedTooltip name="ИсключитьКонтрагентРасширеннаяПодсказка" id="138"/>
+				</CheckBoxField>
+				<CheckBoxField name="ИсключитьДО" id="148">
+					<DataPath>Объект.ИсключитьДО</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИсключитьДОКонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="ИсключитьДОРасширеннаяПодсказка" id="150"/>
+				</CheckBoxField>
+				<CheckBoxField name="НомерМожетСодержатьТочку" id="145">
+					<DataPath>Объект.НомерМожетСодержатьТочку</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НомерМожетСодержатьТочкуКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="НомерМожетСодержатьТочкуРасширеннаяПодсказка" id="147">
+						<Title formatted="true">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При использовании данного флага возможны проблемы с поиском по инициалам</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+				<CheckBoxField name="СжиматьИзображаниеДляПросмотра" id="163">
+					<DataPath>Объект.СжиматьИзображаниеДляПросмотра</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СжиматьИзображаниеДляПросмотраКонтекстноеМеню" id="164"/>
+					<ExtendedTooltip name="СжиматьИзображаниеДляПросмотраРасширеннаяПодсказка" id="165"/>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаШиринаВысота" id="166">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ширина высота</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ширина высота</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШиринаВысотаРасширеннаяПодсказка" id="167"/>
+					<ChildItems>
+						<InputField name="Ширина" id="174">
+							<DataPath>Объект.Ширина</DataPath>
+							<ContextMenu name="ШиринаКонтекстноеМеню" id="175"/>
+							<ExtendedTooltip name="ШиринаРасширеннаяПодсказка" id="176"/>
+						</InputField>
+						<InputField name="Высота" id="171">
+							<DataPath>Объект.Высота</DataPath>
+							<ContextMenu name="ВысотаКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ВысотаРасширеннаяПодсказка" id="173"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИЛСтраницы" id="186">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы исполнительного листа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ИЛСтраницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаИЛСтраницыРасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<CheckBoxField name="ВсеСтраницы" id="188">
+							<DataPath>Объект.ВсеСтраницы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВсеСтраницыКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="ВсеСтраницыРасширеннаяПодсказка" id="190"/>
+							<Events>
+								<Event name="OnChange">ВсеСтраницыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ИЛПерваяСтраница" id="191">
+							<DataPath>Объект.ИЛПерваяСтраница</DataPath>
+							<ContextMenu name="ИЛПерваяСтраницаКонтекстноеМеню" id="192"/>
+							<ExtendedTooltip name="ИЛПерваяСтраницаРасширеннаяПодсказка" id="193"/>
+						</InputField>
+						<InputField name="ИЛПятаяСтраница" id="194">
+							<DataPath>Объект.ИЛПятаяСтраница</DataPath>
+							<ContextMenu name="ИЛПятаяСтраницаКонтекстноеМеню" id="195"/>
+							<ExtendedTooltip name="ИЛПятаяСтраницаРасширеннаяПодсказка" id="196"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПоискаВ" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиска В</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поиска В</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоискаВРасширеннаяПодсказка" id="46"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПоискВКонтрагенты" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагенты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поиск в контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПоискВКонтрагентыРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<CheckBoxField name="Контрагенты" id="49">
+							<DataPath>Объект.Контрагенты</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Контрагенты (по ФИО)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КонтрагентыКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="КонтрагентыРасширеннаяПодсказка" id="51"/>
+							<Events>
+								<Event name="OnChange">КонтрагентПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаКАКритерииПоиска" id="52">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Критерии уточнения поиска</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ДОКритерии поиска</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаКАКритерииПоискаРасширеннаяПодсказка" id="53"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКАКритерииПоискаВерх" id="120">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа КАКритерии поиска верх</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа КАКритерии поиска верх</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКАКритерииПоискаВерхРасширеннаяПодсказка" id="121"/>
+									<ChildItems>
+										<InputField name="КАДатаРождения" id="60">
+											<DataPath>Объект.КАДатаРождения</DataPath>
+											<ContextMenu name="КАДатаРожденияКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="КАДатаРожденияРасширеннаяПодсказка" id="62"/>
+										</InputField>
+										<LabelDecoration name="КАИЛИ" id="110">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>или</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="КАИЛИКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="КАИЛИРасширеннаяПодсказка" id="112"/>
+										</LabelDecoration>
+										<InputField name="КАИНН" id="54">
+											<DataPath>Объект.КаИннСнилс</DataPath>
+											<ContextMenu name="КАИННКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="КАИННРасширеннаяПодсказка" id="56"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКАКритерииПоискаНиз" id="122">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа КАКритерии поиска Низ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа КАКритерии поиска верх</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКАКритерииПоискаНизРасширеннаяПодсказка" id="123"/>
+									<ChildItems>
+										<CheckBoxField name="КАОдин" id="124">
+											<DataPath>Объект.КАОдин</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если одно совпадение по ФИО, то поиск без учета даты, ИНН, СНИЛС </v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="КАОдинКонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="КАОдинРасширеннаяПодсказка" id="126"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПоискВДолговыхОбязательствах" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долговые обязательства</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поиск в долговых обязательствах</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПоискВДолговыхОбязательствахРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<CheckBoxField name="ДолговыеОбязательство" id="22">
+							<DataPath>Объект.ДолговыеОбязательства</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Долговые обязательства (по номеру)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ДолговыеОбязательствоКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ДолговыеОбязательствоРасширеннаяПодсказка" id="24"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаДОКритерииПоиска" id="34">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Критерии уточнения поиска</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ДОКритерии поиска</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаДОКритерииПоискаРасширеннаяПодсказка" id="35"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДОКритерииПоискаВерх" id="116">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ДОКритерии поиска верх</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ДОКритерии поиска верх</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДОКритерииПоискаВерхРасширеннаяПодсказка" id="117"/>
+									<ChildItems>
+										<InputField name="ДОСодержит" id="42">
+											<DataPath>Объект.ДОСодержит</DataPath>
+											<ContextMenu name="ДОСодержитКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ДОСодержитРасширеннаяПодсказка" id="44"/>
+										</InputField>
+										<InputField name="ДОДата" id="36">
+											<DataPath>Объект.ДОДата</DataPath>
+											<ContextMenu name="ДОДатаКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="ДОДатаРасширеннаяПодсказка" id="38"/>
+											<Events>
+												<Event name="OnChange">ДОДатаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДОИЛИ" id="107">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>или</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДОИЛИКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="ДОИЛИРасширеннаяПодсказка" id="109"/>
+										</LabelDecoration>
+										<CheckBoxField name="ДатаДоговораМикрозайма" id="28">
+											<DataPath>Объект.ДОДатаДМ</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДатаДоговораМикрозаймаКонтекстноеМеню" id="29"/>
+											<ExtendedTooltip name="ДатаДоговораМикрозаймаРасширеннаяПодсказка" id="30"/>
+											<Events>
+												<Event name="OnChange">ДатаДоговораМикрозаймаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДОКритерииПоискаНиз" id="118">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ДОКритерии поиска низ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ДОВерх</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДОКритерииПоискаНизРасширеннаяПодсказка" id="119"/>
+									<ChildItems>
+										<CheckBoxField name="ДОЧерезКонтрагента" id="130">
+											<DataPath>Объект.ДОЧерезКонтрагента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>или номер ДО + ФИО Контрагента</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДОЧерезКонтрагентаКонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="ДОЧерезКонтрагентаРасширеннаяПодсказка" id="132"/>
+										</CheckBoxField>
+										<CheckBoxField name="ДООдин" id="113">
+											<DataPath>Объект.ДООдин</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если одно совпадение по номеру, то поиск без учета даты и контрагента</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДООдинКонтекстноеМеню" id="114"/>
+											<ExtendedTooltip name="ДООдинРасширеннаяПодсказка" id="115"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПоискВИсполнительныеДокументы" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнительные документы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поиск в контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПоискВИсполнительныеДокументыРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<CheckBoxField name="ИсполнительныеДокументы" id="79">
+							<DataPath>Объект.ИсполнительныеДокументы</DataPath>
+							<Enabled>false</Enabled>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсполнительныеДокументыКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ИсполнительныеДокументыРасширеннаяПодсказка" id="81"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаИДКритерииПоиска" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Критерии поиска</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ДОКритерии поиска</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаИДКритерииПоискаРасширеннаяПодсказка" id="69"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПоискВИсполнительноеПроизводство" id="94">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнительное производство</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поиск в контрагенты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаПоискВИсполнительноеПроизводствоРасширеннаяПодсказка" id="95"/>
+					<ChildItems>
+						<CheckBoxField name="ИсполнительноеПроизводство" id="101">
+							<DataPath>Объект.ИсполнительноеПроизводство</DataPath>
+							<Enabled>false</Enabled>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИсполнительноеПроизводствоКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ИсполнительноеПроизводствоРасширеннаяПодсказка" id="103"/>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаИПКритерииПоиска" id="99">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Критерии поиска</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ДОКритерии поиска</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаИПКритерииПоискаРасширеннаяПодсказка" id="100"/>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="КлючДоиКА" id="127">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="КлючДоиКАКонтекстноеМеню" id="128"/>
+			<ExtendedTooltip name="КлючДоиКАРасширеннаяПодсказка" id="129"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиПарсингаДокументов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоУмолчанию</Action>
+		</Command>
+	</Commands>
+</Form>

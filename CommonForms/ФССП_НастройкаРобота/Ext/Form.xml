@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаполнитьПоУмолчанию" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
+				<ExtendedTooltip name="ФормаЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="29"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="IPSelenium" id="1">
+			<DataPath>НаборКонстант.IPSelenium</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP Selenium</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="IPSeleniumКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="IPSeleniumРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="PortSelenium" id="4">
+			<DataPath>НаборКонстант.PortSelenium</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Port Selenium</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="PortSeleniumКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="PortSeleniumРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ApiKeyRuCaptcha" id="7">
+			<DataPath>НаборКонстант.ApiKeyRuCaptcha</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ApiKey RuCaptcha</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ApiKeyRuCaptchaКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ApiKeyRuCaptchaРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ОжиданиеЗагрузкиФССП" id="10">
+			<DataPath>НаборКонстант.ОжиданиеЗагрузкиФССП</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидание загрузки ФССП (секунд)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОжиданиеЗагрузкиФССПКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОжиданиеЗагрузкиФССПРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<CheckBoxField name="ИспользоватьПрокси" id="13">
+			<DataPath>НаборКонстант.ИспользоватьПрокси</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьПроксиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИспользоватьПроксиРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<Button name="ФормаСписокПрокси" id="30">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СписокПрокси</CommandName>
+			<ExtendedTooltip name="ФормаСписокПроксиРасширеннаяПодсказка" id="31"/>
+		</Button>
+		<CheckBoxField name="ИскатьПоВсемРегионамФССП" id="16">
+			<DataPath>НаборКонстант.ИскатьПоВсемРегионамФССП</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИскатьПоВсемРегионамФССПКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИскатьПоВсемРегионамФССПРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<InputField name="ПаузаТехническихРаботФССП" id="19">
+			<DataPath>НаборКонстант.ПаузаТехническихРаботФССП</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пауза технических работ ФССП (минут)</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПаузаТехническихРаботФССПКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПаузаТехническихРаботФССПРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="КоличествоОбработокЗапросаНаДолжникаФССП" id="22">
+			<DataPath>НаборКонстант.КоличествоОбработокЗапросаНаДолжникаФССП</DataPath>
+			<ContextMenu name="КоличествоОбработокЗапросаНаДолжникаФССПКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="КоличествоОбработокЗапросаНаДолжникаФССПРасширеннаяПодсказка" id="24">
+				<Width>6</Width>
+				<Height>3</Height>
+				<Title formatted="true">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Когда количество запросов по должнику достигнет предела, запросы будут производится поседующему должнику</v8:content>
+					</v8:item>
+				</Title>
+			</ExtendedTooltip>
+		</InputField>
+		<InputField name="КоличествоБезрезультатноВведенныхКапчФССП" id="32">
+			<DataPath>НаборКонстант.КоличествоБезрезультатноВведенныхКапчФССП</DataPath>
+			<ContextMenu name="КоличествоБезрезультатноВведенныхКапчФССПКонтекстноеМеню" id="33"/>
+			<ExtendedTooltip name="КоличествоБезрезультатноВведенныхКапчФССПРасширеннаяПодсказка" id="34"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоУмолчанию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоУмолчанию</Action>
+		</Command>
+		<Command name="СписокПрокси" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список прокси</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список прокси</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокПрокси</Action>
+		</Command>
+	</Commands>
+</Form>

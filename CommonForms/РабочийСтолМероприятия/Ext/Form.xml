@@ -3,7 +3,7 @@
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Рабочий стол</v8:content>
+			<v8:content>Текущие дела</v8:content>
 		</v8:item>
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
@@ -426,6 +426,34 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаСлужебныеРасширеннаяПодсказка" id="592"/>
 				<ChildItems>
+					<Button name="ФормаТекущиеПоказателиВзыскания" id="1204">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ТекущиеПоказателиВзыскания</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Chart</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаТекущиеПоказателиВзысканияРасширеннаяПодсказка" id="1205"/>
+					</Button>
+					<Button name="СписокДОМассовоеФормированиеШаблонов" id="1202">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.МассовоеФормированиеШаблонов</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ФорматMXL</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="СписокДОМассовоеФормированиеШаблоновРасширеннаяПодсказка" id="1203"/>
+					</Button>
+					<Button name="ФормаОтладка" id="114">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Command.Отладка</CommandName>
+						<ExtendedTooltip name="ФормаОтладкаExtendedTooltip" id="215"/>
+					</Button>
 					<Button name="ФормаПосчитатьДолжников" id="1332">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ПосчитатьДолжников</CommandName>
@@ -586,10 +614,10 @@
 							<ExtendedTooltip name="ПортфелиРасширеннаяПодсказка" id="1235"/>
 							<ChildItems>
 								<Table name="Дерево" id="1">
-									<Representation>Tree</Representation>
 									<Header>false</Header>
 									<UseAlternationRowColor>true</UseAlternationRowColor>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialListView>Beginning</InitialListView>
 									<InitialTreeView>ExpandAllLevels</InitialTreeView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -720,8 +748,8 @@
 									<RowPictureDataPath>СписокДО.DefaultPicture</RowPictureDataPath>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
-									<AutoRefresh>false</AutoRefresh>
-									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<AutoRefresh>true</AutoRefresh>
+									<AutoRefreshPeriod>10</AutoRefreshPeriod>
 									<Period>
 										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
 										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
@@ -6824,7 +6852,7 @@
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
-					<v8:Length>8</v8:Length>
+					<v8:Length>9</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
@@ -7936,6 +7964,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КонтрольСроков</Action>
+		</Command>
+		<Command name="МассовоеФормированиеШаблонов" id="139">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Массовое формирование шаблонов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Массовое формирование шаблонов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>МассовоеФормированиеШаблонов</Action>
+		</Command>
+		<Command name="ТекущиеПоказателиВзыскания" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущие показатели взыскания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущие показатели взыскания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТекущиеПоказателиВзыскания</Action>
 		</Command>
 		<Command name="ДолжникПогашенияСудебные" id="51">
 			<Title>

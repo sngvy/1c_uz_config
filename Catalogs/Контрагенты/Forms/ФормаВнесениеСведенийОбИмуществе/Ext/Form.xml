@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Button name="Записать" id="31">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Записать</CommandName>
+			<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+			<BackColor>style:FormBackColor</BackColor>
+			<Font ref="style:ШрифтТекстКнопки" kind="StyleItem"/>
+			<ExtendedTooltip name="ЗаписатьРасширеннаяПодсказка" id="32"/>
+		</Button>
+		<LabelField name="Контрагент" id="28">
+			<DataPath>Контрагент</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<Font ref="style:ШрифтТекстРеквизитовВажный" kind="StyleItem"/>
+			<ContextMenu name="КонтрагентКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="30"/>
+		</LabelField>
+		<InputField name="ТипИмущества" id="36">
+			<DataPath>ТипИмущества</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceButton>false</ChoiceButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChooseType>false</ChooseType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.Имущество.ЗемельныеУчастки</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.Имущество.Помещения</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.Имущество.Транспорт</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипИмуществаКонтекстноеМеню" id="37"/>
+			<ExtendedTooltip name="ТипИмуществаРасширеннаяПодсказка" id="38"/>
+			<Events>
+				<Event name="OnChange">ТипИмуществаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Button name="УдалитьПустые" id="77">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.УдалитьПустые</CommandName>
+			<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+			<BackColor>style:FormBackColor</BackColor>
+			<Font ref="style:ШрифтТекстКнопкиМаленький" kind="StyleItem"/>
+			<ExtendedTooltip name="УдалитьПустыеРасширеннаяПодсказка" id="78"/>
+		</Button>
+		<Pages name="ГруппаИмущество" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа имущество</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа имущество</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаИмуществоРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаТранспорт" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Транспорт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа транспорт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТранспортРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<InputField name="ЭлементТранспорт" id="33">
+							<DataPath>ЭлементТранспорт</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Контрагент</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ЭлементТранспортКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ЭлементТранспортРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<Table name="Транспорт" id="9">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Транспорт</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТранспортКонтекстноеМеню" id="10"/>
+							<AutoCommandBar name="ТранспортКоманднаяПанель" id="11"/>
+							<ExtendedTooltip name="ТранспортРасширеннаяПодсказка" id="12"/>
+							<SearchStringAddition name="ТранспортСтрокаПоиска" id="13">
+								<AdditionSource>
+									<Item>Транспорт</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТранспортСтрокаПоискаКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ТранспортСтрокаПоискаРасширеннаяПодсказка" id="15"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТранспортСостояниеПросмотра" id="16">
+								<AdditionSource>
+									<Item>Транспорт</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТранспортСостояниеПросмотраКонтекстноеМеню" id="17"/>
+								<ExtendedTooltip name="ТранспортСостояниеПросмотраРасширеннаяПодсказка" id="18"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТранспортУправлениеПоиском" id="19">
+								<AdditionSource>
+									<Item>Транспорт</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТранспортУправлениеПоискомКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="ТранспортУправлениеПоискомРасширеннаяПодсказка" id="21"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТранспортСвойство" id="22">
+									<DataPath>Транспорт.Свойство</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТранспортСвойствоКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ТранспортСвойствоРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<InputField name="ТранспортЗначение" id="25">
+									<DataPath>Транспорт.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Свойство.ТипЗначения</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Items.Транспорт.CurrentData.Свойство</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ТранспортЗначениеКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ТранспортЗначениеРасширеннаяПодсказка" id="27"/>
+									<Events>
+										<Event name="StartChoice">ТранспортЗначениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПомещения" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Помещения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа помещения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПомещенияРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<InputField name="ЭлементПомещения" id="79">
+							<DataPath>ЭлементПомещения</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Контрагент</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ЭлементПомещенияКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ЭлементПомещенияРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<Table name="Помещения" id="39">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Помещения</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПомещенияКонтекстноеМеню" id="40"/>
+							<AutoCommandBar name="ПомещенияКоманднаяПанель" id="41"/>
+							<ExtendedTooltip name="ПомещенияРасширеннаяПодсказка" id="42"/>
+							<SearchStringAddition name="ПомещенияСтрокаПоиска" id="43">
+								<AdditionSource>
+									<Item>Помещения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПомещенияСтрокаПоискаКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ПомещенияСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПомещенияСостояниеПросмотра" id="46">
+								<AdditionSource>
+									<Item>Помещения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПомещенияСостояниеПросмотраКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ПомещенияСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПомещенияУправлениеПоиском" id="49">
+								<AdditionSource>
+									<Item>Помещения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПомещенияУправлениеПоискомКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ПомещенияУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПомещенияСвойство" id="52">
+									<DataPath>Помещения.Свойство</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПомещенияСвойствоКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="ПомещенияСвойствоРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="ПомещенияЗначение" id="55">
+									<DataPath>Помещения.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="ПомещенияЗначениеКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ПомещенияЗначениеРасширеннаяПодсказка" id="57"/>
+									<Events>
+										<Event name="StartChoice">ПомещенияЗначениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗемельныеУчастки" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Земельные участки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа земельные участки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗемельныеУчасткиРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<InputField name="ЭлементЗемельныеУчастки" id="82">
+							<DataPath>ЭлементЗемельныеУчастки</DataPath>
+							<ChoiceParameterLinks>
+								<xr:Link>
+									<xr:Name>Отбор.Владелец</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Контрагент</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
+							</ChoiceParameterLinks>
+							<ContextMenu name="ЭлементЗемельныеУчасткиКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ЭлементЗемельныеУчасткиРасширеннаяПодсказка" id="84"/>
+						</InputField>
+						<Table name="ЗемельныеУчастки" id="58">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ЗемельныеУчастки</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗемельныеУчасткиКонтекстноеМеню" id="59"/>
+							<AutoCommandBar name="ЗемельныеУчасткиКоманднаяПанель" id="60"/>
+							<ExtendedTooltip name="ЗемельныеУчасткиРасширеннаяПодсказка" id="61"/>
+							<SearchStringAddition name="ЗемельныеУчасткиСтрокаПоиска" id="62">
+								<AdditionSource>
+									<Item>ЗемельныеУчастки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗемельныеУчасткиСтрокаПоискаКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ЗемельныеУчасткиСтрокаПоискаРасширеннаяПодсказка" id="64"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗемельныеУчасткиСостояниеПросмотра" id="65">
+								<AdditionSource>
+									<Item>ЗемельныеУчастки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗемельныеУчасткиСостояниеПросмотраКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="ЗемельныеУчасткиСостояниеПросмотраРасширеннаяПодсказка" id="67"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗемельныеУчасткиУправлениеПоиском" id="68">
+								<AdditionSource>
+									<Item>ЗемельныеУчастки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗемельныеУчасткиУправлениеПоискомКонтекстноеМеню" id="69"/>
+								<ExtendedTooltip name="ЗемельныеУчасткиУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЗемельныеУчасткиСвойство" id="71">
+									<DataPath>ЗемельныеУчастки.Свойство</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗемельныеУчасткиСвойствоКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ЗемельныеУчасткиСвойствоРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="ЗемельныеУчасткиЗначение" id="74">
+									<DataPath>ЗемельныеУчастки.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>false</ChoiceButton>
+									<ContextMenu name="ЗемельныеУчасткиЗначениеКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ЗемельныеУчасткиЗначениеРасширеннаяПодсказка" id="76"/>
+									<Events>
+										<Event name="StartChoice">ЗемельныеУчасткиЗначениеНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Транспорт" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспорт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.СвойстваИмущества</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.СвойстваИмущества</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Контрагент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭлементТранспорт" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспорт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Транспорт</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипИмущества" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип имущества</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ChartOfCharacteristicTypesRef.Имущество</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗемельныеУчастки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Земельные участки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.СвойстваИмущества</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.СвойстваИмущества</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Помещения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помещения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Свойство" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Свойство</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:ChartOfCharacteristicTypesRef.СвойстваИмущества</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:Characteristic.СвойстваИмущества</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЭлементПомещения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помещение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Помещения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭлементЗемельныеУчастки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Земельный участок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗемельныеУчастки</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+		<Command name="УдалитьПустые" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить пустые</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить пустые</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьПустые</Action>
+		</Command>
+	</Commands>
+</Form>

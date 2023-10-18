@@ -24,6 +24,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<CommandBar name="ГруппаКоманднаяПанель" id="22">
@@ -72,7 +73,7 @@
 					<ExtendedTooltip name="КонстантыНаборСудебныйУчастокОбъектаРасширеннаяПодсказка" id="12"/>
 				</InputField>
 				<InputField name="КонстантыНаборСервисСУАдрес" id="13">
-					<DataPath>КонстантыНабор.СервисСУАдрес</DataPath>
+					<DataPath>Адрес</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -81,9 +82,12 @@
 					</Title>
 					<ContextMenu name="КонстантыНаборСервисСУАдресКонтекстноеМеню" id="14"/>
 					<ExtendedTooltip name="КонстантыНаборСервисСУАдресРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">КонстантыНаборСервисСУАдресПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="КонстантыНаборСервисСУЛогин" id="16">
-					<DataPath>КонстантыНабор.СервисСУЛогин</DataPath>
+					<DataPath>Логин</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -92,9 +96,12 @@
 					</Title>
 					<ContextMenu name="КонстантыНаборСервисСУЛогинКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="КонстантыНаборСервисСУЛогинРасширеннаяПодсказка" id="18"/>
+					<Events>
+						<Event name="OnChange">КонстантыНаборСервисСУЛогинПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="КонстантыНаборСервисСУПароль" id="19">
-					<DataPath>КонстантыНабор.СервисСУПароль</DataPath>
+					<DataPath>Пароль</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -104,6 +111,9 @@
 					<PasswordMode>true</PasswordMode>
 					<ContextMenu name="КонстантыНаборСервисСУПарольКонтекстноеМеню" id="20"/>
 					<ExtendedTooltip name="КонстантыНаборСервисСУПарольРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="OnChange">КонстантыНаборСервисСУПарольПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -136,6 +146,84 @@
 				<v8:Type>cfg:ConstantsSet</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Пароль" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольИзменен" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛогинИзменен" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Логин" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресИзменен" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Адрес" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

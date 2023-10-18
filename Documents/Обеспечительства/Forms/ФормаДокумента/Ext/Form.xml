@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ОбъектОбеспечительства" id="7">
+			<DataPath>Объект.ОбъектОбеспечительства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОбъектОбеспечительстваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОбъектОбеспечительстваРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ИдентификаторОбеспечительства" id="10">
+			<DataPath>Объект.ИдентификаторОбеспечительства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторОбеспечительстваКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИдентификаторОбеспечительстваРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ДатаЗаключенияДоговора" id="13">
+			<DataPath>Объект.ДатаЗаключенияДоговора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаЗаключенияДоговораКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДатаЗаключенияДоговораРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="СтоимостьПредметаДоговора" id="16">
+			<DataPath>Объект.СтоимостьПредметаДоговора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СтоимостьПредметаДоговораКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СтоимостьПредметаДоговораРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ВалютаСтоимостиПредметаДоговора" id="19">
+			<DataPath>Объект.ВалютаСтоимостиПредметаДоговора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВалютаСтоимостиПредметаДоговораКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ВалютаСтоимостиПредметаДоговораРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ДатаПрекращенияОбеспечительства" id="22">
+			<DataPath>Объект.ДатаПрекращенияОбеспечительства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаПрекращенияОбеспечительстваКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДатаПрекращенияОбеспечительстваРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ДатаФактическогоПрекращенияДоговора" id="25">
+			<DataPath>Объект.ДатаФактическогоПрекращенияДоговора</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаФактическогоПрекращенияДоговораКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДатаФактическогоПрекращенияДоговораРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ПричинаПрекращенияОбеспечительства" id="28">
+			<DataPath>Объект.ПричинаПрекращенияОбеспечительства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПричинаПрекращенияОбеспечительстваКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ПричинаПрекращенияОбеспечительстваРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ВидОбеспечения" id="31">
+			<DataPath>Объект.ВидОбеспечения</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидОбеспеченияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ВидОбеспеченияРасширеннаяПодсказка" id="33"/>
+			<Events>
+				<Event name="OnChange">ВидОбеспеченияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПоручитель" id="50">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поручитель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа поручитель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПоручительРасширеннаяПодсказка" id="51"/>
+			<ChildItems>
+				<InputField name="Поручитель" id="34">
+					<DataPath>Объект.Поручитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоручительКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПоручительРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<Button name="ЗаполнитьИзСпискаПоручителей" id="46">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ЗаполнитьИзСпискаПоручителей</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.СтрелкаВниз</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ЗаполнитьИзСпискаПоручителейРасширеннаяПодсказка" id="47"/>
+				</Button>
+				<Button name="ДобавитьВСписокПоручителей" id="48">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ДобавитьВСписокПоручителей</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.СтрелкаВверх</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ДобавитьВСписокПоручителейРасширеннаяПодсказка" id="49"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ПризнакНаличияФраншизы" id="37">
+			<DataPath>Объект.ПризнакНаличияФраншизы</DataPath>
+			<Visible>false</Visible>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПризнакНаличияФраншизыКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ПризнакНаличияФраншизыРасширеннаяПодсказка" id="39"/>
+		</CheckBoxField>
+		<InputField name="ИдентификаторПредметаСтрахования" id="57">
+			<DataPath>Объект.ИдентификаторПредметаСтрахования</DataPath>
+			<ContextMenu name="ИдентификаторПредметаСтрахованияКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="ИдентификаторПредметаСтрахованияРасширеннаяПодсказка" id="59"/>
+		</InputField>
+		<CheckBoxField name="ПогашеноОсновноеОбязательство" id="40">
+			<DataPath>Объект.ПогашеноОсновноеОбязательство</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПогашеноОсновноеОбязательствоКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="ПогашеноОсновноеОбязательствоРасширеннаяПодсказка" id="42"/>
+		</CheckBoxField>
+		<CheckBoxField name="ВозмещениеПринципалом" id="43">
+			<DataPath>Объект.ВозмещениеПринципалом</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВозмещениеПринципаломКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ВозмещениеПринципаломРасширеннаяПодсказка" id="45"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаЗалог" id="55">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа залог</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа залог</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗалогРасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<InputField name="ПредметЗалога" id="52">
+					<DataPath>Объект.ПредметЗалога</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ПредметЗалогаКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="ПредметЗалогаРасширеннаяПодсказка" id="54"/>
+				</InputField>
+				<InputField name="ВидСтоимостиПредметаЗалога" id="60">
+					<DataPath>Объект.ВидСтоимостиПредметаЗалога</DataPath>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Рыночная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Кадастровая</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ликвидационная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инвестиционная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иная</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">99</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидСтоимостиПредметаЗалогаКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ВидСтоимостиПредметаЗалогаРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="СуммаВсехОбеспеченныхДоговоров" id="63">
+					<DataPath>Объект.СуммаВсехОбеспеченныхДоговоров</DataPath>
+					<ContextMenu name="СуммаВсехОбеспеченныхДоговоровКонтекстноеМеню" id="64"/>
+					<ExtendedTooltip name="СуммаВсехОбеспеченныхДоговоровРасширеннаяПодсказка" id="65"/>
+				</InputField>
+				<InputField name="КоличествоВсехОбеспеченныхДоговоров" id="66">
+					<DataPath>Объект.КоличествоВсехОбеспеченныхДоговоров</DataPath>
+					<ContextMenu name="КоличествоВсехОбеспеченныхДоговоровКонтекстноеМеню" id="67"/>
+					<ExtendedTooltip name="КоличествоВсехОбеспеченныхДоговоровРасширеннаяПодсказка" id="68"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Обеспечительства</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьИзСпискаПоручителей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из списка поручителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из списка поручителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьИзСпискаПоручителей</Action>
+		</Command>
+		<Command name="ДобавитьВСписокПоручителей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в список поручителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в список поручителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВСписокПоручителей</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ФиксированиеПогашенийОбеспечительством.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

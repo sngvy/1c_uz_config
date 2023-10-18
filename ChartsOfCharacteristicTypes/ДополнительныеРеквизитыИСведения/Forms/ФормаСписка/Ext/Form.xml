@@ -80,6 +80,17 @@
 								<CommandName>Form.Command.КомандаВниз</CommandName>
 								<ExtendedTooltip name="СписокКомандаВнизExtendedTooltip" id="28"/>
 							</Button>
+							<Button name="СписокКомандаДобавитьВсеПредопределенные" id="57">
+								<Type>CommandBarButton</Type>
+								<Visible>false</Visible>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.КомандаДобавитьВсеПредопределенные</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="СписокКомандаДобавитьВсеПредопределенныеРасширеннаяПодсказка" id="58"/>
+							</Button>
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="СписокExtendedTooltip" id="29"/>
@@ -335,6 +346,21 @@
 			<Action>КомандаВниз</Action>
 			<Representation>Picture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаДобавитьВсеПредопределенные" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить предопределенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда добавить все предопределенные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДобавитьВсеПредопределенные</Action>
 		</Command>
 	</Commands>
 </Form>

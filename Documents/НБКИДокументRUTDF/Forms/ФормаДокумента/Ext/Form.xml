@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСформироватьОтчет" id="117">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.СформироватьОтчет</CommandName>
+				<TextColor>style:NegativeTextColor</TextColor>
+				<BackColor>#008080</BackColor>
+				<BorderColor>style:AccentColor</BorderColor>
+				<Picture>
+					<xr:Ref>CommonPicture._report</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаСформироватьОтчетРасширеннаяПодсказка" id="118"/>
+			</Button>
+			<Popup name="Подпись" id="277">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подпись</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Подпись</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Ref>CommonPicture.ПодписанЗашифрованЗаголовок</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ПодписьРасширеннаяПодсказка" id="278"/>
+				<ChildItems>
+					<Button name="ФормаПрикрепить" id="279">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Прикрепить</CommandName>
+						<ExtendedTooltip name="ФормаПрикрепитьРасширеннаяПодсказка" id="280"/>
+					</Button>
+					<ButtonGroup name="ФормаГруппаПодписание" id="292">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа подписание</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа подписание</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ФормаГруппаПодписаниеРасширеннаяПодсказка" id="293"/>
+						<ChildItems>
+							<Button name="ФормаПодписать" id="281">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Подписать</CommandName>
+								<ExtendedTooltip name="ФормаПодписатьРасширеннаяПодсказка" id="282"/>
+							</Button>
+							<Button name="ФормаЗашифровать" id="286">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Зашифровать</CommandName>
+								<ExtendedTooltip name="ФормаЗашифроватьРасширеннаяПодсказка" id="287"/>
+							</Button>
+							<Button name="ФормаРасшифровать" id="288">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Расшифровать</CommandName>
+								<ExtendedTooltip name="ФормаРасшифроватьРасширеннаяПодсказка" id="289"/>
+							</Button>
+							<Button name="ФормаСохранитьВместеСПодписью" id="290">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СохранитьВместеСПодписью</CommandName>
+								<ExtendedTooltip name="ФормаСохранитьВместеСПодписьюРасширеннаяПодсказка" id="291"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
+			<Popup name="Архив" id="294">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Архив</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Архив</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="АрхивРасширеннаяПодсказка" id="295"/>
+				<ChildItems>
+					<Button name="СобратьВАрхив" id="296">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СобратьВАрхив</CommandName>
+						<ExtendedTooltip name="СобратьВАрхивРасширеннаяПодсказка" id="297"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Операция" id="114">
+			<DataPath>Объект.Операция</DataPath>
+			<ContextMenu name="ОперацияКонтекстноеМеню" id="115"/>
+			<ExtendedTooltip name="ОперацияРасширеннаяПодсказка" id="116"/>
+			<Events>
+				<Event name="OnChange">ОперацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<CheckBoxField name="ЭтоКорректировкаРанееОтправленогоДокумента" id="132">
+			<DataPath>Объект.ЭтоКорректировкаРанееОтправленогоДокумента</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЭтоКорректировкаРанееОтправленогоДокументаКонтекстноеМеню" id="133"/>
+			<ExtendedTooltip name="ЭтоКорректировкаРанееОтправленогоДокументаРасширеннаяПодсказка" id="134"/>
+			<Events>
+				<Event name="OnChange">ЭтоКорректировкаРанееОтправленогоДокументаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<InputField name="НепринятыйДокумент" id="13">
+			<DataPath>Объект.НепринятыйДокумент</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НепринятыйДокументКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НепринятыйДокументРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="НастройкаВыгрузки" id="10">
+			<DataPath>Объект.НастройкаВыгрузки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НастройкаВыгрузкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НастройкаВыгрузкиРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">НастройкаВыгрузкиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ИмяФайла" id="7">
+			<DataPath>Объект.ИмяФайла</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяФайлаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИмяФайлаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Принято" id="124">
+			<DataPath>Объект.Принято</DataPath>
+			<ContextMenu name="ПринятоКонтекстноеМеню" id="125"/>
+			<ExtendedTooltip name="ПринятоРасширеннаяПодсказка" id="126"/>
+			<Events>
+				<Event name="OnChange">ПринятоПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ЭлементФайлы" id="283">
+			<DataPath>Объект.ЭлементФайлы</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карточка отчета</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>false</ChoiceButton>
+			<ContextMenu name="ЭлементФайлыКонтекстноеМеню" id="284"/>
+			<ExtendedTooltip name="ЭлементФайлыРасширеннаяПодсказка" id="285"/>
+		</InputField>
+		<InputField name="АрхивНБКИ" id="300">
+			<DataPath>Объект.АрхивНБКИ</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архив</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>false</ChoiceButton>
+			<ContextMenu name="АрхивНБКИКонтекстноеМеню" id="301"/>
+			<ExtendedTooltip name="АрхивНБКИРасширеннаяПодсказка" id="302"/>
+		</InputField>
+		<InputField name="Комментарий" id="170">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="171"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="172"/>
+		</InputField>
+		<Pages name="Страницы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Page name="ГруппатчНовыеЗаписиА" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новые Записи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппатчНовыеЗаписиАРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<Table name="тчНовыеЗаписиА" id="20">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.тчНовыеЗаписиА</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тчНовыеЗаписиАКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="тчНовыеЗаписиАКоманднаяПанель" id="22">
+								<ChildItems>
+									<Button name="тчНовыеЗаписиАПодбор" id="135">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчНовыеЗаписиАПодборРасширеннаяПодсказка" id="136"/>
+									</Button>
+									<Button name="тчНовыеЗаписиАПодборПоНастройкам" id="137">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчНовыеЗаписиАПодборПоНастройкамРасширеннаяПодсказка" id="138"/>
+									</Button>
+									<Button name="тчНовыеЗаписиАПодборИзФайла" id="303">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.Найти_</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчНовыеЗаписиАПодборИзФайлаРасширеннаяПодсказка" id="304"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тчНовыеЗаписиАРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="тчНовыеЗаписиАСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>тчНовыеЗаписиА</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчНовыеЗаписиАСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="тчНовыеЗаписиАСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тчНовыеЗаписиАСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>тчНовыеЗаписиА</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчНовыеЗаписиАСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="тчНовыеЗаписиАСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тчНовыеЗаписиАУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>тчНовыеЗаписиА</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тчНовыеЗаписиАУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="тчНовыеЗаписиАУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="тчНовыеЗаписиАНомерСтроки" id="33">
+									<DataPath>Объект.тчНовыеЗаписиА.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчНовыеЗаписиАНомерСтрокиКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="тчНовыеЗаписиАНомерСтрокиРасширеннаяПодсказка" id="35"/>
+								</LabelField>
+								<InputField name="тчНовыеЗаписиАОбъектУчета" id="36">
+									<DataPath>Объект.тчНовыеЗаписиА.ОбъектУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчНовыеЗаписиАОбъектУчетаКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="тчНовыеЗаписиАОбъектУчетаРасширеннаяПодсказка" id="38"/>
+								</InputField>
+								<InputField name="тчНовыеЗаписиАДолжник" id="173">
+									<DataPath>Объект.тчНовыеЗаписиА.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчНовыеЗаписиАДолжникКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="тчНовыеЗаписиАДолжникРасширеннаяПодсказка" id="175"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппатчОбновляемыеЗаписиB" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Обновляемые Записи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппатчОбновляемыеЗаписиBРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="тчОбновляемыеЗаписиB" id="41">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.тчОбновляемыеЗаписиB</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тчОбновляемыеЗаписиBКонтекстноеМеню" id="42"/>
+							<AutoCommandBar name="тчОбновляемыеЗаписиBКоманднаяПанель" id="43">
+								<ChildItems>
+									<Button name="тчОбновляемыеЗаписиBПодбор" id="139">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчОбновляемыеЗаписиBПодборРасширеннаяПодсказка" id="140"/>
+									</Button>
+									<Button name="тчОбновляемыеЗаписиBПодборПоНастройкам" id="141">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчОбновляемыеЗаписиBПодборПоНастройкамРасширеннаяПодсказка" id="142"/>
+									</Button>
+									<Button name="тчОбновляемыеЗаписиBПодборИзФайла" id="298">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.Найти_</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчОбновляемыеЗаписиBПодборИзФайлаРасширеннаяПодсказка" id="299"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тчОбновляемыеЗаписиBРасширеннаяПодсказка" id="44"/>
+							<SearchStringAddition name="тчОбновляемыеЗаписиBСтрокаПоиска" id="45">
+								<AdditionSource>
+									<Item>тчОбновляемыеЗаписиB</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчОбновляемыеЗаписиBСтрокаПоискаКонтекстноеМеню" id="46"/>
+								<ExtendedTooltip name="тчОбновляемыеЗаписиBСтрокаПоискаРасширеннаяПодсказка" id="47"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тчОбновляемыеЗаписиBСостояниеПросмотра" id="48">
+								<AdditionSource>
+									<Item>тчОбновляемыеЗаписиB</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчОбновляемыеЗаписиBСостояниеПросмотраКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="тчОбновляемыеЗаписиBСостояниеПросмотраРасширеннаяПодсказка" id="50"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тчОбновляемыеЗаписиBУправлениеПоиском" id="51">
+								<AdditionSource>
+									<Item>тчОбновляемыеЗаписиB</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тчОбновляемыеЗаписиBУправлениеПоискомКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="тчОбновляемыеЗаписиBУправлениеПоискомРасширеннаяПодсказка" id="53"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="тчОбновляемыеЗаписиBНомерСтроки" id="54">
+									<DataPath>Объект.тчОбновляемыеЗаписиB.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчОбновляемыеЗаписиBНомерСтрокиКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="тчОбновляемыеЗаписиBНомерСтрокиРасширеннаяПодсказка" id="56"/>
+								</LabelField>
+								<InputField name="тчОбновляемыеЗаписиBОбъектУчета" id="57">
+									<DataPath>Объект.тчОбновляемыеЗаписиB.ОбъектУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчОбновляемыеЗаписиBОбъектУчетаКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="тчОбновляемыеЗаписиBОбъектУчетаРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="тчОбновляемыеЗаписиBДолжник" id="176">
+									<DataPath>Объект.тчОбновляемыеЗаписиB.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчОбновляемыеЗаписиBДолжникКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="тчОбновляемыеЗаписиBДолжникРасширеннаяПодсказка" id="178"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппатчИсправляемыеЗаписиC" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исправляемые Записи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппатчИсправляемыеЗаписиCРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="тчИсправляемыеЗаписиC" id="62">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.тчИсправляемыеЗаписиC</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тчИсправляемыеЗаписиCКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="тчИсправляемыеЗаписиCКоманднаяПанель" id="64">
+								<ChildItems>
+									<Button name="тчИсправляемыеЗаписиCПодбор" id="143">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчИсправляемыеЗаписиCПодборРасширеннаяПодсказка" id="144"/>
+									</Button>
+									<Button name="тчИсправляемыеЗаписиCПодборПоНастройкам" id="145">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчИсправляемыеЗаписиCПодборПоНастройкамРасширеннаяПодсказка" id="146"/>
+									</Button>
+									<Button name="тчИсправляемыеЗаписиCПодборИзФайла" id="305">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.Найти_</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчИсправляемыеЗаписиCПодборИзФайлаРасширеннаяПодсказка" id="306"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тчИсправляемыеЗаписиCРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="тчИсправляемыеЗаписиCСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>тчИсправляемыеЗаписиC</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчИсправляемыеЗаписиCСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="тчИсправляемыеЗаписиCСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тчИсправляемыеЗаписиCСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>тчИсправляемыеЗаписиC</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчИсправляемыеЗаписиCСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="тчИсправляемыеЗаписиCСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тчИсправляемыеЗаписиCУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>тчИсправляемыеЗаписиC</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тчИсправляемыеЗаписиCУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="тчИсправляемыеЗаписиCУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="тчИсправляемыеЗаписиCНомерСтроки" id="75">
+									<DataPath>Объект.тчИсправляемыеЗаписиC.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчИсправляемыеЗаписиCНомерСтрокиКонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="тчИсправляемыеЗаписиCНомерСтрокиРасширеннаяПодсказка" id="77"/>
+								</LabelField>
+								<InputField name="тчИсправляемыеЗаписиCОбъектУчета" id="78">
+									<DataPath>Объект.тчИсправляемыеЗаписиC.ОбъектУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчИсправляемыеЗаписиCОбъектУчетаКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="тчИсправляемыеЗаписиCОбъектУчетаРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<InputField name="тчИсправляемыеЗаписиCДолжник" id="179">
+									<DataPath>Объект.тчИсправляемыеЗаписиC.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчИсправляемыеЗаписиCДолжникКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="тчИсправляемыеЗаписиCДолжникРасширеннаяПодсказка" id="181"/>
+								</InputField>
+								<InputField name="тчИсправляемыеЗаписиCПричина" id="307">
+									<DataPath>Объект.тчИсправляемыеЗаписиC.Причина</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Неправомерная (ошибочная) передача данных.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">0</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="тчИсправляемыеЗаписиCПричинаКонтекстноеМеню" id="308"/>
+									<ExtendedTooltip name="тчИсправляемыеЗаписиCПричинаРасширеннаяПодсказка" id="309"/>
+								</InputField>
+								<InputField name="тчИсправляемыеЗаписиCКомментарий" id="310">
+									<DataPath>Объект.тчИсправляемыеЗаписиC.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчИсправляемыеЗаписиCКомментарийКонтекстноеМеню" id="311"/>
+									<ExtendedTooltip name="тчИсправляемыеЗаписиCКомментарийРасширеннаяПодсказка" id="312"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ЗаписиДляКорректировкиC" id="225">
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ЗаписиДляКорректировки</DataPath>
+							<RowPictureDataPath>ЗаписиДляКорректировки.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>ChangeHistory</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>ListSettings</ExcludedCommand>
+								<ExcludedCommand>LoadDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>Refresh</ExcludedCommand>
+								<ExcludedCommand>SaveDynamicListSettings</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+							</CommandSet>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ЗаписиДляКорректировкиCКонтекстноеМеню" id="226"/>
+							<AutoCommandBar name="ЗаписиДляКорректировкиCКоманднаяПанель" id="227"/>
+							<ExtendedTooltip name="ЗаписиДляКорректировкиCРасширеннаяПодсказка" id="228"/>
+							<SearchStringAddition name="ЗаписиДляКорректировкиCСтрокаПоиска" id="229">
+								<AdditionSource>
+									<Item>ЗаписиДляКорректировкиC</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаписиДляКорректировкиCСтрокаПоискаКонтекстноеМеню" id="230"/>
+								<ExtendedTooltip name="ЗаписиДляКорректировкиCСтрокаПоискаРасширеннаяПодсказка" id="231"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗаписиДляКорректировкиCСостояниеПросмотра" id="232">
+								<AdditionSource>
+									<Item>ЗаписиДляКорректировкиC</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаписиДляКорректировкиCСостояниеПросмотраКонтекстноеМеню" id="233"/>
+								<ExtendedTooltip name="ЗаписиДляКорректировкиCСостояниеПросмотраРасширеннаяПодсказка" id="234"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗаписиДляКорректировкиCУправлениеПоиском" id="235">
+								<AdditionSource>
+									<Item>ЗаписиДляКорректировкиC</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаписиДляКорректировкиCУправлениеПоискомКонтекстноеМеню" id="236"/>
+								<ExtendedTooltip name="ЗаписиДляКорректировкиCУправлениеПоискомРасширеннаяПодсказка" id="237"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗаписиДляКорректировкиCДатаПоследнейВыгрузки" id="238">
+									<DataPath>ЗаписиДляКорректировки.ДатаПоследнейВыгрузки</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCДатаПоследнейВыгрузкиКонтекстноеМеню" id="239"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCДатаПоследнейВыгрузкиРасширеннаяПодсказка" id="240"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCДатаСобытия" id="241">
+									<DataPath>ЗаписиДляКорректировки.ДатаСобытия</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCДатаСобытияКонтекстноеМеню" id="242"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCДатаСобытияРасширеннаяПодсказка" id="243"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCДокументОтчет" id="244">
+									<DataPath>ЗаписиДляКорректировки.ДокументОтчет</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCДокументОтчетКонтекстноеМеню" id="245"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCДокументОтчетРасширеннаяПодсказка" id="246"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCИдентификатор" id="247">
+									<DataPath>ЗаписиДляКорректировки.Идентификатор</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCИдентификаторКонтекстноеМеню" id="248"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCИдентификаторРасширеннаяПодсказка" id="249"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCИмяФайла" id="250">
+									<DataPath>ЗаписиДляКорректировки.ИмяФайла</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCИмяФайлаКонтекстноеМеню" id="251"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCИмяФайлаРасширеннаяПодсказка" id="252"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCОбъектУчета" id="253">
+									<DataPath>ЗаписиДляКорректировки.ОбъектУчета</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCОбъектУчетаКонтекстноеМеню" id="254"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCОбъектУчетаРасширеннаяПодсказка" id="255"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCОперация" id="256">
+									<DataPath>ЗаписиДляКорректировки.Операция</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCОперацияКонтекстноеМеню" id="257"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCОперацияРасширеннаяПодсказка" id="258"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCПринято" id="259">
+									<DataPath>ЗаписиДляКорректировки.Принято</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCПринятоКонтекстноеМеню" id="260"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCПринятоРасширеннаяПодсказка" id="261"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCСобытие" id="262">
+									<DataPath>ЗаписиДляКорректировки.Событие</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCСобытиеКонтекстноеМеню" id="263"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCСобытиеРасширеннаяПодсказка" id="264"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCПричина" id="271">
+									<DataPath>ЗаписиДляКорректировки.Причина</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCПричинаКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCПричинаРасширеннаяПодсказка" id="273"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиCКомментарий" id="274">
+									<DataPath>ЗаписиДляКорректировки.Комментарий</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиCКомментарийКонтекстноеМеню" id="275"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиCКомментарийРасширеннаяПодсказка" id="276"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппатчАннулируемыеЗаписиD" id="87">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Аннулируемые Записи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппатчАннулируемыеЗаписиDРасширеннаяПодсказка" id="88"/>
+					<ChildItems>
+						<Table name="тчАннулируемыеЗаписиD" id="89">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.тчАннулируемыеЗаписиD</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тчАннулируемыеЗаписиDКонтекстноеМеню" id="90"/>
+							<AutoCommandBar name="тчАннулируемыеЗаписиDКоманднаяПанель" id="91">
+								<ChildItems>
+									<Button name="тчАннулируемыеЗаписиDПодбор" id="147">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчАннулируемыеЗаписиDПодборРасширеннаяПодсказка" id="148"/>
+									</Button>
+									<Button name="тчАннулируемыеЗаписиDПодборПоНастройкам" id="149">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчАннулируемыеЗаписиDПодборПоНастройкамРасширеннаяПодсказка" id="150"/>
+									</Button>
+									<Button name="тчАннулируемыеЗаписиDПодборИзФайла" id="313">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.Найти_</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчАннулируемыеЗаписиDПодборИзФайлаРасширеннаяПодсказка" id="314"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тчАннулируемыеЗаписиDРасширеннаяПодсказка" id="92"/>
+							<SearchStringAddition name="тчАннулируемыеЗаписиDСтрокаПоиска" id="93">
+								<AdditionSource>
+									<Item>тчАннулируемыеЗаписиD</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчАннулируемыеЗаписиDСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="тчАннулируемыеЗаписиDСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тчАннулируемыеЗаписиDСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>тчАннулируемыеЗаписиD</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчАннулируемыеЗаписиDСостояниеПросмотраКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="тчАннулируемыеЗаписиDСостояниеПросмотраРасширеннаяПодсказка" id="98"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тчАннулируемыеЗаписиDУправлениеПоиском" id="99">
+								<AdditionSource>
+									<Item>тчАннулируемыеЗаписиD</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тчАннулируемыеЗаписиDУправлениеПоискомКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="тчАннулируемыеЗаписиDУправлениеПоискомРасширеннаяПодсказка" id="101"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="тчАннулируемыеЗаписиDНомерСтроки" id="102">
+									<DataPath>Объект.тчАннулируемыеЗаписиD.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчАннулируемыеЗаписиDНомерСтрокиКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="тчАннулируемыеЗаписиDНомерСтрокиРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<InputField name="тчАннулируемыеЗаписиDОбъектУчета" id="105">
+									<DataPath>Объект.тчАннулируемыеЗаписиD.ОбъектУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчАннулируемыеЗаписиDОбъектУчетаКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="тчАннулируемыеЗаписиDОбъектУчетаРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="тчАннулируемыеЗаписиDДолжник" id="182">
+									<DataPath>Объект.тчАннулируемыеЗаписиD.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчАннулируемыеЗаписиDДолжникКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="тчАннулируемыеЗаписиDДолжникРасширеннаяПодсказка" id="184"/>
+								</InputField>
+								<InputField name="тчАннулируемыеЗаписиDПричина" id="315">
+									<DataPath>Объект.тчАннулируемыеЗаписиD.Причина</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>На основании пункта 2 части 1 статьи 7 218-ФЗ: на основании решения суда, вступившего в силу.</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>На основании пункта 3 части 1 статьи 7 218-ФЗ</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">3</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>На основании пункта 4 части 1 статьи 7 218-ФЗ</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">4</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>На основании пункта 5 части 1 статьи 7 218-ФЗ</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">7</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="тчАннулируемыеЗаписиDПричинаКонтекстноеМеню" id="316"/>
+									<ExtendedTooltip name="тчАннулируемыеЗаписиDПричинаРасширеннаяПодсказка" id="317"/>
+								</InputField>
+								<InputField name="тчАннулируемыеЗаписиDКомментарий" id="318">
+									<DataPath>Объект.тчАннулируемыеЗаписиD.Комментарий</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчАннулируемыеЗаписиDКомментарийКонтекстноеМеню" id="319"/>
+									<ExtendedTooltip name="тчАннулируемыеЗаписиDКомментарийРасширеннаяПодсказка" id="320"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<Table name="ЗаписиДляКорректировкиD" id="185">
+							<CommandBarLocation>None</CommandBarLocation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ЗаписиДляКорректировки</DataPath>
+							<RowPictureDataPath>ЗаписиДляКорректировки.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ЗаписиДляКорректировкиDКонтекстноеМеню" id="186"/>
+							<AutoCommandBar name="ЗаписиДляКорректировкиDКоманднаяПанель" id="187"/>
+							<ExtendedTooltip name="ЗаписиДляКорректировкиDРасширеннаяПодсказка" id="188"/>
+							<SearchStringAddition name="ЗаписиДляКорректировкиDСтрокаПоиска" id="189">
+								<AdditionSource>
+									<Item>ЗаписиДляКорректировкиD</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаписиДляКорректировкиDСтрокаПоискаКонтекстноеМеню" id="190"/>
+								<ExtendedTooltip name="ЗаписиДляКорректировкиDСтрокаПоискаРасширеннаяПодсказка" id="191"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗаписиДляКорректировкиDСостояниеПросмотра" id="192">
+								<AdditionSource>
+									<Item>ЗаписиДляКорректировкиD</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаписиДляКорректировкиDСостояниеПросмотраКонтекстноеМеню" id="193"/>
+								<ExtendedTooltip name="ЗаписиДляКорректировкиDСостояниеПросмотраРасширеннаяПодсказка" id="194"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗаписиДляКорректировкиDУправлениеПоиском" id="195">
+								<AdditionSource>
+									<Item>ЗаписиДляКорректировкиD</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗаписиДляКорректировкиDУправлениеПоискомКонтекстноеМеню" id="196"/>
+								<ExtendedTooltip name="ЗаписиДляКорректировкиDУправлениеПоискомРасширеннаяПодсказка" id="197"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЗаписиДляКорректировкиДатаПоследнейВыгрузки" id="198">
+									<DataPath>ЗаписиДляКорректировки.ДатаПоследнейВыгрузки</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиДатаПоследнейВыгрузкиКонтекстноеМеню" id="199"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиДатаПоследнейВыгрузкиРасширеннаяПодсказка" id="200"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиДатаСобытия" id="201">
+									<DataPath>ЗаписиДляКорректировки.ДатаСобытия</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиДатаСобытияКонтекстноеМеню" id="202"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиДатаСобытияРасширеннаяПодсказка" id="203"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиДокументОтчет" id="204">
+									<DataPath>ЗаписиДляКорректировки.ДокументОтчет</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиДокументОтчетКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиДокументОтчетРасширеннаяПодсказка" id="206"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиИдентификатор" id="207">
+									<DataPath>ЗаписиДляКорректировки.Идентификатор</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиИдентификаторКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиИдентификаторРасширеннаяПодсказка" id="209"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиИмяФайла" id="210">
+									<DataPath>ЗаписиДляКорректировки.ИмяФайла</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиИмяФайлаКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиИмяФайлаРасширеннаяПодсказка" id="212"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиОбъектУчета" id="213">
+									<DataPath>ЗаписиДляКорректировки.ОбъектУчета</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиОбъектУчетаКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиОбъектУчетаРасширеннаяПодсказка" id="215"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиОперация" id="216">
+									<DataPath>ЗаписиДляКорректировки.Операция</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиОперацияКонтекстноеМеню" id="217"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиОперацияРасширеннаяПодсказка" id="218"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиПринято" id="219">
+									<DataPath>ЗаписиДляКорректировки.Принято</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиПринятоКонтекстноеМеню" id="220"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиПринятоРасширеннаяПодсказка" id="221"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиСобытие" id="222">
+									<DataPath>ЗаписиДляКорректировки.Событие</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиСобытиеКонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиСобытиеРасширеннаяПодсказка" id="224"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиDПричина" id="268">
+									<DataPath>ЗаписиДляКорректировки.Причина</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиDПричинаКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиDПричинаРасширеннаяПодсказка" id="270"/>
+								</LabelField>
+								<LabelField name="ЗаписиДляКорректировкиDКомментарий" id="265">
+									<DataPath>ЗаписиДляКорректировки.Комментарий</DataPath>
+									<ContextMenu name="ЗаписиДляКорректировкиDКомментарийКонтекстноеМеню" id="266"/>
+									<ExtendedTooltip name="ЗаписиДляКорректировкиDКомментарийРасширеннаяПодсказка" id="267"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="REJECT" id="119">
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>REJECT</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>REJECT</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="REJECTРасширеннаяПодсказка" id="120"/>
+					<ChildItems>
+						<InputField name="ПутьФайлаОтказа" id="129">
+							<DataPath>Объект.ПутьФайлаОтказа</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ПутьФайлаОтказаКонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="ПутьФайлаОтказаРасширеннаяПодсказка" id="131"/>
+							<Events>
+								<Event name="StartChoice">ПутьФайлаОтказаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ДатаФайлаОтказа" id="331">
+							<DataPath>Объект.ДатаФайлаОтказа</DataPath>
+							<ContextMenu name="ДатаФайлаОтказаКонтекстноеМеню" id="332"/>
+							<ExtendedTooltip name="ДатаФайлаОтказаРасширеннаяПодсказка" id="333"/>
+						</InputField>
+						<InputField name="ИмяФайлаОтказа" id="328">
+							<DataPath>Объект.ИмяФайлаОтказа</DataPath>
+							<ContextMenu name="ИмяФайлаОтказаКонтекстноеМеню" id="329"/>
+							<ExtendedTooltip name="ИмяФайлаОтказаРасширеннаяПодсказка" id="330"/>
+						</InputField>
+						<Button name="ОбработатьОтказ" id="127">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ОбработатьОтказ</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ДокументПомеченНаУдалениеКоннекторЛево</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОбработатьОтказРасширеннаяПодсказка" id="128"/>
+						</Button>
+						<InputField name="ТекстФайлаОтказа" id="121">
+							<DataPath>Объект.ТекстФайлаОтказа</DataPath>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="ТекстФайлаОтказаКонтекстноеМеню" id="122"/>
+							<ExtendedTooltip name="ТекстФайлаОтказаРасширеннаяПодсказка" id="123"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<Table name="Объекты" id="151">
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Объекты</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>CancelSearch</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>Find</ExcludedCommand>
+				<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>OutputList</ExcludedCommand>
+				<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+				<ExcludedCommand>SearchHistory</ExcludedCommand>
+				<ExcludedCommand>SelectAll</ExcludedCommand>
+				<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОбъектыКонтекстноеМеню" id="152"/>
+			<AutoCommandBar name="ОбъектыКоманднаяПанель" id="153"/>
+			<ExtendedTooltip name="ОбъектыРасширеннаяПодсказка" id="154"/>
+			<SearchStringAddition name="ОбъектыСтрокаПоиска" id="155">
+				<AdditionSource>
+					<Item>Объекты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектыСтрокаПоискаКонтекстноеМеню" id="156"/>
+				<ExtendedTooltip name="ОбъектыСтрокаПоискаРасширеннаяПодсказка" id="157"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОбъектыСостояниеПросмотра" id="158">
+				<AdditionSource>
+					<Item>Объекты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектыСостояниеПросмотраКонтекстноеМеню" id="159"/>
+				<ExtendedTooltip name="ОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="160"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОбъектыУправлениеПоиском" id="161">
+				<AdditionSource>
+					<Item>Объекты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОбъектыУправлениеПоискомКонтекстноеМеню" id="162"/>
+				<ExtendedTooltip name="ОбъектыУправлениеПоискомРасширеннаяПодсказка" id="163"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnActivateRow">ОбъектыПриАктивизацииСтроки</Event>
+				<Event name="OnChange">ОбъектыПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ОбъектыНомерСтроки" id="164">
+					<DataPath>Объект.Объекты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектыНомерСтрокиКонтекстноеМеню" id="165"/>
+					<ExtendedTooltip name="ОбъектыНомерСтрокиРасширеннаяПодсказка" id="166"/>
+				</LabelField>
+				<InputField name="ОбъектыОбъект" id="167">
+					<DataPath>Объект.Объекты.Объект</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ОбъектыОбъектКонтекстноеМеню" id="168"/>
+					<ExtendedTooltip name="ОбъектыОбъектРасширеннаяПодсказка" id="169"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаОперация" id="321">
+			<Enabled>false</Enabled>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа операция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа операция</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОперацияРасширеннаяПодсказка" id="322"/>
+			<ChildItems>
+				<CheckBoxField name="ЭтоИсправлениеВсейКредитнойИнформации" id="323">
+					<DataPath>Объект.ЭтоИсправлениеВсейКредитнойИнформации</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЭтоИсправлениеВсейКредитнойИнформацииКонтекстноеМеню" id="324"/>
+					<ExtendedTooltip name="ЭтоИсправлениеВсейКредитнойИнформацииРасширеннаяПодсказка" id="325"/>
+					<Events>
+						<Event name="OnChange">ЭтоИсправлениеВсейКредитнойИнформацииПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаКорректировка" id="326">
+			<EnableContentChange>true</EnableContentChange>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа корректировка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа корректировка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКорректировкаРасширеннаяПодсказка" id="327"/>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.НБКИДокументRUTDF</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ЗаписиДляКорректировки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записи для корректировки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЖурналВыгрузокНБКИRUTDF.ОбъектУчета КАК ОбъектУчета,
+	ЖурналВыгрузокНБКИRUTDF.ДатаПоследнейВыгрузки КАК ДатаПоследнейВыгрузки,
+	ЖурналВыгрузокНБКИRUTDF.Событие КАК Событие,
+	ЖурналВыгрузокНБКИRUTDF.ДатаСобытия КАК ДатаСобытия,
+	ЖурналВыгрузокНБКИRUTDF.ДокументОтчет КАК ДокументОтчет,
+	ЖурналВыгрузокНБКИRUTDF.ИмяФайла КАК ИмяФайла,
+	ЖурналВыгрузокНБКИRUTDF.Операция КАК Операция,
+	ЖурналВыгрузокНБКИRUTDF.Принято КАК Принято,
+	ЖурналВыгрузокНБКИRUTDF.Идентификатор КАК Идентификатор,
+	ЖурналВыгрузокНБКИRUTDF.Комментарий КАК Комментарий,
+	ЖурналВыгрузокНБКИRUTDF.Причина КАК Причина
+ИЗ
+	РегистрСведений.ЖурналВыгрузокНБКИRUTDF КАК ЖурналВыгрузокНБКИRUTDF
+ГДЕ
+	(ЖурналВыгрузокНБКИRUTDF.Принято = ЗНАЧЕНИЕ(Перечисление.СтатусыОтчетаНБКИ.Принято)
+	ИЛИ ЖурналВыгрузокНБКИRUTDF.Принято = ЗНАЧЕНИЕ(Перечисление.СтатусыОтчетаНБКИ.ТребуетКорректировки))
+	И ЖурналВыгрузокНБКИRUTDF.ОбъектУчета В(&amp;ОбъектУчета)</QueryText>
+				<MainTable>InformationRegister.ЖурналВыгрузокНБКИRUTDF</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьОтчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчет</Action>
+		</Command>
+		<Command name="ОбработатьОтказ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать отказ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать отказ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбработатьОтказ</Action>
+		</Command>
+		<Command name="Подбор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="ПодборПоНастройкам" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по настройкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПоНастройкам</Action>
+		</Command>
+		<Command name="Прикрепить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прикрепить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Прикрепить</Action>
+		</Command>
+		<Command name="Подписать" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подписать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подписать</Action>
+		</Command>
+		<Command name="Зашифровать" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зашифровать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зашифровать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Зашифровать</Action>
+		</Command>
+		<Command name="Расшифровать" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расшифровать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расшифровать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Расшифровать</Action>
+		</Command>
+		<Command name="СохранитьВместеСПодписью" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить вместе с подписью</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить вместе с подписью</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьВместеСПодписью</Action>
+		</Command>
+		<Command name="СобратьВАрхив" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрать в архив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собрать в архив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СобратьВАрхив</Action>
+		</Command>
+		<Command name="ПодборИзФайла" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборИзФайла</Action>
+		</Command>
+	</Commands>
+</Form>

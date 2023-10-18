@@ -31,6 +31,30 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<LabelField name="ДекорацияТег" id="38">
+			<DataPath>ДекорацияТег</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внимание:</v8:content>
+				</v8:item>
+			</Title>
+			<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Теги в HTML шаблонах должны быть оформлены через знак @</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<Border width="1">
+				<v8ui:style xsi:type="v8ui:ControlBorderType">Embossed</v8ui:style>
+			</Border>
+			<TextColor>style:SpecialTextColor</TextColor>
+			<ContextMenu name="ДекорацияТегКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="ДекорацияТегРасширеннаяПодсказка" id="40"/>
+		</LabelField>
 		<UsualGroup name="ГруппаНомер" id="11">
 			<Title>
 				<v8:item>
@@ -213,6 +237,21 @@
 			</Title>
 			<Type>
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДекорацияТег" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декорация тег</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>9</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>

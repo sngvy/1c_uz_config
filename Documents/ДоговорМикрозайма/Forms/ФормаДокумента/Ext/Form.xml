@@ -102,6 +102,36 @@
 							<ContextMenu name="ЗаймКонтекстноеМеню" id="8"/>
 							<ExtendedTooltip name="ЗаймРасширеннаяПодсказка" id="9"/>
 						</InputField>
+						<UsualGroup name="ГруппаОбращение" id="517">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обращение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обращение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаОбращениеРасширеннаяПодсказка" id="518"/>
+							<ChildItems>
+								<InputField name="ДатаОкончанияСрокаРассмотренияОбращения" id="519">
+									<DataPath>Объект.ДатаОкончанияСрокаРассмотренияОбращения</DataPath>
+									<ContextMenu name="ДатаОкончанияСрокаРассмотренияОбращенияКонтекстноеМеню" id="520"/>
+									<ExtendedTooltip name="ДатаОкончанияСрокаРассмотренияОбращенияРасширеннаяПодсказка" id="521"/>
+								</InputField>
+								<CheckBoxField name="Одобрено" id="503">
+									<DataPath>Объект.Одобрено</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОдобреноКонтекстноеМеню" id="504"/>
+									<ExtendedTooltip name="ОдобреноРасширеннаяПодсказка" id="505"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаУсловия" id="264">
 							<Title>
 								<v8:item>
@@ -663,6 +693,318 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<UsualGroup name="ГруппаКредитныеИстории" id="506">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Кредитные истории</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кредитные истории</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаКредитныеИсторииРасширеннаяПодсказка" id="507"/>
+							<ChildItems>
+								<InputField name="UIDНБКИ" id="498">
+									<DataPath>Объект.UIDНБКИ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>UID для НБКИ</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="UIDНБКИКонтекстноеМеню" id="499"/>
+									<ExtendedTooltip name="UIDНБКИРасширеннаяПодсказка" id="500"/>
+								</InputField>
+								<Button name="СоздатьUIDСделки" id="501">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СоздатьUIDСделки</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создать UID Сделки</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СоздатьUIDСделкиРасширеннаяПодсказка" id="502"/>
+								</Button>
+								<InputField name="КодВидаОбращения" id="525">
+									<DataPath>Объект.КодВидаОбращения</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Справочник НБКИ 6.4. Виды обращений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<DropListButton>true</DropListButton>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В кредитную организацию </v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">6</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В микрофинансовую организацию </v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">7</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В кредитный потребительский кооператив</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">8</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В иную некредитную финансовую организацию</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">9</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В лизинговую компанию</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">10</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>К иному лицу</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">99</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="КодВидаОбращенияКонтекстноеМеню" id="526"/>
+									<ExtendedTooltip name="КодВидаОбращенияРасширеннаяПодсказка" id="527"/>
+								</InputField>
+								<InputField name="ВидЗаимодавца" id="508">
+									<DataPath>Объект.ВидЗаимодавца</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По справочнику НБКИ 6.1 - виды источников</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<DropListButton>true</DropListButton>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кредитная организация</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>МФО</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кредитный потребительский кооператив</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сельскохозяйственный кредитный потребительский кооператив</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">4</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ломбард</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Иная организация</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">6</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ВидЗаимодавцаКонтекстноеМеню" id="509"/>
+									<ExtendedTooltip name="ВидЗаимодавцаРасширеннаяПодсказка" id="510"/>
+								</InputField>
+								<InputField name="ЦельКредита" id="522">
+									<DataPath>Объект.ЦельКредита</DataPath>
+									<ContextMenu name="ЦельКредитаКонтекстноеМеню" id="523"/>
+									<ExtendedTooltip name="ЦельКредитаРасширеннаяПодсказка" id="524"/>
+								</InputField>
+								<InputField name="КредитнаяЛиния" id="514">
+									<DataPath>Объект.КредитнаяЛиния</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>По справочнику НБКИ 2.3.1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<DropListButton>true</DropListButton>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Нет</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кредитная линия с лимитом выдачи</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кредитная линия с лимитом задолженности</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Комбинированная кредитная линия с лимитом выдачи и лимитом задолженности</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="КредитнаяЛинияКонтекстноеМеню" id="515"/>
+									<ExtendedTooltip name="КредитнаяЛинияРасширеннаяПодсказка" id="516"/>
+								</InputField>
+								<CheckBoxField name="ЧастичноДругойКредитор" id="511">
+									<DataPath>Объект.ЧастичноДругойКредитор</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Признак возникновения обязательства в результате получения части прав кредитора от другого лица</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЧастичноДругойКредиторКонтекстноеМеню" id="512"/>
+									<ExtendedTooltip name="ЧастичноДругойКредиторРасширеннаяПодсказка" id="513"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -1154,6 +1496,21 @@
 			</Picture>
 			<Action>Калькулятор</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СоздатьUIDСделки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать UIDСделки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать UIDСделки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьUIDСделки</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

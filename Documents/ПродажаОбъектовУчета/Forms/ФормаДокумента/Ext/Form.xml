@@ -40,6 +40,87 @@
 			<ContextMenu name="ПриобретательПраваТребованияКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ПриобретательПраваТребованияРасширеннаяПодсказка" id="15"/>
 		</InputField>
+		<InputField name="ТипПреобретателя" id="67">
+			<DataPath>Объект.ТипПреобретателя</DataPath>
+			<ContextMenu name="ТипПреобретателяКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="ТипПреобретателяРасширеннаяПодсказка" id="69"/>
+		</InputField>
+		<CheckBoxField name="АгентскаяСхема" id="47">
+			<DataPath>Объект.АгентскаяСхема</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="АгентскаяСхемаКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="АгентскаяСхемаРасширеннаяПодсказка" id="49"/>
+			<Events>
+				<Event name="OnChange">АгентскаяСхемаПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаАгент" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа агент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа агент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАгентРасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<InputField name="АгентскаяСхемаДатаНачала" id="53">
+					<DataPath>Объект.АгентскаяСхемаДатаНачала</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата начала агентского договора</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="АгентскаяСхемаДатаНачалаКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="АгентскаяСхемаДатаНачалаРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="АгентскаяСхемаДатаОкончания" id="56">
+					<DataPath>Объект.АгентскаяСхемаДатаОкончания</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата окончания агентского договора</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="АгентскаяСхемаДатаОкончанияКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="АгентскаяСхемаДатаОкончанияРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="НаименованиеЭмитента" id="59">
+					<DataPath>Объект.НаименованиеЭмитента</DataPath>
+					<ContextMenu name="НаименованиеЭмитентаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="НаименованиеЭмитентаРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="РегистрационныйНомерЭмитента" id="64">
+					<DataPath>Объект.РегистрационныйНомерЭмитента</DataPath>
+					<ContextMenu name="РегистрационныйНомерЭмитентаКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="РегистрационныйНомерЭмитентаРасширеннаяПодсказка" id="66"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="Цессия" id="50">
+			<DataPath>Объект.Цессия</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЦессияКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="ЦессияРасширеннаяПодсказка" id="52"/>
+		</CheckBoxField>
+		<CheckBoxField name="ЭтоЧастичнаяПередачаПрав" id="70">
+			<DataPath>Объект.ЭтоЧастичнаяПередачаПрав</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЭтоЧастичнаяПередачаПравКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ЭтоЧастичнаяПередачаПравРасширеннаяПодсказка" id="72"/>
+			<Events>
+				<Event name="OnChange">ЭтоЧастичнаяПередачаПравПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
 		<CheckBoxField name="ВывестиИзРаботы" id="19">
 			<DataPath>Объект.ВывестиИзРаботы</DataPath>
 			<EditMode>EnterOnInput</EditMode>

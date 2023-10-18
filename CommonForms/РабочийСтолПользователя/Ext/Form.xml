@@ -188,7 +188,6 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -1423,6 +1422,14 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаМероприятияExtendedTooltip" id="243"/>
 					<ChildItems>
+						<InputField name="СтрокаМероприятияОтбор" id="95">
+							<DataPath>СтрокаМероприятияОтбор</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<TextEdit>false</TextEdit>
+							<ContextMenu name="СтрокаМероприятияОтборКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="СтрокаМероприятияОтборExtendedTooltip" id="244"/>
+						</InputField>
 						<Table name="Мероприятия" id="23">
 							<RowSelectionMode>Row</RowSelectionMode>
 							<UseAlternationRowColor>true</UseAlternationRowColor>

@@ -10,7 +10,7 @@
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ИзменитьДатуОтправки</CommandName>
 				<Picture>
-					<xr:Ref>StdPicture.InputFieldCalendar</xr:Ref>
+					<xr:Ref>CommonPicture.ИсторияИзменений</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаИзменитьДатуОтправкиРасширеннаяПодсказка" id="168"/>
@@ -35,12 +35,27 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаПолучитьФорму103РасширеннаяПодсказка" id="170"/>
 			</Button>
+			<Button name="ФормаПолучитьВсеДокументыПартии" id="177">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПолучитьВсеДокументыПартии</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ПиктограммаАрхивZIP</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаПолучитьВсеДокументыПартииРасширеннаяПодсказка" id="178"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<InputField name="ДатаПартииЗаданная" id="174">
+			<DataPath>Объект.ДатаПартииЗаданная</DataPath>
+			<ContextMenu name="ДатаПартииЗаданнаяКонтекстноеМеню" id="175"/>
+			<ExtendedTooltip name="ДатаПартииЗаданнаяРасширеннаяПодсказка" id="176"/>
+		</InputField>
 		<InputField name="Номер" id="1">
 			<DataPath>Объект.Number</DataPath>
 			<EditMode>EnterOnInput</EditMode>
@@ -510,7 +525,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить форму103</v8:content>
+					<v8:content>Получить форму 103</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -520,6 +535,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьФорму103</Action>
+		</Command>
+		<Command name="ПолучитьВсеДокументыПартии" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить все документы партии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить все документы партии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьВсеДокументыПартии</Action>
 		</Command>
 	</Commands>
 </Form>

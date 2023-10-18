@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="UIDНБКИ" id="25">
+			<DataPath>Объект.UIDНБКИ</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>UID НБКИ</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="UIDНБКИКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="UIDНБКИРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<Button name="СоздатьUIDСделки" id="37">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СоздатьUIDСделки</CommandName>
+			<ExtendedTooltip name="СоздатьUIDСделкиРасширеннаяПодсказка" id="38"/>
+		</Button>
+		<InputField name="ОбъектОбязательства" id="7">
+			<DataPath>Объект.ОбъектОбязательства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОбъектОбязательстваКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОбъектОбязательстваРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ОбъектПредоставления" id="10">
+			<DataPath>Объект.ОбъектПредоставления</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОбъектПредоставленияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОбъектПредоставленияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ПредметОбязательства" id="48">
+			<DataPath>Объект.ПредметОбязательства</DataPath>
+			<ContextMenu name="ПредметОбязательстваКонтекстноеМеню" id="49"/>
+			<ExtendedTooltip name="ПредметОбязательстваРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="Стоимость" id="45">
+			<DataPath>Объект.Стоимость</DataPath>
+			<ContextMenu name="СтоимостьКонтекстноеМеню" id="46"/>
+			<ExtendedTooltip name="СтоимостьРасширеннаяПодсказка" id="47"/>
+		</InputField>
+		<InputField name="ДатаОбращенияСубъекта" id="31">
+			<DataPath>Объект.ДатаОбращенияСубъекта</DataPath>
+			<ContextMenu name="ДатаОбращенияСубъектаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ДатаОбращенияСубъектаРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="КодВидаОбращения" id="63">
+			<DataPath>Объект.КодВидаОбращения</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В кредитную организацию</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">6</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В микрофинансовую организацию</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">7</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В кредитный потребительский кооператив</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">8</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В иную некредитную финансовую организацию</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">9</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>В лизинговую компанию</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">10</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>К иному лицу</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">99</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="КодВидаОбращенияКонтекстноеМеню" id="64"/>
+			<ExtendedTooltip name="КодВидаОбращенияРасширеннаяПодсказка" id="65"/>
+		</InputField>
+		<InputField name="ВидЗаимодавца" id="51">
+			<DataPath>Объект.ВидЗаимодавца</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Кредитная организация</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>МФО</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Кредитный потребительский кооператив</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">3</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С/х кредитный потребительский кооператив</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">4</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Ломбард</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Иная организация</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">6</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВидЗаимодавцаКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ВидЗаимодавцаРасширеннаяПодсказка" id="53"/>
+		</InputField>
+		<CheckBoxField name="ЧастичноДругойКредитор" id="54">
+			<DataPath>Объект.ЧастичноДругойКредитор</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЧастичноДругойКредиторКонтекстноеМеню" id="55"/>
+			<ExtendedTooltip name="ЧастичноДругойКредиторРасширеннаяПодсказка" id="56"/>
+		</CheckBoxField>
+		<InputField name="ЦельКредита" id="60">
+			<DataPath>Объект.ЦельКредита</DataPath>
+			<ContextMenu name="ЦельКредитаКонтекстноеМеню" id="61"/>
+			<ExtendedTooltip name="ЦельКредитаРасширеннаяПодсказка" id="62"/>
+		</InputField>
+		<InputField name="ДатаВозникновенияОбязательства" id="57">
+			<DataPath>Объект.ДатаВозникновенияОбязательства</DataPath>
+			<ContextMenu name="ДатаВозникновенияОбязательстваКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="ДатаВозникновенияОбязательстваРасширеннаяПодсказка" id="59"/>
+		</InputField>
+		<InputField name="Описание" id="13">
+			<DataPath>Объект.Описание</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участвует в заполнении поля НБКИ С 30.5 - В </v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="Одобрено" id="28">
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОдобреноКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОдобреноРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+		<InputField name="ДатаОдобренияИсточником" id="34">
+			<DataPath>Объект.ДатаОдобренияИсточником</DataPath>
+			<ContextMenu name="ДатаОдобренияИсточникомКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ДатаОдобренияИсточникомРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="ДатаПередачиИмуществаСубъекту" id="16">
+			<DataPath>Объект.ДатаПередачиИмуществаСубъекту</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаПередачиИмуществаСубъектуКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДатаПередачиИмуществаСубъектуРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ДатаПрекращенияДоговора" id="39">
+			<DataPath>Объект.ДатаПрекращенияДоговора</DataPath>
+			<ContextMenu name="ДатаПрекращенияДоговораКонтекстноеМеню" id="40"/>
+			<ExtendedTooltip name="ДатаПрекращенияДоговораРасширеннаяПодсказка" id="41"/>
+		</InputField>
+		<InputField name="УсловияИсполненияОбязательства" id="19">
+			<DataPath>Объект.УсловияИсполненияОбязательства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="УсловияИсполненияОбязательстваКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="УсловияИсполненияОбязательстваРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="OnChange">УсловияИсполненияОбязательстваПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ДатаФиксированияИзмений" id="42">
+			<DataPath>Объект.ДатаФиксированияИзмений</DataPath>
+			<ContextMenu name="ДатаФиксированияИзменийКонтекстноеМеню" id="43"/>
+			<ExtendedTooltip name="ДатаФиксированияИзменийРасширеннаяПодсказка" id="44"/>
+		</InputField>
+		<CheckBoxField name="НенадлежащееИсполнениеОбязательства" id="22">
+			<DataPath>Объект.НенадлежащееИсполнениеОбязательства</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НенадлежащееИсполнениеОбязательстваКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="НенадлежащееИсполнениеОбязательстваРасширеннаяПодсказка" id="24"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НеденежныеОбязательства</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьUIDСделки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать UID Сделки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать UIDСделки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьUIDСделки</Action>
+		</Command>
+	</Commands>
+</Form>

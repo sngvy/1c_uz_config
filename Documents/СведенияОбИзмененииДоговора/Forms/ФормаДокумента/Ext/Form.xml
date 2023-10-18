@@ -1,0 +1,1002 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ОбъектУчета" id="7">
+			<DataPath>Объект.ОбъектУчета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОбъектУчетаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОбъектУчетаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТипИзменения" id="49">
+			<DataPath>Объект.ТипИзменения</DataPath>
+			<DropListButton>true</DropListButton>
+			<ContextMenu name="ТипИзмененияКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ТипИзмененияРасширеннаяПодсказка" id="51"/>
+			<Events>
+				<Event name="OnChange">ТипИзмененияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаИзменение" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа изменение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаИзменениеРасширеннаяПодсказка" id="53"/>
+			<ChildItems>
+				<InputField name="ДатаИзмененияДоговора" id="19">
+					<DataPath>Объект.ДатаИзмененияДоговора</DataPath>
+					<ContextMenu name="ДатаИзмененияДоговораКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаИзмененияДоговораРасширеннаяПодсказка" id="21"/>
+				</InputField>
+				<InputField name="ВидИзменияДоговора" id="22">
+					<DataPath>Объект.ВидИзменияДоговора</DataPath>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный Период</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Урегулирование проблемной задолженности</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Прочие изменения</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидИзменияДоговораКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВидИзменияДоговораРасширеннаяПодсказка" id="24"/>
+					<Events>
+						<Event name="OnChange">ВидИзменияДоговораПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидЛьготногоПериода" id="25">
+					<DataPath>Объект.ВидЛьготногоПериода</DataPath>
+					<Visible>false</Visible>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный период по статье 6 Федерального закона от 21 декабря 2013 года № 353-ФЗ «О потребительском кредите (займе)»</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный период по статье 6 Федерального закона от 3 апреля 2020 года № 106-ФЗ</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный период по статье 7 Федерального закона от 3 апреля 2020 года № 106-ФЗ</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный период по собственной программе кредитора в связи с пандемией коронавирусной инфекции COVID-19</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный период по собственной программе кредитора в связи с иным существенным изменением обстоятельств заключения договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">5</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготный период на ином основании</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">6</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидЛьготногоПериодаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ВидЛьготногоПериодаРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="ПричиныУрегулированияПроблемнойЗадолженности" id="28">
+					<DataPath>Объект.ПричиныУрегулированияПроблемнойЗадолженности</DataPath>
+					<Visible>false</Visible>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Безработный</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инвалидность I группы</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инвалидность II группы</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Нетрудоспособность более 2 месяцев подряд</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Снижение среднемесячного дохода более чем на 30 процентов и превышение платежей более чем на 50 процентов от среднемесячного дохода</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">5</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Увеличение количества лиц на иждивении, под опекой или попечительством с одновременным снижением среднемесячного дохода более чем на 20 процентов и превышением среднемесячных платежей более чем на 40 процентов от дохода</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">6</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Чрезвычайное и непредотвратимое обстоятельство, непреодолимая сила</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">7</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Призыв на военную службу, военные сборы</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">8</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иная причина</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">99</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПричиныУрегулированияПроблемнойЗадолженностиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ПричиныУрегулированияПроблемнойЗадолженностиРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="OnChange">ПричиныУрегулированияПроблемнойЗадолженностиПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ВидыПрочихИзмененийДоговора" id="31">
+					<DataPath>Объект.ВидыПрочихИзмененийДоговора</DataPath>
+					<Visible>false</Visible>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Изменение валюты договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Увеличение расходного лимита</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Уменьшение расходного лимита</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Льготная процентная ставка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Пониженная процентная ставка при заключении договора страхования</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">5</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Субсидированная процентная ставка</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">6</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Увеличение процентной ставки </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">7</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Уменьшение процентной ставки </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">8</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Принято решение о неначислении процентов</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">9</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Уменьшение срока</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">10</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Увеличение срока</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">11</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Изменение периодичности оплаты </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">12</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Изменение даты платежа по основному долгу </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">13</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Изменение даты платежа по процентам </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">14</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отсрочка платежа</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">15</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Приостановление обязанности вносить платежи</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">16</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Временное снижение размера платежей</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">17</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Замена обеспечения</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">18</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Прощение штрафов</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">19</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иные изменения договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">99</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ВидыПрочихИзмененийДоговораКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ВидыПрочихИзмененийДоговораРасширеннаяПодсказка" id="33"/>
+					<Events>
+						<Event name="OnChange">ВидыПрочихИзмененийДоговораПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОписаниеИныхИзменений" id="34">
+					<DataPath>Объект.ОписаниеИныхИзменений</DataPath>
+					<Visible>false</Visible>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ОписаниеИныхИзмененийКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ОписаниеИныхИзмененийРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="Наследник" id="68">
+					<DataPath>Объект.Наследник</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="НаследникКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="НаследникРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="ДатаВступленияИзменения" id="37">
+					<DataPath>Объект.ДатаВступленияИзменения</DataPath>
+					<ContextMenu name="ДатаВступленияИзмененияКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаВступленияИзмененияРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ДатаПлановогоПрекращенияИзменения" id="40">
+					<DataPath>Объект.ДатаПлановогоПрекращенияИзменения</DataPath>
+					<ContextMenu name="ДатаПлановогоПрекращенияИзмененияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДатаПлановогоПрекращенияИзмененияРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="ДатаФактическогоПрекращенияИзменения" id="43">
+					<DataPath>Объект.ДатаФактическогоПрекращенияИзменения</DataPath>
+					<ContextMenu name="ДатаФактическогоПрекращенияИзмененияКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДатаФактическогоПрекращенияИзмененияРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="ПричиныПрекращенияДействийИзмененияДоговора" id="46">
+					<DataPath>Объект.ПричиныПрекращенияДействийИзмененияДоговора</DataPath>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По соглашению сторон</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В связи с истечением срока действия изменения договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>В связи с наступлением условия прекращения действия изменения договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Односторонний отказ источника от изменения договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Односторонний отказ субъекта от изменения договора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">5</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По иному основанию</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">99</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПричиныПрекращенияДействийИзмененияДоговораКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПричиныПрекращенияДействийИзмененияДоговораРасширеннаяПодсказка" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПрощение" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соглашение о прощении</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа прощение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаПрощениеРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<CheckBoxField name="ПолноеПрощение" id="13">
+					<DataPath>Объект.ПолноеПрощение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПолноеПрощениеКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ПолноеПрощениеРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="OnChange">ПолноеПрощениеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="СписыватьЗадолженностьВПрограмме" id="62">
+					<DataPath>Объект.СписыватьЗадолженностьВПрограмме</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СписыватьЗадолженностьВПрограммеКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="СписыватьЗадолженностьВПрограммеРасширеннаяПодсказка" id="64"/>
+					<Events>
+						<Event name="OnChange">СписыватьЗадолженностьВПрограммеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="ПричиныПрекращенияОбязательства" id="65">
+					<DataPath>Объект.ПричиныПрекращенияОбязательства</DataPath>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Надлежащее исполнение обязательства</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Принудительное исполнение обязательства</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По соглашению сторон</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Требования кредитора погашены за счет обеспечения</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">4</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Односторонний отказ кредитора</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">5</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Односторонний отказ должника</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">6</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отступное</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">7</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Зачет</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">8</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Совпадение кредитора и должника в одном лице</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">9</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Новация</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">10</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Прощение долга</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">11</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Невозможность исполнения обязательства</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">12</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>На основании акта органа государственной власти или органа местного самоуправления</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">13</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Смерть гражданина</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">14</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Ликвидация Юридического лица</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">15</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иное</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">99</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПричиныПрекращенияОбязательстваКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ПричиныПрекращенияОбязательстваРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="ОснованиеПрекращенияОбязательства" id="56">
+					<DataPath>Объект.ОснованиеПрекращенияОбязательства</DataPath>
+					<DropListButton>false</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ContextMenu name="ОснованиеПрекращенияОбязательстваКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ОснованиеПрекращенияОбязательстваРасширеннаяПодсказка" id="58"/>
+					<Events>
+						<Event name="OnChange">ОснованиеПрекращенияОбязательстваПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаПрекращенияОбязательства" id="59">
+					<DataPath>Объект.ДатаПрекращенияОбязательства</DataPath>
+					<ContextMenu name="ДатаПрекращенияОбязательстваКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДатаПрекращенияОбязательстваРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ДокументКорректировка" id="16">
+					<DataPath>Объект.ДокументКорректировка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДокументКорректировкаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДокументКорректировкаРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.СведенияОбИзмененииДоговора</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

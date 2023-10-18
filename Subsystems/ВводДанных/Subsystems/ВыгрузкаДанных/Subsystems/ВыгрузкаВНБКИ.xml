@@ -15,14 +15,15 @@
 			<Explanation/>
 			<Picture/>
 			<Content>
-				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НастройкиВыгрузкиНБКИ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ВыгрузкаВНБКИ</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЖурналВыгрузокНБКИ</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЖурналПроданныхДоговоров</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">Document.ПродажаОбъектовУчета</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиВыгрузкиНБКИДляОбъектовУчета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НБКИДокументRUTDF</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ИспользоватьНБКИRUTDF</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.НБКИДокументКорректировкаRUTDF</xr:Item>
 			</Content>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Subsystem>Журналы</Subsystem>
+			<Subsystem>Настройки</Subsystem>
+		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

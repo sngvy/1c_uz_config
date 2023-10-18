@@ -19,7 +19,7 @@ GO
 CREATE TABLE [dbo].[Exchange1c_Managers](
 	[id] [char](36) NOT NULL,
 	[DatabaseID] [int] NOT NULL,
-	[Number] [nchar](10) NULL,
+	[Number] [char](20) NULL,
  CONSTRAINT [PK_Managers] PRIMARY KEY CLUSTERED 
 (
 	[id], [DatabaseID]
@@ -28,7 +28,7 @@ CREATE TABLE [dbo].[Exchange1c_Managers](
 GO
 
 CREATE TABLE [dbo].[Exchange1c_Numbers](
-	[Number] [nchar](20) NOT NULL,
+	[Number] [char](20) NOT NULL,
 	[DatabaseID] [int] NOT NULL,
 	[ClientID] [char](36) NULL,
  CONSTRAINT [PK_Numbers] PRIMARY KEY CLUSTERED 

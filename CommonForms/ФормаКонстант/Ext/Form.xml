@@ -32,11 +32,17 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаИТСРасширеннаяПодсказка" id="280"/>
 			</Button>
+			<Button name="ФормаНаписатьРазработчику" id="396">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НаписатьРазработчику</CommandName>
+				<ExtendedTooltip name="ФормаНаписатьРазработчикуРасширеннаяПодсказка" id="397"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -93,6 +99,11 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаВертикальнаяЛеваяExtendedTooltip" id="158"/>
 							<ChildItems>
+								<InputField name="ЗаголовокСистемы" id="412">
+									<DataPath>НаборКонстант.ЗаголовокСистемы</DataPath>
+									<ContextMenu name="ЗаголовокСистемыКонтекстноеМеню" id="413"/>
+									<ExtendedTooltip name="ЗаголовокСистемыРасширеннаяПодсказка" id="414"/>
+								</InputField>
 								<UsualGroup name="ГруппаВерсии" id="47">
 									<Title>
 										<v8:item>
@@ -159,6 +170,12 @@
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
+										<Button name="УстановитьВерсиюСервера" id="394">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.УстановитьВерсиюСервера</CommandName>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ExtendedTooltip name="УстановитьВерсиюСервераРасширеннаяПодсказка" id="395"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<UsualGroup name="ГруппаЦКТ" id="54">
@@ -262,6 +279,11 @@
 											<AutoMaxHeight>false</AutoMaxHeight>
 											<ContextMenu name="ОтчетДляДОКонтекстноеМеню" id="30"/>
 											<ExtendedTooltip name="ОтчетДляДОExtendedTooltip" id="175"/>
+										</InputField>
+										<InputField name="ОтчетДляДОПлатежи" id="406">
+											<DataPath>НаборКонстант.ОтчетДляДОПлатежи</DataPath>
+											<ContextMenu name="ОтчетДляДОПлатежиКонтекстноеМеню" id="407"/>
+											<ExtendedTooltip name="ОтчетДляДОПлатежиРасширеннаяПодсказка" id="408"/>
 										</InputField>
 										<InputField name="ОтчетДляИД" id="31">
 											<DataPath>НаборКонстант.ОтчетДляИД</DataPath>
@@ -386,6 +408,11 @@
 											<ContextMenu name="ТипШаблонаДляПечатиКонтекстноеМеню" id="257"/>
 											<ExtendedTooltip name="ТипШаблонаДляПечатиРасширеннаяПодсказка" id="258"/>
 										</InputField>
+										<Button name="ЗаполнитьЗначенияВШаблонах" id="386">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗаполнитьЗначенияВШаблонах</CommandName>
+											<ExtendedTooltip name="ЗаполнитьЗначенияВШаблонахРасширеннаяПодсказка" id="387"/>
+										</Button>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -852,6 +879,11 @@
 											<ContextMenu name="ИспользоватьСудебныйБлокКонтекстноеМеню" id="349"/>
 											<ExtendedTooltip name="ИспользоватьСудебныйБлокРасширеннаяПодсказка" id="350"/>
 										</CheckBoxField>
+										<InputField name="ДатаНачисленияПросуженнойЗадолженности" id="409">
+											<DataPath>НаборКонстант.ДатаНачисленияПросуженнойЗадолженности</DataPath>
+											<ContextMenu name="ДатаНачисленияПросуженнойЗадолженностиКонтекстноеМеню" id="410"/>
+											<ExtendedTooltip name="ДатаНачисленияПросуженнойЗадолженностиРасширеннаяПодсказка" id="411"/>
+										</InputField>
 										<CheckBoxField name="РасчетНачислений" id="351">
 											<DataPath>НаборКонстант.РасчетНачислений</DataPath>
 											<CheckBoxType>Auto</CheckBoxType>
@@ -1044,10 +1076,23 @@
 									<v8:content>Группа СМС</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>StrongSeparation</Representation>
 							<ExtendedTooltip name="ГруппаСМСРасширеннаяПодсказка" id="360"/>
 							<ChildItems>
+								<CheckBoxField name="ИспользоватьПрочиеВзаимодействия" id="391">
+									<DataPath>НаборКонстант.ИспользоватьПрочиеВзаимодействия</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отправка SMS</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПрочиеВзаимодействияКонтекстноеМеню" id="392"/>
+									<ExtendedTooltip name="ИспользоватьПрочиеВзаимодействияРасширеннаяПодсказка" id="393"/>
+								</CheckBoxField>
 								<Button name="НастройкаОтправкиSMS" id="361">
 									<Type>Hyperlink</Type>
 									<CommandName>Form.Command.НастройкаОтправкиSMS</CommandName>
@@ -1190,9 +1235,24 @@
 								</CheckBoxField>
 								<CheckBoxField name="ИспользоватьНБКИ" id="290">
 									<DataPath>НаборКонстант.ИспользоватьНБКИ</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать НБКИ TUTDF</v8:content>
+										</v8:item>
+									</Title>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ИспользоватьНБКИКонтекстноеМеню" id="291"/>
 									<ExtendedTooltip name="ИспользоватьНБКИРасширеннаяПодсказка" id="292"/>
+								</CheckBoxField>
+								<CheckBoxField name="ИспользоватьНБКИRUTDF" id="388">
+									<DataPath>НаборКонстант.ИспользоватьНБКИRUTDF</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьНБКИRUTDFКонтекстноеМеню" id="389"/>
+									<ExtendedTooltip name="ИспользоватьНБКИRUTDFРасширеннаяПодсказка" id="390"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьНБКИRUTDFПриИзменении</Event>
+									</Events>
 								</CheckBoxField>
 								<CheckBoxField name="ИспользоватьMandarin" id="296">
 									<DataPath>НаборКонстант.ИспользоватьMandarin</DataPath>
@@ -1227,6 +1287,131 @@
 									<ContextMenu name="СервисТерриториальнаяПодсудностьКонтекстноеМеню" id="324"/>
 									<ExtendedTooltip name="СервисТерриториальнаяПодсудностьРасширеннаяПодсказка" id="325"/>
 								</CheckBoxField>
+								<CheckBoxField name="ИспользоватьСборИнформации" id="415">
+									<DataPath>НаборКонстант.ИспользоватьСборИнформации</DataPath>
+									<Visible>false</Visible>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьСборИнформацииКонтекстноеМеню" id="416"/>
+									<ExtendedTooltip name="ИспользоватьСборИнформацииРасширеннаяПодсказка" id="417"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ЭЦП" id="398">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЭЦП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЭЦП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЭЦПРасширеннаяПодсказка" id="399"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьЭлектронныеПодписи" id="400">
+							<DataPath>НаборКонстант.ИспользоватьЭлектронныеПодписи</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьЭлектронныеПодписиКонтекстноеМеню" id="401"/>
+							<ExtendedTooltip name="ИспользоватьЭлектронныеПодписиРасширеннаяПодсказка" id="402"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьШифрование" id="403">
+							<DataPath>НаборКонстант.ИспользоватьШифрование</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьШифрованиеКонтекстноеМеню" id="404"/>
+							<ExtendedTooltip name="ИспользоватьШифрованиеРасширеннаяПодсказка" id="405"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="Прочее" id="369">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="370"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПарсингДокументов" id="374">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Парсинг документов</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа парсинг документов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаПарсингДокументовРасширеннаяПодсказка" id="375"/>
+							<ChildItems>
+								<CheckBoxField name="ПарсингДокументов" id="371">
+									<DataPath>НаборКонстант.ПарсингДокументов</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПарсингДокументовКонтекстноеМеню" id="372"/>
+									<ExtendedTooltip name="ПарсингДокументовРасширеннаяПодсказка" id="373"/>
+								</CheckBoxField>
+								<UsualGroup name="ГруппаПарсингДокументовНастройки" id="376">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа парсинг документов настройки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<ExtendedTooltip name="ГруппаПарсингДокументовНастройкиРасширеннаяПодсказка" id="377"/>
+									<ChildItems>
+										<InputField name="ImageMagickConvert" id="378">
+											<DataPath>НаборКонстант.ImageMagickConvert</DataPath>
+											<ChoiceButton>true</ChoiceButton>
+											<ContextMenu name="ImageMagickConvertКонтекстноеМеню" id="379"/>
+											<ExtendedTooltip name="ImageMagickConvertРасширеннаяПодсказка" id="380"/>
+											<Events>
+												<Event name="StartChoice">ImageMagickConvertНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="Tesseract" id="381">
+											<DataPath>НаборКонстант.Tesseract</DataPath>
+											<ChoiceButton>true</ChoiceButton>
+											<ContextMenu name="TesseractКонтекстноеМеню" id="382"/>
+											<ExtendedTooltip name="TesseractРасширеннаяПодсказка" id="383"/>
+											<Events>
+												<Event name="StartChoice">TesseractНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<Button name="ЗаполнитьРССклонениеФИО" id="384">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗаполнитьРССклонениеФИО</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Заполнить склонение ФИО</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗаполнитьРССклонениеФИОРасширеннаяПодсказка" id="385"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1366,6 +1551,71 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УчетныеЗаписиЭлектроннойПочты</Action>
+		</Command>
+		<Command name="ЗаполнитьРССклонениеФИО" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить РССклонение ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить РССклонение ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРССклонениеФИО</Action>
+		</Command>
+		<Command name="ЗаполнитьЗначенияВШаблонах" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить значения в шаблонах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить значения в шаблонах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьЗначенияВШаблонах</Action>
+		</Command>
+		<Command name="УстановитьВерсиюСервера" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить версию сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить версию сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьВерсиюСервера</Action>
+		</Command>
+		<Command name="НаписатьРазработчику" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать разработчику!</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Написать разработчику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SendMessage</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НаписатьРазработчику</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

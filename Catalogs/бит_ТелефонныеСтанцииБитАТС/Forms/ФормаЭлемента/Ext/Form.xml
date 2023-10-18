@@ -13,48 +13,83 @@
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="67"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="76"/>
 		</InputField>
 		<InputField name="Наименование" id="3">
 			<DataPath>Объект.Description</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="68"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="77"/>
 		</InputField>
 		<InputField name="Адрес" id="5">
 			<DataPath>Объект.Адрес</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="АдресКонтекстноеМеню" id="6"/>
-			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="69"/>
+			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="78"/>
 		</InputField>
 		<InputField name="Пользователь" id="7">
 			<DataPath>Объект.Пользователь</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="ПользовательКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="70"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="79"/>
 		</InputField>
 		<InputField name="Пароль" id="9">
 			<DataPath>Объект.Пароль</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="ПарольКонтекстноеМеню" id="10"/>
-			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="71"/>
+			<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="80"/>
 		</InputField>
-		<Button name="ПроверитьПодключение" id="49">
-			<Type>UsualButton</Type>
-			<CommandName>Form.Command.ПроверитьПодключение</CommandName>
-			<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="72"/>
-		</Button>
+		<InputField name="IDКлиента" id="74">
+			<DataPath>Объект.IDКлиента</DataPath>
+			<ContextMenu name="IDКлиентаКонтекстноеМеню" id="75"/>
+			<ExtendedTooltip name="IDКлиентаРасширеннаяПодсказка" id="81"/>
+		</InputField>
+		<InputField name="ВебСервис" id="123">
+			<DataPath>Объект.ВебСервис</DataPath>
+			<ContextMenu name="ВебСервисКонтекстноеМеню" id="124"/>
+			<ExtendedTooltip name="ВебСервисРасширеннаяПодсказка" id="125"/>
+		</InputField>
+		<InputField name="АдресАналитики" id="126">
+			<DataPath>Объект.АдресАналитики</DataPath>
+			<OpenButton>true</OpenButton>
+			<ContextMenu name="АдресАналитикиКонтекстноеМеню" id="127"/>
+			<ExtendedTooltip name="АдресАналитикиРасширеннаяПодсказка" id="128"/>
+			<Events>
+				<Event name="Opening">АдресАналитикиОткрытие</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПроверка" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа проверка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа проверка АТС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПроверкаРасширеннаяПодсказка" id="82"/>
+			<ChildItems>
+				<Button name="ПроверитьПодключение" id="49">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+					<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="83"/>
+				</Button>
+				<Button name="ПроверитьТранкиАТС" id="56">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПроверитьТранкиАТС</CommandName>
+					<ExtendedTooltip name="ПроверитьТранкиАТСРасширеннаяПодсказка" id="84"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="Страницы" id="15">
 			<Title>
 				<v8:item>
@@ -63,7 +98,7 @@
 				</v8:item>
 			</Title>
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
-			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="73"/>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="85"/>
 			<ChildItems>
 				<Page name="ГруппаНомераАТС" id="16">
 					<Title>
@@ -72,7 +107,7 @@
 							<v8:content>Номера АТС</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="ГруппаНомераАТСРасширеннаяПодсказка" id="74"/>
+					<ExtendedTooltip name="ГруппаНомераАТСРасширеннаяПодсказка" id="86"/>
 					<ChildItems>
 						<Table name="Номера" id="39">
 							<RowSelectionMode>Row</RowSelectionMode>
@@ -103,40 +138,40 @@
 									<Button name="НомераКонтекстноеМенюЗадатьГруппуДоступа" id="52">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ЗадатьГруппуДоступа</CommandName>
-										<ExtendedTooltip name="НомераКонтекстноеМенюЗадатьГруппуДоступаРасширеннаяПодсказка" id="75"/>
+										<ExtendedTooltip name="НомераКонтекстноеМенюЗадатьГруппуДоступаРасширеннаяПодсказка" id="87"/>
 									</Button>
 									<Button name="НомераКонтекстноеМенюОчиститьГруппуДоступа" id="53">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ОчиститьГруппуДоступа</CommandName>
-										<ExtendedTooltip name="НомераКонтекстноеМенюОчиститьГруппуДоступаРасширеннаяПодсказка" id="76"/>
+										<ExtendedTooltip name="НомераКонтекстноеМенюОчиститьГруппуДоступаРасширеннаяПодсказка" id="88"/>
 									</Button>
 								</ChildItems>
 							</ContextMenu>
 							<AutoCommandBar name="НомераКоманднаяПанель" id="41"/>
-							<ExtendedTooltip name="НомераРасширеннаяПодсказка" id="77"/>
-							<SearchStringAddition name="НомераСтрокаПоиска" id="78">
+							<ExtendedTooltip name="НомераРасширеннаяПодсказка" id="89"/>
+							<SearchStringAddition name="НомераСтрокаПоиска" id="90">
 								<AdditionSource>
 									<Item>Номера</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="НомераСтрокаПоискаКонтекстноеМеню" id="79"/>
-								<ExtendedTooltip name="НомераСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+								<ContextMenu name="НомераСтрокаПоискаКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="НомераСтрокаПоискаРасширеннаяПодсказка" id="92"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="НомераСостояниеПросмотра" id="81">
+							<ViewStatusAddition name="НомераСостояниеПросмотра" id="93">
 								<AdditionSource>
 									<Item>Номера</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="НомераСостояниеПросмотраКонтекстноеМеню" id="82"/>
-								<ExtendedTooltip name="НомераСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+								<ContextMenu name="НомераСостояниеПросмотраКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="НомераСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="НомераУправлениеПоиском" id="84">
+							<SearchControlAddition name="НомераУправлениеПоиском" id="96">
 								<AdditionSource>
 									<Item>Номера</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="НомераУправлениеПоискомКонтекстноеМеню" id="85"/>
-								<ExtendedTooltip name="НомераУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+								<ContextMenu name="НомераУправлениеПоискомКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="НомераУправлениеПоискомРасширеннаяПодсказка" id="98"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="ChoiceProcessing">НомераОбработкаВыбора</Event>
@@ -147,22 +182,22 @@
 									<Width>1</Width>
 									<HorizontalStretch>false</HorizontalStretch>
 									<ContextMenu name="НомераКодКонтекстноеМеню" id="47"/>
-									<ExtendedTooltip name="НомераКодРасширеннаяПодсказка" id="87"/>
+									<ExtendedTooltip name="НомераКодРасширеннаяПодсказка" id="99"/>
 								</LabelField>
 								<LabelField name="НомераНаименование" id="42">
 									<DataPath>Номера.Description</DataPath>
 									<ContextMenu name="НомераНаименованиеКонтекстноеМеню" id="43"/>
-									<ExtendedTooltip name="НомераНаименованиеРасширеннаяПодсказка" id="88"/>
+									<ExtendedTooltip name="НомераНаименованиеРасширеннаяПодсказка" id="100"/>
 								</LabelField>
 								<LabelField name="НомераНомер" id="44">
 									<DataPath>Номера.Номер</DataPath>
 									<ContextMenu name="НомераНомерКонтекстноеМеню" id="45"/>
-									<ExtendedTooltip name="НомераНомерРасширеннаяПодсказка" id="89"/>
+									<ExtendedTooltip name="НомераНомерРасширеннаяПодсказка" id="101"/>
 								</LabelField>
 								<LabelField name="НомераГруппаДоступа" id="50">
 									<DataPath>Номера.ГруппаДоступа</DataPath>
 									<ContextMenu name="НомераГруппаДоступаКонтекстноеМеню" id="51"/>
-									<ExtendedTooltip name="НомераГруппаДоступаРасширеннаяПодсказка" id="90"/>
+									<ExtendedTooltip name="НомераГруппаДоступаРасширеннаяПодсказка" id="102"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -176,101 +211,136 @@
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа загрузка номеров</v8:content>
+									<v8:content>Группа загрузка номеров с АТС</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>Horizontal</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаЗагрузкаНомеровРасширеннаяПодсказка" id="91"/>
+							<ExtendedTooltip name="ГруппаЗагрузкаНомеровРасширеннаяПодсказка" id="103"/>
 							<ChildItems>
 								<Button name="ЗагрузитьНомераСАТС" id="38">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ЗагрузитьНомераСАТС</CommandName>
-									<ExtendedTooltip name="ЗагрузитьНомераСАТСРасширеннаяПодсказка" id="92"/>
+									<ExtendedTooltip name="ЗагрузитьНомераСАТСРасширеннаяПодсказка" id="104"/>
 								</Button>
 								<Button name="ЗагрузитьНомераИзАналитикиАТС" id="55">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ЗагрузитьНомераИзАналитикиАТС</CommandName>
-									<ExtendedTooltip name="ЗагрузитьНомераИзАналитикиАТСРасширеннаяПодсказка" id="93"/>
-								</Button>
-								<Button name="ПроверитьТранкиАТС" id="56">
-									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПроверитьТранкиАТС</CommandName>
-									<ExtendedTooltip name="ПроверитьТранкиАТСРасширеннаяПодсказка" id="94"/>
+									<ExtendedTooltip name="ЗагрузитьНомераИзАналитикиАТСРасширеннаяПодсказка" id="105"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаКрасныеГруппы" id="57">
+				<Page name="ГруппаКлиентскиеГруппы" id="57">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Красные группы</v8:content>
+							<v8:content>Клиентские группы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа красные группы</v8:content>
+							<v8:content>Группа клиентские группы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаКрасныеГруппыРасширеннаяПодсказка" id="95"/>
+					<ExtendedTooltip name="ГруппаКлиентскиеГруппыРасширеннаяПодсказка" id="106"/>
 					<ChildItems>
-						<Table name="КрасныеГруппы" id="58">
+						<Table name="КлиентскиеГруппы" id="58">
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>Объект.КрасныеГруппы</DataPath>
+							<DataPath>Объект.КлиентскиеГруппы</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="КрасныеГруппыКонтекстноеМеню" id="59"/>
-							<AutoCommandBar name="КрасныеГруппыКоманднаяПанель" id="60"/>
-							<ExtendedTooltip name="КрасныеГруппыРасширеннаяПодсказка" id="96"/>
-							<SearchStringAddition name="КрасныеГруппыСтрокаПоиска" id="97">
+							<ContextMenu name="КлиентскиеГруппыКонтекстноеМеню" id="59"/>
+							<AutoCommandBar name="КлиентскиеГруппыКоманднаяПанель" id="60"/>
+							<ExtendedTooltip name="КлиентскиеГруппыРасширеннаяПодсказка" id="107"/>
+							<SearchStringAddition name="КлиентскиеГруппыСтрокаПоиска" id="108">
 								<AdditionSource>
-									<Item>КрасныеГруппы</Item>
+									<Item>КлиентскиеГруппы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="КрасныеГруппыСтрокаПоискаКонтекстноеМеню" id="98"/>
-								<ExtendedTooltip name="КрасныеГруппыСтрокаПоискаРасширеннаяПодсказка" id="99"/>
+								<ContextMenu name="КлиентскиеГруппыСтрокаПоискаКонтекстноеМеню" id="109"/>
+								<ExtendedTooltip name="КлиентскиеГруппыСтрокаПоискаРасширеннаяПодсказка" id="110"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="КрасныеГруппыСостояниеПросмотра" id="100">
+							<ViewStatusAddition name="КлиентскиеГруппыСостояниеПросмотра" id="111">
 								<AdditionSource>
-									<Item>КрасныеГруппы</Item>
+									<Item>КлиентскиеГруппы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="КрасныеГруппыСостояниеПросмотраКонтекстноеМеню" id="101"/>
-								<ExtendedTooltip name="КрасныеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="102"/>
+								<ContextMenu name="КлиентскиеГруппыСостояниеПросмотраКонтекстноеМеню" id="112"/>
+								<ExtendedTooltip name="КлиентскиеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="113"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="КрасныеГруппыУправлениеПоиском" id="103">
+							<SearchControlAddition name="КлиентскиеГруппыУправлениеПоиском" id="114">
 								<AdditionSource>
-									<Item>КрасныеГруппы</Item>
+									<Item>КлиентскиеГруппы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="КрасныеГруппыУправлениеПоискомКонтекстноеМеню" id="104"/>
-								<ExtendedTooltip name="КрасныеГруппыУправлениеПоискомРасширеннаяПодсказка" id="105"/>
+								<ContextMenu name="КлиентскиеГруппыУправлениеПоискомКонтекстноеМеню" id="115"/>
+								<ExtendedTooltip name="КлиентскиеГруппыУправлениеПоискомРасширеннаяПодсказка" id="116"/>
 							</SearchControlAddition>
 							<ChildItems>
-								<LabelField name="КрасныеГруппыНомерСтроки" id="61">
-									<DataPath>Объект.КрасныеГруппы.LineNumber</DataPath>
+								<LabelField name="КлиентскиеГруппыНомерСтроки" id="61">
+									<DataPath>Объект.КлиентскиеГруппы.LineNumber</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыНомерСтрокиКонтекстноеМеню" id="62"/>
-									<ExtendedTooltip name="КрасныеГруппыНомерСтрокиРасширеннаяПодсказка" id="106"/>
+									<ContextMenu name="КлиентскиеГруппыНомерСтрокиКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="КлиентскиеГруппыНомерСтрокиРасширеннаяПодсказка" id="117"/>
 								</LabelField>
-								<InputField name="КрасныеГруппыНомер" id="65">
-									<DataPath>Объект.КрасныеГруппы.Номер</DataPath>
+								<InputField name="КлиентскиеГруппыНомер" id="65">
+									<DataPath>Объект.КлиентскиеГруппы.Номер</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыНомерКонтекстноеМеню" id="66"/>
-									<ExtendedTooltip name="КрасныеГруппыНомерРасширеннаяПодсказка" id="107"/>
+									<ContextMenu name="КлиентскиеГруппыНомерКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="КлиентскиеГруппыНомерРасширеннаяПодсказка" id="118"/>
 								</InputField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСинхронизация" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация номеров со справочником сотрудников</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа синхронизация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСинхронизацияРасширеннаяПодсказка" id="119"/>
+					<ChildItems>
+						<CheckBoxField name="СинхронизацияССотрудниками" id="71">
+							<DataPath>Объект.СинхронизацияССотрудниками</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СинхронизацияССотрудникамиКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="СинхронизацияССотрудникамиРасширеннаяПодсказка" id="120"/>
+							<Events>
+								<Event name="OnChange">СинхронизацияССотрудникамиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="ГруппаСинхронизацииСотрудников" id="68">
+							<DataPath>Объект.ГруппаСинхронизацииСотрудников</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>true</ClearButton>
+							<OpenButton>false</OpenButton>
+							<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+							<ContextMenu name="ГруппаСинхронизацииСотрудниковКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ГруппаСинхронизацииСотрудниковРасширеннаяПодсказка" id="121"/>
+						</InputField>
+						<Button name="ЗагрузитьНомераСотрудников" id="67">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьНомераСотрудников</CommandName>
+							<ExtendedTooltip name="ЗагрузитьНомераСотрудниковРасширеннаяПодсказка" id="122"/>
+						</Button>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -332,7 +402,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНомераСАТС</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПроверитьПодключение" id="3">
 			<Title>
@@ -348,7 +417,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьПодключение</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗадатьГруппуДоступа" id="4">
 			<Title>
@@ -364,7 +432,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗадатьГруппуДоступа</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОчиститьГруппуДоступа" id="5">
 			<Title>
@@ -380,7 +447,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьГруппуДоступа</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНомераИзАналитикиАТС" id="6">
 			<Title>
@@ -396,7 +462,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНомераИзАналитикиАТС</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПроверитьТранкиАТС" id="7">
 			<Title>
@@ -412,7 +477,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьТранкиАТС</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузитьНомераСотрудников" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить номера сотрудников</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить номера сотрудников</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьНомераСотрудников</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -42,6 +42,17 @@
 					</ToolTip>
 					<ExtendedTooltip name="ИсходнаяТаблицаExtendedTooltip" id="102"/>
 					<ChildItems>
+						<InputField name="ФайлИмпорта" id="106">
+							<DataPath>ФайлИмпорта</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="ФайлИмпортаКонтекстноеМеню" id="107"/>
+							<ExtendedTooltip name="ФайлИмпортаРасширеннаяПодсказка" id="108"/>
+							<Events>
+								<Event name="StartChoice">ФайлИмпортаНачалоВыбора</Event>
+							</Events>
+						</InputField>
 						<SpreadSheetDocumentField name="ПолеИсходнойТаблицы" id="103">
 							<DataPath>ПолеИсходнойТаблицы</DataPath>
 							<Title>
@@ -71,23 +82,6 @@
 								<Event name="OnChange">ПолеИсходнойТаблицыПриИзменении</Event>
 							</Events>
 						</SpreadSheetDocumentField>
-						<Button name="ЗагрузитьФайл" id="576">
-							<Type>UsualButton</Type>
-							<Visible>false</Visible>
-							<CommandName>Form.Command.ЗагрузитьФайл</CommandName>
-							<ExtendedTooltip name="ЗагрузитьФайлРасширеннаяПодсказка" id="577"/>
-						</Button>
-						<InputField name="ФайлИмпорта" id="106">
-							<DataPath>ФайлИмпорта</DataPath>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<AutoMaxHeight>false</AutoMaxHeight>
-							<ChoiceButton>true</ChoiceButton>
-							<ContextMenu name="ФайлИмпортаКонтекстноеМеню" id="107"/>
-							<ExtendedTooltip name="ФайлИмпортаРасширеннаяПодсказка" id="108"/>
-							<Events>
-								<Event name="StartChoice">ФайлИмпортаНачалоВыбора</Event>
-							</Events>
-						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаВыборСоответствий" id="64">
@@ -210,6 +204,15 @@
 											<ContextMenu name="ВыборСоответствийДОКонтекстноеМеню" id="114"/>
 											<AutoCommandBar name="ВыборСоответствийДОКоманднаяПанель" id="115">
 												<ChildItems>
+													<Button name="ВыборСоответствийДОУдалитьВыделенные" id="636">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеДО</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийДОУдалитьВыделенныеРасширеннаяПодсказка" id="637"/>
+													</Button>
 													<Button name="ВыборСоответствийДОДобавитьФункцию" id="405">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруДО</CommandName>
@@ -366,6 +369,15 @@
 											<ContextMenu name="ВыборСоответствийИДКонтекстноеМеню" id="264"/>
 											<AutoCommandBar name="ВыборСоответствийИДКоманднаяПанель" id="265">
 												<ChildItems>
+													<Button name="ВыборСоответствийИДУдалитьВыделенныеИД" id="638">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеИД</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийИДУдалитьВыделенныеИДРасширеннаяПодсказка" id="639"/>
+													</Button>
 													<Button name="ВыборСоответствийИДДобавитьПроцедуруИД" id="407">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруИД</CommandName>
@@ -523,6 +535,15 @@
 											<ContextMenu name="ВыборСоответствийЗКонтекстноеМеню" id="324"/>
 											<AutoCommandBar name="ВыборСоответствийЗКоманднаяПанель" id="325">
 												<ChildItems>
+													<Button name="ВыборСоответствийЗУдалитьВыделенныеЗалоги" id="640">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеЗалоги</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийЗУдалитьВыделенныеЗалогиРасширеннаяПодсказка" id="641"/>
+													</Button>
 													<Button name="ВыборСоответствийЗДобавитьПроцедуруЗ" id="409">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруЗ</CommandName>
@@ -679,6 +700,15 @@
 											<ContextMenu name="ВыборСоответствийДКонтекстноеМеню" id="234"/>
 											<AutoCommandBar name="ВыборСоответствийДКоманднаяПанель" id="235">
 												<ChildItems>
+													<Button name="ВыборСоответствийДУдалитьВыделенныеДоговоры" id="642">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеДоговоры</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийДУдалитьВыделенныеДоговорыРасширеннаяПодсказка" id="643"/>
+													</Button>
 													<Button name="ВыборСоответствийДДобавитьПроцедуруД" id="411">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруД</CommandName>
@@ -832,6 +862,15 @@
 											<ContextMenu name="ВыборСоответствийУКонтекстноеМеню" id="296"/>
 											<AutoCommandBar name="ВыборСоответствийУКоманднаяПанель" id="297">
 												<ChildItems>
+													<Button name="ВыборСоответствийУУдалитьВыделенныеУслуги" id="644">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеУслуги</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийУУдалитьВыделенныеУслугиРасширеннаяПодсказка" id="645"/>
+													</Button>
 													<Button name="ВыборСоответствийУДобавитьПроцедуруУ" id="413">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруУ</CommandName>
@@ -989,6 +1028,15 @@
 											<ContextMenu name="ВыборСоответствийДолжникКонтекстноеМеню" id="144"/>
 											<AutoCommandBar name="ВыборСоответствийДолжникКоманднаяПанель" id="145">
 												<ChildItems>
+													<Button name="ВыборСоответствийДолжникУдалитьВыделенныеДолжники" id="646">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеДолжники</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийДолжникУдалитьВыделенныеДолжникиРасширеннаяПодсказка" id="647"/>
+													</Button>
 													<Button name="ВыборСоответствийДолжникДобавитьПроцедуруДолжник" id="415">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруДолжник</CommandName>
@@ -1238,6 +1286,15 @@
 											<ContextMenu name="ВыборСоответствийКонтрагентКонтекстноеМеню" id="176"/>
 											<AutoCommandBar name="ВыборСоответствийКонтрагентКоманднаяПанель" id="177">
 												<ChildItems>
+													<Button name="ВыборСоответствийКонтрагентУдалитьВыделенныеКонтрагенты" id="648">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеКонтрагенты</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийКонтрагентУдалитьВыделенныеКонтрагентыРасширеннаяПодсказка" id="649"/>
+													</Button>
 													<Button name="ВыборСоответствийКонтрагентДобавитьПроцедуруКонтрагент" id="417">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруКонтрагент</CommandName>
@@ -1394,6 +1451,15 @@
 											<ContextMenu name="ВыборСоответствийКредиторКонтекстноеМеню" id="204"/>
 											<AutoCommandBar name="ВыборСоответствийКредиторКоманднаяПанель" id="205">
 												<ChildItems>
+													<Button name="ВыборСоответствийКредиторУдалитьВыделенныеКредиторы" id="650">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьВыделенныеКредиторы</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.SpreadsheetDeleteComment</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="ВыборСоответствийКредиторУдалитьВыделенныеКредиторыРасширеннаяПодсказка" id="651"/>
+													</Button>
 													<Button name="ВыборСоответствийКредиторДобавитьПроцедуруКредитор" id="419">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ДобавитьПроцедуруКредитор</CommandName>
@@ -1716,6 +1782,44 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаДанныеExtendedTooltip" id="4"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаИнструкцияЗагрузки" id="669">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инструкция загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа инструкция загрузки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Collapsible</Behavior>
+							<ExtendedTooltip name="ГруппаИнструкцияЗагрузкиРасширеннаяПодсказка" id="670"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияИнструкцияЗагрузки" id="666">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;Проверка реестра - выполняет проверку загружаемых колонок на:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;1. Корректное заполнение чисел, дат&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 8&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;2. Наличие дублей  Кодов объектов
+&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;b&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;Шаг 1: Заполнить таблицу&lt;/&gt;&lt;/&gt;
+
+&lt;i&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;Если не поставить галочку &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;i&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;"Обновлять ранее записанные"&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;i&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;, уже существующие объекты останутся &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;i&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;неизменными&lt;/&gt;&lt;/&gt;&lt;/&gt;
+
+&lt;b&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;Шаг 2: Выполнить загрузку&lt;/&gt;&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияИнструкцияЗагрузкиКонтекстноеМеню" id="667"/>
+									<ExtendedTooltip name="ДекорацияИнструкцияЗагрузкиРасширеннаяПодсказка" id="668"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="ГруппаНастройки" id="24">
 							<Title>
 								<v8:item>
@@ -1776,9 +1880,91 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
+								<UsualGroup name="ГруппаПроверка" id="652">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Данные проверки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа проверка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПроверкаРасширеннаяПодсказка" id="653"/>
+									<ChildItems>
+										<Button name="ПроверитьРеестр" id="654">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПроверитьРеестр</CommandName>
+											<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+											<BackColor>style:FormBackColor</BackColor>
+											<Font ref="style:ШрифтТекстКнопкиМаленький" kind="StyleItem"/>
+											<ExtendedTooltip name="ПроверитьРеестрРасширеннаяПодсказка" id="655"/>
+										</Button>
+										<UsualGroup name="ГруппаОтоброжениеПроверки" id="656">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Данные по ошибкам</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа отоброжение проверки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>false</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Group>Vertical</Group>
+											<Behavior>PopUp</Behavior>
+											<ExtendedTooltip name="ГруппаОтоброжениеПроверкиРасширеннаяПодсказка" id="657"/>
+											<ChildItems>
+												<Button name="ПерейтиКРеестру" id="658">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПерейтиКРеестру</CommandName>
+													<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+													<BackColor>style:FormBackColor</BackColor>
+													<ExtendedTooltip name="ПерейтиКРееструРасширеннаяПодсказка" id="659"/>
+												</Button>
+												<LabelDecoration name="ДекорацияПроверки" id="660">
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;colorstyle 0:349c0f2e-e057-4dee-bafb-80b5a90138da&gt;Двойной клик - Переход к строке реестра&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияПроверкиКонтекстноеМеню" id="661"/>
+													<ExtendedTooltip name="ДекорацияПроверкиРасширеннаяПодсказка" id="662"/>
+												</LabelDecoration>
+												<SpreadSheetDocumentField name="ПроверяемыеЗначения" id="663">
+													<DataPath>ПроверяемыеЗначения</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<Width>100</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<VerticalStretch>false</VerticalStretch>
+													<ContextMenu name="ПроверяемыеЗначенияКонтекстноеМеню" id="664"/>
+													<ExtendedTooltip name="ПроверяемыеЗначенияРасширеннаяПодсказка" id="665"/>
+													<Events>
+														<Event name="Selection">Котики_ПроверяемыеЗначенияВыборПосле</Event>
+													</Events>
+												</SpreadSheetDocumentField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
 								<Button name="ЗаполнитьТаблицуДанных" id="469">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ЗаполнитьТаблицуДанных</CommandName>
+									<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+									<BackColor>style:FormBackColor</BackColor>
+									<Font ref="style:ШрифтТекстКнопкиМаленький" kind="StyleItem"/>
 									<ExtendedTooltip name="ЗаполнитьТаблицуДанныхРасширеннаяПодсказка" id="470"/>
 								</Button>
 								<CheckBoxField name="ОбновлятьРанееЗаписанные" id="517">
@@ -1793,6 +1979,9 @@
 								<Button name="ВыполнитьЗагрузку" id="520">
 									<Type>UsualButton</Type>
 									<CommandName>Form.Command.ВыполнитьЗагрузку</CommandName>
+									<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+									<BackColor>style:FormBackColor</BackColor>
+									<Font ref="style:ШрифтТекстКнопкиМаленький" kind="StyleItem"/>
 									<ExtendedTooltip name="ВыполнитьЗагрузкуРасширеннаяПодсказка" id="521"/>
 								</Button>
 							</ChildItems>
@@ -2969,6 +3158,32 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="АдресФайлИмпорта" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес файл импорта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроверяемыеЗначения" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемые значения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -4069,6 +4284,164 @@
 			</ToolTip>
 			<Action>ЗагрузитьФайл</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьВыделенныеДО" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеДО</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеИД" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеИД</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеЗалоги" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеЗалоги</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеДоговоры" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеДоговоры</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеУслуги" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеУслуги</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеДолжники" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеДолжники</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеКонтрагенты" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеКонтрагенты</Action>
+		</Command>
+		<Command name="УдалитьВыделенныеКредиторы" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить выделенные ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+D</Shortcut>
+			<Action>УдалитьВыделенныеКредиторы</Action>
+		</Command>
+		<Command name="ПерейтиКРеестру" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к реестру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к реестру</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Котики_ПерейтиКРееструПосле</Action>
+		</Command>
+		<Command name="ПроверитьРеестр" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить реестр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить реестр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьРеестр</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>70</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияОписание1" id="4">
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;fontsize 10&gt;Обработка позволяет сформировать файл запроса на перевод экземпляра информационной базы в автономный режим лицензирования, при котором, не будет требоваться наличие &lt;/&gt;&lt;b&gt;&lt;fontsize 10&gt;&lt;color #000000&gt;firstBit.Сервера лицензий 2.0&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;fontsize 10&gt;.&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияОписание1КонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДекорацияОписание1РасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<InputField name="ИмяКомпьютера" id="1">
+			<DataPath>Объект.ИмяКомпьютера</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ИмяКомпьютераКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ИмяКомпьютераРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ЦелеваяИнформационнаяБаза1" id="16">
+			<DataPath>Объект.ЦелеваяИнформационнаяБаза</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автономный режим будет работать только для указанной информационной базы на текущем компьютере. Для клиент-серверной базы, расположение и компьютер определяется относительно сервера 1с предприятия.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ЦелеваяИнформационнаяБаза1КонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ЦелеваяИнформационнаяБаза1РасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<UsualGroup name="ГруппаАвтономныйРежим" id="21">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>web:Linen</BackColor>
+			<ExtendedTooltip name="ГруппаАвтономныйРежимРасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<UsualGroup name="Группа1" id="31">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияАвтономныйРежим1" id="28">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;b&gt;Автономный режим&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияАвтономныйРежим1КонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДекорацияАвтономныйРежим1РасширеннаяПодсказка" id="30"/>
+						</LabelDecoration>
+						<LabelDecoration name="ДекорацияАвтономныйРежимСостояние" id="23">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состояние: Активен</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияАвтономныйРежимСостояниеКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ДекорацияАвтономныйРежимСостояниеРасширеннаяПодсказка" id="25"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ОтключитьАвтономныйРежим" id="19">
+					<Type>UsualButton</Type>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<CommandName>Form.Command.ОтключитьАвтономныйРежим</CommandName>
+					<ExtendedTooltip name="ОтключитьАвтономныйРежимРасширеннаяПодсказка" id="20"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДейтвия" id="26">
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДейтвияРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияОписание2" id="7">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="true">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;fontsize 10&gt;Нажмите кнопку "Сохранить файл запроса", чтобы сохранить файл, отправьте его на адрес &lt;/&gt;&lt;link mailto:LS.Support@1cbit.ru&gt;&lt;fontsize 10&gt;LS.Support@1cbit.ru&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;Получив файл ответа, нажмите кнопку "Загрузить файл ответа".&lt;/&gt;</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияОписание2КонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ДекорацияОписание2РасширеннаяПодсказка" id="9"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаОперации" id="12">
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОперацииРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Button name="ЗагрузитьФайлОтвета" id="14">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗагрузитьФайлОтвета</CommandName>
+							<ExtendedTooltip name="ЗагрузитьФайлОтветаРасширеннаяПодсказка" id="15"/>
+						</Button>
+						<Button name="СохранитьФайлЗапроса" id="10">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.СохранитьФайлЗапроса</CommandName>
+							<ExtendedTooltip name="СохранитьФайлЗапросаРасширеннаяПодсказка" id="11"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.сл2_АвтономноеЛицензирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьФайлЗапроса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл запроса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл запроса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьФайлЗапроса</Action>
+		</Command>
+		<Command name="ЗагрузитьФайлОтвета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл ответа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить файл ответа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьФайлОтвета</Action>
+		</Command>
+		<Command name="ОтключитьАвтономныйРежим" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить автономный режим</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтключитьАвтономныйРежим</Action>
+		</Command>
+	</Commands>
+</Form>

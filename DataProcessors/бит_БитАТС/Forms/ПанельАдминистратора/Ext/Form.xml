@@ -9,6 +9,7 @@
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="ExternalEvent">ВнешнееСобытие</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаКомандыПодключения" id="3">
@@ -28,22 +29,38 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаКомандыПодключенияРасширеннаяПодсказка" id="164"/>
+			<ExtendedTooltip name="ГруппаКомандыПодключенияРасширеннаяПодсказка" id="166"/>
 			<ChildItems>
 				<Button name="ПодключитьАТС" id="1">
 					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
 					<CommandName>Form.Command.ПодключитьАТС</CommandName>
-					<ExtendedTooltip name="ПодключитьАТСРасширеннаяПодсказка" id="165"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Подключен16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПодключитьАТСРасширеннаяПодсказка" id="167"/>
 				</Button>
 				<Button name="ОтключитьАТС" id="2">
 					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
 					<CommandName>Form.Command.ОтключитьАТС</CommandName>
-					<ExtendedTooltip name="ОтключитьАТСРасширеннаяПодсказка" id="166"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Отключен16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ОтключитьАТСРасширеннаяПодсказка" id="168"/>
 				</Button>
 				<Button name="Настройки" id="88">
 					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
 					<CommandName>Form.Command.Настройки</CommandName>
-					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="167"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Настройки16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="169"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -65,19 +82,19 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаСтатусПодключенияРасширеннаяПодсказка" id="168"/>
+			<ExtendedTooltip name="ГруппаСтатусПодключенияРасширеннаяПодсказка" id="170"/>
 			<ChildItems>
 				<LabelField name="ТекущаяАТС" id="58">
 					<DataPath>ТекущаяАТС</DataPath>
 					<ContextMenu name="ТекущаяАТСКонтекстноеМеню" id="59"/>
-					<ExtendedTooltip name="ТекущаяАТСРасширеннаяПодсказка" id="169"/>
+					<ExtendedTooltip name="ТекущаяАТСРасширеннаяПодсказка" id="171"/>
 				</LabelField>
 				<CheckBoxField name="Подключен" id="140">
 					<DataPath>Подключен</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПодключенКонтекстноеМеню" id="141"/>
-					<ExtendedTooltip name="ПодключенРасширеннаяПодсказка" id="170"/>
+					<ExtendedTooltip name="ПодключенРасширеннаяПодсказка" id="172"/>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
@@ -97,22 +114,20 @@
 			<Group>Horizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаСвязанныйТелефонРасширеннаяПодсказка" id="171"/>
+			<ExtendedTooltip name="ГруппаСвязанныйТелефонРасширеннаяПодсказка" id="173"/>
 			<ChildItems>
 				<InputField name="НомерСвязанногоТелефона" id="70">
 					<DataPath>НомерСвязанногоТелефона</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<Width>12</Width>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
 					<HorizontalStretch>false</HorizontalStretch>
 					<ContextMenu name="НомерСвязанногоТелефонаКонтекстноеМеню" id="71"/>
-					<ExtendedTooltip name="НомерСвязанногоТелефонаРасширеннаяПодсказка" id="172"/>
+					<ExtendedTooltip name="НомерСвязанногоТелефонаРасширеннаяПодсказка" id="174"/>
 				</InputField>
 				<Button name="ПозвонитьСоСвязанногоТелефона" id="72">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.ПозвонитьСоСвязанногоТелефона</CommandName>
-					<ExtendedTooltip name="ПозвонитьСоСвязанногоТелефонаРасширеннаяПодсказка" id="173"/>
+					<ExtendedTooltip name="ПозвонитьСоСвязанногоТелефонаРасширеннаяПодсказка" id="175"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -130,7 +145,7 @@
 				</v8:item>
 			</ToolTip>
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
-			<ExtendedTooltip name="ГруппаАТСРасширеннаяПодсказка" id="174"/>
+			<ExtendedTooltip name="ГруппаАТСРасширеннаяПодсказка" id="176"/>
 			<Events>
 				<Event name="OnCurrentPageChange">ГруппаАТСПриСменеСтраницы</Event>
 			</Events>
@@ -148,7 +163,11 @@
 							<v8:content>Группа номера</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаНомераРасширеннаяПодсказка" id="175"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Подключен16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаНомераРасширеннаяПодсказка" id="177"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаДетальнаяИнфНомеров" id="102">
 							<Title>
@@ -167,7 +186,7 @@
 							<Behavior>Usual</Behavior>
 							<Representation>None</Representation>
 							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаДетальнаяИнфНомеровРасширеннаяПодсказка" id="176"/>
+							<ExtendedTooltip name="ГруппаДетальнаяИнфНомеровРасширеннаяПодсказка" id="178"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаДеревоНомеров" id="109">
 									<Title>
@@ -186,15 +205,16 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаДеревоНомеровРасширеннаяПодсказка" id="177"/>
+									<ExtendedTooltip name="ГруппаДеревоНомеровРасширеннаяПодсказка" id="179"/>
 									<ChildItems>
 										<Table name="ДеревоНомеров" id="104">
-											<Representation>Tree</Representation>
+											<Visible>false</Visible>
 											<TitleLocation>Top</TitleLocation>
 											<CommandBarLocation>None</CommandBarLocation>
 											<ReadOnly>true</ReadOnly>
 											<UseAlternationRowColor>true</UseAlternationRowColor>
-											<InitialTreeView>ExpandTopLevel</InitialTreeView>
+											<InitialListView>Beginning</InitialListView>
+											<InitialTreeView>ExpandAllLevels</InitialTreeView>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
 											<FileDragMode>AsFile</FileDragMode>
@@ -226,30 +246,30 @@
 												<Autofill>false</Autofill>
 											</ContextMenu>
 											<AutoCommandBar name="ДеревоНомеровКоманднаяПанель" id="106"/>
-											<ExtendedTooltip name="ДеревоНомеровРасширеннаяПодсказка" id="178"/>
-											<SearchStringAddition name="ДеревоНомеровСтрокаПоиска" id="179">
+											<ExtendedTooltip name="ДеревоНомеровРасширеннаяПодсказка" id="180"/>
+											<SearchStringAddition name="ДеревоНомеровСтрокаПоиска" id="181">
 												<AdditionSource>
 													<Item>ДеревоНомеров</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДеревоНомеровСтрокаПоискаКонтекстноеМеню" id="180"/>
-												<ExtendedTooltip name="ДеревоНомеровСтрокаПоискаРасширеннаяПодсказка" id="181"/>
+												<ContextMenu name="ДеревоНомеровСтрокаПоискаКонтекстноеМеню" id="182"/>
+												<ExtendedTooltip name="ДеревоНомеровСтрокаПоискаРасширеннаяПодсказка" id="183"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="ДеревоНомеровСостояниеПросмотра" id="182">
+											<ViewStatusAddition name="ДеревоНомеровСостояниеПросмотра" id="184">
 												<AdditionSource>
 													<Item>ДеревоНомеров</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="ДеревоНомеровСостояниеПросмотраКонтекстноеМеню" id="183"/>
-												<ExtendedTooltip name="ДеревоНомеровСостояниеПросмотраРасширеннаяПодсказка" id="184"/>
+												<ContextMenu name="ДеревоНомеровСостояниеПросмотраКонтекстноеМеню" id="185"/>
+												<ExtendedTooltip name="ДеревоНомеровСостояниеПросмотраРасширеннаяПодсказка" id="186"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="ДеревоНомеровУправлениеПоиском" id="185">
+											<SearchControlAddition name="ДеревоНомеровУправлениеПоиском" id="187">
 												<AdditionSource>
 													<Item>ДеревоНомеров</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="ДеревоНомеровУправлениеПоискомКонтекстноеМеню" id="186"/>
-												<ExtendedTooltip name="ДеревоНомеровУправлениеПоискомРасширеннаяПодсказка" id="187"/>
+												<ContextMenu name="ДеревоНомеровУправлениеПоискомКонтекстноеМеню" id="188"/>
+												<ExtendedTooltip name="ДеревоНомеровУправлениеПоискомРасширеннаяПодсказка" id="189"/>
 											</SearchControlAddition>
 											<Events>
 												<Event name="Selection">ДеревоНомеровВыбор</Event>
@@ -265,7 +285,7 @@
 														</v8:item>
 													</Title>
 													<ContextMenu name="ДеревоНомеровНаименованиеКонтекстноеМеню" id="108"/>
-													<ExtendedTooltip name="ДеревоНомеровНаименованиеРасширеннаяПодсказка" id="188"/>
+													<ExtendedTooltip name="ДеревоНомеровНаименованиеРасширеннаяПодсказка" id="190"/>
 												</LabelField>
 											</ChildItems>
 										</Table>
@@ -288,7 +308,7 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаТаблЧастьНомеровРасширеннаяПодсказка" id="189"/>
+									<ExtendedTooltip name="ГруппаТаблЧастьНомеровРасширеннаяПодсказка" id="191"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаФильтрСортировка" id="119">
 											<Title>
@@ -307,7 +327,7 @@
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаФильтрСортировкаРасширеннаяПодсказка" id="190"/>
+											<ExtendedTooltip name="ГруппаФильтрСортировкаРасширеннаяПодсказка" id="192"/>
 											<ChildItems>
 												<UsualGroup name="ГруппаФильтрНомеров" id="78">
 													<Title>
@@ -325,7 +345,7 @@
 													<Group>Vertical</Group>
 													<Behavior>Usual</Behavior>
 													<Representation>StrongSeparation</Representation>
-													<ExtendedTooltip name="ГруппаФильтрНомеровРасширеннаяПодсказка" id="191"/>
+													<ExtendedTooltip name="ГруппаФильтрНомеровРасширеннаяПодсказка" id="193"/>
 													<ChildItems>
 														<RadioButtonField name="ФильтрНомеровТип" id="79">
 															<DataPath>ФильтрНомеровТип</DataPath>
@@ -379,7 +399,7 @@
 																</xr:Item>
 															</ChoiceList>
 															<ContextMenu name="ФильтрНомеровТипКонтекстноеМеню" id="80"/>
-															<ExtendedTooltip name="ФильтрНомеровТипРасширеннаяПодсказка" id="192"/>
+															<ExtendedTooltip name="ФильтрНомеровТипРасширеннаяПодсказка" id="194"/>
 															<Events>
 																<Event name="OnChange">ФильтрНомеровТипПриИзменении</Event>
 															</Events>
@@ -388,7 +408,7 @@
 															<DataPath>ФильтрНомеровВнешние</DataPath>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ФильтрНомеровВнешниеКонтекстноеМеню" id="82"/>
-															<ExtendedTooltip name="ФильтрНомеровВнешниеРасширеннаяПодсказка" id="193"/>
+															<ExtendedTooltip name="ФильтрНомеровВнешниеРасширеннаяПодсказка" id="195"/>
 															<Events>
 																<Event name="OnChange">ФильтрНомеровВнешниеПриИзменении</Event>
 															</Events>
@@ -411,7 +431,7 @@
 													<Group>Vertical</Group>
 													<Behavior>Usual</Behavior>
 													<Representation>StrongSeparation</Representation>
-													<ExtendedTooltip name="ГруппаСортировкаНомеровРасширеннаяПодсказка" id="194"/>
+													<ExtendedTooltip name="ГруппаСортировкаНомеровРасширеннаяПодсказка" id="196"/>
 													<ChildItems>
 														<InputField name="ПолеСортировки" id="84">
 															<DataPath>ПолеСортировки</DataPath>
@@ -421,19 +441,15 @@
 																	<v8:content>Сортировать по колонке</v8:content>
 																</v8:item>
 															</Title>
-															<AutoMaxWidth>false</AutoMaxWidth>
-															<AutoMaxHeight>false</AutoMaxHeight>
 															<ListChoiceMode>true</ListChoiceMode>
 															<ContextMenu name="ПолеСортировкиКонтекстноеМеню" id="85"/>
-															<ExtendedTooltip name="ПолеСортировкиРасширеннаяПодсказка" id="195"/>
+															<ExtendedTooltip name="ПолеСортировкиРасширеннаяПодсказка" id="197"/>
 															<Events>
 																<Event name="OnChange">ПолеСортировкиПриИзменении</Event>
 															</Events>
 														</InputField>
 														<InputField name="НаправлениеСортировки" id="86">
 															<DataPath>НаправлениеСортировки</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
-															<AutoMaxHeight>false</AutoMaxHeight>
 															<ListChoiceMode>true</ListChoiceMode>
 															<ChoiceList>
 																<xr:Item>
@@ -454,7 +470,7 @@
 																</xr:Item>
 															</ChoiceList>
 															<ContextMenu name="НаправлениеСортировкиКонтекстноеМеню" id="87"/>
-															<ExtendedTooltip name="НаправлениеСортировкиРасширеннаяПодсказка" id="196"/>
+															<ExtendedTooltip name="НаправлениеСортировкиРасширеннаяПодсказка" id="198"/>
 															<Events>
 																<Event name="OnChange">НаправлениеСортировкиПриИзменении</Event>
 															</Events>
@@ -476,7 +492,7 @@
 											<RowPictureDataPath>Номера.ИндексКартинкиСтатуса</RowPictureDataPath>
 											<RowsPicture>
 												<xr:Ref>CommonPicture.NC_бит_СтатусыAMI</xr:Ref>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</RowsPicture>
 											<SearchStringLocation>None</SearchStringLocation>
 											<ViewStatusLocation>None</ViewStatusLocation>
@@ -487,33 +503,83 @@
 												<ChildItems>
 													<Button name="НомераКонтекстноеМенюПозвонить" id="73">
 														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.Позвонить</CommandName>
-														<ExtendedTooltip name="НомераКонтекстноеМенюПозвонитьРасширеннаяПодсказка" id="197"/>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_Подключен16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюПозвонитьРасширеннаяПодсказка" id="199"/>
 													</Button>
 													<Button name="НомераКонтекстноеМенюПрослушать" id="74">
 														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.Прослушать</CommandName>
-														<ExtendedTooltip name="НомераКонтекстноеМенюПрослушатьРасширеннаяПодсказка" id="198"/>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_Прослушка</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюПрослушатьРасширеннаяПодсказка" id="200"/>
 													</Button>
 													<Button name="НомераКонтекстноеМенюПодсказать" id="75">
 														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.Подсказать</CommandName>
-														<ExtendedTooltip name="НомераКонтекстноеМенюПодсказатьРасширеннаяПодсказка" id="199"/>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_Перевод16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюПодсказатьРасширеннаяПодсказка" id="201"/>
 													</Button>
 													<Button name="НомераКонтекстноеМенюКонференция" id="76">
 														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.Конференция</CommandName>
-														<ExtendedTooltip name="НомераКонтекстноеМенюКонференцияРасширеннаяПодсказка" id="200"/>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_Подключение16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюКонференцияРасширеннаяПодсказка" id="202"/>
+													</Button>
+													<Button name="НомераКонтекстноеМенюЗавершитьРазговор" id="165">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.ЗавершитьРазговор</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_Отключен16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюЗавершитьРазговорРасширеннаяПодсказка" id="203"/>
 													</Button>
 													<Button name="НомераКонтекстноеМенюПолучитьСвойстваКанала" id="124">
 														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.ПолучитьСвойстваКанала</CommandName>
-														<ExtendedTooltip name="НомераКонтекстноеМенюПолучитьСвойстваКаналаРасширеннаяПодсказка" id="201"/>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюПолучитьСвойстваКаналаРасширеннаяПодсказка" id="204"/>
+													</Button>
+													<Button name="НомераКонтекстноеМенюПолучитьСвойстваНомера" id="164">
+														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
+														<CommandName>Form.Command.ПолучитьСвойстваНомера</CommandName>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюПолучитьСвойстваНомераРасширеннаяПодсказка" id="205"/>
 													</Button>
 													<Button name="НомераКонтекстноеМенюИнформация" id="89">
 														<Type>CommandBarButton</Type>
+														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.НомераИнформация</CommandName>
-														<ExtendedTooltip name="НомераКонтекстноеМенюИнформацияРасширеннаяПодсказка" id="202"/>
+														<Picture>
+															<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
+														<ExtendedTooltip name="НомераКонтекстноеМенюИнформацияРасширеннаяПодсказка" id="206"/>
 													</Button>
 												</ChildItems>
 											</ContextMenu>
@@ -523,39 +589,39 @@
 													<Button name="НомераНайти" id="117">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Item.Номера.StandardCommand.Find</CommandName>
-														<ExtendedTooltip name="НомераНайтиРасширеннаяПодсказка" id="203"/>
+														<ExtendedTooltip name="НомераНайтиРасширеннаяПодсказка" id="207"/>
 													</Button>
 													<Button name="НомераОтменитьПоиск" id="118">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Item.Номера.StandardCommand.CancelSearch</CommandName>
-														<ExtendedTooltip name="НомераОтменитьПоискРасширеннаяПодсказка" id="204"/>
+														<ExtendedTooltip name="НомераОтменитьПоискРасширеннаяПодсказка" id="208"/>
 													</Button>
 												</ChildItems>
 											</AutoCommandBar>
-											<ExtendedTooltip name="НомераРасширеннаяПодсказка" id="205"/>
-											<SearchStringAddition name="НомераСтрокаПоиска" id="206">
+											<ExtendedTooltip name="НомераРасширеннаяПодсказка" id="209"/>
+											<SearchStringAddition name="НомераСтрокаПоиска" id="210">
 												<AdditionSource>
 													<Item>Номера</Item>
 													<Type>SearchStringRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="НомераСтрокаПоискаКонтекстноеМеню" id="207"/>
-												<ExtendedTooltip name="НомераСтрокаПоискаРасширеннаяПодсказка" id="208"/>
+												<ContextMenu name="НомераСтрокаПоискаКонтекстноеМеню" id="211"/>
+												<ExtendedTooltip name="НомераСтрокаПоискаРасширеннаяПодсказка" id="212"/>
 											</SearchStringAddition>
-											<ViewStatusAddition name="НомераСостояниеПросмотра" id="209">
+											<ViewStatusAddition name="НомераСостояниеПросмотра" id="213">
 												<AdditionSource>
 													<Item>Номера</Item>
 													<Type>ViewStatusRepresentation</Type>
 												</AdditionSource>
-												<ContextMenu name="НомераСостояниеПросмотраКонтекстноеМеню" id="210"/>
-												<ExtendedTooltip name="НомераСостояниеПросмотраРасширеннаяПодсказка" id="211"/>
+												<ContextMenu name="НомераСостояниеПросмотраКонтекстноеМеню" id="214"/>
+												<ExtendedTooltip name="НомераСостояниеПросмотраРасширеннаяПодсказка" id="215"/>
 											</ViewStatusAddition>
-											<SearchControlAddition name="НомераУправлениеПоиском" id="212">
+											<SearchControlAddition name="НомераУправлениеПоиском" id="216">
 												<AdditionSource>
 													<Item>Номера</Item>
 													<Type>SearchControl</Type>
 												</AdditionSource>
-												<ContextMenu name="НомераУправлениеПоискомКонтекстноеМеню" id="213"/>
-												<ExtendedTooltip name="НомераУправлениеПоискомРасширеннаяПодсказка" id="214"/>
+												<ContextMenu name="НомераУправлениеПоискомКонтекстноеМеню" id="217"/>
+												<ExtendedTooltip name="НомераУправлениеПоискомРасширеннаяПодсказка" id="218"/>
 											</SearchControlAddition>
 											<Events>
 												<Event name="Selection">НомераВыбор</Event>
@@ -565,47 +631,47 @@
 													<DataPath>Номера.Наименование</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="НомераНаименованиеКонтекстноеМеню" id="9"/>
-													<ExtendedTooltip name="НомераНаименованиеРасширеннаяПодсказка" id="215"/>
+													<ExtendedTooltip name="НомераНаименованиеРасширеннаяПодсказка" id="219"/>
 												</InputField>
 												<InputField name="НомераНомер" id="10">
 													<DataPath>Номера.Номер</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="НомераНомерКонтекстноеМеню" id="11"/>
-													<ExtendedTooltip name="НомераНомерРасширеннаяПодсказка" id="216"/>
+													<ExtendedTooltip name="НомераНомерРасширеннаяПодсказка" id="220"/>
 												</InputField>
 												<InputField name="НомераСтатус" id="142">
 													<DataPath>Номера.Статус</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>6</Width>
 													<ContextMenu name="НомераСтатусКонтекстноеМеню" id="143"/>
-													<ExtendedTooltip name="НомераСтатусРасширеннаяПодсказка" id="217"/>
+													<ExtendedTooltip name="НомераСтатусРасширеннаяПодсказка" id="221"/>
 												</InputField>
 												<InputField name="НомераНаправление" id="14">
 													<DataPath>Номера.Направление</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>14</Width>
 													<ContextMenu name="НомераНаправлениеКонтекстноеМеню" id="15"/>
-													<ExtendedTooltip name="НомераНаправлениеРасширеннаяПодсказка" id="218"/>
+													<ExtendedTooltip name="НомераНаправлениеРасширеннаяПодсказка" id="222"/>
 												</InputField>
 												<InputField name="НомераСоединен" id="16">
 													<DataPath>Номера.Соединен</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="НомераСоединенКонтекстноеМеню" id="17"/>
-													<ExtendedTooltip name="НомераСоединенРасширеннаяПодсказка" id="219"/>
+													<ExtendedTooltip name="НомераСоединенРасширеннаяПодсказка" id="223"/>
 												</InputField>
 												<InputField name="НомераДлительность" id="18">
 													<DataPath>Номера.Длительность</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<Width>14</Width>
 													<ContextMenu name="НомераДлительностьКонтекстноеМеню" id="19"/>
-													<ExtendedTooltip name="НомераДлительностьРасширеннаяПодсказка" id="220"/>
+													<ExtendedTooltip name="НомераДлительностьРасширеннаяПодсказка" id="224"/>
 												</InputField>
 												<InputField name="НомераКонтрагент" id="120">
 													<DataPath>Номера.Контрагент</DataPath>
 													<EditMode>EnterOnInput</EditMode>
 													<CellHyperlink>true</CellHyperlink>
 													<ContextMenu name="НомераКонтрагентКонтекстноеМеню" id="121"/>
-													<ExtendedTooltip name="НомераКонтрагентРасширеннаяПодсказка" id="221"/>
+													<ExtendedTooltip name="НомераКонтрагентРасширеннаяПодсказка" id="225"/>
 												</InputField>
 												<LabelField name="НомераКонтактноеЛицо" id="122">
 													<DataPath>Номера.КонтактноеЛицо</DataPath>
@@ -613,7 +679,7 @@
 													<CellHyperlink>true</CellHyperlink>
 													<Hiperlink>true</Hiperlink>
 													<ContextMenu name="НомераКонтактноеЛицоКонтекстноеМеню" id="123"/>
-													<ExtendedTooltip name="НомераКонтактноеЛицоРасширеннаяПодсказка" id="222"/>
+													<ExtendedTooltip name="НомераКонтактноеЛицоРасширеннаяПодсказка" id="226"/>
 												</LabelField>
 											</ChildItems>
 										</Table>
@@ -636,7 +702,11 @@
 							<v8:content>Группа звонки</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаЗвонкиРасширеннаяПодсказка" id="223"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Перевод16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаЗвонкиРасширеннаяПодсказка" id="227"/>
 					<ChildItems>
 						<Table name="Звонки" id="21">
 							<Representation>List</Representation>
@@ -660,41 +730,41 @@
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
 										<CommandName>Form.Command.Прослушать</CommandName>
-										<ExtendedTooltip name="ЗвонкиКонтекстноеМенюПрослушатьРасширеннаяПодсказка" id="224"/>
+										<ExtendedTooltip name="ЗвонкиКонтекстноеМенюПрослушатьРасширеннаяПодсказка" id="228"/>
 									</Button>
 									<Button name="ЗвонкиКонтекстноеМенюКонференция" id="116">
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
 										<CommandName>Form.Command.Конференция</CommandName>
-										<ExtendedTooltip name="ЗвонкиКонтекстноеМенюКонференцияРасширеннаяПодсказка" id="225"/>
+										<ExtendedTooltip name="ЗвонкиКонтекстноеМенюКонференцияРасширеннаяПодсказка" id="229"/>
 									</Button>
 								</ChildItems>
 							</ContextMenu>
 							<AutoCommandBar name="ЗвонкиКоманднаяПанель" id="23"/>
-							<ExtendedTooltip name="ЗвонкиРасширеннаяПодсказка" id="226"/>
-							<SearchStringAddition name="ЗвонкиСтрокаПоиска" id="227">
+							<ExtendedTooltip name="ЗвонкиРасширеннаяПодсказка" id="230"/>
+							<SearchStringAddition name="ЗвонкиСтрокаПоиска" id="231">
 								<AdditionSource>
 									<Item>Звонки</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗвонкиСтрокаПоискаКонтекстноеМеню" id="228"/>
-								<ExtendedTooltip name="ЗвонкиСтрокаПоискаРасширеннаяПодсказка" id="229"/>
+								<ContextMenu name="ЗвонкиСтрокаПоискаКонтекстноеМеню" id="232"/>
+								<ExtendedTooltip name="ЗвонкиСтрокаПоискаРасширеннаяПодсказка" id="233"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ЗвонкиСостояниеПросмотра" id="230">
+							<ViewStatusAddition name="ЗвонкиСостояниеПросмотра" id="234">
 								<AdditionSource>
 									<Item>Звонки</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗвонкиСостояниеПросмотраКонтекстноеМеню" id="231"/>
-								<ExtendedTooltip name="ЗвонкиСостояниеПросмотраРасширеннаяПодсказка" id="232"/>
+								<ContextMenu name="ЗвонкиСостояниеПросмотраКонтекстноеМеню" id="235"/>
+								<ExtendedTooltip name="ЗвонкиСостояниеПросмотраРасширеннаяПодсказка" id="236"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ЗвонкиУправлениеПоиском" id="233">
+							<SearchControlAddition name="ЗвонкиУправлениеПоиском" id="237">
 								<AdditionSource>
 									<Item>Звонки</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗвонкиУправлениеПоискомКонтекстноеМеню" id="234"/>
-								<ExtendedTooltip name="ЗвонкиУправлениеПоискомРасширеннаяПодсказка" id="235"/>
+								<ContextMenu name="ЗвонкиУправлениеПоискомКонтекстноеМеню" id="238"/>
+								<ExtendedTooltip name="ЗвонкиУправлениеПоискомРасширеннаяПодсказка" id="239"/>
 							</SearchControlAddition>
 							<ChildItems>
 								<InputField name="ЗвонкиОт" id="24">
@@ -702,55 +772,55 @@
 									<EditMode>EnterOnInput</EditMode>
 									<Width>14</Width>
 									<ContextMenu name="ЗвонкиОтКонтекстноеМеню" id="25"/>
-									<ExtendedTooltip name="ЗвонкиОтРасширеннаяПодсказка" id="236"/>
+									<ExtendedTooltip name="ЗвонкиОтРасширеннаяПодсказка" id="240"/>
 								</InputField>
 								<InputField name="ЗвонкиОтКонтрагент" id="131">
 									<DataPath>Звонки.ОтКонтрагент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>14</Width>
 									<ContextMenu name="ЗвонкиОтКонтрагентКонтекстноеМеню" id="132"/>
-									<ExtendedTooltip name="ЗвонкиОтКонтрагентРасширеннаяПодсказка" id="237"/>
+									<ExtendedTooltip name="ЗвонкиОтКонтрагентРасширеннаяПодсказка" id="241"/>
 								</InputField>
 								<InputField name="ЗвонкиОтКонтактноеЛицо" id="133">
 									<DataPath>Звонки.ОтКонтактноеЛицо</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>17</Width>
 									<ContextMenu name="ЗвонкиОтКонтактноеЛицоКонтекстноеМеню" id="134"/>
-									<ExtendedTooltip name="ЗвонкиОтКонтактноеЛицоРасширеннаяПодсказка" id="238"/>
+									<ExtendedTooltip name="ЗвонкиОтКонтактноеЛицоРасширеннаяПодсказка" id="242"/>
 								</InputField>
 								<InputField name="ЗвонкиКому" id="26">
 									<DataPath>Звонки.Кому</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>14</Width>
 									<ContextMenu name="ЗвонкиКомуКонтекстноеМеню" id="27"/>
-									<ExtendedTooltip name="ЗвонкиКомуРасширеннаяПодсказка" id="239"/>
+									<ExtendedTooltip name="ЗвонкиКомуРасширеннаяПодсказка" id="243"/>
 								</InputField>
 								<InputField name="ЗвонкиКомуКонтрагент" id="135">
 									<DataPath>Звонки.КомуКонтрагент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>14</Width>
 									<ContextMenu name="ЗвонкиКомуКонтрагентКонтекстноеМеню" id="136"/>
-									<ExtendedTooltip name="ЗвонкиКомуКонтрагентРасширеннаяПодсказка" id="240"/>
+									<ExtendedTooltip name="ЗвонкиКомуКонтрагентРасширеннаяПодсказка" id="244"/>
 								</InputField>
 								<InputField name="ЗвонкиКомуКонтактноеЛицо" id="137">
 									<DataPath>Звонки.КомуКонтактноеЛицо</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<Width>17</Width>
 									<ContextMenu name="ЗвонкиКомуКонтактноеЛицоКонтекстноеМеню" id="138"/>
-									<ExtendedTooltip name="ЗвонкиКомуКонтактноеЛицоРасширеннаяПодсказка" id="241"/>
+									<ExtendedTooltip name="ЗвонкиКомуКонтактноеЛицоРасширеннаяПодсказка" id="245"/>
 								</InputField>
 								<InputField name="ЗвонкиДлительность" id="28">
 									<DataPath>Звонки.Длительность</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ЗвонкиДлительностьКонтекстноеМеню" id="29"/>
-									<ExtendedTooltip name="ЗвонкиДлительностьРасширеннаяПодсказка" id="242"/>
+									<ExtendedTooltip name="ЗвонкиДлительностьРасширеннаяПодсказка" id="246"/>
 								</InputField>
 							</ChildItems>
 						</Table>
 						<InputField name="ВсегоЗвонков" id="125">
 							<DataPath>ВсегоЗвонков</DataPath>
 							<ContextMenu name="ВсегоЗвонковКонтекстноеМеню" id="126"/>
-							<ExtendedTooltip name="ВсегоЗвонковРасширеннаяПодсказка" id="243"/>
+							<ExtendedTooltip name="ВсегоЗвонковРасширеннаяПодсказка" id="247"/>
 						</InputField>
 					</ChildItems>
 				</Page>
@@ -767,7 +837,11 @@
 							<v8:content>Группа очереди</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаОчередиРасширеннаяПодсказка" id="244"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_НеБеспокоить16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаОчередиРасширеннаяПодсказка" id="248"/>
 					<ChildItems>
 						<Table name="Очереди" id="31">
 							<Representation>List</Representation>
@@ -788,30 +862,30 @@
 								<Autofill>false</Autofill>
 							</ContextMenu>
 							<AutoCommandBar name="ОчередиКоманднаяПанель" id="33"/>
-							<ExtendedTooltip name="ОчередиРасширеннаяПодсказка" id="245"/>
-							<SearchStringAddition name="ОчередиСтрокаПоиска" id="246">
+							<ExtendedTooltip name="ОчередиРасширеннаяПодсказка" id="249"/>
+							<SearchStringAddition name="ОчередиСтрокаПоиска" id="250">
 								<AdditionSource>
 									<Item>Очереди</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ОчередиСтрокаПоискаКонтекстноеМеню" id="247"/>
-								<ExtendedTooltip name="ОчередиСтрокаПоискаРасширеннаяПодсказка" id="248"/>
+								<ContextMenu name="ОчередиСтрокаПоискаКонтекстноеМеню" id="251"/>
+								<ExtendedTooltip name="ОчередиСтрокаПоискаРасширеннаяПодсказка" id="252"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ОчередиСостояниеПросмотра" id="249">
+							<ViewStatusAddition name="ОчередиСостояниеПросмотра" id="253">
 								<AdditionSource>
 									<Item>Очереди</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ОчередиСостояниеПросмотраКонтекстноеМеню" id="250"/>
-								<ExtendedTooltip name="ОчередиСостояниеПросмотраРасширеннаяПодсказка" id="251"/>
+								<ContextMenu name="ОчередиСостояниеПросмотраКонтекстноеМеню" id="254"/>
+								<ExtendedTooltip name="ОчередиСостояниеПросмотраРасширеннаяПодсказка" id="255"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ОчередиУправлениеПоиском" id="252">
+							<SearchControlAddition name="ОчередиУправлениеПоиском" id="256">
 								<AdditionSource>
 									<Item>Очереди</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ОчередиУправлениеПоискомКонтекстноеМеню" id="253"/>
-								<ExtendedTooltip name="ОчередиУправлениеПоискомРасширеннаяПодсказка" id="254"/>
+								<ContextMenu name="ОчередиУправлениеПоискомКонтекстноеМеню" id="257"/>
+								<ExtendedTooltip name="ОчередиУправлениеПоискомРасширеннаяПодсказка" id="258"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ОчередиВыбор</Event>
@@ -821,85 +895,85 @@
 									<DataPath>Очереди.ID</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиIDКонтекстноеМеню" id="35"/>
-									<ExtendedTooltip name="ОчередиIDРасширеннаяПодсказка" id="255"/>
+									<ExtendedTooltip name="ОчередиIDРасширеннаяПодсказка" id="259"/>
 								</InputField>
 								<InputField name="ОчередиНаименование" id="100">
 									<DataPath>Очереди.Наименование</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиНаименованиеКонтекстноеМеню" id="101"/>
-									<ExtendedTooltip name="ОчередиНаименованиеРасширеннаяПодсказка" id="256"/>
+									<ExtendedTooltip name="ОчередиНаименованиеРасширеннаяПодсказка" id="260"/>
 								</InputField>
 								<InputField name="ОчередиНомер" id="112">
 									<DataPath>Очереди.Номер</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиНомерКонтекстноеМеню" id="113"/>
-									<ExtendedTooltip name="ОчередиНомерРасширеннаяПодсказка" id="257"/>
+									<ExtendedTooltip name="ОчередиНомерРасширеннаяПодсказка" id="261"/>
 								</InputField>
 								<InputField name="ОчередиЧлены" id="54">
 									<DataPath>Очереди.Члены</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиЧленыКонтекстноеМеню" id="55"/>
-									<ExtendedTooltip name="ОчередиЧленыРасширеннаяПодсказка" id="258"/>
+									<ExtendedTooltip name="ОчередиЧленыРасширеннаяПодсказка" id="262"/>
 								</InputField>
 								<InputField name="ОчередиОжидающие" id="56">
 									<DataPath>Очереди.Ожидающие</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиОжидающиеКонтекстноеМеню" id="57"/>
-									<ExtendedTooltip name="ОчередиОжидающиеРасширеннаяПодсказка" id="259"/>
+									<ExtendedTooltip name="ОчередиОжидающиеРасширеннаяПодсказка" id="263"/>
 								</InputField>
 								<InputField name="ОчередиТекущиеЗвонки" id="36">
 									<DataPath>Очереди.ТекущиеЗвонки</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиТекущиеЗвонкиКонтекстноеМеню" id="37"/>
-									<ExtendedTooltip name="ОчередиТекущиеЗвонкиРасширеннаяПодсказка" id="260"/>
+									<ExtendedTooltip name="ОчередиТекущиеЗвонкиРасширеннаяПодсказка" id="264"/>
 								</InputField>
 								<InputField name="ОчередиСтратегия" id="38">
 									<DataPath>Очереди.Стратегия</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиСтратегияКонтекстноеМеню" id="39"/>
-									<ExtendedTooltip name="ОчередиСтратегияРасширеннаяПодсказка" id="261"/>
+									<ExtendedTooltip name="ОчередиСтратегияРасширеннаяПодсказка" id="265"/>
 								</InputField>
 								<InputField name="ОчередиВремяУдержания" id="40">
 									<DataPath>Очереди.ВремяУдержания</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиВремяУдержанияКонтекстноеМеню" id="41"/>
-									<ExtendedTooltip name="ОчередиВремяУдержанияРасширеннаяПодсказка" id="262"/>
+									<ExtendedTooltip name="ОчередиВремяУдержанияРасширеннаяПодсказка" id="266"/>
 								</InputField>
 								<InputField name="ОчередиВремяРазговора" id="42">
 									<DataPath>Очереди.ВремяРазговора</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиВремяРазговораКонтекстноеМеню" id="43"/>
-									<ExtendedTooltip name="ОчередиВремяРазговораРасширеннаяПодсказка" id="263"/>
+									<ExtendedTooltip name="ОчередиВремяРазговораРасширеннаяПодсказка" id="267"/>
 								</InputField>
 								<InputField name="ОчередиВес" id="44">
 									<DataPath>Очереди.Вес</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиВесКонтекстноеМеню" id="45"/>
-									<ExtendedTooltip name="ОчередиВесРасширеннаяПодсказка" id="264"/>
+									<ExtendedTooltip name="ОчередиВесРасширеннаяПодсказка" id="268"/>
 								</InputField>
 								<InputField name="ОчередиОтвечено" id="46">
 									<DataPath>Очереди.Отвечено</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиОтвеченоКонтекстноеМеню" id="47"/>
-									<ExtendedTooltip name="ОчередиОтвеченоРасширеннаяПодсказка" id="265"/>
+									<ExtendedTooltip name="ОчередиОтвеченоРасширеннаяПодсказка" id="269"/>
 								</InputField>
 								<InputField name="ОчередиНеотвечено" id="48">
 									<DataPath>Очереди.Неотвечено</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиНеотвеченоКонтекстноеМеню" id="49"/>
-									<ExtendedTooltip name="ОчередиНеотвеченоРасширеннаяПодсказка" id="266"/>
+									<ExtendedTooltip name="ОчередиНеотвеченоРасширеннаяПодсказка" id="270"/>
 								</InputField>
 								<InputField name="ОчередиУровеньОбслуживания" id="50">
 									<DataPath>Очереди.УровеньОбслуживания</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиУровеньОбслуживанияКонтекстноеМеню" id="51"/>
-									<ExtendedTooltip name="ОчередиУровеньОбслуживанияРасширеннаяПодсказка" id="267"/>
+									<ExtendedTooltip name="ОчередиУровеньОбслуживанияРасширеннаяПодсказка" id="271"/>
 								</InputField>
 								<InputField name="ОчередиПериодОбслуживания" id="52">
 									<DataPath>Очереди.ПериодОбслуживания</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОчередиПериодОбслуживанияКонтекстноеМеню" id="53"/>
-									<ExtendedTooltip name="ОчередиПериодОбслуживанияРасширеннаяПодсказка" id="268"/>
+									<ExtendedTooltip name="ОчередиПериодОбслуживанияРасширеннаяПодсказка" id="272"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -918,7 +992,11 @@
 							<v8:content>Группа очереди</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаОжидающиеРасширеннаяПодсказка" id="269"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Неконструктивные16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаОжидающиеРасширеннаяПодсказка" id="273"/>
 					<ChildItems>
 						<Table name="Ожидающие" id="91">
 							<Representation>List</Representation>
@@ -939,40 +1017,40 @@
 									<Button name="ОжидающиеКонтекстноеМенюПеревестиНаВыбранныйНомер" id="144">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ПеревестиНаВыбранныйНомер</CommandName>
-										<ExtendedTooltip name="ОжидающиеКонтекстноеМенюПеревестиНаВыбранныйНомерРасширеннаяПодсказка" id="270"/>
+										<ExtendedTooltip name="ОжидающиеКонтекстноеМенюПеревестиНаВыбранныйНомерРасширеннаяПодсказка" id="274"/>
 									</Button>
 									<Button name="ОжидающиеКонтекстноеМенюПеревестиНаСвойНомер" id="145">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ПеревестиНаСвойНомер</CommandName>
-										<ExtendedTooltip name="ОжидающиеКонтекстноеМенюПеревестиНаСвойНомерРасширеннаяПодсказка" id="271"/>
+										<ExtendedTooltip name="ОжидающиеКонтекстноеМенюПеревестиНаСвойНомерРасширеннаяПодсказка" id="275"/>
 									</Button>
 								</ChildItems>
 							</ContextMenu>
 							<AutoCommandBar name="ОжидающиеКоманднаяПанель" id="93"/>
-							<ExtendedTooltip name="ОжидающиеРасширеннаяПодсказка" id="272"/>
-							<SearchStringAddition name="ОжидающиеСтрокаПоиска" id="273">
+							<ExtendedTooltip name="ОжидающиеРасширеннаяПодсказка" id="276"/>
+							<SearchStringAddition name="ОжидающиеСтрокаПоиска" id="277">
 								<AdditionSource>
 									<Item>Ожидающие</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ОжидающиеСтрокаПоискаКонтекстноеМеню" id="274"/>
-								<ExtendedTooltip name="ОжидающиеСтрокаПоискаРасширеннаяПодсказка" id="275"/>
+								<ContextMenu name="ОжидающиеСтрокаПоискаКонтекстноеМеню" id="278"/>
+								<ExtendedTooltip name="ОжидающиеСтрокаПоискаРасширеннаяПодсказка" id="279"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ОжидающиеСостояниеПросмотра" id="276">
+							<ViewStatusAddition name="ОжидающиеСостояниеПросмотра" id="280">
 								<AdditionSource>
 									<Item>Ожидающие</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ОжидающиеСостояниеПросмотраКонтекстноеМеню" id="277"/>
-								<ExtendedTooltip name="ОжидающиеСостояниеПросмотраРасширеннаяПодсказка" id="278"/>
+								<ContextMenu name="ОжидающиеСостояниеПросмотраКонтекстноеМеню" id="281"/>
+								<ExtendedTooltip name="ОжидающиеСостояниеПросмотраРасширеннаяПодсказка" id="282"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ОжидающиеУправлениеПоиском" id="279">
+							<SearchControlAddition name="ОжидающиеУправлениеПоиском" id="283">
 								<AdditionSource>
 									<Item>Ожидающие</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ОжидающиеУправлениеПоискомКонтекстноеМеню" id="280"/>
-								<ExtendedTooltip name="ОжидающиеУправлениеПоискомРасширеннаяПодсказка" id="281"/>
+								<ContextMenu name="ОжидающиеУправлениеПоискомКонтекстноеМеню" id="284"/>
+								<ExtendedTooltip name="ОжидающиеУправлениеПоискомРасширеннаяПодсказка" id="285"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ОжидающиеВыбор</Event>
@@ -982,54 +1060,58 @@
 									<DataPath>Ожидающие.Очередь</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОжидающиеОчередьКонтекстноеМеню" id="95"/>
-									<ExtendedTooltip name="ОжидающиеОчередьРасширеннаяПодсказка" id="282"/>
+									<ExtendedTooltip name="ОжидающиеОчередьРасширеннаяПодсказка" id="286"/>
 								</InputField>
 								<InputField name="ОжидающиеНомер" id="96">
 									<DataPath>Ожидающие.Номер</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОжидающиеНомерКонтекстноеМеню" id="97"/>
-									<ExtendedTooltip name="ОжидающиеНомерРасширеннаяПодсказка" id="283"/>
+									<ExtendedTooltip name="ОжидающиеНомерРасширеннаяПодсказка" id="287"/>
 								</InputField>
 								<InputField name="ОжидающиеКонтрагент" id="127">
 									<DataPath>Ожидающие.Контрагент</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<CellHyperlink>true</CellHyperlink>
 									<ContextMenu name="ОжидающиеКонтрагентКонтекстноеМеню" id="128"/>
-									<ExtendedTooltip name="ОжидающиеКонтрагентРасширеннаяПодсказка" id="284"/>
+									<ExtendedTooltip name="ОжидающиеКонтрагентРасширеннаяПодсказка" id="288"/>
 								</InputField>
 								<InputField name="ОжидающиеКонтактноеЛицо" id="129">
 									<DataPath>Ожидающие.КонтактноеЛицо</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<CellHyperlink>true</CellHyperlink>
 									<ContextMenu name="ОжидающиеКонтактноеЛицоКонтекстноеМеню" id="130"/>
-									<ExtendedTooltip name="ОжидающиеКонтактноеЛицоРасширеннаяПодсказка" id="285"/>
+									<ExtendedTooltip name="ОжидающиеКонтактноеЛицоРасширеннаяПодсказка" id="289"/>
 								</InputField>
 								<InputField name="ОжидающиеВремяОжидания" id="98">
 									<DataPath>Ожидающие.ВремяОжидания</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ОжидающиеВремяОжиданияКонтекстноеМеню" id="99"/>
-									<ExtendedTooltip name="ОжидающиеВремяОжиданияРасширеннаяПодсказка" id="286"/>
+									<ExtendedTooltip name="ОжидающиеВремяОжиданияРасширеннаяПодсказка" id="290"/>
 								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаКрасныеГруппы" id="146">
+				<Page name="ГруппаКлиентскиеГруппы" id="146">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Красные группы</v8:content>
+							<v8:content>Клиентские группы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа красные группы</v8:content>
+							<v8:content>Группа клиентские группы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаКрасныеГруппыРасширеннаяПодсказка" id="287"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_Настройки16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаКлиентскиеГруппыРасширеннаяПодсказка" id="291"/>
 					<ChildItems>
-						<Table name="КрасныеГруппы" id="147">
+						<Table name="КлиентскиеГруппы" id="147">
 							<Representation>List</Representation>
 							<CommandBarLocation>None</CommandBarLocation>
 							<ReadOnly>true</ReadOnly>
@@ -1037,83 +1119,85 @@
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
 							<FileDragMode>AsFile</FileDragMode>
-							<DataPath>КрасныеГруппы</DataPath>
+							<DataPath>КлиентскиеГруппы</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="КрасныеГруппыКонтекстноеМеню" id="148"/>
-							<AutoCommandBar name="КрасныеГруппыКоманднаяПанель" id="149"/>
-							<ExtendedTooltip name="КрасныеГруппыРасширеннаяПодсказка" id="288"/>
-							<SearchStringAddition name="КрасныеГруппыСтрокаПоиска" id="289">
+							<ContextMenu name="КлиентскиеГруппыКонтекстноеМеню" id="148">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="КлиентскиеГруппыКоманднаяПанель" id="149"/>
+							<ExtendedTooltip name="КлиентскиеГруппыРасширеннаяПодсказка" id="292"/>
+							<SearchStringAddition name="КлиентскиеГруппыСтрокаПоиска" id="293">
 								<AdditionSource>
-									<Item>КрасныеГруппы</Item>
+									<Item>КлиентскиеГруппы</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="КрасныеГруппыСтрокаПоискаКонтекстноеМеню" id="290"/>
-								<ExtendedTooltip name="КрасныеГруппыСтрокаПоискаРасширеннаяПодсказка" id="291"/>
+								<ContextMenu name="КлиентскиеГруппыСтрокаПоискаКонтекстноеМеню" id="294"/>
+								<ExtendedTooltip name="КлиентскиеГруппыСтрокаПоискаРасширеннаяПодсказка" id="295"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="КрасныеГруппыСостояниеПросмотра" id="292">
+							<ViewStatusAddition name="КлиентскиеГруппыСостояниеПросмотра" id="296">
 								<AdditionSource>
-									<Item>КрасныеГруппы</Item>
+									<Item>КлиентскиеГруппы</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="КрасныеГруппыСостояниеПросмотраКонтекстноеМеню" id="293"/>
-								<ExtendedTooltip name="КрасныеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="294"/>
+								<ContextMenu name="КлиентскиеГруппыСостояниеПросмотраКонтекстноеМеню" id="297"/>
+								<ExtendedTooltip name="КлиентскиеГруппыСостояниеПросмотраРасширеннаяПодсказка" id="298"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="КрасныеГруппыУправлениеПоиском" id="295">
+							<SearchControlAddition name="КлиентскиеГруппыУправлениеПоиском" id="299">
 								<AdditionSource>
-									<Item>КрасныеГруппы</Item>
+									<Item>КлиентскиеГруппы</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="КрасныеГруппыУправлениеПоискомКонтекстноеМеню" id="296"/>
-								<ExtendedTooltip name="КрасныеГруппыУправлениеПоискомРасширеннаяПодсказка" id="297"/>
+								<ContextMenu name="КлиентскиеГруппыУправлениеПоискомКонтекстноеМеню" id="300"/>
+								<ExtendedTooltip name="КлиентскиеГруппыУправлениеПоискомРасширеннаяПодсказка" id="301"/>
 							</SearchControlAddition>
 							<Events>
-								<Event name="Selection">КрасныеГруппыВыбор</Event>
+								<Event name="Selection">КлиентскиеГруппыВыбор</Event>
 							</Events>
 							<ChildItems>
-								<InputField name="КрасныеГруппыНомер" id="150">
-									<DataPath>КрасныеГруппы.Номер</DataPath>
+								<InputField name="КлиентскиеГруппыНомер" id="150">
+									<DataPath>КлиентскиеГруппы.Номер</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыНомерКонтекстноеМеню" id="151"/>
-									<ExtendedTooltip name="КрасныеГруппыНомерРасширеннаяПодсказка" id="298"/>
+									<ContextMenu name="КлиентскиеГруппыНомерКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="КлиентскиеГруппыНомерРасширеннаяПодсказка" id="302"/>
 								</InputField>
-								<InputField name="КрасныеГруппыНаименование" id="152">
-									<DataPath>КрасныеГруппы.Наименование</DataPath>
+								<InputField name="КлиентскиеГруппыНаименование" id="152">
+									<DataPath>КлиентскиеГруппы.Наименование</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыНаименованиеКонтекстноеМеню" id="153"/>
-									<ExtendedTooltip name="КрасныеГруппыНаименованиеРасширеннаяПодсказка" id="299"/>
+									<ContextMenu name="КлиентскиеГруппыНаименованиеКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="КлиентскиеГруппыНаименованиеРасширеннаяПодсказка" id="303"/>
 								</InputField>
-								<InputField name="КрасныеГруппыСвободно" id="154">
-									<DataPath>КрасныеГруппы.Свободно</DataPath>
+								<InputField name="КлиентскиеГруппыСвободно" id="154">
+									<DataPath>КлиентскиеГруппы.Свободно</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыСвободноКонтекстноеМеню" id="155"/>
-									<ExtendedTooltip name="КрасныеГруппыСвободноРасширеннаяПодсказка" id="300"/>
+									<ContextMenu name="КлиентскиеГруппыСвободноКонтекстноеМеню" id="155"/>
+									<ExtendedTooltip name="КлиентскиеГруппыСвободноРасширеннаяПодсказка" id="304"/>
 								</InputField>
-								<InputField name="КрасныеГруппыЗанято" id="156">
-									<DataPath>КрасныеГруппы.Занято</DataPath>
+								<InputField name="КлиентскиеГруппыЗанято" id="156">
+									<DataPath>КлиентскиеГруппы.Занято</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыЗанятоКонтекстноеМеню" id="157"/>
-									<ExtendedTooltip name="КрасныеГруппыЗанятоРасширеннаяПодсказка" id="301"/>
+									<ContextMenu name="КлиентскиеГруппыЗанятоКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="КлиентскиеГруппыЗанятоРасширеннаяПодсказка" id="305"/>
 								</InputField>
-								<InputField name="КрасныеГруппыОжидающие" id="162">
-									<DataPath>КрасныеГруппы.Ожидающие</DataPath>
+								<InputField name="КлиентскиеГруппыОжидающие" id="162">
+									<DataPath>КлиентскиеГруппы.Ожидающие</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыОжидающиеКонтекстноеМеню" id="163"/>
-									<ExtendedTooltip name="КрасныеГруппыОжидающиеРасширеннаяПодсказка" id="302"/>
+									<ContextMenu name="КлиентскиеГруппыОжидающиеКонтекстноеМеню" id="163"/>
+									<ExtendedTooltip name="КлиентскиеГруппыОжидающиеРасширеннаяПодсказка" id="306"/>
 								</InputField>
-								<InputField name="КрасныеГруппыНеВСети" id="158">
-									<DataPath>КрасныеГруппы.НеВСети</DataPath>
+								<InputField name="КлиентскиеГруппыНеВСети" id="158">
+									<DataPath>КлиентскиеГруппы.НеВСети</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыНеВСетиКонтекстноеМеню" id="159"/>
-									<ExtendedTooltip name="КрасныеГруппыНеВСетиРасширеннаяПодсказка" id="303"/>
+									<ContextMenu name="КлиентскиеГруппыНеВСетиКонтекстноеМеню" id="159"/>
+									<ExtendedTooltip name="КлиентскиеГруппыНеВСетиРасширеннаяПодсказка" id="307"/>
 								</InputField>
-								<InputField name="КрасныеГруппыВсего" id="160">
-									<DataPath>КрасныеГруппы.Всего</DataPath>
+								<InputField name="КлиентскиеГруппыВсего" id="160">
+									<DataPath>КлиентскиеГруппы.Всего</DataPath>
 									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КрасныеГруппыВсегоКонтекстноеМеню" id="161"/>
-									<ExtendedTooltip name="КрасныеГруппыВсегоРасширеннаяПодсказка" id="304"/>
+									<ContextMenu name="КлиентскиеГруппыВсегоКонтекстноеМеню" id="161"/>
+									<ExtendedTooltip name="КлиентскиеГруппыВсегоРасширеннаяПодсказка" id="308"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -1132,7 +1216,11 @@
 							<v8:content>Группа транки</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="ГруппаТранкиРасширеннаяПодсказка" id="305"/>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_ВременныйСТОП16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаТранкиРасширеннаяПодсказка" id="309"/>
 					<ChildItems>
 						<Table name="ЗагрузкаТранков" id="62">
 							<Representation>List</Representation>
@@ -1153,30 +1241,30 @@
 								<Autofill>false</Autofill>
 							</ContextMenu>
 							<AutoCommandBar name="ЗагрузкаТранковКоманднаяПанель" id="64"/>
-							<ExtendedTooltip name="ЗагрузкаТранковРасширеннаяПодсказка" id="306"/>
-							<SearchStringAddition name="ЗагрузкаТранковСтрокаПоиска" id="307">
+							<ExtendedTooltip name="ЗагрузкаТранковРасширеннаяПодсказка" id="310"/>
+							<SearchStringAddition name="ЗагрузкаТранковСтрокаПоиска" id="311">
 								<AdditionSource>
 									<Item>ЗагрузкаТранков</Item>
 									<Type>SearchStringRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗагрузкаТранковСтрокаПоискаКонтекстноеМеню" id="308"/>
-								<ExtendedTooltip name="ЗагрузкаТранковСтрокаПоискаРасширеннаяПодсказка" id="309"/>
+								<ContextMenu name="ЗагрузкаТранковСтрокаПоискаКонтекстноеМеню" id="312"/>
+								<ExtendedTooltip name="ЗагрузкаТранковСтрокаПоискаРасширеннаяПодсказка" id="313"/>
 							</SearchStringAddition>
-							<ViewStatusAddition name="ЗагрузкаТранковСостояниеПросмотра" id="310">
+							<ViewStatusAddition name="ЗагрузкаТранковСостояниеПросмотра" id="314">
 								<AdditionSource>
 									<Item>ЗагрузкаТранков</Item>
 									<Type>ViewStatusRepresentation</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗагрузкаТранковСостояниеПросмотраКонтекстноеМеню" id="311"/>
-								<ExtendedTooltip name="ЗагрузкаТранковСостояниеПросмотраРасширеннаяПодсказка" id="312"/>
+								<ContextMenu name="ЗагрузкаТранковСостояниеПросмотраКонтекстноеМеню" id="315"/>
+								<ExtendedTooltip name="ЗагрузкаТранковСостояниеПросмотраРасширеннаяПодсказка" id="316"/>
 							</ViewStatusAddition>
-							<SearchControlAddition name="ЗагрузкаТранковУправлениеПоиском" id="313">
+							<SearchControlAddition name="ЗагрузкаТранковУправлениеПоиском" id="317">
 								<AdditionSource>
 									<Item>ЗагрузкаТранков</Item>
 									<Type>SearchControl</Type>
 								</AdditionSource>
-								<ContextMenu name="ЗагрузкаТранковУправлениеПоискомКонтекстноеМеню" id="314"/>
-								<ExtendedTooltip name="ЗагрузкаТранковУправлениеПоискомРасширеннаяПодсказка" id="315"/>
+								<ContextMenu name="ЗагрузкаТранковУправлениеПоискомКонтекстноеМеню" id="318"/>
+								<ExtendedTooltip name="ЗагрузкаТранковУправлениеПоискомРасширеннаяПодсказка" id="319"/>
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ЗагрузкаТранковВыбор</Event>
@@ -1186,13 +1274,13 @@
 									<DataPath>ЗагрузкаТранков.Наименование</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ЗагрузкаТранковНаименованиеКонтекстноеМеню" id="66"/>
-									<ExtendedTooltip name="ЗагрузкаТранковНаименованиеРасширеннаяПодсказка" id="316"/>
+									<ExtendedTooltip name="ЗагрузкаТранковНаименованиеРасширеннаяПодсказка" id="320"/>
 								</InputField>
 								<InputField name="ЗагрузкаТранковКоличествоЗвонков" id="67">
 									<DataPath>ЗагрузкаТранков.КоличествоЗвонков</DataPath>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ЗагрузкаТранковКоличествоЗвонковКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="ЗагрузкаТранковКоличествоЗвонковРасширеннаяПодсказка" id="317"/>
+									<ExtendedTooltip name="ЗагрузкаТранковКоличествоЗвонковРасширеннаяПодсказка" id="321"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -2107,6 +2195,26 @@
 						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
 					</dcsset:order>
 					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection>
+								<dcsset:item>
+									<dcsset:field>Наименование</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">ПометкаУдаления</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>Видимость</dcscor:parameter>
+									<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>
 						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
 					</dcsset:conditionalAppearance>
@@ -2142,11 +2250,11 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="КрасныеГруппы" id="17">
+		<Attribute name="КлиентскиеГруппы" id="17">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Красные группы</v8:content>
+					<v8:content>Клиентские группы</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2274,6 +2382,33 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ВебСервисИдКлиента" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб сервис ид клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьВебСервис" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать веб сервис</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -2452,36 +2587,6 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>ТекущаяАТС</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">Подключен</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>ЦветТекста</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#00FF00</dcscor:value>
-					</dcscor:item>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:use>false</dcscor:use>
-						<dcscor:parameter>Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -2489,7 +2594,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Подключить АТС</v8:content>
+					<v8:content>Подключиться к АТС</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2499,13 +2604,12 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПодключитьАТС</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтключитьАТС" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Отключить АТС</v8:content>
+					<v8:content>Отключиться от АТС</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -2515,7 +2619,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтключитьАТС</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПозвонитьСоСвязанногоТелефона" id="3">
 			<Title>
@@ -2531,7 +2634,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПозвонитьСоСвязанногоТелефона</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Позвонить" id="4">
 			<Title>
@@ -2547,7 +2649,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Позвонить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Прослушать" id="5">
 			<Title>
@@ -2563,7 +2664,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Прослушать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Подсказать" id="6">
 			<Title>
@@ -2579,7 +2679,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Подсказать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Конференция" id="7">
 			<Title>
@@ -2595,7 +2694,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Конференция</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Настройки" id="8">
 			<Title>
@@ -2611,7 +2709,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Настройки</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НомераИнформация" id="9">
 			<Title>
@@ -2631,7 +2728,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НомераИнформация</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьСвойстваКанала" id="10">
 			<Title>
@@ -2647,7 +2743,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСвойстваКанала</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПеревестиНаВыбранныйНомер" id="11">
 			<Title>
@@ -2663,7 +2758,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеревестиНаВыбранныйНомер</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПеревестиНаСвойНомер" id="12">
 			<Title>
@@ -2679,7 +2773,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеревестиНаСвойНомер</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПолучитьСвойстваНомера" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить свойства номера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить свойства номера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСвойстваНомера</Action>
+		</Command>
+		<Command name="ЗавершитьРазговор" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить разговор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершение разговора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьРазговор</Action>
 		</Command>
 	</Commands>
 </Form>

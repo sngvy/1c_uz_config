@@ -114,7 +114,6 @@
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="ExternalEvent">ВнешнееСобытие</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
@@ -1004,7 +1003,7 @@
 							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<CommandName>Form.Command.ПоискНомераВБазе</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.ТелефонныйЗвонок</xr:Ref>
+								<xr:Ref>StdPicture.ShowData</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<Title>
@@ -1205,47 +1204,153 @@
 			<ContextMenu name="Декорация1КонтекстноеМеню" id="57"/>
 			<ExtendedTooltip name="Декорация1ExtendedTooltip" id="167"/>
 		</LabelDecoration>
-		<UsualGroup name="ГруппаПланирование" id="50">
+		<UsualGroup name="ГруппаПланированиеИВыполнение" id="472">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Планирование</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Planlaşdırma</v8:content>
+					<v8:content>Плланирование и выполнение</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа планирование</v8:content>
+					<v8:content>Группа планирование и выполнение</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Vertical</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаПланированиеExtendedTooltip" id="168"/>
+			<ExtendedTooltip name="ГруппаПланированиеИВыполнениеРасширеннаяПодсказка" id="473"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаПланируемаяДата" id="67">
+				<UsualGroup name="ГруппаВремяРаботы" id="345">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа планируемая дата</v8:content>
+							<v8:content>Время работы</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа планируемая дата</v8:content>
+							<v8:content>Группа время работы</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Group>Horizontal</Group>
+					<Width>23</Width>
+					<Group>Vertical</Group>
 					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПланируемаяДатаExtendedTooltip" id="169"/>
+					<ExtendedTooltip name="ГруппаВремяРаботыРасширеннаяПодсказка" id="346"/>
 					<ChildItems>
+						<InputField name="ВремяСоздания" id="347">
+							<DataPath>Объект.ВремяСоздания</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ВремяСозданияКонтекстноеМеню" id="348"/>
+							<ExtendedTooltip name="ВремяСозданияРасширеннаяПодсказка" id="349"/>
+						</InputField>
+						<InputField name="ДлительностьРазговора" id="457">
+							<DataPath>Объект.ДлительностьРазговора</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ДлительностьРазговораКонтекстноеМеню" id="458"/>
+							<ExtendedTooltip name="ДлительностьРазговораРасширеннаяПодсказка" id="459"/>
+						</InputField>
+						<InputField name="ВремяРаботы" id="350">
+							<DataPath>Объект.ВремяРаботы</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Время работы (сек.)</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВремяРаботыКонтекстноеМеню" id="351"/>
+							<ExtendedTooltip name="ВремяРаботыРасширеннаяПодсказка" id="352"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПланирование" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Планирование</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Planlaşdırma</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа планирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="ГруппаПланированиеExtendedTooltip" id="168"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПривязка" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа привязка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа привязка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПривязкаExtendedTooltip" id="173"/>
+							<ChildItems>
+								<CheckBoxField name="ПривязкаПоВремени" id="25">
+									<DataPath>Объект.ПривязкаПоВремени</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ПривязкаПоВремениКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ПривязкаПоВремениExtendedTooltip" id="174"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНапоминание" id="52">
+							<Visible>false</Visible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа напоминание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа напоминание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНапоминаниеExtendedTooltip" id="175"/>
+							<ChildItems>
+								<CheckBoxField name="Оповещение" id="37">
+									<DataPath>Объект.Оповещение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ОповещениеКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ОповещениеExtendedTooltip" id="176"/>
+								</CheckBoxField>
+								<InputField name="СрокОповещения" id="39">
+									<DataPath>Объект.СрокОповещения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СрокОповещенияКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="СрокОповещенияExtendedTooltip" id="177"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="ПланируемаяДата" id="21">
 							<DataPath>Объект.ПланируемаяДата</DataPath>
 							<Title>
@@ -1290,108 +1395,74 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаПривязка" id="51">
+				<UsualGroup name="ГруппаФактическаяДата" id="70">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа привязка</v8:content>
+							<v8:content>Выполнение</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа привязка</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПривязкаExtendedTooltip" id="173"/>
-					<ChildItems>
-						<CheckBoxField name="ПривязкаПоВремени" id="25">
-							<DataPath>Объект.ПривязкаПоВремени</DataPath>
-							<Visible>false</Visible>
-							<EditMode>EnterOnInput</EditMode>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ПривязкаПоВремениКонтекстноеМеню" id="26"/>
-							<ExtendedTooltip name="ПривязкаПоВремениExtendedTooltip" id="174"/>
-						</CheckBoxField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаНапоминание" id="52">
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа напоминание</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа напоминание</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаНапоминаниеExtendedTooltip" id="175"/>
-					<ChildItems>
-						<CheckBoxField name="Оповещение" id="37">
-							<DataPath>Объект.Оповещение</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ОповещениеКонтекстноеМеню" id="38"/>
-							<ExtendedTooltip name="ОповещениеExtendedTooltip" id="176"/>
-						</CheckBoxField>
-						<InputField name="СрокОповещения" id="39">
-							<DataPath>Объект.СрокОповещения</DataPath>
-							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="СрокОповещенияКонтекстноеМеню" id="40"/>
-							<ExtendedTooltip name="СрокОповещенияExtendedTooltip" id="177"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаВремяРаботы" id="345">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Время работы</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа время работы</v8:content>
+							<v8:content>Группа фактическая дата</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
 					<Behavior>Usual</Behavior>
-					<ExtendedTooltip name="ГруппаВремяРаботыРасширеннаяПодсказка" id="346"/>
+					<ExtendedTooltip name="ГруппаФактическаяДатаExtendedTooltip" id="181"/>
 					<ChildItems>
-						<LabelField name="ВремяСоздания" id="347">
-							<DataPath>Объект.ВремяСоздания</DataPath>
-							<ContextMenu name="ВремяСозданияКонтекстноеМеню" id="348"/>
-							<ExtendedTooltip name="ВремяСозданияРасширеннаяПодсказка" id="349"/>
-						</LabelField>
-						<LabelField name="ДлительностьРазговора" id="457">
-							<DataPath>Объект.ДлительностьРазговора</DataPath>
-							<ContextMenu name="ДлительностьРазговораКонтекстноеМеню" id="458"/>
-							<ExtendedTooltip name="ДлительностьРазговораРасширеннаяПодсказка" id="459"/>
-						</LabelField>
-						<LabelField name="ВремяРаботы" id="350">
-							<DataPath>Объект.ВремяРаботы</DataPath>
+						<InputField name="ФактическаяДата" id="29">
+							<DataPath>Объект.ФактическаяДата</DataPath>
+							<UserVisible>
+								<xr:Common>true</xr:Common>
+								<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+								<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+								<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+								<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+								<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+								<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+								<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+								<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+								<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+								<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+								<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+								<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+								<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+							</UserVisible>
+							<ReadOnly>true</ReadOnly>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Время работы (сек.)</v8:content>
+									<v8:content>Фактическая дата</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>Faktiki tarix</v8:content>
 								</v8:item>
 							</Title>
-							<ContextMenu name="ВремяРаботыКонтекстноеМеню" id="351"/>
-							<ExtendedTooltip name="ВремяРаботыРасширеннаяПодсказка" id="352"/>
-						</LabelField>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ФактическаяДатаКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="ФактическаяДатаExtendedTooltip" id="182"/>
+							<Events>
+								<Event name="OnChange">ФактическаяДатаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<PictureDecoration name="ДекорацияВыполнено" id="71">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>YERİNƏ YETİRİLMİŞDİR!</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_МероприятиеВыполнено</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияВыполненоКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ДекорацияВыполненоExtendedTooltip" id="183"/>
+						</PictureDecoration>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -1668,17 +1739,17 @@
 			<ContextMenu name="Декорация2КонтекстноеМеню" id="59"/>
 			<ExtendedTooltip name="Декорация2ExtendedTooltip" id="179"/>
 		</LabelDecoration>
-		<UsualGroup name="ГруппаВыполнение" id="53">
+		<UsualGroup name="ГруппаРезультаты" id="53">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнение</v8:content>
+					<v8:content>Результаты мероприятия</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа выполнение</v8:content>
+					<v8:content>Группа результаты</v8:content>
 				</v8:item>
 			</ToolTip>
 			<HorizontalStretch>true</HorizontalStretch>
@@ -1693,80 +1764,8 @@
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<Representation>StrongSeparation</Representation>
 			<ShowLeftMargin>false</ShowLeftMargin>
-			<ExtendedTooltip name="ГруппаВыполнениеExtendedTooltip" id="180"/>
+			<ExtendedTooltip name="ГруппаРезультатыРасширеннаяПодсказка" id="180"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаФактическаяДата" id="70">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа фактическая дата</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа фактическая дата</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаФактическаяДатаExtendedTooltip" id="181"/>
-					<ChildItems>
-						<InputField name="ФактическаяДата" id="29">
-							<DataPath>Объект.ФактическаяДата</DataPath>
-							<UserVisible>
-								<xr:Common>true</xr:Common>
-								<xr:Value name="Role.ПолныеПрава">false</xr:Value>
-								<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
-								<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
-								<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
-								<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
-								<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
-								<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
-								<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
-								<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
-								<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
-								<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
-								<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
-								<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
-							</UserVisible>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Фактическая дата</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>az</v8:lang>
-									<v8:content>Faktiki tarix</v8:content>
-								</v8:item>
-							</Title>
-							<EditMode>EnterOnInput</EditMode>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<ContextMenu name="ФактическаяДатаКонтекстноеМеню" id="30"/>
-							<ExtendedTooltip name="ФактическаяДатаExtendedTooltip" id="182"/>
-							<Events>
-								<Event name="OnChange">ФактическаяДатаПриИзменении</Event>
-							</Events>
-						</InputField>
-						<PictureDecoration name="ДекорацияВыполнено" id="71">
-							<HorizontalStretch>true</HorizontalStretch>
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>az</v8:lang>
-									<v8:content>YERİNƏ YETİRİLMİŞDİR!</v8:content>
-								</v8:item>
-							</Title>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_МероприятиеВыполнено</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ContextMenu name="ДекорацияВыполненоКонтекстноеМеню" id="72"/>
-							<ExtendedTooltip name="ДекорацияВыполненоExtendedTooltip" id="183"/>
-						</PictureDecoration>
-					</ChildItems>
-				</UsualGroup>
 				<UsualGroup name="ГруппаДатаСледующего" id="200">
 					<Visible>false</Visible>
 					<Title>
@@ -2267,6 +2266,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаДополнительныеРеквизитыОбъекта" id="237">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2459,94 +2459,113 @@
 			<ContextMenu name="СледующееМероприятиеКонтекстноеМеню" id="44"/>
 			<ExtendedTooltip name="СледующееМероприятиеExtendedTooltip" id="191"/>
 		</InputField>
-		<InputField name="ДатаВыполнения" id="99">
-			<DataPath>Объект.ДатаВыполнения</DataPath>
-			<UserVisible>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
-				<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
-				<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
-				<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
-				<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
-				<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
-				<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
-				<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
-				<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
-				<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
-			</UserVisible>
-			<ReadOnly>true</ReadOnly>
+		<UsualGroup name="ГруппаТехническаяИнформация" id="474">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Дата выполнения</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Yerinə yetirilmə tarixi</v8:content>
+					<v8:content>Техническая информация</v8:content>
 				</v8:item>
 			</Title>
-			<ContextMenu name="ДатаВыполненияКонтекстноеМеню" id="100"/>
-			<ExtendedTooltip name="ДатаВыполненияExtendedTooltip" id="192"/>
-		</InputField>
-		<CheckBoxField name="Выполнена" id="97">
-			<DataPath>Объект.Executed</DataPath>
-			<UserVisible>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
-				<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
-				<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
-				<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
-				<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
-				<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
-				<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
-				<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
-				<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
-				<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
-			</UserVisible>
-			<ReadOnly>true</ReadOnly>
-			<Title>
+			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнена</v8:content>
+					<v8:content>Группа техническая информация</v8:content>
 				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Yerinə yetirilmişdir</v8:content>
-				</v8:item>
-			</Title>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ВыполненаКонтекстноеМеню" id="98"/>
-			<ExtendedTooltip name="ВыполненаExtendedTooltip" id="193"/>
-		</CheckBoxField>
-		<CheckBoxField name="ВыполненоКакНеАктуальное" id="134">
-			<DataPath>Объект.ВыполненоКакНеАктуальное</DataPath>
-			<UserVisible>
-				<xr:Common>true</xr:Common>
-				<xr:Value name="Role.ПолныеПрава">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
-				<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
-				<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
-				<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
-				<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
-				<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
-				<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
-				<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
-				<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
-				<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
-				<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
-			</UserVisible>
-			<ReadOnly>true</ReadOnly>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ВыполненоКакНеАктуальноеКонтекстноеМеню" id="135"/>
-			<ExtendedTooltip name="ВыполненоКакНеАктуальноеExtendedTooltip" id="194"/>
-		</CheckBoxField>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаТехническаяИнформацияРасширеннаяПодсказка" id="475"/>
+			<ChildItems>
+				<InputField name="ДатаВыполнения" id="99">
+					<DataPath>Объект.ДатаВыполнения</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+						<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+						<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+						<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+						<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+						<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+						<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+						<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+						<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+						<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выполнения</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Yerinə yetirilmə tarixi</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаВыполненияКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="ДатаВыполненияExtendedTooltip" id="192"/>
+				</InputField>
+				<CheckBoxField name="Выполнена" id="97">
+					<DataPath>Объект.Executed</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+						<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+						<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+						<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+						<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+						<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+						<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+						<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+						<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+						<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнена</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Yerinə yetirilmişdir</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполненаКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="ВыполненаExtendedTooltip" id="193"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыполненоКакНеАктуальное" id="134">
+					<DataPath>Объект.ВыполненоКакНеАктуальное</DataPath>
+					<UserVisible>
+						<xr:Common>true</xr:Common>
+						<xr:Value name="Role.ПолныеПрава">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоОрганизации">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоПодразделению">false</xr:Value>
+						<xr:Value name="Role.ДоступКДаннымПоПользователю">false</xr:Value>
+						<xr:Value name="Role.ОператорПоОрганизации">false</xr:Value>
+						<xr:Value name="Role.ОператорПоПодразделению">false</xr:Value>
+						<xr:Value name="Role.ЗагрузкаДанных">false</xr:Value>
+						<xr:Value name="Role.РуководительПодразделения">false</xr:Value>
+						<xr:Value name="Role.ОтветственныйПоДелу">false</xr:Value>
+						<xr:Value name="Role.СотрудникВРегионе">false</xr:Value>
+						<xr:Value name="Role.СложнаяНастройка">false</xr:Value>
+						<xr:Value name="Role.бит_сл_Администратор">false</xr:Value>
+						<xr:Value name="Role.бит_сл_Пользователь">false</xr:Value>
+					</UserVisible>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполненоКакНеАктуальноеКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="ВыполненоКакНеАктуальноеExtendedTooltip" id="194"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

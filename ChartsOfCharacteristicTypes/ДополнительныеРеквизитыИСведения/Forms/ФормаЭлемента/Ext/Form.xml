@@ -43,6 +43,74 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВертикальнаяExtendedTooltip" id="88"/>
 			<ChildItems>
+				<UsualGroup name="ГруппаВыборПредопределенного" id="148">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор предопределенного</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выбор предопределенного</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыборПредопределенногоРасширеннаяПодсказка" id="149"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНазначения" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа назначения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа назначения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНазначенияРасширеннаяПодсказка" id="157"/>
+							<ChildItems>
+								<InputField name="СписокПредопределенных" id="150">
+									<DataPath>СписокПредопределенных</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список предопределенных</v8:content>
+										</v8:item>
+									</Title>
+									<DropListButton>true</DropListButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="СписокПредопределенныхКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="СписокПредопределенныхРасширеннаяПодсказка" id="152"/>
+								</InputField>
+								<Button name="ФормаНазначитьПредопределенным" id="146">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.НазначитьПредопределенным</CommandName>
+									<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+									<BackColor>style:FormBackColor</BackColor>
+									<ExtendedTooltip name="ФормаНазначитьПредопределеннымРасширеннаяПодсказка" id="147"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ИмяПредопределенныхДанных" id="153">
+							<DataPath>Объект.PredefinedDataName</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ИмяПредопределенныхДанныхКонтекстноеМеню" id="154"/>
+							<ExtendedTooltip name="ИмяПредопределенныхДанныхРасширеннаяПодсказка" id="155"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<UsualGroup name="ГруппаНомер" id="71">
 					<Title>
 						<v8:item>
@@ -604,6 +672,21 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="СписокПредопределенных" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список предопределенных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОтметитьВсе" id="2">
@@ -647,6 +730,21 @@
 			<Action>СнятьОтметки</Action>
 			<Representation>Picture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НазначитьПредопределенным" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначить предопределенным</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначить предопределенным</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НазначитьПредопределенным</Action>
 		</Command>
 	</Commands>
 	<Parameters>

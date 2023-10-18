@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВосстановитьКИ" id="103">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ВосстановитьКИ</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаВосстановитьКИРасширеннаяПодсказка" id="104"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Сделка" id="16">
+					<DataPath>Список.Сделка</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СделкаКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СделкаРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<LabelField name="ДатаСобытия" id="19">
+					<DataPath>Список.ДатаСобытия</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаСобытияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ДатаСобытияРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="Событие" id="22">
+					<DataPath>Список.Событие</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СобытиеКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="СобытиеРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+				<LabelField name="ДокументСобытие" id="25">
+					<DataPath>Список.ДокументСобытие</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДокументСобытиеКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДокументСобытиеРасширеннаяПодсказка" id="27"/>
+				</LabelField>
+				<LabelField name="UID" id="28">
+					<DataPath>Список.UID</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="UIDКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="UIDРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="ДатаНачалаСделки" id="31">
+					<DataPath>Список.ДатаНачалаСделки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаНачалаСделкиКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ДатаНачалаСделкиРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="ДатаОкончанияСделки" id="34">
+					<DataPath>Список.ДатаОкончанияСделки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаОкончанияСделкиКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ДатаОкончанияСделкиРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<LabelField name="ДатаВыходаНаПросрочку" id="37">
+					<DataPath>Список.ДатаВыходаНаПросрочку</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаВыходаНаПросрочкуКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ДатаВыходаНаПросрочкуРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ДатаПередачиФинансирования" id="40">
+					<DataPath>Список.ДатаПередачиФинансирования</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаПередачиФинансированияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ДатаПередачиФинансированияРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ДатаРасчетаСрочнойЗадолженности" id="43">
+					<DataPath>Список.ДатаРасчетаСрочнойЗадолженности</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаРасчетаСрочнойЗадолженностиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ДатаРасчетаСрочнойЗадолженностиРасширеннаяПодсказка" id="45"/>
+				</LabelField>
+				<LabelField name="ДатаРасчетаПросроченнойЗадолженности" id="46">
+					<DataPath>Список.ДатаРасчетаПросроченнойЗадолженности</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДатаРасчетаПросроченнойЗадолженностиКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ДатаРасчетаПросроченнойЗадолженностиРасширеннаяПодсказка" id="48"/>
+				</LabelField>
+				<LabelField name="СуммаСделки" id="49">
+					<DataPath>Список.СуммаСделки</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СуммаСделкиКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="СуммаСделкиРасширеннаяПодсказка" id="51"/>
+				</LabelField>
+				<LabelField name="СолидарныйДоговор" id="52">
+					<DataPath>Список.СолидарныйДоговор</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СолидарныйДоговорКонтекстноеМеню" id="53"/>
+					<ExtendedTooltip name="СолидарныйДоговорРасширеннаяПодсказка" id="54"/>
+				</LabelField>
+				<LabelField name="ДоговорМКЗ" id="55">
+					<DataPath>Список.ДоговорМКЗ</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ДоговорМКЗКонтекстноеМеню" id="56"/>
+					<ExtendedTooltip name="ДоговорМКЗРасширеннаяПодсказка" id="57"/>
+				</LabelField>
+				<LabelField name="РеструктуризацияМКЗ" id="58">
+					<DataPath>Список.РеструктуризацияМКЗ</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="РеструктуризацияМКЗКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="РеструктуризацияМКЗРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="Обеспечительство" id="61">
+					<DataPath>Список.Обеспечительство</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОбеспечительствоКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="ОбеспечительствоРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+				<LabelField name="СудебноеДело" id="64">
+					<DataPath>Список.СудебноеДело</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="СудебноеДелоКонтекстноеМеню" id="65"/>
+					<ExtendedTooltip name="СудебноеДелоРасширеннаяПодсказка" id="66"/>
+				</LabelField>
+				<LabelField name="ПрекращениеОбязательства" id="67">
+					<DataPath>Список.ПрекращениеОбязательства</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПрекращениеОбязательстваКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПрекращениеОбязательстваРасширеннаяПодсказка" id="69"/>
+				</LabelField>
+				<LabelField name="НеденежноеОбязательство" id="70">
+					<DataPath>Список.НеденежноеОбязательство</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НеденежноеОбязательствоКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="НеденежноеОбязательствоРасширеннаяПодсказка" id="72"/>
+				</LabelField>
+				<LabelField name="Продан" id="73">
+					<DataPath>Список.Продан</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПроданКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ПроданРасширеннаяПодсказка" id="75"/>
+				</LabelField>
+				<LabelField name="Просрочка90плюс" id="76">
+					<DataPath>Список.Просрочка90плюс</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="Просрочка90плюсКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="Просрочка90плюсРасширеннаяПодсказка" id="78"/>
+				</LabelField>
+				<LabelField name="ПризнакПотребительскогоКредита" id="79">
+					<DataPath>Список.ПризнакПотребительскогоКредита</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПризнакПотребительскогоКредитаКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ПризнакПотребительскогоКредитаРасширеннаяПодсказка" id="81"/>
+				</LabelField>
+				<LabelField name="ПризнакПлатежнойКарты" id="82">
+					<DataPath>Список.ПризнакПлатежнойКарты</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПризнакПлатежнойКартыКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ПризнакПлатежнойКартыРасширеннаяПодсказка" id="84"/>
+				</LabelField>
+				<LabelField name="КодНБКИВидКредита" id="85">
+					<DataPath>Список.КодНБКИВидКредита</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КодНБКИВидКредитаКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="КодНБКИВидКредитаРасширеннаяПодсказка" id="87"/>
+				</LabelField>
+				<LabelField name="КодНБКИТипКредита" id="88">
+					<DataPath>Список.КодНБКИТипКредита</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КодНБКИТипКредитаКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="КодНБКИТипКредитаРасширеннаяПодсказка" id="90"/>
+				</LabelField>
+				<LabelField name="КодНБКИЦельКредита" id="91">
+					<DataPath>Список.КодНБКИЦельКредита</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="КодНБКИЦельКредитаКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="КодНБКИЦельКредитаРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+				<LabelField name="Прощение" id="94">
+					<DataPath>Список.Прощение</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ПрощениеКонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="ПрощениеРасширеннаяПодсказка" id="96"/>
+				</LabelField>
+				<LabelField name="Банкротство" id="97">
+					<DataPath>Список.Банкротство</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="БанкротствоКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="БанкротствоРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="БезнадежныйДолг" id="100">
+					<DataPath>Список.БезнадежныйДолг</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="БезнадежныйДолгКонтекстноеМеню" id="101"/>
+					<ExtendedTooltip name="БезнадежныйДолгРасширеннаяПодсказка" id="102"/>
+				</LabelField>
+				<LabelField name="ВидЗаимодавца" id="105">
+					<DataPath>Список.ВидЗаимодавца</DataPath>
+					<ContextMenu name="ВидЗаимодавцаКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="ВидЗаимодавцаРасширеннаяПодсказка" id="107"/>
+				</LabelField>
+				<LabelField name="ЧастичноеПравопреемство" id="108">
+					<DataPath>Список.ЧастичноеПравопреемство</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Частичное
+Правопреемство</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ЧастичноеПравопреемствоКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ЧастичноеПравопреемствоРасширеннаяПодсказка" id="110"/>
+				</LabelField>
+				<LabelField name="ПризнакКредитнойЛинии" id="111">
+					<DataPath>Список.ПризнакКредитнойЛинии</DataPath>
+					<ContextMenu name="ПризнакКредитнойЛинииКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ПризнакКредитнойЛинииРасширеннаяПодсказка" id="113"/>
+				</LabelField>
+				<LabelField name="КодНБКИТипКредититнойЛинии" id="114">
+					<DataPath>Список.КодНБКИТипКредититнойЛинии</DataPath>
+					<ContextMenu name="КодНБКИТипКредититнойЛинииКонтекстноеМеню" id="115"/>
+					<ExtendedTooltip name="КодНБКИТипКредититнойЛинииРасширеннаяПодсказка" id="116"/>
+				</LabelField>
+				<LabelField name="ПризнакПлавающейПроцентнойСтавки" id="117">
+					<DataPath>Список.ПризнакПлавающейПроцентнойСтавки</DataPath>
+					<ContextMenu name="ПризнакПлавающейПроцентнойСтавкиКонтекстноеМеню" id="118"/>
+					<ExtendedTooltip name="ПризнакПлавающейПроцентнойСтавкиРасширеннаяПодсказка" id="119"/>
+				</LabelField>
+				<LabelField name="ДатаВозникновенияОбязательстваСубъекта" id="120">
+					<DataPath>Список.ДатаВозникновенияОбязательстваСубъекта</DataPath>
+					<ContextMenu name="ДатаВозникновенияОбязательстваСубъектаКонтекстноеМеню" id="121"/>
+					<ExtendedTooltip name="ДатаВозникновенияОбязательстваСубъектаРасширеннаяПодсказка" id="122"/>
+				</LabelField>
+				<LabelField name="ПорядковыйНомерТранша" id="123">
+					<DataPath>Список.ПорядковыйНомерТранша</DataPath>
+					<ContextMenu name="ПорядковыйНомерТраншаКонтекстноеМеню" id="124"/>
+					<ExtendedTooltip name="ПорядковыйНомерТраншаРасширеннаяПодсказка" id="125"/>
+				</LabelField>
+				<InputField name="ПроцентнаяСтавкаПоУсловиям" id="126">
+					<DataPath>Список.ПроцентнаяСтавкаПоУсловиям</DataPath>
+					<ContextMenu name="ПроцентнаяСтавкаПоУсловиямКонтекстноеМеню" id="127"/>
+					<ExtendedTooltip name="ПроцентнаяСтавкаПоУсловиямРасширеннаяПодсказка" id="128"/>
+				</InputField>
+				<LabelField name="ЧастичнаяПродажа" id="129">
+					<DataPath>Список.ЧастичнаяПродажа</DataPath>
+					<ContextMenu name="ЧастичнаяПродажаКонтекстноеМеню" id="130"/>
+					<ExtendedTooltip name="ЧастичнаяПродажаРасширеннаяПодсказка" id="131"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.КредитныеИсторииДанныеСделки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВосстановитьКИ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить КИ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить КИ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВосстановитьКИ</Action>
+		</Command>
+	</Commands>
+</Form>

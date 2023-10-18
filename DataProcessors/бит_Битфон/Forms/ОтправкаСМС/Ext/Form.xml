@@ -138,6 +138,19 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="21"/>
 			<ChildItems>
+				<Button name="КнопкаОтправить" id="8">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<DefaultButton>true</DefaultButton>
+					<Width>15</Width>
+					<Height>2</Height>
+					<CommandName>Form.Command.Отправить</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="КнопкаОтправитьРасширеннаяПодсказка" id="22"/>
+				</Button>
 				<Button name="Шаблоны" id="24">
 					<Type>UsualButton</Type>
 					<Representation>PictureAndText</Representation>
@@ -155,19 +168,6 @@
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="ШаблоныРасширеннаяПодсказка" id="25"/>
-				</Button>
-				<Button name="КнопкаОтправить" id="8">
-					<Type>UsualButton</Type>
-					<Representation>PictureAndText</Representation>
-					<DefaultButton>true</DefaultButton>
-					<Width>15</Width>
-					<Height>2</Height>
-					<CommandName>Form.Command.Отправить</CommandName>
-					<Picture>
-						<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="КнопкаОтправитьРасширеннаяПодсказка" id="22"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>

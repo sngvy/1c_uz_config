@@ -338,10 +338,10 @@
 	Попытка
 		Script = Новый COMОбъект("MSScriptControl.ScriptControl");
 		Script.Language = "javascript";
-		Script.Timeout	= -1;
+		Script.Timeout = -1;
 		Время = Script.Eval("var d = new Date(); d.getTime()");
 	Исключение
-		Время = ТекущаяДата();
+		Время = ТекущаяДатаСеанса();
 		Сообщить("Ошибка! Время в секундах!!! (УМНОЖИТЬ НА 1000)");
 	КонецПопытки;	
 	

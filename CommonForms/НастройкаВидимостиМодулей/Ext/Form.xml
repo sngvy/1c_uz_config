@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<LabelDecoration name="Декорация1" id="126">
+			<Width>100</Width>
+			<Font ref="style:ШрифтТекстРабочийСтол" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка видимости и доступности элементов</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="127"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="128"/>
+		</LabelDecoration>
+		<UsualGroup name="Группа4" id="49">
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="27">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьВнешнихПользователей" id="34">
+							<DataPath>НаборКонстант.ИспользоватьВнешнихПользователей</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьВнешнихПользователейКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ИспользоватьВнешнихПользователейРасширеннаяПодсказка" id="36"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьГруппыПользователей" id="37">
+							<DataPath>НаборКонстант.ИспользоватьГруппыПользователей</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьГруппыПользователейКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ИспользоватьГруппыПользователейРасширеннаяПодсказка" id="39"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьИнтеграциюПочтаРФ" id="40">
+							<DataPath>НаборКонстант.ИспользоватьИнтеграциюПочтаРФ</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьИнтеграциюПочтаРФКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ИспользоватьИнтеграциюПочтаРФРасширеннаяПодсказка" id="42"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьИнтеграциюФССП" id="43">
+							<DataPath>НаборКонстант.ИспользоватьИнтеграциюФССП</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьИнтеграциюФССПКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ИспользоватьИнтеграциюФССПРасширеннаяПодсказка" id="45"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьМобильноеПриложение" id="56">
+							<DataPath>НаборКонстант.ИспользоватьМобильноеПриложение</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьМобильноеПриложениеКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ИспользоватьМобильноеПриложениеРасширеннаяПодсказка" id="58"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьНБКИ" id="59">
+							<DataPath>НаборКонстант.ИспользоватьНБКИ</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьНБКИКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ИспользоватьНБКИРасширеннаяПодсказка" id="61"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьMandarin" id="62">
+							<DataPath>НаборКонстант.ИспользоватьMandarin</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьMandarinКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ИспользоватьMandarinРасширеннаяПодсказка" id="64"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьИнтеграциюФедРесурсБанкротство" id="65">
+							<DataPath>НаборКонстант.ИспользоватьИнтеграциюФедРесурсБанкротство</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьИнтеграциюФедРесурсБанкротствоКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="ИспользоватьИнтеграциюФедРесурсБанкротствоРасширеннаяПодсказка" id="67"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьПочтовыйКлиент" id="71">
+							<DataPath>НаборКонстант.ИспользоватьПочтовыйКлиент</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПочтовыйКлиентКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ИспользоватьПочтовыйКлиентРасширеннаяПодсказка" id="73"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьПризнакРассмотрено" id="74">
+							<DataPath>НаборКонстант.ИспользоватьПризнакРассмотрено</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПризнакРассмотреноКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ИспользоватьПризнакРассмотреноРасширеннаяПодсказка" id="76"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьПрочиеВзаимодействия" id="77">
+							<DataPath>НаборКонстант.ИспользоватьПрочиеВзаимодействия</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьПрочиеВзаимодействияКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ИспользоватьПрочиеВзаимодействияРасширеннаяПодсказка" id="79"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьСтандарныйУчетЗадолженности" id="89">
+							<DataPath>НаборКонстант.ИспользоватьСтандарныйУчетЗадолженности</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСтандарныйУчетЗадолженностиКонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ИспользоватьСтандарныйУчетЗадолженностиРасширеннаяПодсказка" id="91"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьНБКИRUTDF" id="92">
+							<DataPath>НаборКонстант.ИспользоватьНБКИRUTDF</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьНБКИRUTDFКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ИспользоватьНБКИRUTDFРасширеннаяПодсказка" id="94"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьШифрование" id="95">
+							<DataPath>НаборКонстант.ИспользоватьШифрование</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьШифрованиеКонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="ИспользоватьШифрованиеРасширеннаяПодсказка" id="97"/>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьЭлектронныеПодписи" id="98">
+							<DataPath>НаборКонстант.ИспользоватьЭлектронныеПодписи</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьЭлектронныеПодписиКонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ИспользоватьЭлектронныеПодписиРасширеннаяПодсказка" id="100"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПроверятьЭлектронныеПодписиНаСервере" id="101">
+							<DataPath>НаборКонстант.ПроверятьЭлектронныеПодписиНаСервере</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроверятьЭлектронныеПодписиНаСервереКонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="ПроверятьЭлектронныеПодписиНаСервереРасширеннаяПодсказка" id="103"/>
+						</CheckBoxField>
+						<CheckBoxField name="СоздаватьЭлектронныеПодписиНаСервере" id="104">
+							<DataPath>НаборКонстант.СоздаватьЭлектронныеПодписиНаСервере</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СоздаватьЭлектронныеПодписиНаСервереКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="СоздаватьЭлектронныеПодписиНаСервереРасширеннаяПодсказка" id="106"/>
+						</CheckBoxField>
+						<CheckBoxField name="ОтправлятьПисьмаВФорматеHTML" id="80">
+							<DataPath>НаборКонстант.ОтправлятьПисьмаВФорматеHTML</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ОтправлятьПисьмаВФорматеHTMLКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="ОтправлятьПисьмаВФорматеHTMLРасширеннаяПодсказка" id="82"/>
+						</CheckBoxField>
+						<CheckBoxField name="РасчетНачислений" id="46">
+							<DataPath>НаборКонстант.РасчетНачислений</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="РасчетНачисленийКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="РасчетНачисленийРасширеннаяПодсказка" id="48"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПроцедурыБП" id="16">
+							<DataPath>НаборКонстант.ПроцедурыБП</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроцедурыБПКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПроцедурыБПРасширеннаяПодсказка" id="18"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="29">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<CheckBoxField name="ЗагрузкаРеестров" id="19">
+							<DataPath>НаборКонстант.ЗагрузкаРеестров</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗагрузкаРеестровКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ЗагрузкаРеестровРасширеннаяПодсказка" id="21"/>
+						</CheckBoxField>
+						<CheckBoxField name="ЗагрузкаДанных" id="31">
+							<DataPath>НаборКонстант.ЗагрузкаДанных</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗагрузкаДанныхКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ЗагрузкаДанныхРасширеннаяПодсказка" id="33"/>
+						</CheckBoxField>
+						<CheckBoxField name="СинхронизироватьФайлы" id="83">
+							<DataPath>НаборКонстант.СинхронизироватьФайлы</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СинхронизироватьФайлыКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="СинхронизироватьФайлыРасширеннаяПодсказка" id="85"/>
+						</CheckBoxField>
+						<CheckBoxField name="ХранитьФайлыВТомахНаДиске" id="86">
+							<DataPath>НаборКонстант.ХранитьФайлыВТомахНаДиске</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ХранитьФайлыВТомахНаДискеКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ХранитьФайлыВТомахНаДискеРасширеннаяПодсказка" id="88"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="25">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<CheckBoxField name="УчетПоДоговорам" id="1">
+							<DataPath>НаборКонстант.УчетПоДоговорам</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчетПоДоговорамКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="УчетПоДоговорамРасширеннаяПодсказка" id="3"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчетПоУслугам" id="4">
+							<DataPath>НаборКонстант.УчетПоУслугам</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчетПоУслугамКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="УчетПоУслугамРасширеннаяПодсказка" id="6"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчетПоИД" id="10">
+							<DataPath>НаборКонстант.УчетПоИД</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчетПоИДКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="УчетПоИДРасширеннаяПодсказка" id="12"/>
+						</CheckBoxField>
+						<CheckBoxField name="УчетПоЗ" id="13">
+							<DataPath>НаборКонстант.УчетПоЗ</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="УчетПоЗКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="УчетПоЗРасширеннаяПодсказка" id="15"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа5" id="51">
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<UsualGroup name="Группа6" id="110">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьСудебныйБлок" id="53">
+							<DataPath>НаборКонстант.ИспользоватьСудебныйБлок</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьСудебныйБлокКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ИспользоватьСудебныйБлокРасширеннаяПодсказка" id="55"/>
+						</CheckBoxField>
+						<CheckBoxField name="СервисТерриториальнаяПодсудность" id="68">
+							<DataPath>НаборКонстант.СервисТерриториальнаяПодсудность</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СервисТерриториальнаяПодсудностьКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="СервисТерриториальнаяПодсудностьРасширеннаяПодсказка" id="70"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа7" id="112">
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="113"/>
+					<ChildItems>
+						<UsualGroup name="Группа14" id="153">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="154"/>
+							<ChildItems>
+								<CheckBoxField name="УчетВспомогательныеНБКИ" id="114">
+									<DataPath>НаборКонстант.УчетВспомогательныеНБКИ</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УчетВспомогательныеНБКИКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="УчетВспомогательныеНБКИРасширеннаяПодсказка" id="116"/>
+								</CheckBoxField>
+								<UsualGroup name="Группа15" id="158">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>?</v8:content>
+										</v8:item>
+									</Title>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="159"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация5" id="160">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>- Дополнительные Справочники и Документы по НБКИ:
+
+    - Недееспасобность
+    - Причины прекращения
+    - Неденежные обязательства
+    - Льготное финансирование
+    - Обеспечительства
+    - Сведения об изменении</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="161"/>
+											<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="162"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа12" id="143">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="144"/>
+							<ChildItems>
+								<CheckBoxField name="ВключитьСценарииДиалога" id="117">
+									<DataPath>НаборКонстант.ВключитьСценарииДиалога</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВключитьСценарииДиалогаКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ВключитьСценарииДиалогаРасширеннаяПодсказка" id="119"/>
+								</CheckBoxField>
+								<UsualGroup name="Группа13" id="148">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>?</v8:content>
+										</v8:item>
+									</Title>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="149"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация4" id="150">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>- Сценарии диалога при телефонном разговоре</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация4КонтекстноеМеню" id="151"/>
+											<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="152"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа10" id="136">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<CheckBoxField name="ВключитьРаспределениеОбъектов" id="120">
+									<DataPath>НаборКонстант.ВключитьРаспределениеОбъектов</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВключитьРаспределениеОбъектовКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ВключитьРаспределениеОбъектовРасширеннаяПодсказка" id="122"/>
+								</CheckBoxField>
+								<UsualGroup name="Группа11" id="138">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>?</v8:content>
+										</v8:item>
+									</Title>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="139"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация3" id="140">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>- Распределение по нагрузке</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация3КонтекстноеМеню" id="141"/>
+											<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="142"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="129">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<CheckBoxField name="ВключитьОпциональныеПодсистемы" id="123">
+									<DataPath>НаборКонстант.ВключитьОпциональныеПодсистемы</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ВключитьОпциональныеПодсистемыКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ВключитьОпциональныеПодсистемыРасширеннаяПодсказка" id="125"/>
+								</CheckBoxField>
+								<UsualGroup name="Группа9" id="134">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>?</v8:content>
+										</v8:item>
+									</Title>
+									<Behavior>PopUp</Behavior>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="135"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация2" id="131">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>- Убирает отображение подсистем</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация2КонтекстноеМеню" id="132"/>
+											<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="133"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

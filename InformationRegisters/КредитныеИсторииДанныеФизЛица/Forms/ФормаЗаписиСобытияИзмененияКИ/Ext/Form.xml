@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписать" id="49">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.Записать</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Change</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="50"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаУправление" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Событие:</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ГруппаУправлениеРасширеннаяПодсказка" id="8"/>
+			<ChildItems>
+				<CheckBoxField name="СменаДокумента" id="4">
+					<DataPath>СменаДокумента</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СменаДокументаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СменаДокументаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">СменаДокументаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="СменаИмени" id="1">
+					<DataPath>СменаИмени</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СменаИмениКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="СменаИмениРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="OnChange">СменаИмениПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНовыйДУЛ" id="9">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа новый ДУЛ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНовыйДУЛРасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<InputField name="КодНБКИНовогоДУЛ" id="20">
+					<DataPath>КодНБКИНовогоДУЛ</DataPath>
+					<DropListButton>true</DropListButton>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Паспорт гражданина Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">21</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Паспорт гражданина Российской Федерации, удостоверяющий его личность за пределами территории Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">22.1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Дипломатический паспорт, удостоверяющий личность гражданина Российской Федерации за пределами территории Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">22.2</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Служебный паспорт, удостоверяющий личность гражданина Российской Федерации за пределами территории Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">22.3</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удостоверение личности моряка </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">23</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удостоверение личности военнослужащего </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">24</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Военный билет военнослужащего </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">25</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Временное удостоверение личности гражданина Российской Федерации, выдаваемое на период оформления паспорта гражданина Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">26</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Свидетельство о рождении гражданина Российской Федерации </v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">27</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иной документ, удостоверяющий личность гражданина Российской Федерации в соответствии с законодательством Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">28</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Паспорт иностранного гражданина либо иной документ, установленный федеральным законом или признаваемый в соответствии с международным договором Российской Федерации в качестве документа, удостоверяющего личность иностранного гражданина</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">31</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Документ, выданный иностранным государством и признаваемый в соответствии с международным договором Российской Федерации в качестве документа, удостоверяющего личность лица без гражданства</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">32</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иной документ, признаваемый документом, удостоверяющим личность лица без гражданства в соответствии с законодательством Российской Федерации и международным договором Российской Федерации</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">35</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удостоверение беженца</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">37</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Удостоверение вынужденного переселенца</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">38</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Иной документ</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">999</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="КодНБКИНовогоДУЛКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="КодНБКИНовогоДУЛРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="Наименование999" id="23">
+					<DataPath>Наименование999</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="Наименование999КонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="Наименование999РасширеннаяПодсказка" id="25"/>
+					<Events>
+						<Event name="OnChange">Наименование999ПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДатаВыдачиНовогоДУЛ" id="11">
+					<DataPath>ДатаВыдачиНовогоДУЛ</DataPath>
+					<ContextMenu name="ДатаВыдачиНовогоДУЛКонтекстноеМеню" id="12"/>
+					<ExtendedTooltip name="ДатаВыдачиНовогоДУЛРасширеннаяПодсказка" id="13"/>
+				</InputField>
+				<InputField name="СтранаПоНовомуДУЛ" id="14">
+					<DataPath>СтранаПоНовомуДУЛ</DataPath>
+					<ContextMenu name="СтранаПоНовомуДУЛКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СтранаПоНовомуДУЛРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="СерияНовогоДУЛ" id="26">
+					<DataPath>СерияНовогоДУЛ</DataPath>
+					<ContextMenu name="СерияНовогоДУЛКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СерияНовогоДУЛРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="НомерНовогоДУЛ" id="29">
+					<DataPath>НомерНовогоДУЛ</DataPath>
+					<ContextMenu name="НомерНовогоДУЛКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="НомерНовогоДУЛРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="КемВыданНовыйДУЛ" id="35">
+					<DataPath>КемВыданНовыйДУЛ</DataPath>
+					<ContextMenu name="КемВыданНовыйДУЛКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="КемВыданНовыйДУЛРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="КодПодразделенияВыдачиНовогоДУЛ" id="32">
+					<DataPath>КодПодразделенияВыдачиНовогоДУЛ</DataPath>
+					<ContextMenu name="КодПодразделенияВыдачиНовогоДУЛКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="КодПодразделенияВыдачиНовогоДУЛРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ДатаОкончанияНовогоДУЛ" id="17">
+					<DataPath>ДатаОкончанияНовогоДУЛ</DataPath>
+					<ContextMenu name="ДатаОкончанияНовогоДУЛКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДатаОкончанияНовогоДУЛРасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаНовоеФИО" id="38">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа новое ФИО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа новое ФИО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНовоеФИОРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="НоваяФамилия" id="40">
+					<DataPath>НоваяФамилия</DataPath>
+					<ContextMenu name="НоваяФамилияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="НоваяФамилияРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="НовоеИмя" id="43">
+					<DataPath>НовоеИмя</DataPath>
+					<ContextMenu name="НовоеИмяКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="НовоеИмяРасширеннаяПодсказка" id="45"/>
+				</InputField>
+				<InputField name="НовоеОтчество" id="46">
+					<DataPath>НовоеОтчество</DataPath>
+					<ContextMenu name="НовоеОтчествоКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="НовоеОтчествоРасширеннаяПодсказка" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НоваяФамилия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая фамилия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НовоеИмя" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новое имя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НовоеОтчество" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новое отчество</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодНБКИНовогоДУЛ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код НБКИ нового ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтранаПоНовомуДУЛ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страна по новому ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтраныМира</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Наименование999" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование иного документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СерияНовогоДУЛ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия нового ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерНовогоДУЛ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер нового ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаВыдачиНовогоДУЛ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выдачи нового ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КемВыданНовыйДУЛ" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кем выдан новый ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КодПодразделенияВыдачиНовогоДУЛ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код подразделения выдачи нового ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончанияНовогоДУЛ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания старого ДУЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СменаИмени" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена имени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СменаДокумента" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Записать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Записать</Action>
+		</Command>
+	</Commands>
+</Form>

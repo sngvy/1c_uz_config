@@ -12,6 +12,7 @@
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
 		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -97,6 +98,39 @@
 			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="39"/>
 			<ExtendedTooltip name="ОрганизацияExtendedTooltip" id="77"/>
 		</InputField>
+		<UsualGroup name="ГруппаОбнулить" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обнулить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа обнулить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбнулитьExtendedTooltip" id="87"/>
+			<ChildItems>
+				<CheckBoxField name="ОбнулитьКатегории" id="67">
+					<DataPath>Объект.ОбнулитьКатегории</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбнулитьКатегорииКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОбнулитьКатегорииExtendedTooltip" id="88"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОбнулитьЗадолженность" id="70">
+					<DataPath>Объект.ОбнулитьЗадолженность</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбнулитьЗадолженностьКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ОбнулитьЗадолженностьExtendedTooltip" id="89"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="Объекты" id="21">
 			<Representation>List</Representation>
 			<TitleLocation>Top</TitleLocation>
@@ -315,39 +349,6 @@
 				</InputField>
 			</ChildItems>
 		</Table>
-		<UsualGroup name="ГруппаОбнулить" id="73">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа обнулить</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа обнулить</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Horizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаОбнулитьExtendedTooltip" id="87"/>
-			<ChildItems>
-				<CheckBoxField name="ОбнулитьКатегории" id="67">
-					<DataPath>Объект.ОбнулитьКатегории</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОбнулитьКатегорииКонтекстноеМеню" id="68"/>
-					<ExtendedTooltip name="ОбнулитьКатегорииExtendedTooltip" id="88"/>
-				</CheckBoxField>
-				<CheckBoxField name="ОбнулитьЗадолженность" id="70">
-					<DataPath>Объект.ОбнулитьЗадолженность</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ОбнулитьЗадолженностьКонтекстноеМеню" id="71"/>
-					<ExtendedTooltip name="ОбнулитьЗадолженностьExtendedTooltip" id="89"/>
-				</CheckBoxField>
-			</ChildItems>
-		</UsualGroup>
 		<InputField name="Автор" id="15">
 			<DataPath>Объект.Автор</DataPath>
 			<ReadOnly>true</ReadOnly>
@@ -554,6 +555,13 @@
 			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="ВходящийОбъект">
+			<Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+			</Type>
+		</Parameter>
+	</Parameters>
 	<CommandInterface>
 		<NavigationPanel>
 			<Item>

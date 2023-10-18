@@ -34,6 +34,7 @@
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ОсновнаяГруппа" id="37">
@@ -66,6 +67,12 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПрикрепитьФайлыКонтекстноеМеню" id="110"/>
 					<ExtendedTooltip name="ПрикрепитьФайлыРасширеннаяПодсказка" id="111"/>
+				</CheckBoxField>
+				<CheckBoxField name="ПерезаписатьСуществующие" id="112">
+					<DataPath>ПерезаписатьСуществующие</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПерезаписатьСуществующиеКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ПерезаписатьСуществующиеРасширеннаяПодсказка" id="114"/>
 				</CheckBoxField>
 				<InputField name="Шаблон" id="1">
 					<DataPath>Объект.Шаблон</DataPath>
@@ -757,6 +764,17 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Прикрепить файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПерезаписатьСуществующие" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаписать существующие</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

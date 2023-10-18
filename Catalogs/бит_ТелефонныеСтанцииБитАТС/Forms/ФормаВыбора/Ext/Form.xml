@@ -35,42 +35,63 @@
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
 			</AutoCommandBar>
-			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="8"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="9">
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="18"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="19">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchStringRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="10"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="11"/>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="21"/>
 			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="12">
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="22">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>ViewStatusRepresentation</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="13"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="23"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="24"/>
 			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="15">
+			<SearchControlAddition name="СписокУправлениеПоиском" id="25">
 				<AdditionSource>
 					<Item>Список</Item>
 					<Type>SearchControl</Type>
 				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="16"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="26"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="27"/>
 			</SearchControlAddition>
 			<ChildItems>
+				<LabelField name="Код" id="6">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="28"/>
+				</LabelField>
 				<LabelField name="Наименование" id="4">
 					<DataPath>Список.Description</DataPath>
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="29"/>
 				</LabelField>
-				<LabelField name="Код" id="6">
-					<DataPath>Список.Code</DataPath>
-					<ContextMenu name="КодКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="19"/>
+				<LabelField name="Адрес" id="8">
+					<DataPath>Список.Адрес</DataPath>
+					<ContextMenu name="АдресКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+				<LabelField name="Пользователь" id="10">
+					<DataPath>Список.Пользователь</DataPath>
+					<ContextMenu name="ПользовательКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<CheckBoxField name="СинхронизацияССотрудниками" id="14">
+					<DataPath>Список.СинхронизацияССотрудниками</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СинхронизацияССотрудникамиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СинхронизацияССотрудникамиРасширеннаяПодсказка" id="32"/>
+				</CheckBoxField>
+				<LabelField name="ГруппаСинхронизацииСотрудников" id="16">
+					<DataPath>Список.ГруппаСинхронизацииСотрудников</DataPath>
+					<ContextMenu name="ГруппаСинхронизацииСотрудниковКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ГруппаСинхронизацииСотрудниковРасширеннаяПодсказка" id="33"/>
 				</LabelField>
 			</ChildItems>
 		</Table>

@@ -27,7 +27,7 @@
 						<v8:content>БИТ.Phone команды</v8:content>
 					</v8:item>
 				</ToolTip>
-				<ExtendedTooltip name="ГруппаБИТфонКомандыРасширеннаяПодсказка" id="287"/>
+				<ExtendedTooltip name="ГруппаБИТфонКомандыРасширеннаяПодсказка" id="320"/>
 				<ChildItems>
 					<Button name="кнПодключить" id="136">
 						<Type>CommandBarButton</Type>
@@ -44,7 +44,7 @@
 								<v8:content>Подключен</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="кнПодключитьРасширеннаяПодсказка" id="288"/>
+						<ExtendedTooltip name="кнПодключитьРасширеннаяПодсказка" id="321"/>
 					</Button>
 					<Button name="кнНеБеспокоить" id="176">
 						<Type>CommandBarButton</Type>
@@ -60,7 +60,7 @@
 								<v8:content>Не Беспокоить</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="кнНеБеспокоитьРасширеннаяПодсказка" id="289"/>
+						<ExtendedTooltip name="кнНеБеспокоитьРасширеннаяПодсказка" id="322"/>
 					</Button>
 					<Button name="кнОтключить" id="137">
 						<Type>CommandBarButton</Type>
@@ -77,7 +77,7 @@
 								<v8:content>Отключен</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="кнОтключитьРасширеннаяПодсказка" id="290"/>
+						<ExtendedTooltip name="кнОтключитьРасширеннаяПодсказка" id="323"/>
 					</Button>
 					<Button name="кнПереподключить" id="138">
 						<Type>CommandBarButton</Type>
@@ -94,7 +94,7 @@
 								<v8:content>Переподключить</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="кнПереподключитьРасширеннаяПодсказка" id="291"/>
+						<ExtendedTooltip name="кнПереподключитьРасширеннаяПодсказка" id="324"/>
 					</Button>
 					<Button name="кнНастройки" id="139">
 						<Type>CommandBarButton</Type>
@@ -109,7 +109,7 @@
 								<v8:content>Настройки</v8:content>
 							</v8:item>
 						</Title>
-						<ExtendedTooltip name="кнНастройкиРасширеннаяПодсказка" id="292"/>
+						<ExtendedTooltip name="кнНастройкиРасширеннаяПодсказка" id="325"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -124,7 +124,6 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаБитфонОбщ" id="209">
-			<Enabled>false</Enabled>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -138,12 +137,12 @@
 				</v8:item>
 			</ToolTip>
 			<HorizontalStretch>false</HorizontalStretch>
-			<VerticalStretch>true</VerticalStretch>
+			<VerticalStretch>false</VerticalStretch>
 			<Group>Vertical</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаБитфонОбщРасширеннаяПодсказка" id="293"/>
+			<ExtendedTooltip name="ГруппаБитфонОбщРасширеннаяПодсказка" id="326"/>
 			<ChildItems>
 				<Pages name="ГруппаЛинии" id="213">
 					<Title>
@@ -160,7 +159,7 @@
 					</ToolTip>
 					<Width>36</Width>
 					<PagesRepresentation>None</PagesRepresentation>
-					<ExtendedTooltip name="ГруппаЛинииРасширеннаяПодсказка" id="294"/>
+					<ExtendedTooltip name="ГруппаЛинииРасширеннаяПодсказка" id="327"/>
 					<Events>
 						<Event name="OnCurrentPageChange">ГруппаЛинииПриСменеСтраницы</Event>
 					</Events>
@@ -179,35 +178,28 @@
 								</v8:item>
 							</ToolTip>
 							<TitleDataPath>Линия1Заголовок</TitleDataPath>
-							<ExtendedTooltip name="ГруппаЛиния1РасширеннаяПодсказка" id="295"/>
+							<ExtendedTooltip name="ГруппаЛиния1РасширеннаяПодсказка" id="328"/>
 							<ChildItems>
 								<LabelField name="АбонентЛиния1" id="215">
-									<DataPath>ЛинияАбонент</DataPath>
+									<DataPath>Линия1Абонент</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="АбонентЛиния1КонтекстноеМеню" id="216"/>
-									<ExtendedTooltip name="АбонентЛиния1РасширеннаяПодсказка" id="296"/>
+									<ExtendedTooltip name="АбонентЛиния1РасширеннаяПодсказка" id="329"/>
 								</LabelField>
 								<LabelField name="КонтактноеЛицоЛиния1" id="226">
-									<DataPath>ЛинияКонтактноеЛицо</DataPath>
+									<DataPath>Линия1КонтактноеЛицо</DataPath>
 									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="КонтактноеЛицоЛиния1КонтекстноеМеню" id="227"/>
-									<ExtendedTooltip name="КонтактноеЛицоЛиния1РасширеннаяПодсказка" id="297"/>
-								</LabelField>
-								<LabelField name="ДлительностьРазговораЛиния1" id="211">
-									<DataPath>ДлительностьРазговора</DataPath>
-									<Visible>false</Visible>
-									<ReadOnly>true</ReadOnly>
-									<HorizontalAlign>Right</HorizontalAlign>
-									<ContextMenu name="ДлительностьРазговораЛиния1КонтекстноеМеню" id="212"/>
-									<ExtendedTooltip name="ДлительностьРазговораЛиния1РасширеннаяПодсказка" id="306"/>
+									<ExtendedTooltip name="КонтактноеЛицоЛиния1РасширеннаяПодсказка" id="330"/>
 								</LabelField>
 								<CheckBoxField name="ЛинияВКонференции1" id="234">
 									<DataPath>ЛинияВКонференции</DataPath>
 									<Visible>false</Visible>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЛинияВКонференции1КонтекстноеМеню" id="235"/>
-									<ExtendedTooltip name="ЛинияВКонференции1РасширеннаяПодсказка" id="298"/>
+									<ExtendedTooltip name="ЛинияВКонференции1РасширеннаяПодсказка" id="331"/>
 									<Events>
 										<Event name="OnChange">ЛинияВКонференцииПриИзменении</Event>
 									</Events>
@@ -230,12 +222,48 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаНабранныйНомер1РасширеннаяПодсказка" id="299"/>
+									<ExtendedTooltip name="ГруппаНабранныйНомер1РасширеннаяПодсказка" id="332"/>
 									<ChildItems>
 										<LabelField name="НабранныйНомерЛиния1" id="276">
 											<DataPath>ЛинияНабранныйНомер</DataPath>
+											<Visible>false</Visible>
 											<ContextMenu name="НабранныйНомерЛиния1КонтекстноеМеню" id="277"/>
-											<ExtendedTooltip name="НабранныйНомерЛиния1РасширеннаяПодсказка" id="300"/>
+											<ExtendedTooltip name="НабранныйНомерЛиния1РасширеннаяПодсказка" id="333"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПереведенОт1" id="287">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переведен от</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа набранный номер линии 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаПереведенОт1РасширеннаяПодсказка" id="334"/>
+									<ChildItems>
+										<LabelField name="ПереведенОтАбонентЛиния1" id="299">
+											<DataPath>Линия1ПереведенОтАбонент</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтАбонентЛиния1КонтекстноеМеню" id="300"/>
+											<ExtendedTooltip name="ПереведенОтАбонентЛиния1РасширеннаяПодсказка" id="335"/>
+										</LabelField>
+										<LabelField name="ПереведенОтКонтактноеЛицоЛиния1" id="301">
+											<DataPath>Линия1ПереведенОтКонтактноеЛицо</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтКонтактноеЛицоЛиния1КонтекстноеМеню" id="302"/>
+											<ExtendedTooltip name="ПереведенОтКонтактноеЛицоЛиния1РасширеннаяПодсказка" id="336"/>
 										</LabelField>
 									</ChildItems>
 								</UsualGroup>
@@ -257,31 +285,32 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка1РасширеннаяПодсказка" id="301"/>
+									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка1РасширеннаяПодсказка" id="337"/>
 									<ChildItems>
 										<Button name="ПринятьВходящий" id="243">
 											<Type>UsualButton</Type>
-											<Visible>false</Visible>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ПринятьВходящий</CommandName>
-											<ExtendedTooltip name="ПринятьВходящийРасширеннаяПодсказка" id="302"/>
+											<ExtendedTooltip name="ПринятьВходящийРасширеннаяПодсказка" id="338"/>
 										</Button>
 										<Button name="ОтклонитьВходящий" id="244">
 											<Type>UsualButton</Type>
-											<Visible>false</Visible>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ОтклонитьВходящий</CommandName>
-											<ExtendedTooltip name="ОтклонитьВходящийРасширеннаяПодсказка" id="303"/>
+											<ExtendedTooltip name="ОтклонитьВходящийРасширеннаяПодсказка" id="339"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
 								<InputField name="НомерЛиния1" id="5">
 									<DataPath>НомерЛиния1</DataPath>
 									<TitleLocation>None</TitleLocation>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<Width>1</Width>
 									<ClearButton>true</ClearButton>
 									<EditTextUpdate>OnValueChange</EditTextUpdate>
+									<Font ref="sys:DefaultGUIFont" height="16" kind="WindowsFont"/>
 									<ContextMenu name="НомерЛиния1КонтекстноеМеню" id="6">
 										<ChildItems>
 											<Button name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке" id="254">
@@ -289,19 +318,25 @@
 												<Representation>PictureAndText</Representation>
 												<CommandName>Form.Command.ДополнительнаяИнформацияОЗвонке</CommandName>
 												<Picture>
-													<xr:Ref>StdPicture.FormHelp</xr:Ref>
+													<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонкеРасширеннаяПодсказка" id="304"/>
+												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонкеРасширеннаяПодсказка" id="340"/>
 											</Button>
 										</ChildItems>
 									</ContextMenu>
-									<ExtendedTooltip name="НомерЛиния1РасширеннаяПодсказка" id="305"/>
+									<ExtendedTooltip name="НомерЛиния1РасширеннаяПодсказка" id="341"/>
 								</InputField>
+								<LabelField name="ДлительностьРазговораЛиния1" id="211">
+									<DataPath>ДлительностьРазговора</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<ContextMenu name="ДлительностьРазговораЛиния1КонтекстноеМеню" id="212"/>
+									<ExtendedTooltip name="ДлительностьРазговораЛиния1РасширеннаяПодсказка" id="342"/>
+								</LabelField>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаЛиния2" id="217">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -315,25 +350,28 @@
 								</v8:item>
 							</ToolTip>
 							<TitleDataPath>Линия2Заголовок</TitleDataPath>
-							<ExtendedTooltip name="ГруппаЛиния2РасширеннаяПодсказка" id="307"/>
+							<ExtendedTooltip name="ГруппаЛиния2РасширеннаяПодсказка" id="343"/>
 							<ChildItems>
 								<LabelField name="АбонентЛиния2" id="218">
-									<DataPath>ЛинияАбонент</DataPath>
+									<DataPath>Линия2Абонент</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="АбонентЛиния2КонтекстноеМеню" id="219"/>
-									<ExtendedTooltip name="АбонентЛиния2РасширеннаяПодсказка" id="308"/>
+									<ExtendedTooltip name="АбонентЛиния2РасширеннаяПодсказка" id="344"/>
 								</LabelField>
 								<LabelField name="КонтактноеЛицоЛиния2" id="228">
-									<DataPath>ЛинияКонтактноеЛицо</DataPath>
+									<DataPath>Линия2КонтактноеЛицо</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="КонтактноеЛицоЛиния2КонтекстноеМеню" id="229"/>
-									<ExtendedTooltip name="КонтактноеЛицоЛиния2РасширеннаяПодсказка" id="309"/>
+									<ExtendedTooltip name="КонтактноеЛицоЛиния2РасширеннаяПодсказка" id="345"/>
 								</LabelField>
 								<CheckBoxField name="ЛинияВКонференции2" id="236">
 									<DataPath>ЛинияВКонференции</DataPath>
+									<Visible>false</Visible>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЛинияВКонференции2КонтекстноеМеню" id="237"/>
-									<ExtendedTooltip name="ЛинияВКонференции2РасширеннаяПодсказка" id="310"/>
+									<ExtendedTooltip name="ЛинияВКонференции2РасширеннаяПодсказка" id="346"/>
 									<Events>
 										<Event name="OnChange">ЛинияВКонференцииПриИзменении</Event>
 									</Events>
@@ -356,12 +394,48 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаНабранныйНомер2РасширеннаяПодсказка" id="311"/>
+									<ExtendedTooltip name="ГруппаНабранныйНомер2РасширеннаяПодсказка" id="347"/>
 									<ChildItems>
 										<LabelField name="НабранныйНомерЛиния2" id="279">
 											<DataPath>ЛинияНабранныйНомер</DataPath>
+											<Visible>false</Visible>
 											<ContextMenu name="НабранныйНомерЛиния2КонтекстноеМеню" id="280"/>
-											<ExtendedTooltip name="НабранныйНомерЛиния2РасширеннаяПодсказка" id="312"/>
+											<ExtendedTooltip name="НабранныйНомерЛиния2РасширеннаяПодсказка" id="348"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПереведенОт2" id="303">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переведен от</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа набранный номер линии 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаПереведенОт2РасширеннаяПодсказка" id="349"/>
+									<ChildItems>
+										<LabelField name="ПереведенОтАбонентЛиния2" id="304">
+											<DataPath>Линия2ПереведенОтАбонент</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтАбонентЛиния2КонтекстноеМеню" id="305"/>
+											<ExtendedTooltip name="ПереведенОтАбонентЛиния2РасширеннаяПодсказка" id="350"/>
+										</LabelField>
+										<LabelField name="ПереведенОтКонтактноеЛицоЛиния2" id="306">
+											<DataPath>Линия2ПереведенОтКонтактноеЛицо</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтКонтактноеЛицоЛиния2КонтекстноеМеню" id="307"/>
+											<ExtendedTooltip name="ПереведенОтКонтактноеЛицоЛиния2РасширеннаяПодсказка" id="351"/>
 										</LabelField>
 									</ChildItems>
 								</UsualGroup>
@@ -383,21 +457,21 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка2РасширеннаяПодсказка" id="313"/>
+									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка2РасширеннаяПодсказка" id="352"/>
 									<ChildItems>
 										<Button name="ПринятьВходящий1" id="246">
 											<Type>UsualButton</Type>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ПринятьВходящий</CommandName>
-											<ExtendedTooltip name="ПринятьВходящий1РасширеннаяПодсказка" id="314"/>
+											<ExtendedTooltip name="ПринятьВходящий1РасширеннаяПодсказка" id="353"/>
 										</Button>
 										<Button name="ОтклонитьВходящий1" id="247">
 											<Type>UsualButton</Type>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ОтклонитьВходящий</CommandName>
-											<ExtendedTooltip name="ОтклонитьВходящий1РасширеннаяПодсказка" id="315"/>
+											<ExtendedTooltip name="ОтклонитьВходящий1РасширеннаяПодсказка" id="354"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -419,24 +493,22 @@
 													<xr:Ref>StdPicture.FormHelp</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке1РасширеннаяПодсказка" id="316"/>
+												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке1РасширеннаяПодсказка" id="355"/>
 											</Button>
 										</ChildItems>
 									</ContextMenu>
-									<ExtendedTooltip name="НомерЛиния2РасширеннаяПодсказка" id="317"/>
+									<ExtendedTooltip name="НомерЛиния2РасширеннаяПодсказка" id="356"/>
 								</InputField>
 								<LabelField name="ДлительностьРазговораЛиния2" id="264">
 									<DataPath>ДлительностьРазговора</DataPath>
-									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<HorizontalAlign>Right</HorizontalAlign>
 									<ContextMenu name="ДлительностьРазговораЛиния2КонтекстноеМеню" id="265"/>
-									<ExtendedTooltip name="ДлительностьРазговораЛиния2РасширеннаяПодсказка" id="318"/>
+									<ExtendedTooltip name="ДлительностьРазговораЛиния2РасширеннаяПодсказка" id="357"/>
 								</LabelField>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаЛиния3" id="220">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -450,25 +522,28 @@
 								</v8:item>
 							</ToolTip>
 							<TitleDataPath>Линия3Заголовок</TitleDataPath>
-							<ExtendedTooltip name="ГруппаЛиния3РасширеннаяПодсказка" id="319"/>
+							<ExtendedTooltip name="ГруппаЛиния3РасширеннаяПодсказка" id="358"/>
 							<ChildItems>
 								<LabelField name="АбонентЛиния3" id="221">
-									<DataPath>ЛинияАбонент</DataPath>
+									<DataPath>Линия3Абонент</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="АбонентЛиния3КонтекстноеМеню" id="222"/>
-									<ExtendedTooltip name="АбонентЛиния3РасширеннаяПодсказка" id="320"/>
+									<ExtendedTooltip name="АбонентЛиния3РасширеннаяПодсказка" id="359"/>
 								</LabelField>
 								<LabelField name="КонтактноеЛицоЛиния3" id="230">
-									<DataPath>ЛинияКонтактноеЛицо</DataPath>
+									<DataPath>Линия3КонтактноеЛицо</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="КонтактноеЛицоЛиния3КонтекстноеМеню" id="231"/>
-									<ExtendedTooltip name="КонтактноеЛицоЛиния3РасширеннаяПодсказка" id="321"/>
+									<ExtendedTooltip name="КонтактноеЛицоЛиния3РасширеннаяПодсказка" id="360"/>
 								</LabelField>
 								<CheckBoxField name="ЛинияВКонференции3" id="238">
 									<DataPath>ЛинияВКонференции</DataPath>
+									<Visible>false</Visible>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЛинияВКонференции3КонтекстноеМеню" id="239"/>
-									<ExtendedTooltip name="ЛинияВКонференции3РасширеннаяПодсказка" id="322"/>
+									<ExtendedTooltip name="ЛинияВКонференции3РасширеннаяПодсказка" id="361"/>
 									<Events>
 										<Event name="OnChange">ЛинияВКонференцииПриИзменении</Event>
 									</Events>
@@ -491,12 +566,48 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаНабранныйНомер3РасширеннаяПодсказка" id="323"/>
+									<ExtendedTooltip name="ГруппаНабранныйНомер3РасширеннаяПодсказка" id="362"/>
 									<ChildItems>
 										<LabelField name="НабранныйНомерЛиния3" id="282">
 											<DataPath>ЛинияНабранныйНомер</DataPath>
+											<Visible>false</Visible>
 											<ContextMenu name="НабранныйНомерЛиния3КонтекстноеМеню" id="283"/>
-											<ExtendedTooltip name="НабранныйНомерЛиния3РасширеннаяПодсказка" id="324"/>
+											<ExtendedTooltip name="НабранныйНомерЛиния3РасширеннаяПодсказка" id="363"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПереведенОт3" id="308">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переведен от</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа набранный номер линии 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаПереведенОт3РасширеннаяПодсказка" id="364"/>
+									<ChildItems>
+										<LabelField name="ПереведенОтАбонентЛиния3" id="309">
+											<DataPath>Линия3ПереведенОтАбонент</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтАбонентЛиния3КонтекстноеМеню" id="310"/>
+											<ExtendedTooltip name="ПереведенОтАбонентЛиния3РасширеннаяПодсказка" id="365"/>
+										</LabelField>
+										<LabelField name="ПереведенОтКонтактноеЛицоЛиния3" id="311">
+											<DataPath>Линия3ПереведенОтКонтактноеЛицо</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтКонтактноеЛицоЛиния3КонтекстноеМеню" id="312"/>
+											<ExtendedTooltip name="ПереведенОтКонтактноеЛицоЛиния3РасширеннаяПодсказка" id="366"/>
 										</LabelField>
 									</ChildItems>
 								</UsualGroup>
@@ -518,21 +629,21 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка3РасширеннаяПодсказка" id="325"/>
+									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка3РасширеннаяПодсказка" id="367"/>
 									<ChildItems>
 										<Button name="ПринятьВходящий2" id="249">
 											<Type>UsualButton</Type>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ПринятьВходящий</CommandName>
-											<ExtendedTooltip name="ПринятьВходящий2РасширеннаяПодсказка" id="326"/>
+											<ExtendedTooltip name="ПринятьВходящий2РасширеннаяПодсказка" id="368"/>
 										</Button>
 										<Button name="ОтклонитьВходящий2" id="250">
 											<Type>UsualButton</Type>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ОтклонитьВходящий</CommandName>
-											<ExtendedTooltip name="ОтклонитьВходящий2РасширеннаяПодсказка" id="327"/>
+											<ExtendedTooltip name="ОтклонитьВходящий2РасширеннаяПодсказка" id="369"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -554,24 +665,22 @@
 													<xr:Ref>StdPicture.FormHelp</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке2РасширеннаяПодсказка" id="328"/>
+												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке2РасширеннаяПодсказка" id="370"/>
 											</Button>
 										</ChildItems>
 									</ContextMenu>
-									<ExtendedTooltip name="НомерЛиния3РасширеннаяПодсказка" id="329"/>
+									<ExtendedTooltip name="НомерЛиния3РасширеннаяПодсказка" id="371"/>
 								</InputField>
 								<LabelField name="ДлительностьРазговораЛиния3" id="266">
 									<DataPath>ДлительностьРазговора</DataPath>
-									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<HorizontalAlign>Right</HorizontalAlign>
 									<ContextMenu name="ДлительностьРазговораЛиния3КонтекстноеМеню" id="267"/>
-									<ExtendedTooltip name="ДлительностьРазговораЛиния3РасширеннаяПодсказка" id="330"/>
+									<ExtendedTooltip name="ДлительностьРазговораЛиния3РасширеннаяПодсказка" id="372"/>
 								</LabelField>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаЛиния4" id="223">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -585,25 +694,28 @@
 								</v8:item>
 							</ToolTip>
 							<TitleDataPath>Линия4Заголовок</TitleDataPath>
-							<ExtendedTooltip name="ГруппаЛиния4РасширеннаяПодсказка" id="331"/>
+							<ExtendedTooltip name="ГруппаЛиния4РасширеннаяПодсказка" id="373"/>
 							<ChildItems>
 								<LabelField name="АбонентЛиния4" id="224">
-									<DataPath>ЛинияАбонент</DataPath>
+									<DataPath>Линия4Абонент</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="АбонентЛиния4КонтекстноеМеню" id="225"/>
-									<ExtendedTooltip name="АбонентЛиния4РасширеннаяПодсказка" id="332"/>
+									<ExtendedTooltip name="АбонентЛиния4РасширеннаяПодсказка" id="374"/>
 								</LabelField>
 								<LabelField name="КонтактноеЛицоЛиния4" id="232">
-									<DataPath>ЛинияКонтактноеЛицо</DataPath>
+									<DataPath>Линия4КонтактноеЛицо</DataPath>
+									<Visible>false</Visible>
 									<Hiperlink>true</Hiperlink>
 									<ContextMenu name="КонтактноеЛицоЛиния4КонтекстноеМеню" id="233"/>
-									<ExtendedTooltip name="КонтактноеЛицоЛиния4РасширеннаяПодсказка" id="333"/>
+									<ExtendedTooltip name="КонтактноеЛицоЛиния4РасширеннаяПодсказка" id="375"/>
 								</LabelField>
 								<CheckBoxField name="ЛинияВКонференции4" id="240">
 									<DataPath>ЛинияВКонференции</DataPath>
+									<Visible>false</Visible>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЛинияВКонференции4КонтекстноеМеню" id="241"/>
-									<ExtendedTooltip name="ЛинияВКонференции4РасширеннаяПодсказка" id="334"/>
+									<ExtendedTooltip name="ЛинияВКонференции4РасширеннаяПодсказка" id="376"/>
 									<Events>
 										<Event name="OnChange">ЛинияВКонференцииПриИзменении</Event>
 									</Events>
@@ -626,12 +738,48 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаНабранныйНомер4РасширеннаяПодсказка" id="335"/>
+									<ExtendedTooltip name="ГруппаНабранныйНомер4РасширеннаяПодсказка" id="377"/>
 									<ChildItems>
 										<LabelField name="НабранныйНомерЛиния4" id="285">
 											<DataPath>ЛинияНабранныйНомер</DataPath>
+											<Visible>false</Visible>
 											<ContextMenu name="НабранныйНомерЛиния4КонтекстноеМеню" id="286"/>
-											<ExtendedTooltip name="НабранныйНомерЛиния4РасширеннаяПодсказка" id="336"/>
+											<ExtendedTooltip name="НабранныйНомерЛиния4РасширеннаяПодсказка" id="378"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПереведенОт4" id="313">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Переведен от</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа набранный номер линии 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="ГруппаПереведенОт4РасширеннаяПодсказка" id="379"/>
+									<ChildItems>
+										<LabelField name="ПереведенОтАбонентЛиния4" id="314">
+											<DataPath>Линия4ПереведенОтАбонент</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтАбонентЛиния4КонтекстноеМеню" id="315"/>
+											<ExtendedTooltip name="ПереведенОтАбонентЛиния4РасширеннаяПодсказка" id="380"/>
+										</LabelField>
+										<LabelField name="ПереведенОтКонтактноеЛицоЛиния4" id="316">
+											<DataPath>Линия4ПереведенОтКонтактноеЛицо</DataPath>
+											<Visible>false</Visible>
+											<Hiperlink>true</Hiperlink>
+											<ContextMenu name="ПереведенОтКонтактноеЛицоЛиния4КонтекстноеМеню" id="317"/>
+											<ExtendedTooltip name="ПереведенОтКонтактноеЛицоЛиния4РасширеннаяПодсказка" id="381"/>
 										</LabelField>
 									</ChildItems>
 								</UsualGroup>
@@ -653,21 +801,21 @@
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка4РасширеннаяПодсказка" id="337"/>
+									<ExtendedTooltip name="ГруппаОбработкиВходящегоЗвонка4РасширеннаяПодсказка" id="382"/>
 									<ChildItems>
 										<Button name="ПринятьВходящий3" id="252">
 											<Type>UsualButton</Type>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ПринятьВходящий</CommandName>
-											<ExtendedTooltip name="ПринятьВходящий3РасширеннаяПодсказка" id="338"/>
+											<ExtendedTooltip name="ПринятьВходящий3РасширеннаяПодсказка" id="383"/>
 										</Button>
 										<Button name="ОтклонитьВходящий3" id="253">
 											<Type>UsualButton</Type>
 											<Width>12</Width>
 											<Height>1</Height>
 											<CommandName>Form.Command.ОтклонитьВходящий</CommandName>
-											<ExtendedTooltip name="ОтклонитьВходящий3РасширеннаяПодсказка" id="339"/>
+											<ExtendedTooltip name="ОтклонитьВходящий3РасширеннаяПодсказка" id="384"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -689,19 +837,18 @@
 													<xr:Ref>StdPicture.FormHelp</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке3РасширеннаяПодсказка" id="340"/>
+												<ExtendedTooltip name="НомерКонтекстноеМенюДополнительнаяИнформацияОЗвонке3РасширеннаяПодсказка" id="385"/>
 											</Button>
 										</ChildItems>
 									</ContextMenu>
-									<ExtendedTooltip name="НомерЛиния4РасширеннаяПодсказка" id="341"/>
+									<ExtendedTooltip name="НомерЛиния4РасширеннаяПодсказка" id="386"/>
 								</InputField>
 								<LabelField name="ДлительностьРазговораЛиния4" id="268">
 									<DataPath>ДлительностьРазговора</DataPath>
-									<Visible>false</Visible>
 									<ReadOnly>true</ReadOnly>
 									<HorizontalAlign>Right</HorizontalAlign>
 									<ContextMenu name="ДлительностьРазговораЛиния4КонтекстноеМеню" id="269"/>
-									<ExtendedTooltip name="ДлительностьРазговораЛиния4РасширеннаяПодсказка" id="342"/>
+									<ExtendedTooltip name="ДлительностьРазговораЛиния4РасширеннаяПодсказка" id="387"/>
 								</LabelField>
 							</ChildItems>
 						</Page>
@@ -720,9 +867,12 @@
 							<v8:content>Группа БИТфон панели</v8:content>
 						</v8:item>
 					</ToolTip>
-					<HorizontalStretch>false</HorizontalStretch>
-					<PagesRepresentation>TabsOnTop</PagesRepresentation>
-					<ExtendedTooltip name="ГруппаБИТфонПанелиРасширеннаяПодсказка" id="343"/>
+					<Width>40</Width>
+					<PagesRepresentation>TabsOnBottom</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаБИТфонПанелиРасширеннаяПодсказка" id="388"/>
+					<Events>
+						<Event name="OnCurrentPageChange">ГруппаБИТфонПанелиПриСменеСтраницы</Event>
+					</Events>
 					<ChildItems>
 						<Page name="ГруппаПанельОсновная" id="46">
 							<Title>
@@ -737,7 +887,11 @@
 									<v8:content>Группа панель основная</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="ГруппаПанельОсновнаяРасширеннаяПодсказка" id="344"/>
+							<Picture>
+								<xr:Ref>CommonPicture.Позвонить</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаПанельОсновнаяРасширеннаяПодсказка" id="389"/>
 							<ChildItems>
 								<UsualGroup name="ГруппаКнопки" id="36">
 									<ToolTip>
@@ -747,13 +901,12 @@
 										</v8:item>
 									</ToolTip>
 									<Width>40</Width>
-									<HorizontalStretch>true</HorizontalStretch>
 									<VerticalStretch>false</VerticalStretch>
 									<Group>Horizontal</Group>
 									<HorizontalAlign>Center</HorizontalAlign>
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
-									<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="345"/>
+									<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="390"/>
 									<ChildItems>
 										<UsualGroup name="ГруппаГромкости" id="11">
 											<ToolTip>
@@ -768,7 +921,7 @@
 											<Representation>None</Representation>
 											<ChildItemsWidth>Equal</ChildItemsWidth>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаГромкостиРасширеннаяПодсказка" id="346"/>
+											<ExtendedTooltip name="ГруппаГромкостиРасширеннаяПодсказка" id="391"/>
 											<ChildItems>
 												<TrackBarField name="РегуляторГромкость" id="9">
 													<DataPath>Громкость</DataPath>
@@ -782,7 +935,7 @@
 													<Orientation>Vertical</Orientation>
 													<MarkingAppearance>BothSides</MarkingAppearance>
 													<ContextMenu name="РегуляторГромкостьКонтекстноеМеню" id="10"/>
-													<ExtendedTooltip name="РегуляторГромкостьРасширеннаяПодсказка" id="347"/>
+													<ExtendedTooltip name="РегуляторГромкостьРасширеннаяПодсказка" id="392"/>
 													<Events>
 														<Event name="OnChange">РегуляторГромкостьПриИзменении</Event>
 													</Events>
@@ -805,7 +958,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнОГрРасширеннаяПодсказка" id="348"/>
+													<ExtendedTooltip name="КнОГрРасширеннаяПодсказка" id="393"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -816,49 +969,52 @@
 													<v8:content>Группа кл колонка1</v8:content>
 												</v8:item>
 											</ToolTip>
-											<HorizontalStretch>false</HorizontalStretch>
-											<VerticalStretch>false</VerticalStretch>
 											<Group>Vertical</Group>
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ChildItemsWidth>Equal</ChildItemsWidth>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаКлКолонка1РасширеннаяПодсказка" id="349"/>
+											<ExtendedTooltip name="ГруппаКлКолонка1РасширеннаяПодсказка" id="394"/>
 											<ChildItems>
 												<Button name="КН1" id="20">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.Кн1</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КН1РасширеннаяПодсказка" id="350"/>
+													<ExtendedTooltip name="КН1РасширеннаяПодсказка" id="395"/>
 												</Button>
 												<Button name="кн4" id="24">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн4</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн4РасширеннаяПодсказка" id="351"/>
+													<ExtendedTooltip name="кн4РасширеннаяПодсказка" id="396"/>
 												</Button>
 												<Button name="кн7" id="27">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн7</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн7РасширеннаяПодсказка" id="352"/>
+													<ExtendedTooltip name="кн7РасширеннаяПодсказка" id="397"/>
 												</Button>
 												<Button name="КНЗВ" id="37">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.КНЗВ</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КНЗВРасширеннаяПодсказка" id="353"/>
+													<ExtendedTooltip name="КНЗВРасширеннаяПодсказка" id="398"/>
 												</Button>
 												<Button name="КнПереводЗвонка" id="55">
 													<Type>UsualButton</Type>
+													<Visible>false</Visible>
 													<Representation>Picture</Representation>
 													<Width>6</Width>
 													<Height>1</Height>
@@ -875,7 +1031,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнПереводЗвонкаРасширеннаяПодсказка" id="354"/>
+													<ExtendedTooltip name="КнПереводЗвонкаРасширеннаяПодсказка" id="399"/>
 												</Button>
 												<Button name="ФормаНачатьРазговор" id="1">
 													<Type>UsualButton</Type>
@@ -895,7 +1051,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="ФормаНачатьРазговорРасширеннаяПодсказка" id="355"/>
+													<ExtendedTooltip name="ФормаНачатьРазговорРасширеннаяПодсказка" id="400"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -910,35 +1066,39 @@
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаКлКолонка2РасширеннаяПодсказка" id="356"/>
+											<ExtendedTooltip name="ГруппаКлКолонка2РасширеннаяПодсказка" id="401"/>
 											<ChildItems>
 												<Button name="кн2" id="22">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн2</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн2РасширеннаяПодсказка" id="357"/>
+													<ExtendedTooltip name="кн2РасширеннаяПодсказка" id="402"/>
 												</Button>
 												<Button name="кн5" id="25">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн5</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн5РасширеннаяПодсказка" id="358"/>
+													<ExtendedTooltip name="кн5РасширеннаяПодсказка" id="403"/>
 												</Button>
 												<Button name="кн8" id="28">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн8</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн8РасширеннаяПодсказка" id="359"/>
+													<ExtendedTooltip name="кн8РасширеннаяПодсказка" id="404"/>
 												</Button>
 												<Button name="Кн10" id="21">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.Кн0</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Title>
@@ -948,11 +1108,12 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="Кн10РасширеннаяПодсказка" id="360"/>
+													<ExtendedTooltip name="Кн10РасширеннаяПодсказка" id="405"/>
 												</Button>
 												<Button name="КнУдалитьПоследнийСимволНомера" id="49">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.КнУдалитьПоследнийСимволНомера</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Title>
@@ -962,7 +1123,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнУдалитьПоследнийСимволНомераРасширеннаяПодсказка" id="361"/>
+													<ExtendedTooltip name="КнУдалитьПоследнийСимволНомераРасширеннаяПодсказка" id="406"/>
 												</Button>
 												<Button name="кнКонтакты" id="34">
 													<Type>UsualButton</Type>
@@ -973,7 +1134,7 @@
 													<CommandName>Form.Command.кнКонтакты</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Picture>
-														<xr:Ref>CommonPicture.бит_Контакты</xr:Ref>
+														<xr:Ref>CommonPicture.NC_РозыскДолжника</xr:Ref>
 														<xr:LoadTransparent>true</xr:LoadTransparent>
 														<xr:TransparentPixel x="25" y="6"/>
 													</Picture>
@@ -983,7 +1144,8 @@
 															<v8:content>Контакты</v8:content>
 														</v8:item>
 													</Title>
-													<ExtendedTooltip name="кнКонтактыРасширеннаяПодсказка" id="362"/>
+													<Shape>Oval</Shape>
+													<ExtendedTooltip name="кнКонтактыРасширеннаяПодсказка" id="407"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -998,42 +1160,47 @@
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаКлКолонка3РасширеннаяПодсказка" id="363"/>
+											<ExtendedTooltip name="ГруппаКлКолонка3РасширеннаяПодсказка" id="408"/>
 											<ChildItems>
 												<Button name="кн3" id="23">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн3</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн3РасширеннаяПодсказка" id="364"/>
+													<ExtendedTooltip name="кн3РасширеннаяПодсказка" id="409"/>
 												</Button>
 												<Button name="кн6" id="26">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн6</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн6РасширеннаяПодсказка" id="365"/>
+													<ExtendedTooltip name="кн6РасширеннаяПодсказка" id="410"/>
 												</Button>
 												<Button name="кн9" id="29">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.кн9</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="кн9РасширеннаяПодсказка" id="366"/>
+													<ExtendedTooltip name="кн9РасширеннаяПодсказка" id="411"/>
 												</Button>
 												<Button name="КНРеш" id="38">
 													<Type>UsualButton</Type>
 													<Width>6</Width>
+													<Height>1</Height>
 													<CommandName>Form.Command.КНРеш</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КНРешРасширеннаяПодсказка" id="367"/>
+													<ExtendedTooltip name="КНРешРасширеннаяПодсказка" id="412"/>
 												</Button>
 												<Button name="КнУдержатьВызов" id="56">
 													<Type>UsualButton</Type>
+													<Visible>false</Visible>
 													<Representation>Picture</Representation>
 													<Width>6</Width>
 													<Height>1</Height>
@@ -1050,7 +1217,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнУдержатьВызовРасширеннаяПодсказка" id="368"/>
+													<ExtendedTooltip name="КнУдержатьВызовРасширеннаяПодсказка" id="413"/>
 												</Button>
 												<Button name="Отбой" id="3">
 													<Type>UsualButton</Type>
@@ -1071,7 +1238,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="ОтбойРасширеннаяПодсказка" id="369"/>
+													<ExtendedTooltip name="ОтбойРасширеннаяПодсказка" id="414"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -1087,7 +1254,7 @@
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаМикрофонРасширеннаяПодсказка" id="370"/>
+											<ExtendedTooltip name="ГруппаМикрофонРасширеннаяПодсказка" id="415"/>
 											<ChildItems>
 												<TrackBarField name="РегуляторМикрофон" id="16">
 													<DataPath>Микрофон</DataPath>
@@ -1101,7 +1268,7 @@
 													<Orientation>Vertical</Orientation>
 													<MarkingAppearance>BothSides</MarkingAppearance>
 													<ContextMenu name="РегуляторМикрофонКонтекстноеМеню" id="17"/>
-													<ExtendedTooltip name="РегуляторМикрофонРасширеннаяПодсказка" id="371"/>
+													<ExtendedTooltip name="РегуляторМикрофонРасширеннаяПодсказка" id="416"/>
 													<Events>
 														<Event name="OnChange">РегуляторМикрофонПриИзменении</Event>
 													</Events>
@@ -1124,7 +1291,7 @@
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнОМикРасширеннаяПодсказка" id="372"/>
+													<ExtendedTooltip name="КнОМикРасширеннаяПодсказка" id="417"/>
 												</Button>
 											</ChildItems>
 										</UsualGroup>
@@ -1140,7 +1307,7 @@
 									<Group>Horizontal</Group>
 									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
-									<ExtendedTooltip name="ГруппаДопФункцииРасширеннаяПодсказка" id="373"/>
+									<ExtendedTooltip name="ГруппаДопФункцииРасширеннаяПодсказка" id="418"/>
 									<ChildItems>
 										<Button name="кнSMS" id="127">
 											<Type>UsualButton</Type>
@@ -1151,10 +1318,11 @@
 											<CommandName>Form.Command.кнSMS</CommandName>
 											<Font height="10" bold="true" kind="AutoFont"/>
 											<Picture>
-												<xr:Ref>CommonPicture.бит_СМС</xr:Ref>
+												<xr:Ref>CommonPicture.NC_СМС</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="кнSMSРасширеннаяПодсказка" id="374"/>
+											<Shape>Oval</Shape>
+											<ExtendedTooltip name="кнSMSРасширеннаяПодсказка" id="419"/>
 										</Button>
 										<Button name="кнФакс" id="128">
 											<Type>UsualButton</Type>
@@ -1165,10 +1333,11 @@
 											<CommandName>Form.Command.кнФакс</CommandName>
 											<Font height="10" bold="true" kind="AutoFont"/>
 											<Picture>
-												<xr:Ref>CommonPicture.бит_Факс</xr:Ref>
+												<xr:Ref>CommonPicture.NC_Позвонить</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="кнФаксРасширеннаяПодсказка" id="375"/>
+											<Shape>Oval</Shape>
+											<ExtendedTooltip name="кнФаксРасширеннаяПодсказка" id="420"/>
 										</Button>
 										<Button name="кнЗаписьРазговора" id="129">
 											<Type>UsualButton</Type>
@@ -1179,10 +1348,11 @@
 											<CommandName>Form.Command.кнЗаписьРазговора</CommandName>
 											<Font height="10" bold="true" kind="AutoFont"/>
 											<Picture>
-												<xr:Ref>CommonPicture.бит_Запись</xr:Ref>
+												<xr:Ref>CommonPicture.NC_Наушники</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="кнЗаписьРазговораРасширеннаяПодсказка" id="376"/>
+											<Shape>Oval</Shape>
+											<ExtendedTooltip name="кнЗаписьРазговораРасширеннаяПодсказка" id="421"/>
 										</Button>
 										<Button name="кнСтационарныйТел" id="151">
 											<Type>UsualButton</Type>
@@ -1192,7 +1362,7 @@
 											<Height>2</Height>
 											<CommandName>Form.Command.КнСтационарныйТелефон</CommandName>
 											<Picture>
-												<xr:Ref>CommonPicture.бит_Телефон</xr:Ref>
+												<xr:Ref>CommonPicture.NC_Позвонить</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
 											<Title>
@@ -1201,7 +1371,8 @@
 													<v8:content>Стационарный телефон</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="кнСтационарныйТелРасширеннаяПодсказка" id="377"/>
+											<Shape>Oval</Shape>
+											<ExtendedTooltip name="кнСтационарныйТелРасширеннаяПодсказка" id="422"/>
 										</Button>
 									</ChildItems>
 								</UsualGroup>
@@ -1220,18 +1391,50 @@
 									<v8:content>Группа панель история</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="ГруппаПанельИсторияРасширеннаяПодсказка" id="378"/>
+							<Picture>
+								<xr:Ref>StdPicture.DataHistory</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаПанельИсторияРасширеннаяПодсказка" id="423"/>
 							<ChildItems>
-								<Button name="ИсторияЗвонковПоказатьВсюИсторию" id="73">
-									<Type>UsualButton</Type>
-									<Representation>PictureAndText</Representation>
-									<CommandName>Form.Command.ПоказатьВсюИсторию</CommandName>
-									<Picture>
-										<xr:Ref>StdPicture.DataHistory</xr:Ref>
-										<xr:LoadTransparent>true</xr:LoadTransparent>
-									</Picture>
-									<ExtendedTooltip name="ИсторияЗвонковПоказатьВсюИсториюРасширеннаяПодсказка" id="379"/>
-								</Button>
+								<UsualGroup name="ГруппаПанельИсторияДоп" id="500">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель история доп</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Панель истории доп</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПанельИсторияДопРасширеннаяПодсказка" id="501"/>
+									<ChildItems>
+										<Button name="ИсторияЗвонковПоказатьВсюИсторию" id="73">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ПоказатьВсюИсторию</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.ShowData</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ИсторияЗвонковПоказатьВсюИсториюРасширеннаяПодсказка" id="424"/>
+										</Button>
+										<Button name="АналитикаАТС" id="502">
+											<Type>UsualButton</Type>
+											<Visible>false</Visible>
+											<CommandName>Form.Command.АналитикаАТС</CommandName>
+											<ExtendedTooltip name="АналитикаАТСРасширеннаяПодсказка" id="503"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
 								<Pages name="ГруппаВидыИстории" id="119">
 									<Title>
 										<v8:item>
@@ -1246,10 +1449,12 @@
 										</v8:item>
 									</ToolTip>
 									<Width>40</Width>
-									<HorizontalStretch>true</HorizontalStretch>
-									<VerticalStretch>true</VerticalStretch>
+									<HorizontalStretch>false</HorizontalStretch>
 									<PagesRepresentation>TabsOnTop</PagesRepresentation>
-									<ExtendedTooltip name="ГруппаВидыИсторииРасширеннаяПодсказка" id="380"/>
+									<ExtendedTooltip name="ГруппаВидыИсторииРасширеннаяПодсказка" id="425"/>
+									<Events>
+										<Event name="OnCurrentPageChange">ГруппаВидыИсторииПриСменеСтраницы</Event>
+									</Events>
 									<ChildItems>
 										<Page name="ГруппаИсторияВходящие" id="92">
 											<Title>
@@ -1265,17 +1470,16 @@
 												</v8:item>
 											</ToolTip>
 											<Picture>
-												<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+												<xr:Ref>StdPicture.AppearanceDownInclineArrowRed</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="ГруппаИсторияВходящиеРасширеннаяПодсказка" id="381"/>
+											<ExtendedTooltip name="ГруппаИсторияВходящиеРасширеннаяПодсказка" id="426"/>
 											<ChildItems>
 												<Table name="ИсторияЗвонковВходящие" id="106">
 													<ReadOnly>true</ReadOnly>
 													<SelectionMode>SingleRow</SelectionMode>
 													<VerticalLines>false</VerticalLines>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
-													<InitialListView>Beginning</InitialListView>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
 													<FileDragMode>AsFile</FileDragMode>
@@ -1292,7 +1496,7 @@
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.Информация</CommandName>
 																<Picture>
-																	<xr:Ref>CommonPicture.Информация_0</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
 																	<xr:LoadTransparent>false</xr:LoadTransparent>
 																</Picture>
 																<Title>
@@ -1301,14 +1505,24 @@
 																		<v8:content>Показать информацию</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентКонтекстноеМенюКнопка2РасширеннаяПодсказка" id="382"/>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентКонтекстноеМенюКнопка2РасширеннаяПодсказка" id="427"/>
+															</Button>
+															<Button name="ИсторияЗвонковВходящиеКонтекстноеМенюОтправкаSMS" id="496">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ОтправкаSMS</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.NC_СМС16</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюОтправкаSMSРасширеннаяПодсказка" id="497"/>
 															</Button>
 															<Button name="ИсторияЗвонковВходящиеКонтекстноеМенюСоздатьКонтрагента" id="177">
 																<Type>CommandBarButton</Type>
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.СоздатьКонтрагента</CommandName>
 																<Picture>
-																	<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_Создать16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
 																<Title>
@@ -1317,57 +1531,67 @@
 																		<v8:content>Создать контрагента</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюСоздатьКонтрагентаРасширеннаяПодсказка" id="383"/>
+																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюСоздатьКонтрагентаРасширеннаяПодсказка" id="428"/>
 															</Button>
 															<Button name="ИсторияЗвонковВходящиеКонтекстноеМенюДобавитьНомер" id="178">
 																<Type>CommandBarButton</Type>
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.ДобавитьНомер</CommandName>
 																<Picture>
-																	<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_Контакт16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
-																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюДобавитьНомерРасширеннаяПодсказка" id="384"/>
+																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюДобавитьНомерРасширеннаяПодсказка" id="429"/>
 															</Button>
 															<Button name="ИсторияЗвонковВходящиеКонтекстноеМенюПрослушатьЗапись" id="181">
 																<Type>CommandBarButton</Type>
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.ПрослушатьЗапись</CommandName>
 																<Picture>
-																	<xr:Ref>StdPicture.EventLog</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_Прослушать16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
-																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюПрослушатьЗаписьРасширеннаяПодсказка" id="385"/>
+																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюПрослушатьЗаписьРасширеннаяПодсказка" id="430"/>
+															</Button>
+															<Button name="ИсторияЗвонковВходящиеКонтекстноеМенюЗаписьДетально" id="318">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ЗаписьДетально</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.NC_Перевод16</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюЗаписьДетальноРасширеннаяПодсказка" id="431"/>
 															</Button>
 														</ChildItems>
 													</ContextMenu>
 													<AutoCommandBar name="ИсторияЗвонковВходящиеКоманднаяПанель" id="108">
 														<Autofill>false</Autofill>
 													</AutoCommandBar>
-													<ExtendedTooltip name="ИсторияЗвонковВходящиеРасширеннаяПодсказка" id="386"/>
-													<SearchStringAddition name="ИсторияЗвонковВходящиеСтрокаПоиска" id="387">
+													<ExtendedTooltip name="ИсторияЗвонковВходящиеРасширеннаяПодсказка" id="432"/>
+													<SearchStringAddition name="ИсторияЗвонковВходящиеСтрокаПоиска" id="433">
 														<AdditionSource>
 															<Item>ИсторияЗвонковВходящие</Item>
 															<Type>SearchStringRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсторияЗвонковВходящиеСтрокаПоискаКонтекстноеМеню" id="388"/>
-														<ExtendedTooltip name="ИсторияЗвонковВходящиеСтрокаПоискаРасширеннаяПодсказка" id="389"/>
+														<ContextMenu name="ИсторияЗвонковВходящиеСтрокаПоискаКонтекстноеМеню" id="434"/>
+														<ExtendedTooltip name="ИсторияЗвонковВходящиеСтрокаПоискаРасширеннаяПодсказка" id="435"/>
 													</SearchStringAddition>
-													<ViewStatusAddition name="ИсторияЗвонковВходящиеСостояниеПросмотра" id="390">
+													<ViewStatusAddition name="ИсторияЗвонковВходящиеСостояниеПросмотра" id="436">
 														<AdditionSource>
 															<Item>ИсторияЗвонковВходящие</Item>
 															<Type>ViewStatusRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсторияЗвонковВходящиеСостояниеПросмотраКонтекстноеМеню" id="391"/>
-														<ExtendedTooltip name="ИсторияЗвонковВходящиеСостояниеПросмотраРасширеннаяПодсказка" id="392"/>
+														<ContextMenu name="ИсторияЗвонковВходящиеСостояниеПросмотраКонтекстноеМеню" id="437"/>
+														<ExtendedTooltip name="ИсторияЗвонковВходящиеСостояниеПросмотраРасширеннаяПодсказка" id="438"/>
 													</ViewStatusAddition>
-													<SearchControlAddition name="ИсторияЗвонковВходящиеУправлениеПоиском" id="393">
+													<SearchControlAddition name="ИсторияЗвонковВходящиеУправлениеПоиском" id="439">
 														<AdditionSource>
 															<Item>ИсторияЗвонковВходящие</Item>
 															<Type>SearchControl</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсторияЗвонковВходящиеУправлениеПоискомКонтекстноеМеню" id="394"/>
-														<ExtendedTooltip name="ИсторияЗвонковВходящиеУправлениеПоискомРасширеннаяПодсказка" id="395"/>
+														<ContextMenu name="ИсторияЗвонковВходящиеУправлениеПоискомКонтекстноеМеню" id="440"/>
+														<ExtendedTooltip name="ИсторияЗвонковВходящиеУправлениеПоискомРасширеннаяПодсказка" id="441"/>
 													</SearchControlAddition>
 													<Events>
 														<Event name="Selection">ИсторияЗвонковВыбор</Event>
@@ -1378,7 +1602,7 @@
 															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<ContextMenu name="ИсторияЗвонковВходящиеНомерСтрокиКонтекстноеМеню" id="110"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеНомерСтрокиРасширеннаяПодсказка" id="396"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеНомерСтрокиРасширеннаяПодсказка" id="442"/>
 														</LabelField>
 														<InputField name="ИсторияЗвонковВходящиеНомер" id="115">
 															<DataPath>Объект.ИсторияЗвонковВходящие.Номер</DataPath>
@@ -1390,31 +1614,30 @@
 																</v8:item>
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковВходящиеНомерКонтекстноеМеню" id="116"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеНомерРасширеннаяПодсказка" id="397"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеНомерРасширеннаяПодсказка" id="443"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковВходящиеАбонент" id="113">
 															<DataPath>Объект.ИсторияЗвонковВходящие.Абонент</DataPath>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>14</Width>
+															<Width>10</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<MultiLine>true</MultiLine>
 															<ContextMenu name="ИсторияЗвонковВходящиеАбонентКонтекстноеМеню" id="114"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеАбонентРасширеннаяПодсказка" id="398"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеАбонентРасширеннаяПодсказка" id="444"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковВходящиеДата" id="111">
-															<DataPath>Объект.ИсторияЗвонковВходящие.Дата</DataPath>
+															<DataPath>Объект.ИсторияЗвонковВходящие.ВыводДата</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Время</v8:content>
+																	<v8:content>Дата</v8:content>
 																</v8:item>
 															</Title>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>6</Width>
+															<Width>10</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<Format>
 																<v8:item>
@@ -1429,14 +1652,14 @@
 																</v8:item>
 															</EditFormat>
 															<ContextMenu name="ИсторияЗвонковВходящиеДатаКонтекстноеМеню" id="112"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеДатаРасширеннаяПодсказка" id="399"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеДатаРасширеннаяПодсказка" id="445"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковВходящиеТипЗвонка" id="117">
 															<DataPath>Объект.ИсторияЗвонковВходящие.ТипЗвонка</DataPath>
 															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<ContextMenu name="ИсторияЗвонковВходящиеТипЗвонкаКонтекстноеМеню" id="118"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеТипЗвонкаРасширеннаяПодсказка" id="400"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеТипЗвонкаРасширеннаяПодсказка" id="446"/>
 														</InputField>
 														<CheckBoxField name="ИсторияЗвонковВходящиеУспешность" id="132">
 															<DataPath>Объект.ИсторияЗвонковВходящие.Успешность</DataPath>
@@ -1444,19 +1667,19 @@
 															<EditMode>EnterOnInput</EditMode>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ИсторияЗвонковВходящиеУспешностьКонтекстноеМеню" id="133"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеУспешностьРасширеннаяПодсказка" id="401"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеУспешностьРасширеннаяПодсказка" id="447"/>
 														</CheckBoxField>
 														<InputField name="ИсторияЗвонковВходящиеДлительностьЗвонка" id="172">
-															<DataPath>Объект.ИсторияЗвонковВходящие.ДлительностьЗвонка</DataPath>
+															<DataPath>Объект.ИсторияЗвонковВходящие.ВыводДлительностьЗвонка</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>Длительность</v8:content>
 																</v8:item>
 															</Title>
-															<HorizontalAlign>Left</HorizontalAlign>
+															<HorizontalAlign>Right</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>4</Width>
+															<Width>5</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<Format>
 																<v8:item>
@@ -1471,7 +1694,7 @@
 																</v8:item>
 															</EditFormat>
 															<ContextMenu name="ИсторияЗвонковВходящиеДлительностьЗвонкаКонтекстноеМеню" id="173"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеДлительностьЗвонкаРасширеннаяПодсказка" id="402"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеДлительностьЗвонкаРасширеннаяПодсказка" id="448"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковВходящиеКонтактноеЛицо" id="201">
 															<DataPath>Объект.ИсторияЗвонковВходящие.КонтактноеЛицо</DataPath>
@@ -1479,9 +1702,8 @@
 															<HorizontalAlign>Left</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>15</Width>
-															<Font ref="sys:DefaultGUIFont" height="11" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковВходящиеКонтактноеЛицоКонтекстноеМеню" id="202"/>
-															<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтактноеЛицоРасширеннаяПодсказка" id="403"/>
+															<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтактноеЛицоРасширеннаяПодсказка" id="449"/>
 														</InputField>
 													</ChildItems>
 												</Table>
@@ -1501,17 +1723,16 @@
 												</v8:item>
 											</ToolTip>
 											<Picture>
-												<xr:Ref>StdPicture.MoveRight</xr:Ref>
+												<xr:Ref>StdPicture.AppearanceUpInclineArrowGreen</xr:Ref>
 												<xr:LoadTransparent>true</xr:LoadTransparent>
 											</Picture>
-											<ExtendedTooltip name="ГруппаИсторияИсходящиеРасширеннаяПодсказка" id="404"/>
+											<ExtendedTooltip name="ГруппаИсторияИсходящиеРасширеннаяПодсказка" id="450"/>
 											<ChildItems>
 												<Table name="ИсторияЗвонковИсходящие" id="93">
 													<ReadOnly>true</ReadOnly>
 													<SelectionMode>SingleRow</SelectionMode>
 													<VerticalLines>false</VerticalLines>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
-													<InitialListView>Beginning</InitialListView>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
 													<FileDragMode>AsFile</FileDragMode>
@@ -1534,7 +1755,7 @@
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.Информация</CommandName>
 																<Picture>
-																	<xr:Ref>CommonPicture.Информация_0</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
 																	<xr:LoadTransparent>false</xr:LoadTransparent>
 																</Picture>
 																<Title>
@@ -1543,66 +1764,87 @@
 																		<v8:content>Показать информацию</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентКонтекстноеМенюКнопка1РасширеннаяПодсказка" id="405"/>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентКонтекстноеМенюКнопка1РасширеннаяПодсказка" id="451"/>
+															</Button>
+															<Button name="ИсторияЗвонковИсходящиеКонтекстноеМенюОтправкаSMS" id="498">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ОтправкаSMS</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.NC_СМС16</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюОтправкаSMSРасширеннаяПодсказка" id="499"/>
 															</Button>
 															<Button name="ИсторияЗвонковИсходящиеКонтекстноеМенюСоздатьКонтрагента" id="179">
 																<Type>CommandBarButton</Type>
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.СоздатьКонтрагента</CommandName>
 																<Picture>
-																	<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_Создать16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
-																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюСоздатьКонтрагентаРасширеннаяПодсказка" id="406"/>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюСоздатьКонтрагентаРасширеннаяПодсказка" id="452"/>
 															</Button>
 															<Button name="ИсторияЗвонковИсходящиеКонтекстноеМенюДобавитьНомер" id="180">
 																<Type>CommandBarButton</Type>
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.ДобавитьНомер</CommandName>
 																<Picture>
-																	<xr:Ref>StdPicture.DocumentJournal</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_Контакт16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
-																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюДобавитьНомерРасширеннаяПодсказка" id="407"/>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюДобавитьНомерРасширеннаяПодсказка" id="453"/>
 															</Button>
 															<Button name="ИсторияЗвонковИсходящиеКонтекстноеМенюПрослушатьЗапись" id="182">
 																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.ПрослушатьЗапись</CommandName>
 																<Picture>
-																	<xr:Ref>StdPicture.EventLog</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_Прослушать16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
-																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюПрослушатьЗаписьРасширеннаяПодсказка" id="408"/>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюПрослушатьЗаписьРасширеннаяПодсказка" id="454"/>
+															</Button>
+															<Button name="ИсторияЗвонковИсходящиеКонтекстноеМенюЗаписьДетально" id="319">
+																<Type>CommandBarButton</Type>
+																<Representation>PictureAndText</Representation>
+																<CommandName>Form.Command.ЗаписьДетально</CommandName>
+																<Picture>
+																	<xr:Ref>CommonPicture.NC_Перевод16</xr:Ref>
+																	<xr:LoadTransparent>true</xr:LoadTransparent>
+																</Picture>
+																<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтекстноеМенюЗаписьДетальноРасширеннаяПодсказка" id="455"/>
 															</Button>
 														</ChildItems>
 													</ContextMenu>
 													<AutoCommandBar name="ИсторияЗвонковИсходящиеКоманднаяПанель" id="95">
 														<Autofill>false</Autofill>
 													</AutoCommandBar>
-													<ExtendedTooltip name="ИсторияЗвонковИсходящиеРасширеннаяПодсказка" id="409"/>
-													<SearchStringAddition name="ИсторияЗвонковИсходящиеСтрокаПоиска" id="410">
+													<ExtendedTooltip name="ИсторияЗвонковИсходящиеРасширеннаяПодсказка" id="456"/>
+													<SearchStringAddition name="ИсторияЗвонковИсходящиеСтрокаПоиска" id="457">
 														<AdditionSource>
 															<Item>ИсторияЗвонковИсходящие</Item>
 															<Type>SearchStringRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсторияЗвонковИсходящиеСтрокаПоискаКонтекстноеМеню" id="411"/>
-														<ExtendedTooltip name="ИсторияЗвонковИсходящиеСтрокаПоискаРасширеннаяПодсказка" id="412"/>
+														<ContextMenu name="ИсторияЗвонковИсходящиеСтрокаПоискаКонтекстноеМеню" id="458"/>
+														<ExtendedTooltip name="ИсторияЗвонковИсходящиеСтрокаПоискаРасширеннаяПодсказка" id="459"/>
 													</SearchStringAddition>
-													<ViewStatusAddition name="ИсторияЗвонковИсходящиеСостояниеПросмотра" id="413">
+													<ViewStatusAddition name="ИсторияЗвонковИсходящиеСостояниеПросмотра" id="460">
 														<AdditionSource>
 															<Item>ИсторияЗвонковИсходящие</Item>
 															<Type>ViewStatusRepresentation</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсторияЗвонковИсходящиеСостояниеПросмотраКонтекстноеМеню" id="414"/>
-														<ExtendedTooltip name="ИсторияЗвонковИсходящиеСостояниеПросмотраРасширеннаяПодсказка" id="415"/>
+														<ContextMenu name="ИсторияЗвонковИсходящиеСостояниеПросмотраКонтекстноеМеню" id="461"/>
+														<ExtendedTooltip name="ИсторияЗвонковИсходящиеСостояниеПросмотраРасширеннаяПодсказка" id="462"/>
 													</ViewStatusAddition>
-													<SearchControlAddition name="ИсторияЗвонковИсходящиеУправлениеПоиском" id="416">
+													<SearchControlAddition name="ИсторияЗвонковИсходящиеУправлениеПоиском" id="463">
 														<AdditionSource>
 															<Item>ИсторияЗвонковИсходящие</Item>
 															<Type>SearchControl</Type>
 														</AdditionSource>
-														<ContextMenu name="ИсторияЗвонковИсходящиеУправлениеПоискомКонтекстноеМеню" id="417"/>
-														<ExtendedTooltip name="ИсторияЗвонковИсходящиеУправлениеПоискомРасширеннаяПодсказка" id="418"/>
+														<ContextMenu name="ИсторияЗвонковИсходящиеУправлениеПоискомКонтекстноеМеню" id="464"/>
+														<ExtendedTooltip name="ИсторияЗвонковИсходящиеУправлениеПоискомРасширеннаяПодсказка" id="465"/>
 													</SearchControlAddition>
 													<Events>
 														<Event name="Selection">ИсторияЗвонковВыбор</Event>
@@ -1613,7 +1855,7 @@
 															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<ContextMenu name="ИсторияЗвонковИсходящиеНомерСтрокиКонтекстноеМеню" id="97"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеНомерСтрокиРасширеннаяПодсказка" id="419"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеНомерСтрокиРасширеннаяПодсказка" id="466"/>
 														</LabelField>
 														<InputField name="ИсторияЗвонковИсходящиеНомер" id="102">
 															<DataPath>Объект.ИсторияЗвонковИсходящие.Номер</DataPath>
@@ -1625,33 +1867,32 @@
 																</v8:item>
 															</Title>
 															<EditMode>EnterOnInput</EditMode>
-															<Font ref="sys:DefaultGUIFont" faceName="MS Shell Dlg" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковИсходящиеНомерКонтекстноеМеню" id="103"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеНомерРасширеннаяПодсказка" id="420"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеНомерРасширеннаяПодсказка" id="467"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковИсходящиеАбонент" id="100">
 															<DataPath>Объект.ИсторияЗвонковИсходящие.Абонент</DataPath>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>14</Width>
+															<Width>10</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<MultiLine>true</MultiLine>
 															<ChoiceButton>true</ChoiceButton>
 															<SpinButton>true</SpinButton>
 															<ContextMenu name="ИсторияЗвонковИсходящиеАбонентКонтекстноеМеню" id="101"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентРасширеннаяПодсказка" id="421"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеАбонентРасширеннаяПодсказка" id="468"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковИсходящиеДата" id="98">
-															<DataPath>Объект.ИсторияЗвонковИсходящие.Дата</DataPath>
+															<DataPath>Объект.ИсторияЗвонковИсходящие.ВыводДата</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Время</v8:content>
+																	<v8:content>Дата</v8:content>
 																</v8:item>
 															</Title>
 															<HorizontalAlign>Left</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>6</Width>
+															<Width>10</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<Format>
 																<v8:item>
@@ -1666,14 +1907,14 @@
 																</v8:item>
 															</EditFormat>
 															<ContextMenu name="ИсторияЗвонковИсходящиеДатаКонтекстноеМеню" id="99"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеДатаРасширеннаяПодсказка" id="422"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеДатаРасширеннаяПодсказка" id="469"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковИсходящиеТипЗвонка" id="104">
 															<DataPath>Объект.ИсторияЗвонковИсходящие.ТипЗвонка</DataPath>
 															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<ContextMenu name="ИсторияЗвонковИсходящиеТипЗвонкаКонтекстноеМеню" id="105"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеТипЗвонкаРасширеннаяПодсказка" id="423"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеТипЗвонкаРасширеннаяПодсказка" id="470"/>
 														</InputField>
 														<CheckBoxField name="ИсторияЗвонковИсходящиеУспешность" id="130">
 															<DataPath>Объект.ИсторияЗвонковИсходящие.Успешность</DataPath>
@@ -1681,19 +1922,19 @@
 															<EditMode>EnterOnInput</EditMode>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ИсторияЗвонковИсходящиеУспешностьКонтекстноеМеню" id="131"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеУспешностьРасширеннаяПодсказка" id="424"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеУспешностьРасширеннаяПодсказка" id="471"/>
 														</CheckBoxField>
 														<InputField name="ИсторияЗвонковИсходящиеДлительностьЗвонка" id="174">
-															<DataPath>Объект.ИсторияЗвонковИсходящие.ДлительностьЗвонка</DataPath>
+															<DataPath>Объект.ИсторияЗвонковИсходящие.ВыводДлительностьЗвонка</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>Длительность</v8:content>
 																</v8:item>
 															</Title>
-															<HorizontalAlign>Left</HorizontalAlign>
+															<HorizontalAlign>Right</HorizontalAlign>
 															<EditMode>EnterOnInput</EditMode>
-															<Width>4</Width>
+															<Width>5</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<Format>
 																<v8:item>
@@ -1708,16 +1949,15 @@
 																</v8:item>
 															</EditFormat>
 															<ContextMenu name="ИсторияЗвонковИсходящиеДлительностьЗвонкаКонтекстноеМеню" id="175"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеДлительностьЗвонкаРасширеннаяПодсказка" id="425"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеДлительностьЗвонкаРасширеннаяПодсказка" id="472"/>
 														</InputField>
 														<InputField name="ИсторияЗвонковИсходящиеКонтактноеЛицо" id="203">
 															<DataPath>Объект.ИсторияЗвонковИсходящие.КонтактноеЛицо</DataPath>
 															<Visible>false</Visible>
 															<EditMode>EnterOnInput</EditMode>
 															<Width>15</Width>
-															<Font ref="sys:DefaultGUIFont" height="11" kind="WindowsFont"/>
 															<ContextMenu name="ИсторияЗвонковИсходящиеКонтактноеЛицоКонтекстноеМеню" id="204"/>
-															<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтактноеЛицоРасширеннаяПодсказка" id="426"/>
+															<ExtendedTooltip name="ИсторияЗвонковИсходящиеКонтактноеЛицоРасширеннаяПодсказка" id="473"/>
 														</InputField>
 													</ChildItems>
 												</Table>
@@ -1740,10 +1980,14 @@
 									<v8:content>Группа панель избранное</v8:content>
 								</v8:item>
 							</ToolTip>
-							<ExtendedTooltip name="ГруппаПанельИзбранноеРасширеннаяПодсказка" id="427"/>
+							<Picture>
+								<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаПанельИзбранноеРасширеннаяПодсказка" id="474"/>
 							<ChildItems>
 								<Table name="Избранное" id="152">
-									<InitialListView>Beginning</InitialListView>
+									<Width>1</Width>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
 									<FileDragMode>AsFile</FileDragMode>
@@ -1753,7 +1997,6 @@
 										<xr:Ref>CommonPicture.NC_бит_Статусы</xr:Ref>
 										<xr:LoadTransparent>false</xr:LoadTransparent>
 									</RowsPicture>
-									<Font ref="sys:DefaultGUIFont" height="9" kind="WindowsFont"/>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
@@ -1772,7 +2015,7 @@
 													<xr:Ref>StdPicture.CreateListItem</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="ИзбранноеСоздатьРасширеннаяПодсказка" id="428"/>
+												<ExtendedTooltip name="ИзбранноеСоздатьРасширеннаяПодсказка" id="475"/>
 											</Button>
 											<Button name="ИзбранноеСкопировать" id="171">
 												<Type>CommandBarButton</Type>
@@ -1782,7 +2025,7 @@
 													<xr:Ref>StdPicture.CloneListItem</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="ИзбранноеСкопироватьРасширеннаяПодсказка" id="429"/>
+												<ExtendedTooltip name="ИзбранноеСкопироватьРасширеннаяПодсказка" id="476"/>
 											</Button>
 											<Button name="ИзбранноеИзменить" id="166">
 												<Type>CommandBarButton</Type>
@@ -1792,7 +2035,7 @@
 													<xr:Ref>StdPicture.Change</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="ИзбранноеИзменитьРасширеннаяПодсказка" id="430"/>
+												<ExtendedTooltip name="ИзбранноеИзменитьРасширеннаяПодсказка" id="477"/>
 											</Button>
 											<Button name="ИзбранноеУдалить" id="168">
 												<Type>CommandBarButton</Type>
@@ -1802,19 +2045,19 @@
 													<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="ИзбранноеУдалитьРасширеннаяПодсказка" id="431"/>
+												<ExtendedTooltip name="ИзбранноеУдалитьРасширеннаяПодсказка" id="478"/>
 											</Button>
 											<Button name="ИзбранноеНайти" id="271">
 												<Type>CommandBarButton</Type>
 												<Representation>Picture</Representation>
 												<CommandName>Form.Item.Избранное.StandardCommand.Find</CommandName>
-												<ExtendedTooltip name="ИзбранноеНайтиРасширеннаяПодсказка" id="432"/>
+												<ExtendedTooltip name="ИзбранноеНайтиРасширеннаяПодсказка" id="479"/>
 											</Button>
 											<Button name="ИзбранноеОтменитьПоиск" id="272">
 												<Type>CommandBarButton</Type>
 												<Representation>Picture</Representation>
 												<CommandName>Form.Item.Избранное.StandardCommand.CancelSearch</CommandName>
-												<ExtendedTooltip name="ИзбранноеОтменитьПоискРасширеннаяПодсказка" id="433"/>
+												<ExtendedTooltip name="ИзбранноеОтменитьПоискРасширеннаяПодсказка" id="480"/>
 											</Button>
 											<Button name="ИзбранноеОбновить" id="270">
 												<Type>CommandBarButton</Type>
@@ -1824,44 +2067,44 @@
 													<xr:Ref>StdPicture.Refresh</xr:Ref>
 													<xr:LoadTransparent>true</xr:LoadTransparent>
 												</Picture>
-												<ExtendedTooltip name="ИзбранноеОбновитьРасширеннаяПодсказка" id="434"/>
+												<ExtendedTooltip name="ИзбранноеОбновитьРасширеннаяПодсказка" id="481"/>
 											</Button>
 											<Button name="ИзбранноеСортироватьПоВозрастанию" id="273">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Item.Избранное.StandardCommand.SortListAsc</CommandName>
-												<ExtendedTooltip name="ИзбранноеСортироватьПоВозрастаниюРасширеннаяПодсказка" id="435"/>
+												<ExtendedTooltip name="ИзбранноеСортироватьПоВозрастаниюРасширеннаяПодсказка" id="482"/>
 											</Button>
 											<Button name="ИзбранноеСортироватьПоУбыванию" id="274">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Item.Избранное.StandardCommand.SortListDesc</CommandName>
-												<ExtendedTooltip name="ИзбранноеСортироватьПоУбываниюРасширеннаяПодсказка" id="436"/>
+												<ExtendedTooltip name="ИзбранноеСортироватьПоУбываниюРасширеннаяПодсказка" id="483"/>
 											</Button>
 										</ChildItems>
 									</AutoCommandBar>
-									<ExtendedTooltip name="ИзбранноеРасширеннаяПодсказка" id="437"/>
-									<SearchStringAddition name="ИзбранноеСтрокаПоиска" id="438">
+									<ExtendedTooltip name="ИзбранноеРасширеннаяПодсказка" id="484"/>
+									<SearchStringAddition name="ИзбранноеСтрокаПоиска" id="485">
 										<AdditionSource>
 											<Item>Избранное</Item>
 											<Type>SearchStringRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="ИзбранноеСтрокаПоискаКонтекстноеМеню" id="439"/>
-										<ExtendedTooltip name="ИзбранноеСтрокаПоискаРасширеннаяПодсказка" id="440"/>
+										<ContextMenu name="ИзбранноеСтрокаПоискаКонтекстноеМеню" id="486"/>
+										<ExtendedTooltip name="ИзбранноеСтрокаПоискаРасширеннаяПодсказка" id="487"/>
 									</SearchStringAddition>
-									<ViewStatusAddition name="ИзбранноеСостояниеПросмотра" id="441">
+									<ViewStatusAddition name="ИзбранноеСостояниеПросмотра" id="488">
 										<AdditionSource>
 											<Item>Избранное</Item>
 											<Type>ViewStatusRepresentation</Type>
 										</AdditionSource>
-										<ContextMenu name="ИзбранноеСостояниеПросмотраКонтекстноеМеню" id="442"/>
-										<ExtendedTooltip name="ИзбранноеСостояниеПросмотраРасширеннаяПодсказка" id="443"/>
+										<ContextMenu name="ИзбранноеСостояниеПросмотраКонтекстноеМеню" id="489"/>
+										<ExtendedTooltip name="ИзбранноеСостояниеПросмотраРасширеннаяПодсказка" id="490"/>
 									</ViewStatusAddition>
-									<SearchControlAddition name="ИзбранноеУправлениеПоиском" id="444">
+									<SearchControlAddition name="ИзбранноеУправлениеПоиском" id="491">
 										<AdditionSource>
 											<Item>Избранное</Item>
 											<Type>SearchControl</Type>
 										</AdditionSource>
-										<ContextMenu name="ИзбранноеУправлениеПоискомКонтекстноеМеню" id="445"/>
-										<ExtendedTooltip name="ИзбранноеУправлениеПоискомРасширеннаяПодсказка" id="446"/>
+										<ContextMenu name="ИзбранноеУправлениеПоискомКонтекстноеМеню" id="492"/>
+										<ExtendedTooltip name="ИзбранноеУправлениеПоискомРасширеннаяПодсказка" id="493"/>
 									</SearchControlAddition>
 									<Events>
 										<Event name="Selection">ИзбранноеВыбор</Event>
@@ -1875,11 +2118,9 @@
 													<v8:content>Имя</v8:content>
 												</v8:item>
 											</Title>
-											<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 											<HorizontalStretch>false</HorizontalStretch>
-											<Font ref="style:NormalTextFont" kind="StyleItem"/>
 											<ContextMenu name="ИзбранноеНаименованиеКонтекстноеМеню" id="156"/>
-											<ExtendedTooltip name="ИзбранноеНаименованиеРасширеннаяПодсказка" id="447"/>
+											<ExtendedTooltip name="ИзбранноеНаименованиеРасширеннаяПодсказка" id="494"/>
 										</LabelField>
 										<LabelField name="ИзбранноеНомер" id="161">
 											<DataPath>Избранное.Номер</DataPath>
@@ -1889,11 +2130,9 @@
 													<v8:content>Номер</v8:content>
 												</v8:item>
 											</Title>
-											<TitleFont ref="style:NormalTextFont" kind="StyleItem"/>
 											<HorizontalStretch>false</HorizontalStretch>
-											<Font ref="style:NormalTextFont" kind="StyleItem"/>
 											<ContextMenu name="ИзбранноеНомерКонтекстноеМеню" id="162"/>
-											<ExtendedTooltip name="ИзбранноеНомерРасширеннаяПодсказка" id="448"/>
+											<ExtendedTooltip name="ИзбранноеНомерРасширеннаяПодсказка" id="495"/>
 										</LabelField>
 									</ChildItems>
 								</Table>
@@ -2116,6 +2355,17 @@
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
 				</Column>
+				<Column name="ПометкаУдаления" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ИдетЗапись" id="13">
@@ -2140,44 +2390,11 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="ИспользуетсяСтационарныйТелефон" id="9">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Используется стационарный телефон</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="УсловнаяПереадресация" id="19">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Условная переадресация</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ВызовУдержан" id="21">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вызов удержан</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ИдетВоспроизведение" id="14">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Идет воспроизведение</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2199,7 +2416,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ЛинияАбонент" id="30">
+		<Attribute name="Линия1Абонент" id="30">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2215,7 +2432,7 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ЛинияКонтактноеЛицо" id="31">
+		<Attribute name="Линия1КонтактноеЛицо" id="31">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2296,28 +2513,6 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Линия в конференции</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="МикрофонОтключенВручную" id="20">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Микрофон отключен вручную</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="ГромкостьОтключенаВручную" id="27">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Громкость отключена вручную</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2429,7 +2624,245 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ФормаМероприятие" id="35">
+		<Attribute name="ТекущееНачалоДня" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее начало дня</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия1ПереведенОтАбонент" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия2Абонент" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия3Абонент" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия4Абонент" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия2КонтактноеЛицо" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия3КонтактноеЛицо" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия4КонтактноеЛицо" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия1ПереведенОтКонтактноеЛицо" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия2ПереведенОтАбонент" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия3ПереведенОтАбонент" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия4ПереведенОтАбонент" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абонент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия2ПереведенОтКонтактноеЛицо" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия3ПереведенОтКонтактноеЛицо" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Линия4ПереведенОтКонтактноеЛицо" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контактное лицо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФормаМероприятие" id="9">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2440,7 +2873,7 @@
 				<v8:Type>v8:UUID</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="СостояниеЗвонка" id="36">
+		<Attribute name="СостояниеЗвонка" id="14">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -2528,46 +2961,6 @@
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
-						<dcsset:field>кнСтационарныйТел</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">ИспользуетсяСтационарныйТелефон</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">web:LightSlateBlue</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
-						<dcsset:field>КнПереводЗвонка</dcsset:field>
-					</dcsset:item>
-				</dcsset:selection>
-				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">УсловнаяПереадресация</dcsset:left>
-						<dcsset:comparisonType>Equal</dcsset:comparisonType>
-						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
-					</dcsset:item>
-				</dcsset:filter>
-				<dcsset:appearance>
-					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-						<dcscor:parameter>ЦветФона</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Color">#00CCFF</dcscor:value>
-					</dcscor:item>
-				</dcsset:appearance>
-			</dcsset:item>
-			<dcsset:item>
-				<dcsset:selection>
-					<dcsset:item>
 						<dcsset:field>КнУдержатьВызов</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
@@ -2625,6 +3018,35 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ИсторияЗвонковИсходящиеАбонент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ИсторияЗвонковИсходящиеДата</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ИсторияЗвонковИсходящиеДлительностьЗвонка</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ИсторияЗвонковИсходящиеКонтактноеЛицо</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ИсторияЗвонковИсходящие.Успешность</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -2642,7 +3064,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НачатьРазговорКл</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнОтбой" id="3">
 			<Title>
@@ -2658,7 +3079,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнОтбой</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Кн1" id="5">
 			<Title>
@@ -2669,7 +3089,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 1</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн2" id="6">
 			<Title>
@@ -2680,7 +3099,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 2</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн3" id="7">
 			<Title>
@@ -2691,7 +3109,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 3</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн4" id="8">
 			<Title>
@@ -2702,7 +3119,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 4</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн5" id="9">
 			<Title>
@@ -2713,7 +3129,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 5</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн6" id="10">
 			<Title>
@@ -2724,7 +3139,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 6</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн7" id="11">
 			<Title>
@@ -2735,7 +3149,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 7</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн8" id="12">
 			<Title>
@@ -2746,7 +3159,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 8</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кн9" id="13">
 			<Title>
@@ -2757,7 +3169,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 9</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Кн0" id="14">
 			<Title>
@@ -2768,7 +3179,6 @@
 			</Title>
 			<Shortcut>Ctrl+Num 0</Shortcut>
 			<Action>КН1</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнКонтакты" id="15">
 			<Title>
@@ -2784,7 +3194,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнКонтакты</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КНЗВ" id="16">
 			<Title>
@@ -2793,8 +3202,8 @@
 					<v8:content>*</v8:content>
 				</v8:item>
 			</Title>
+			<Shortcut>Ctrl+Num *</Shortcut>
 			<Action>КНЗВ</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КНРеш" id="17">
 			<Title>
@@ -2803,8 +3212,8 @@
 					<v8:content>#</v8:content>
 				</v8:item>
 			</Title>
+			<Shortcut>Ctrl+Num .</Shortcut>
 			<Action>КНРеш</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнОМик" id="18">
 			<Title>
@@ -2820,7 +3229,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнОМик</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнОГр" id="19">
 			<Title>
@@ -2836,7 +3244,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнОГр</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнУдалитьПоследнийСимволНомера" id="22">
 			<Title>
@@ -2852,7 +3259,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнУдалитьПоследнийСимволНомера</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнУдержатьВызов" id="4">
 			<Title>
@@ -2868,7 +3274,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнУдержатьВызов</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнПереводЗвонка" id="23">
 			<Title>
@@ -2884,7 +3289,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнПереводЗвонка</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьВсюИсторию" id="2">
 			<Title>
@@ -2900,7 +3304,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьВсюИсторию</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Информация" id="20">
 			<Title>
@@ -2916,7 +3319,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Информация</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнSMS" id="21">
 			<Title>
@@ -2932,7 +3334,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнSMS</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнФакс" id="24">
 			<Title>
@@ -2948,7 +3349,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнФакс</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнЗаписьРазговора" id="25">
 			<Title>
@@ -2965,7 +3365,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнЗаписьРазговора</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнПодключить" id="26">
 			<Title>
@@ -2981,7 +3380,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПодключить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнОтключить" id="27">
 			<Title>
@@ -2997,7 +3395,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнОтключить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнПереподключить" id="28">
 			<Title>
@@ -3013,7 +3410,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнПереподключить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнНастройки" id="29">
 			<Title>
@@ -3029,7 +3425,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнНастройки</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзбранноеСоздать" id="32">
 			<Title>
@@ -3045,7 +3440,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзбранноеСоздать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзбранноеСкопировать" id="34">
 			<Title>
@@ -3061,7 +3455,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзбранноеСкопировать</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзбранноеИзменить" id="35">
 			<Title>
@@ -3077,7 +3470,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзбранноеИзменить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="кнНеБеспокоить" id="33">
 			<Title>
@@ -3093,7 +3485,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>кнНеБеспокоить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьКонтрагента" id="36">
 			<Title>
@@ -3109,7 +3500,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьКонтрагента</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьНомер" id="37">
 			<Title>
@@ -3125,7 +3515,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьНомер</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КнСтационарныйТелефон" id="30">
 			<Title>
@@ -3141,7 +3530,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнСтационарныйТелефон</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПрослушатьЗапись" id="31">
 			<Title>
@@ -3157,7 +3545,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПрослушатьЗапись</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПринятьВходящий" id="38">
 			<Title>
@@ -3178,7 +3565,6 @@
 			</Picture>
 			<Action>КнПринятьВходящий</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтклонитьВходящий" id="39">
 			<Title>
@@ -3199,7 +3585,6 @@
 			</Picture>
 			<Action>КнОтклонитьВходящий</Action>
 			<Representation>TextPicture</Representation>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДополнительнаяИнформацияОЗвонке" id="41">
 			<Title>
@@ -3215,23 +3600,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДополнительнаяИнформацияОЗвонке</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзбранноеУдалить" id="42">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Избранное удалить</v8:content>
+					<v8:content>Пометить на удаление/снять пометку</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Избранное удалить</v8:content>
+					<v8:content>Пометить на удаление/снять пометку</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ИзбранноеУдалить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИзбранноеОбновить" id="43">
 			<Title>
@@ -3247,7 +3630,55 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ИзбранноеОбновить</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаписьДетально" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробности</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запись детально</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FormHelp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИсторияЗвонковЗаписьДетально</Action>
+		</Command>
+		<Command name="ОтправкаSMS" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить SMS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправка SMS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияЗвонковОтправкаSMS</Action>
+		</Command>
+		<Command name="АналитикаАТС" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика АТС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть Аналитику БИТ.АТС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>АналитикаАТС</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Решение</dataPath>
+			<field>Решение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Займ</dataPath>
+			<field>Займ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗадолженности</dataPath>
+			<field>ТипЗадолженности</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Стадия</dataPath>
+			<field>Стадия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стадия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧастьРешения</dataPath>
+			<field>ЧастьРешения</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.Объект КАК Объект,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.СуммаДООстаток КАК СуммаДООстаток,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ОсновнойДолгДООстаток КАК ОсновнойДолгДООстаток,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ПроцентыДООстаток КАК ПроцентыДООстаток,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ШтрафыДООстаток КАК ШтрафыДООстаток,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ПениДООстаток КАК ПениДООстаток
+ПОМЕСТИТЬ втВнесудебка
+ИЗ
+	РегистрНакопления.ЗадолженностьПоОбъектамВнесудебная.Остатки(, Объект = &amp;ДолговоеОбязательство) КАК ЗадолженностьПоОбъектамВнесудебнаяОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсковыеТребованияОстатки.Займ КАК Займ,
+	ИсковыеТребованияОстатки.СуммаОсновнойДолгОстаток КАК СуммаОсновнойДолгОстаток,
+	ИсковыеТребованияОстатки.СуммаПроцентыОстаток КАК СуммаПроцентыОстаток,
+	ИсковыеТребованияОстатки.СуммаШтрафыОстаток КАК СуммаШтрафыОстаток,
+	ИсковыеТребованияОстатки.СуммаПениОстаток КАК СуммаПениОстаток,
+	ИсковыеТребованияОстатки.ЦенаИскаОстаток КАК ЦенаИскаОстаток,
+	ИсковыеТребованияОстатки.СуммаГоспошлинаОстаток КАК СуммаГоспошлинаОстаток
+ПОМЕСТИТЬ втОстаткиПодано
+ИЗ
+	РегистрНакопления.ИсковыеТребования.Остатки(, Займ = &amp;ДолговоеОбязательство) КАК ИсковыеТребованияОстатки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.Объект КАК Объект,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ОсновнойДолгДООстаток КАК Сумма,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.ОсновнойДолг) КАК ТипЗадолженности,
+	"Внесудебная" КАК Стадия
+ИЗ
+	втВнесудебка КАК ЗадолженностьПоОбъектамВнесудебнаяОстатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.Объект,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ПроцентыДООстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Проценты),
+	"Внесудебная"
+ИЗ
+	втВнесудебка КАК ЗадолженностьПоОбъектамВнесудебнаяОстатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.Объект,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ШтрафыДООстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Штрафы),
+	"Внесудебная"
+ИЗ
+	втВнесудебка КАК ЗадолженностьПоОбъектамВнесудебнаяОстатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.Объект,
+	ЗадолженностьПоОбъектамВнесудебнаяОстатки.ПениДООстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Пени),
+	"Внесудебная"
+ИЗ
+	втВнесудебка КАК ЗадолженностьПоОбъектамВнесудебнаяОстатки
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ЗадолженностьПоСудебнымРешениямОстатки.Займ,
+	ЗадолженностьПоСудебнымРешениямОстатки.СуммаОстаток,
+	ЗадолженностьПоСудебнымРешениямОстатки.ТипЗадолженности,
+	"Просужено"
+ИЗ
+	РегистрНакопления.ЗадолженностьПоСудебнымРешениям.Остатки КАК ЗадолженностьПоСудебнымРешениямОстатки
+ГДЕ
+	ЗадолженностьПоСудебнымРешениямОстатки.Займ = &amp;ДолговоеОбязательство
+	И ЗадолженностьПоСудебнымРешениямОстатки.ТипЗадолженности &lt;&gt; ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Сумма)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втОстаткиПодано.Займ,
+	втОстаткиПодано.СуммаОсновнойДолгОстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.ОсновнойДолг),
+	"Подано"
+ИЗ
+	втОстаткиПодано КАК втОстаткиПодано
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втОстаткиПодано.Займ,
+	втОстаткиПодано.СуммаПроцентыОстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Проценты),
+	"Подано"
+ИЗ
+	втОстаткиПодано КАК втОстаткиПодано
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втОстаткиПодано.Займ,
+	втОстаткиПодано.СуммаШтрафыОстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Штрафы),
+	"Подано"
+ИЗ
+	втОстаткиПодано КАК втОстаткиПодано
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втОстаткиПодано.Займ,
+	втОстаткиПодано.СуммаПениОстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Пени),
+	"Подано"
+ИЗ
+	втОстаткиПодано КАК втОстаткиПодано
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	втОстаткиПодано.Займ,
+	втОстаткиПодано.СуммаГоспошлинаОстаток,
+	ЗНАЧЕНИЕ(ПланВидовХарактеристик.ТипыЗадолженностиПоРешению.Госпошлина),
+	"Подано"
+ИЗ
+	втОстаткиПодано КАК втОстаткиПодано</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДолговоеОбязательство</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Долговое обязательство</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДолговыеОбязательства</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТипЗадолженности</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Стадия</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сумма</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДолговоеОбязательство</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>ce9d0558-4231-474b-9e80-4e1010f3c939</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ТипЗадолженности.Код</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Стадия</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипЗадолженности</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ТипЗадолженности.Код</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:point>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Стадия</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:point>
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипЗадолженности</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartType">Column</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

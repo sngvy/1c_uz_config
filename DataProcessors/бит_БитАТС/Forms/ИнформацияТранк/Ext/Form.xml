@@ -11,15 +11,13 @@
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
-		<Event name="ExternalEvent">ВнешнееСобытие</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="ИмяТранка" id="7">
 			<DataPath>ИмяТранка</DataPath>
 			<ReadOnly>true</ReadOnly>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="ИмяТранкаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ИмяТранкаРасширеннаяПодсказка" id="21"/>
 		</InputField>
@@ -127,8 +125,6 @@
 		<InputField name="ВсегоРазговоров" id="9">
 			<DataPath>ВсегоРазговоров</DataPath>
 			<ReadOnly>true</ReadOnly>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="ВсегоРазговоровКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="ВсегоРазговоровРасширеннаяПодсказка" id="39"/>
 		</InputField>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="Применить" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Применить</CommandName>
+				<ExtendedTooltip name="ПрименитьРасширеннаяПодсказка" id="5"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="СпособЛицензирования" id="1">
+			<DataPath>СпособЛицензирования</DataPath>
+			<TitleFont ref="style:ШрифтТекстРеквизитов" kind="StyleItem"/>
+			<TitleLocation>Top</TitleLocation>
+			<TextColor>style:ЦветВажнойНадписи</TextColor>
+			<Font ref="style:ШрифтТекстРеквизитов" kind="StyleItem"/>
+			<ContextMenu name="СпособЛицензированияКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СпособЛицензированияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВерсияПрограммы" id="6">
+			<DataPath>ВерсияПрограммы</DataPath>
+			<TitleFont ref="style:ШрифтТекстРеквизитов" kind="StyleItem"/>
+			<TitleLocation>Top</TitleLocation>
+			<TextColor>style:ЦветВажнойНадписи</TextColor>
+			<Font ref="style:ШрифтТекстРеквизитов" kind="StyleItem"/>
+			<ContextMenu name="ВерсияПрограммыКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="ВерсияПрограммыРасширеннаяПодсказка" id="8"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СпособЛицензирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ лицензирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СистемыЛицензирования</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияПрограммы" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия программы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВерсииПрограммы</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Применить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Применить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Применить</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -8,6 +8,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -53,6 +54,9 @@
 					<AutoMaxHeight>false</AutoMaxHeight>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="167"/>
+					<Events>
+						<Event name="OnChange">НаименованиеПриИзменении</Event>
+					</Events>
 				</InputField>
 				<InputField name="Код" id="1">
 					<DataPath>Объект.Code</DataPath>
@@ -75,6 +79,11 @@
 				<Event name="Clearing">ПоказыватьНаПримереДокументаОчистка</Event>
 				<Event name="ChoiceProcessing">ПоказыватьНаПримереДокументаОбработкаВыбора</Event>
 			</Events>
+		</InputField>
+		<InputField name="ТипДокумента" id="273">
+			<DataPath>Объект.ТипДокумента</DataPath>
+			<ContextMenu name="ТипДокументаКонтекстноеМеню" id="274"/>
+			<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="275"/>
 		</InputField>
 		<InputField name="ПутьКШаблонуWord" id="11">
 			<DataPath>Объект.ПутьКШаблонуWord</DataPath>
@@ -199,6 +208,10 @@
 					<AutoMaxHeight>false</AutoMaxHeight>
 					<ContextMenu name="НачалоТегаКонтекстноеМеню" id="153"/>
 					<ExtendedTooltip name="НачалоТегаExtendedTooltip" id="178"/>
+					<Events>
+						<Event name="OnChange">НачалоТегаПриИзменении</Event>
+						<Event name="TextEditEnd">НачалоТегаОкончаниеВводаТекста</Event>
+					</Events>
 				</InputField>
 				<InputField name="КонецТега" id="154">
 					<DataPath>Объект.КонецТега</DataPath>
@@ -206,6 +219,10 @@
 					<AutoMaxHeight>false</AutoMaxHeight>
 					<ContextMenu name="КонецТегаКонтекстноеМеню" id="155"/>
 					<ExtendedTooltip name="КонецТегаExtendedTooltip" id="179"/>
+					<Events>
+						<Event name="OnChange">КонецТегаПриИзменении</Event>
+						<Event name="TextEditEnd">КонецТегаОкончаниеВводаТекста</Event>
+					</Events>
 				</InputField>
 				<InputField name="ТипПрикрепляемогоФайла" id="253">
 					<DataPath>Объект.ТипПрикрепляемогоФайла</DataPath>
@@ -293,6 +310,108 @@
 					</Title>
 					<ExtendedTooltip name="ГруппаРеквизитыИСвойстваExtendedTooltip" id="181"/>
 					<ChildItems>
+						<Table name="ОбластиШаблона" id="278">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОбластиШаблона</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбластиШаблонаКонтекстноеМеню" id="279"/>
+							<AutoCommandBar name="ОбластиШаблонаКоманднаяПанель" id="280"/>
+							<ExtendedTooltip name="ОбластиШаблонаРасширеннаяПодсказка" id="281"/>
+							<SearchStringAddition name="ОбластиШаблонаСтрокаПоиска" id="282">
+								<AdditionSource>
+									<Item>ОбластиШаблона</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбластиШаблонаСтрокаПоискаКонтекстноеМеню" id="283"/>
+								<ExtendedTooltip name="ОбластиШаблонаСтрокаПоискаРасширеннаяПодсказка" id="284"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбластиШаблонаСостояниеПросмотра" id="285">
+								<AdditionSource>
+									<Item>ОбластиШаблона</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбластиШаблонаСостояниеПросмотраКонтекстноеМеню" id="286"/>
+								<ExtendedTooltip name="ОбластиШаблонаСостояниеПросмотраРасширеннаяПодсказка" id="287"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбластиШаблонаУправлениеПоиском" id="288">
+								<AdditionSource>
+									<Item>ОбластиШаблона</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбластиШаблонаУправлениеПоискомКонтекстноеМеню" id="289"/>
+								<ExtendedTooltip name="ОбластиШаблонаУправлениеПоискомРасширеннаяПодсказка" id="290"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ОбластиШаблонаПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ОбластиШаблонаНомерСтроки" id="291">
+									<DataPath>Объект.ОбластиШаблона.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбластиШаблонаНомерСтрокиКонтекстноеМеню" id="292"/>
+									<ExtendedTooltip name="ОбластиШаблонаНомерСтрокиРасширеннаяПодсказка" id="293"/>
+								</LabelField>
+								<InputField name="ОбластиШаблонаИмяОбласти" id="294">
+									<DataPath>Объект.ОбластиШаблона.ИмяОбласти</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбластиШаблонаИмяОбластиКонтекстноеМеню" id="295"/>
+									<ExtendedTooltip name="ОбластиШаблонаИмяОбластиРасширеннаяПодсказка" id="296"/>
+								</InputField>
+								<InputField name="ОбластиШаблонаТипОбласти" id="297">
+									<DataPath>Объект.ОбластиШаблона.ТипОбласти</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>true</DropListButton>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Общая</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Общая</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>СтрокаТаблицы</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">СтрокаТаблицы</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Список</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Список</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ОбластиШаблонаТипОбластиКонтекстноеМеню" id="298"/>
+									<ExtendedTooltip name="ОбластиШаблонаТипОбластиРасширеннаяПодсказка" id="299"/>
+									<Events>
+										<Event name="OnChange">ОбластиШаблонаТипОбластиПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
 						<Table name="РеквизитыИСвойства" id="15">
 							<Representation>List</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -957,6 +1076,47 @@
 				<xr:Common>false</xr:Common>
 				<xr:Value name="Role.тсТест">true</xr:Value>
 			</View>
+		</Attribute>
+		<Attribute name="ВременныеФайлы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Временные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВременныйТегНачало" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Временный тег начало</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>2</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВременныйТегКонец" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Временный тег конец</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

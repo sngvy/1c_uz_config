@@ -3,6 +3,11 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -51,6 +56,11 @@
 			<CommandName>Form.Command.ПроверитьСоединение</CommandName>
 			<ExtendedTooltip name="ПроверитьСоединениеРасширеннаяПодсказка" id="23"/>
 		</Button>
+		<Button name="РегистрацияИзмененийУзлаОбмена" id="24">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.РегистрацияИзмененийУзлаОбмена</CommandName>
+			<ExtendedTooltip name="РегистрацияИзмененийУзлаОбменаРасширеннаяПодсказка" id="25"/>
+		</Button>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -76,7 +86,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьСоединение</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РегистрацияИзмененийУзлаОбмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация изменений узла обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Регистрация изменений узла обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РегистрацияИзмененийУзлаОбмена</Action>
 		</Command>
 	</Commands>
 </Form>

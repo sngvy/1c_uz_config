@@ -29,31 +29,31 @@
 			<field>Время</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ТипЗадачаи</dataPath>
-			<field>ТипЗадачаи</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СотрудникПодразделение</dataPath>
 			<field>СотрудникПодразделение</field>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗадачи</dataPath>
+			<field>ТипЗадачи</field>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
-	Задачи.Сотрудник.Подразделение КАК СотрудникПодразделение,
-	Задачи.Сотрудник КАК Сотрудник,
-	Задачи.Дата КАК Дата,
-	Задачи.Время КАК Время,
-	Задачи.ТипЗадачи КАК ТипЗадачаи,
-	Задачи.Состояние КАК Состояние
+	ЗадачиСотрудников.Сотрудник.Подразделение КАК СотрудникПодразделение,
+	ЗадачиСотрудников.Сотрудник КАК Сотрудник,
+	ЗадачиСотрудников.Дата КАК Дата,
+	ЗадачиСотрудников.Время КАК Время,
+	ЗадачиСотрудников.ТипЗадачи КАК ТипЗадачи,
+	ЗадачиСотрудников.Состояние КАК Состояние
 ИЗ
-	РегистрСведений.Задачи КАК Задачи
+	РегистрСведений.ЗадачиСотрудников КАК ЗадачиСотрудников
 
 СГРУППИРОВАТЬ ПО
-	Задачи.Сотрудник,
-	Задачи.Дата,
-	Задачи.Время,
-	Задачи.ТипЗадачи,
-	Задачи.Состояние,
-	Задачи.Сотрудник.Подразделение</query>
+	ЗадачиСотрудников.Сотрудник,
+	ЗадачиСотрудников.Дата,
+	ЗадачиСотрудников.Время,
+	ЗадачиСотрудников.ТипЗадачи,
+	ЗадачиСотрудников.Состояние,
+	ЗадачиСотрудников.Сотрудник.Подразделение</query>
 	</dataSet>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
@@ -73,7 +73,7 @@
 					<dcsset:field>Время</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ТипЗадачаи</dcsset:field>
+					<dcsset:field>ТипЗадачи</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>Состояние</dcsset:field>
@@ -114,7 +114,7 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ТипЗадачаи</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">ТипЗадачи</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:userSettingID>4c21fa42-3d37-4f65-93e3-2598da361220</dcsset:userSettingID>
 				</dcsset:item>
@@ -196,7 +196,7 @@
 					<dcscor:value xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Учет рабочего времени сотрудников</v8:content>
+							<v8:content>Задачи сотрудников</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -244,7 +244,7 @@
 					<dcsset:item xsi:type="dcsset:StructureItemGroup">
 						<dcsset:groupItems>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>ТипЗадачаи</dcsset:field>
+								<dcsset:field>ТипЗадачи</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
 								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>

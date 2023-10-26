@@ -253,96 +253,6 @@
 			<PagesRepresentation>TabsOnTop</PagesRepresentation>
 			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="239"/>
 			<ChildItems>
-				<Page name="ГруппаФИО" id="244">
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>ФИО</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа ФИО</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="245"/>
-					<ChildItems>
-						<Table name="ФИО" id="246">
-							<AutoInsertNewRow>true</AutoInsertNewRow>
-							<EnableStartDrag>true</EnableStartDrag>
-							<EnableDrag>true</EnableDrag>
-							<DataPath>Объект.ФИО</DataPath>
-							<SearchStringLocation>None</SearchStringLocation>
-							<ViewStatusLocation>None</ViewStatusLocation>
-							<SearchControlLocation>None</SearchControlLocation>
-							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ФИОКонтекстноеМеню" id="247"/>
-							<AutoCommandBar name="ФИОКоманднаяПанель" id="248"/>
-							<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="249"/>
-							<SearchStringAddition name="ФИОСтрокаПоиска" id="250">
-								<AdditionSource>
-									<Item>ФИО</Item>
-									<Type>SearchStringRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ФИОСтрокаПоискаКонтекстноеМеню" id="251"/>
-								<ExtendedTooltip name="ФИОСтрокаПоискаРасширеннаяПодсказка" id="252"/>
-							</SearchStringAddition>
-							<ViewStatusAddition name="ФИОСостояниеПросмотра" id="253">
-								<AdditionSource>
-									<Item>ФИО</Item>
-									<Type>ViewStatusRepresentation</Type>
-								</AdditionSource>
-								<ContextMenu name="ФИОСостояниеПросмотраКонтекстноеМеню" id="254"/>
-								<ExtendedTooltip name="ФИОСостояниеПросмотраРасширеннаяПодсказка" id="255"/>
-							</ViewStatusAddition>
-							<SearchControlAddition name="ФИОУправлениеПоиском" id="256">
-								<AdditionSource>
-									<Item>ФИО</Item>
-									<Type>SearchControl</Type>
-								</AdditionSource>
-								<ContextMenu name="ФИОУправлениеПоискомКонтекстноеМеню" id="257"/>
-								<ExtendedTooltip name="ФИОУправлениеПоискомРасширеннаяПодсказка" id="258"/>
-							</SearchControlAddition>
-							<Events>
-								<Event name="OnChange">ФИОПриИзменении</Event>
-							</Events>
-							<ChildItems>
-								<LabelField name="ФИОНомерСтроки" id="259">
-									<DataPath>Объект.ФИО.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ФИОНомерСтрокиКонтекстноеМеню" id="260"/>
-									<ExtendedTooltip name="ФИОНомерСтрокиРасширеннаяПодсказка" id="261"/>
-								</LabelField>
-								<InputField name="ФИОФамилия" id="262">
-									<DataPath>Объект.ФИО.Фамилия</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ФИОФамилияКонтекстноеМеню" id="263"/>
-									<ExtendedTooltip name="ФИОФамилияРасширеннаяПодсказка" id="264"/>
-								</InputField>
-								<InputField name="ФИОИмя" id="265">
-									<DataPath>Объект.ФИО.Имя</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ФИОИмяКонтекстноеМеню" id="266"/>
-									<ExtendedTooltip name="ФИОИмяРасширеннаяПодсказка" id="267"/>
-								</InputField>
-								<InputField name="ФИООтчество" id="268">
-									<DataPath>Объект.ФИО.Отчество</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ФИООтчествоКонтекстноеМеню" id="269"/>
-									<ExtendedTooltip name="ФИООтчествоРасширеннаяПодсказка" id="270"/>
-								</InputField>
-								<InputField name="ФИОФИО" id="271">
-									<DataPath>Объект.ФИО.ФИО</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ФИОФИОКонтекстноеМеню" id="272"/>
-									<ExtendedTooltip name="ФИОФИОРасширеннаяПодсказка" id="273"/>
-								</InputField>
-							</ChildItems>
-						</Table>
-					</ChildItems>
-				</Page>
 				<Page name="ГруппаСклонения" id="1285">
 					<Visible>false</Visible>
 					<Title>
@@ -633,6 +543,99 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ТелефоныКонецЗапретаЗвонкаКонтекстноеМеню" id="219"/>
 									<ExtendedTooltip name="ТелефоныКонецЗапретаЗвонкаРасширеннаяПодсказка" id="220"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФИО" id="244">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФИО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ФИО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.User</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаФИОРасширеннаяПодсказка" id="245"/>
+					<ChildItems>
+						<Table name="ФИО" id="246">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ФИО</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФИОКонтекстноеМеню" id="247"/>
+							<AutoCommandBar name="ФИОКоманднаяПанель" id="248"/>
+							<ExtendedTooltip name="ФИОРасширеннаяПодсказка" id="249"/>
+							<SearchStringAddition name="ФИОСтрокаПоиска" id="250">
+								<AdditionSource>
+									<Item>ФИО</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФИОСтрокаПоискаКонтекстноеМеню" id="251"/>
+								<ExtendedTooltip name="ФИОСтрокаПоискаРасширеннаяПодсказка" id="252"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФИОСостояниеПросмотра" id="253">
+								<AdditionSource>
+									<Item>ФИО</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФИОСостояниеПросмотраКонтекстноеМеню" id="254"/>
+								<ExtendedTooltip name="ФИОСостояниеПросмотраРасширеннаяПодсказка" id="255"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФИОУправлениеПоиском" id="256">
+								<AdditionSource>
+									<Item>ФИО</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФИОУправлениеПоискомКонтекстноеМеню" id="257"/>
+								<ExtendedTooltip name="ФИОУправлениеПоискомРасширеннаяПодсказка" id="258"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ФИОПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ФИОНомерСтроки" id="259">
+									<DataPath>Объект.ФИО.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФИОНомерСтрокиКонтекстноеМеню" id="260"/>
+									<ExtendedTooltip name="ФИОНомерСтрокиРасширеннаяПодсказка" id="261"/>
+								</LabelField>
+								<InputField name="ФИОФамилия" id="262">
+									<DataPath>Объект.ФИО.Фамилия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФИОФамилияКонтекстноеМеню" id="263"/>
+									<ExtendedTooltip name="ФИОФамилияРасширеннаяПодсказка" id="264"/>
+								</InputField>
+								<InputField name="ФИОИмя" id="265">
+									<DataPath>Объект.ФИО.Имя</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФИОИмяКонтекстноеМеню" id="266"/>
+									<ExtendedTooltip name="ФИОИмяРасширеннаяПодсказка" id="267"/>
+								</InputField>
+								<InputField name="ФИООтчество" id="268">
+									<DataPath>Объект.ФИО.Отчество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФИООтчествоКонтекстноеМеню" id="269"/>
+									<ExtendedTooltip name="ФИООтчествоРасширеннаяПодсказка" id="270"/>
+								</InputField>
+								<InputField name="ФИОФИО" id="271">
+									<DataPath>Объект.ФИО.ФИО</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФИОФИОКонтекстноеМеню" id="272"/>
+									<ExtendedTooltip name="ФИОФИОРасширеннаяПодсказка" id="273"/>
 								</InputField>
 							</ChildItems>
 						</Table>

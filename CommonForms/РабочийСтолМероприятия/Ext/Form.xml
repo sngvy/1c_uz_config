@@ -215,6 +215,16 @@
 						</Title>
 						<ExtendedTooltip name="ФормаViberРасширеннаяПодсказка" id="1488"/>
 					</Button>
+					<Button name="ФормаКонтрольОплаты" id="571">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.КонтрольОплаты</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.Post</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаКонтрольОплатыРасширеннаяПодсказка" id="572"/>
+					</Button>
 					<Button name="ФормаОткрепитьДолжника" id="573">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -239,16 +249,6 @@
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="ФормаЗвонокКредиторуРасширеннаяПодсказка" id="1438"/>
-					</Button>
-					<Button name="ФормаКонтрольОплаты" id="571">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.КонтрольОплаты</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.Post</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаКонтрольОплатыРасширеннаяПодсказка" id="572"/>
 					</Button>
 					<Button name="ФормаЗапросКредитору" id="1431">
 						<Type>CommandBarButton</Type>
@@ -523,6 +523,22 @@
 							</v8:item>
 						</Title>
 						<ExtendedTooltip name="ФормаОтчетыАТСРасширеннаяПодсказка" id="584"/>
+					</Button>
+					<Button name="ФормаПереустановитьWhatsApp" id="1491">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПереустановитьВЦ</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.ExternalDataSourceCube</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Переустановить WhatsApp</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаПереустановитьWhatsAppРасширеннаяПодсказка" id="1492"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -8134,6 +8150,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьОстаткиЮД</Action>
+		</Command>
+		<Command name="ПереустановитьВЦ" id="60">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переустановить ВЦ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переустановить ВЦ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереустановитьВЦ</Action>
 		</Command>
 	</Commands>
 </Form>

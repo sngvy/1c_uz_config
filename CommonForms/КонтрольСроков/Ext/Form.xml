@@ -33,279 +33,221 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
-		<UsualGroup name="ГруппаСписокДООбработанныеВовремя" id="80">
+		<Pages name="ГруппаСтраницы" id="82">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Список ДО 1</v8:content>
+					<v8:content>Группа страницы</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа список ДО 1</v8:content>
+					<v8:content>Группа страницы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаСписокДООбработанныеВовремяРасширеннаяПодсказка" id="81"/>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="83"/>
 			<ChildItems>
-				<Pages name="ГруппаСтраницыОбработанные" id="82">
+				<Page name="ГруппаОбработанные" id="84">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа страницы обработанные</v8:content>
+							<v8:content>Обработанные</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа страницы обработанные</v8:content>
+							<v8:content>Группа обработанные</v8:content>
 						</v8:item>
 					</ToolTip>
-					<PagesRepresentation>TabsOnTop</PagesRepresentation>
-					<ExtendedTooltip name="ГруппаСтраницыОбработанныеРасширеннаяПодсказка" id="83"/>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceFlagGreen</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаОбработанныеРасширеннаяПодсказка" id="85"/>
 					<ChildItems>
-						<Page name="ГруппаСтраницаОбработанные" id="84">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Обработанные</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа страница обработанные</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.AppearanceFlagGreen</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="ГруппаСтраницаОбработанныеРасширеннаяПодсказка" id="85"/>
+						<Table name="СписокДООбработанные" id="30">
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<MaxRowsCount>2</MaxRowsCount>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокДООбработанные</DataPath>
+							<RowPictureDataPath>СписокДООбработанные.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокДООбработанныеКонтекстноеМеню" id="31"/>
+							<AutoCommandBar name="СписокДООбработанныеКоманднаяПанель" id="32"/>
+							<ExtendedTooltip name="СписокДООбработанныеРасширеннаяПодсказка" id="33"/>
+							<SearchStringAddition name="СписокДООбработанныеСтрокаПоиска" id="34">
+								<AdditionSource>
+									<Item>СписокДООбработанные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДООбработанныеСтрокаПоискаКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="СписокДООбработанныеСтрокаПоискаРасширеннаяПодсказка" id="36"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДООбработанныеСостояниеПросмотра" id="37">
+								<AdditionSource>
+									<Item>СписокДООбработанные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДООбработанныеСостояниеПросмотраКонтекстноеМеню" id="38"/>
+								<ExtendedTooltip name="СписокДООбработанныеСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДООбработанныеУправлениеПоиском" id="40">
+								<AdditionSource>
+									<Item>СписокДООбработанные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДООбработанныеУправлениеПоискомКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="СписокДООбработанныеУправлениеПоискомРасширеннаяПодсказка" id="42"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокДОВыбор</Event>
+							</Events>
 							<ChildItems>
-								<Table name="СписокДООбработанные" id="30">
-									<CommandBarLocation>None</CommandBarLocation>
-									<Height>5</Height>
-									<MaxRowsCount>2</MaxRowsCount>
-									<UseAlternationRowColor>true</UseAlternationRowColor>
-									<InitialListView>Beginning</InitialListView>
-									<EnableStartDrag>true</EnableStartDrag>
-									<DataPath>СписокДООбработанные</DataPath>
-									<RowPictureDataPath>СписокДООбработанные.DefaultPicture</RowPictureDataPath>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
-									<AutoRefresh>false</AutoRefresh>
-									<AutoRefreshPeriod>60</AutoRefreshPeriod>
-									<Period>
-										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-									</Period>
-									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-									<RestoreCurrentRow>false</RestoreCurrentRow>
-									<TopLevelParent xsi:nil="true"/>
-									<ShowRoot>true</ShowRoot>
-									<AllowRootChoice>false</AllowRootChoice>
-									<UpdateOnDataChange>Auto</UpdateOnDataChange>
-									<ContextMenu name="СписокДООбработанныеКонтекстноеМеню" id="31"/>
-									<AutoCommandBar name="СписокДООбработанныеКоманднаяПанель" id="32"/>
-									<ExtendedTooltip name="СписокДООбработанныеРасширеннаяПодсказка" id="33"/>
-									<SearchStringAddition name="СписокДООбработанныеСтрокаПоиска" id="34">
-										<AdditionSource>
-											<Item>СписокДООбработанные</Item>
-											<Type>SearchStringRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="СписокДООбработанныеСтрокаПоискаКонтекстноеМеню" id="35"/>
-										<ExtendedTooltip name="СписокДООбработанныеСтрокаПоискаРасширеннаяПодсказка" id="36"/>
-									</SearchStringAddition>
-									<ViewStatusAddition name="СписокДООбработанныеСостояниеПросмотра" id="37">
-										<AdditionSource>
-											<Item>СписокДООбработанные</Item>
-											<Type>ViewStatusRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="СписокДООбработанныеСостояниеПросмотраКонтекстноеМеню" id="38"/>
-										<ExtendedTooltip name="СписокДООбработанныеСостояниеПросмотраРасширеннаяПодсказка" id="39"/>
-									</ViewStatusAddition>
-									<SearchControlAddition name="СписокДООбработанныеУправлениеПоиском" id="40">
-										<AdditionSource>
-											<Item>СписокДООбработанные</Item>
-											<Type>SearchControl</Type>
-										</AdditionSource>
-										<ContextMenu name="СписокДООбработанныеУправлениеПоискомКонтекстноеМеню" id="41"/>
-										<ExtendedTooltip name="СписокДООбработанныеУправлениеПоискомРасширеннаяПодсказка" id="42"/>
-									</SearchControlAddition>
-									<Events>
-										<Event name="Selection">СписокДОВыбор</Event>
-									</Events>
-									<ChildItems>
-										<LabelField name="СписокДООбработанныеВовремяСсылка" id="46">
-											<DataPath>СписокДООбработанные.Ссылка</DataPath>
-											<ContextMenu name="СписокДООбработанныеВовремяСсылкаКонтекстноеМеню" id="47"/>
-											<ExtendedTooltip name="СписокДООбработанныеВовремяСсылкаРасширеннаяПодсказка" id="48"/>
-										</LabelField>
-										<LabelField name="СписокДООбработанныеВовремяСсылкаДолжник" id="49">
-											<DataPath>СписокДООбработанные.Ссылка.Должник</DataPath>
-											<ContextMenu name="СписокДООбработанныеВовремяСсылкаДолжникКонтекстноеМеню" id="50"/>
-											<ExtendedTooltip name="СписокДООбработанныеВовремяСсылкаДолжникРасширеннаяПодсказка" id="51"/>
-										</LabelField>
-										<LabelField name="СписокДООбработанныеВовремяСсылкаКредитор" id="52">
-											<DataPath>СписокДООбработанные.Ссылка.Кредитор</DataPath>
-											<ContextMenu name="СписокДООбработанныеВовремяСсылкаКредиторКонтекстноеМеню" id="53"/>
-											<ExtendedTooltip name="СписокДООбработанныеВовремяСсылкаКредиторРасширеннаяПодсказка" id="54"/>
-										</LabelField>
-										<LabelField name="СписокДООбработанныеВовремяДатаПоследнегоМероприятия" id="43">
-											<DataPath>СписокДООбработанные.ДатаПоследнегоМероприятия</DataPath>
-											<ContextMenu name="СписокДООбработанныеВовремяДатаПоследнегоМероприятияКонтекстноеМеню" id="44"/>
-											<ExtendedTooltip name="СписокДООбработанныеВовремяДатаПоследнегоМероприятияРасширеннаяПодсказка" id="45"/>
-										</LabelField>
-									</ChildItems>
-								</Table>
+								<LabelField name="СписокДООбработанныеВовремяСсылка" id="46">
+									<DataPath>СписокДООбработанные.Ссылка</DataPath>
+									<ContextMenu name="СписокДООбработанныеВовремяСсылкаКонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="СписокДООбработанныеВовремяСсылкаРасширеннаяПодсказка" id="48"/>
+								</LabelField>
+								<LabelField name="СписокДООбработанныеВовремяСсылкаДолжник" id="49">
+									<DataPath>СписокДООбработанные.Ссылка.Должник</DataPath>
+									<ContextMenu name="СписокДООбработанныеВовремяСсылкаДолжникКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="СписокДООбработанныеВовремяСсылкаДолжникРасширеннаяПодсказка" id="51"/>
+								</LabelField>
+								<LabelField name="СписокДООбработанныеВовремяСсылкаКредитор" id="52">
+									<DataPath>СписокДООбработанные.Ссылка.Кредитор</DataPath>
+									<ContextMenu name="СписокДООбработанныеВовремяСсылкаКредиторКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="СписокДООбработанныеВовремяСсылкаКредиторРасширеннаяПодсказка" id="54"/>
+								</LabelField>
+								<LabelField name="СписокДООбработанныеВовремяДатаПоследнегоМероприятия" id="43">
+									<DataPath>СписокДООбработанные.ДатаПоследнегоМероприятия</DataPath>
+									<ContextMenu name="СписокДООбработанныеВовремяДатаПоследнегоМероприятияКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="СписокДООбработанныеВовремяДатаПоследнегоМероприятияРасширеннаяПодсказка" id="45"/>
+								</LabelField>
 							</ChildItems>
-						</Page>
+						</Table>
 					</ChildItems>
-				</Pages>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаСписокДОПросроченные" id="86">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Список ДО 2</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа список ДО 2</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаСписокДОПросроченныеРасширеннаяПодсказка" id="87"/>
-			<ChildItems>
-				<Pages name="ГруппаСтраницыПросроченные" id="88">
+				</Page>
+				<Page name="ГруппаПросроченные" id="90">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа страницы просроченные</v8:content>
+							<v8:content>Просроченные</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа страницы просроченные</v8:content>
+							<v8:content>Группа просроченные</v8:content>
 						</v8:item>
 					</ToolTip>
-					<PagesRepresentation>TabsOnTop</PagesRepresentation>
-					<ExtendedTooltip name="ГруппаСтраницыПросроченныеРасширеннаяПодсказка" id="89"/>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceFlagRed</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаПросроченныеРасширеннаяПодсказка" id="91"/>
 					<ChildItems>
-						<Page name="ГруппаСтраницаПросроченные" id="90">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Просроченные</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа страница просроченные</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.AppearanceFlagRed</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="ГруппаСтраницаПросроченныеРасширеннаяПодсказка" id="91"/>
+						<Table name="СписокДОПросроченные" id="55">
+							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СписокДОПросроченные</DataPath>
+							<RowPictureDataPath>СписокДОПросроченные.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокДОПросроченныеКонтекстноеМеню" id="56"/>
+							<AutoCommandBar name="СписокДОПросроченныеКоманднаяПанель" id="57"/>
+							<ExtendedTooltip name="СписокДОПросроченныеРасширеннаяПодсказка" id="58"/>
+							<SearchStringAddition name="СписокДОПросроченныеСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>СписокДОПросроченные</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДОПросроченныеСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="СписокДОПросроченныеСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДОПросроченныеСостояниеПросмотра" id="62">
+								<AdditionSource>
+									<Item>СписокДОПросроченные</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДОПросроченныеСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="СписокДОПросроченныеСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДОПросроченныеУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>СписокДОПросроченные</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДОПросроченныеУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="СписокДОПросроченныеУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СписокДОВыбор</Event>
+							</Events>
 							<ChildItems>
-								<Table name="СписокДОПросроченные" id="55">
-									<CommandBarLocation>None</CommandBarLocation>
-									<Height>5</Height>
-									<UseAlternationRowColor>true</UseAlternationRowColor>
-									<InitialListView>Beginning</InitialListView>
-									<EnableStartDrag>true</EnableStartDrag>
-									<DataPath>СписокДОПросроченные</DataPath>
-									<RowPictureDataPath>СписокДОПросроченные.DefaultPicture</RowPictureDataPath>
-									<SearchStringLocation>None</SearchStringLocation>
-									<ViewStatusLocation>None</ViewStatusLocation>
-									<SearchControlLocation>None</SearchControlLocation>
-									<AutoRefresh>false</AutoRefresh>
-									<AutoRefreshPeriod>60</AutoRefreshPeriod>
-									<Period>
-										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-									</Period>
-									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-									<RestoreCurrentRow>false</RestoreCurrentRow>
-									<TopLevelParent xsi:nil="true"/>
-									<ShowRoot>true</ShowRoot>
-									<AllowRootChoice>false</AllowRootChoice>
-									<UpdateOnDataChange>Auto</UpdateOnDataChange>
-									<ContextMenu name="СписокДОПросроченныеКонтекстноеМеню" id="56"/>
-									<AutoCommandBar name="СписокДОПросроченныеКоманднаяПанель" id="57"/>
-									<ExtendedTooltip name="СписокДОПросроченныеРасширеннаяПодсказка" id="58"/>
-									<SearchStringAddition name="СписокДОПросроченныеСтрокаПоиска" id="59">
-										<AdditionSource>
-											<Item>СписокДОПросроченные</Item>
-											<Type>SearchStringRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="СписокДОПросроченныеСтрокаПоискаКонтекстноеМеню" id="60"/>
-										<ExtendedTooltip name="СписокДОПросроченныеСтрокаПоискаРасширеннаяПодсказка" id="61"/>
-									</SearchStringAddition>
-									<ViewStatusAddition name="СписокДОПросроченныеСостояниеПросмотра" id="62">
-										<AdditionSource>
-											<Item>СписокДОПросроченные</Item>
-											<Type>ViewStatusRepresentation</Type>
-										</AdditionSource>
-										<ContextMenu name="СписокДОПросроченныеСостояниеПросмотраКонтекстноеМеню" id="63"/>
-										<ExtendedTooltip name="СписокДОПросроченныеСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
-									</ViewStatusAddition>
-									<SearchControlAddition name="СписокДОПросроченныеУправлениеПоиском" id="65">
-										<AdditionSource>
-											<Item>СписокДОПросроченные</Item>
-											<Type>SearchControl</Type>
-										</AdditionSource>
-										<ContextMenu name="СписокДОПросроченныеУправлениеПоискомКонтекстноеМеню" id="66"/>
-										<ExtendedTooltip name="СписокДОПросроченныеУправлениеПоискомРасширеннаяПодсказка" id="67"/>
-									</SearchControlAddition>
-									<Events>
-										<Event name="Selection">СписокДОВыбор</Event>
-									</Events>
-									<ChildItems>
-										<LabelField name="СписокДОПросроченныеСсылка" id="71">
-											<DataPath>СписокДОПросроченные.Ссылка</DataPath>
-											<ContextMenu name="СписокДОПросроченныеСсылкаКонтекстноеМеню" id="72"/>
-											<ExtendedTooltip name="СписокДОПросроченныеСсылкаРасширеннаяПодсказка" id="73"/>
-										</LabelField>
-										<LabelField name="СписокДОПросроченныеСсылкаДолжник" id="74">
-											<DataPath>СписокДОПросроченные.Ссылка.Должник</DataPath>
-											<ContextMenu name="СписокДОПросроченныеСсылкаДолжникКонтекстноеМеню" id="75"/>
-											<ExtendedTooltip name="СписокДОПросроченныеСсылкаДолжникРасширеннаяПодсказка" id="76"/>
-										</LabelField>
-										<LabelField name="СписокДОПросроченныеСсылкаКредитор" id="77">
-											<DataPath>СписокДОПросроченные.Ссылка.Кредитор</DataPath>
-											<ContextMenu name="СписокДОПросроченныеСсылкаКредиторКонтекстноеМеню" id="78"/>
-											<ExtendedTooltip name="СписокДОПросроченныеСсылкаКредиторРасширеннаяПодсказка" id="79"/>
-										</LabelField>
-										<LabelField name="СписокДОПросроченныеДатаПоследнегоМероприятия" id="68">
-											<DataPath>СписокДОПросроченные.ДатаПоследнегоМероприятия</DataPath>
-											<ContextMenu name="СписокДОПросроченныеДатаПоследнегоМероприятияКонтекстноеМеню" id="69"/>
-											<ExtendedTooltip name="СписокДОПросроченныеДатаПоследнегоМероприятияРасширеннаяПодсказка" id="70"/>
-										</LabelField>
-									</ChildItems>
-								</Table>
+								<LabelField name="СписокДОПросроченныеСсылка" id="71">
+									<DataPath>СписокДОПросроченные.Ссылка</DataPath>
+									<ContextMenu name="СписокДОПросроченныеСсылкаКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="СписокДОПросроченныеСсылкаРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="СписокДОПросроченныеСсылкаДолжник" id="74">
+									<DataPath>СписокДОПросроченные.Ссылка.Должник</DataPath>
+									<ContextMenu name="СписокДОПросроченныеСсылкаДолжникКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="СписокДОПросроченныеСсылкаДолжникРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<LabelField name="СписокДОПросроченныеСсылкаКредитор" id="77">
+									<DataPath>СписокДОПросроченные.Ссылка.Кредитор</DataPath>
+									<ContextMenu name="СписокДОПросроченныеСсылкаКредиторКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="СписокДОПросроченныеСсылкаКредиторРасширеннаяПодсказка" id="79"/>
+								</LabelField>
+								<LabelField name="СписокДОПросроченныеДатаПоследнегоМероприятия" id="68">
+									<DataPath>СписокДОПросроченные.ДатаПоследнегоМероприятия</DataPath>
+									<ContextMenu name="СписокДОПросроченныеДатаПоследнегоМероприятияКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="СписокДОПросроченныеДатаПоследнегоМероприятияРасширеннаяПодсказка" id="70"/>
+								</LabelField>
 							</ChildItems>
-						</Page>
+						</Table>
 					</ChildItems>
-				</Pages>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СписокДООбработанные" id="1">

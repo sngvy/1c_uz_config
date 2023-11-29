@@ -3902,6 +3902,212 @@
 								</UsualGroup>
 							</ChildItems>
 						</Page>
+						<Page name="ГруппаПерспективные" id="1493">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перспективные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа перспективные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.AddToFavorites</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаПерспективныеРасширеннаяПодсказка" id="1494"/>
+							<ChildItems>
+								<Table name="ПерспективныеДолжники" id="1495">
+									<CommandBarLocation>None</CommandBarLocation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialListView>Beginning</InitialListView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>ПерспективныеДолжники</DataPath>
+									<RowPictureDataPath>ПерспективныеДолжники.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПерспективныеДолжникиКонтекстноеМеню" id="1496"/>
+									<AutoCommandBar name="ПерспективныеДолжникиКоманднаяПанель" id="1497"/>
+									<ExtendedTooltip name="ПерспективныеДолжникиРасширеннаяПодсказка" id="1498"/>
+									<SearchStringAddition name="ПерспективныеДолжникиСтрокаПоиска" id="1499">
+										<AdditionSource>
+											<Item>ПерспективныеДолжники</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПерспективныеДолжникиСтрокаПоискаКонтекстноеМеню" id="1500"/>
+										<ExtendedTooltip name="ПерспективныеДолжникиСтрокаПоискаРасширеннаяПодсказка" id="1501"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПерспективныеДолжникиСостояниеПросмотра" id="1502">
+										<AdditionSource>
+											<Item>ПерспективныеДолжники</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПерспективныеДолжникиСостояниеПросмотраКонтекстноеМеню" id="1503"/>
+										<ExtendedTooltip name="ПерспективныеДолжникиСостояниеПросмотраРасширеннаяПодсказка" id="1504"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПерспективныеДолжникиУправлениеПоиском" id="1505">
+										<AdditionSource>
+											<Item>ПерспективныеДолжники</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПерспективныеДолжникиУправлениеПоискомКонтекстноеМеню" id="1506"/>
+										<ExtendedTooltip name="ПерспективныеДолжникиУправлениеПоискомРасширеннаяПодсказка" id="1507"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ПерспективныеДолжникиВыбор</Event>
+										<Event name="OnActivateCell">СписокДОПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ПерспективныеДолжникиСсылка" id="1508">
+											<DataPath>ПерспективныеДолжники.Ссылка</DataPath>
+											<ContextMenu name="ПерспективныеДолжникиСсылкаКонтекстноеМеню" id="1509"/>
+											<ExtendedTooltip name="ПерспективныеДолжникиСсылкаРасширеннаяПодсказка" id="1510"/>
+										</LabelField>
+										<LabelField name="ПерспективныеДолжникиСсылкаДолжник" id="1517">
+											<DataPath>ПерспективныеДолжники.Ссылка.Должник</DataPath>
+											<ContextMenu name="ПерспективныеДолжникиСсылкаДолжникКонтекстноеМеню" id="1518"/>
+											<ExtendedTooltip name="ПерспективныеДолжникиСсылкаДолжникРасширеннаяПодсказка" id="1519"/>
+										</LabelField>
+										<LabelField name="ПерспективныеДолжникиСсылкаКредитор" id="1514">
+											<DataPath>ПерспективныеДолжники.Ссылка.Кредитор</DataPath>
+											<ContextMenu name="ПерспективныеДолжникиСсылкаКредиторКонтекстноеМеню" id="1515"/>
+											<ExtendedTooltip name="ПерспективныеДолжникиСсылкаКредиторРасширеннаяПодсказка" id="1516"/>
+										</LabelField>
+										<LabelField name="ПерспективныеДолжникиОбещаний" id="1553">
+											<DataPath>ПерспективныеДолжники.Обещаний</DataPath>
+											<ContextMenu name="ПерспективныеДолжникиОбещанийКонтекстноеМеню" id="1554"/>
+											<ExtendedTooltip name="ПерспективныеДолжникиОбещанийРасширеннаяПодсказка" id="1555"/>
+										</LabelField>
+										<LabelField name="ПерспективныеДолжникиПлатежей" id="1523">
+											<DataPath>ПерспективныеДолжники.Платежей</DataPath>
+											<ContextMenu name="ПерспективныеДолжникиПлатежейКонтекстноеМеню" id="1524"/>
+											<ExtendedTooltip name="ПерспективныеДолжникиПлатежейРасширеннаяПодсказка" id="1525"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаПроблемные" id="1526">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проблемные</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа проблемные</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ГруппаПроблемныеРасширеннаяПодсказка" id="1527"/>
+							<ChildItems>
+								<Table name="ПроблемныеДолжники" id="1528">
+									<CommandBarLocation>None</CommandBarLocation>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialListView>Beginning</InitialListView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<DataPath>ПроблемныеДолжники</DataPath>
+									<RowPictureDataPath>ПроблемныеДолжники.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>true</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="ПроблемныеДолжникиКонтекстноеМеню" id="1529"/>
+									<AutoCommandBar name="ПроблемныеДолжникиКоманднаяПанель" id="1530"/>
+									<ExtendedTooltip name="ПроблемныеДолжникиРасширеннаяПодсказка" id="1531"/>
+									<SearchStringAddition name="ПроблемныеДолжникиСтрокаПоиска" id="1532">
+										<AdditionSource>
+											<Item>ПроблемныеДолжники</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроблемныеДолжникиСтрокаПоискаКонтекстноеМеню" id="1533"/>
+										<ExtendedTooltip name="ПроблемныеДолжникиСтрокаПоискаРасширеннаяПодсказка" id="1534"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПроблемныеДолжникиСостояниеПросмотра" id="1535">
+										<AdditionSource>
+											<Item>ПроблемныеДолжники</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроблемныеДолжникиСостояниеПросмотраКонтекстноеМеню" id="1536"/>
+										<ExtendedTooltip name="ПроблемныеДолжникиСостояниеПросмотраРасширеннаяПодсказка" id="1537"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПроблемныеДолжникиУправлениеПоиском" id="1538">
+										<AdditionSource>
+											<Item>ПроблемныеДолжники</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПроблемныеДолжникиУправлениеПоискомКонтекстноеМеню" id="1539"/>
+										<ExtendedTooltip name="ПроблемныеДолжникиУправлениеПоискомРасширеннаяПодсказка" id="1540"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ПроблемныеДолжникиВыбор</Event>
+										<Event name="OnActivateCell">СписокДОПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ПроблемныеДолжникиСсылка" id="1544">
+											<DataPath>ПроблемныеДолжники.Ссылка</DataPath>
+											<ContextMenu name="ПроблемныеДолжникиСсылкаКонтекстноеМеню" id="1545"/>
+											<ExtendedTooltip name="ПроблемныеДолжникиСсылкаРасширеннаяПодсказка" id="1546"/>
+										</LabelField>
+										<LabelField name="ПроблемныеДолжникиСсылкаДолжник" id="1547">
+											<DataPath>ПроблемныеДолжники.Ссылка.Должник</DataPath>
+											<ContextMenu name="ПроблемныеДолжникиСсылкаДолжникКонтекстноеМеню" id="1548"/>
+											<ExtendedTooltip name="ПроблемныеДолжникиСсылкаДолжникРасширеннаяПодсказка" id="1549"/>
+										</LabelField>
+										<LabelField name="ПроблемныеДолжникиСсылкаКредитор" id="1550">
+											<DataPath>ПроблемныеДолжники.Ссылка.Кредитор</DataPath>
+											<ContextMenu name="ПроблемныеДолжникиСсылкаКредиторКонтекстноеМеню" id="1551"/>
+											<ExtendedTooltip name="ПроблемныеДолжникиСсылкаКредиторРасширеннаяПодсказка" id="1552"/>
+										</LabelField>
+										<LabelField name="ПроблемныеДолжникиОтказов" id="1541">
+											<DataPath>ПроблемныеДолжники.Отказов</DataPath>
+											<ContextMenu name="ПроблемныеДолжникиОтказовКонтекстноеМеню" id="1542"/>
+											<ExtendedTooltip name="ПроблемныеДолжникиОтказовРасширеннаяПодсказка" id="1543"/>
+										</LabelField>
+										<LabelField name="ПроблемныеДолжникиПлатежей" id="1556">
+											<DataPath>ПроблемныеДолжники.Платежей</DataPath>
+											<ContextMenu name="ПроблемныеДолжникиПлатежейКонтекстноеМеню" id="1557"/>
+											<ExtendedTooltip name="ПроблемныеДолжникиПлатежейРасширеннаяПодсказка" id="1558"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
 						<Page name="ГруппаОбещанияСегодня" id="1236">
 							<Title>
 								<v8:item>
@@ -3986,15 +4192,15 @@
 											<ContextMenu name="ОбещанияСегодняОбъектКонтекстноеМеню" id="1258"/>
 											<ExtendedTooltip name="ОбещанияСегодняОбъектРасширеннаяПодсказка" id="1259"/>
 										</LabelField>
-										<LabelField name="ОбещанияСегодняОбъектКредитор" id="1334">
-											<DataPath>ОбещанияСегодня.Объект.Кредитор</DataPath>
-											<ContextMenu name="ОбещанияСегодняОбъектКредиторКонтекстноеМеню" id="1335"/>
-											<ExtendedTooltip name="ОбещанияСегодняОбъектКредиторРасширеннаяПодсказка" id="1336"/>
-										</LabelField>
 										<LabelField name="ОбещанияСегодняОбъектДолжник" id="1337">
 											<DataPath>ОбещанияСегодня.Объект.Должник</DataPath>
 											<ContextMenu name="ОбещанияСегодняОбъектДолжникКонтекстноеМеню" id="1338"/>
 											<ExtendedTooltip name="ОбещанияСегодняОбъектДолжникРасширеннаяПодсказка" id="1339"/>
+										</LabelField>
+										<LabelField name="ОбещанияСегодняОбъектКредитор" id="1334">
+											<DataPath>ОбещанияСегодня.Объект.Кредитор</DataPath>
+											<ContextMenu name="ОбещанияСегодняОбъектКредиторКонтекстноеМеню" id="1335"/>
+											<ExtendedTooltip name="ОбещанияСегодняОбъектКредиторРасширеннаяПодсказка" id="1336"/>
 										</LabelField>
 									</ChildItems>
 								</Table>
@@ -4139,15 +4345,15 @@
 											<ContextMenu name="ОбещанияМесяцОбъектКонтекстноеМеню" id="1288"/>
 											<ExtendedTooltip name="ОбещанияМесяцОбъектРасширеннаяПодсказка" id="1289"/>
 										</LabelField>
-										<LabelField name="ОбещанияМесяцСсылкаОбъектКредитор" id="1340">
-											<DataPath>ОбещанияМесяц.Ref.Объект.Кредитор</DataPath>
-											<ContextMenu name="ОбещанияМесяцСсылкаОбъектКредиторКонтекстноеМеню" id="1341"/>
-											<ExtendedTooltip name="ОбещанияМесяцСсылкаОбъектКредиторРасширеннаяПодсказка" id="1342"/>
-										</LabelField>
 										<LabelField name="ОбещанияМесяцСсылкаОбъектДолжник" id="1343">
 											<DataPath>ОбещанияМесяц.Ref.Объект.Должник</DataPath>
 											<ContextMenu name="ОбещанияМесяцСсылкаОбъектДолжникКонтекстноеМеню" id="1344"/>
 											<ExtendedTooltip name="ОбещанияМесяцСсылкаОбъектДолжникРасширеннаяПодсказка" id="1345"/>
+										</LabelField>
+										<LabelField name="ОбещанияМесяцСсылкаОбъектКредитор" id="1340">
+											<DataPath>ОбещанияМесяц.Ref.Объект.Кредитор</DataPath>
+											<ContextMenu name="ОбещанияМесяцСсылкаОбъектКредиторКонтекстноеМеню" id="1341"/>
+											<ExtendedTooltip name="ОбещанияМесяцСсылкаОбъектКредиторРасширеннаяПодсказка" id="1342"/>
 										</LabelField>
 									</ChildItems>
 								</Table>
@@ -4291,15 +4497,15 @@
 											<ContextMenu name="ПогашенияМесяцЗаймКонтекстноеМеню" id="1464"/>
 											<ExtendedTooltip name="ПогашенияМесяцЗаймРасширеннаяПодсказка" id="1465"/>
 										</LabelField>
-										<LabelField name="ПогашенияМесяцЗаймКредитор" id="1484">
-											<DataPath>ПогашенияМесяц.Займ.Кредитор</DataPath>
-											<ContextMenu name="ПогашенияМесяцЗаймКредиторКонтекстноеМеню" id="1485"/>
-											<ExtendedTooltip name="ПогашенияМесяцЗаймКредиторРасширеннаяПодсказка" id="1486"/>
-										</LabelField>
 										<LabelField name="ПогашенияМесяцЗаймДолжник" id="1481">
 											<DataPath>ПогашенияМесяц.Займ.Должник</DataPath>
 											<ContextMenu name="ПогашенияМесяцЗаймДолжникКонтекстноеМеню" id="1482"/>
 											<ExtendedTooltip name="ПогашенияМесяцЗаймДолжникРасширеннаяПодсказка" id="1483"/>
+										</LabelField>
+										<LabelField name="ПогашенияМесяцЗаймКредитор" id="1484">
+											<DataPath>ПогашенияМесяц.Займ.Кредитор</DataPath>
+											<ContextMenu name="ПогашенияМесяцЗаймКредиторКонтекстноеМеню" id="1485"/>
+											<ExtendedTooltip name="ПогашенияМесяцЗаймКредиторРасширеннаяПодсказка" id="1486"/>
 										</LabelField>
 										<LabelField name="ПогашенияМесяцСуммаПлатежа" id="1472">
 											<DataPath>ПогашенияМесяц.СуммаПлатежа</DataPath>
@@ -7004,6 +7210,168 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="ПерспективныеДолжники" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перспективные должники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВложенныйЗапрос.Ссылка КАК Ссылка,
+	ВложенныйЗапрос.Платежей КАК Платежей,
+	ВложенныйЗапрос1.Обещаний КАК Обещаний
+ИЗ
+	(ВЫБРАТЬ РАЗЛИЧНЫЕ
+		ДолговыеОбязательства.Ссылка КАК Ссылка,
+		КОЛИЧЕСТВО(ПоступлениеПлатежа.Ссылка) КАК Платежей
+	ИЗ
+		Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПоступлениеПлатежа КАК ПоступлениеПлатежа
+			ПО (ПоступлениеПлатежа.Займ = ДолговыеОбязательства.Ссылка)
+	
+	СГРУППИРОВАТЬ ПО
+		ДолговыеОбязательства.Ссылка) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ДолговыеОбязательства.Ссылка КАК Ссылка,
+			КОЛИЧЕСТВО(Мероприятие.Ссылка) КАК Обещаний
+		ИЗ
+			Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Задача.Мероприятие КАК Мероприятие
+				ПО (Мероприятие.Объект = ДолговыеОбязательства.Ссылка)
+		ГДЕ
+			Мероприятие.Результат.Наименование = "Обещание оплаты"
+		
+		СГРУППИРОВАТЬ ПО
+			ДолговыеОбязательства.Ссылка) КАК ВложенныйЗапрос1
+		ПО (ВложенныйЗапрос1.Ссылка = ВложенныйЗапрос.Ссылка)
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.Платежей,
+	ВложенныйЗапрос1.Обещаний
+	
+ИМЕЮЩИЕ
+МАКСИМУМ(ВложенныйЗапрос.Платежей) &gt;= МАКСИМУМ(ВложенныйЗапрос1.Обещаний)</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Платежей</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Green</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПроблемныеДолжники" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проблемные должники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВложенныйЗапрос.Ссылка КАК Ссылка,
+	ВложенныйЗапрос.Платежей КАК Платежей,
+	ВложенныйЗапрос1.Отказов КАК Отказов
+ИЗ
+	(ВЫБРАТЬ РАЗЛИЧНЫЕ
+		ДолговыеОбязательства.Ссылка КАК Ссылка,
+		КОЛИЧЕСТВО(ПоступлениеПлатежа.Ссылка) КАК Платежей
+	ИЗ
+		Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПоступлениеПлатежа КАК ПоступлениеПлатежа
+			ПО (ПоступлениеПлатежа.Займ = ДолговыеОбязательства.Ссылка)
+	
+	СГРУППИРОВАТЬ ПО
+		ДолговыеОбязательства.Ссылка) КАК ВложенныйЗапрос
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			ДолговыеОбязательства.Ссылка КАК Ссылка,
+			КОЛИЧЕСТВО(Мероприятие.Ссылка) КАК Отказов
+		ИЗ
+			Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ Задача.Мероприятие КАК Мероприятие
+				ПО (Мероприятие.Объект = ДолговыеОбязательства.Ссылка)
+		ГДЕ
+			Мероприятие.Результат.Наименование = "Отказ должника"
+		
+		СГРУППИРОВАТЬ ПО
+			ДолговыеОбязательства.Ссылка) КАК ВложенныйЗапрос1
+		ПО (ВложенныйЗапрос1.Ссылка = ВложенныйЗапрос.Ссылка)
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Ссылка,
+	ВложенныйЗапрос.Платежей,
+	ВложенныйЗапрос1.Отказов
+	
+ИМЕЮЩИЕ
+МАКСИМУМ(ВложенныйЗапрос.Платежей) &lt; МАКСИМУМ(ВложенныйЗапрос1.Отказов)</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Платежей</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter/>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:Red</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

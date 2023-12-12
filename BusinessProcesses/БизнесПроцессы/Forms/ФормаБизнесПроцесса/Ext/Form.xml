@@ -33,6 +33,7 @@
 			</Button>
 			<Button name="ФормаПоказатьВсеГруппы" id="208">
 				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
 				<CommandName>Form.Command.ПоказатьВсеГруппы</CommandName>
 				<ExtendedTooltip name="ФормаПоказатьВсеГруппыExtendedTooltip" id="213"/>
 			</Button>
@@ -147,7 +148,18 @@
 							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="10"/>
 							<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="220"/>
 						</InputField>
+						<InputField name="Объект" id="206">
+							<DataPath>Объект.Объект</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ОбъектКонтекстноеМеню" id="207"/>
+							<ExtendedTooltip name="ОбъектExtendedTooltip" id="233"/>
+							<Events>
+								<Event name="OnChange">ОбъектПриИзменении</Event>
+							</Events>
+						</InputField>
 						<Pages name="ГруппаОбъектУчета" id="189">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -346,18 +358,6 @@
 										</v8:item>
 									</ToolTip>
 									<ExtendedTooltip name="ОбъектУчета_ПустоExtendedTooltip" id="232"/>
-									<ChildItems>
-										<InputField name="Объект" id="206">
-											<DataPath>Объект.Объект</DataPath>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<AutoMaxHeight>false</AutoMaxHeight>
-											<ContextMenu name="ОбъектКонтекстноеМеню" id="207"/>
-											<ExtendedTooltip name="ОбъектExtendedTooltip" id="233"/>
-											<Events>
-												<Event name="OnChange">ОбъектПриИзменении</Event>
-											</Events>
-										</InputField>
-									</ChildItems>
 								</Page>
 							</ChildItems>
 						</Pages>

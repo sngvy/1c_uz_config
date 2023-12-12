@@ -593,6 +593,54 @@
 				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПервичноеЗаполнениеПоОдномуДО" id="465">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первичное заполнение по одному ДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа первичное заполнение по одному ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаПервичноеЗаполнениеПоОдномуДОРасширеннаяПодсказка" id="466"/>
+			<ChildItems>
+				<InputField name="Договор" id="467">
+					<DataPath>Договор</DataPath>
+					<ContextMenu name="ДоговорКонтекстноеМеню" id="468"/>
+					<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="469"/>
+					<Events>
+						<Event name="OnChange">ДоговорПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Должник" id="470">
+					<DataPath>Должник</DataPath>
+					<ContextMenu name="ДолжникКонтекстноеМеню" id="471"/>
+					<ExtendedTooltip name="ДолжникРасширеннаяПодсказка" id="472"/>
+				</InputField>
+				<Button name="ПервичноеЗаполнениеПоОдномуДО" id="473">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ПервичноеЗаполнениеПоОдномуДО</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заполнить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПервичноеЗаполнениеПоОдномуДОРасширеннаяПодсказка" id="474"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="Страницы" id="46">
 			<Title>
 				<v8:item>
@@ -1288,6 +1336,28 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Договор" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДолговыеОбязательства</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Должник" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПервичноеЗаполнение" id="1">
@@ -1340,6 +1410,21 @@
 			</Picture>
 			<Action>ДобавитьИзмененияВерсииВКИ</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПервичноеЗаполнениеПоОдномуДО" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первичное заполнение по одному ДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Первичное заполнение по одному ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПервичноеЗаполнениеПоОдномуДО</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -9,9 +9,6 @@
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.СформироватьОтчет</CommandName>
-				<TextColor>style:NegativeTextColor</TextColor>
-				<BackColor>#008080</BackColor>
-				<BorderColor>style:AccentColor</BorderColor>
 				<Picture>
 					<xr:Ref>CommonPicture._report</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -981,6 +978,120 @@
 						</InputField>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппатчЗаписиTUTDF" id="334">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>TUTDF</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группатч записи TUTDF</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппатчЗаписиTUTDFРасширеннаяПодсказка" id="335"/>
+					<ChildItems>
+						<Button name="ПеренестиСобытия" id="364">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ПеренестиСобытия</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ПеренестиСобытияРасширеннаяПодсказка" id="365"/>
+						</Button>
+						<Table name="тчЗаписиTUTDF" id="336">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.тчЗаписиTUTDF</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тчЗаписиTUTDFКонтекстноеМеню" id="337"/>
+							<AutoCommandBar name="тчЗаписиTUTDFКоманднаяПанель" id="338">
+								<ChildItems>
+									<Button name="тчЗаписиTUTDFПодбор" id="358">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчЗаписиTUTDFПодборРасширеннаяПодсказка" id="359"/>
+									</Button>
+									<Button name="тчЗаписиTUTDFПодборПоНастройкам" id="360">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчЗаписиTUTDFПодборПоНастройкамРасширеннаяПодсказка" id="361"/>
+									</Button>
+									<Button name="тчЗаписиTUTDFПодборИзФайла" id="362">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.DataSearch</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчЗаписиTUTDFПодборИзФайлаРасширеннаяПодсказка" id="363"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тчЗаписиTUTDFРасширеннаяПодсказка" id="339"/>
+							<SearchStringAddition name="тчЗаписиTUTDFСтрокаПоиска" id="340">
+								<AdditionSource>
+									<Item>тчЗаписиTUTDF</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчЗаписиTUTDFСтрокаПоискаКонтекстноеМеню" id="341"/>
+								<ExtendedTooltip name="тчЗаписиTUTDFСтрокаПоискаРасширеннаяПодсказка" id="342"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тчЗаписиTUTDFСостояниеПросмотра" id="343">
+								<AdditionSource>
+									<Item>тчЗаписиTUTDF</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчЗаписиTUTDFСостояниеПросмотраКонтекстноеМеню" id="344"/>
+								<ExtendedTooltip name="тчЗаписиTUTDFСостояниеПросмотраРасширеннаяПодсказка" id="345"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тчЗаписиTUTDFУправлениеПоиском" id="346">
+								<AdditionSource>
+									<Item>тчЗаписиTUTDF</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тчЗаписиTUTDFУправлениеПоискомКонтекстноеМеню" id="347"/>
+								<ExtendedTooltip name="тчЗаписиTUTDFУправлениеПоискомРасширеннаяПодсказка" id="348"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="тчЗаписиTUTDFНомерСтроки" id="349">
+									<DataPath>Объект.тчЗаписиTUTDF.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиTUTDFНомерСтрокиКонтекстноеМеню" id="350"/>
+									<ExtendedTooltip name="тчЗаписиTUTDFНомерСтрокиРасширеннаяПодсказка" id="351"/>
+								</LabelField>
+								<InputField name="тчЗаписиTUTDFОбъектУчета" id="352">
+									<DataPath>Объект.тчЗаписиTUTDF.ОбъектУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиTUTDFОбъектУчетаКонтекстноеМеню" id="353"/>
+									<ExtendedTooltip name="тчЗаписиTUTDFОбъектУчетаРасширеннаяПодсказка" id="354"/>
+								</InputField>
+								<InputField name="тчЗаписиTUTDFДолжник" id="355">
+									<DataPath>Объект.тчЗаписиTUTDF.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиTUTDFДолжникКонтекстноеМеню" id="356"/>
+									<ExtendedTooltip name="тчЗаписиTUTDFДолжникРасширеннаяПодсказка" id="357"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<Table name="Объекты" id="151">
@@ -1339,6 +1450,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПодборИзФайла</Action>
+		</Command>
+		<Command name="ПеренестиСобытия" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести события</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести события</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиСобытия</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -1054,10 +1054,28 @@
 							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<CommandName>Form.Command.ПроверкаНаБанкротство</CommandName>
 							<Picture>
-								<xr:Ref>CommonPicture.NC_ПроверкаПоКАД</xr:Ref>
+								<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="ПроверкаНаБанкротствоРасширеннаяПодсказка" id="469"/>
+						</Button>
+						<Button name="ОпределитьРегионИОператора" id="478">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.ОпределитьОператораИРегион</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Прослушка</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оператор и регион</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОпределитьРегионИОператораРасширеннаяПодсказка" id="479"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -1843,79 +1861,99 @@
 							<ContextMenu name="КонтактКонтекстноеМеню" id="18"/>
 							<ExtendedTooltip name="КонтактExtendedTooltip" id="184"/>
 						</RadioButtonField>
-						<Button name="ПозвонитьДолжнику" id="74">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<Width>6</Width>
-							<AutoMaxWidth>false</AutoMaxWidth>
-							<Height>2</Height>
-							<AutoMaxHeight>false</AutoMaxHeight>
-							<CommandName>Form.Command.ПозвонитьДолжнику</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Позвонить</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
+						<UsualGroup name="ГруппаУправлениеЗвонком" id="476">
 							<Title>
 								<v8:item>
-									<v8:lang>az</v8:lang>
-									<v8:content>Zəng etmək</v8:content>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Управление звонком</v8:content>
 								</v8:item>
 							</Title>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ПозвонитьДолжникуРасширеннаяПодсказка" id="141"/>
-						</Button>
-						<Button name="ЗавершитьРазговор" id="368">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<Width>6</Width>
-							<Height>2</Height>
-							<CommandName>Form.Command.ЗавершитьРазговор</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Отбой</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ЗавершитьРазговорРасширеннаяПодсказка" id="369"/>
-						</Button>
-						<Button name="ПереводВызова" id="460">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<Width>6</Width>
-							<Height>2</Height>
-							<CommandName>Form.Command.ПереводВызова</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Перевод</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ПереводВызоваРасширеннаяПодсказка" id="461"/>
-						</Button>
-						<Button name="ОтключитьМикрофон" id="386">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<Width>6</Width>
-							<Height>2</Height>
-							<CommandName>Form.Command.ОтключитьМикрофон</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Микрофон</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="ОтключитьМикрофонРасширеннаяПодсказка" id="387"/>
-						</Button>
-						<Button name="УдержаниеВызова" id="388">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<Width>6</Width>
-							<Height>2</Height>
-							<CommandName>Form.Command.УдержаниеВызова</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Удержание</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Shape>Oval</Shape>
-							<ExtendedTooltip name="УдержаниеВызоваРасширеннаяПодсказка" id="389"/>
-						</Button>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа управление звонком</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаУправлениеЗвонкомРасширеннаяПодсказка" id="477"/>
+							<ChildItems>
+								<Button name="ПозвонитьДолжнику" id="74">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>6</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Height>2</Height>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<CommandName>Form.Command.ПозвонитьДолжнику</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_Позвонить</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>az</v8:lang>
+											<v8:content>Zəng etmək</v8:content>
+										</v8:item>
+									</Title>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="ПозвонитьДолжникуРасширеннаяПодсказка" id="141"/>
+								</Button>
+								<Button name="ЗавершитьРазговор" id="368">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>6</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.ЗавершитьРазговор</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_Отбой</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="ЗавершитьРазговорРасширеннаяПодсказка" id="369"/>
+								</Button>
+								<Button name="ПереводВызова" id="460">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>6</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПереводВызова</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_Перевод</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="ПереводВызоваРасширеннаяПодсказка" id="461"/>
+								</Button>
+								<Button name="ОтключитьМикрофон" id="386">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>6</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.ОтключитьМикрофон</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_Микрофон</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="ОтключитьМикрофонРасширеннаяПодсказка" id="387"/>
+								</Button>
+								<Button name="УдержаниеВызова" id="388">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>6</Width>
+									<Height>2</Height>
+									<CommandName>Form.Command.УдержаниеВызова</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_Удержание</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Shape>Oval</Shape>
+									<ExtendedTooltip name="УдержаниеВызоваРасширеннаяПодсказка" id="389"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаРезультат" id="211">
@@ -2099,6 +2137,7 @@
 					<ExtendedTooltip name="ГруппаДополнительныеРеквизитыExtendedTooltip" id="187"/>
 				</UsualGroup>
 				<UsualGroup name="ГруппаСвязанныйДокумент" id="232">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2459,22 +2498,22 @@
 			<ContextMenu name="СледующееМероприятиеКонтекстноеМеню" id="44"/>
 			<ExtendedTooltip name="СледующееМероприятиеExtendedTooltip" id="191"/>
 		</InputField>
-		<UsualGroup name="ГруппаТехническаяИнформация" id="474">
+		<UsualGroup name="ГруппаСлужебнаяИнформация" id="474">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Техническая информация</v8:content>
+					<v8:content>Служебная информация</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа техническая информация</v8:content>
+					<v8:content>Группа служебная информация</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаТехническаяИнформацияРасширеннаяПодсказка" id="475"/>
+			<ExtendedTooltip name="ГруппаСлужебнаяИнформацияРасширеннаяПодсказка" id="475"/>
 			<ChildItems>
 				<InputField name="ДатаВыполнения" id="99">
 					<DataPath>Объект.ДатаВыполнения</DataPath>
@@ -3933,6 +3972,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НаписатьВВайбер</Action>
+		</Command>
+		<Command name="ОпределитьОператораИРегион" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определить оператора и регион</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Определить оператора и регион</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОпределитьОператораИРегион</Action>
 		</Command>
 	</Commands>
 	<Parameters>

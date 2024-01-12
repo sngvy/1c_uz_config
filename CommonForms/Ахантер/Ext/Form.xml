@@ -1,17 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>30</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="Нормализовать" id="10">
+			<Button name="ВыполнитьЗапрос" id="10">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.Нормализовать</CommandName>
+				<CommandName>Form.Command.ВыполнитьЗапросАхантер</CommandName>
 				<Picture>
 					<xr:Ref>StdPicture.GenerateReport</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="НормализоватьРасширеннаяПодсказка" id="11"/>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выполнить запрос</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ВыполнитьЗапросРасширеннаяПодсказка" id="11"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -20,15 +29,15 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="АдресДляНормализации" id="4">
-			<DataPath>АдресДляНормализации</DataPath>
-			<ContextMenu name="АдресДляНормализацииКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="АдресДляНормализацииРасширеннаяПодсказка" id="6"/>
+		<InputField name="Адрес" id="4">
+			<DataPath>Адрес</DataPath>
+			<ContextMenu name="АдресКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="6"/>
 		</InputField>
-		<InputField name="РезультатНормализации" id="7">
-			<DataPath>РезультатНормализации</DataPath>
-			<ContextMenu name="РезультатНормализацииКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="РезультатНормализацииРасширеннаяПодсказка" id="9"/>
+		<InputField name="Результат" id="7">
+			<DataPath>Результат</DataPath>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="9"/>
 		</InputField>
 		<HTMLDocumentField name="Ахантер" id="1">
 			<DataPath>Ахантер</DataPath>
@@ -59,11 +68,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="АдресДляНормализации" id="2">
+		<Attribute name="Адрес" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Адрес для нормализации</v8:content>
+					<v8:content>Адрес</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -74,11 +83,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="РезультатНормализации" id="3">
+		<Attribute name="Результат" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Результат нормализации</v8:content>
+					<v8:content>Результат</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -102,20 +111,20 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="Нормализовать" id="1">
+		<Command name="ВыполнитьЗапросАхантер" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Нормализовать</v8:content>
+					<v8:content>Выполнить запрос Ахантер</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Нормализовать</v8:content>
+					<v8:content>Выполнить запрос ахантер</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>Нормализовать</Action>
+			<Action>ПодключитьАхантер</Action>
 		</Command>
 	</Commands>
 </Form>

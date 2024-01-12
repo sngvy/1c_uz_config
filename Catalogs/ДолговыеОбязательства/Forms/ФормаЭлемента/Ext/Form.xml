@@ -49,7 +49,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ПроверкаНаБанкротство</CommandName>
 						<Picture>
-							<xr:Ref>CommonPicture.NC_ПроверкаПоКАД</xr:Ref>
+							<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<Title>
@@ -223,7 +223,7 @@
 						<Representation>PictureAndText</Representation>
 						<CommandName>Form.Command.ПередатьВПроцессБанкротства</CommandName>
 						<Picture>
-							<xr:Ref>CommonPicture.NC_ПроверкаПоКАД</xr:Ref>
+							<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="ПередатьВПроцессБанкротстваРасширеннаяПодсказка" id="1013"/>
@@ -3104,32 +3104,32 @@
 						</Table>
 					</ChildItems>
 				</Page>
-				<Page name="ГруппаДокументы" id="887">
+				<Page name="ГруппаЗапросыДокументов" id="887">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Документы</v8:content>
+							<v8:content>Запросы документов</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа документы</v8:content>
+							<v8:content>Группа запросы документов</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Picture>
 						<xr:Ref>StdPicture.Document</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
-					<ExtendedTooltip name="ГруппаДокументыРасширеннаяПодсказка" id="888"/>
+					<ExtendedTooltip name="ГруппаЗапросыДокументовРасширеннаяПодсказка" id="888"/>
 					<ChildItems>
 						<Table name="Документы" id="889">
 							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
 							<EnableStartDrag>true</EnableStartDrag>
-							<DataPath>Документы</DataPath>
-							<RowPictureDataPath>Документы.DefaultPicture</RowPictureDataPath>
+							<DataPath>ЗапросыДокументов</DataPath>
+							<RowPictureDataPath>ЗапросыДокументов.DefaultPicture</RowPictureDataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
@@ -3177,37 +3177,37 @@
 							</SearchControlAddition>
 							<ChildItems>
 								<LabelField name="ДокументыДата" id="902">
-									<DataPath>Документы.Date</DataPath>
+									<DataPath>ЗапросыДокументов.Date</DataPath>
 									<ContextMenu name="ДокументыДатаКонтекстноеМеню" id="903"/>
 									<ExtendedTooltip name="ДокументыДатаРасширеннаяПодсказка" id="904"/>
 								</LabelField>
 								<LabelField name="ДокументыНомер" id="905">
-									<DataPath>Документы.Number</DataPath>
+									<DataPath>ЗапросыДокументов.Number</DataPath>
 									<ContextMenu name="ДокументыНомерКонтекстноеМеню" id="906"/>
 									<ExtendedTooltip name="ДокументыНомерРасширеннаяПодсказка" id="907"/>
 								</LabelField>
 								<LabelField name="ДокументыАвтор" id="908">
-									<DataPath>Документы.Автор</DataPath>
+									<DataPath>ЗапросыДокументов.Автор</DataPath>
 									<ContextMenu name="ДокументыАвторКонтекстноеМеню" id="909"/>
 									<ExtendedTooltip name="ДокументыАвторРасширеннаяПодсказка" id="910"/>
 								</LabelField>
 								<LabelField name="ДокументыДоговор" id="911">
-									<DataPath>Документы.Договор</DataPath>
+									<DataPath>ЗапросыДокументов.Договор</DataPath>
 									<ContextMenu name="ДокументыДоговорКонтекстноеМеню" id="912"/>
 									<ExtendedTooltip name="ДокументыДоговорРасширеннаяПодсказка" id="913"/>
 								</LabelField>
 								<LabelField name="ДокументыТипДокумента" id="914">
-									<DataPath>Документы.ТипДокумента</DataPath>
+									<DataPath>ЗапросыДокументов.ТипДокумента</DataPath>
 									<ContextMenu name="ДокументыТипДокументаКонтекстноеМеню" id="915"/>
 									<ExtendedTooltip name="ДокументыТипДокументаРасширеннаяПодсказка" id="916"/>
 								</LabelField>
 								<LabelField name="ДокументыПолучатель" id="917">
-									<DataPath>Документы.Получатель</DataPath>
+									<DataPath>ЗапросыДокументов.Получатель</DataPath>
 									<ContextMenu name="ДокументыПолучательКонтекстноеМеню" id="918"/>
 									<ExtendedTooltip name="ДокументыПолучательРасширеннаяПодсказка" id="919"/>
 								</LabelField>
 								<LabelField name="ДокументыСостояние" id="920">
-									<DataPath>Документы.Состояние</DataPath>
+									<DataPath>ЗапросыДокументов.Состояние</DataPath>
 									<ContextMenu name="ДокументыСостояниеКонтекстноеМеню" id="921"/>
 									<ExtendedTooltip name="ДокументыСостояниеРасширеннаяПодсказка" id="922"/>
 								</LabelField>
@@ -3346,6 +3346,229 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаКредитнаяИстория" id="1022">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кредитная история</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кредитная история</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_НБКИ16</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаКредитнаяИсторияРасширеннаяПодсказка" id="1023"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКредитнаяИсторияСлужебная" id="1120">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кредитная история служебная</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кредитная история служебная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаКредитнаяИсторияСлужебнаяРасширеннаяПодсказка" id="1121"/>
+							<ChildItems>
+								<Button name="ЗаполнитьСобытияКИ" id="1024">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ЗаполнитьСобытияКИ</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.DataCompositionSettingsWizard</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЗаполнитьСобытияКИРасширеннаяПодсказка" id="1025"/>
+								</Button>
+								<Button name="ПрекратитьОбязательство" id="1118">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ПрекратитьОбязательство</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.UndoPosting</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ПрекратитьОбязательствоРасширеннаяПодсказка" id="1119"/>
+								</Button>
+								<Button name="СформироватьОтчетВНБКИ" id="1122">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.СформироватьОтчетВНБКИ</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="СформироватьОтчетВНБКИРасширеннаяПодсказка" id="1123"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="СобытияКИ" id="1072">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СобытияКИ</DataPath>
+							<RowPictureDataPath>СобытияКИ.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СобытияКИКонтекстноеМеню" id="1073"/>
+							<AutoCommandBar name="СобытияКИКоманднаяПанель" id="1074"/>
+							<ExtendedTooltip name="СобытияКИРасширеннаяПодсказка" id="1075"/>
+							<SearchStringAddition name="СобытияКИСтрокаПоиска" id="1076">
+								<AdditionSource>
+									<Item>СобытияКИ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СобытияКИСтрокаПоискаКонтекстноеМеню" id="1077"/>
+								<ExtendedTooltip name="СобытияКИСтрокаПоискаРасширеннаяПодсказка" id="1078"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СобытияКИСостояниеПросмотра" id="1079">
+								<AdditionSource>
+									<Item>СобытияКИ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СобытияКИСостояниеПросмотраКонтекстноеМеню" id="1080"/>
+								<ExtendedTooltip name="СобытияКИСостояниеПросмотраРасширеннаяПодсказка" id="1081"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СобытияКИУправлениеПоиском" id="1082">
+								<AdditionSource>
+									<Item>СобытияКИ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СобытияКИУправлениеПоискомКонтекстноеМеню" id="1083"/>
+								<ExtendedTooltip name="СобытияКИУправлениеПоискомРасширеннаяПодсказка" id="1084"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СобытияКИСделка" id="1085">
+									<DataPath>СобытияКИ.Сделка</DataPath>
+									<ContextMenu name="СобытияКИСделкаКонтекстноеМеню" id="1086"/>
+									<ExtendedTooltip name="СобытияКИСделкаРасширеннаяПодсказка" id="1087"/>
+								</LabelField>
+								<LabelField name="СобытияКИДатаСобытия" id="1088">
+									<DataPath>СобытияКИ.ДатаСобытия</DataPath>
+									<ContextMenu name="СобытияКИДатаСобытияКонтекстноеМеню" id="1089"/>
+									<ExtendedTooltip name="СобытияКИДатаСобытияРасширеннаяПодсказка" id="1090"/>
+								</LabelField>
+								<LabelField name="СобытияКИСобытие" id="1091">
+									<DataPath>СобытияКИ.Событие</DataPath>
+									<ContextMenu name="СобытияКИСобытиеКонтекстноеМеню" id="1092"/>
+									<ExtendedTooltip name="СобытияКИСобытиеРасширеннаяПодсказка" id="1093"/>
+								</LabelField>
+								<LabelField name="СобытияКИДокументСобытие" id="1094">
+									<DataPath>СобытияКИ.ДокументСобытие</DataPath>
+									<ContextMenu name="СобытияКИДокументСобытиеКонтекстноеМеню" id="1095"/>
+									<ExtendedTooltip name="СобытияКИДокументСобытиеРасширеннаяПодсказка" id="1096"/>
+								</LabelField>
+								<LabelField name="СобытияКИДатаРасчетаПросроченнойЗадолженности" id="1115">
+									<DataPath>СобытияКИ.ДатаРасчетаПросроченнойЗадолженности</DataPath>
+									<ContextMenu name="СобытияКИДатаРасчетаПросроченнойЗадолженностиКонтекстноеМеню" id="1116"/>
+									<ExtendedTooltip name="СобытияКИДатаРасчетаПросроченнойЗадолженностиРасширеннаяПодсказка" id="1117"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<Table name="ЖурналВыгрузокНБКИ" id="1026">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ЖурналВыгрузокНБКИ</DataPath>
+							<RowPictureDataPath>ЖурналВыгрузокНБКИ.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="ЖурналВыгрузокНБКИКонтекстноеМеню" id="1027"/>
+							<AutoCommandBar name="ЖурналВыгрузокНБКИКоманднаяПанель" id="1028"/>
+							<ExtendedTooltip name="ЖурналВыгрузокНБКИРасширеннаяПодсказка" id="1029"/>
+							<SearchStringAddition name="ЖурналВыгрузокНБКИСтрокаПоиска" id="1030">
+								<AdditionSource>
+									<Item>ЖурналВыгрузокНБКИ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЖурналВыгрузокНБКИСтрокаПоискаКонтекстноеМеню" id="1031"/>
+								<ExtendedTooltip name="ЖурналВыгрузокНБКИСтрокаПоискаРасширеннаяПодсказка" id="1032"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЖурналВыгрузокНБКИСостояниеПросмотра" id="1033">
+								<AdditionSource>
+									<Item>ЖурналВыгрузокНБКИ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЖурналВыгрузокНБКИСостояниеПросмотраКонтекстноеМеню" id="1034"/>
+								<ExtendedTooltip name="ЖурналВыгрузокНБКИСостояниеПросмотраРасширеннаяПодсказка" id="1035"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЖурналВыгрузокНБКИУправлениеПоиском" id="1036">
+								<AdditionSource>
+									<Item>ЖурналВыгрузокНБКИ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЖурналВыгрузокНБКИУправлениеПоискомКонтекстноеМеню" id="1037"/>
+								<ExtendedTooltip name="ЖурналВыгрузокНБКИУправлениеПоискомРасширеннаяПодсказка" id="1038"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ЖурналВыгрузокНБКИОбъектУчета" id="1039">
+									<DataPath>ЖурналВыгрузокНБКИ.ОбъектУчета</DataPath>
+									<ContextMenu name="ЖурналВыгрузокНБКИОбъектУчетаКонтекстноеМеню" id="1040"/>
+									<ExtendedTooltip name="ЖурналВыгрузокНБКИОбъектУчетаРасширеннаяПодсказка" id="1041"/>
+								</LabelField>
+								<LabelField name="ЖурналВыгрузокНБКИДатаПоследнейВыгрузки" id="1042">
+									<DataPath>ЖурналВыгрузокНБКИ.ДатаПоследнейВыгрузки</DataPath>
+									<ContextMenu name="ЖурналВыгрузокНБКИДатаПоследнейВыгрузкиКонтекстноеМеню" id="1043"/>
+									<ExtendedTooltip name="ЖурналВыгрузокНБКИДатаПоследнейВыгрузкиРасширеннаяПодсказка" id="1044"/>
+								</LabelField>
+								<LabelField name="ЖурналВыгрузокНБКИСобытие" id="1045">
+									<DataPath>ЖурналВыгрузокНБКИ.Событие</DataPath>
+									<ContextMenu name="ЖурналВыгрузокНБКИСобытиеКонтекстноеМеню" id="1046"/>
+									<ExtendedTooltip name="ЖурналВыгрузокНБКИСобытиеРасширеннаяПодсказка" id="1047"/>
+								</LabelField>
+								<LabelField name="ЖурналВыгрузокНБКИДатаСобытия" id="1048">
+									<DataPath>ЖурналВыгрузокНБКИ.ДатаСобытия</DataPath>
+									<ContextMenu name="ЖурналВыгрузокНБКИДатаСобытияКонтекстноеМеню" id="1049"/>
+									<ExtendedTooltip name="ЖурналВыгрузокНБКИДатаСобытияРасширеннаяПодсказка" id="1050"/>
+								</LabelField>
+								<LabelField name="ЖурналВыгрузокНБКИДокументОтчет" id="1051">
+									<DataPath>ЖурналВыгрузокНБКИ.ДокументОтчет</DataPath>
+									<ContextMenu name="ЖурналВыгрузокНБКИДокументОтчетКонтекстноеМеню" id="1052"/>
+									<ExtendedTooltip name="ЖурналВыгрузокНБКИДокументОтчетРасширеннаяПодсказка" id="1053"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаДанныеОБанкротстве" id="787">
 					<Title>
 						<v8:item>
@@ -3360,7 +3583,7 @@
 						</v8:item>
 					</ToolTip>
 					<Picture>
-						<xr:Ref>CommonPicture.Информация_0</xr:Ref>
+						<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
 						<xr:LoadTransparent>true</xr:LoadTransparent>
 					</Picture>
 					<ExtendedTooltip name="ГруппаДанныеОБанкротствеРасширеннаяПодсказка" id="788"/>
@@ -4226,11 +4449,11 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<Attribute name="Документы" id="21">
+		<Attribute name="ЗапросыДокументов" id="21">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Документы</v8:content>
+					<v8:content>Запросы документов</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -4423,6 +4646,87 @@
 				</v8:item>
 			</Title>
 			<Type/>
+		</Attribute>
+		<Attribute name="НастройкаВыгрузкиКИ" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка выгрузки КИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ЖурналВыгрузокНБКИ" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал выгрузок НБКИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ЖурналВыгрузокНБКИRUTDF</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПоследнейВыгрузки</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СобытияКИ" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>События КИ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.КредитныеИсторииДанныеСделки</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаСобытия</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -4841,6 +5145,51 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапроситьДокументНаНомер</Action>
+		</Command>
+		<Command name="ЗаполнитьСобытияКИ" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить события КИ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить события КИ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьСобытияКИ</Action>
+		</Command>
+		<Command name="ПрекратитьОбязательство" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прекратить обязательство</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прекратить обязательство</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрекратитьОбязательство</Action>
+		</Command>
+		<Command name="СформироватьОтчетВНБКИ" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет в НБКИ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет ВНБКИ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчетВНБКИ</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

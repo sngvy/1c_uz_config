@@ -40,7 +40,7 @@
 Процедура ПолучитьОКАТО()
 	document = ЭтаФорма.Элементы.Ахантер.Документ;
 	Попытка
-		okato = document.querySelector(".b-Table:nth-child(6) > .b-Row:nth-child(1) > .b-LPaddingStd").firstChild.nodeValue;
+		okato = document.querySelector(".b-Table:nth-child(8) > .b-Row:nth-child(1) > .b-LPaddingStd").firstChild.nodeValue;
 	Исключение
 		okato = "99 999 999 999";
 	КонецПопытки;

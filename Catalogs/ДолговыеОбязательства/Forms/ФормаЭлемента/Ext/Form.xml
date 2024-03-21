@@ -28,22 +28,6 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаДосудебнаяРасширеннаяПодсказка" id="879"/>
 				<ChildItems>
-					<Button name="ФормаПроверкаПоФССП" id="926">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ПроверкаПоФССП</CommandName>
-						<Picture>
-							<xr:Ref>CommonPicture.NC_ПоверкаПоФССП</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Проверка по ФССП</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ФормаПроверкаПоФССПРасширеннаяПодсказка" id="927"/>
-					</Button>
 					<Button name="ФормаПроверкаНаБанкротство" id="882">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -3346,6 +3330,179 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппаИП" id="1126">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ИП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ИП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_ПоверкаПоФССП</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаИПРасширеннаяПодсказка" id="1127"/>
+					<ChildItems>
+						<CommandBar name="ГруппаИПСлужебная" id="1183">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ИПСлужебная</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ИПСлужебная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаИПСлужебнаяРасширеннаяПодсказка" id="1184"/>
+							<ChildItems>
+								<Button name="ОбновитьИП" id="1185">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ОбновитьИП</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Refresh</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ОбновитьИПРасширеннаяПодсказка" id="1186"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<Table name="НайденныеИП" id="1128">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НайденныеИП</DataPath>
+							<RowPictureDataPath>НайденныеИП.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="НайденныеИПКонтекстноеМеню" id="1129">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="НайденныеИПКоманднаяПанель" id="1130"/>
+							<ExtendedTooltip name="НайденныеИПРасширеннаяПодсказка" id="1131"/>
+							<SearchStringAddition name="НайденныеИПСтрокаПоиска" id="1132">
+								<AdditionSource>
+									<Item>НайденныеИП</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НайденныеИПСтрокаПоискаКонтекстноеМеню" id="1133"/>
+								<ExtendedTooltip name="НайденныеИПСтрокаПоискаРасширеннаяПодсказка" id="1134"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НайденныеИПСостояниеПросмотра" id="1135">
+								<AdditionSource>
+									<Item>НайденныеИП</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НайденныеИПСостояниеПросмотраКонтекстноеМеню" id="1136"/>
+								<ExtendedTooltip name="НайденныеИПСостояниеПросмотраРасширеннаяПодсказка" id="1137"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НайденныеИПУправлениеПоиском" id="1138">
+								<AdditionSource>
+									<Item>НайденныеИП</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НайденныеИПУправлениеПоискомКонтекстноеМеню" id="1139"/>
+								<ExtendedTooltip name="НайденныеИПУправлениеПоискомРасширеннаяПодсказка" id="1140"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НайденныеИПИП" id="1141">
+									<DataPath>НайденныеИП.ИП</DataPath>
+									<ContextMenu name="НайденныеИПИПКонтекстноеМеню" id="1142"/>
+									<ExtendedTooltip name="НайденныеИПИПРасширеннаяПодсказка" id="1143"/>
+								</LabelField>
+								<LabelField name="НайденныеИПДатаПроверки" id="1144">
+									<DataPath>НайденныеИП.ДатаПроверки</DataPath>
+									<ContextMenu name="НайденныеИПДатаПроверкиКонтекстноеМеню" id="1145"/>
+									<ExtendedTooltip name="НайденныеИПДатаПроверкиРасширеннаяПодсказка" id="1146"/>
+								</LabelField>
+								<LabelField name="НайденныеИПДолжник" id="1147">
+									<DataPath>НайденныеИП.Должник</DataPath>
+									<ContextMenu name="НайденныеИПДолжникКонтекстноеМеню" id="1148"/>
+									<ExtendedTooltip name="НайденныеИПДолжникРасширеннаяПодсказка" id="1149"/>
+								</LabelField>
+								<LabelField name="НайденныеИПОСП" id="1150">
+									<DataPath>НайденныеИП.ОСП</DataPath>
+									<ContextMenu name="НайденныеИПОСПКонтекстноеМеню" id="1151"/>
+									<ExtendedTooltip name="НайденныеИПОСПРасширеннаяПодсказка" id="1152"/>
+								</LabelField>
+								<LabelField name="НайденныеИПИД" id="1153">
+									<DataPath>НайденныеИП.ИД</DataPath>
+									<ContextMenu name="НайденныеИПИДКонтекстноеМеню" id="1154"/>
+									<ExtendedTooltip name="НайденныеИПИДРасширеннаяПодсказка" id="1155"/>
+								</LabelField>
+								<LabelField name="НайденныеИПВзыскатель" id="1156">
+									<DataPath>НайденныеИП.Взыскатель</DataPath>
+									<ContextMenu name="НайденныеИПВзыскательКонтекстноеМеню" id="1157"/>
+									<ExtendedTooltip name="НайденныеИПВзыскательРасширеннаяПодсказка" id="1158"/>
+								</LabelField>
+								<LabelField name="НайденныеИПСПИ" id="1159">
+									<DataPath>НайденныеИП.СПИ</DataPath>
+									<ContextMenu name="НайденныеИПСПИКонтекстноеМеню" id="1160"/>
+									<ExtendedTooltip name="НайденныеИПСПИРасширеннаяПодсказка" id="1161"/>
+								</LabelField>
+								<LabelField name="НайденныеИПТелефонСПИ" id="1162">
+									<DataPath>НайденныеИП.ТелефонСПИ</DataPath>
+									<ContextMenu name="НайденныеИПТелефонСПИКонтекстноеМеню" id="1163"/>
+									<ExtendedTooltip name="НайденныеИПТелефонСПИРасширеннаяПодсказка" id="1164"/>
+								</LabelField>
+								<LabelField name="НайденныеИПДатаВозбуждения" id="1165">
+									<DataPath>НайденныеИП.ДатаВозбуждения</DataPath>
+									<ContextMenu name="НайденныеИПДатаВозбужденияКонтекстноеМеню" id="1166"/>
+									<ExtendedTooltip name="НайденныеИПДатаВозбужденияРасширеннаяПодсказка" id="1167"/>
+								</LabelField>
+								<LabelField name="НайденныеИПСуммаЗадолженности" id="1168">
+									<DataPath>НайденныеИП.СуммаЗадолженности</DataPath>
+									<ContextMenu name="НайденныеИПСуммаЗадолженностиКонтекстноеМеню" id="1169"/>
+									<ExtendedTooltip name="НайденныеИПСуммаЗадолженностиРасширеннаяПодсказка" id="1170"/>
+								</LabelField>
+								<LabelField name="НайденныеИПСуммаИсполнительскогоСбора" id="1171">
+									<DataPath>НайденныеИП.СуммаИсполнительскогоСбора</DataPath>
+									<ContextMenu name="НайденныеИПСуммаИсполнительскогоСбораКонтекстноеМеню" id="1172"/>
+									<ExtendedTooltip name="НайденныеИПСуммаИсполнительскогоСбораРасширеннаяПодсказка" id="1173"/>
+								</LabelField>
+								<LabelField name="НайденныеИПВсего" id="1174">
+									<DataPath>НайденныеИП.Всего</DataPath>
+									<ContextMenu name="НайденныеИПВсегоКонтекстноеМеню" id="1175"/>
+									<ExtendedTooltip name="НайденныеИПВсегоРасширеннаяПодсказка" id="1176"/>
+								</LabelField>
+								<LabelField name="НайденныеИПТипИД" id="1177">
+									<DataPath>НайденныеИП.ТипИД</DataPath>
+									<ContextMenu name="НайденныеИПТипИДКонтекстноеМеню" id="1178"/>
+									<ExtendedTooltip name="НайденныеИПТипИДРасширеннаяПодсказка" id="1179"/>
+								</LabelField>
+								<LabelField name="НайденныеИПСтатусИД" id="1180">
+									<DataPath>НайденныеИП.СтатусИД</DataPath>
+									<ContextMenu name="НайденныеИПСтатусИДКонтекстноеМеню" id="1181"/>
+									<ExtendedTooltip name="НайденныеИПСтатусИДРасширеннаяПодсказка" id="1182"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаКредитнаяИстория" id="1022">
 					<Title>
 						<v8:item>
@@ -4743,6 +4900,42 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="НайденныеИП" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденные ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ИсполнительныеПроизводства</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаВозбуждения</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПечатьУЭД" id="4">
@@ -4965,21 +5158,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапроситьДокумент</Action>
-		</Command>
-		<Command name="ПроверкаПоФССП" id="15">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Проверка по ФССП</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Проверка по ФССП</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПроверкаПоФССП</Action>
 		</Command>
 		<Command name="РасчетУсловий" id="16">
 			<Title>
@@ -5205,6 +5383,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СформироватьОтчетВНБКИ</Action>
+		</Command>
+		<Command name="ОбновитьИП" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить ИП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить ИП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьИП</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

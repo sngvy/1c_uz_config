@@ -28,22 +28,6 @@
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаДосудебнаяРасширеннаяПодсказка" id="879"/>
 				<ChildItems>
-					<Button name="ФормаПроверкаНаБанкротство" id="882">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ПроверкаНаБанкротство</CommandName>
-						<Picture>
-							<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Проверка на банкротство</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ФормаПроверкаНаБанкротствоРасширеннаяПодсказка" id="883"/>
-					</Button>
 					<Button name="ФормаРасчетУсловий" id="928">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -3372,6 +3356,12 @@
 										<xr:Ref>StdPicture.Refresh</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обновить</v8:content>
+										</v8:item>
+									</Title>
 									<ExtendedTooltip name="ОбновитьИПРасширеннаяПодсказка" id="1186"/>
 								</Button>
 							</ChildItems>
@@ -3498,6 +3488,139 @@
 									<DataPath>НайденныеИП.СтатусИД</DataPath>
 									<ContextMenu name="НайденныеИПСтатусИДКонтекстноеМеню" id="1181"/>
 									<ExtendedTooltip name="НайденныеИПСтатусИДРасширеннаяПодсказка" id="1182"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаБанкротство" id="1187">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Банкротство</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа банкротство</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаБанкротствоРасширеннаяПодсказка" id="1188"/>
+					<ChildItems>
+						<Button name="ОбновитьДелаОБанкротстве" id="1192">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ОбновитьДелаОБанкротстве</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.Reread</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Обновить</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ОбновитьДелаОБанкротствеРасширеннаяПодсказка" id="1193"/>
+						</Button>
+						<Table name="НайденныеДелаОБанкротстве" id="1194">
+							<CommandBarLocation>None</CommandBarLocation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>НайденныеДелаОБанкротстве</DataPath>
+							<RowPictureDataPath>НайденныеДелаОБанкротстве.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="НайденныеДелаОБанкротствеКонтекстноеМеню" id="1195">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="НайденныеДелаОБанкротствеКоманднаяПанель" id="1196"/>
+							<ExtendedTooltip name="НайденныеДелаОБанкротствеРасширеннаяПодсказка" id="1197"/>
+							<SearchStringAddition name="НайденныеДелаОБанкротствеСтрокаПоиска" id="1198">
+								<AdditionSource>
+									<Item>НайденныеДелаОБанкротстве</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НайденныеДелаОБанкротствеСтрокаПоискаКонтекстноеМеню" id="1199"/>
+								<ExtendedTooltip name="НайденныеДелаОБанкротствеСтрокаПоискаРасширеннаяПодсказка" id="1200"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НайденныеДелаОБанкротствеСостояниеПросмотра" id="1201">
+								<AdditionSource>
+									<Item>НайденныеДелаОБанкротстве</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НайденныеДелаОБанкротствеСостояниеПросмотраКонтекстноеМеню" id="1202"/>
+								<ExtendedTooltip name="НайденныеДелаОБанкротствеСостояниеПросмотраРасширеннаяПодсказка" id="1203"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НайденныеДелаОБанкротствеУправлениеПоиском" id="1204">
+								<AdditionSource>
+									<Item>НайденныеДелаОБанкротстве</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НайденныеДелаОБанкротствеУправлениеПоискомКонтекстноеМеню" id="1205"/>
+								<ExtendedTooltip name="НайденныеДелаОБанкротствеУправлениеПоискомРасширеннаяПодсказка" id="1206"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НайденныеДелаОБанкротствеДело" id="1207">
+									<DataPath>НайденныеДелаОБанкротстве.Дело</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеДелоКонтекстноеМеню" id="1208"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеДелоРасширеннаяПодсказка" id="1209"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеДатаПроверки" id="1210">
+									<DataPath>НайденныеДелаОБанкротстве.ДатаПроверки</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеДатаПроверкиКонтекстноеМеню" id="1211"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеДатаПроверкиРасширеннаяПодсказка" id="1212"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеДолжник" id="1213">
+									<DataPath>НайденныеДелаОБанкротстве.Должник</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеДолжникКонтекстноеМеню" id="1214"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеДолжникРасширеннаяПодсказка" id="1215"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеАдрес" id="1216">
+									<DataPath>НайденныеДелаОБанкротстве.Адрес</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеАдресКонтекстноеМеню" id="1217"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеАдресРасширеннаяПодсказка" id="1218"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеИНН" id="1219">
+									<DataPath>НайденныеДелаОБанкротстве.ИНН</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеИННКонтекстноеМеню" id="1220"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеИННРасширеннаяПодсказка" id="1221"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеСНИЛС" id="1222">
+									<DataPath>НайденныеДелаОБанкротстве.СНИЛС</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеСНИЛСКонтекстноеМеню" id="1223"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеСНИЛСРасширеннаяПодсказка" id="1224"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеУправляющий" id="1225">
+									<DataPath>НайденныеДелаОБанкротстве.Управляющий</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеУправляющийКонтекстноеМеню" id="1226"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеУправляющийРасширеннаяПодсказка" id="1227"/>
+								</LabelField>
+								<LabelField name="НайденныеДелаОБанкротствеСтадия" id="1228">
+									<DataPath>НайденныеДелаОБанкротстве.Стадия</DataPath>
+									<ContextMenu name="НайденныеДелаОБанкротствеСтадияКонтекстноеМеню" id="1229"/>
+									<ExtendedTooltip name="НайденныеДелаОБанкротствеСтадияРасширеннаяПодсказка" id="1230"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -4936,6 +5059,42 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<Attribute name="НайденныеДелаОБанкротстве" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденные дела о банкротстве</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ДелаОБанкротстве</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ДатаПроверки</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПечатьУЭД" id="4">
@@ -5128,21 +5287,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НайтиВВЦ</Action>
-		</Command>
-		<Command name="ПроверкаНаБанкротство" id="14">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Проверка на банкротство</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Проверка на банкротство</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ПроверкаНаБанкротство</Action>
 		</Command>
 		<Command name="ЗапроситьДокумент" id="3">
 			<Title>
@@ -5398,6 +5542,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьИП</Action>
+		</Command>
+		<Command name="ОбновитьДелаОБанкротстве" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить дела о банкротстве</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить дела о банкротстве</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьДелаОБанкротстве</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

@@ -3318,7 +3318,7 @@
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>ИП</v8:content>
+							<v8:content>Исп. пр-ва</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
@@ -3513,22 +3513,39 @@
 					<Group>HorizontalIfPossible</Group>
 					<ExtendedTooltip name="ГруппаБанкротствоРасширеннаяПодсказка" id="1188"/>
 					<ChildItems>
-						<Button name="ОбновитьДелаОБанкротстве" id="1192">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<CommandName>Form.Command.ОбновитьДелаОБанкротстве</CommandName>
-							<Picture>
-								<xr:Ref>StdPicture.Reread</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
+						<CommandBar name="ГруппаБанкротствоСлужебная" id="1231">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Обновить</v8:content>
+									<v8:content>Группа банкротство служебная</v8:content>
 								</v8:item>
 							</Title>
-							<ExtendedTooltip name="ОбновитьДелаОБанкротствеРасширеннаяПодсказка" id="1193"/>
-						</Button>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа банкротство служебная</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаБанкротствоСлужебнаяРасширеннаяПодсказка" id="1232"/>
+							<ChildItems>
+								<Button name="ОбновитьДелаОБанкротстве" id="1192">
+									<Type>CommandBarButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ОбновитьДелаОБанкротстве</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Reread</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обновить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОбновитьДелаОБанкротствеРасширеннаяПодсказка" id="1193"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
 						<Table name="НайденныеДелаОБанкротстве" id="1194">
 							<CommandBarLocation>None</CommandBarLocation>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
@@ -3685,7 +3702,7 @@
 									<Representation>PictureAndText</Representation>
 									<CommandName>Form.Command.СформироватьОтчетВНБКИ</CommandName>
 									<Picture>
-										<xr:Ref>StdPicture.WriteChanges</xr:Ref>
+										<xr:Ref>StdPicture.Write</xr:Ref>
 										<xr:LoadTransparent>true</xr:LoadTransparent>
 									</Picture>
 									<ExtendedTooltip name="СформироватьОтчетВНБКИРасширеннаяПодсказка" id="1123"/>

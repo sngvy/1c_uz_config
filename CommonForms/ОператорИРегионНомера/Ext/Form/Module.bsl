@@ -21,11 +21,11 @@
 &НаКлиенте
 Процедура ПолучитьОператораИРегион()
 	document = ЭтаФорма.Элементы.Определитель.Документ;
-	operatorregion = document.querySelector("strong:nth-child(2)").firstChild.nodeValue;
+	operatorregion = СтрЗаменить(СтрЗаменить(document.querySelector("strong:nth-child(2)").firstChild.nodeValue, "[", "("), "]", ")");
 	ЭтаФорма.ОператорИРегион = СтрЗаменить(operatorregion, ",", "");
 	time = document.querySelector("#time").firstChild.nodeValue;
 	ЭтаФорма.ВремяВРегионе = time;
-	mnp = document.querySelector("p > b").firstChild.nodeValue;
+	mnp = СтрЗаменить(СтрЗаменить(document.querySelector("p:nth-child(10)").innerHTML, "<b>", ""), "</b>", "");
 	ЭтаФорма.ПеренесенКДругомуОператору = mnp;
 КонецПроцедуры
 

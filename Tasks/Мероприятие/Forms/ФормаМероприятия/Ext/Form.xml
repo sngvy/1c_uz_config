@@ -306,6 +306,13 @@
 												<Event name="Clearing">ПолеОчистка</Event>
 											</Events>
 										</InputField>
+										<InputField name="СвязанныйДоговор" id="484">
+											<DataPath>Объект.СвязанныйДоговор</DataPath>
+											<Visible>false</Visible>
+											<DropListButton>false</DropListButton>
+											<ContextMenu name="СвязанныйДоговорКонтекстноеМеню" id="485"/>
+											<ExtendedTooltip name="СвязанныйДоговорРасширеннаяПодсказка" id="486"/>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -1033,11 +1040,44 @@
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
 						</Button>
+						<Button name="ИсполнительныеПроизводства" id="480">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>1</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ИсполнительныеПроизводства</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_ПоверкаПоФССП</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Исп. пр-ва</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ИсполнительныеПроизводстваРасширеннаяПодсказка" id="481"/>
+						</Button>
+						<Button name="ДелаОБанкротстве" id="482">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<Width>20</Width>
+							<Height>1</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<CommandName>Form.Command.ДелаОБанкротстве</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ДелаОБанкротствеРасширеннаяПодсказка" id="483"/>
+						</Button>
 						<Button name="ОпределитьРегионИОператора" id="478">
 							<Type>UsualButton</Type>
 							<Representation>PictureAndText</Representation>
 							<Width>20</Width>
-							<Height>2</Height>
+							<Height>1</Height>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 							<CommandName>Form.Command.ОпределитьОператораИРегион</CommandName>
 							<Picture>
 								<xr:Ref>CommonPicture.NC_Прослушка</xr:Ref>
@@ -3967,6 +4007,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОпределитьОператораИРегион</Action>
+		</Command>
+		<Command name="ИсполнительныеПроизводства" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительные производства</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполнительные производства</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсполнительныеПроизводства</Action>
+		</Command>
+		<Command name="ДелаОБанкротстве" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дела о банкротстве</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дела о банкротстве</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДелаОБанкротстве</Action>
 		</Command>
 	</Commands>
 	<Parameters>

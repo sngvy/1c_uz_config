@@ -1,0 +1,24 @@
+param (
+	$IncludeSubDir, $BaseDir, $ImageDir
+)
+
+function ConvertImg
+{
+	param($Base, $Image)
+	
+	convert -density 300 -define jpeg:size=500x250 "$Base\*.jpeg" -set filename:base %t "$Image\%[filename:base].jpeg"
+}
+
+if ($IncludeSubDir -ceq "itrue")
+{
+	Get-ChildItem -Path $BaseDir -Directory -Name | ForEach-Object -process {
+		$ImageWithSubDir = $ImageDir + "\" + $PSItem
+		$BaseWithSubDir = $BaseDir + "\" + $PSItem
+		mkdir($ImageWithSubDir)
+		
+		ConvertImg -Base $BaseWithSubDir -Page $Size -Image $ImageWithSubDir
+	}
+}
+
+ConvertImg -Base $BaseDir -Page $Size -Image $ImageDir
+

@@ -936,9 +936,10 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>REJECT</v8:content>
+							<v8:content>Обработка файлов-отказов</v8:content>
 						</v8:item>
 					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
 					<ExtendedTooltip name="REJECTРасширеннаяПодсказка" id="120"/>
 					<ChildItems>
 						<InputField name="ПутьФайлаОтказа" id="129">
@@ -988,9 +989,10 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группатч записи TUTDF</v8:content>
+							<v8:content>Перенос старых событий TUTDF в формату RUTDF</v8:content>
 						</v8:item>
 					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
 					<ExtendedTooltip name="ГруппатчЗаписиTUTDFРасширеннаяПодсказка" id="335"/>
 					<ChildItems>
 						<Button name="ПеренестиСобытия" id="364">
@@ -1092,6 +1094,134 @@
 						</Table>
 					</ChildItems>
 				</Page>
+				<Page name="ГруппатчЗаписиRUTDF" id="366">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>RUTDF</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Восстановить события RUTDF и принять к учету без отчета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<ExtendedTooltip name="ГруппатчЗаписиRUTDFРасширеннаяПодсказка" id="367"/>
+					<ChildItems>
+						<Button name="ВосстановитьСобытия" id="405">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<CommandName>Form.Command.ВосстановитьСобытия</CommandName>
+							<Picture>
+								<xr:Ref>StdPicture.DataCompositionNewChart</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ВосстановитьСобытияРасширеннаяПодсказка" id="406"/>
+						</Button>
+						<Table name="тчЗаписиRUTDF" id="368">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.тчЗаписиRUTDF</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="тчЗаписиRUTDFКонтекстноеМеню" id="369"/>
+							<AutoCommandBar name="тчЗаписиRUTDFКоманднаяПанель" id="370">
+								<ChildItems>
+									<Button name="тчЗаписиRUTDFПодбор" id="390">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчЗаписиRUTDFПодборРасширеннаяПодсказка" id="391"/>
+									</Button>
+									<Button name="тчЗаписиRUTDFПодборПоНастройкам" id="392">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчЗаписиRUTDFПодборПоНастройкамРасширеннаяПодсказка" id="393"/>
+									</Button>
+									<Button name="тчЗаписиRUTDFПодборИзФайла" id="394">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Find</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="тчЗаписиRUTDFПодборИзФайлаРасширеннаяПодсказка" id="395"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="тчЗаписиRUTDFРасширеннаяПодсказка" id="371"/>
+							<SearchStringAddition name="тчЗаписиRUTDFСтрокаПоиска" id="372">
+								<AdditionSource>
+									<Item>тчЗаписиRUTDF</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчЗаписиRUTDFСтрокаПоискаКонтекстноеМеню" id="373"/>
+								<ExtendedTooltip name="тчЗаписиRUTDFСтрокаПоискаРасширеннаяПодсказка" id="374"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="тчЗаписиRUTDFСостояниеПросмотра" id="375">
+								<AdditionSource>
+									<Item>тчЗаписиRUTDF</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="тчЗаписиRUTDFСостояниеПросмотраКонтекстноеМеню" id="376"/>
+								<ExtendedTooltip name="тчЗаписиRUTDFСостояниеПросмотраРасширеннаяПодсказка" id="377"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="тчЗаписиRUTDFУправлениеПоиском" id="378">
+								<AdditionSource>
+									<Item>тчЗаписиRUTDF</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="тчЗаписиRUTDFУправлениеПоискомКонтекстноеМеню" id="379"/>
+								<ExtendedTooltip name="тчЗаписиRUTDFУправлениеПоискомРасширеннаяПодсказка" id="380"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="тчЗаписиRUTDFНомерСтроки" id="381">
+									<DataPath>Объект.тчЗаписиRUTDF.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиRUTDFНомерСтрокиКонтекстноеМеню" id="382"/>
+									<ExtendedTooltip name="тчЗаписиRUTDFНомерСтрокиРасширеннаяПодсказка" id="383"/>
+								</LabelField>
+								<InputField name="тчЗаписиRUTDFОбъектУчета" id="384">
+									<DataPath>Объект.тчЗаписиRUTDF.ОбъектУчета</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиRUTDFОбъектУчетаКонтекстноеМеню" id="385"/>
+									<ExtendedTooltip name="тчЗаписиRUTDFОбъектУчетаРасширеннаяПодсказка" id="386"/>
+								</InputField>
+								<InputField name="тчЗаписиRUTDFДолжник" id="387">
+									<DataPath>Объект.тчЗаписиRUTDF.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиRUTDFДолжникКонтекстноеМеню" id="388"/>
+									<ExtendedTooltip name="тчЗаписиRUTDFДолжникРасширеннаяПодсказка" id="389"/>
+								</InputField>
+								<InputField name="тчЗаписиRUTDFДатаСтартаВосстановления" id="402">
+									<DataPath>Объект.тчЗаписиRUTDF.ДатаСтартаВосстановления</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчЗаписиRUTDFДатаСтартаВосстановленияКонтекстноеМеню" id="403"/>
+									<ExtendedTooltip name="тчЗаписиRUTDFДатаСтартаВосстановленияРасширеннаяПодсказка" id="404"/>
+								</InputField>
+								<CheckBoxField name="тчЗаписиRUTDFПринятьВжурналеВыгрузок" id="399">
+									<DataPath>Объект.тчЗаписиRUTDF.ПринятьВжурналеВыгрузок</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="тчЗаписиRUTDFПринятьВжурналеВыгрузокКонтекстноеМеню" id="400"/>
+									<ExtendedTooltip name="тчЗаписиRUTDFПринятьВжурналеВыгрузокРасширеннаяПодсказка" id="401"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 		<Table name="Объекты" id="151">
@@ -1172,6 +1302,7 @@
 			</ChildItems>
 		</Table>
 		<UsualGroup name="ГруппаОперация" id="321">
+			<Visible>false</Visible>
 			<Enabled>false</Enabled>
 			<Title>
 				<v8:item>
@@ -1201,26 +1332,6 @@
 					</Events>
 				</CheckBoxField>
 			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаКорректировка" id="326">
-			<EnableContentChange>true</EnableContentChange>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа корректировка</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа корректировка</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаКорректировкаРасширеннаяПодсказка" id="327"/>
 		</UsualGroup>
 	</ChildItems>
 	<Attributes>
@@ -1465,6 +1576,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеренестиСобытия</Action>
+		</Command>
+		<Command name="ВосстановитьСобытия" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить события</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Восстановить события</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВосстановитьСобытия</Action>
 		</Command>
 	</Commands>
 </Form>

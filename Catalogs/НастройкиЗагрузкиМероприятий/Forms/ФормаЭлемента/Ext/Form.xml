@@ -3,6 +3,9 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -22,6 +25,15 @@
 		</InputField>
 		<InputField name="ТипМероприятия" id="7">
 			<DataPath>Объект.ТипМероприятия</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обязательно к заполнению для обработки ЗагрузкаМероприятий(Устаревшая загрузка мероприятий)
+
+Для использования в Загрузке истории мероприятий используется как значение по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
@@ -36,11 +48,19 @@
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
+			<ListChoiceMode>true</ListChoiceMode>
 			<ContextMenu name="ОбъектУчетаКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="ОбъектУчетаРасширеннаяПодсказка" id="21"/>
 		</InputField>
 		<InputField name="РезультатПоУмолчанию" id="10">
 			<DataPath>Объект.РезультатПоУмолчанию</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Игнорируется в Загрузке истории по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
@@ -57,54 +77,89 @@
 				<Event name="OnChange">РезультатПоУмолчаниюПриИзменении</Event>
 			</Events>
 		</InputField>
-		<InputField name="ОбъектСтолбец" id="16">
-			<DataPath>Объект.ОбъектСтолбец</DataPath>
+		<UsualGroup name="ГруппаСтолбцы" id="53">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Объект</v8:content>
+					<v8:content>Номера столбцов для загрузки</v8:content>
 				</v8:item>
 			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ContextMenu name="ОбъектСтолбецКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="ОбъектСтолбецРасширеннаяПодсказка" id="18"/>
-		</InputField>
-		<InputField name="ОбъектДата" id="44">
-			<DataPath>Объект.ОбъектДата</DataPath>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ContextMenu name="ОбъектДатаКонтекстноеМеню" id="45"/>
-			<ExtendedTooltip name="ОбъектДатаРасширеннаяПодсказка" id="46"/>
-		</InputField>
-		<InputField name="ОбъектКомментарий" id="47">
-			<DataPath>Объект.ОбъектКомментарий</DataPath>
-			<Title>
+			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Комментарий</v8:content>
+					<v8:content>Группа столбцы</v8:content>
 				</v8:item>
-			</Title>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ContextMenu name="ОбъектКомментарийКонтекстноеМеню" id="48"/>
-			<ExtendedTooltip name="ОбъектКомментарийРасширеннаяПодсказка" id="49"/>
-		</InputField>
-		<InputField name="РезультатСтолбец" id="13">
-			<DataPath>Объект.РезультатСтолбец</DataPath>
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Результат</v8:content>
-				</v8:item>
-			</Title>
-			<EditMode>EnterOnInput</EditMode>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<ContextMenu name="РезультатСтолбецКонтекстноеМеню" id="14"/>
-			<ExtendedTooltip name="РезультатСтолбецРасширеннаяПодсказка" id="15"/>
-		</InputField>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<ExtendedTooltip name="ГруппаСтолбцыРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<InputField name="ОбъектСтолбец" id="16">
+					<DataPath>Объект.ОбъектСтолбец</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код объекта</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ОбъектСтолбецКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ОбъектСтолбецРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="ОбъектДата" id="44">
+					<DataPath>Объект.ОбъектДата</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выполнения</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ОбъектДатаКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ОбъектДатаРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ОбъектТипМероприятия" id="50">
+					<DataPath>Объект.ОбъектТипМероприятия</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип мероприятия</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ОбъектТипМероприятияКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ОбъектТипМероприятияРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="РезультатСтолбец" id="13">
+					<DataPath>Объект.РезультатСтолбец</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="РезультатСтолбецКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="РезультатСтолбецРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<InputField name="ОбъектКомментарий" id="47">
+					<DataPath>Объект.ОбъектКомментарий</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<AutoMaxHeight>false</AutoMaxHeight>
+					<ContextMenu name="ОбъектКомментарийКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ОбъектКомментарийРасширеннаяПодсказка" id="49"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="ДополнительныеРеквизиты" id="22">
 			<Representation>List</Representation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>

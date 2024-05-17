@@ -1,0 +1,48 @@
+#!/bin/bash
+function tesseract_file {
+  base=$1
+  txt=$2
+
+  files=( $(find "$base" -maxdepth 1 -type f | sort > "$txt/listsOfFiles") )
+  
+  while IFS= read -r file
+  do
+    file_name="$(basename "$file")"
+    txt_file="$txt/$file_name"
+
+    tesseract "$file" "$txt_file" -l rus+eng
+  done < "$txt/listsOfFiles"
+
+  rm "$txt/listsOfFiles"
+}
+
+base_dir=$2
+txt_dir=$3
+
+include_sub_dir=$1
+
+name_base_dir=$(basename $base_dir)
+
+tesseract_file "$base_dir" "$txt_dir"
+
+if [ $include_sub_dir = "-itrue" ]
+then
+
+for dir in $(find "$base" -type d | sort) ; do
+
+  if [ $(basename "$dir") != "$name_base_dir" ]
+  then
+
+    sub_dir="$(basename "$dir")"
+    txt_sub_dir="$txt_dir/$sub_dir"
+
+    mkdir "$txt_sub_dir"
+
+    tesseract_file "$dir" "$txt_sub_dir"
+
+  fi
+
+done
+
+fi
+

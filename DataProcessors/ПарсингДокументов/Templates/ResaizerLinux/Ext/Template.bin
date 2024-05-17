@@ -1,0 +1,39 @@
+
+#!/bin/bash
+function convert_file {
+  f_base_dir=$1
+  f_image_dir=$2
+
+  convert -density 300 -define jpeg:size=500x250 "$f_base_dir/*.jpeg" -set filename:base %t "$f_image_d>
+}
+
+base_dir=$2
+page_numbers=$4
+image_dir=$3
+
+include_sub_dir=$1
+
+name_base_dir=$(basename $base_dir)
+
+if [ $include_sub_dir = "-itrue" ]
+then
+
+for dir in $(find "$base_dir" -type d); do
+
+  if [ $(basename $dir) != $name_base_dir ]
+  then
+    sub_dir="$(basename $dir)"
+    image_with_sub_dir="$image_dir/$sub_dir"
+    mkdir $image_with_sub_dir
+
+    #convert "$dir/*.*"$page_numbers -set filename:base %t "$image_with_sub_dir/%[filename:base]-%d.jpe>
+    convert_file $dir $image_with_sub_dir
+
+  fi
+
+done
+
+fi
+
+#convert "$base_dir/*.*"$page_numbers -set filename:base %t "$image_dir/%[filename:base]-%d.jpeg"
+convert_file $base_dir $image_dir

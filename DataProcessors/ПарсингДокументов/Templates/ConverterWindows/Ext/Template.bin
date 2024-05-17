@@ -1,0 +1,24 @@
+param (
+	$IncludeSubDir, $BaseDir, $ImageDir, $PageNambers
+)
+
+function ConvertImg
+{
+	param($Base, $Page, $Image)
+	
+	convert -density 300 -trim "$Base\*.{pdf,jpeg,jpg,gif}$Page" -set filename:base %t -quality 100 -background White "$Image\%[filename:base]-%d.jpeg"
+}
+
+if ($IncludeSubDir -ceq "itrue")
+{
+	Get-ChildItem -Path $BaseDir -Directory -Name | ForEach-Object -process {
+		$ImageWithSubDir = $ImageDir + "\" + $PSItem
+		$BaseWithSubDir = $BaseDir + "\" + $PSItem
+		mkdir($ImageWithSubDir)
+		
+		ConvertImg -Base $BaseWithSubDir -Page $PageNambers -Image $ImageWithSubDir
+	}
+}
+
+ConvertImg -Base $BaseDir -Page $PageNambers -Image $ImageDir
+

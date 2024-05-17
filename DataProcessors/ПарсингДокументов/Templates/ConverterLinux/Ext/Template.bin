@@ -1,0 +1,40 @@
+#!/bin/bash
+function convert_file {
+  f_base_dir=$1
+  f_image_dir=$2
+  f_page_numbers=$3
+
+  convert -density 300 -trim "$f_base_dir/*.{pdf,jpeg,jpg,gif}"$f_page_numbers -quality 100 -background White -set filename:base %t "$f_image_dir/%[filename:base]-%d.jpeg"
+}
+
+base_dir=$2
+page_numbers=$4
+image_dir=$3
+
+include_sub_dir=$1
+
+name_base_dir=$(basename $base_dir)
+
+if [ $include_sub_dir = "-itrue" ]
+then
+
+for dir in $(find "$base_dir" -type d); do
+
+  if [ $(basename $dir) != $name_base_dir ]
+  then
+    sub_dir="$(basename $dir)"
+    image_with_sub_dir="$image_dir/$sub_dir"
+    mkdir $image_with_sub_dir
+
+    #convert "$dir/*.*"$page_numbers -set filename:base %t "$image_with_sub_dir/%[filename:base]-%d.jpeg"
+    convert_file $dir $image_with_sub_dir $page_numbers
+
+  fi
+
+done 
+
+fi
+
+#convert "$base_dir/*.*"$page_numbers -set filename:base %t "$image_dir/%[filename:base]-%d.jpeg"
+convert_file $base_dir $image_dir $page_numbers
+

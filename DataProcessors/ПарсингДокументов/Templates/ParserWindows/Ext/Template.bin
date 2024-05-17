@@ -1,0 +1,30 @@
+param (
+	$IncludeSubDir, $BaseDir, $TxtDir
+)
+
+function GetTXT
+{
+	param($Base, $Txt)
+	Get-ChildItem -Path $Base -File -Name | ForEach-Object {
+
+		$BaseFile = "$Base\$PSItem"
+
+		$TxtFile = "$Txt\$PSItem"
+
+		tesseract `"$BaseFile`" `"$TxtFile`" -l rus+eng
+	}
+}
+
+if ($IncludeSubDir -ceq "itrue")
+{
+	Get-ChildItem -Path $BaseDir -Directory -Name | ForEach-Object -process {
+		$TxtWithSubDir = "$TxtDir\$PSItem"
+		$BaseWithSubDir = "$BaseDir\$PSItem"
+		mkdir($TxtWithSubDir)
+		
+		GetTXT -Base $BaseWithSubDir -Txt $TxtWithSubDir
+	}
+}
+
+GetTXT -Base $BaseDir -Txt $TxtDir
+

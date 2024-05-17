@@ -3,11 +3,38 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ФормаЗаполнитьПоУмолчанию" id="16">
+			<Button name="ФормаЗаписатьИЗакрыть" id="206">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
-				<ExtendedTooltip name="ФормаЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="17"/>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.StandardCommand.WriteAndClose</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИЗакрытьРасширеннаяПодсказка" id="207"/>
+			</Button>
+			<Button name="ФормаЗаписать" id="208">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Write</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьРасширеннаяПодсказка" id="209"/>
+			</Button>
+			<Button name="ФормаУстановитьПометкуУдаления" id="210">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.SetDeletionMark</CommandName>
+				<ExtendedTooltip name="ФормаУстановитьПометкуУдаленияРасширеннаяПодсказка" id="211"/>
+			</Button>
+			<Button name="ФормаСкопировать" id="212">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Copy</CommandName>
+				<ExtendedTooltip name="ФормаСкопироватьРасширеннаяПодсказка" id="213"/>
+			</Button>
+			<Button name="ФормаПеречитать" id="214">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Reread</CommandName>
+				<ExtendedTooltip name="ФормаПеречитатьРасширеннаяПодсказка" id="215"/>
+			</Button>
+			<Button name="ФормаПоказатьВСписке" id="216">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.ShowInList</CommandName>
+				<ExtendedTooltip name="ФормаПоказатьВСпискеРасширеннаяПодсказка" id="217"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -40,121 +67,245 @@
 					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
 				</InputField>
+				<UsualGroup name="ГруппаТехническая" id="222">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Техническая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа техническая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<ExtendedTooltip name="ГруппаТехническаяРасширеннаяПодсказка" id="223"/>
+					<ChildItems>
+						<InputField name="СтатустПарсинга" id="224">
+							<DataPath>Объект.СтатусПарсинга</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>На клиенте используются три уровня - Отладка, Ошибка, Инфо</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ContextMenu name="СтатустПарсингаКонтекстноеМеню" id="225"/>
+							<ExtendedTooltip name="СтатустПарсингаРасширеннаяПодсказка" id="226"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<InputField name="Наименование" id="4">
 					<DataPath>Объект.Description</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 				</InputField>
-				<InputField name="ВыполнятьНа" id="177">
-					<DataPath>Объект.ВыполнятьНа</DataPath>
-					<ListChoiceMode>true</ListChoiceMode>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Сервере</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">1</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Клиенте</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">2</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ВыполнятьНаКонтекстноеМеню" id="178"/>
-					<ExtendedTooltip name="ВыполнятьНаРасширеннаяПодсказка" id="179"/>
-					<Events>
-						<Event name="OnChange">ВыполнятьНаПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ImageMagickConvert" id="180">
-					<DataPath>Объект.ImageMagickConvert</DataPath>
-					<Visible>false</Visible>
+				<UsualGroup name="ГруппаНастройкаПоУмолчанию" id="200">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Image Magick Convert</v8:content>
+							<v8:content>Группа настройка по умолчанию</v8:content>
 						</v8:item>
 					</Title>
-					<ChoiceButton>true</ChoiceButton>
-					<ContextMenu name="ImageMagickConvertКонтекстноеМеню" id="181"/>
-					<ExtendedTooltip name="ImageMagickConvertРасширеннаяПодсказка" id="182"/>
-					<Events>
-						<Event name="StartChoice">ImageMagickConvertНачалоВыбора</Event>
-					</Events>
-				</InputField>
-				<InputField name="Tesseract" id="183">
-					<DataPath>Объект.Tesseract</DataPath>
-					<Visible>false</Visible>
-					<ChoiceButton>true</ChoiceButton>
-					<ContextMenu name="TesseractКонтекстноеМеню" id="184"/>
-					<ExtendedTooltip name="TesseractРасширеннаяПодсказка" id="185"/>
-					<Events>
-						<Event name="StartChoice">TesseractНачалоВыбора</Event>
-					</Events>
-				</InputField>
-				<InputField name="ВидНастройки" id="157">
-					<DataPath>Объект.ВидНастройки</DataPath>
-					<ListChoiceMode>true</ListChoiceMode>
-					<ChoiceList>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Парсинг Документов</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">1</Value>
-							</xr:Value>
-						</xr:Item>
-						<xr:Item>
-							<xr:Presentation/>
-							<xr:CheckState>0</xr:CheckState>
-							<xr:Value xsi:type="FormChoiceListDesTimeValue">
-								<Presentation>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Парсинг Исполнительных документов</v8:content>
-									</v8:item>
-								</Presentation>
-								<Value xsi:type="xs:string">2</Value>
-							</xr:Value>
-						</xr:Item>
-					</ChoiceList>
-					<ContextMenu name="ВидНастройкиКонтекстноеМеню" id="158"/>
-					<ExtendedTooltip name="ВидНастройкиРасширеннаяПодсказка" id="159"/>
-					<Events>
-						<Event name="OnChange">ВидНастройкиПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="КаталогДокументовПоУмолчанию" id="104">
-					<DataPath>Объект.КаталогДокументовПоУмолчанию</DataPath>
-					<ChoiceButton>true</ChoiceButton>
-					<ContextMenu name="КаталогДокументовПоУмолчаниюКонтекстноеМеню" id="105"/>
-					<ExtendedTooltip name="КаталогДокументовПоУмолчаниюРасширеннаяПодсказка" id="106"/>
-					<Events>
-						<Event name="StartChoice">КаталогДокументовПоУмолчаниюНачалоВыбора</Event>
-					</Events>
-				</InputField>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройка по умолчанию</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНастройкаПоУмолчаниюРасширеннаяПодсказка" id="201"/>
+					<ChildItems>
+						<InputField name="ВидНастройки" id="157">
+							<DataPath>Объект.ВидНастройки</DataPath>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Парсинг Документов</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Парсинг Исполнительных документов</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВидНастройкиКонтекстноеМеню" id="158"/>
+							<ExtendedTooltip name="ВидНастройкиРасширеннаяПодсказка" id="159"/>
+							<Events>
+								<Event name="OnChange">ВидНастройкиПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="ФормаЗаполнитьПоУмолчанию" id="16">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьПоУмолчанию</CommandName>
+							<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+							<BackColor>style:FormBackColor</BackColor>
+							<ExtendedTooltip name="ФормаЗаполнитьПоУмолчаниюРасширеннаяПодсказка" id="17"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаНастройкаФайловойСистемы" id="220">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Взаимодействие с файловой системой</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:ЦветВсплывающейГруппы</TitleTextColor>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа настройка файловой системы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<BackColor>style:FieldBackColor</BackColor>
+					<ExtendedTooltip name="ГруппаНастройкаФайловойСистемыРасширеннаяПодсказка" id="221"/>
+					<ChildItems>
+						<InputField name="ВыполнятьНа" id="177">
+							<DataPath>Объект.ВыполнятьНа</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В клиент серверном варианте для выполнения на Сервере требуются настройки Администратора для пользователя 1С</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>None</ToolTipRepresentation>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Клиенте</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Сервере</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">1</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВыполнятьНаКонтекстноеМеню" id="178"/>
+							<ExtendedTooltip name="ВыполнятьНаРасширеннаяПодсказка" id="179"/>
+						</InputField>
+						<UsualGroup name="ГруппаКаталогОбработки" id="218">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа каталог обработки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа каталог обработки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКаталогОбработкиРасширеннаяПодсказка" id="219"/>
+							<ChildItems>
+								<InputField name="КаталогДокументовПоУмолчанию" id="104">
+									<DataPath>Объект.КаталогДокументовПоУмолчанию</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корень обработки</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="КаталогДокументовПоУмолчаниюКонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="КаталогДокументовПоУмолчаниюРасширеннаяПодсказка" id="106"/>
+									<Events>
+										<Event name="StartChoice">КаталогДокументовПоУмолчаниюНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<Button name="СправочникНастройкиПарсингаДокументовСоздатьСтруктуруДляПарсинга" id="204">
+									<Type>UsualButton</Type>
+									<CommandName>Catalog.НастройкиПарсингаДокументов.Command.СоздатьСтруктуруДляПарсинга</CommandName>
+									<DataPath>Объект.Ref</DataPath>
+									<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+									<BackColor>style:FormBackColor</BackColor>
+									<ExtendedTooltip name="СправочникНастройкиПарсингаДокументовСоздатьСтруктуруДляПарсингаРасширеннаяПодсказка" id="205"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ТипыЭлДок" id="154">
+							<DataPath>Объект.ТипыЭлДок</DataPath>
+							<ContextMenu name="ТипыЭлДокКонтекстноеМеню" id="155"/>
+							<ExtendedTooltip name="ТипыЭлДокРасширеннаяПодсказка" id="156"/>
+						</InputField>
+						<CheckBoxField name="ВключатьВложенныеКаталоги" id="151">
+							<DataPath>Объект.ВключатьВложенныеКаталоги</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВключатьВложенныеКаталогиКонтекстноеМеню" id="152"/>
+							<ExtendedTooltip name="ВключатьВложенныеКаталогиРасширеннаяПодсказка" id="153"/>
+						</CheckBoxField>
+						<CheckBoxField name="НеУдалятьВременныеФайлы" id="88">
+							<DataPath>Объект.НеУдалятьВременныеФайлы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеУдалятьВременныеФайлыКонтекстноеМеню" id="89"/>
+							<ExtendedTooltip name="НеУдалятьВременныеФайлыРасширеннаяПодсказка" id="90"/>
+						</CheckBoxField>
+						<CheckBoxField name="ПоказатьДокумент" id="133">
+							<DataPath>Объект.ПоказатьДокумент</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Просмотр документов </v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПоказатьДокументКонтекстноеМеню" id="134"/>
+							<ExtendedTooltip name="ПоказатьДокументРасширеннаяПодсказка" id="135"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
 				<InputField name="ЧитаемыеСимволы" id="7">
 					<DataPath>Объект.ЧитаемыеСимволы</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -173,11 +324,6 @@
 						</Title>
 					</ExtendedTooltip>
 				</InputField>
-				<InputField name="ТипыЭлДок" id="154">
-					<DataPath>Объект.ТипыЭлДок</DataPath>
-					<ContextMenu name="ТипыЭлДокКонтекстноеМеню" id="155"/>
-					<ExtendedTooltip name="ТипыЭлДокРасширеннаяПодсказка" id="156"/>
-				</InputField>
 				<InputField name="ТипыПрикрепляемыхФайлов" id="160">
 					<DataPath>Объект.ТипыПрикрепляемыхФайлов</DataPath>
 					<ContextMenu name="ТипыПрикрепляемыхФайловКонтекстноеМеню" id="161"/>
@@ -195,44 +341,51 @@
 					<ContextMenu name="ДлинаСловаВСимволахКонтекстноеМеню" id="11"/>
 					<ExtendedTooltip name="ДлинаСловаВСимволахРасширеннаяПодсказка" id="12"/>
 				</InputField>
+				<UsualGroup name="ГруппаОграничениеДлиныФамилии" id="202">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ограничение длины фамилии</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ограничение длины фамилии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОграничениеДлиныФамилииРасширеннаяПодсказка" id="203"/>
+					<ChildItems>
+						<InputField name="МинимальнаяДлинаФамилии" id="197">
+							<DataPath>Объект.МинимальнаяДлинаФамилии</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>От значения зависит скорость обработки документов, для лучшей скорости рекомендуется завести отдельную настройку с короткими фамилиями (Меньше 4)
+
+При выставлении значения 0 - значение расчитывается перед парсингом</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ContextMenu name="МинимальнаяДлинаФамилииКонтекстноеМеню" id="198"/>
+							<ExtendedTooltip name="МинимальнаяДлинаФамилииРасширеннаяПодсказка" id="199"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<InputField name="ДоСтраницы" id="39">
 					<DataPath>Объект.ДоСтраницы</DataPath>
 					<ContextMenu name="ДоСтраницыКонтекстноеМеню" id="40"/>
 					<ExtendedTooltip name="ДоСтраницыРасширеннаяПодсказка" id="41"/>
 				</InputField>
-				<CheckBoxField name="ВключатьВложенныеКаталоги" id="151">
-					<DataPath>Объект.ВключатьВложенныеКаталоги</DataPath>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ВключатьВложенныеКаталогиКонтекстноеМеню" id="152"/>
-					<ExtendedTooltip name="ВключатьВложенныеКаталогиРасширеннаяПодсказка" id="153"/>
-				</CheckBoxField>
-				<CheckBoxField name="НеУдалятьВременныеФайлы" id="88">
-					<DataPath>Объект.НеУдалятьВременныеФайлы</DataPath>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="НеУдалятьВременныеФайлыКонтекстноеМеню" id="89"/>
-					<ExtendedTooltip name="НеУдалятьВременныеФайлыРасширеннаяПодсказка" id="90"/>
-				</CheckBoxField>
 				<CheckBoxField name="ЗаглавныеБуквыЦифры" id="91">
 					<DataPath>Объект.ЗаглавныеБуквыЦифры</DataPath>
 					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ЗаглавныеБуквыЦифрыКонтекстноеМеню" id="92"/>
 					<ExtendedTooltip name="ЗаглавныеБуквыЦифрыРасширеннаяПодсказка" id="93"/>
-				</CheckBoxField>
-				<CheckBoxField name="ПоказатьДокумент" id="133">
-					<DataPath>Объект.ПоказатьДокумент</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Просмотр документов </v8:content>
-						</v8:item>
-					</Title>
-					<TitleLocation>Right</TitleLocation>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="ПоказатьДокументКонтекстноеМеню" id="134"/>
-					<ExtendedTooltip name="ПоказатьДокументРасширеннаяПодсказка" id="135"/>
 				</CheckBoxField>
 				<CheckBoxField name="ИсключитьКонтрагент" id="136">
 					<DataPath>Объект.ИсключитьКонтрагент</DataPath>
@@ -265,12 +418,14 @@
 				</CheckBoxField>
 				<CheckBoxField name="СжиматьИзображаниеДляПросмотра" id="163">
 					<DataPath>Объект.СжиматьИзображаниеДляПросмотра</DataPath>
+					<Visible>false</Visible>
 					<TitleLocation>Right</TitleLocation>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="СжиматьИзображаниеДляПросмотраКонтекстноеМеню" id="164"/>
 					<ExtendedTooltip name="СжиматьИзображаниеДляПросмотраРасширеннаяПодсказка" id="165"/>
 				</CheckBoxField>
 				<UsualGroup name="ГруппаШиринаВысота" id="166">
+					<Visible>false</Visible>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -303,44 +458,6 @@
 						</InputField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаИЛСтраницы" id="186">
-					<Visible>false</Visible>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Страницы исполнительного листа</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа ИЛСтраницы</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Behavior>Usual</Behavior>
-					<ExtendedTooltip name="ГруппаИЛСтраницыРасширеннаяПодсказка" id="187"/>
-					<ChildItems>
-						<CheckBoxField name="ВсеСтраницы" id="188">
-							<DataPath>Объект.ВсеСтраницы</DataPath>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ВсеСтраницыКонтекстноеМеню" id="189"/>
-							<ExtendedTooltip name="ВсеСтраницыРасширеннаяПодсказка" id="190"/>
-							<Events>
-								<Event name="OnChange">ВсеСтраницыПриИзменении</Event>
-							</Events>
-						</CheckBoxField>
-						<InputField name="ИЛПерваяСтраница" id="191">
-							<DataPath>Объект.ИЛПерваяСтраница</DataPath>
-							<ContextMenu name="ИЛПерваяСтраницаКонтекстноеМеню" id="192"/>
-							<ExtendedTooltip name="ИЛПерваяСтраницаРасширеннаяПодсказка" id="193"/>
-						</InputField>
-						<InputField name="ИЛПятаяСтраница" id="194">
-							<DataPath>Объект.ИЛПятаяСтраница</DataPath>
-							<ContextMenu name="ИЛПятаяСтраницаКонтекстноеМеню" id="195"/>
-							<ExtendedTooltip name="ИЛПятаяСтраницаРасширеннаяПодсказка" id="196"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаПоискаВ" id="45">
@@ -360,6 +477,7 @@
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
+			<BackColor>style:FieldBackColor</BackColor>
 			<ExtendedTooltip name="ГруппаПоискаВРасширеннаяПодсказка" id="46"/>
 			<ChildItems>
 				<UsualGroup name="ГруппаПоискВКонтрагенты" id="47">
@@ -766,4 +884,43 @@
 			<Action>ЗаполнитьПоУмолчанию</Action>
 		</Command>
 	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.НастройкиПарсингаДокументов.Command.СоздатьСтруктуруДляПарсинга</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:01acd63c-e5f1-409b-b679-e8df2f0e8829</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>0:cfdbf131-c5a2-408d-a2e8-b581060147f0</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</NavigationPanel>
+		<CommandBar>
+			<Item>
+				<Command>DataProcessor.ПарсингДокументов.Command.ПарсингСПервичнойПодготовкойTXT</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
 </Form>

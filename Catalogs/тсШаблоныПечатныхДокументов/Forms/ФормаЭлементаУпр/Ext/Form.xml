@@ -80,11 +80,39 @@
 				<Event name="ChoiceProcessing">ПоказыватьНаПримереДокументаОбработкаВыбора</Event>
 			</Events>
 		</InputField>
-		<InputField name="ТипДокумента" id="273">
-			<DataPath>Объект.ТипДокумента</DataPath>
-			<ContextMenu name="ТипДокументаКонтекстноеМеню" id="274"/>
-			<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="275"/>
-		</InputField>
+		<UsualGroup name="ГруппаТипДокумента" id="300">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип документа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа тип документа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТипДокументаРасширеннаяПодсказка" id="301"/>
+			<ChildItems>
+				<InputField name="ТипДокумента" id="273">
+					<DataPath>Объект.ТипДокумента</DataPath>
+					<ContextMenu name="ТипДокументаКонтекстноеМеню" id="274"/>
+					<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="275"/>
+				</InputField>
+				<Button name="Конвертировать" id="302">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Конвертировать</CommandName>
+					<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+					<BackColor>style:FormBackColor</BackColor>
+					<Font ref="style:ШрифтТекстКнопкиМаленький" kind="StyleItem"/>
+					<ExtendedTooltip name="КонвертироватьРасширеннаяПодсказка" id="303"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="ПутьКШаблонуWord" id="11">
 			<DataPath>Объект.ПутьКШаблонуWord</DataPath>
 			<Visible>false</Visible>
@@ -1172,6 +1200,21 @@
 			</ToolTip>
 			<Action>ПрочитатьОткрытьШаблон</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Конвертировать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конвертировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конвертировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Конвертировать</Action>
 		</Command>
 	</Commands>
 </Form>

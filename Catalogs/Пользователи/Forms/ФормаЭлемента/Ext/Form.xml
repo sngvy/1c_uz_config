@@ -68,6 +68,12 @@
 		<InputField name="КраткоеИмя" id="43">
 			<DataPath>Объект.Code</DataPath>
 			<DefaultItem>true</DefaultItem>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя в базе</v8:content>
+				</v8:item>
+			</Title>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
 			<OpenButton>true</OpenButton>
@@ -80,11 +86,24 @@
 		</InputField>
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя в системе</v8:content>
+				</v8:item>
+			</Title>
 			<EditMode>EnterOnInput</EditMode>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<AutoMaxHeight>false</AutoMaxHeight>
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеExtendedTooltip" id="94"/>
+		</InputField>
+		<InputField name="ФиоДляПечати1" id="159">
+			<DataPath>Объект.ФиоДляПечати</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<ContextMenu name="ФиоДляПечати1КонтекстноеМеню" id="160"/>
+			<ExtendedTooltip name="ФиоДляПечати1РасширеннаяПодсказка" id="161"/>
 		</InputField>
 		<InputField name="Организация" id="57">
 			<DataPath>Объект.Организация</DataPath>
@@ -531,6 +550,105 @@
 							<ContextMenu name="ВидЗапросаРабочегоСтолаКонтекстноеМеню" id="152"/>
 							<ExtendedTooltip name="ВидЗапросаРабочегоСтолаРасширеннаяПодсказка" id="153"/>
 						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЕСИА" id="154">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные отправляемые в ЕСИА</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ЕСИА</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЕСИАРасширеннаяПодсказка" id="155"/>
+					<ChildItems>
+						<InputField name="ФиоДляПечати" id="156">
+							<DataPath>Объект.ФиоДляПечати</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ФИО</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ФиоДляПечатиКонтекстноеМеню" id="157"/>
+							<ExtendedTooltip name="ФиоДляПечатиРасширеннаяПодсказка" id="158"/>
+						</InputField>
+						<InputField name="Пол" id="162">
+							<DataPath>Объект.Пол</DataPath>
+							<Width>20</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>20</MaxWidth>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Мужской</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Мужской</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Женский</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Женский</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПолКонтекстноеМеню" id="163"/>
+							<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="164"/>
+						</InputField>
+						<InputField name="ДатаРождения" id="165">
+							<DataPath>Объект.ДатаРождения</DataPath>
+							<ContextMenu name="ДатаРожденияКонтекстноеМеню" id="166"/>
+							<ExtendedTooltip name="ДатаРожденияРасширеннаяПодсказка" id="167"/>
+						</InputField>
+						<InputField name="СНИЛС" id="168">
+							<DataPath>Объект.СНИЛС</DataPath>
+							<Width>20</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>20</MaxWidth>
+							<Mask>99999999999</Mask>
+							<ContextMenu name="СНИЛСКонтекстноеМеню" id="169"/>
+							<ExtendedTooltip name="СНИЛСРасширеннаяПодсказка" id="170"/>
+						</InputField>
+						<CheckBoxField name="ЗапросЕсиаПоДоверенности" id="171">
+							<DataPath>Объект.ЗапросЕсиаОтЛицаРуководителя</DataPath>
+							<TitleTextColor>style:ЦветВсплывающейГруппы</TitleTextColor>
+							<TitleLocation>None</TitleLocation>
+							<CheckBoxType>Tumbler</CheckBoxType>
+							<BorderColor>style:ЦветВсплывающейГруппы</BorderColor>
+							<BackColor>style:FormBackColor</BackColor>
+							<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ='Доверенное лицо'; БИ='Руководитель организации'</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ЗапросЕсиаПоДоверенностиКонтекстноеМеню" id="172"/>
+							<ExtendedTooltip name="ЗапросЕсиаПоДоверенностиРасширеннаяПодсказка" id="173"/>
+							<Events>
+								<Event name="OnChange">ЗапросЕсиаПоДоверенностиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
 					</ChildItems>
 				</Page>
 			</ChildItems>

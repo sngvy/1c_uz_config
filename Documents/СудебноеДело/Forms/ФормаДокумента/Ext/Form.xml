@@ -573,6 +573,12 @@
 										</InputField>
 										<CheckBoxField name="ДоначислятьГоспошлину" id="170">
 											<DataPath>Объект.ДоначислятьГоспошлину</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Учитывать ранее начисленную госпошлину</v8:content>
+												</v8:item>
+											</Title>
 											<TitleLocation>Right</TitleLocation>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ДоначислятьГоспошлинуКонтекстноеМеню" id="171"/>
@@ -600,19 +606,15 @@
 									<Representation>StrongSeparation</Representation>
 									<ExtendedTooltip name="ГруппаГоспошлинаКНачислениюРасширеннаяПодсказка" id="177"/>
 									<ChildItems>
-										<InputField name="ГоспошлинаКНачислению" id="173">
-											<DataPath>Объект.ГоспошлинаКНачислению</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Сумма</v8:content>
-												</v8:item>
-											</Title>
-											<ContextMenu name="ГоспошлинаКНачислениюКонтекстноеМеню" id="174"/>
-											<ExtendedTooltip name="ГоспошлинаКНачислениюРасширеннаяПодсказка" id="175"/>
+										<InputField name="РанееНачисленнаяГоспошлина" id="515">
+											<DataPath>РанееНачисленнаяГоспошлина</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ContextMenu name="РанееНачисленнаяГоспошлинаКонтекстноеМеню" id="516"/>
+											<ExtendedTooltip name="РанееНачисленнаяГоспошлинаРасширеннаяПодсказка" id="517"/>
 										</InputField>
 										<InputField name="ОснованиеДоначисления" id="178">
 											<DataPath>Объект.ОснованиеДоначисления</DataPath>
+											<ChoiceForm>Document.СудебноеДело.Form.ФормаВыбораОтказОтмена</ChoiceForm>
 											<ContextMenu name="ОснованиеДоначисленияКонтекстноеМеню" id="179"/>
 											<ExtendedTooltip name="ОснованиеДоначисленияРасширеннаяПодсказка" id="180"/>
 											<Events>
@@ -1223,6 +1225,22 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="РанееНачисленнаяГоспошлина" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ранее начисленная госпошлина</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

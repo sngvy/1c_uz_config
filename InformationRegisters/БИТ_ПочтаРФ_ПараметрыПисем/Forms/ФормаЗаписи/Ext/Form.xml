@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ТипПисьма" id="1">
+			<DataPath>Запись.ТипПисьма</DataPath>
+			<ContextMenu name="ТипПисьмаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ТипПисьмаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ВидРПО" id="4">
+			<DataPath>Запись.ВидРПО</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Посылка "нестандартная"</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">POSTAL_PARCEL</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Посылка "онлайн"</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ONLINE_PARCEL</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Курьер "онлайн"</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ONLINE_COURIER</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправление EMS</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">EMS</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>EMS оптимальное</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">EMS_OPTIMAL</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>EMS РТ</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">EMS_RT</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Письмо</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">LETTER</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Письмо 1-го класса</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">LETTER_CLASS_1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Бандероль</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">BANDEROL</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Бизнес курьер</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">BUSINESS_COURIER</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Бизнес курьер экспресс</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">BUSINESS_COURIER_ES</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Посылка 1-го класса</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">PARCEL_CLASS_1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Бандероль 1-го класса</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">BANDEROL_CLASS_1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>ВГПО 1-го класса</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">VGPO_CLASS_1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Мелкий пакет</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">SMALL_PACKET</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комбинированное</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">COMBINED</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВидРПОКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ВидРПОРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="OnChange">ВидРПОПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="КатегорияРПО" id="7">
+			<DataPath>Запись.КатегорияРПО</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Простое</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">SIMPLE</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заказное</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ORDERED</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обыкновенное</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ORDINARY</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С объявленной ценностью</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">WITH_DECLARED_VALUE</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>С объявленной ценностью и наложенным платежом</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">WITH_DECLARED_VALUE_AND_CASH_ON_DELIVERY</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Комбинированное</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">COMBINED</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="КатегорияРПОКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КатегорияРПОРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">КатегорияРПОПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ТипКонверта" id="10">
+			<DataPath>Запись.ТипКонверта</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>229мм x 324мм (C4)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">C4</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>162мм x 229мм (C5)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">C5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>110мм x 220мм (DL)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">DL</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>105мм x 148мм (A6)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">A6</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>74мм x 105мм (A7)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">A7</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипКонвертаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипКонвертаРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ТипКонвертаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ВесРПО" id="13">
+			<DataPath>Запись.ВесРПО</DataPath>
+			<ContextMenu name="ВесРПОКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВесРПОРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">ВесРПОПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="ОЦ" id="16">
+			<DataPath>Запись.ОЦ</DataPath>
+			<ContextMenu name="ОЦКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОЦРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.БИТ_ПочтаРФ_ПараметрыПисем</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

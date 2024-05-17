@@ -1399,17 +1399,48 @@
 												<Event name="StartChoice">TesseractНачалоВыбора</Event>
 											</Events>
 										</InputField>
-										<Button name="ЗаполнитьРССклонениеФИО" id="384">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.ЗаполнитьРССклонениеФИО</CommandName>
+										<PictureDecoration name="Декорация1" id="423">
+											<Height>1</Height>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="424"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="425"/>
+										</PictureDecoration>
+										<UsualGroup name="ГруппаЗаполениеСклонения" id="421">
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Заполнить склонение ФИО</v8:content>
+													<v8:content>Группа заполение склонения</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="ЗаполнитьРССклонениеФИОРасширеннаяПодсказка" id="385"/>
-										</Button>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа заполение склонения</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗаполениеСклоненияРасширеннаяПодсказка" id="422"/>
+											<ChildItems>
+												<Button name="ЗаполнитьРССклонениеФИО" id="384">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ЗаполнитьРССклонениеФИО</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Заполнить склонение ФИО</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ЗаполнитьРССклонениеФИОРасширеннаяПодсказка" id="385"/>
+												</Button>
+												<CheckBoxField name="ПерезаполнитьИзмененныеВРучную" id="418">
+													<DataPath>ПерезаполнитьИзмененныеВРучную</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПерезаполнитьИзмененныеВРучнуюКонтекстноеМеню" id="419"/>
+													<ExtendedTooltip name="ПерезаполнитьИзмененныеВРучнуюРасширеннаяПодсказка" id="420"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -1426,6 +1457,17 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ПерезаполнитьИзмененныеВРучную" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить измененные в ручную</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

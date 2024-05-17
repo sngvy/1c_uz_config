@@ -53,7 +53,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</xr:Item>
 			</DefaultRoles>
 			<Vendor>"БИТ"</Vendor>
-			<Version>3.7.7.18</Version>
+			<Version>3.7.10.18</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -945,6 +945,8 @@
 			<Role>ПодключениеИнтернетПоддержки</Role>
 			<Role>узРасчетЗадолженностиМФО</Role>
 			<Role>ДобавлениеИзменениеЭлектронныхПодписейИШифрование</Role>
+			<Role>узСудебныйБлок</Role>
+			<Role>узИспользованиеТехническихОтчетов</Role>
 			<CommonTemplate>бит_КомпонентаУправлениеАТС</CommonTemplate>
 			<CommonTemplate>ИЗоВДиОВнаЗНИ_</CommonTemplate>
 			<CommonTemplate>ИЗобОВ</CommonTemplate>
@@ -1042,7 +1044,7 @@
 			<CommonModule>УЭДФункцииДляШаблонов</CommonModule>
 			<CommonModule>ФоновыеЗаданияМодуль</CommonModule>
 			<CommonModule>ФункционалБП</CommonModule>
-			<CommonModule>ЭлектроннаяПочта</CommonModule>
+			<CommonModule>РаботаСЭлектроннымиСообщениями</CommonModule>
 			<CommonModule>КомпонентаСклоненияФИО</CommonModule>
 			<CommonModule>АдресныйКлассификатор</CommonModule>
 			<CommonModule>бит_АТСВыгрузкаИзменений</CommonModule>
@@ -1279,7 +1281,7 @@
 			<CommonModule>ФоновыеЗаданияCBR</CommonModule>
 			<CommonModule>ОбращениеСЦентробанкомНаСервере</CommonModule>
 			<CommonModule>ДополнительныеРеквизитыИСведения</CommonModule>
-			<CommonModule>Проверки</CommonModule>
+			<CommonModule>УправлениеЗапрещеннымиСимволами</CommonModule>
 			<CommonModule>ЭлектроннаяПодпись</CommonModule>
 			<CommonModule>ЭлектроннаяПодписьКлиент</CommonModule>
 			<CommonModule>ЭлектроннаяПодписьКлиентПереопределяемый</CommonModule>
@@ -1297,6 +1299,7 @@
 			<CommonModule>ЭлектроннаяПодписьПослеВызоваКоманд</CommonModule>
 			<CommonModule>ОбработкаБезопасноеХранилище</CommonModule>
 			<CommonModule>УправлениеСКД</CommonModule>
+			<CommonModule>УправлениеСКДКлиент</CommonModule>
 			<CommonModule>ЭлектроннаяПодписьПослеВызоваКомандСервер</CommonModule>
 			<CommonModule>бит_ТелефонияКлиентСервер</CommonModule>
 			<CommonModule>бит_ТелефонияСервер</CommonModule>
@@ -1317,10 +1320,29 @@
 			<CommonModule>УправлениеСтроками</CommonModule>
 			<CommonModule>УправлениеДанными</CommonModule>
 			<CommonModule>УправленияСообщениями</CommonModule>
+			<CommonModule>УправленияСообщениямиКлиентСервер</CommonModule>
 			<CommonModule>УправлениеЗаполнением</CommonModule>
 			<CommonModule>ОбработатьПереносДанныхИзГосуслуг</CommonModule>
 			<CommonModule>БЛогер_ЛогерПоУмолчанию</CommonModule>
+			<CommonModule>БЛогер_ЛогерПоУмолчаниюКлиент</CommonModule>
 			<CommonModule>БЛогер_Логирование</CommonModule>
+			<CommonModule>ОбщиеНастройкиКонфигурации</CommonModule>
+			<CommonModule>УправлениеМетаданными</CommonModule>
+			<CommonModule>ОбработкаСклоненияФИО</CommonModule>
+			<CommonModule>УправлениеПечатьюУЗВспомогательныйКлиентСервер</CommonModule>
+			<CommonModule>УправлениеКонсолью</CommonModule>
+			<CommonModule>ПарсингДокументовОбщийКлиентСервер</CommonModule>
+			<CommonModule>НастройкиПарсингаКлиентСервер</CommonModule>
+			<CommonModule>НастройкиПарсингаСервер</CommonModule>
+			<CommonModule>ПарсингПодготовкаДанныхКлиентСервер</CommonModule>
+			<CommonModule>ПарсингОфисныхДокументовКлиентСервер</CommonModule>
+			<CommonModule>КонвертерИзображенийКлиентСервер</CommonModule>
+			<CommonModule>ПревьюДелательИзображенийКлиентСервер</CommonModule>
+			<CommonModule>РаспозновательИзображенийКлиентСервер</CommonModule>
+			<CommonModule>ПарсингОбработкаТекстовыхФайловКлиентСервер</CommonModule>
+			<CommonModule>ПарсингУправлениеСтраницамиПредставления</CommonModule>
+			<CommonModule>КоннекторHTTP</CommonModule>
+			<CommonModule>МодульНормализацияПочтаРФ</CommonModule>
 			<CommonModule>НБКИСлужебный</CommonModule>
 			<CommonModule>ЗапросыФССП</CommonModule>
 			<CommonModule>ЗапросыЕФРСБ</CommonModule>
@@ -1332,9 +1354,11 @@
 			<XDTOPackage>КонтактнаяИнформация</XDTOPackage>
 			<XDTOPackage>ОбменДанными</XDTOPackage>
 			<XDTOPackage>АвторизацияПользователейМА</XDTOPackage>
+			<XDTOPackage>ОбменДаннымиЗапасной</XDTOPackage>
 			<WebService>InterfaceVersion</WebService>
 			<WebService>MAExchange</WebService>
 			<WebService>MAUserAuthentication</WebService>
+			<WebService>MAExchangeReserve</WebService>
 			<HTTPService>MandarinCallBackManager</HTTPService>
 			<WSReference>бит_СМС_SMS4B</WSReference>
 			<WSReference>бит_СМС_SMS4BРезерв</WSReference>
@@ -1409,6 +1433,7 @@
 			<ScheduledJob>бит_СинхронизацияСАТС</ScheduledJob>
 			<ScheduledJob>ОбработатьПереносДанныхИзГосуслуг</ScheduledJob>
 			<ScheduledJob>УдалениеСтатистикиНаАТС</ScheduledJob>
+			<ScheduledJob>ПромежуточнаяРазблокировкаДелДляАвтообзвона</ScheduledJob>
 			<SettingsStorage>ХранилищеНастроек</SettingsStorage>
 			<FunctionalOption>УчетПоДоговорам</FunctionalOption>
 			<FunctionalOption>УчетПоИД</FunctionalOption>
@@ -1462,6 +1487,7 @@
 			<FunctionalOption>СценарииДиалога</FunctionalOption>
 			<FunctionalOption>РаспределениеОбъектов</FunctionalOption>
 			<FunctionalOption>ОпциональныеПодсистемы</FunctionalOption>
+			<FunctionalOption>ПодсистемаНастройкиБизнесПроцессов</FunctionalOption>
 			<DefinedType>ВладелецКонтактнойИнформации</DefinedType>
 			<DefinedType>ВнешнийПользователь</DefinedType>
 			<DefinedType>ВнешнийПользовательОбъект</DefinedType>
@@ -1713,6 +1739,9 @@
 			<Constant>ВключитьСценарииДиалога</Constant>
 			<Constant>ВключитьРаспределениеОбъектов</Constant>
 			<Constant>ВключитьОпциональныеПодсистемы</Constant>
+			<Constant>ВключитьНастройкиБизнесПроцессов</Constant>
+			<Constant>ИННВзыскателяФССП</Constant>
+			<Constant>ТолькоИПВзыскателяФССП</Constant>
 			<Constant>АхантерОКАТО</Constant>
 			<Constant>АхантерРегион</Constant>
 			<CommonForm>Вопрос</CommonForm>
@@ -1955,6 +1984,7 @@
 			<Catalog>Счета</Catalog>
 			<Catalog>ОбщиеСвойства</Catalog>
 			<Catalog>ФункцииКонвертацииСвойств</Catalog>
+			<Catalog>НастройкиПроверкиРеестров</Catalog>
 			<Document>АктПередачи</Document>
 			<Document>АктуализацияЗадолженности</Document>
 			<Document>ЗавершениеРаботыОрганизации</Document>
@@ -2197,8 +2227,11 @@
 			<Enum>ТипыНарушений230ФЗ</Enum>
 			<Report>РезультатыАвтоинформирования</Report>
 			<Report>бит_ИсторияЗвонков</Report>
-			<Report>ОтчетПоИсковому</Report>
+			<Report>Отчет_ЮрСлужба</Report>
 			<Report>ВедомостьЗадолженности</Report>
+			<Report>МировыеСоглашения</Report>
+			<Report>ОтчетПоИсковому</Report>
+			<Report>ОтчетПоИсполнительному</Report>
 			<Report>ОтчетПоВыполненнымМероприятиям</Report>
 			<Report>ДинамикаРаботы</Report>
 			<Report>ЭффективностьРаботы</Report>
@@ -2229,9 +2262,6 @@
 			<Report>СрезПлатежей</Report>
 			<Report>ЗадачиСотрудников</Report>
 			<Report>ФССП_ИзмененияСостоянийИП</Report>
-			<Report>Отчет_ЮрСлужба</Report>
-			<Report>МировыеСоглашения</Report>
-			<Report>ОтчетПоИсполнительному</Report>
 			<Report>ПлатежиПоПериодам</Report>
 			<Report>ПроведенныеПлатежи</Report>
 			<Report>СрезМероприятий</Report>
@@ -2319,9 +2349,11 @@
 			<DataProcessor>ПрограммыЭлектроннойПодписиИШифрования</DataProcessor>
 			<DataProcessor>Интерфейс_Файлы</DataProcessor>
 			<DataProcessor>бит_БитфонОбщее</DataProcessor>
+			<DataProcessor>ЗагрузкаИсторииМероприятий</DataProcessor>
+			<DataProcessor>ЗавершениеРаботыБитыеСсылки</DataProcessor>
+			<DataProcessor>УЗ_НормализацияАдресов</DataProcessor>
 			<InformationRegister>бит_БитАТСНастройки</InformationRegister>
 			<InformationRegister>БезопасноеХранилищеДанныхОбластейДанных</InformationRegister>
-			<InformationRegister>АдресныйКлассификатор</InformationRegister>
 			<InformationRegister>ВерсииОбъектовАдресногоКлассификатора</InformationRegister>
 			<InformationRegister>ЗадолженностьПоОбъектамОстатки</InformationRegister>
 			<InformationRegister>ИзмененныеОбъекты</InformationRegister>
@@ -2494,6 +2526,9 @@
 			<InformationRegister>ОстаткиНаСчетах</InformationRegister>
 			<InformationRegister>СведенияОСчетах</InformationRegister>
 			<InformationRegister>ОбщиеСведения</InformationRegister>
+			<InformationRegister>АдресныйКлассификатор</InformationRegister>
+			<InformationRegister>ОчередьСклоненийФИО</InformationRegister>
+			<InformationRegister>БИТ_ПочтаРФ_ПараметрыПисем</InformationRegister>
 			<InformationRegister>ЖурналНарушений</InformationRegister>
 			<InformationRegister>ИсполнительныеПроизводства</InformationRegister>
 			<InformationRegister>ДелаОБанкротстве</InformationRegister>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="НачалоРеестра" id="57">
+			<DataPath>Объект.ПозицияШапки</DataPath>
+			<Width>32</Width>
+			<ContextMenu name="НачалоРеестраКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="НачалоРеестраРасширеннаяПодсказка" id="59"/>
+		</InputField>
+		<CheckBoxField name="ПоИмени" id="60">
+			<DataPath>Объект.ПоИмени</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоИмениКонтекстноеМеню" id="61"/>
+			<ExtendedTooltip name="ПоИмениРасширеннаяПодсказка" id="62"/>
+		</CheckBoxField>
+		<Button name="Протестировать" id="63">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Протестировать</CommandName>
+			<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+			<BackColor>style:FormBackColor</BackColor>
+			<Font ref="style:ШрифтТекстКнопкиМаленький" kind="StyleItem"/>
+			<ExtendedTooltip name="ПротестироватьРасширеннаяПодсказка" id="64"/>
+		</Button>
+		<Table name="СоответствияСРеестром" id="32">
+			<ReadOnly>true</ReadOnly>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.СоответствияСРеестром</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СоответствияСРеестромКонтекстноеМеню" id="33"/>
+			<AutoCommandBar name="СоответствияСРеестромКоманднаяПанель" id="34"/>
+			<ExtendedTooltip name="СоответствияСРеестромРасширеннаяПодсказка" id="35"/>
+			<SearchStringAddition name="СоответствияСРеестромСтрокаПоиска" id="36">
+				<AdditionSource>
+					<Item>СоответствияСРеестром</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответствияСРеестромСтрокаПоискаКонтекстноеМеню" id="37"/>
+				<ExtendedTooltip name="СоответствияСРеестромСтрокаПоискаРасширеннаяПодсказка" id="38"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СоответствияСРеестромСостояниеПросмотра" id="39">
+				<AdditionSource>
+					<Item>СоответствияСРеестром</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответствияСРеестромСостояниеПросмотраКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="СоответствияСРеестромСостояниеПросмотраРасширеннаяПодсказка" id="41"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СоответствияСРеестромУправлениеПоиском" id="42">
+				<AdditionSource>
+					<Item>СоответствияСРеестром</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СоответствияСРеестромУправлениеПоискомКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СоответствияСРеестромУправлениеПоискомРасширеннаяПодсказка" id="44"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="СоответствияСРеестромНомерКолонки" id="48">
+					<DataPath>Объект.СоответствияСРеестром.НомерКолонки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответствияСРеестромНомерКолонкиКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="СоответствияСРеестромНомерКолонкиРасширеннаяПодсказка" id="50"/>
+				</InputField>
+				<InputField name="СоответствияСРеестромИмяКолонки" id="51">
+					<DataPath>Объект.СоответствияСРеестром.ИмяКолонки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответствияСРеестромИмяКолонкиКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="СоответствияСРеестромИмяКолонкиРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="СоответствияСРеестромТипКолонки" id="54">
+					<DataPath>Объект.СоответствияСРеестром.ТипКолонки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СоответствияСРеестромТипКолонкиКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СоответствияСРеестромТипКолонкиРасширеннаяПодсказка" id="56"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<SpreadSheetDocumentField name="ШапкаРеестра" id="29">
+			<DataPath>ШапкаРеестра</DataPath>
+			<ShowGrid>true</ShowGrid>
+			<ShowHeaders>true</ShowHeaders>
+			<Edit>true</Edit>
+			<ContextMenu name="ШапкаРеестраКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ШапкаРеестраРасширеннаяПодсказка" id="31"/>
+			<Events>
+				<Event name="Selection">ШапкаРеестраВыбор</Event>
+			</Events>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиПроверкиРеестров</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ШапкаРеестра" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка реестра</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Протестировать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протестировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Протестировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Протестировать</Action>
+		</Command>
+	</Commands>
+</Form>

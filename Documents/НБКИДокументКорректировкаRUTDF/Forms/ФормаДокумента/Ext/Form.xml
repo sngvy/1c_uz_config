@@ -347,15 +347,37 @@
 								</InputField>
 								<InputField name="тчКорректировкаПолеБлока" id="382">
 									<DataPath>Объект.тчКорректировка.ПолеБлока</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для корректировки нескольких полей одного блока укажите их через знак ~
+пример: 1~3~6</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="тчКорректировкаПолеБлокаКонтекстноеМеню" id="383"/>
 									<ExtendedTooltip name="тчКорректировкаПолеБлокаРасширеннаяПодсказка" id="384"/>
 								</InputField>
 								<InputField name="тчКорректировкаСтрокаНаКорректировку" id="370">
 									<DataPath>Объект.тчКорректировка.СтрокаНаКорректировку</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Для корректировки значений нескольких полей одного блока укажите значения их через знак ~
+пример: Значение~~Значение3. Важно: сколько полей указано в колонке Поле блока, столько и значений должно быть указано. Остальные значения проигнорируются/ = пустое</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="тчКорректировкаСтрокаНаКорректировкуКонтекстноеМеню" id="371"/>
 									<ExtendedTooltip name="тчКорректировкаСтрокаНаКорректировкуРасширеннаяПодсказка" id="372"/>
+								</InputField>
+								<InputField name="тчКорректировкаПараметрStartDate" id="414">
+									<DataPath>Объект.тчКорректировка.ПараметрStartDate</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="тчКорректировкаПараметрStartDateКонтекстноеМеню" id="415"/>
+									<ExtendedTooltip name="тчКорректировкаПараметрStartDateРасширеннаяПодсказка" id="416"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -406,12 +428,96 @@
 							</Picture>
 							<ExtendedTooltip name="ОбработатьОтказРасширеннаяПодсказка" id="128"/>
 						</Button>
-						<InputField name="ТекстФайлаОтказа" id="121">
-							<DataPath>Объект.ТекстФайлаОтказа</DataPath>
-							<MultiLine>true</MultiLine>
-							<ContextMenu name="ТекстФайлаОтказаКонтекстноеМеню" id="122"/>
-							<ExtendedTooltip name="ТекстФайлаОтказаРасширеннаяПодсказка" id="123"/>
-						</InputField>
+						<UsualGroup name="ГруппаОбработка" id="412">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обработка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа обработка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="ГруппаОбработкаРасширеннаяПодсказка" id="413"/>
+							<ChildItems>
+								<InputField name="ТекстФайлаОтказа" id="121">
+									<DataPath>Объект.ТекстФайлаОтказа</DataPath>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ТекстФайлаОтказаКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ТекстФайлаОтказаРасширеннаяПодсказка" id="123"/>
+								</InputField>
+								<Table name="СтруктураВыгрузки" id="387">
+									<CommandBarLocation>None</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.СтруктураВыгрузки</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СтруктураВыгрузкиКонтекстноеМеню" id="388"/>
+									<AutoCommandBar name="СтруктураВыгрузкиКоманднаяПанель" id="389"/>
+									<ExtendedTooltip name="СтруктураВыгрузкиРасширеннаяПодсказка" id="390"/>
+									<SearchStringAddition name="СтруктураВыгрузкиСтрокаПоиска" id="391">
+										<AdditionSource>
+											<Item>СтруктураВыгрузки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СтруктураВыгрузкиСтрокаПоискаКонтекстноеМеню" id="392"/>
+										<ExtendedTooltip name="СтруктураВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="393"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СтруктураВыгрузкиСостояниеПросмотра" id="394">
+										<AdditionSource>
+											<Item>СтруктураВыгрузки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СтруктураВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="395"/>
+										<ExtendedTooltip name="СтруктураВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="396"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СтруктураВыгрузкиУправлениеПоиском" id="397">
+										<AdditionSource>
+											<Item>СтруктураВыгрузки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СтруктураВыгрузкиУправлениеПоискомКонтекстноеМеню" id="398"/>
+										<ExtendedTooltip name="СтруктураВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="399"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="СтруктураВыгрузкиНомерСтроки" id="400">
+											<DataPath>Объект.СтруктураВыгрузки.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СтруктураВыгрузкиНомерСтрокиКонтекстноеМеню" id="401"/>
+											<ExtendedTooltip name="СтруктураВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="402"/>
+										</LabelField>
+										<InputField name="СтруктураВыгрузкиОбъект" id="403">
+											<DataPath>Объект.СтруктураВыгрузки.ОбъектУчета</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СтруктураВыгрузкиОбъектКонтекстноеМеню" id="404"/>
+											<ExtendedTooltip name="СтруктураВыгрузкиОбъектРасширеннаяПодсказка" id="405"/>
+										</InputField>
+										<InputField name="СтруктураВыгрузкиЗаголовокGroupHeader" id="406">
+											<DataPath>Объект.СтруктураВыгрузки.ЗаголовокGroupHeader</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СтруктураВыгрузкиЗаголовокGroupHeaderКонтекстноеМеню" id="407"/>
+											<ExtendedTooltip name="СтруктураВыгрузкиЗаголовокGroupHeaderРасширеннаяПодсказка" id="408"/>
+										</InputField>
+										<CheckBoxField name="СтруктураВыгрузкиПринято" id="409">
+											<DataPath>Объект.СтруктураВыгрузки.Принято</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СтруктураВыгрузкиПринятоКонтекстноеМеню" id="410"/>
+											<ExtendedTooltip name="СтруктураВыгрузкиПринятоРасширеннаяПодсказка" id="411"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -505,6 +611,48 @@
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
 		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтруктураВыгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СтруктураВыгрузки.Принято</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>СтруктураВыгрузки</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.СтруктураВыгрузки.Принято</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumSeaGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
 		<Command name="СформироватьОтчет" id="1">

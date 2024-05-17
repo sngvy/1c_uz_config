@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаШагиНормализации" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шаги нормализации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шаги нормализации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаШагиНормализацииРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<Page name="ГруппаПодбор" id="28">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подбор объектов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подбор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПодборРасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияПодбор" id="30">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>1. Нужно выбрать реквизит, где в базе хранятся адреса в строковом формате.
+2. Кнопками подборов или вручную добавить объекты, для которых нужно запросить нормализацию адресов.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПодборКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ДекорацияПодборРасширеннаяПодсказка" id="32"/>
+						</LabelDecoration>
+						<InputField name="РеквизитХраненияАдреса" id="23">
+							<DataPath>Объект.РеквизитХраненияАдреса</DataPath>
+							<ContextMenu name="РеквизитХраненияАдресаКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="РеквизитХраненияАдресаРасширеннаяПодсказка" id="25"/>
+						</InputField>
+						<Table name="Объекты" id="1">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Объекты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбъектыКонтекстноеМеню" id="2"/>
+							<AutoCommandBar name="ОбъектыКоманднаяПанель" id="3">
+								<ChildItems>
+									<Button name="ОбъектыПодбор" id="151">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Подбор</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОбъектыПодборРасширеннаяПодсказка" id="152"/>
+									</Button>
+									<Button name="ОбъектыПодборПоНастройкам" id="153">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборПоНастройкам</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ОтборПоВиду2</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОбъектыПодборПоНастройкамРасширеннаяПодсказка" id="154"/>
+									</Button>
+									<Button name="ОбъектыПодборИзФайла" id="155">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодборИзФайла</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.Найти_</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ОбъектыПодборИзФайлаРасширеннаяПодсказка" id="156"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОбъектыРасширеннаяПодсказка" id="4"/>
+							<SearchStringAddition name="ОбъектыСтрокаПоиска" id="5">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыСтрокаПоискаКонтекстноеМеню" id="6"/>
+								<ExtendedTooltip name="ОбъектыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбъектыСостояниеПросмотра" id="8">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ОбъектыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбъектыУправлениеПоиском" id="11">
+								<AdditionSource>
+									<Item>Объекты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыУправлениеПоискомКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ОбъектыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбъектыНомерСтроки" id="14">
+									<DataPath>Объект.Объекты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыНомерСтрокиКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ОбъектыНомерСтрокиРасширеннаяПодсказка" id="16"/>
+								</LabelField>
+								<InputField name="ОбъектыОбъект" id="17">
+									<DataPath>Объект.Объекты.Объект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыОбъектКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ОбъектыОбъектРасширеннаяПодсказка" id="19"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСервис" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервис нормализации</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сервис</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСервисРасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<LabelDecoration name="ДекорацияСервис" id="43">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Необходимо выбрать сервис, который проведет нормализацию адресов. </v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияСервисКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ДекорацияСервисРасширеннаяПодсказка" id="45"/>
+						</LabelDecoration>
+						<InputField name="СервисНормализации" id="245">
+							<DataPath>Объект.СервисНормализации</DataPath>
+							<DropListButton>true</DropListButton>
+							<ChoiceButton>false</ChoiceButton>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Нормализация Почта РФ</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">ПочтаРФ</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="СервисНормализацииКонтекстноеМеню" id="246"/>
+							<ExtendedTooltip name="СервисНормализацииРасширеннаяПодсказка" id="247"/>
+							<Events>
+								<Event name="OnChange">СервисНормализацииПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияПочтаРФ" id="267">
+							<Visible>false</Visible>
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;img 0:ac2e5217-aaeb-4b6f-b063-538c84f2da06/&gt; &lt;colorstyle -17&gt;Внимание! Для использования данного сервиса, в БИТ.УЗ должна быть настроена учетная запись Почты РФ для сервиса Отправка.&lt;/&gt; О том, как подключить учетную запись, описано в рукодостве пользователя Работа с блоком Почта РФ.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияПочтаРФКонтекстноеМеню" id="268"/>
+							<ExtendedTooltip name="ДекорацияПочтаРФРасширеннаяПодсказка" id="269"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаЗапускИРезультаты" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запуск и результаты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа запуск и результаты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаЗапускИРезультатыРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИнструкция" id="270">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инструкция</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа инструкция</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инструкция</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаИнструкцияРасширеннаяПодсказка" id="271"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияЗапуск" id="48">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;1. Запустите нормализацию: Нажмите кнопку &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Запустить нормализацию&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;2. Дождитесь ее результатов.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;3. Если необходимо записать результат для &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Кредитных историй&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt; - разверните группу &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Кредитные истории&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;. Нужно выбрать вид адреса и режим записи: Замещать данные или обновлять текущие записи структуры адресов.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;4. Сохраните результат в файл: Рядом с таблицей результатов нажмите кнопку &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Все действия&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;, далее &lt;img :c2e2d966-5b7f-4699-903b-28a6f50d5471:00000000-0000-0000-0000-000000000000/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;b&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;Вывести список. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;bgcolor #ffffff&gt;&lt;color #000000&gt;5. Можно загрузить файл через загрузку реестров в один реквизит с типом ФИАС или в несколько созданнных под структуру ФИАС доп.реквизитов.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияЗапускКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="ДекорацияЗапускРасширеннаяПодсказка" id="50"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыНормализации" id="146">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды нормализации</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды нормализации</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыНормализацииРасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<Button name="ЗапуститьНормализацию" id="136">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<CommandName>Form.Command.ЗапуститьНормализацию</CommandName>
+									<TextColor>style:FieldTextColor</TextColor>
+									<BackColor>style:ЦветСтрокиВМакете</BackColor>
+									<BorderColor>style:ImportantColor</BorderColor>
+									<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+									<Picture>
+										<xr:Ref>StdPicture.Replace</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ЗапуститьНормализациюРасширеннаяПодсказка" id="137"/>
+								</Button>
+								<UsualGroup name="ГруппаКомандыКИ" id="262">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кредитные истории</v8:content>
+										</v8:item>
+									</Title>
+									<TitleTextColor>web:Sienna</TitleTextColor>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа команды КИ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Behavior>PopUp</Behavior>
+									<CollapsedRepresentationTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кредитные истории</v8:content>
+										</v8:item>
+									</CollapsedRepresentationTitle>
+									<Collapsed>true</Collapsed>
+									<Representation>StrongSeparation</Representation>
+									<ThroughAlign>DontUse</ThroughAlign>
+									<ExtendedTooltip name="ГруппаКомандыКИРасширеннаяПодсказка" id="263"/>
+									<ChildItems>
+										<Button name="ЗаписатьКИСтруктураАдреса" id="248">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ЗаписатьКИСтруктураАдреса</CommandName>
+											<BackColor>web:AntiqueWhite</BackColor>
+											<Picture>
+												<xr:Ref>StdPicture.GoToEnd</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ЗаписатьКИСтруктураАдресаРасширеннаяПодсказка" id="249"/>
+										</Button>
+										<CheckBoxField name="ПерезаписыватьСтруктуруАдресаКИ" id="253">
+											<DataPath>Объект.ПерезаписыватьСтруктуруАдресаКИ</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Если флаг включен, то текущая информация по структуре адреса объекта полностью заменится на данные из результатов Нормализации. Если нет - то к текущей информации добавится новая из результатов Нормализации для незаполненных полей.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПерезаписыватьСтруктуруАдресаКИКонтекстноеМеню" id="254"/>
+											<ExtendedTooltip name="ПерезаписыватьСтруктуруАдресаКИРасширеннаяПодсказка" id="255"/>
+										</CheckBoxField>
+										<InputField name="АдресКИ" id="250">
+											<DataPath>Объект.АдресКИ</DataPath>
+											<ContextMenu name="АдресКИКонтекстноеМеню" id="251"/>
+											<ExtendedTooltip name="АдресКИРасширеннаяПодсказка" id="252"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="РезультатПочтаРФ" id="157">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.РезультатПочтаРФ</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="РезультатПочтаРФКонтекстноеМеню" id="158"/>
+							<AutoCommandBar name="РезультатПочтаРФКоманднаяПанель" id="159"/>
+							<ExtendedTooltip name="РезультатПочтаРФРасширеннаяПодсказка" id="160"/>
+							<SearchStringAddition name="РезультатПочтаРФСтрокаПоиска" id="161">
+								<AdditionSource>
+									<Item>РезультатПочтаРФ</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатПочтаРФСтрокаПоискаКонтекстноеМеню" id="162"/>
+								<ExtendedTooltip name="РезультатПочтаРФСтрокаПоискаРасширеннаяПодсказка" id="163"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РезультатПочтаРФСостояниеПросмотра" id="164">
+								<AdditionSource>
+									<Item>РезультатПочтаРФ</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатПочтаРФСостояниеПросмотраКонтекстноеМеню" id="165"/>
+								<ExtendedTooltip name="РезультатПочтаРФСостояниеПросмотраРасширеннаяПодсказка" id="166"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РезультатПочтаРФУправлениеПоиском" id="167">
+								<AdditionSource>
+									<Item>РезультатПочтаРФ</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РезультатПочтаРФУправлениеПоискомКонтекстноеМеню" id="168"/>
+								<ExtendedTooltip name="РезультатПочтаРФУправлениеПоискомРасширеннаяПодсказка" id="169"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РезультатПочтаРФНомерСтроки" id="170">
+									<DataPath>Объект.РезультатПочтаРФ.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФНомерСтрокиКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="РезультатПочтаРФНомерСтрокиРасширеннаяПодсказка" id="172"/>
+								</LabelField>
+								<InputField name="РезультатПочтаРФДоговор" id="256">
+									<DataPath>Объект.РезультатПочтаРФ.Договор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФДоговорКонтекстноеМеню" id="257"/>
+									<ExtendedTooltip name="РезультатПочтаРФДоговорРасширеннаяПодсказка" id="258"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКодДО" id="173">
+									<DataPath>Объект.РезультатПочтаРФ.КодДО</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКодДОКонтекстноеМеню" id="174"/>
+									<ExtendedTooltip name="РезультатПочтаРФКодДОРасширеннаяПодсказка" id="175"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФНомерДоговора" id="176">
+									<DataPath>Объект.РезультатПочтаРФ.НомерДоговора</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФНомерДоговораКонтекстноеМеню" id="177"/>
+									<ExtendedTooltip name="РезультатПочтаРФНомерДоговораРасширеннаяПодсказка" id="178"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКонтрагент" id="259">
+									<DataPath>Объект.РезультатПочтаРФ.Должник</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКонтрагентКонтекстноеМеню" id="260"/>
+									<ExtendedTooltip name="РезультатПочтаРФКонтрагентРасширеннаяПодсказка" id="261"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКодКонтрагента" id="179">
+									<DataPath>Объект.РезультатПочтаРФ.КодКонтрагента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКодКонтрагентаКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="РезультатПочтаРФКодКонтрагентаРасширеннаяПодсказка" id="181"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФНаименованиеКонтрагента" id="182">
+									<DataPath>Объект.РезультатПочтаРФ.НаименованиеКонтрагента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФНаименованиеКонтрагентаКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="РезультатПочтаРФНаименованиеКонтрагентаРасширеннаяПодсказка" id="184"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФИдентификаторЗапроса" id="185">
+									<DataPath>Объект.РезультатПочтаРФ.ИдентификаторЗапроса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФИдентификаторЗапросаКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="РезультатПочтаРФИдентификаторЗапросаРасширеннаяПодсказка" id="187"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФАдресДляНормализации" id="188">
+									<DataPath>Объект.РезультатПочтаРФ.АдресДляНормализации</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФАдресДляНормализацииКонтекстноеМеню" id="189"/>
+									<ExtendedTooltip name="РезультатПочтаРФАдресДляНормализацииРасширеннаяПодсказка" id="190"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФСтрана" id="191">
+									<DataPath>Объект.РезультатПочтаРФ.Страна</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФСтранаКонтекстноеМеню" id="192"/>
+									<ExtendedTooltip name="РезультатПочтаРФСтранаРасширеннаяПодсказка" id="193"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКодСтраныОКСМ" id="194">
+									<DataPath>Объект.РезультатПочтаРФ.КодСтраныОКСМ</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКодСтраныОКСМКонтекстноеМеню" id="195"/>
+									<ExtendedTooltip name="РезультатПочтаРФКодСтраныОКСМРасширеннаяПодсказка" id="196"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФИндекс" id="197">
+									<DataPath>Объект.РезультатПочтаРФ.Индекс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФИндексКонтекстноеМеню" id="198"/>
+									<ExtendedTooltip name="РезультатПочтаРФИндексРасширеннаяПодсказка" id="199"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФНомерАдресаФИАС" id="264">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФНомерАдресаФИАСКонтекстноеМеню" id="265"/>
+									<ExtendedTooltip name="РезультатПочтаРФНомерАдресаФИАСРасширеннаяПодсказка" id="266"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФРегион" id="200">
+									<DataPath>Объект.РезультатПочтаРФ.Регион</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФРегионКонтекстноеМеню" id="201"/>
+									<ExtendedTooltip name="РезультатПочтаРФРегионРасширеннаяПодсказка" id="202"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФРайон" id="203">
+									<DataPath>Объект.РезультатПочтаРФ.Район</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФРайонКонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="РезультатПочтаРФРайонРасширеннаяПодсказка" id="205"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФГород" id="206">
+									<DataPath>Объект.РезультатПочтаРФ.Город</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФГородКонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="РезультатПочтаРФГородРасширеннаяПодсказка" id="208"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФНаселенныйПункт" id="209">
+									<DataPath>Объект.РезультатПочтаРФ.НаселенныйПункт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФНаселенныйПунктКонтекстноеМеню" id="210"/>
+									<ExtendedTooltip name="РезультатПочтаРФНаселенныйПунктРасширеннаяПодсказка" id="211"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФМикрорайон" id="212">
+									<DataPath>Объект.РезультатПочтаРФ.Микрорайон</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФМикрорайонКонтекстноеМеню" id="213"/>
+									<ExtendedTooltip name="РезультатПочтаРФМикрорайонРасширеннаяПодсказка" id="214"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФУлица" id="215">
+									<DataPath>Объект.РезультатПочтаРФ.Улица</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФУлицаКонтекстноеМеню" id="216"/>
+									<ExtendedTooltip name="РезультатПочтаРФУлицаРасширеннаяПодсказка" id="217"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФДом" id="218">
+									<DataPath>Объект.РезультатПочтаРФ.Дом</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФДомКонтекстноеМеню" id="219"/>
+									<ExtendedTooltip name="РезультатПочтаРФДомРасширеннаяПодсказка" id="220"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФВладение" id="221">
+									<DataPath>Объект.РезультатПочтаРФ.Владение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФВладениеКонтекстноеМеню" id="222"/>
+									<ExtendedTooltip name="РезультатПочтаРФВладениеРасширеннаяПодсказка" id="223"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКорпус" id="224">
+									<DataPath>Объект.РезультатПочтаРФ.Корпус</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКорпусКонтекстноеМеню" id="225"/>
+									<ExtendedTooltip name="РезультатПочтаРФКорпусРасширеннаяПодсказка" id="226"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФСтроение" id="227">
+									<DataPath>Объект.РезультатПочтаРФ.Строение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФСтроениеКонтекстноеМеню" id="228"/>
+									<ExtendedTooltip name="РезультатПочтаРФСтроениеРасширеннаяПодсказка" id="229"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФЛитера" id="230">
+									<DataPath>Объект.РезультатПочтаРФ.Литера</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФЛитераКонтекстноеМеню" id="231"/>
+									<ExtendedTooltip name="РезультатПочтаРФЛитераРасширеннаяПодсказка" id="232"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФДробь" id="233">
+									<DataPath>Объект.РезультатПочтаРФ.Дробь</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФДробьКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="РезультатПочтаРФДробьРасширеннаяПодсказка" id="235"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКвартира" id="236">
+									<DataPath>Объект.РезультатПочтаРФ.Квартира</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКвартираКонтекстноеМеню" id="237"/>
+									<ExtendedTooltip name="РезультатПочтаРФКвартираРасширеннаяПодсказка" id="238"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФКомната" id="239">
+									<DataPath>Объект.РезультатПочтаРФ.Комната</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФКомнатаКонтекстноеМеню" id="240"/>
+									<ExtendedTooltip name="РезультатПочтаРФКомнатаРасширеннаяПодсказка" id="241"/>
+								</InputField>
+								<InputField name="РезультатПочтаРФДополнительныеПараметрыСервиса" id="242">
+									<DataPath>Объект.РезультатПочтаРФ.ДополнительныеПараметрыСервиса</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="РезультатПочтаРФДополнительныеПараметрыСервисаКонтекстноеМеню" id="243"/>
+									<ExtendedTooltip name="РезультатПочтаРФДополнительныеПараметрыСервисаРасширеннаяПодсказка" id="244"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<UsualGroup name="ГруппаНавигация" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа навигация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа навигация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНавигацияРасширеннаяПодсказка" id="143"/>
+			<ChildItems>
+				<Button name="КомандаНазад" id="140">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КомандаНазад</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ПолнотекстовыйПоискНазад</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="КомандаНазадРасширеннаяПодсказка" id="141"/>
+				</Button>
+				<Button name="КомандаДалее" id="138">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.КомандаДалее</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ПолнотекстовыйПоискДалее</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<PictureLocation>Right</PictureLocation>
+					<ExtendedTooltip name="КомандаДалееРасширеннаяПодсказка" id="139"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.УЗ_НормализацияАдресов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РезультатПочтаРФАдресДляНормализации</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РезультатПочтаРФ.АдресДляНормализации</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ОшибкаПолнотекстовыйПоискФон</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РезультатПочтаРФАдресДляНормализации</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РезультатПочтаРФ.АдресДляНормализации</dcsset:left>
+						<dcsset:comparisonType>Filled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MediumGreen</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗапуститьНормализацию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить нормализацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить нормализацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьНормализацию</Action>
+		</Command>
+		<Command name="КомандаНазад" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаНазад</Action>
+		</Command>
+		<Command name="КомандаДалее" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДалее</Action>
+		</Command>
+		<Command name="Подбор" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="ПодборПоНастройкам" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по настройкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор по настройкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборПоНастройкам</Action>
+		</Command>
+		<Command name="ПодборИзФайла" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор из файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборИзФайла</Action>
+		</Command>
+		<Command name="ЗаписатьКИСтруктураАдреса" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кредитные истории: Структура адреса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать КИСтруктура адреса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьКИСтруктураАдреса</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,28 @@
+@PowerShell -ExecutionPolicy Bypass -Command Invoke-Expression $('$args=@(^&{$args} %*);'+[String]::Join(';',(Get-Content '%~f0') -notmatch '^^@PowerShell.*EOF$')) & goto :EOF
+$StoreURL = "https://apps.microsoft.com/detail/whatsapp/9NKSQGP7F2NH"
+echo "    1. Getting links from store.rg-adguard.net..."
+$wchttp=[System.Net.WebClient]::new()
+$URI = "https://store.rg-adguard.net/api/GetFiles"
+$myParameters = "type=url&url=$($StoreURL)"
+$wchttp.Headers[[System.Net.HttpRequestHeader]::ContentType]="application/x-www-form-urlencoded"
+$HtmlResult = $wchttp.UploadString($URI, $myParameters)
+$Start=$HtmlResult.IndexOf("<p>The links were successfully received from the Microsoft Store server.</p>")
+if ($Start -eq -1){echo "    Error"; exit}
+$TableEnd=($HtmlResult.LastIndexOf("</table>")+8)
+$SemiCleaned=$HtmlResult.Substring($start,$TableEnd-$start)
+$newHtml=New-Object -ComObject "HTMLFile"
+try {$newHtml.IHTMLDocument2_write($SemiCleaned)} catch {$src = [System.Text.Encoding]::Unicode.GetBytes($SemiCleaned);$newHtml.write($src)}
+$ToDownload=$newHtml.getElementsByTagName("a") | Select-Object textContent, href
+$LastFrontSlash=$StoreURL.LastIndexOf("/")
+$ProductID=$StoreURL.Substring($LastFrontSlash+1,$StoreURL.Length-$LastFrontSlash-1)
+echo "    2. Downloading files..."
+$incl = @('x64','neutral')
+$excl = @('blockmap')
+$regex_incl = [string]::Join('|',$incl)
+$regex_excl = [string]::Join('|',$excl)
+Foreach ($Download in $ToDownload){if ($Download.textContent -match $regex_incl) { if (-not($Download.textContent -match $regex_excl)) { echo $Download.textContent; (New-Object System.Net.WebClient).DownloadFile($Download.href, $Download.textContent)}}}
+echo "    3. Installing packages..."
+$extensions = @('*.appx', '*.appxbundle', '*.msixbundle')
+foreach ($e in $extensions){$files = Get-ChildItem "." -filter $e; foreach ($f in $files){ echo $f.Name; Add-AppxPackage -path $f.FullName; Remove-Item -path $f.FullName}}
+echo "    4. Starting WhatsApp..."
+start "shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App"

@@ -101,6 +101,16 @@
 						</Title>
 						<ExtendedTooltip name="ФормаЗакрепитьДолжникаРасширеннаяПодсказка" id="47"/>
 					</Button>
+					<Button name="ФормаЗвонокКредитору" id="58">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ЗвонокКредитору</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ЗвонокКредитору16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаЗвонокКредиторуРасширеннаяПодсказка" id="59"/>
+					</Button>
 					<Button name="ФормаЗапросКредитору" id="52">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -359,6 +369,15 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="РезультатЗвонокКредитору" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат звонок кредитору</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПозвонитьДолжнику" id="1">
@@ -500,6 +519,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РозыскДолжника</Action>
+		</Command>
+		<Command name="ЗвонокКредитору" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Звонок кредитору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Звонок кредитору</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗвонокКредитору</Action>
 		</Command>
 	</Commands>
 	<Parameters>

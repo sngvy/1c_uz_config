@@ -7,26 +7,26 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Дата</dataPath>
-			<field>Дата</field>
+			<dataPath>СвязанныйДоговор</dataPath>
+			<field>СвязанныйДоговор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Кредитор</dataPath>
+			<field>Кредитор</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Дата</v8:content>
+					<v8:content>Кредитор</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ТипМероприятия</dataPath>
-			<field>ТипМероприятия</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>КоличествоМероприятий</dataPath>
-			<field>КоличествоМероприятий</field>
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Количество мероприятий</v8:content>
+					<v8:content>Сотрудник</v8:content>
 				</v8:item>
 			</title>
 		</field>
@@ -41,31 +41,44 @@
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Сотрудник</dataPath>
-			<field>Сотрудник</field>
+			<dataPath>КоличествоМероприятий</dataPath>
+			<field>КоличествоМероприятий</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сотрудник</v8:content>
+					<v8:content>Количество мероприятий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дата</dataPath>
+			<field>Дата</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
-		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+		<query>ВЫБРАТЬ
 	Мероприятие.Автор.Подразделение КАК СотрудникПодразделение,
 	Мероприятие.Автор КАК Сотрудник,
 	Мероприятие.ПланируемаяДата КАК Дата,
-	Мероприятие.ТипМероприятия КАК ТипМероприятия,
+	Мероприятие.Объект КАК Кредитор,
+	Мероприятие.СвязанныйДоговор КАК СвязанныйДоговор,
 	КОЛИЧЕСТВО(Мероприятие.Результат) КАК КоличествоМероприятий
 ИЗ
 	Задача.Мероприятие КАК Мероприятие
+ГДЕ
+	Мероприятие.Объект.ЮрФизЛицо = &amp;ЮрФизЛицо
 
 СГРУППИРОВАТЬ ПО
-	Мероприятие.ПланируемаяДата,
-	Мероприятие.ТипМероприятия,
-	Мероприятие.Результат,
+	Мероприятие.Автор.Подразделение,
 	Мероприятие.Автор,
-	Мероприятие.Подразделение</query>
+	Мероприятие.ПланируемаяДата,
+	Мероприятие.Объект,
+	Мероприятие.СвязанныйДоговор</query>
 	</dataSet>
 	<totalField>
 		<dataPath>КоличествоМероприятий</dataPath>
@@ -73,6 +86,20 @@
 		<group>Сотрудник</group>
 		<group>ОбщийИтог</group>
 	</totalField>
+	<parameter>
+		<name>ЮрФизЛицо</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Юр физ лицо</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЮрФизЛицо</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.ЮрФизЛицо.ЮрЛицо</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -88,7 +115,10 @@
 					<dcsset:field>Дата</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ТипМероприятия</dcsset:field>
+					<dcsset:field>Кредитор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СвязанныйДоговор</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>КоличествоМероприятий</dcsset:field>
@@ -101,30 +131,37 @@
 					<dcsset:right xsi:type="v8:StandardBeginningDate">
 						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
 					</dcsset:right>
-					<dcsset:userSettingID>36a0d458-8a23-4166-9efe-cc5a8f46d261</dcsset:userSettingID>
+					<dcsset:userSettingID>5f370cc0-e1f8-42cb-bf0d-18eddb1943c1</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">СотрудникПодразделение</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ПодразделенияОрганизаций.ПустаяСсылка</dcsset:right>
-					<dcsset:userSettingID>cf87d1bd-3512-4e8c-a525-2bd0df692b60</dcsset:userSettingID>
+					<dcsset:userSettingID>e33e7b86-604a-46f4-a447-0f4b4b0d1663</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
 					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
 					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Пользователи.ПустаяСсылка</dcsset:right>
-					<dcsset:userSettingID>cc8b58aa-82b6-4b1e-bb2d-b3be4b7b14cb</dcsset:userSettingID>
+					<dcsset:userSettingID>fb9aa665-0382-424d-a98a-90877421498c</dcsset:userSettingID>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:FilterItemComparison">
 					<dcsset:use>false</dcsset:use>
-					<dcsset:left xsi:type="dcscor:Field">ТипМероприятия</dcsset:left>
+					<dcsset:left xsi:type="dcscor:Field">Кредитор</dcsset:left>
 					<dcsset:comparisonType>Equal</dcsset:comparisonType>
-					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ТипыМероприятий.ПустаяСсылка</dcsset:right>
-					<dcsset:userSettingID>1432a04c-aaaa-447b-9627-9a87073d06ac</dcsset:userSettingID>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>072c7d96-7a87-40ac-b921-1d5344ba38dc</dcsset:userSettingID>
 				</dcsset:item>
 			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЮрФизЛицо</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
 			<dcsset:order>
 				<dcsset:item xsi:type="dcsset:OrderItemField">
 					<dcsset:field>Сотрудник</dcsset:field>
@@ -157,7 +194,7 @@
 					<dcscor:value xsi:type="v8:LocalStringType">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Срез мероприятий</v8:content>
+							<v8:content>Звонки кредиторам</v8:content>
 						</v8:item>
 					</dcscor:value>
 				</dcscor:item>
@@ -242,15 +279,6 @@
 						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 					</dcsset:selection>
 					<dcsset:item xsi:type="dcsset:StructureItemGroup">
-						<dcsset:groupItems>
-							<dcsset:item xsi:type="dcsset:GroupItemField">
-								<dcsset:field>ТипМероприятия</dcsset:field>
-								<dcsset:groupType>Items</dcsset:groupType>
-								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
-								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
-								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
-							</dcsset:item>
-						</dcsset:groupItems>
 						<dcsset:order>
 							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 						</dcsset:order>

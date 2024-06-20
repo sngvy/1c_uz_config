@@ -4,8 +4,8 @@
 	// Проверить установку UWP клиента
 	Shell = Новый COMОбъект("WScript.Shell");
 	TEMP = Shell.ExpandEnvironmentStrings("%TEMP%");
-	ФайлСписка = "\applist.txt";
-	ПолныйПуть = TEMP + ФайлСписка;
+	ФайлСписка = "applist.txt";
+	ПолныйПуть = TEMP + "\" + ФайлСписка;
 	ЗапуститьПриложение("powershell " + "Get-AppxPackage | Select Name | Format-Table -AutoSize" + " > " + ПолныйПуть,,Истина,);
 	Текст = Новый ТекстовыйДокумент;
 	Текст.Прочитать(ПолныйПуть);	
@@ -34,8 +34,8 @@
 	// Проверить установку UWP клиента
 	Shell = Новый COMОбъект("WScript.Shell");
 	TEMP = Shell.ExpandEnvironmentStrings("%TEMP%");
-	ФайлСписка = "\applist.txt";
-	ПолныйПуть = TEMP + ФайлСписка;
+	ФайлСписка = "applist.txt";
+	ПолныйПуть = TEMP + "\" + ФайлСписка;
 	ЗапуститьПриложение("powershell " + "Get-AppxPackage | Select Name | Format-Table -AutoSize" + " > " + ПолныйПуть,,Истина,);
 	Текст = Новый ТекстовыйДокумент;
 	Текст.Прочитать(ПолныйПуть);	
@@ -82,8 +82,8 @@
 	// Проверить установку UWP клиента
 	Shell = Новый COMОбъект("WScript.Shell");
 	TEMP = Shell.ExpandEnvironmentStrings("%TEMP%");
-	ФайлСписка = "\applist.txt";
-	ПолныйПуть = TEMP + ФайлСписка;
+	ФайлСписка = "applist.txt";
+	ПолныйПуть = TEMP + "\" + ФайлСписка;
 	ЗапуститьПриложение("powershell " + "Get-AppxPackage | Select Name | Format-Table -AutoSize" + " > " + ПолныйПуть,,Истина,);
 	Текст = Новый ТекстовыйДокумент;
 	Текст.Прочитать(ПолныйПуть);	

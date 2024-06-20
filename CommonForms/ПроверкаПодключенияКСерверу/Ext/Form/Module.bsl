@@ -32,9 +32,9 @@
 &НаКлиенте
 // Функция возвращает результат пинга указанного IP
 Функция ping(IPАдрес)
-	objShell = Новый COMОбъект("WScript.Shell") ;
-	objScriptExec = objShell.Exec("ping.exe -n 1 " + IPАдрес) ;
-	strPingResults = (objScriptExec.StdOut.ReadAll());
+	Shell = Новый COMОбъект("WScript.Shell");
+	WSHShell = Shell.Run("ping.exe -n 1 " + IPАдрес);
+	strPingResults = (WSHShell.StdOut.ReadAll());
 	МассивСтрок = СтрРазделить(OEM2ANSI(strPingResults), " ");
 	Возврат ПолучитьСтрокуТолькоЦифры(МассивСтрок.Получить(13));
 КонецФункции

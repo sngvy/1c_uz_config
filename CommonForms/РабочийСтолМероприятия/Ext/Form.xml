@@ -464,6 +464,16 @@
 						<CommandName>Form.Command.Отладка</CommandName>
 						<ExtendedTooltip name="ФормаОтладкаExtendedTooltip" id="215"/>
 					</Button>
+					<Button name="ФормаУправлениеОстатками" id="1561">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.УправлениеОстатками</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.AccumulationRegister</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаУправлениеОстаткамиРасширеннаяПодсказка" id="1562"/>
+					</Button>
 					<Button name="ФормаПосчитатьДолжников" id="1332">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ПосчитатьДолжников</CommandName>
@@ -497,26 +507,6 @@
 							<xr:LoadTransparent>true</xr:LoadTransparent>
 						</Picture>
 						<ExtendedTooltip name="ФормаПроверкаПо230ФЗРасширеннаяПодсказка" id="1440"/>
-					</Button>
-					<Button name="ФормаОбновитьОстаткиКЦ" id="1429">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ОбновитьОстаткиКЦ</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.Post</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаОбновитьОстаткиКЦРасширеннаяПодсказка" id="1430"/>
-					</Button>
-					<Button name="ФормаОбновитьОстаткиЮД" id="1489">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ОбновитьОстаткиЮД</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.Post</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаОбновитьОстаткиЮДРасширеннаяПодсказка" id="1490"/>
 					</Button>
 					<Button name="ФормаОтчетыАТС" id="583">
 						<Type>CommandBarButton</Type>
@@ -8728,6 +8718,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>АнализПортфеля</Action>
+		</Command>
+		<Command name="УправлениеОстатками" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление остатками</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление остатками</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УправлениеОстатками</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -7,12 +7,12 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<PictureDecoration name="ДекораципПортфель" id="25">
+		<PictureDecoration name="ДекорацияПортфель" id="25">
 			<HorizontalStretch>true</HorizontalStretch>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Декорацип портфель</v8:content>
+					<v8:content>Декорация портфель</v8:content>
 				</v8:item>
 			</Title>
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
@@ -20,49 +20,109 @@
 				<xr:Ref>CommonPicture.NC_Портфель96</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<ContextMenu name="ДекораципПортфельКонтекстноеМеню" id="26"/>
-			<ExtendedTooltip name="ДекораципПортфельРасширеннаяПодсказка" id="27"/>
+			<ContextMenu name="ДекорацияПортфельКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ДекорацияПортфельРасширеннаяПодсказка" id="27"/>
 		</PictureDecoration>
-		<LabelField name="КоличествоДолжниковВРаботе" id="19">
-			<DataPath>КоличествоДолжниковВРаботе</DataPath>
-			<ContextMenu name="КоличествоДолжниковВРаботеКонтекстноеМеню" id="20"/>
-			<ExtendedTooltip name="КоличествоДолжниковВРаботеРасширеннаяПодсказка" id="21"/>
-		</LabelField>
-		<LabelField name="КоличествоОбещанийСегодня" id="1">
-			<DataPath>КоличествоОбещанийСегодня</DataPath>
-			<ContextMenu name="КоличествоОбещанийСегодняКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КоличествоОбещанийСегодняРасширеннаяПодсказка" id="3"/>
-		</LabelField>
-		<LabelField name="СуммаОбещанийСегодня" id="4">
-			<DataPath>СуммаОбещанийСегодня</DataPath>
-			<ContextMenu name="СуммаОбещанийСегодняКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="СуммаОбещанийСегодняРасширеннаяПодсказка" id="6"/>
-		</LabelField>
-		<LabelField name="КоличествоОбещанийМесяц" id="7">
-			<DataPath>КоличествоОбещанийМесяц</DataPath>
-			<ContextMenu name="КоличествоОбещанийМесяцКонтекстноеМеню" id="8"/>
-			<ExtendedTooltip name="КоличествоОбещанийМесяцРасширеннаяПодсказка" id="9"/>
-		</LabelField>
-		<LabelField name="СуммаОбещанийМесяц" id="10">
-			<DataPath>СуммаОбещанийМесяц</DataPath>
-			<ContextMenu name="СуммаОбещанийМесяцКонтекстноеМеню" id="11"/>
-			<ExtendedTooltip name="СуммаОбещанийМесяцРасширеннаяПодсказка" id="12"/>
-		</LabelField>
-		<LabelField name="КоличествоПлатежейМесяц" id="13">
-			<DataPath>КоличествоПлатежейМесяц</DataPath>
-			<ContextMenu name="КоличествоПлатежейМесяцКонтекстноеМеню" id="14"/>
-			<ExtendedTooltip name="КоличествоПлатежейМесяцРасширеннаяПодсказка" id="15"/>
-		</LabelField>
-		<LabelField name="СуммаПлатежейМесяц" id="16">
-			<DataPath>СуммаПлатежейМесяц</DataPath>
-			<ContextMenu name="СуммаПлатежейМесяцКонтекстноеМеню" id="17"/>
-			<ExtendedTooltip name="СуммаПлатежейМесяцРасширеннаяПодсказка" id="18"/>
-		</LabelField>
-		<LabelField name="ПроцентСбораОтПортфеля" id="22">
-			<DataPath>ПроцентСбораОтПортфеля</DataPath>
-			<ContextMenu name="ПроцентСбораОтПортфеляКонтекстноеМеню" id="23"/>
-			<ExtendedTooltip name="ПроцентСбораОтПортфеляРасширеннаяПодсказка" id="24"/>
-		</LabelField>
+		<UsualGroup name="ГруппаСегодня" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сегодня</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа сегодня</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСегодняРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<LabelField name="КоличествоОбещанийСегодня" id="1">
+					<DataPath>КоличествоОбещанийСегодня</DataPath>
+					<ContextMenu name="КоличествоОбещанийСегодняКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КоличествоОбещанийСегодняРасширеннаяПодсказка" id="3"/>
+				</LabelField>
+				<LabelField name="СуммаОбещанийСегодня" id="4">
+					<DataPath>СуммаОбещанийСегодня</DataPath>
+					<ContextMenu name="СуммаОбещанийСегодняКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="СуммаОбещанийСегодняРасширеннаяПодсказка" id="6"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМесяц" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа месяц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаМесяцРасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<LabelField name="КоличествоОбещанийМесяц" id="7">
+					<DataPath>КоличествоОбещанийМесяц</DataPath>
+					<ContextMenu name="КоличествоОбещанийМесяцКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КоличествоОбещанийМесяцРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+				<LabelField name="СуммаОбещанийМесяц" id="10">
+					<DataPath>СуммаОбещанийМесяц</DataPath>
+					<ContextMenu name="СуммаОбещанийМесяцКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="СуммаОбещанийМесяцРасширеннаяПодсказка" id="12"/>
+				</LabelField>
+				<LabelField name="КоличествоПлатежейМесяц" id="13">
+					<DataPath>КоличествоПлатежейМесяц</DataPath>
+					<ContextMenu name="КоличествоПлатежейМесяцКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="КоличествоПлатежейМесяцРасширеннаяПодсказка" id="15"/>
+				</LabelField>
+				<LabelField name="СуммаПлатежейМесяц" id="16">
+					<DataPath>СуммаПлатежейМесяц</DataPath>
+					<ContextMenu name="СуммаПлатежейМесяцКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СуммаПлатежейМесяцРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОбщиеДанные" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общие данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа общие данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаОбщиеДанныеРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<LabelField name="КоличествоДолжниковВРаботе" id="19">
+					<DataPath>КоличествоДолжниковВРаботе</DataPath>
+					<ContextMenu name="КоличествоДолжниковВРаботеКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="КоличествоДолжниковВРаботеРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<LabelField name="ПроцентСбораОтПортфеля" id="22">
+					<DataPath>ПроцентСбораОтПортфеля</DataPath>
+					<ContextMenu name="ПроцентСбораОтПортфеляКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПроцентСбораОтПортфеляРасширеннаяПодсказка" id="24"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="КоличествоОбещанийСегодня" id="1">

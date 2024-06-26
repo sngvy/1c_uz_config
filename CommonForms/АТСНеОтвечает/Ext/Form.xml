@@ -4,43 +4,41 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<VerticalSpacing>Half</VerticalSpacing>
 	<CommandBarLocation>None</CommandBarLocation>
-	<ShowCloseButton>false</ShowCloseButton>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<PictureDecoration name="ОбновлениеКонтактныхДанныхИконка" id="1">
+		<PictureDecoration name="НетОтветаИконка" id="1">
 			<HorizontalStretch>true</HorizontalStretch>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Обновление контактных данных иконка</v8:content>
+					<v8:content>Нет ответа иконка</v8:content>
 				</v8:item>
 			</Title>
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<Picture>
-				<xr:Ref>CommonPicture.NC_Контакт</xr:Ref>
+				<xr:Ref>CommonPicture.NC_НетОтвета</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<ContextMenu name="ОбновлениеКонтактныхДанныхИконкаКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ОбновлениеКонтактныхДанныхИконкаРасширеннаяПодсказка" id="3"/>
+			<ContextMenu name="НетОтветаИконкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НетОтветаИконкаРасширеннаяПодсказка" id="3"/>
 		</PictureDecoration>
-		<LabelDecoration name="ОбновлениеКонтактныхДанныхПояснение" id="4">
-			<Width>40</Width>
+		<LabelDecoration name="НетОтветаПояснение" id="4">
 			<HorizontalStretch>true</HorizontalStretch>
 			<Title formatted="true">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Контактные данные обновлены!&lt;/&gt;&lt;/&gt;
+					<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Очень жаль, но...&lt;/&gt;&lt;/&gt;
 
-&lt;font Arial&gt;&lt;fontsize 10&gt;Проверьте правильность выбранного контакта в мероприятии.&lt;/&gt;&lt;/&gt;</v8:content>
+&lt;font Arial&gt;&lt;fontsize 10&gt;Не удалось получить ответ от АТС. Попробуйте повторить последнее действие еще раз. Если проблема сохранится, выполните проверку подключения к серверу.&lt;/&gt;&lt;/&gt;</v8:content>
 				</v8:item>
 			</Title>
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<HorizontalAlign>Center</HorizontalAlign>
-			<ContextMenu name="ОбновлениеКонтактныхДанныхПояснениеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ОбновлениеКонтактныхДанныхПояснениеРасширеннаяПодсказка" id="6"/>
+			<ContextMenu name="НетОтветаПояснениеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НетОтветаПояснениеРасширеннаяПодсказка" id="6"/>
 		</LabelDecoration>
 	</ChildItems>
 	<Attributes/>

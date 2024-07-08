@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>40</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalSpacing>Half</VerticalSpacing>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<PictureDecoration name="ЗавершениеОбновленияИконка" id="1">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершение обновления иконка</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Picture>
+				<xr:Ref>CommonPicture.NC_Выполнено96</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ContextMenu name="ЗавершениеОбновленияИконкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЗавершениеОбновленияИконкаРасширеннаяПодсказка" id="3"/>
+		</PictureDecoration>
+		<LabelDecoration name="ЗавершениеОбновленияОбновленияПояснение" id="4">
+			<Width>40</Width>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Обновление завершено&lt;/&gt;&lt;/&gt;
+
+&lt;font Arial&gt;&lt;fontsize 10&gt;Вы можете закрыть это окно и продолжить работу или посмотреть список изменений в новой версии.&lt;/&gt;&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="ЗавершениеОбновленияОбновленияПояснениеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ЗавершениеОбновленияОбновленияПояснениеРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
+		<Button name="ПоказатьСписокИзменений" id="7">
+			<Type>UsualButton</Type>
+			<Representation>PictureAndText</Representation>
+			<DefaultButton>true</DefaultButton>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
+			<Picture>
+				<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<ExtendedTooltip name="ПоказатьСписокИзмененийРасширеннаяПодсказка" id="8"/>
+		</Button>
+	</ChildItems>
+	<Attributes/>
+	<Commands>
+		<Command name="ПоказатьСписокИзменений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список изменений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список изменений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьСписокИзменений</Action>
+		</Command>
+	</Commands>
+</Form>

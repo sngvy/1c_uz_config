@@ -1040,57 +1040,79 @@
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
 						</Button>
-						<Button name="ИсполнительныеПроизводства" id="480">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<Width>20</Width>
-							<Height>1</Height>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<CommandName>Form.Command.ИсполнительныеПроизводства</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_ПоверкаПоФССП</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
+						<UsualGroup name="РозыскДолжника" id="487">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Исполнительные пр-ва</v8:content>
+									<v8:content>Розыск должника</v8:content>
 								</v8:item>
 							</Title>
-							<ExtendedTooltip name="ИсполнительныеПроизводстваРасширеннаяПодсказка" id="481"/>
-						</Button>
-						<Button name="ДелаОБанкротстве" id="482">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<Width>20</Width>
-							<Height>1</Height>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<CommandName>Form.Command.ДелаОБанкротстве</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="ДелаОБанкротствеРасширеннаяПодсказка" id="483"/>
-						</Button>
-						<Button name="ОпределитьРегионИОператора" id="478">
-							<Type>UsualButton</Type>
-							<Representation>PictureAndText</Representation>
-							<Width>20</Width>
-							<Height>1</Height>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<CommandName>Form.Command.ОпределитьОператораИРегион</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Прослушка</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Title>
+							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Оператор и регион</v8:content>
+									<v8:content>Розыск должника</v8:content>
 								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ОпределитьРегионИОператораРасширеннаяПодсказка" id="479"/>
-						</Button>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>PopUp</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ShowLeftMargin>false</ShowLeftMargin>
+							<ExtendedTooltip name="РозыскДолжникаРасширеннаяПодсказка" id="488"/>
+							<ChildItems>
+								<Button name="ИсполнительныеПроизводства" id="480">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>20</Width>
+									<Height>2</Height>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.ИсполнительныеПроизводства</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_ПоверкаПоФССП</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исполнительные пр-ва</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ИсполнительныеПроизводстваРасширеннаяПодсказка" id="481"/>
+								</Button>
+								<Button name="ДелаОБанкротстве" id="482">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>20</Width>
+									<Height>2</Height>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.ДелаОБанкротстве</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="ДелаОБанкротствеРасширеннаяПодсказка" id="483"/>
+								</Button>
+								<Button name="ОпределитьРегионИОператора" id="478">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<Width>20</Width>
+									<Height>2</Height>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<CommandName>Form.Command.ОпределитьОператораИРегион</CommandName>
+									<Picture>
+										<xr:Ref>CommonPicture.NC_SIM</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оператор и регион</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ОпределитьРегионИОператораРасширеннаяПодсказка" id="479"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Планировщик" id="417">

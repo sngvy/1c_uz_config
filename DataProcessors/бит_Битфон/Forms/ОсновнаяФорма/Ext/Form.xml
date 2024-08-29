@@ -908,60 +908,6 @@
 									<Representation>None</Representation>
 									<ExtendedTooltip name="ГруппаКнопкиРасширеннаяПодсказка" id="390"/>
 									<ChildItems>
-										<UsualGroup name="ГруппаГромкости" id="11">
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа громкости</v8:content>
-												</v8:item>
-											</ToolTip>
-											<HorizontalStretch>false</HorizontalStretch>
-											<Group>Vertical</Group>
-											<Behavior>Usual</Behavior>
-											<Representation>None</Representation>
-											<ChildItemsWidth>Equal</ChildItemsWidth>
-											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаГромкостиРасширеннаяПодсказка" id="391"/>
-											<ChildItems>
-												<TrackBarField name="РегуляторГромкость" id="9">
-													<DataPath>Громкость</DataPath>
-													<TitleLocation>None</TitleLocation>
-													<Width>1</Width>
-													<Height>1</Height>
-													<VerticalStretch>true</VerticalStretch>
-													<MaxValue>255</MaxValue>
-													<Step>5</Step>
-													<MarkingStep>10</MarkingStep>
-													<Orientation>Vertical</Orientation>
-													<MarkingAppearance>BothSides</MarkingAppearance>
-													<ContextMenu name="РегуляторГромкостьКонтекстноеМеню" id="10"/>
-													<ExtendedTooltip name="РегуляторГромкостьРасширеннаяПодсказка" id="392"/>
-													<Events>
-														<Event name="OnChange">РегуляторГромкостьПриИзменении</Event>
-													</Events>
-												</TrackBarField>
-												<Button name="КнОГр" id="41">
-													<Type>UsualButton</Type>
-													<Representation>Picture</Representation>
-													<Width>6</Width>
-													<Height>1</Height>
-													<CommandName>Form.Command.КнОГр</CommandName>
-													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
-													<Picture>
-														<xr:Ref>CommonPicture.NC_Наушники</xr:Ref>
-														<xr:LoadTransparent>false</xr:LoadTransparent>
-													</Picture>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Отключить громкость</v8:content>
-														</v8:item>
-													</Title>
-													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнОГрРасширеннаяПодсказка" id="393"/>
-												</Button>
-											</ChildItems>
-										</UsualGroup>
 										<UsualGroup name="ГруппаКлКолонка1" id="35">
 											<ToolTip>
 												<v8:item>
@@ -1112,10 +1058,15 @@
 												</Button>
 												<Button name="КнУдалитьПоследнийСимволНомера" id="49">
 													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
 													<Width>6</Width>
 													<Height>1</Height>
 													<CommandName>Form.Command.КнУдалитьПоследнийСимволНомера</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
+													<Picture>
+														<xr:Ref>CommonPicture.NC_УдалитьСимвол</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -1242,22 +1193,23 @@
 												</Button>
 											</ChildItems>
 										</UsualGroup>
-										<UsualGroup name="ГруппаМикрофон" id="13">
+										<UsualGroup name="ГруппаГромкости" id="11">
 											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Группа микрофон</v8:content>
+													<v8:content>Группа громкости</v8:content>
 												</v8:item>
 											</ToolTip>
 											<HorizontalStretch>false</HorizontalStretch>
 											<Group>Vertical</Group>
 											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
+											<ChildItemsWidth>Equal</ChildItemsWidth>
 											<ShowTitle>false</ShowTitle>
-											<ExtendedTooltip name="ГруппаМикрофонРасширеннаяПодсказка" id="415"/>
+											<ExtendedTooltip name="ГруппаГромкостиРасширеннаяПодсказка" id="391"/>
 											<ChildItems>
-												<TrackBarField name="РегуляторМикрофон" id="16">
-													<DataPath>Микрофон</DataPath>
+												<TrackBarField name="РегуляторГромкость" id="9">
+													<DataPath>Громкость</DataPath>
 													<TitleLocation>None</TitleLocation>
 													<Width>1</Width>
 													<Height>1</Height>
@@ -1265,34 +1217,85 @@
 													<MaxValue>255</MaxValue>
 													<Step>5</Step>
 													<MarkingStep>10</MarkingStep>
-													<Orientation>Vertical</Orientation>
-													<MarkingAppearance>BothSides</MarkingAppearance>
-													<ContextMenu name="РегуляторМикрофонКонтекстноеМеню" id="17"/>
-													<ExtendedTooltip name="РегуляторМикрофонРасширеннаяПодсказка" id="416"/>
+													<MarkingAppearance>DontShow</MarkingAppearance>
+													<ContextMenu name="РегуляторГромкостьКонтекстноеМеню" id="10"/>
+													<ExtendedTooltip name="РегуляторГромкостьРасширеннаяПодсказка" id="392"/>
 													<Events>
-														<Event name="OnChange">РегуляторМикрофонПриИзменении</Event>
+														<Event name="OnChange">РегуляторГромкостьПриИзменении</Event>
 													</Events>
 												</TrackBarField>
-												<Button name="КнОМик" id="40">
+												<Button name="КнОГр" id="41">
 													<Type>UsualButton</Type>
 													<Representation>Picture</Representation>
 													<Width>6</Width>
 													<Height>1</Height>
-													<CommandName>Form.Command.КнОМик</CommandName>
+													<CommandName>Form.Command.КнОГр</CommandName>
 													<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
 													<Picture>
-														<xr:Ref>CommonPicture.NC_Микрофон</xr:Ref>
+														<xr:Ref>CommonPicture.NC_Наушники</xr:Ref>
 														<xr:LoadTransparent>false</xr:LoadTransparent>
 													</Picture>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Отключить микрофон</v8:content>
+															<v8:content>Отключить громкость</v8:content>
 														</v8:item>
 													</Title>
 													<Shape>Oval</Shape>
-													<ExtendedTooltip name="КнОМикРасширеннаяПодсказка" id="417"/>
+													<ExtendedTooltip name="КнОГрРасширеннаяПодсказка" id="393"/>
 												</Button>
+												<UsualGroup name="ГруппаМикрофон" id="13">
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа микрофон</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalStretch>false</HorizontalStretch>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаМикрофонРасширеннаяПодсказка" id="415"/>
+													<ChildItems>
+														<TrackBarField name="РегуляторМикрофон" id="16">
+															<DataPath>Микрофон</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<Width>1</Width>
+															<Height>1</Height>
+															<VerticalStretch>true</VerticalStretch>
+															<MaxValue>255</MaxValue>
+															<Step>5</Step>
+															<MarkingStep>10</MarkingStep>
+															<MarkingAppearance>DontShow</MarkingAppearance>
+															<ContextMenu name="РегуляторМикрофонКонтекстноеМеню" id="17"/>
+															<ExtendedTooltip name="РегуляторМикрофонРасширеннаяПодсказка" id="416"/>
+															<Events>
+																<Event name="OnChange">РегуляторМикрофонПриИзменении</Event>
+															</Events>
+														</TrackBarField>
+														<Button name="КнОМик" id="40">
+															<Type>UsualButton</Type>
+															<Representation>Picture</Representation>
+															<Width>6</Width>
+															<Height>1</Height>
+															<CommandName>Form.Command.КнОМик</CommandName>
+															<Font ref="sys:DefaultGUIFont" height="14" kind="WindowsFont"/>
+															<Picture>
+																<xr:Ref>CommonPicture.NC_Микрофон</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отключить микрофон</v8:content>
+																</v8:item>
+															</Title>
+															<Shape>Oval</Shape>
+															<ExtendedTooltip name="КнОМикРасширеннаяПодсказка" id="417"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</UsualGroup>
 									</ChildItems>
@@ -1558,7 +1561,7 @@
 																<Representation>PictureAndText</Representation>
 																<CommandName>Form.Command.ЗаписьДетально</CommandName>
 																<Picture>
-																	<xr:Ref>CommonPicture.NC_Перевод16</xr:Ref>
+																	<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
 																	<xr:LoadTransparent>true</xr:LoadTransparent>
 																</Picture>
 																<ExtendedTooltip name="ИсторияЗвонковВходящиеКонтекстноеМенюЗаписьДетальноРасширеннаяПодсказка" id="431"/>

@@ -458,6 +458,44 @@
 			<ContextMenu name="НадписьТекущийОстатокКонтекстноеМеню" id="47"/>
 			<ExtendedTooltip name="НадписьТекущийОстатокExtendedTooltip" id="122"/>
 		</LabelDecoration>
+		<UsualGroup name="ГруппаСлужебная" id="1233">
+			<Enabled>false</Enabled>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служебная информация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа служебная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1234"/>
+			<ChildItems>
+				<CheckBoxField name="ДолжникЕстьИП" id="1235">
+					<DataPath>Объект.Должник.ЕстьИП</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДолжникЕстьИПКонтекстноеМеню" id="1236"/>
+					<ExtendedTooltip name="ДолжникЕстьИПРасширеннаяПодсказка" id="1237"/>
+				</CheckBoxField>
+				<CheckBoxField name="ДолжникЕстьДоБ" id="1238">
+					<DataPath>Объект.Должник.ЕстьДоБ</DataPath>
+					<Enabled>false</Enabled>
+					<ReadOnly>true</ReadOnly>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДолжникЕстьДоБКонтекстноеМеню" id="1239"/>
+					<ExtendedTooltip name="ДолжникЕстьДоБРасширеннаяПодсказка" id="1240"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="ГруппаСтадииПроизводства" id="141">
 			<Title>
 				<v8:item>
@@ -2757,22 +2795,60 @@
 										</Picture>
 										<ExtendedTooltip name="ФормаViberРасширеннаяПодсказка" id="1019"/>
 									</Button>
-									<Button name="ФормаЗапросДокументовНаНомер" id="1020">
-										<Type>CommandBarButton</Type>
-										<Representation>PictureAndText</Representation>
-										<CommandName>Form.Command.ЗапроситьДокументНаНомер</CommandName>
+									<Popup name="ДолжникТелефоныДокументы" id="1241">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Документы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Должник телефоны документы</v8:content>
+											</v8:item>
+										</ToolTip>
 										<Picture>
 											<xr:Ref>StdPicture.Document</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Запросить документы на номер</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ФормаЗапросДокументовНаНомерРасширеннаяПодсказка" id="1021"/>
-									</Button>
+										<Representation>PictureAndText</Representation>
+										<ExtendedTooltip name="ДолжникТелефоныДокументыРасширеннаяПодсказка" id="1242"/>
+										<ChildItems>
+											<Button name="ФормаЗапросДокументовНаНомер" id="1020">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ЗапроситьДокументНаНомер</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Document</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Запросить документы на номер</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ФормаЗапросДокументовНаНомерРасширеннаяПодсказка" id="1021"/>
+											</Button>
+											<Button name="ФормаСозданиеМероприятияОтправки" id="1243">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.СоздатьМероприятиеОтправкиНаНомер</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Document</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Создать мероприятие отправки на номер</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ФормаСозданиеМероприятияОтправкиРасширеннаяПодсказка" id="1244"/>
+											</Button>
+										</ChildItems>
+									</Popup>
 									<Button name="ФормаДолжникТелефоныОтправитьEmail" id="320">
 										<Type>CommandBarButton</Type>
 										<Visible>false</Visible>
@@ -5574,6 +5650,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьДелаОБанкротстве</Action>
+		</Command>
+		<Command name="СоздатьМероприятиеОтправкиНаНомер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать мероприятие отправки на номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать мероприятие отправки на номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьМероприятиеОтправкиНаНомер</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

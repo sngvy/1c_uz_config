@@ -61,13 +61,36 @@
 			<ContextMenu name="ПолучательКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="18"/>
 		</InputField>
-		<InputField name="Состояние" id="19">
+		<RadioButtonField name="Состояние" id="19">
 			<DataPath>Объект.Состояние</DataPath>
 			<EditMode>EnterOnInput</EditMode>
-			<BackColor>web:WhiteSmoke</BackColor>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>На отправку</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияОтправкиДокументов.EnumValue.НаОтправку</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.СостоянияОтправкиДокументов.EnumValue.Отправлен</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
 			<ContextMenu name="СостояниеКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="СостояниеРасширеннаяПодсказка" id="21"/>
-		</InputField>
+		</RadioButtonField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

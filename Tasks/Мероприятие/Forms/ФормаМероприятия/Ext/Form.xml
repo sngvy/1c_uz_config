@@ -696,6 +696,7 @@
 					<DropListButton>false</DropListButton>
 					<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 					<OpenButton>false</OpenButton>
+					<BackColor>web:WhiteSmoke</BackColor>
 					<ContextMenu name="ТипМероприятияКонтекстноеМеню" id="36"/>
 					<ExtendedTooltip name="ТипМероприятияExtendedTooltip" id="162"/>
 					<Events>
@@ -1040,6 +1041,25 @@
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
 						</Button>
+						<CommandBar name="Группа1" id="492">
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="493"/>
+						</CommandBar>
+						<PictureDecoration name="ЕстьВнешняяИнформация" id="489">
+							<Visible>false</Visible>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Есть внешняя информация</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Предупреждение40</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ЕстьВнешняяИнформацияКонтекстноеМеню" id="490"/>
+							<ExtendedTooltip name="ЕстьВнешняяИнформацияРасширеннаяПодсказка" id="491"/>
+						</PictureDecoration>
 						<UsualGroup name="РозыскДолжника" id="487">
 							<Title>
 								<v8:item>
@@ -1410,7 +1430,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Планируемая  дата</v8:content>
+									<v8:content>Планируемая дата</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>az</v8:lang>
@@ -2031,6 +2051,7 @@
 							<OpenButton>false</OpenButton>
 							<AutoMarkIncomplete>true</AutoMarkIncomplete>
 							<ChooseType>false</ChooseType>
+							<BackColor>web:WhiteSmoke</BackColor>
 							<ContextMenu name="РезультатКонтекстноеМеню" id="28"/>
 							<ExtendedTooltip name="РезультатExtendedTooltip" id="185"/>
 							<Events>

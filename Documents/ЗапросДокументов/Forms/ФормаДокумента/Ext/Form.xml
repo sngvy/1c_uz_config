@@ -56,11 +56,44 @@
 		</InputField>
 		<InputField name="Получатель" id="16">
 			<DataPath>Объект.Получатель</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<EditMode>EnterOnInput</EditMode>
 			<BackColor>web:WhiteSmoke</BackColor>
 			<ContextMenu name="ПолучательКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="18"/>
 		</InputField>
+		<RadioButtonField name="СпособОтправки" id="24">
+			<DataPath>Объект.СпособОтправки</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыМессенджеров.EnumValue.WhatsApp</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыМессенджеров.EnumValue.Viber</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыМессенджеров.EnumValue.Email</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="СпособОтправкиКонтекстноеМеню" id="25"/>
+			<ExtendedTooltip name="СпособОтправкиРасширеннаяПодсказка" id="26"/>
+		</RadioButtonField>
 		<RadioButtonField name="Состояние" id="19">
 			<DataPath>Объект.Состояние</DataPath>
 			<EditMode>EnterOnInput</EditMode>

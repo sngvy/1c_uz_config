@@ -24,8 +24,8 @@
 			<ContextMenu name="ТипДокументаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ТипДокументаРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<RadioButtonField name="СредствоОтправки" id="14">
-			<DataPath>СредствоОтправки</DataPath>
+		<RadioButtonField name="СпособОтправки" id="14">
+			<DataPath>СпособОтправки</DataPath>
 			<RadioButtonType>Auto</RadioButtonType>
 			<ChoiceList>
 				<xr:Item>
@@ -44,9 +44,17 @@
 						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыМессенджеров.EnumValue.Viber</Value>
 					</xr:Value>
 				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xr:DesignTimeRef">Enum.ТипыМессенджеров.EnumValue.Email</Value>
+					</xr:Value>
+				</xr:Item>
 			</ChoiceList>
-			<ContextMenu name="СредствоОтправкиКонтекстноеМеню" id="15"/>
-			<ExtendedTooltip name="СредствоОтправкиРасширеннаяПодсказка" id="16"/>
+			<ContextMenu name="СпособОтправкиКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="СпособОтправкиРасширеннаяПодсказка" id="16"/>
 		</RadioButtonField>
 		<UsualGroup name="ГруппаПредупреждение" id="12">
 			<Title>
@@ -144,11 +152,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="СредствоОтправки" id="5">
+		<Attribute name="СпособОтправки" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Средство отправки</v8:content>
+					<v8:content>Способ отправки</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

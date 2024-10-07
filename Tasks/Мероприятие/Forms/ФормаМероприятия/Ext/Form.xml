@@ -1041,25 +1041,43 @@
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
 						</Button>
-						<CommandBar name="Группа1" id="492">
-							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="493"/>
-						</CommandBar>
-						<PictureDecoration name="ЕстьВнешняяИнформация" id="489">
-							<Visible>false</Visible>
-							<Title formatted="false">
+						<UsualGroup name="РезультатыРозыска" id="498">
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Есть внешняя информация</v8:content>
+									<v8:content>Результаты розыска</v8:content>
 								</v8:item>
 							</Title>
-							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Предупреждение40</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ContextMenu name="ЕстьВнешняяИнформацияКонтекстноеМеню" id="490"/>
-							<ExtendedTooltip name="ЕстьВнешняяИнформацияРасширеннаяПодсказка" id="491"/>
-						</PictureDecoration>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Результаты розыска</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="РезультатыРозыскаРасширеннаяПодсказка" id="499"/>
+							<ChildItems>
+								<CheckBoxField name="ЕстьИП" id="492">
+									<DataPath>ЕстьИП</DataPath>
+									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьИПКонтекстноеМеню" id="493"/>
+									<ExtendedTooltip name="ЕстьИПРасширеннаяПодсказка" id="494"/>
+								</CheckBoxField>
+								<CheckBoxField name="ЕстьДелаОБанкротстве" id="495">
+									<DataPath>ЕстьДелаОБанкротстве</DataPath>
+									<Enabled>false</Enabled>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьДелаОБанкротствеКонтекстноеМеню" id="496"/>
+									<ExtendedTooltip name="ЕстьДелаОБанкротствеРасширеннаяПодсказка" id="497"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="РозыскДолжника" id="487">
 							<Title>
 								<v8:item>
@@ -3382,6 +3400,28 @@
 				<v8:DateQualifiers>
 					<v8:DateFractions>DateTime</v8:DateFractions>
 				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьИП" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ИП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьДелаОБанкротстве" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть дела о банкротстве</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

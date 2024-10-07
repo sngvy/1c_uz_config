@@ -458,25 +458,25 @@
 			<ContextMenu name="НадписьТекущийОстатокКонтекстноеМеню" id="47"/>
 			<ExtendedTooltip name="НадписьТекущийОстатокExtendedTooltip" id="122"/>
 		</LabelDecoration>
-		<UsualGroup name="ГруппаСлужебная" id="1233">
+		<UsualGroup name="ГруппаРезультатыРозыска" id="1233">
 			<Enabled>false</Enabled>
 			<ReadOnly>true</ReadOnly>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Служебная информация</v8:content>
+					<v8:content>Результаты розыска</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа служебная</v8:content>
+					<v8:content>Группа результаты розыска</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1234"/>
+			<ExtendedTooltip name="ГруппаРезультатыРозыскаРасширеннаяПодсказка" id="1234"/>
 			<ChildItems>
 				<CheckBoxField name="ДолжникЕстьИП" id="1235">
 					<DataPath>Объект.Должник.ЕстьИП</DataPath>
@@ -490,6 +490,12 @@
 					<DataPath>Объект.Должник.ЕстьДоБ</DataPath>
 					<Enabled>false</Enabled>
 					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть дела о банкротстве</v8:content>
+						</v8:item>
+					</Title>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ДолжникЕстьДоБКонтекстноеМеню" id="1239"/>
 					<ExtendedTooltip name="ДолжникЕстьДоБРасширеннаяПодсказка" id="1240"/>

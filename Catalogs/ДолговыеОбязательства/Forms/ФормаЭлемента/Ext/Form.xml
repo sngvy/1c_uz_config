@@ -9,6 +9,22 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаРасчетУсловий" id="928">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.РасчетУсловий</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Расчет условий</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаРасчетУсловийРасширеннаяПодсказка" id="929"/>
+			</Button>
 			<Popup name="ФормаГруппаДосудебная" id="878">
 				<Title>
 					<v8:item>
@@ -27,40 +43,6 @@
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
 				<ExtendedTooltip name="ФормаГруппаДосудебнаяРасширеннаяПодсказка" id="879"/>
-				<ChildItems>
-					<Button name="ФормаРасчетУсловий" id="928">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.РасчетУсловий</CommandName>
-						<Picture>
-							<xr:Ref>CommonPicture.Рассчитать</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Расчет условий</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ФормаРасчетУсловийРасширеннаяПодсказка" id="929"/>
-					</Button>
-					<Button name="ФормаЗапросДокументов" id="880">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.ЗапроситьДокумент</CommandName>
-						<Picture>
-							<xr:Ref>StdPicture.Document</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Запрос документов</v8:content>
-							</v8:item>
-						</Title>
-						<ExtendedTooltip name="ФормаЗапросДокументовРасширеннаяПодсказка" id="881"/>
-					</Button>
-				</ChildItems>
 			</Popup>
 			<Button name="ФормаПроверитьНаБанкротство" id="815">
 				<Type>CommandBarButton</Type>

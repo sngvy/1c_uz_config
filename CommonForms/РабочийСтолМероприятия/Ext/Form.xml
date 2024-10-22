@@ -5000,74 +5000,137 @@
 				</v8:item>
 			</ToolTip>
 			<Behavior>Usual</Behavior>
-			<Representation>StrongSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1424"/>
 			<ChildItems>
-				<LabelField name="ВерсияКонфигурацииNC" id="1418">
-					<DataPath>ВерсияКонфигурацииNC</DataPath>
-					<Enabled>false</Enabled>
-					<ReadOnly>true</ReadOnly>
+				<UsualGroup name="ГруппаПоискДО" id="1580">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск ДО</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа поиск ДО</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПоискДОРасширеннаяПодсказка" id="1581"/>
+					<ChildItems>
+						<InputField name="НомерДО" id="1575">
+							<DataPath>НомерДО</DataPath>
+							<MaxWidth>10</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НомерДОКонтекстноеМеню" id="1576"/>
+							<ExtendedTooltip name="НомерДОРасширеннаяПодсказка" id="1577"/>
+						</InputField>
+						<Button name="ОткрытьДО" id="1578">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ОткрытьДО</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Открыть</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="ОткрытьДОРасширеннаяПодсказка" id="1579"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВерсия" id="1582">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Версия</v8:content>
 						</v8:item>
 					</Title>
-					<ContextMenu name="ВерсияКонфигурацииNCКонтекстноеМеню" id="1419"/>
-					<ExtendedTooltip name="ВерсияКонфигурацииNCРасширеннаяПодсказка" id="1420"/>
-				</LabelField>
-				<Button name="ФормаИнформацияОВерсии" id="1421">
-					<Type>UsualButton</Type>
-					<Representation>Picture</Representation>
-					<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
-					<Picture>
-						<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="1583"/>
+					<ChildItems>
+						<LabelField name="ВерсияКонфигурацииNC" id="1418">
+							<DataPath>ВерсияКонфигурацииNC</DataPath>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Версия</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ВерсияКонфигурацииNCКонтекстноеМеню" id="1419"/>
+							<ExtendedTooltip name="ВерсияКонфигурацииNCРасширеннаяПодсказка" id="1420"/>
+						</LabelField>
+						<Button name="ФормаИнформацияОВерсии" id="1421">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация о версии</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаИнформацияОВерсииРасширеннаяПодсказка" id="1422"/>
+						</Button>
+						<Button name="ФормаПроверкаПодключения" id="1427">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Подключение16</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаТелефон" id="1584">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Информация о версии</v8:content>
+							<v8:content>Телефон</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="ФормаИнформацияОВерсииРасширеннаяПодсказка" id="1422"/>
-				</Button>
-				<Button name="ФормаПроверкаПодключения" id="1427">
-					<Type>UsualButton</Type>
-					<Representation>Picture</Representation>
-					<CommandName>Form.Command.ПроверитьПодключение</CommandName>
-					<Picture>
-						<xr:Ref>CommonPicture.NC_Подключение16</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<Title>
+					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Проверка подключения</v8:content>
+							<v8:content>Группа телефон</v8:content>
 						</v8:item>
-					</Title>
-					<ExtendedTooltip name="ФормаПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
-				</Button>
-				<LabelDecoration name="Разделитель1" id="1566">
-					<ContextMenu name="Разделитель1КонтекстноеМеню" id="1567"/>
-					<ExtendedTooltip name="Разделитель1РасширеннаяПодсказка" id="1568"/>
-				</LabelDecoration>
-				<LabelDecoration name="Разделитель2" id="1569">
-					<ContextMenu name="Разделитель2КонтекстноеМеню" id="1570"/>
-					<ExtendedTooltip name="Разделитель2РасширеннаяПодсказка" id="1571"/>
-				</LabelDecoration>
-				<LabelDecoration name="Разделитель3" id="1572">
-					<ContextMenu name="Разделитель3КонтекстноеМеню" id="1573"/>
-					<ExtendedTooltip name="Разделитель3РасширеннаяПодсказка" id="1574"/>
-				</LabelDecoration>
-				<LabelField name="Телефон" id="1563">
-					<DataPath>Телефон</DataPath>
-					<Enabled>false</Enabled>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="ТелефонКонтекстноеМеню" id="1564"/>
-					<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="1565"/>
-				</LabelField>
+					</ToolTip>
+					<Behavior>Usual</Behavior>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТелефонРасширеннаяПодсказка" id="1585"/>
+					<ChildItems>
+						<LabelField name="Телефон" id="1563">
+							<DataPath>Телефон</DataPath>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ТелефонКонтекстноеМеню" id="1564"/>
+							<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="1565"/>
+						</LabelField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -7577,6 +7640,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="НомерДО" id="94">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер ДО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -8767,6 +8845,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УправлениеОстатками</Action>
+		</Command>
+		<Command name="ОткрытьДО" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьДО</Action>
 		</Command>
 	</Commands>
 </Form>

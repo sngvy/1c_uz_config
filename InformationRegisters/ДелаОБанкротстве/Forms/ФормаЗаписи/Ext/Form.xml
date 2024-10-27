@@ -1,20 +1,38 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ОткрытьДело" id="25">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОткрытьДело</CommandName>
+				<Picture>
+					<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<ExtendedTooltip name="ОткрытьДелоРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="Должник" id="1">
-			<DataPath>Запись.Должник</DataPath>
-			<ContextMenu name="ДолжникКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="ДолжникРасширеннаяПодсказка" id="3"/>
-		</InputField>
 		<InputField name="ДатаПроверки" id="4">
 			<DataPath>Запись.ДатаПроверки</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="ДатаПроверкиКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ДатаПроверкиРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Должник" id="1">
+			<DataPath>Запись.Должник</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ДолжникКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДолжникРасширеннаяПодсказка" id="3"/>
 		</InputField>
 		<UsualGroup name="ГруппаДело" id="27">
 			<Title>
@@ -31,48 +49,44 @@
 			</ToolTip>
 			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаДелоРасширеннаяПодсказка" id="28"/>
 			<ChildItems>
 				<InputField name="Дело" id="7">
 					<DataPath>Запись.Дело</DataPath>
+					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="ДелоКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="ДелоРасширеннаяПодсказка" id="9"/>
 				</InputField>
-				<Button name="ОткрытьДело" id="25">
-					<Type>UsualButton</Type>
-					<Visible>false</Visible>
-					<Representation>PictureAndText</Representation>
-					<CommandName>Form.Command.ОткрытьДело</CommandName>
-					<Picture>
-						<xr:Ref>CommonPicture.NC_ПроверкаНаБанкротство</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<ExtendedTooltip name="ОткрытьДелоРасширеннаяПодсказка" id="26"/>
-				</Button>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Адрес" id="10">
 			<DataPath>Запись.Адрес</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="АдресКонтекстноеМеню" id="11"/>
 			<ExtendedTooltip name="АдресРасширеннаяПодсказка" id="12"/>
 		</InputField>
 		<InputField name="ИНН" id="13">
 			<DataPath>Запись.ИНН</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="ИННКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ИННРасширеннаяПодсказка" id="15"/>
 		</InputField>
 		<InputField name="СНИЛС" id="16">
 			<DataPath>Запись.СНИЛС</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="СНИЛСКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="СНИЛСРасширеннаяПодсказка" id="18"/>
 		</InputField>
 		<InputField name="Управляющий" id="19">
 			<DataPath>Запись.Управляющий</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="УправляющийКонтекстноеМеню" id="20"/>
 			<ExtendedTooltip name="УправляющийРасширеннаяПодсказка" id="21"/>
 		</InputField>
 		<InputField name="Стадия" id="22">
 			<DataPath>Запись.Стадия</DataPath>
+			<ReadOnly>true</ReadOnly>
 			<ContextMenu name="СтадияКонтекстноеМеню" id="23"/>
 			<ExtendedTooltip name="СтадияРасширеннаяПодсказка" id="24"/>
 		</InputField>

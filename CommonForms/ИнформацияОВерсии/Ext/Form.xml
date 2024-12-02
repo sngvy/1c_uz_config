@@ -45,7 +45,10 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 4.10.27.4 от 28.11.2024&lt;/&gt;&lt;/&gt;</v8:content>
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 4.10.27.5 от 03.12.2024&lt;/&gt;&lt;/&gt;
+&lt;font Arial&gt;&lt;/&gt;
+&lt;i&gt;Версия модуля интеграции с Федресурсом: 4.11.29&lt;/&gt;
+&lt;i&gt;Версия модуля интеграции с ФССП: 4.12.3&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -54,103 +57,87 @@
 				</LabelDecoration>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаСлужебная" id="27">
+		<Pages name="ГруппаСлужебнаяСтраницы" id="29">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа служебная</v8:content>
+					<v8:content>Группа служебная страницы</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа служебная</v8:content>
+					<v8:content>Группа служебная страницы</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="28"/>
+			<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСлужебнаяСтраницыРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
-				<Pages name="ГруппаСлужебнаяСтраницы" id="29">
+				<Page name="ГруппаИсправления" id="31">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа служебная страницы</v8:content>
+							<v8:content>Исправления</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа служебная страницы</v8:content>
+							<v8:content>Группа исправления</v8:content>
 						</v8:item>
 					</ToolTip>
-					<PagesRepresentation>TabsOnTop</PagesRepresentation>
-					<ExtendedTooltip name="ГруппаСлужебнаяСтраницыРасширеннаяПодсказка" id="30"/>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="32"/>
 					<ChildItems>
-						<Page name="ГруппаИсправления" id="31">
-							<Title>
+						<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Исправления</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа исправления</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Group>HorizontalIfPossible</Group>
-							<ExtendedTooltip name="ГруппаИсправленияРасширеннаяПодсказка" id="32"/>
-							<ChildItems>
-								<LabelDecoration name="ИнформацияОВерсииИсправления" id="14">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>● Исправлена ошибка разработчиков БИТ.АТС, при которой произвольно запускались задачи автообзвона по уже удаленным спискам
-
-● Исправлена ошибка, при которой в журнале банкротств могла не открываться информация о деле
+									<v8:content>● Исправлена ошибка разработчиков БИТ.АТС, при которой произвольно запускались задачи автообзвона по уже удаленным спискам
 
 ● Исправлены ошибки при разборе информации с Федресурса, улучшено поведение модуля проверки на банкротство
 
-● Повышена стабильность работы фоновых заданий</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
-									<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
-								</LabelDecoration>
-							</ChildItems>
-						</Page>
-						<Page name="ГруппаНовое" id="17">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Новое</v8:content>
+● Исправлена ошибка, при которой в журнале банкротств могла не открываться информация о деле
+
+● Повышена стабильность работы фоновых заданий
+
+● Обновлен модуль интеграции с ФССП</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
+							<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="ИнформацияОВерсииИсправленияРасширеннаяПодсказка" id="16"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНовое" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Новое</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа новое</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа новое</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.AppearanceExclamationMarkIcon</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Group>HorizontalIfPossible</Group>
-							<ExtendedTooltip name="ГруппаНовоеРасширеннаяПодсказка" id="18"/>
-							<ChildItems>
-								<LabelDecoration name="ИнформацияОВерсииНовое" id="19">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>● Добавлена запись даты отправки ДО в архив по банкротству в реквизит "Дата закрытия в агентстве"
+									<v8:content>● Добавлена запись даты отправки ДО в архив по банкротству в реквизит "Дата закрытия в агентстве"
 
 ● Добавлена поддержка проверки на банкротство по старой фамилии, если в карточке должника указана новая
 
@@ -163,48 +150,46 @@
 ● Добавлен выбор способа отправки документов при создании запроса документов
 
 ● Добавлена возможность быстро зафиксировать отправку документа на номер в форме ДО (Документы → Создать мероприятие отправки на номер)</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
-									<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
-								</LabelDecoration>
-							</ChildItems>
-						</Page>
-						<Page name="ГруппаИзменения" id="33">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Изменения</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
+							<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ИнформацияОВерсииНовоеРасширеннаяПодсказка" id="21"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИзменения" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изменения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа изменения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="34"/>
+					<ChildItems>
+						<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
+							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группа изменения</v8:content>
+									<v8:content>● В форме мероприятия добавлено отображение результатов проверки должника по ФССП и Федресурсу</v8:content>
 								</v8:item>
-							</ToolTip>
-							<Picture>
-								<xr:Ref>StdPicture.ListViewModeList</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="34"/>
-							<ChildItems>
-								<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
-									<Title formatted="false">
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>● В форме мероприятия добавлено отображение результатов проверки должника по ФССП и Федресурсу</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
-									<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
-								</LabelDecoration>
-							</ChildItems>
-						</Page>
+							</Title>
+							<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
 					</ChildItems>
-				</Pages>
+				</Page>
 			</ChildItems>
-		</UsualGroup>
+		</Pages>
 		<LabelDecoration name="ИнформацияОВерсииДополнительнаяИнформация" id="35">
 			<Title formatted="true"/>
 			<ContextMenu name="ИнформацияОВерсииДополнительнаяИнформацияКонтекстноеМеню" id="36"/>

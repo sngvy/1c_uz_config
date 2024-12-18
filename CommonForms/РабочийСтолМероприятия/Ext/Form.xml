@@ -5000,26 +5000,26 @@
 				</v8:item>
 			</ToolTip>
 			<Behavior>Usual</Behavior>
+			<Representation>StrongSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1424"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаПоискДО" id="1580">
+				<UsualGroup name="ГруппаНавигация" id="1580">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Поиск ДО</v8:content>
+							<v8:content>Навигация</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа поиск ДО</v8:content>
+							<v8:content>Группа навигация</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Behavior>Usual</Behavior>
-					<Representation>StrongSeparation</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПоискДОРасширеннаяПодсказка" id="1581"/>
+					<ExtendedTooltip name="ГруппаНавигацияРасширеннаяПодсказка" id="1581"/>
 					<ChildItems>
 						<InputField name="НомерДО" id="1575">
 							<DataPath>НомерДО</DataPath>
@@ -5037,6 +5037,38 @@
 								<xr:LoadTransparent>true</xr:LoadTransparent>
 							</Picture>
 							<ExtendedTooltip name="ОткрытьДОРасширеннаяПодсказка" id="1579"/>
+						</Button>
+						<Button name="ФормаИнформацияОВерсии" id="1421">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Показать список изменений</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаИнформацияОВерсииРасширеннаяПодсказка" id="1422"/>
+						</Button>
+						<Button name="ФормаПроверкаПодключения" id="1427">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<CommandName>Form.Command.ПроверитьПодключение</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Подключение16</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проверка подключения</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ФормаПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
 						</Button>
 					</ChildItems>
 				</UsualGroup>
@@ -5067,41 +5099,10 @@
 									<v8:content>Версия</v8:content>
 								</v8:item>
 							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="ВерсияКонфигурацииNCКонтекстноеМеню" id="1419"/>
 							<ExtendedTooltip name="ВерсияКонфигурацииNCРасширеннаяПодсказка" id="1420"/>
 						</LabelField>
-						<Button name="ФормаИнформацияОВерсии" id="1421">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Информация о версии</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ФормаИнформацияОВерсииРасширеннаяПодсказка" id="1422"/>
-						</Button>
-						<Button name="ФормаПроверкаПодключения" id="1427">
-							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<CommandName>Form.Command.ПроверитьПодключение</CommandName>
-							<Picture>
-								<xr:Ref>CommonPicture.NC_Подключение16</xr:Ref>
-								<xr:LoadTransparent>true</xr:LoadTransparent>
-							</Picture>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Проверка подключения</v8:content>
-								</v8:item>
-							</Title>
-							<ExtendedTooltip name="ФормаПроверкаПодключенияРасширеннаяПодсказка" id="1428"/>
-						</Button>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="ГруппаТелефон" id="1584">

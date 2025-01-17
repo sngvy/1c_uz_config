@@ -43,7 +43,7 @@
 	Соединение = Новый HTTPСоединение("suggestions.dadata.ru", 443,,,,, SSL);
 	
 	Заголовки = Новый Соответствие;
-	Заголовки.Вставить("Authorization", "Token " + "0209132e40a4178b46e5449713418860f53d7553");
+	Заголовки.Вставить("Authorization", "Token " + "4c4ac34735a17fe1d156b907b39fcfb7ac22b705");
 	Заголовки.Вставить("Content-Type", "application/json");
 	Заголовки.Вставить("Accept", "application/json");
 	
@@ -83,7 +83,7 @@
 	Соединение = Новый HTTPСоединение("suggestions.dadata.ru", 443,,,,, SSL);
 	
 	Заголовки = Новый Соответствие;
-	Заголовки.Вставить("Authorization", "Token " + "0209132e40a4178b46e5449713418860f53d7553");
+	Заголовки.Вставить("Authorization", "Token " + "e41d061e2840f553cbf229111610ce768f0e0ac6");
 	// Заголовки.Вставить("Authorization", "Token " + "4c4ac34735a17fe1d156b907b39fcfb7ac22b705"); // Резервный токен
 	// Заголовки.Вставить("Authorization", "Token " + "e41d061e2840f553cbf229111610ce768f0e0ac6"); // Резервный токен
 	Заголовки.Вставить("Content-Type", "application/json");

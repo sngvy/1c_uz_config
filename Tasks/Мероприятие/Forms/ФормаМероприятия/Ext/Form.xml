@@ -1041,43 +1041,6 @@
 							</Title>
 							<ExtendedTooltip name="ОтправленныеСМСРасширеннаяПодсказка" id="385"/>
 						</Button>
-						<UsualGroup name="РезультатыРозыска" id="498">
-							<Enabled>false</Enabled>
-							<ReadOnly>true</ReadOnly>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Результаты розыска</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Результаты розыска</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
-							<ExtendedTooltip name="РезультатыРозыскаРасширеннаяПодсказка" id="499"/>
-							<ChildItems>
-								<CheckBoxField name="ЕстьИП" id="492">
-									<DataPath>ЕстьИП</DataPath>
-									<Enabled>false</Enabled>
-									<ReadOnly>true</ReadOnly>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ЕстьИПКонтекстноеМеню" id="493"/>
-									<ExtendedTooltip name="ЕстьИПРасширеннаяПодсказка" id="494"/>
-								</CheckBoxField>
-								<CheckBoxField name="ЕстьДелаОБанкротстве" id="495">
-									<DataPath>ЕстьДелаОБанкротстве</DataPath>
-									<Enabled>false</Enabled>
-									<ReadOnly>true</ReadOnly>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ЕстьДелаОБанкротствеКонтекстноеМеню" id="496"/>
-									<ExtendedTooltip name="ЕстьДелаОБанкротствеРасширеннаяПодсказка" id="497"/>
-								</CheckBoxField>
-							</ChildItems>
-						</UsualGroup>
 						<UsualGroup name="РозыскДолжника" id="487">
 							<Title>
 								<v8:item>
@@ -1149,6 +1112,40 @@
 									</Title>
 									<ExtendedTooltip name="ОпределитьРегионИОператораРасширеннаяПодсказка" id="479"/>
 								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="РезультатыРозыска" id="498">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Результаты розыска</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Результаты розыска</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ExtendedTooltip name="РезультатыРозыскаРасширеннаяПодсказка" id="499"/>
+							<ChildItems>
+								<CheckBoxField name="ЕстьИП" id="492">
+									<DataPath>ЕстьИП</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьИПКонтекстноеМеню" id="493"/>
+									<ExtendedTooltip name="ЕстьИПРасширеннаяПодсказка" id="494"/>
+								</CheckBoxField>
+								<CheckBoxField name="ЕстьДелаОБанкротстве" id="495">
+									<DataPath>ЕстьДелаОБанкротстве</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЕстьДелаОБанкротствеКонтекстноеМеню" id="496"/>
+									<ExtendedTooltip name="ЕстьДелаОБанкротствеРасширеннаяПодсказка" id="497"/>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>

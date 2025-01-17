@@ -34,7 +34,7 @@
 Функция ping(IPАдрес)
 	Shell = Новый COMОбъект("WScript.Shell");
 	WSHShell = Shell.Exec("ping.exe -n 1 " + IPАдрес);
-	РезультатПинга = (WSHShell.StdOut.ReadAll());
+	РезультатПинга = WSHShell.StdOut.ReadAll();
 	МассивСтрок = СтрРазделить(OEM2ANSI(РезультатПинга), " ");
 	Возврат ПолучитьСтрокуТолькоЦифры(МассивСтрок.Получить(13));
 КонецФункции

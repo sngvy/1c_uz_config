@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
@@ -125,6 +125,11 @@
 			<ContextMenu name="РежимНеБеспокоитьКонтекстноеМеню" id="130"/>
 			<ExtendedTooltip name="РежимНеБеспокоитьРасширеннаяПодсказка" id="170"/>
 		</CheckBoxField>
+		<InputField name="СерверЛицензийВерсия" id="215">
+			<DataPath>Запись.СерверЛицензийВерсия</DataPath>
+			<ContextMenu name="СерверЛицензийВерсияКонтекстноеМеню" id="216"/>
+			<ExtendedTooltip name="СерверЛицензийВерсияРасширеннаяПодсказка" id="217"/>
+		</InputField>
 		<InputField name="СерверЛицензийАдрес" id="31">
 			<DataPath>Запись.СерверЛицензийАдрес</DataPath>
 			<ContextMenu name="СерверЛицензийАдресКонтекстноеМеню" id="32"/>
@@ -141,6 +146,11 @@
 			<ContextMenu name="СерверЛицензийНеИспользоватьПроксиКонтекстноеМеню" id="128"/>
 			<ExtendedTooltip name="СерверЛицензийНеИспользоватьПроксиРасширеннаяПодсказка" id="173"/>
 		</CheckBoxField>
+		<InputField name="СерверЛицензийCID" id="218">
+			<DataPath>Запись.СерверЛицензийCID</DataPath>
+			<ContextMenu name="СерверЛицензийCIDКонтекстноеМеню" id="219"/>
+			<ExtendedTooltip name="СерверЛицензийCIDРасширеннаяПодсказка" id="220"/>
+		</InputField>
 		<CheckBoxField name="СоздаватьСобытиеПриВходящемЗвонке" id="35">
 			<DataPath>Запись.СоздаватьСобытиеПриВходящемЗвонке</DataPath>
 			<CheckBoxType>Auto</CheckBoxType>

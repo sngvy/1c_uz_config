@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаИзмененияТитульнойЧастиКИ" id="94">
@@ -51,6 +51,7 @@
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
 			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
 				<Autofill>false</Autofill>
@@ -147,6 +148,11 @@
 					<ContextMenu name="ДееспособностьКонтекстноеМеню" id="47"/>
 					<ExtendedTooltip name="ДееспособностьРасширеннаяПодсказка" id="48"/>
 				</LabelField>
+				<LabelField name="ВнесудебноеБанкротство" id="111">
+					<DataPath>Список.ВнесудебноеБанкротство</DataPath>
+					<ContextMenu name="ВнесудебноеБанкротствоКонтекстноеМеню" id="112"/>
+					<ExtendedTooltip name="ВнесудебноеБанкротствоРасширеннаяПодсказка" id="113"/>
+				</LabelField>
 				<LabelField name="Иное" id="49">
 					<DataPath>Список.Иное</DataPath>
 					<DefaultItem>true</DefaultItem>
@@ -236,6 +242,26 @@
 					<DefaultItem>true</DefaultItem>
 					<ContextMenu name="ИНН_ИПКонтекстноеМеню" id="92"/>
 					<ExtendedTooltip name="ИНН_ИПРасширеннаяПодсказка" id="93"/>
+				</LabelField>
+				<LabelField name="ДатаРегистрацииПоДокументу" id="102">
+					<DataPath>Список.ДатаРегистрацииПоДокументу</DataPath>
+					<ContextMenu name="ДатаРегистрацииПоДокументуКонтекстноеМеню" id="103"/>
+					<ExtendedTooltip name="ДатаРегистрацииПоДокументуРасширеннаяПодсказка" id="104"/>
+				</LabelField>
+				<LabelField name="НаименованиеРегистрирующегоОргана" id="105">
+					<DataPath>Список.НаименованиеРегистрирующегоОргана</DataPath>
+					<ContextMenu name="НаименованиеРегистрирующегоОрганаКонтекстноеМеню" id="106"/>
+					<ExtendedTooltip name="НаименованиеРегистрирующегоОрганаРасширеннаяПодсказка" id="107"/>
+				</LabelField>
+				<LabelField name="КодПодразделенияРегистрацииРФ" id="108">
+					<DataPath>Список.КодПодразделенияРегистрацииРФ</DataPath>
+					<ContextMenu name="КодПодразделенияРегистрацииРФКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="КодПодразделенияРегистрацииРФРасширеннаяПодсказка" id="110"/>
+				</LabelField>
+				<LabelField name="СведенияОГражданствеФЛ" id="99">
+					<DataPath>Список.СведенияОГражданствеФЛ</DataPath>
+					<ContextMenu name="СведенияОГражданствеФЛКонтекстноеМеню" id="100"/>
+					<ExtendedTooltip name="СведенияОГражданствеФЛРасширеннаяПодсказка" id="101"/>
 				</LabelField>
 				<LabelField name="СпециальныйНалоговыйРежим" id="96">
 					<DataPath>Список.СпециальныйНалоговыйРежим</DataPath>

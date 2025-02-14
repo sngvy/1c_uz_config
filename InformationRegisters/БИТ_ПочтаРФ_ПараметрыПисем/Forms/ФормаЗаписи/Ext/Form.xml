@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
 		<InputField name="ТипПисьма" id="1">
 			<DataPath>Запись.ТипПисьма</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ТипПисьмаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ТипПисьмаРасширеннаяПодсказка" id="3"/>
 		</InputField>
 		<InputField name="ВидРПО" id="4">
 			<DataPath>Запись.ВидРПО</DataPath>
 			<ListChoiceMode>true</ListChoiceMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ChoiceList>
 				<xr:Item>
 					<xr:Presentation/>
@@ -230,6 +232,7 @@
 		<InputField name="КатегорияРПО" id="7">
 			<DataPath>Запись.КатегорияРПО</DataPath>
 			<ListChoiceMode>true</ListChoiceMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ChoiceList>
 				<xr:Item>
 					<xr:Presentation/>
@@ -319,6 +322,7 @@
 		<InputField name="ТипКонверта" id="10">
 			<DataPath>Запись.ТипКонверта</DataPath>
 			<ListChoiceMode>true</ListChoiceMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ChoiceList>
 				<xr:Item>
 					<xr:Presentation/>
@@ -394,6 +398,7 @@
 		</InputField>
 		<InputField name="ВесРПО" id="13">
 			<DataPath>Запись.ВесРПО</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ВесРПОКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ВесРПОРасширеннаяПодсказка" id="15"/>
 			<Events>
@@ -402,6 +407,7 @@
 		</InputField>
 		<InputField name="ОЦ" id="16">
 			<DataPath>Запись.ОЦ</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ОЦКонтекстноеМеню" id="17"/>
 			<ExtendedTooltip name="ОЦРасширеннаяПодсказка" id="18"/>
 		</InputField>

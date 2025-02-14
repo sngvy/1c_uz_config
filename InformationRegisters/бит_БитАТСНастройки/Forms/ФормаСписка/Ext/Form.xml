@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
@@ -29,6 +29,7 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
 			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
 				<Autofill>false</Autofill>
@@ -131,6 +132,11 @@
 					<ContextMenu name="СоздаватьСобытияПриВнутреннихЗвонкахКонтекстноеМеню" id="19"/>
 					<ExtendedTooltip name="СоздаватьСобытияПриВнутреннихЗвонкахРасширеннаяПодсказка" id="76"/>
 				</CheckBoxField>
+				<LabelField name="СерверЛицензийВерсия" id="95">
+					<DataPath>Список.СерверЛицензийВерсия</DataPath>
+					<ContextMenu name="СерверЛицензийВерсияКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="СерверЛицензийВерсияРасширеннаяПодсказка" id="97"/>
+				</LabelField>
 				<LabelField name="СерверЛицензийАдрес" id="24">
 					<DataPath>Список.СерверЛицензийАдрес</DataPath>
 					<ContextMenu name="СерверЛицензийАдресКонтекстноеМеню" id="25"/>
@@ -147,6 +153,11 @@
 					<ContextMenu name="СерверЛицензийНеИспользоватьПроксиКонтекстноеМеню" id="29"/>
 					<ExtendedTooltip name="СерверЛицензийНеИспользоватьПроксиРасширеннаяПодсказка" id="79"/>
 				</CheckBoxField>
+				<LabelField name="СерверЛицензийCID" id="98">
+					<DataPath>Список.СерверЛицензийCID</DataPath>
+					<ContextMenu name="СерверЛицензийCIDКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="СерверЛицензийCIDРасширеннаяПодсказка" id="100"/>
+				</LabelField>
 				<CheckBoxField name="АвтозапускПриСтартеСистемы" id="30">
 					<DataPath>Список.АвтозапускПриСтартеСистемы</DataPath>
 					<CheckBoxType>Auto</CheckBoxType>

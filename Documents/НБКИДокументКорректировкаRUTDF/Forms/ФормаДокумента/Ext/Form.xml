@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -155,6 +155,16 @@
 			<ContextMenu name="ИмяФайлаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ИмяФайлаРасширеннаяПодсказка" id="9"/>
 		</InputField>
+		<InputField name="ПутьКФайлу" id="437">
+			<DataPath>ПутьКФайлу</DataPath>
+			<OpenButton>true</OpenButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПутьКФайлуКонтекстноеМеню" id="438"/>
+			<ExtendedTooltip name="ПутьКФайлуРасширеннаяПодсказка" id="439"/>
+			<Events>
+				<Event name="Opening">ПутьКФайлуОткрытие</Event>
+			</Events>
+		</InputField>
 		<InputField name="Принято" id="124">
 			<DataPath>Объект.Принято</DataPath>
 			<ContextMenu name="ПринятоКонтекстноеМеню" id="125"/>
@@ -192,6 +202,16 @@
 			<ContextMenu name="КомментарийКонтекстноеМеню" id="171"/>
 			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="172"/>
 		</InputField>
+		<CheckBoxField name="СкорректироватьАдресаПолностью" id="426">
+			<DataPath>Объект.СкорректироватьАдресаПолностью</DataPath>
+			<ToolTipRepresentation>Button</ToolTipRepresentation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СкорректироватьАдресаПолностьюКонтекстноеМеню" id="427"/>
+			<ExtendedTooltip name="СкорректироватьАдресаПолностьюРасширеннаяПодсказка" id="428"/>
+			<Events>
+				<Event name="OnChange">СкорректироватьАдресаПолностьюПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
 		<Pages name="Страницы" id="16">
 			<Title>
 				<v8:item>
@@ -266,6 +286,16 @@
 										</Picture>
 										<ExtendedTooltip name="ЗаполнитьДействияИСобытияКорректировкиРасширеннаяПодсказка" id="386"/>
 									</Button>
+									<Button name="ПодобратьДатуПоследнегоПринятогоСобытия" id="435">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ПодобратьДатуПоследнегоПринятогоСобытия</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ИерархическийСписок</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ПодобратьДатуПоследнегоПринятогоСобытияРасширеннаяПодсказка" id="436"/>
+									</Button>
 								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="тчКорректировкаРасширеннаяПодсказка" id="339"/>
@@ -294,93 +324,210 @@
 								<ExtendedTooltip name="тчКорректировкаУправлениеПоискомРасширеннаяПодсказка" id="348"/>
 							</SearchControlAddition>
 							<ChildItems>
-								<LabelField name="тчКорректировкаНомерСтроки" id="349">
-									<DataPath>Объект.тчКорректировка.LineNumber</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаНомерСтрокиКонтекстноеМеню" id="350"/>
-									<ExtendedTooltip name="тчКорректировкаНомерСтрокиРасширеннаяПодсказка" id="351"/>
-								</LabelField>
-								<InputField name="тчКорректировкаОбъектУчета" id="352">
-									<DataPath>Объект.тчКорректировка.ОбъектУчета</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаОбъектУчетаКонтекстноеМеню" id="353"/>
-									<ExtendedTooltip name="тчКорректировкаОбъектУчетаРасширеннаяПодсказка" id="354"/>
-									<Events>
-										<Event name="OnChange">тчКорректировкаОбъектУчетаПриИзменении</Event>
-									</Events>
-								</InputField>
-								<InputField name="тчКорректировкаДолжник" id="355">
-									<DataPath>Объект.тчКорректировка.Должник</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаДолжникКонтекстноеМеню" id="356"/>
-									<ExtendedTooltip name="тчКорректировкаДолжникРасширеннаяПодсказка" id="357"/>
-								</InputField>
-								<InputField name="тчКорректировкаДействие" id="358">
-									<DataPath>Объект.тчКорректировка.Действие</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаДействиеКонтекстноеМеню" id="359"/>
-									<ExtendedTooltip name="тчКорректировкаДействиеРасширеннаяПодсказка" id="360"/>
-								</InputField>
-								<InputField name="тчКорректировкаСобытие" id="361">
-									<DataPath>Объект.тчКорректировка.Событие</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаСобытиеКонтекстноеМеню" id="362"/>
-									<ExtendedTooltip name="тчКорректировкаСобытиеРасширеннаяПодсказка" id="363"/>
-								</InputField>
-								<InputField name="тчКорректировкаЧастьКИ" id="364">
-									<DataPath>Объект.тчКорректировка.ЧастьКИ</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаЧастьКИКонтекстноеМеню" id="365"/>
-									<ExtendedTooltip name="тчКорректировкаЧастьКИРасширеннаяПодсказка" id="366"/>
-								</InputField>
-								<InputField name="тчКорректировкаОперация" id="367">
-									<DataPath>Объект.тчКорректировка.Операция</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаОперацияКонтекстноеМеню" id="368"/>
-									<ExtendedTooltip name="тчКорректировкаОперацияРасширеннаяПодсказка" id="369"/>
-								</InputField>
-								<InputField name="тчКорректировкаНомерБлока" id="379">
-									<DataPath>Объект.тчКорректировка.НомерБлока</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаНомерБлокаКонтекстноеМеню" id="380"/>
-									<ExtendedTooltip name="тчКорректировкаНомерБлокаРасширеннаяПодсказка" id="381"/>
-								</InputField>
-								<InputField name="тчКорректировкаПолеБлока" id="382">
-									<DataPath>Объект.тчКорректировка.ПолеБлока</DataPath>
+								<ColumnGroup name="тчКорректировкаГруппаСделкаСубъект" id="429">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Объекты учета</v8:content>
+										</v8:item>
+									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Для корректировки нескольких полей одного блока укажите их через знак ~
+											<v8:content>Объекты учета</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="тчКорректировкаГруппаСделкаСубъектРасширеннаяПодсказка" id="430"/>
+									<ChildItems>
+										<LabelField name="тчКорректировкаНомерСтроки" id="349">
+											<DataPath>Объект.тчКорректировка.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаНомерСтрокиКонтекстноеМеню" id="350"/>
+											<ExtendedTooltip name="тчКорректировкаНомерСтрокиРасширеннаяПодсказка" id="351"/>
+										</LabelField>
+										<InputField name="тчКорректировкаОбъектУчета" id="352">
+											<DataPath>Объект.тчКорректировка.ОбъектУчета</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаОбъектУчетаКонтекстноеМеню" id="353"/>
+											<ExtendedTooltip name="тчКорректировкаОбъектУчетаРасширеннаяПодсказка" id="354"/>
+											<Events>
+												<Event name="OnChange">тчКорректировкаОбъектУчетаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="тчКорректировкаДолжник" id="355">
+											<DataPath>Объект.тчКорректировка.Должник</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаДолжникКонтекстноеМеню" id="356"/>
+											<ExtendedTooltip name="тчКорректировкаДолжникРасширеннаяПодсказка" id="357"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="тчКорректировкаГруппаДействияКорректировки" id="431">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действия корректировки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Действия корректировки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="тчКорректировкаГруппаДействияКорректировкиРасширеннаяПодсказка" id="432"/>
+									<ChildItems>
+										<InputField name="тчКорректировкаДействие" id="358">
+											<DataPath>Объект.тчКорректировка.Действие</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаДействиеКонтекстноеМеню" id="359"/>
+											<ExtendedTooltip name="тчКорректировкаДействиеРасширеннаяПодсказка" id="360"/>
+										</InputField>
+										<InputField name="тчКорректировкаСобытие" id="361">
+											<DataPath>Объект.тчКорректировка.Событие</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаСобытиеКонтекстноеМеню" id="362"/>
+											<ExtendedTooltip name="тчКорректировкаСобытиеРасширеннаяПодсказка" id="363"/>
+										</InputField>
+										<InputField name="тчКорректировкаЧастьКИ" id="364">
+											<DataPath>Объект.тчКорректировка.ЧастьКИ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаЧастьКИКонтекстноеМеню" id="365"/>
+											<ExtendedTooltip name="тчКорректировкаЧастьКИРасширеннаяПодсказка" id="366"/>
+										</InputField>
+										<InputField name="тчКорректировкаОперация" id="367">
+											<DataPath>Объект.тчКорректировка.Операция</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаОперацияКонтекстноеМеню" id="368"/>
+											<ExtendedTooltip name="тчКорректировкаОперацияРасширеннаяПодсказка" id="369"/>
+											<Events>
+												<Event name="OnChange">тчКорректировкаОперацияПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="тчКорректировкаБлокиИПоля" id="433">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Блоки и поля</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Блоки и поля</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="тчКорректировкаБлокиИПоляРасширеннаяПодсказка" id="434"/>
+									<ChildItems>
+										<InputField name="тчКорректировкаНомерБлока" id="379">
+											<DataPath>Объект.тчКорректировка.НомерБлока</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаНомерБлокаКонтекстноеМеню" id="380"/>
+											<ExtendedTooltip name="тчКорректировкаНомерБлокаРасширеннаяПодсказка" id="381"/>
+											<Events>
+												<Event name="OnChange">тчКорректировкаНомерБлокаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="тчКорректировкаПолеБлока" id="382">
+											<DataPath>Объект.тчКорректировка.ПолеБлока</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для корректировки нескольких полей одного блока укажите их через знак ~
 пример: 1~3~6</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаПолеБлокаКонтекстноеМеню" id="383"/>
-									<ExtendedTooltip name="тчКорректировкаПолеБлокаРасширеннаяПодсказка" id="384"/>
-								</InputField>
-								<InputField name="тчКорректировкаСтрокаНаКорректировку" id="370">
-									<DataPath>Объект.тчКорректировка.СтрокаНаКорректировку</DataPath>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Для корректировки значений нескольких полей одного блока укажите значения их через знак ~
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowTop</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаПолеБлокаКонтекстноеМеню" id="383"/>
+											<ExtendedTooltip name="тчКорректировкаПолеБлокаРасширеннаяПодсказка" id="384"/>
+											<Events>
+												<Event name="OnChange">тчКорректировкаПолеБлокаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="тчКорректировкаСтрокаНаКорректировку" id="370">
+											<DataPath>Объект.тчКорректировка.СтрокаНаКорректировку</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для корректировки значений нескольких полей одного блока укажите значения их через знак ~
 пример: Значение~~Значение3. Важно: сколько полей указано в колонке Поле блока, столько и значений должно быть указано. Остальные значения проигнорируются/ = пустое</v8:content>
-										</v8:item>
-									</ToolTip>
-									<ToolTipRepresentation>Button</ToolTipRepresentation>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="тчКорректировкаСтрокаНаКорректировкуКонтекстноеМеню" id="371"/>
-									<ExtendedTooltip name="тчКорректировкаСтрокаНаКорректировкуРасширеннаяПодсказка" id="372"/>
-								</InputField>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="тчКорректировкаСтрокаНаКорректировкуКонтекстноеМеню" id="371"/>
+											<ExtendedTooltip name="тчКорректировкаСтрокаНаКорректировкуРасширеннаяПодсказка" id="372"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 								<InputField name="тчКорректировкаПараметрStartDate" id="414">
 									<DataPath>Объект.тчКорректировка.ПараметрStartDate</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="тчКорректировкаПараметрStartDateКонтекстноеМеню" id="415"/>
 									<ExtendedTooltip name="тчКорректировкаПараметрStartDateРасширеннаяПодсказка" id="416"/>
 								</InputField>
+								<InputField name="тчКорректировкаПричина" id="417">
+									<DataPath>Объект.тчКорректировка.Причина</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="тчКорректировкаПричинаКонтекстноеМеню" id="418"/>
+									<ExtendedTooltip name="тчКорректировкаПричинаРасширеннаяПодсказка" id="419"/>
+									<Events>
+										<Event name="OnChange">тчКорректировкаПричинаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="тчКорректировкаДатаСобытияСодержавшегоКорректируемыйБлок" id="420">
+									<DataPath>Объект.тчКорректировка.ДатаСобытияСодержавшегоКорректируемыйБлок</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="тчКорректировкаДатаСобытияСодержавшегоКорректируемыйБлокКонтекстноеМеню" id="421"/>
+									<ExtendedTooltip name="тчКорректировкаДатаСобытияСодержавшегоКорректируемыйБлокРасширеннаяПодсказка" id="422"/>
+									<Events>
+										<Event name="OnChange">тчКорректировкаДатаСобытияСодержавшегоКорректируемыйБлокПриИзменении</Event>
+									</Events>
+								</InputField>
 							</ChildItems>
 						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПроверка" id="440">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка отчета перед отправкой</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа проверка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПроверкаРасширеннаяПодсказка" id="441"/>
+					<ChildItems>
+						<CheckBoxField name="ВыполнятьНаСервере" id="447">
+							<DataPath>ВыполнятьНаСервере</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ВыполнятьНаСервереКонтекстноеМеню" id="448"/>
+							<ExtendedTooltip name="ВыполнятьНаСервереРасширеннаяПодсказка" id="449"/>
+						</CheckBoxField>
+						<Button name="ОбработатьДокумент" id="445">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ОбработатьДокумент</CommandName>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<ExtendedTooltip name="ОбработатьДокументРасширеннаяПодсказка" id="446"/>
+						</Button>
+						<InputField name="Ошибки" id="442">
+							<DataPath>Ошибки</DataPath>
+							<MultiLine>true</MultiLine>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ОшибкиКонтекстноеМеню" id="443"/>
+							<ExtendedTooltip name="ОшибкиРасширеннаяПодсказка" id="444"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="REJECT" id="119">
@@ -498,12 +645,14 @@
 										<InputField name="СтруктураВыгрузкиОбъект" id="403">
 											<DataPath>Объект.СтруктураВыгрузки.ОбъектУчета</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 											<ContextMenu name="СтруктураВыгрузкиОбъектКонтекстноеМеню" id="404"/>
 											<ExtendedTooltip name="СтруктураВыгрузкиОбъектРасширеннаяПодсказка" id="405"/>
 										</InputField>
 										<InputField name="СтруктураВыгрузкиЗаголовокGroupHeader" id="406">
 											<DataPath>Объект.СтруктураВыгрузки.ЗаголовокGroupHeader</DataPath>
 											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 											<ContextMenu name="СтруктураВыгрузкиЗаголовокGroupHeaderКонтекстноеМеню" id="407"/>
 											<ExtendedTooltip name="СтруктураВыгрузкиЗаголовокGroupHeaderРасширеннаяПодсказка" id="408"/>
 										</InputField>
@@ -610,6 +759,47 @@
 			<UseAlways>
 				<Field>Объект.RegisterRecords</Field>
 			</UseAlways>
+		</Attribute>
+		<Attribute name="ПутьКФайлу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Ошибки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыполнятьНаСервере" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -834,6 +1024,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьДействияИСобытияКорректировки</Action>
+		</Command>
+		<Command name="ПодобратьДатуПоследнегоПринятогоСобытия" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить Start Date</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подобрать дату последнего принятого события</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодобратьДатуПоследнегоПринятогоСобытия</Action>
+		</Command>
+		<Command name="ОбработатьДокумент" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С помощью специальной утилиты проверяет файл на соответствие XSD-схемам ЦБ.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьПроверку</Action>
 		</Command>
 	</Commands>
 </Form>

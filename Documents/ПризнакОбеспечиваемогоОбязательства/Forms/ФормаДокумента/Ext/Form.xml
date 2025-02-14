@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="СделкаОбеспечение" id="7">
+			<DataPath>Объект.СделкаОбеспечение</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СделкаОбеспечениеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СделкаОбеспечениеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="СделкаОбеспечиваемоеОбязательство" id="10">
+			<DataPath>Объект.СделкаОбеспечиваемоеОбязательство</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СделкаОбеспечиваемоеОбязательствоКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СделкаОбеспечиваемоеОбязательствоРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="УИДОсновнойСделки" id="25">
+			<DataPath>Объект.УИДОсновнойСделки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="УИДОсновнойСделкиКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="УИДОсновнойСделкиРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="СуммаОбеспечиваемогоОбязательства" id="13">
+			<DataPath>Объект.СуммаОбеспечиваемогоОбязательства</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СуммаОбеспечиваемогоОбязательстваКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СуммаОбеспечиваемогоОбязательстваРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ВалютаОбеспечиваемогоОбязательства" id="16">
+			<DataPath>Объект.ВалютаОбеспечиваемогоОбязательства</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВалютаОбеспечиваемогоОбязательстваКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ВалютаОбеспечиваемогоОбязательстваРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="КодТипаОбеспечиваемогоОбязательства" id="19">
+			<DataPath>Объект.КодТипаОбеспечиваемогоОбязательства</DataPath>
+			<DropListButton>true</DropListButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Договор Займа (Кредита)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Договор Лизинга</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Смешнный договор</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">5</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Независимая гарантия по займу (кредиту)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">6</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Независимая гарантия по лизингу</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">7</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Иная независимая гарантия</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">8</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поручительство по займу (кредиту)</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">9</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поручительство по лизингу</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">10</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поручительство по независимой гарантии</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">11</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поручительство по поручительству</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">12</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Иное поручительство</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">13</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Иная сделка</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">99</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="КодТипаОбеспечиваемогоОбязательстваКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="КодТипаОбеспечиваемогоОбязательстваРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ДатаРасчета" id="22">
+			<DataPath>Объект.ДатаРасчета</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаРасчетаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДатаРасчетаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ЛимитОтветственности" id="28">
+			<DataPath>Объект.ЛимитОтветственности</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЛимитОтветственностиКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ЛимитОтветственностиРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПризнакОбеспечиваемогоОбязательства</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьИзСпискаПоручителей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из списка поручителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить из списка поручителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьИзСпискаПоручителей</Action>
+		</Command>
+		<Command name="ДобавитьВСписокПоручителей" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в список поручителей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в список поручителей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьВСписокПоручителей</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ФиксированиеПогашенийОбеспечительством.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

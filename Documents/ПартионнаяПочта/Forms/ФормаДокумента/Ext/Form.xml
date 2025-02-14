@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Customizable>false</Customizable>
 	<AutoTime>CurrentOrLast</AutoTime>
 	<UsePostingMode>Auto</UsePostingMode>
 	<RepostOnWrite>true</RepostOnWrite>
@@ -51,6 +52,52 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ГруппаАрхив" id="190">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Архив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа архив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаАрхивРасширеннаяПодсказка" id="191"/>
+			<ChildItems>
+				<Button name="ПереводПартииВАрхив" id="181">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ПереводПартииВАрхив</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceDownInclineArrowGray</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ПереводПартииВАрхивРасширеннаяПодсказка" id="182"/>
+				</Button>
+				<Button name="ВозвратПартииИзАрхива" id="183">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ВозвратПартииИзАрхива</CommandName>
+					<Picture>
+						<xr:Ref>StdPicture.AppearanceUpInclineArrowGreen</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ВозвратПартииИзАрхиваРасширеннаяПодсказка" id="184"/>
+				</Button>
+				<InputField name="ДатаПереносаВАрхив" id="185">
+					<DataPath>Объект.ДатаПереносаВАрхив</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<TextEdit>false</TextEdit>
+					<ContextMenu name="ДатаПереносаВАрхивКонтекстноеМеню" id="186"/>
+					<ExtendedTooltip name="ДатаПереносаВАрхивРасширеннаяПодсказка" id="187"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<InputField name="ДатаПартииЗаданная" id="174">
 			<DataPath>Объект.ДатаПартииЗаданная</DataPath>
 			<ContextMenu name="ДатаПартииЗаданнаяКонтекстноеМеню" id="175"/>
@@ -320,6 +367,7 @@
 			<ShowRoot>true</ShowRoot>
 			<AllowRootChoice>false</AllowRootChoice>
 			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 			<ContextMenu name="РС_СписокИсходящейКорреспонденцииКонтекстноеМеню" id="120"/>
 			<AutoCommandBar name="РС_СписокИсходящейКорреспонденцииКоманднаяПанель" id="121"/>
 			<ExtendedTooltip name="РС_СписокИсходящейКорреспонденцииРасширеннаяПодсказка" id="122"/>
@@ -550,6 +598,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьВсеДокументыПартии</Action>
+		</Command>
+		<Command name="ПереводПартииВАрхив" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевод партии в архив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевод партии в архив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереводПартииВАрхив</Action>
+		</Command>
+		<Command name="ВозвратПартииИзАрхива" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат партии из архива</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат партии из архива</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВозвратПартииИзАрхива</Action>
 		</Command>
 	</Commands>
 </Form>

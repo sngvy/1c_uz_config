@@ -133,7 +133,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>RU</v8:lang>
-							<v8:content>Отбор по ВЫПОЛНЕННОМУ мероприятию "[ТипМероприятия]" за период с [Дата1] по [Дата2]</v8:content>
+							<v8:content>Список ВЫПОЛНЕННЫХ мероприятий на текущую дату</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -145,7 +145,7 @@
 					<tl>
 						<v8:item>
 							<v8:lang>RU</v8:lang>
-							<v8:content>Список НЕВЫПОЛНЕННЫХ мероприятий на [Дата3]</v8:content>
+							<v8:content>Список НЕВЫПОЛНЕННЫХ мероприятий на текущую дату</v8:content>
 						</v8:item>
 					</tl>
 				</c>
@@ -517,7 +517,7 @@
 		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
 	</line>
 	<format>
-		<width>289</width>
+		<width>291</width>
 		<columnSizeChange>QuickChange</columnSizeChange>
 	</format>
 	<format>
@@ -548,8 +548,11 @@
 	</format>
 	<format>
 		<border>0</border>
+		<borderColor>style:ФайлЗанятыйТекущимПользователем</borderColor>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
+		<textColor>style:FormTextColor</textColor>
+		<backColor>#00EF6F</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Template</fillType>
 		<format/>
@@ -559,6 +562,7 @@
 		<border>0</border>
 		<horizontalAlignment>Center</horizontalAlignment>
 		<verticalAlignment>Center</verticalAlignment>
+		<backColor>style:ОшибкаПолнотекстовыйПоискФон</backColor>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Template</fillType>
 		<columnSizeChange>QuickChange</columnSizeChange>

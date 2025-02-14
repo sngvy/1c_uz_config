@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -589,7 +589,6 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Horizontal</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ChildItemsWidth>LeftNarrowest</ChildItemsWidth>
 			<ShowTitle>false</ShowTitle>
@@ -762,7 +761,8 @@
 									<EnableStartDrag>true</EnableStartDrag>
 									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>СписокДО</DataPath>
-									<RowPictureDataPath>СписокДО.DefaultPicture</RowPictureDataPath>
+									<RowPictureDataPath>~СписокДО.DefaultPicture</RowPictureDataPath>
+									<SearchStringLocation>CommandBar</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
 									<AutoRefresh>true</AutoRefresh>
@@ -778,6 +778,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="СписокДОКонтекстноеМеню" id="130"/>
 									<AutoCommandBar name="СписокДОКоманднаяПанель" id="131"/>
 									<ExtendedTooltip name="СписокДОExtendedTooltip" id="225"/>
@@ -1008,6 +1009,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="СообщенияКонтекстноеМеню" id="336"/>
 									<AutoCommandBar name="СообщенияКоманднаяПанель" id="337"/>
 									<ExtendedTooltip name="СообщенияРасширеннаяПодсказка" id="338"/>
@@ -1132,6 +1134,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="Сообщения1КонтекстноеМеню" id="381"/>
 									<AutoCommandBar name="Сообщения1КоманднаяПанель" id="382"/>
 									<ExtendedTooltip name="Сообщения1РасширеннаяПодсказка" id="383"/>
@@ -1251,6 +1254,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="СписокВходящихКонтекстноеМеню" id="432"/>
 									<AutoCommandBar name="СписокВходящихКоманднаяПанель" id="433"/>
 									<ExtendedTooltip name="СписокВходящихРасширеннаяПодсказка" id="434"/>
@@ -1411,6 +1415,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="СписокИсходящихКонтекстноеМеню" id="501"/>
 									<AutoCommandBar name="СписокИсходящихКоманднаяПанель" id="502"/>
 									<ExtendedTooltip name="СписокИсходящихРасширеннаяПодсказка" id="503"/>
@@ -1551,7 +1556,6 @@
 									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>AlwaysHorizontal</Group>
-									<Behavior>Usual</Behavior>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ПредупреждениеБезопасностиРасширеннаяПодсказка1" id="598"/>
 									<ChildItems>
@@ -1598,7 +1602,6 @@
 									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>AlwaysHorizontal</Group>
-									<Behavior>Usual</Behavior>
 									<Collapsed>true</Collapsed>
 									<ControlRepresentation>Picture</ControlRepresentation>
 									<Representation>None</Representation>
@@ -1936,7 +1939,6 @@
 									</Title>
 									<HorizontalStretch>true</HorizontalStretch>
 									<Group>Vertical</Group>
-									<Behavior>Usual</Behavior>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПанельНавигацииСписокРасширеннаяПодсказка" id="1203"/>
@@ -2310,7 +2312,6 @@
 											</Title>
 											<HorizontalStretch>true</HorizontalStretch>
 											<Group>AlwaysHorizontal</Group>
-											<Behavior>Usual</Behavior>
 											<Representation>None</Representation>
 											<ChildItemsWidth>LeftNarrowest</ChildItemsWidth>
 											<ShowTitle>false</ShowTitle>
@@ -2325,7 +2326,6 @@
 													</Title>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Group>Vertical</Group>
-													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаПанельНавигацииExtendedTooltip" id="680"/>
@@ -2388,6 +2388,7 @@
 																			<ShowRoot>true</ShowRoot>
 																			<AllowRootChoice>false</AllowRootChoice>
 																			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+																			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 																			<ContextMenu name="КонтактыПанелиНавигацииКонтекстноеМеню" id="1077">
 																				<ChildItems>
 																					<Button name="КонтактыКонтекстноеМенюПредмет" id="1102">
@@ -2603,6 +2604,7 @@
 																			<ShowRoot>true</ShowRoot>
 																			<AllowRootChoice>false</AllowRootChoice>
 																			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+																			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 																			<ContextMenu name="ПредметыПанельНавигацииКонтекстноеМеню" id="743">
 																				<Autofill>false</Autofill>
 																				<ChildItems>
@@ -2825,6 +2827,7 @@
 																			<ShowRoot>true</ShowRoot>
 																			<AllowRootChoice>false</AllowRootChoice>
 																			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+																			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 																			<ContextMenu name="ЗакладкиКонтекстноеМеню" id="800">
 																				<Autofill>false</Autofill>
 																				<ChildItems>
@@ -3498,7 +3501,6 @@
 													</Title>
 													<HorizontalStretch>true</HorizontalStretch>
 													<Group>Vertical</Group>
-													<Behavior>Usual</Behavior>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаСписокExtendedTooltip" id="969"/>
@@ -3535,6 +3537,7 @@
 															<ShowRoot>true</ShowRoot>
 															<AllowRootChoice>false</AllowRootChoice>
 															<UpdateOnDataChange>Auto</UpdateOnDataChange>
+															<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 															<ContextMenu name="СписокКонтекстноеМеню" id="971">
 																<Autofill>false</Autofill>
 																<ChildItems>
@@ -3827,7 +3830,6 @@
 																				</v8:item>
 																			</Title>
 																			<Group>AlwaysHorizontal</Group>
-																			<Behavior>Usual</Behavior>
 																			<Representation>None</Representation>
 																			<ShowTitle>false</ShowTitle>
 																			<ExtendedTooltip name="ПредупреждениеБезопасностиРасширеннаяПодсказка" id="1061"/>
@@ -3928,7 +3930,7 @@
 									<InitialListView>Beginning</InitialListView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<DataPath>ПерспективныеДолжники</DataPath>
-									<RowPictureDataPath>ПерспективныеДолжники.DefaultPicture</RowPictureDataPath>
+									<RowPictureDataPath>~ПерспективныеДолжники.DefaultPicture</RowPictureDataPath>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
@@ -3945,6 +3947,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ПерспективныеДолжникиКонтекстноеМеню" id="1496"/>
 									<AutoCommandBar name="ПерспективныеДолжникиКоманднаяПанель" id="1497"/>
 									<ExtendedTooltip name="ПерспективныеДолжникиРасширеннаяПодсказка" id="1498"/>
@@ -4031,7 +4034,6 @@
 									<InitialListView>Beginning</InitialListView>
 									<EnableStartDrag>true</EnableStartDrag>
 									<DataPath>ПроблемныеДолжники</DataPath>
-									<RowPictureDataPath>ПроблемныеДолжники.DefaultPicture</RowPictureDataPath>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
@@ -4048,6 +4050,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ПроблемныеДолжникиКонтекстноеМеню" id="1529"/>
 									<AutoCommandBar name="ПроблемныеДолжникиКоманднаяПанель" id="1530"/>
 									<ExtendedTooltip name="ПроблемныеДолжникиРасширеннаяПодсказка" id="1531"/>
@@ -4152,6 +4155,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ОбещанияСегодняКонтекстноеМеню" id="1239"/>
 									<AutoCommandBar name="ОбещанияСегодняКоманднаяПанель" id="1240"/>
 									<ExtendedTooltip name="ОбещанияСегодняРасширеннаяПодсказка" id="1241"/>
@@ -4305,6 +4309,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ОбещанияМесяцКонтекстноеМеню" id="1269"/>
 									<AutoCommandBar name="ОбещанияМесяцКоманднаяПанель" id="1270"/>
 									<ExtendedTooltip name="ОбещанияМесяцРасширеннаяПодсказка" id="1271"/>
@@ -4457,6 +4462,7 @@
 									<ShowRoot>true</ShowRoot>
 									<AllowRootChoice>false</AllowRootChoice>
 									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 									<ContextMenu name="ПогашенияМесяцКонтекстноеМеню" id="1442"/>
 									<AutoCommandBar name="ПогашенияМесяцКоманднаяПанель" id="1443"/>
 									<ExtendedTooltip name="ПогашенияМесяцРасширеннаяПодсказка" id="1444"/>
@@ -4584,6 +4590,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="МероприятияКонтекстноеМеню" id="24"/>
 							<AutoCommandBar name="МероприятияКоманднаяПанель" id="25"/>
 							<ExtendedTooltip name="МероприятияExtendedTooltip" id="245"/>
@@ -4818,6 +4825,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="КатегорииКонтекстноеМеню" id="157"/>
 							<AutoCommandBar name="КатегорииКоманднаяПанель" id="158"/>
 							<ExtendedTooltip name="КатегорииExtendedTooltip" id="255"/>
@@ -4902,6 +4910,7 @@
 							<ShowRoot>true</ShowRoot>
 							<AllowRootChoice>false</AllowRootChoice>
 							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
 							<ContextMenu name="СобытияКонтекстноеМеню" id="165"/>
 							<AutoCommandBar name="СобытияКоманднаяПанель" id="166"/>
 							<ExtendedTooltip name="СобытияExtendedTooltip" id="259"/>
@@ -4999,7 +5008,6 @@
 					<v8:content>Группа служебная</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Behavior>Usual</Behavior>
 			<Representation>StrongSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1424"/>
@@ -5017,7 +5025,6 @@
 							<v8:content>Группа навигация</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Behavior>Usual</Behavior>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаНавигацияРасширеннаяПодсказка" id="1581"/>
 					<ChildItems>
@@ -5049,7 +5056,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Показать список изменений</v8:content>
+									<v8:content>Информация о версии</v8:content>
 								</v8:item>
 							</Title>
 							<ExtendedTooltip name="ФормаИнформацияОВерсииРасширеннаяПодсказка" id="1422"/>
@@ -5085,7 +5092,6 @@
 							<v8:content>Группа версия</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Behavior>Usual</Behavior>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="1583"/>
 					<ChildItems>
@@ -5118,7 +5124,6 @@
 							<v8:content>Группа телефон</v8:content>
 						</v8:item>
 					</ToolTip>
-					<Behavior>Usual</Behavior>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТелефонРасширеннаяПодсказка" id="1585"/>
 					<ChildItems>
@@ -7654,6 +7659,38 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЗаписейВЖурналеБанкротств" id="95">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество записей в журнале банкротств</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоЗаписейВЖурналеБанкротствСлужебное" id="96">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество записей в журнале банкротств служебное</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>

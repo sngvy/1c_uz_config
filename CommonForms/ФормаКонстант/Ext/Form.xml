@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Width>100</Width>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
@@ -1233,27 +1233,6 @@
 									<ContextMenu name="ИспользоватьМобильноеПриложениеКонтекстноеМеню" id="288"/>
 									<ExtendedTooltip name="ИспользоватьМобильноеПриложениеРасширеннаяПодсказка" id="289"/>
 								</CheckBoxField>
-								<CheckBoxField name="ИспользоватьНБКИ" id="290">
-									<DataPath>НаборКонстант.ИспользоватьНБКИ</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Использовать НБКИ TUTDF</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИспользоватьНБКИКонтекстноеМеню" id="291"/>
-									<ExtendedTooltip name="ИспользоватьНБКИРасширеннаяПодсказка" id="292"/>
-								</CheckBoxField>
-								<CheckBoxField name="ИспользоватьНБКИRUTDF" id="388">
-									<DataPath>НаборКонстант.ИспользоватьНБКИRUTDF</DataPath>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИспользоватьНБКИRUTDFКонтекстноеМеню" id="389"/>
-									<ExtendedTooltip name="ИспользоватьНБКИRUTDFРасширеннаяПодсказка" id="390"/>
-									<Events>
-										<Event name="OnChange">ИспользоватьНБКИRUTDFПриИзменении</Event>
-									</Events>
-								</CheckBoxField>
 								<CheckBoxField name="ИспользоватьMandarin" id="296">
 									<DataPath>НаборКонстант.ИспользоватьMandarin</DataPath>
 									<CheckBoxType>Auto</CheckBoxType>
@@ -1294,8 +1273,32 @@
 									<ContextMenu name="ИспользоватьСборИнформацииКонтекстноеМеню" id="416"/>
 									<ExtendedTooltip name="ИспользоватьСборИнформацииРасширеннаяПодсказка" id="417"/>
 								</CheckBoxField>
+								<CheckBoxField name="ИспользоватьПодключениеМессенджеров" id="426">
+									<DataPath>НаборКонстант.ИспользоватьПодключениеМессенджеров</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьПодключениеМессенджеровКонтекстноеМеню" id="427"/>
+									<ExtendedTooltip name="ИспользоватьПодключениеМессенджеровРасширеннаяПодсказка" id="428"/>
+									<Events>
+										<Event name="OnChange">ИспользоватьПодключениеМессенджеровПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
 							</ChildItems>
 						</UsualGroup>
+						<InputField name="ТокенAhunter" id="451">
+							<DataPath>НаборКонстант.ТокенAhunter</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Токен Ahunter</v8:content>
+								</v8:item>
+							</Title>
+							<Width>28</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>13</MaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ТокенAhunterКонтекстноеМеню" id="452"/>
+							<ExtendedTooltip name="ТокенAhunterРасширеннаяПодсказка" id="453"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="ЭЦП" id="398">
@@ -1325,6 +1328,58 @@
 							<ContextMenu name="ИспользоватьШифрованиеКонтекстноеМеню" id="404"/>
 							<ExtendedTooltip name="ИспользоватьШифрованиеРасширеннаяПодсказка" id="405"/>
 						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаМессенджеры" id="429">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мессенджеры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа мессенджеры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаМессенджерыРасширеннаяПодсказка" id="430"/>
+					<ChildItems>
+						<Button name="НастройкиБотов" id="431">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НастройкиБотов</CommandName>
+							<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+							<BackColor>style:FieldBackColor</BackColor>
+							<BorderColor>style:ЦветВсплывающейГруппы</BorderColor>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<ExtendedTooltip name="НастройкиБотовРасширеннаяПодсказка" id="432"/>
+						</Button>
+						<Button name="НастройкиСохраненияИстории" id="433">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.НастройкиСохраненияИстории</CommandName>
+							<TextColor>style:ЦветВсплывающейГруппы</TextColor>
+							<BackColor>style:FieldBackColor</BackColor>
+							<BorderColor>style:ЦветВсплывающейГруппы</BorderColor>
+							<Font ref="style:LargeTextFont" kind="StyleItem"/>
+							<ExtendedTooltip name="НастройкиСохраненияИсторииРасширеннаяПодсказка" id="434"/>
+						</Button>
+						<InputField name="НастройкаИсторииЧатовПоУмолчанию" id="435">
+							<DataPath>НаборКонстант.НастройкаИсторииЧатовПоУмолчанию</DataPath>
+							<TitleLocation>Top</TitleLocation>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="НастройкаИсторииЧатовПоУмолчаниюКонтекстноеМеню" id="436"/>
+							<ExtendedTooltip name="НастройкаИсторииЧатовПоУмолчаниюРасширеннаяПодсказка" id="437"/>
+						</InputField>
+						<InputField name="ШаблонСообщенияЧатаПоТЗ" id="443">
+							<DataPath>НаборКонстант.ШаблонСообщенияЧатаПоТЗ</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ШаблонСообщенияЧатаПоТЗКонтекстноеМеню" id="444"/>
+							<ExtendedTooltip name="ШаблонСообщенияЧатаПоТЗРасширеннаяПодсказка" id="445"/>
+							<Events>
+								<Event name="OnChange">ШаблонСообщенияЧатаПоТЗПриИзменении</Event>
+							</Events>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="Прочее" id="369">
@@ -1445,6 +1500,88 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
+						<UsualGroup name="ГруппаОбщиеНастройки" id="438">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общие настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа общие настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОбщиеНастройкиРасширеннаяПодсказка" id="439"/>
+							<ChildItems>
+								<InputField name="АдресИсполняемогоФайлаJava" id="440">
+									<DataPath>НаборКонстант.АдресИсполняемогоФайлаJava</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="АдресИсполняемогоФайлаJavaКонтекстноеМеню" id="441"/>
+									<ExtendedTooltip name="АдресИсполняемогоФайлаJavaРасширеннаяПодсказка" id="442"/>
+									<Events>
+										<Event name="StartChoice">АдресИсполняемогоФайлаJavaНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаБКИ" id="446">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бюро Кредитных Историй</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БКИ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаБКИРасширеннаяПодсказка" id="447"/>
+					<ChildItems>
+						<CheckBoxField name="ПередачаДанныхВБКИ" id="448">
+							<DataPath>НаборКонстант.ПередачаДанныхВБКИ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Единый формат передачи в БКИ</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПередачаДанныхВБКИКонтекстноеМеню" id="449"/>
+							<ExtendedTooltip name="ПередачаДанныхВБКИРасширеннаяПодсказка" id="450"/>
+							<Events>
+								<Event name="OnChange">ПередачаДанныхВБКИПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьНБКИRUTDF" id="388">
+							<DataPath>НаборКонстант.ИспользоватьНБКИRUTDF</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьНБКИRUTDFКонтекстноеМеню" id="389"/>
+							<ExtendedTooltip name="ИспользоватьНБКИRUTDFРасширеннаяПодсказка" id="390"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьНБКИRUTDFПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="ИспользоватьНБКИ" id="290">
+							<DataPath>НаборКонстант.ИспользоватьНБКИ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Использовать НБКИ TUTDF</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьНБКИКонтекстноеМеню" id="291"/>
+							<ExtendedTooltip name="ИспользоватьНБКИРасширеннаяПодсказка" id="292"/>
+						</CheckBoxField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -1658,6 +1795,36 @@
 			</Picture>
 			<Action>НаписатьРазработчику</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="НастройкиБотов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки ботов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки ботов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиБотов</Action>
+		</Command>
+		<Command name="НастройкиСохраненияИстории" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки сохранения истории</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки сохранения истории</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкиСохраненияИстории</Action>
 		</Command>
 	</Commands>
 </Form>

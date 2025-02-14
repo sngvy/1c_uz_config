@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Catalog uuid="0b3b1f9b-20df-4e2a-83ae-93af4f9e2bc7">
 		<InternalInfo>
 			<xr:GeneratedType name="CatalogObject.ЗемельныеУчастки" category="Object">
@@ -292,12 +292,15 @@
 						<xr:KeyField>ChartOfCharacteristicTypes.СвойстваИмущества.StandardAttribute.Ref</xr:KeyField>
 						<xr:TypesFilterField>ChartOfCharacteristicTypes.СвойстваИмущества.Attribute.ТипИмущества</xr:TypesFilterField>
 						<xr:TypesFilterValue xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.Имущество.ЗемельныеУчастки</xr:TypesFilterValue>
-						<xr:DataPathField>-1</xr:DataPathField>
+						<xr:DataPathField>ChartOfCharacteristicTypes.СвойстваИмущества.StandardAttribute.Ref</xr:DataPathField>
+						<xr:MultipleValuesUseField>-1</xr:MultipleValuesUseField>
 					</xr:CharacteristicTypes>
 					<xr:CharacteristicValues from="InformationRegister.СведенияОбИмуществе">
 						<xr:ObjectField>InformationRegister.СведенияОбИмуществе.Dimension.Имущество</xr:ObjectField>
 						<xr:TypeField>InformationRegister.СведенияОбИмуществе.Dimension.Свойство</xr:TypeField>
 						<xr:ValueField>InformationRegister.СведенияОбИмуществе.Resource.Значение</xr:ValueField>
+						<xr:MultipleValuesKeyField>-1</xr:MultipleValuesKeyField>
+						<xr:MultipleValuesOrderField>-1</xr:MultipleValuesOrderField>
 					</xr:CharacteristicValues>
 				</xr:Characteristic>
 				<xr:Characteristic>
@@ -305,12 +308,15 @@
 						<xr:KeyField>ChartOfCharacteristicTypes.СвойстваИмущества.StandardAttribute.Ref</xr:KeyField>
 						<xr:TypesFilterField>ChartOfCharacteristicTypes.СвойстваИмущества.Attribute.ТипИмущества</xr:TypesFilterField>
 						<xr:TypesFilterValue xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.Имущество.Недвижимость</xr:TypesFilterValue>
-						<xr:DataPathField>-1</xr:DataPathField>
+						<xr:DataPathField>ChartOfCharacteristicTypes.СвойстваИмущества.StandardAttribute.Ref</xr:DataPathField>
+						<xr:MultipleValuesUseField>-1</xr:MultipleValuesUseField>
 					</xr:CharacteristicTypes>
 					<xr:CharacteristicValues from="InformationRegister.СведенияОбИмуществе">
 						<xr:ObjectField>InformationRegister.СведенияОбИмуществе.Dimension.Имущество</xr:ObjectField>
 						<xr:TypeField>InformationRegister.СведенияОбИмуществе.Dimension.Свойство</xr:TypeField>
 						<xr:ValueField>InformationRegister.СведенияОбИмуществе.Resource.Значение</xr:ValueField>
+						<xr:MultipleValuesKeyField>-1</xr:MultipleValuesKeyField>
+						<xr:MultipleValuesOrderField>-1</xr:MultipleValuesOrderField>
 					</xr:CharacteristicValues>
 				</xr:Characteristic>
 				<xr:Characteristic>
@@ -318,12 +324,15 @@
 						<xr:KeyField>ChartOfCharacteristicTypes.СвойстваИмущества.StandardAttribute.Ref</xr:KeyField>
 						<xr:TypesFilterField>ChartOfCharacteristicTypes.СвойстваИмущества.Attribute.ТипИмущества</xr:TypesFilterField>
 						<xr:TypesFilterValue xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.Имущество.Имущество</xr:TypesFilterValue>
-						<xr:DataPathField>-1</xr:DataPathField>
+						<xr:DataPathField>ChartOfCharacteristicTypes.СвойстваИмущества.StandardAttribute.Ref</xr:DataPathField>
+						<xr:MultipleValuesUseField>-1</xr:MultipleValuesUseField>
 					</xr:CharacteristicTypes>
 					<xr:CharacteristicValues from="InformationRegister.СведенияОбИмуществе">
 						<xr:ObjectField>InformationRegister.СведенияОбИмуществе.Dimension.Имущество</xr:ObjectField>
 						<xr:TypeField>InformationRegister.СведенияОбИмуществе.Dimension.Свойство</xr:TypeField>
 						<xr:ValueField>InformationRegister.СведенияОбИмуществе.Resource.Значение</xr:ValueField>
+						<xr:MultipleValuesKeyField>-1</xr:MultipleValuesKeyField>
+						<xr:MultipleValuesOrderField>-1</xr:MultipleValuesOrderField>
 					</xr:CharacteristicValues>
 				</xr:Characteristic>
 			</Characteristics>

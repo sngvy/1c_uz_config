@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
@@ -22,7 +22,6 @@
 			</ToolTip>
 			<HorizontalStretch>true</HorizontalStretch>
 			<Group>AlwaysHorizontal</Group>
-			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСписокИзмененийРасширеннаяПодсказка" id="8"/>
@@ -45,10 +44,10 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.1.17 от 17.01.2025&lt;/&gt;&lt;/&gt;
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.2.15 от 15.02.2025&lt;/&gt;&lt;/&gt;
 
 &lt;i&gt;Версия модуля интеграции с Федресурсом: 4.11.29&lt;/&gt;
-&lt;i&gt;Версия модуля интеграции с ФССП: 4.12.3&lt;/&gt;</v8:content>
+&lt;i&gt;Версия модуля интеграции с ФССП: 5.2.15&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -97,19 +96,11 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Исправлена ошибка разработчиков БИТ.АТС, при которой могли запускаться задачи по удаленным спискам автообзвона
+									<v8:content>● Исправлена ошибка, когда у рководителя колл-центра могли не отображаться уведомления о нарушениях 230-ФЗ
 
-● Исправлены ошибки при разборе информации с Федресурса, улучшено поведение модуля проверки на банкротство
+● Общее исправление ошибок от разработчика за декабрь 2024 г.
 
-● Исправлено зависание на главном экране при проверке новых нарушений 230-ФЗ у руководителя колл-центра
-
-● Исправлена ошибка, при которой в журнале банкротств могла не открываться информация о деле
-
-● Повышена стабильность работы фоновых заданий
-
-● Обновлен модуль интеграции с ФССП
-
-● Ускорена загрузка реестров</v8:content>
+● Повышена стабильность соединения с ФССП</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
@@ -141,21 +132,13 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Для руководителя колл-центра добавлен журнал банкротств, где будет фикисроваться движение дел о банкротстве (Контроль задолженности → Журнал банкротств)
+									<v8:content>● Добавлена возможность загружать реестры с адресами эл. почты совместно с телефонами должников
 
-● На главном экране добавлена возможность вставить номер любого ДО и с помощью кнопки "Глаз" быстро открыть его без поиска по общему списку ДО
+● Для руководителя колл-центра добавлено оповещение о наличии новых записей в журнале банкротств
 
-● Добавлена возможность быстро зафиксировать отправку документа на номер в форме ДО (Документы → Создать мероприятие отправки на номер)
+● Рашсирена функциональность по формированию КИ (Интеграция с НБКИ → Управление КИ)
 
-● Добавлена возможность установки отборов в разделах "Дела о банкротстве", "Журнал банкротств" и "Исполнительные производства"
-
-● Добавлена поддержка проверки на банкротство по старой фамилии, если в карточке должника указана новая
-
-● Добавлена запись даты отправки ДО в архив по банкротству в реквизит "Дата закрытия в агентстве"
-
-● Добавлено автоматическое получение информации от ФССП и Федресурса
-
-● Добавлен выбор способа отправки документов при создании запроса документов</v8:content>
+● Добавлена поддержка единого формата кредитных историй</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
@@ -186,9 +169,7 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Улучшена логика формирования списков автообзвона для выявления наиболее контактных должников и взаимодействия с ними в первую очередь
-
-● В форме мероприятия добавлено отображение результатов проверки должника по ФССП и Федресурсу</v8:content>
+									<v8:content>● Интеграции с ФССП и Федресурсом вынесены в отдельные разделы</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>

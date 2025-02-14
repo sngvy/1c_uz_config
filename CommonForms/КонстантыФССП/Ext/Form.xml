@@ -1,53 +1,133 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="АдресДолжникаФССП" id="208">
-			<DataPath>НаборКонстант.АдресДолжникаФССП</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ChoiceParameters>
-				<app:item name="Отбор.СправочникВладелец">
-					<app:value xsi:type="FormChoiceListDesTimeValue">
-						<Presentation/>
-						<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Контрагенты</Value>
-					</app:value>
-				</app:item>
-			</ChoiceParameters>
-			<ContextMenu name="АдресДолжникаФССПКонтекстноеМеню" id="209"/>
-			<ExtendedTooltip name="АдресДолжникаФССПРасширеннаяПодсказка" id="210"/>
-		</InputField>
-		<InputField name="ДатаРожденияДолжникаФССП" id="211">
-			<DataPath>НаборКонстант.ДатаРожденияДолжникаФССП</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ChoiceParameters>
-				<app:item name="Отбор.СправочникВладелец">
-					<app:value xsi:type="FormChoiceListDesTimeValue">
-						<Presentation/>
-						<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Контрагенты</Value>
-					</app:value>
-				</app:item>
-			</ChoiceParameters>
-			<ContextMenu name="ДатаРожденияДолжникаФССПКонтекстноеМеню" id="212"/>
-			<ExtendedTooltip name="ДатаРожденияДолжникаФССПРасширеннаяПодсказка" id="213"/>
-		</InputField>
-		<InputField name="ИННВзыскателяФССП" id="214">
-			<DataPath>НаборКонстант.ИННВзыскателяФССП</DataPath>
-			<ContextMenu name="ИННВзыскателяФССПКонтекстноеМеню" id="215"/>
-			<ExtendedTooltip name="ИННВзыскателяФССПРасширеннаяПодсказка" id="216"/>
-			<Events>
-				<Event name="OnChange">ИННВзыскателяФССППриИзменении</Event>
-			</Events>
-		</InputField>
-		<CheckBoxField name="ТолькоИПВзыскателяФССП" id="217">
-			<DataPath>НаборКонстант.ТолькоИПВзыскателяФССП</DataPath>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ТолькоИПВзыскателяФССПКонтекстноеМеню" id="218"/>
-			<ExtendedTooltip name="ТолькоИПВзыскателяФССПРасширеннаяПодсказка" id="219"/>
-		</CheckBoxField>
+		<Pages name="НастройкиФССП" id="226">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки ФССП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки ФССП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="НастройкиФССПРасширеннаяПодсказка" id="227"/>
+			<ChildItems>
+				<Page name="ГруппаПараметрыДолжника" id="228">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры должника</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры должника</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыДолжникаРасширеннаяПодсказка" id="229"/>
+					<ChildItems>
+						<InputField name="АдресДолжникаФССП" id="208">
+							<DataPath>НаборКонстант.АдресДолжникаФССП</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameters>
+								<app:item name="Отбор.СправочникВладелец">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Контрагенты</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="АдресДолжникаФССПКонтекстноеМеню" id="209"/>
+							<ExtendedTooltip name="АдресДолжникаФССПРасширеннаяПодсказка" id="210"/>
+						</InputField>
+						<InputField name="ДатаРожденияДолжникаФССП" id="211">
+							<DataPath>НаборКонстант.ДатаРожденияДолжникаФССП</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ChoiceParameters>
+								<app:item name="Отбор.СправочникВладелец">
+									<app:value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">ChartOfCharacteristicTypes.ДополнительныеРеквизитыИСведения.Справочник_Контрагенты</Value>
+									</app:value>
+								</app:item>
+							</ChoiceParameters>
+							<ContextMenu name="ДатаРожденияДолжникаФССПКонтекстноеМеню" id="212"/>
+							<ExtendedTooltip name="ДатаРожденияДолжникаФССПРасширеннаяПодсказка" id="213"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ПараметрыВзыскателя" id="230">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры взыскателя</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры взыскателя</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПараметрыВзыскателяРасширеннаяПодсказка" id="231"/>
+					<ChildItems>
+						<InputField name="ИННВзыскателяФССП" id="214">
+							<DataPath>НаборКонстант.ИННВзыскателяФССП</DataPath>
+							<ContextMenu name="ИННВзыскателяФССПКонтекстноеМеню" id="215"/>
+							<ExtendedTooltip name="ИННВзыскателяФССПРасширеннаяПодсказка" id="216"/>
+							<Events>
+								<Event name="OnChange">ИННВзыскателяФССППриИзменении</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="ТолькоИПВзыскателяФССП" id="217">
+							<DataPath>НаборКонстант.ТолькоИПВзыскателяФССП</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ТолькоИПВзыскателяФССПКонтекстноеМеню" id="218"/>
+							<ExtendedTooltip name="ТолькоИПВзыскателяФССПРасширеннаяПодсказка" id="219"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПараметрыПодсудностиРОСП" id="232">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры подсудности РОСП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа параметры подсудности РОСП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПараметрыПодсудностиРОСПРасширеннаяПодсказка" id="233"/>
+					<ChildItems>
+						<InputField name="АдресДолжникаПодсудностиРОСП" id="220">
+							<DataPath>НаборКонстант.АдресДолжникаПодсудностиРОСП</DataPath>
+							<ContextMenu name="АдресДолжникаПодсудностиРОСПКонтекстноеМеню" id="221"/>
+							<ExtendedTooltip name="АдресДолжникаПодсудностиРОСПРасширеннаяПодсказка" id="222"/>
+						</InputField>
+						<CheckBoxField name="ЗаписыватьРОСПыСДанныхТерподсудности" id="223">
+							<DataPath>НаборКонстант.ЗаписыватьРОСПыСДанныхТерподсудности</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗаписыватьРОСПыСДанныхТерподсудностиКонтекстноеМеню" id="224"/>
+							<ExtendedTooltip name="ЗаписыватьРОСПыСДанныхТерподсудностиРасширеннаяПодсказка" id="225"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="НаборКонстант" id="1">

@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Субъект" id="7">
+			<DataPath>Объект.Субъект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СубъектКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СубъектРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="СубъектЮЛ" id="10">
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СубъектЮЛКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СубъектЮЛРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<InputField name="Сделка" id="13">
+			<DataPath>Объект.Сделка</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СделкаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СделкаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="РаспространитьНаВсеСделки" id="16">
+			<DataPath>Объект.РаспространитьНаВсеСделки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РаспространитьНаВсеСделкиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="РаспространитьНаВсеСделкиРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="OnChange">РаспространитьНаВсеСделкиПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<Table name="Публикации" id="19">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Публикации</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПубликацииКонтекстноеМеню" id="20"/>
+			<AutoCommandBar name="ПубликацииКоманднаяПанель" id="21"/>
+			<ExtendedTooltip name="ПубликацииРасширеннаяПодсказка" id="22"/>
+			<SearchStringAddition name="ПубликацииСтрокаПоиска" id="23">
+				<AdditionSource>
+					<Item>Публикации</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПубликацииСтрокаПоискаКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ПубликацииСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПубликацииСостояниеПросмотра" id="26">
+				<AdditionSource>
+					<Item>Публикации</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПубликацииСостояниеПросмотраКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ПубликацииСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПубликацииУправлениеПоиском" id="29">
+				<AdditionSource>
+					<Item>Публикации</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПубликацииУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ПубликацииУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="BeforeDeleteRow">ПубликацииПередУдалением</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПубликацииНомерСтроки" id="32">
+					<DataPath>Объект.Публикации.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПубликацииНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПубликацииНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="ПубликацииДатаСобытия" id="35">
+					<DataPath>Объект.Публикации.ДатаСобытия</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДатаСобытияКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПубликацииДатаСобытияРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<CheckBoxField name="ПубликацииДатаСобытияРавнаДатамПубликации" id="67">
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПубликацииДатаСобытияРавнаДатамПубликацииКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ПубликацииДатаСобытияРавнаДатамПубликацииРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<InputField name="ПубликацииДополнительныеСведения" id="62">
+					<DataPath>Объект.Публикации.ДополнительныеСведения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДополнительныеСведенияКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="ПубликацииДополнительныеСведенияРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<ColumnGroup name="ПубликацииГруппаСтадия" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Стадия процедуры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Публикации группа стадия</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПубликацииГруппаСтадияРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<InputField name="ПубликацииДатаОбновленияСтадииПроцедуры" id="38">
+							<DataPath>Объект.Публикации.ДатаОбновленияСтадииПроцедуры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПубликацииДатаОбновленияСтадииПроцедурыКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="ПубликацииДатаОбновленияСтадииПроцедурыРасширеннаяПодсказка" id="40"/>
+						</InputField>
+						<InputField name="ПубликацииСтадияПроцедуры" id="41">
+							<DataPath>Объект.Публикации.СтадияПроцедуры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<DropListButton>true</DropListButton>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Возбуждена процедура внесудебного банкротства</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">6</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Завершена процедура внесудебного банкротства</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">7</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Прекращена процедура внесудебного банкротства</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">8</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПубликацииСтадияПроцедурыКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ПубликацииСтадияПроцедурыРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="ПубликацииURLПубликацииОбновленияСтадииПроцедуры" id="44">
+							<DataPath>Объект.Публикации.URLПубликацииОбновленияСтадииПроцедуры</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПубликацииURLПубликацииОбновленияСтадииПроцедурыКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ПубликацииURLПубликацииОбновленияСтадииПроцедурыРасширеннаяПодсказка" id="46"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ПубликацииДатаПубликацииПризнакаНеправомерныхДействий" id="47">
+					<DataPath>Объект.Публикации.ДатаПубликацииПризнакаНеправомерныхДействий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДатаПубликацииПризнакаНеправомерныхДействийКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ПубликацииДатаПубликацииПризнакаНеправомерныхДействийРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ПубликацииДатаПубликацииПризнакаПреднамеренногоИлиФиктивногоБанкротства" id="50">
+					<DataPath>Объект.Публикации.ДатаПубликацииПризнакаПреднамеренногоИлиФиктивногоБанкротства</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДатаПубликацииПризнакаПреднамеренногоИлиФиктивногоБанкротстваКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ПубликацииДатаПубликацииПризнакаПреднамеренногоИлиФиктивногоБанкротстваРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ПубликацииДатаЗавершенияРасчетовСКредиторами" id="53">
+					<DataPath>Объект.Публикации.ДатаЗавершенияРасчетовСКредиторами</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДатаЗавершенияРасчетовСКредиторамиКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ПубликацииДатаЗавершенияРасчетовСКредиторамиРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ПубликацииДатаОсвобожденияОтИсполненияТребованийКредиторов" id="56">
+					<DataPath>Объект.Публикации.ДатаОсвобожденияОтИсполненияТребованийКредиторов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДатаОсвобожденияОтИсполненияТребованийКредиторовКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ПубликацииДатаОсвобожденияОтИсполненияТребованийКредиторовРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="ПубликацииДатаВосстановленияОбязательства" id="59">
+					<DataPath>Объект.Публикации.ДатаВосстановленияОбязательства</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ПубликацииДатаВосстановленияОбязательстваКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ПубликацииДатаВосстановленияОбязательстваРасширеннаяПодсказка" id="61"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ВнесудебноеБанкротствоДолжника</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

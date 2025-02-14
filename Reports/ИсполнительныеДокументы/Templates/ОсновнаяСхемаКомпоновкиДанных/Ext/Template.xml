@@ -7,21 +7,6 @@
 	<dataSet xsi:type="DataSetQuery">
 		<name>НаборДанных1</name>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Организация</dataPath>
-			<field>Организация</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Объект</dataPath>
-			<field>Объект</field>
-			<role>
-				<dcscom:dimension>true</dcscom:dimension>
-			</role>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Сотрудник</dataPath>
-			<field>Сотрудник</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ИП</dataPath>
 			<field>ИП</field>
 			<role>
@@ -42,30 +27,6 @@
 			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Подразделение</dataPath>
-			<field>Подразделение</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Мероприятие</dataPath>
-			<field>Мероприятие</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Мероприятие</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>Пометка</dataPath>
-			<field>Пометка</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Пометка</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>СтатусИП</dataPath>
 			<field>СтатусИП</field>
 		</field>
@@ -78,10 +39,6 @@
 			<field>СудебныйПриставИсполнитель</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ДатаВозбуждения</dataPath>
-			<field>ДатаВозбуждения</field>
-		</field>
-		<field xsi:type="DataSetFieldField">
 			<dataPath>ДатаОкончания</dataPath>
 			<field>ДатаОкончания</field>
 		</field>
@@ -90,68 +47,79 @@
 			<field>ПричинаОкончания</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>ФактическоеПоложение</dataPath>
-			<field>ФактическоеПоложение</field>
+			<dataPath>ИПДатаВозбуждения</dataPath>
+			<field>ИПДатаВозбуждения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОбновленияСФССП</dataPath>
+			<field>ДатаОбновленияСФССП</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фактическое положение</v8:content>
+					<v8:content>Дата обновления СФССП</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>Действия</dataPath>
-			<field>Действия</field>
+			<dataPath>ДатаПоследнегоВыполненногоМероприятия</dataPath>
+			<field>ДатаПоследнегоВыполненногоМероприятия</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Действия</v8:content>
-				</v8:item>
-			</title>
-		</field>
-		<field xsi:type="DataSetFieldField">
-			<dataPath>СведенияИзПФР</dataPath>
-			<field>СведенияИзПФР</field>
-			<title xsi:type="v8:LocalStringType">
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Сведения из ПФР</v8:content>
+					<v8:content>Дата последнего выполненного мероприятия</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
-	ВЫРАЗИТЬ(ОбъектыВРаботеОстатки.Объект КАК Справочник.ИсполнительныеДокументы) КАК ИсполнительныеДокументы
+	ИсполнительныеДокументы.Ссылка КАК ИсполнительныеДокументы
 ПОМЕСТИТЬ вт
 ИЗ
-	РегистрНакопления.ОбъектыВРаботе.Остатки(, ) КАК ОбъектыВРаботеОстатки
+	Справочник.ИсполнительныеДокументы КАК ИсполнительныеДокументы
 ГДЕ
-	ТИПЗНАЧЕНИЯ(ОбъектыВРаботеОстатки.Объект) = ТИП(Справочник.ИсполнительныеДокументы)
+	НЕ ИсполнительныеДокументы.ПометкаУдаления
+
+ИНДЕКСИРОВАТЬ ПО
+	ИсполнительныеДокументы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Мероприятие.Объект КАК Объект,
+	МАКСИМУМ(Мероприятие.ДатаВыполнения) КАК ДатаВыполнения
+ПОМЕСТИТЬ ПоследнееВыполненноеМероприятие
+ИЗ
+	Задача.Мероприятие КАК Мероприятие
+ГДЕ
+	НЕ Мероприятие.ПометкаУдаления
+	И Мероприятие.Выполнена
+
+СГРУППИРОВАТЬ ПО
+	Мероприятие.Объект
+
+ИНДЕКСИРОВАТЬ ПО
+	Объект
 ;
 
 ////////////////////////////////////////////////////////////////////////////////
 ВЫБРАТЬ РАЗЛИЧНЫЕ
-	вт.ИсполнительныеДокументы КАК Объект,
 	вт.ИсполнительныеДокументы КАК ИсполнительныеДокументы,
-	ИСТИНА КАК Пометка,
 	ФССП_СостояниеИПСрезПоследних.ИП КАК ИП,
 	ФССП_СостояниеИПСрезПоследних.СтатусИП КАК СтатусИП,
+	ФССП_СостояниеИПСрезПоследних.ИП.ДатаВозбуждения КАК ИПДатаВозбуждения,
 	ФССП_СостояниеИПСрезПоследних.ОтделСудебныхПриставов КАК ОтделСудебныхПриставов,
 	ФССП_СостояниеИПСрезПоследних.СудебныйПриставИсполнитель КАК СудебныйПриставИсполнитель,
-	ФССП_СостояниеИПСрезПоследних.ДатаВозбуждения КАК ДатаВозбуждения,
 	ФССП_СостояниеИПСрезПоследних.ДатаОкончания КАК ДатаОкончания,
 	ФССП_СостояниеИПСрезПоследних.ПричинаОкончания КАК ПричинаОкончания,
-	ВЫРАЗИТЬ(вт.ИсполнительныеДокументы.ФактическоеПоложение КАК СТРОКА(1000)) КАК ФактическоеПоложение,
-	ВЫРАЗИТЬ(вт.ИсполнительныеДокументы.Действия КАК СТРОКА(1000)) КАК Действия,
-	ВЫРАЗИТЬ(вт.ИсполнительныеДокументы.СведенияИзПФР КАК СТРОКА(1000)) КАК СведенияИзПФР
+	ФССП_СостояниеИПСрезПоследних.Период КАК ДатаОбновленияСФССП,
+	ПоследнееВыполненноеМероприятие.ДатаВыполнения КАК ДатаПоследнегоВыполненногоМероприятия
 ИЗ
 	вт КАК вт
-		ЛЕВОЕ СОЕДИНЕНИЕ Задача.Мероприятие КАК Мероприятие
-		ПО вт.ИсполнительныеДокументы = Мероприятие.Объект
 		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ФССП_СостояниеИП.СрезПоследних КАК ФССП_СостояниеИПСрезПоследних
 		ПО вт.ИсполнительныеДокументы = ФССП_СостояниеИПСрезПоследних.ИП.НомерИД
-{ГДЕ
-	Мероприятие.Ссылка.* КАК Мероприятие}</query>
+		ЛЕВОЕ СОЕДИНЕНИЕ ПоследнееВыполненноеМероприятие КАК ПоследнееВыполненноеМероприятие
+		ПО вт.ИсполнительныеДокументы.Владелец = ПоследнееВыполненноеМероприятие.Объект
+			И вт.ИсполнительныеДокументы.ДатаИД &lt;= ПоследнееВыполненноеМероприятие.ДатаВыполнения</query>
 	</dataSet>
 	<parameter>
 		<name>Период</name>
@@ -185,9 +153,6 @@
 					<dcsset:field>СтатусИП</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ДатаВозбуждения</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>ОтделСудебныхПриставов</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -200,30 +165,42 @@
 					<dcsset:field>ПричинаОкончания</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>Объект</dcsset:field>
+					<dcsset:field>ДатаОбновленияСФССП</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата обновления с Сайта ФССП</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:use>false</dcsset:use>
-					<dcsset:field>Пометка</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>СведенияИзПФР</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>Действия</dcsset:field>
-				</dcsset:item>
-				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>ФактическоеПоложение</dcsset:field>
+					<dcsset:field>ДатаПоследнегоВыполненногоМероприятия</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ИсполнительныеДокументы</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
 				<dcsset:order>
 					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
 				</dcsset:order>
 				<dcsset:selection>
 					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
 				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
 			</dcsset:item>
 		</dcsset:settings>
 	</settingsVariant>

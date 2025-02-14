@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ОбъектУчета" id="1">
+			<DataPath>Запись.ОбъектУчета</DataPath>
+			<ContextMenu name="ОбъектУчетаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ОбъектУчетаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ДатаПоследнейВыгрузки" id="4">
+			<DataPath>Запись.ДатаПоследнейВыгрузки</DataPath>
+			<ContextMenu name="ДатаПоследнейВыгрузкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаПоследнейВыгрузкиРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Событие" id="7">
+			<DataPath>Запись.Событие</DataPath>
+			<ContextMenu name="СобытиеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СобытиеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ДатаСобытия" id="10">
+			<DataPath>Запись.ДатаСобытия</DataPath>
+			<ContextMenu name="ДатаСобытияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДатаСобытияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ДокументОтчет" id="13">
+			<DataPath>Запись.ДокументОтчет</DataPath>
+			<ContextMenu name="ДокументОтчетКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДокументОтчетРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ИмяФайла" id="16">
+			<DataPath>Запись.ИмяФайла</DataPath>
+			<ContextMenu name="ИмяФайлаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИмяФайлаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Операция" id="19">
+			<DataPath>Запись.Операция</DataPath>
+			<ContextMenu name="ОперацияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ОперацияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Принято" id="22">
+			<DataPath>Запись.Принято</DataPath>
+			<ContextMenu name="ПринятоКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПринятоРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Идентификатор" id="25">
+			<DataPath>Запись.Идентификатор</DataPath>
+			<ContextMenu name="ИдентификаторКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ИдентификаторРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="Комментарий" id="28">
+			<DataPath>Запись.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Причина" id="31">
+			<DataPath>Запись.Причина</DataPath>
+			<DropListButton>true</DropListButton>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Неправомерная (ошибочная) передача данных.</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>На основании пункта 2 части 1 статьи 7 218-ФЗ: на основании решения суда, вступившего в силу.</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>На основании пункта 3 части 1 статьи 7 218-ФЗ</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">3</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>На основании пункта 4 части 1 статьи 7 218-ФЗ</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">4</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>На основании пункта 5 части 1 статьи 7 218-ФЗ</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">7</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПричинаКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ПричинаРасширеннаяПодсказка" id="33"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ВременныйЖурналМассовыхВыгрузокКИ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

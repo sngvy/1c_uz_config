@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Configuration uuid="f5a645b4-3fe8-4440-be11-dea7c1fdf297">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -28,7 +28,7 @@
 			</xr:ContainedObject>
 			<xr:ContainedObject>
 				<xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId>
-				<xr:ObjectId>692c9b9b-f0df-4db9-bb16-d212b6f3eaf9</xr:ObjectId>
+				<xr:ObjectId>ea56fdae-fb3e-4f69-9250-3ce4b9d72710</xr:ObjectId>
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
@@ -41,7 +41,7 @@
 			</Synonym>
 			<Comment/>
 			<NamePrefix/>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_20</ConfigurationExtensionCompatibilityMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
@@ -53,7 +53,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ИнтерактивноеОткрытиеВнешнихОтчетовИОбработок</xr:Item>
 			</DefaultRoles>
 			<Vendor>"БИТ"</Vendor>
-			<Version>3.7.10.18</Version>
+			<Version>3.8.5.20</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -69,6 +69,7 @@
 			<DefaultReportForm/>
 			<DefaultReportVariantForm/>
 			<DefaultReportSettingsForm/>
+			<DefaultReportAppearanceTemplate/>
 			<DefaultDynamicListSettingsForm/>
 			<DefaultSearchForm/>
 			<DefaultDataHistoryChangeHistoryForm/>
@@ -197,9 +198,38 @@
 					<app:functionality>AllFilesAccess</app:functionality>
 					<app:use>false</app:use>
 				</app:functionality>
+				<app:functionality>
+					<app:functionality>Videoconferences</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>NFC</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>DocumentScanning</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>SpeechToText</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>Geofences</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>IncomingShareRequests</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
+				<app:functionality>
+					<app:functionality>AllIncomingShareRequestsTypesProcessing</app:functionality>
+					<app:use>false</app:use>
+				</app:functionality>
 			</UsedMobileApplicationFunctionalities>
 			<StandaloneConfigurationRestrictionRoles/>
 			<MobileApplicationURLs/>
+			<AllowedIncomingShareRequestTypes/>
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
 			<DefaultInterface/>
 			<DefaultStyle>Style.Основной</DefaultStyle>
@@ -239,7 +269,8 @@
 			<ModalityUseMode>Use</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>Use</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
-			<CompatibilityMode>Version8_3_18</CompatibilityMode>
+			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
+			<CompatibilityMode>Version8_3_20</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
@@ -270,8 +301,10 @@
 			<Subsystem>Документооборот</Subsystem>
 			<Subsystem>сл2</Subsystem>
 			<Subsystem>Госуслуги</Subsystem>
-			<Subsystem>ОбменСНБКИ</Subsystem>
+			<Subsystem>ИнтеграцияСНБКИ</Subsystem>
 			<Subsystem>Нарушения230ФЗ</Subsystem>
+			<Subsystem>ИнтеграцияСФССП</Subsystem>
+			<Subsystem>ИнтеграцияСФедресурсом</Subsystem>
 			<StyleItem>ВыполненнаяЗадача</StyleItem>
 			<StyleItem>НеСтартованныйБизнесПроцесс</StyleItem>
 			<StyleItem>ПользовательВыбранный</StyleItem>
@@ -740,7 +773,7 @@
 			<CommonPicture>NC_УдалитьСимвол</CommonPicture>
 			<CommonPicture>NC_Предупреждение40</CommonPicture>
 			<CommonPicture>NC_Открыть</CommonPicture>
-			<SessionParameter>бит_СМС_КорректировкаUTC</SessionParameter>
+			<SessionParameter>бит_СЛ20_ПутьБиблиотекиКоннектораБИТАТС</SessionParameter>
 			<SessionParameter>ТекущееПодразделение</SessionParameter>
 			<SessionParameter>ТекущийIPАдрес</SessionParameter>
 			<SessionParameter>АдресОбъектаЦКТ</SessionParameter>
@@ -751,10 +784,10 @@
 			<SessionParameter>бит_сл_БуферЛицензирования</SessionParameter>
 			<SessionParameter>бит_сл_БуферЛицензированияВторой</SessionParameter>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
+			<SessionParameter>бит_СЛ20_ПутьБиблиотекиКоннектораСофтфон</SessionParameter>
+			<SessionParameter>бит_СМС_КорректировкаUTC</SessionParameter>
 			<SessionParameter>бит_СМС_НомерСессии</SessionParameter>
 			<SessionParameter>бит_СМС_ОсновнойСервер</SessionParameter>
-			<SessionParameter>бит_СМС_Пароль</SessionParameter>
-			<SessionParameter>бит_СМС_Пользователь</SessionParameter>
 			<SessionParameter>бит_сл_ИдНастроек</SessionParameter>
 			<SessionParameter>АвторизованныйПользователь</SessionParameter>
 			<SessionParameter>БуферОбмена</SessionParameter>
@@ -767,6 +800,8 @@
 			<SessionParameter>ПодключенныеРасширения</SessionParameter>
 			<SessionParameter>ТекущийВнешнийПользователь</SessionParameter>
 			<SessionParameter>УстановленныеРасширения</SessionParameter>
+			<SessionParameter>бит_СМС_Пароль</SessionParameter>
+			<SessionParameter>бит_СМС_Пользователь</SessionParameter>
 			<SessionParameter>НБКИПогашен</SessionParameter>
 			<Role>бит_АдминистраторБитАТС</Role>
 			<Role>ДоступКДаннымПоПользователю</Role>
@@ -960,6 +995,7 @@
 			<Role>ДобавлениеИзменениеЭлектронныхПодписейИШифрование</Role>
 			<Role>узСудебныйБлок</Role>
 			<Role>узИспользованиеТехническихОтчетов</Role>
+			<Role>ИспользованиеМессенджеров</Role>
 			<CommonTemplate>бит_КомпонентаУправлениеАТС</CommonTemplate>
 			<CommonTemplate>ИЗоВДиОВнаЗНИ_</CommonTemplate>
 			<CommonTemplate>ИЗобОВ</CommonTemplate>
@@ -976,13 +1012,16 @@
 			<CommonTemplate>КомпонентаTWAIN</CommonTemplate>
 			<CommonTemplate>сл2</CommonTemplate>
 			<CommonTemplate>Макет</CommonTemplate>
+			<CommonTemplate>бит_СЛ20БиблиотекаКоннектораWin32</CommonTemplate>
+			<CommonTemplate>бит_СЛ20БиблиотекаКоннектораWin64</CommonTemplate>
+			<CommonTemplate>СхемаПроверкиНБКИ</CommonTemplate>
+			<CommonTemplate>ВалидаторНБКИ</CommonTemplate>
+			<CommonTemplate>СхемаПроверкиСообщенийФедресурс</CommonTemplate>
 			<CommonTemplate>СкриптУстановкиWA</CommonTemplate>
 			<FilterCriterion>ФайлыВТоме</FilterCriterion>
 			<CommonModule>бит_АТСВебСервисы</CommonModule>
-			<CommonModule>АдресныйКлассификаторКлиент</CommonModule>
-			<CommonModule>бит_сл_клиент</CommonModule>
 			<CommonModule>Автоинформирование</CommonModule>
-			<CommonModule>УдалитьАдресныйКлассификатор</CommonModule>
+			<CommonModule>АдресныйКлассификаторКлиент</CommonModule>
 			<CommonModule>бит_сл_сервер_ассистент</CommonModule>
 			<CommonModule>бит_сл_сервер</CommonModule>
 			<CommonModule>бит_сл_тс</CommonModule>
@@ -996,8 +1035,8 @@
 			<CommonModule>УдалитьОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>УдалитьОбщегоНазначенияПереопределяемый</CommonModule>
 			<CommonModule>ВзаимодействияКлиентПереопределяемый</CommonModule>
-			<CommonModule>НастройкаПорядкаЭлементовКлиент</CommonModule>
 			<CommonModule>ОбновлениеИБ</CommonModule>
+			<CommonModule>НастройкаПорядкаЭлементовКлиент</CommonModule>
 			<CommonModule>ОбщегоНазначения</CommonModule>
 			<CommonModule>ВзаимодействияКлиентСервер</CommonModule>
 			<CommonModule>ВзаимодействияКлиентСерверПереопределяемый</CommonModule>
@@ -1357,6 +1396,15 @@
 			<CommonModule>ПарсингУправлениеСтраницамиПредставления</CommonModule>
 			<CommonModule>КоннекторHTTP</CommonModule>
 			<CommonModule>МодульНормализацияПочтаРФ</CommonModule>
+			<CommonModule>ОбработкаОшибокПочтыРФ</CommonModule>
+			<CommonModule>бит_сл_клиент</CommonModule>
+			<CommonModule>УдалитьАдресныйКлассификатор</CommonModule>
+			<CommonModule>СообщениеИзЧата</CommonModule>
+			<CommonModule>КонфигурацияИсторияЧатов</CommonModule>
+			<CommonModule>КредитныеИсторииXML</CommonModule>
+			<CommonModule>ВалидацияXMLПоСхеме</CommonModule>
+			<CommonModule>ВалидацияXMLПоСхемеСервер</CommonModule>
+			<CommonModule>МодульНормализацияAhunter</CommonModule>
 			<CommonModule>НБКИСлужебный</CommonModule>
 			<CommonModule>ЗапросыФССП</CommonModule>
 			<CommonModule>ЗапросыЕФРСБ</CommonModule>
@@ -1376,6 +1424,7 @@
 			<WebService>MAUserAuthentication</WebService>
 			<WebService>MAExchangeReserve</WebService>
 			<HTTPService>MandarinCallBackManager</HTTPService>
+			<HTTPService>Bots</HTTPService>
 			<WSReference>бит_СМС_SMS4B</WSReference>
 			<WSReference>бит_СМС_SMS4BРезерв</WSReference>
 			<WSReference>CBR_DailyInfoWebServ</WSReference>
@@ -1448,6 +1497,8 @@
 			<ScheduledJob>ЗагрузкаКлючевойСтавки</ScheduledJob>
 			<ScheduledJob>бит_СинхронизацияСАТС</ScheduledJob>
 			<ScheduledJob>ОбработатьПереносДанныхИзГосуслуг</ScheduledJob>
+			<ScheduledJob>бит_ЗаполнениеРОСП</ScheduledJob>
+			<ScheduledJob>ЕдиныйФорматКИМассоваяВыгрузка</ScheduledJob>
 			<ScheduledJob>ПромежуточнаяРазблокировкаДелДляАвтообзвона</ScheduledJob>
 			<ScheduledJob>ОбновлениеИП</ScheduledJob>
 			<ScheduledJob>ОбновлениеДелОБанкротстве</ScheduledJob>
@@ -1506,6 +1557,8 @@
 			<FunctionalOption>РаспределениеОбъектов</FunctionalOption>
 			<FunctionalOption>ОпциональныеПодсистемы</FunctionalOption>
 			<FunctionalOption>ПодсистемаНастройкиБизнесПроцессов</FunctionalOption>
+			<FunctionalOption>ПодключениеМессенджеров</FunctionalOption>
+			<FunctionalOption>ПередачаДанныхВБКИ</FunctionalOption>
 			<DefinedType>ВладелецКонтактнойИнформации</DefinedType>
 			<DefinedType>ВнешнийПользователь</DefinedType>
 			<DefinedType>ВнешнийПользовательОбъект</DefinedType>
@@ -1532,6 +1585,11 @@
 			<DefinedType>Имущество</DefinedType>
 			<DefinedType>Сумма</DefinedType>
 			<DefinedType>Кредитор</DefinedType>
+			<DefinedType>Отправители</DefinedType>
+			<DefinedType>НастройкиЧатов</DefinedType>
+			<DefinedType>НастройкиСохраненияИсторииЧатов</DefinedType>
+			<DefinedType>ХранилищаИстории</DefinedType>
+			<DefinedType>ОбъектыОбщенияВЧате</DefinedType>
 			<CommonCommand>бит_ОтправитьSMS</CommonCommand>
 			<CommonCommand>бит_сл_ОткрытьФормуКлиентаЛицензирования</CommonCommand>
 			<CommonCommand>ОткрытьЗадолженностьПоОбъектам</CommonCommand>
@@ -1760,8 +1818,18 @@
 			<Constant>ВключитьНастройкиБизнесПроцессов</Constant>
 			<Constant>ИННВзыскателяФССП</Constant>
 			<Constant>ТолькоИПВзыскателяФССП</Constant>
+			<Constant>ЗаписыватьРОСПыСДанныхТерподсудности</Constant>
+			<Constant>АдресДолжникаПодсудностиРОСП</Constant>
+			<Constant>ИспользоватьПодключениеМессенджеров</Constant>
+			<Constant>НастройкаИсторииЧатовПоУмолчанию</Constant>
+			<Constant>СпособОпределенияОператораДляСообщений</Constant>
+			<Constant>АдресИсполняемогоФайлаJava</Constant>
+			<Constant>ШаблонСообщенияЧатаПоТЗ</Constant>
+			<Constant>ПередачаДанныхВБКИ</Constant>
+			<Constant>ТокенAhunter</Constant>
 			<Constant>АхантерОКАТО</Constant>
 			<Constant>АхантерРегион</Constant>
+			<Constant>КоличествоЗаписейВЖурналеБанкротств</Constant>
 			<CommonForm>Вопрос</CommonForm>
 			<CommonForm>ВводАдреса</CommonForm>
 			<CommonForm>РабочийСтолМероприятия</CommonForm>
@@ -1845,6 +1913,7 @@
 			<CommonForm>РезультатПроверки</CommonForm>
 			<CommonForm>ЭлектроннаяПодпись</CommonForm>
 			<CommonForm>НастройкаВидимостиМодулей</CommonForm>
+			<CommonForm>НастройкаКонстантAhunter</CommonForm>
 			<CommonForm>ОператорИРегионНомера</CommonForm>
 			<CommonForm>АнализПортфеля</CommonForm>
 			<CommonForm>УправлениеОстатками</CommonForm>
@@ -1853,6 +1922,7 @@
 			<CommonForm>ЗавершениеОбновления</CommonForm>
 			<CommonForm>ВыборОтветственногоПоДО</CommonForm>
 			<CommonForm>ВыборТипаДокументаНаОтправку</CommonForm>
+			<CommonForm>УправлениеКИ</CommonForm>
 			<Catalog>Организации</Catalog>
 			<Catalog>ЗвуковыеФайлы</Catalog>
 			<Catalog>Банки</Catalog>
@@ -2007,6 +2077,13 @@
 			<Catalog>ОбщиеСвойства</Catalog>
 			<Catalog>ФункцииКонвертацииСвойств</Catalog>
 			<Catalog>НастройкиПроверкиРеестров</Catalog>
+			<Catalog>НБКИ_ПорядокВерсийРУТДФ</Catalog>
+			<Catalog>НастройкиЧатовТелеграм</Catalog>
+			<Catalog>НастройкиИсторииЧатовФайловаяСистема</Catalog>
+			<Catalog>РазнесениеСообщенийИзЧатов</Catalog>
+			<Catalog>НастройкиВыгрузкиКредитныхИсторий</Catalog>
+			<Catalog>КредитныеИстории_ВерсииНастроекБКИ</Catalog>
+			<Catalog>БКИ_КодыИсточника</Catalog>
 			<Document>АктПередачи</Document>
 			<Document>АктуализацияЗадолженности</Document>
 			<Document>ЗавершениеРаботыОрганизации</Document>
@@ -2081,9 +2158,16 @@
 			<Document>ОстаткиСчетов</Document>
 			<Document>СведенияОСчетах</Document>
 			<Document>СправочныеСведения</Document>
+			<Document>ИсполнительноеПроизводствоДляЗапросовФССП</Document>
+			<Document>НБКИ_УстановкаУникальныхЗначенийДляСделок</Document>
+			<Document>КредитныеИстории_ПодготовкаАдресовККорректировке</Document>
+			<Document>ХранилищеИсторииЧатов</Document>
+			<Document>ЗакрытиеСессии</Document>
+			<Document>ПризнакОбеспечиваемогоОбязательства</Document>
+			<Document>СведенияОДолговойНагрузкеЗаемщика</Document>
+			<Document>ВнесудебноеБанкротствоДолжника</Document>
 			<DocumentJournal>Взаимодействия</DocumentJournal>
 			<DocumentJournal>ЖурналДокументооборота</DocumentJournal>
-			<DocumentJournal>ЖурналНБКИ</DocumentJournal>
 			<DocumentJournal>ЖурналЗапросовДокументов</DocumentJournal>
 			<Enum>ВариантыSMTPАутентификации</Enum>
 			<Enum>Назначение</Enum>
@@ -2247,6 +2331,12 @@
 			<Enum>ТипыДокументовПолученияСведенийОСчетах</Enum>
 			<Enum>СтандартныеФункцииКонвертации</Enum>
 			<Enum>БЛогер_Уровни</Enum>
+			<Enum>ИдентификацияПлатежа_ЗначенияПорядкаПоиска</Enum>
+			<Enum>ПочтаРФ_ВерсияAPI</Enum>
+			<Enum>НБКИ_ТипыУникальныхЗначений</Enum>
+			<Enum>ОпределенияОператораДляСообщений</Enum>
+			<Enum>КредитныеИстории_БКИ</Enum>
+			<Enum>ПараметрСтранаДляAhunter</Enum>
 			<Enum>ТипыНарушений230ФЗ</Enum>
 			<Enum>ТипыМессенджеров</Enum>
 			<Report>РезультатыАвтоинформирования</Report>
@@ -2286,6 +2376,7 @@
 			<Report>СрезПлатежей</Report>
 			<Report>ЗадачиСотрудников</Report>
 			<Report>ФССП_ИзмененияСостоянийИП</Report>
+			<Report>ОтчетПоПлатежам</Report>
 			<Report>ПлатежиПоПериодам</Report>
 			<Report>ПроведенныеПлатежи</Report>
 			<Report>СрезМероприятий</Report>
@@ -2377,6 +2468,10 @@
 			<DataProcessor>ЗагрузкаИсторииМероприятий</DataProcessor>
 			<DataProcessor>ЗавершениеРаботыБитыеСсылки</DataProcessor>
 			<DataProcessor>УЗ_НормализацияАдресов</DataProcessor>
+			<DataProcessor>ЗагрузкаСудов</DataProcessor>
+			<DataProcessor>ПолучениеИсторииЧатов</DataProcessor>
+			<DataProcessor>СохранениеИсторииЧатов</DataProcessor>
+			<DataProcessor>ИсторияЧатов</DataProcessor>
 			<InformationRegister>бит_БитАТСНастройки</InformationRegister>
 			<InformationRegister>БезопасноеХранилищеДанныхОбластейДанных</InformationRegister>
 			<InformationRegister>ВерсииОбъектовАдресногоКлассификатора</InformationRegister>
@@ -2554,6 +2649,14 @@
 			<InformationRegister>АдресныйКлассификатор</InformationRegister>
 			<InformationRegister>ОчередьСклоненийФИО</InformationRegister>
 			<InformationRegister>БИТ_ПочтаРФ_ПараметрыПисем</InformationRegister>
+			<InformationRegister>КредитныеИстории_УникальныеЗначенияСделок</InformationRegister>
+			<InformationRegister>КредитныеИсторииСтруктураАдресаНаКорректировку</InformationRegister>
+			<InformationRegister>ЧатСессииСКлиентом</InformationRegister>
+			<InformationRegister>ИдентификаторыЧатовТелеграм</InformationRegister>
+			<InformationRegister>ХранилищеИсторииЧатов</InformationRegister>
+			<InformationRegister>ОтправленнаяКорреспонденцияБезШПИ</InformationRegister>
+			<InformationRegister>КредитныеИстории_ПолнаяСтоимостьКредита</InformationRegister>
+			<InformationRegister>ВременныйЖурналМассовыхВыгрузокКИ</InformationRegister>
 			<InformationRegister>ЖурналНарушений</InformationRegister>
 			<InformationRegister>ИсполнительныеПроизводства</InformationRegister>
 			<InformationRegister>ДелаОБанкротстве</InformationRegister>

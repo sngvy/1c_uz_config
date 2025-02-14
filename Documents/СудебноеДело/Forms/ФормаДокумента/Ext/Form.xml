@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
 	<AutoTime>CurrentOrLast</AutoTime>
@@ -642,11 +642,35 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаПодсудностьРасширеннаяПодсказка" id="206"/>
 					<ChildItems>
-						<Button name="ЗаполнитьПодсудность" id="239">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.ЗаполнитьПодсудность</CommandName>
-							<ExtendedTooltip name="ЗаполнитьПодсудностьРасширеннаяПодсказка" id="240"/>
-						</Button>
+						<UsualGroup name="ГруппаПодсудностьКоманды" id="520">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подсудность команды</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подсудность команды</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодсудностьКомандыРасширеннаяПодсказка" id="521"/>
+							<ChildItems>
+								<Button name="ЗаполнитьПодсудность" id="239">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗаполнитьПодсудность</CommandName>
+									<ExtendedTooltip name="ЗаполнитьПодсудностьРасширеннаяПодсказка" id="240"/>
+								</Button>
+								<Button name="ЗаполнитьРОСП" id="518">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗаполнитьРОСП</CommandName>
+									<ExtendedTooltip name="ЗаполнитьРОСПРасширеннаяПодсказка" id="519"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="НомерДела" id="218">
 							<DataPath>Объект.НомерДела</DataPath>
 							<ContextMenu name="НомерДелаКонтекстноеМеню" id="219"/>
@@ -672,6 +696,214 @@
 							<ContextMenu name="ПриставКонтекстноеМеню" id="216"/>
 							<ExtendedTooltip name="ПриставРасширеннаяПодсказка" id="217"/>
 						</InputField>
+						<UsualGroup name="ГруппаСписокРОСП" id="565">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список РОСП (для заполнения РОСП выполните двойной щелчок на строке с подходящим отделением)</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Для заполнения РОСП выполните двойной щелчок на строке с подходящим отделением</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список РОСП</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<Collapsed>true</Collapsed>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаСписокРОСПРасширеннаяПодсказка" id="566"/>
+							<ChildItems>
+								<Table name="СписокРОСП" id="567">
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Объект.СписокРОСП</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СписокРОСПКонтекстноеМеню" id="568"/>
+									<AutoCommandBar name="СписокРОСПКоманднаяПанель" id="569">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СписокРОСПРасширеннаяПодсказка" id="570"/>
+									<SearchStringAddition name="СписокРОСПСтрокаПоиска" id="571">
+										<Enabled>false</Enabled>
+										<AdditionSource>
+											<Item>СписокРОСП</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокРОСПСтрокаПоискаКонтекстноеМеню" id="572"/>
+										<ExtendedTooltip name="СписокРОСПСтрокаПоискаРасширеннаяПодсказка" id="573"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокРОСПСостояниеПросмотра" id="574">
+										<Enabled>false</Enabled>
+										<AdditionSource>
+											<Item>СписокРОСП</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокРОСПСостояниеПросмотраКонтекстноеМеню" id="575"/>
+										<ExtendedTooltip name="СписокРОСПСостояниеПросмотраРасширеннаяПодсказка" id="576"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокРОСПУправлениеПоиском" id="577">
+										<Enabled>false</Enabled>
+										<AdditionSource>
+											<Item>СписокРОСП</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокРОСПУправлениеПоискомКонтекстноеМеню" id="578"/>
+										<ExtendedTooltip name="СписокРОСПУправлениеПоискомРасширеннаяПодсказка" id="579"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">СписокРОСПВыбор</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокРОСПНомерСтроки" id="580">
+											<DataPath>Объект.СписокРОСП.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПНомерСтрокиКонтекстноеМеню" id="581"/>
+											<ExtendedTooltip name="СписокРОСПНомерСтрокиРасширеннаяПодсказка" id="582"/>
+										</LabelField>
+										<InputField name="СписокРОСПterotdel" id="583">
+											<DataPath>Объект.СписокРОСП.Наименование</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Территориальный отдел судебных приставов</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПterotdelКонтекстноеМеню" id="584"/>
+											<ExtendedTooltip name="СписокРОСПterotdelРасширеннаяПодсказка" id="585"/>
+										</InputField>
+										<InputField name="СписокРОСПfax" id="586">
+											<DataPath>Объект.СписокРОСП.Факс</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Факс</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПfaxКонтекстноеМеню" id="587"/>
+											<ExtendedTooltip name="СписокРОСПfaxРасширеннаяПодсказка" id="588"/>
+										</InputField>
+										<InputField name="СписокРОСПaddress" id="589">
+											<DataPath>Объект.СписокРОСП.ПочтовыйАдрес</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Адрес</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПaddressКонтекстноеМеню" id="590"/>
+											<ExtendedTooltip name="СписокРОСПaddressРасширеннаяПодсказка" id="591"/>
+										</InputField>
+										<InputField name="СписокРОСПworktime" id="592">
+											<DataPath>Объект.СписокРОСП.ГрафикРаботы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Часы приема</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПworktimeКонтекстноеМеню" id="593"/>
+											<ExtendedTooltip name="СписокРОСПworktimeРасширеннаяПодсказка" id="594"/>
+										</InputField>
+										<InputField name="СписокРОСПfio" id="595">
+											<DataPath>Объект.СписокРОСП.Руководитель</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ФИО старшего судебного пристава</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПfioКонтекстноеМеню" id="596"/>
+											<ExtendedTooltip name="СписокРОСПfioРасширеннаяПодсказка" id="597"/>
+										</InputField>
+										<InputField name="СписокРОСПinquiry_services_tel" id="598">
+											<DataPath>Объект.СписокРОСП.ТелефонСправочнойСлужбы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон справочной службы 1</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПinquiry_services_telКонтекстноеМеню" id="599"/>
+											<ExtendedTooltip name="СписокРОСПinquiry_services_telРасширеннаяПодсказка" id="600"/>
+										</InputField>
+										<InputField name="СписокРОСПinquiry_services_tel_2" id="601">
+											<DataPath>Объект.СписокРОСП.ТелефонСправочнойСлужбы2</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон справочной службы 2</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПinquiry_services_tel_2КонтекстноеМеню" id="602"/>
+											<ExtendedTooltip name="СписокРОСПinquiry_services_tel_2РасширеннаяПодсказка" id="603"/>
+										</InputField>
+										<InputField name="СписокРОСПphone" id="604">
+											<DataPath>Объект.СписокРОСП.Телефон</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Телефон</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПphoneКонтекстноеМеню" id="605"/>
+											<ExtendedTooltip name="СписокРОСПphoneРасширеннаяПодсказка" id="606"/>
+										</InputField>
+										<InputField name="СписокРОСПterritory" id="607">
+											<DataPath>Объект.СписокРОСП.ТерриторияОбслуживания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Районы обслуживания</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПterritoryКонтекстноеМеню" id="608"/>
+											<ExtendedTooltip name="СписокРОСПterritoryРасширеннаяПодсказка" id="609"/>
+										</InputField>
+										<InputField name="СписокРОСПСсылкаССП" id="610">
+											<DataPath>Объект.СписокРОСП.СсылкаССП</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ссылка на ССП</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПСсылкаССПКонтекстноеМеню" id="611"/>
+											<ExtendedTooltip name="СписокРОСПСсылкаССПРасширеннаяПодсказка" id="612"/>
+										</InputField>
+										<InputField name="СписокРОСПУФССП" id="613">
+											<DataPath>Объект.СписокРОСП.УФССП</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>УФССП</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СписокРОСПУФССПКонтекстноеМеню" id="614"/>
+											<ExtendedTooltip name="СписокРОСПУФССПРасширеннаяПодсказка" id="615"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаСтраницаРешение" id="210">
@@ -716,6 +948,12 @@
 							<Events>
 								<Event name="OnChange">РешениеПриИзменении</Event>
 							</Events>
+						</InputField>
+						<InputField name="РешениеКодРешенияДляКИ" id="616">
+							<DataPath>Объект.РешениеКодРешенияДляКИ</DataPath>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="РешениеКодРешенияДляКИКонтекстноеМеню" id="617"/>
+							<ExtendedTooltip name="РешениеКодРешенияДляКИРасширеннаяПодсказка" id="618"/>
 						</InputField>
 						<UsualGroup name="ГруппаРешение" id="358">
 							<Title>
@@ -1363,6 +1601,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьИД</Action>
+		</Command>
+		<Command name="ЗаполнитьРОСП" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить РОСП</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить РОСП</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРОСП</Action>
 		</Command>
 	</Commands>
 </Form>

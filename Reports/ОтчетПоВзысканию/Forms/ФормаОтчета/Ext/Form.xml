@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 	<Width>70</Width>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
@@ -40,128 +40,22 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаШапкаExtendedTooltip" id="50"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаПериод" id="27">
+				<InputField name="НачалоПериода" id="68">
+					<DataPath>НачалоПериода</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа период</v8:content>
+							<v8:content>Дата решения</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа период</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаПериодExtendedTooltip" id="51"/>
-					<ChildItems>
-						<InputField name="НачалоПериода" id="7">
-							<DataPath>НачалоПериода</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Период с</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="8"/>
-							<ExtendedTooltip name="НачалоПериодаExtendedTooltip" id="52"/>
-						</InputField>
-						<InputField name="КонецПериода" id="9">
-							<DataPath>КонецПериода</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>по</v8:content>
-								</v8:item>
-							</Title>
-							<ContextMenu name="КонецПериодаКонтекстноеМеню" id="10"/>
-							<ExtendedTooltip name="КонецПериодаExtendedTooltip" id="53"/>
-						</InputField>
-						<CheckBoxField name="КолонкаКредитор" id="47">
-							<DataPath>Отчет.КолонкаКредитор</DataPath>
-							<TitleLocation>Right</TitleLocation>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="КолонкаКредиторКонтекстноеМеню" id="48"/>
-							<ExtendedTooltip name="КолонкаКредиторExtendedTooltip" id="54"/>
-						</CheckBoxField>
-					</ChildItems>
-				</UsualGroup>
-				<UsualGroup name="ГруппаКонтрагент" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа контрагент</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа контрагент</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalStretch>false</HorizontalStretch>
-					<Group>Horizontal</Group>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаКонтрагентExtendedTooltip" id="55"/>
-					<ChildItems>
-						<InputField name="Контрагент" id="11">
-							<DataPath>Контрагент</DataPath>
-							<ClearButton>true</ClearButton>
-							<AutoMarkIncomplete>false</AutoMarkIncomplete>
-							<ContextMenu name="КонтрагентКонтекстноеМеню" id="12"/>
-							<ExtendedTooltip name="КонтрагентExtendedTooltip" id="56"/>
-						</InputField>
-						<InputField name="ДатаОтчета" id="4">
-							<DataPath>ДатаОтчета</DataPath>
-							<DefaultItem>true</DefaultItem>
-							<ContextMenu name="ДатаОтчетаКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="ДатаОтчетаExtendedTooltip" id="57"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаСотрудник" id="33">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа сотрудник</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа сотрудник</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Horizontal</Group>
-			<Behavior>Usual</Behavior>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаСотрудникExtendedTooltip" id="58"/>
-			<ChildItems>
-				<InputField name="Сотрудник" id="31">
-					<DataPath>Сотрудник</DataPath>
-					<HorizontalStretch>false</HorizontalStretch>
-					<ClearButton>true</ClearButton>
-					<ContextMenu name="СотрудникКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="СотрудникExtendedTooltip" id="59"/>
-				</InputField>
-				<InputField name="Подразделение" id="34">
-					<DataPath>Подразделение</DataPath>
-					<ClearButton>true</ClearButton>
-					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="35"/>
-					<ExtendedTooltip name="ПодразделениеExtendedTooltip" id="60"/>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НачалоПериодаКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="НачалоПериодаРасширеннаяПодсказка" id="70"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаДолжник" id="36">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -209,16 +103,6 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<InputField name="СтадияТекст" id="45">
-			<DataPath>СтадияТекст</DataPath>
-			<ChoiceButton>true</ChoiceButton>
-			<TextEdit>false</TextEdit>
-			<ContextMenu name="СтадияТекстКонтекстноеМеню" id="46"/>
-			<ExtendedTooltip name="СтадияТекстExtendedTooltip" id="66"/>
-			<Events>
-				<Event name="StartChoice">СтадияНачалоВыбора</Event>
-			</Events>
-		</InputField>
 		<SpreadSheetDocumentField name="ТабПоле" id="1">
 			<DataPath>ТабДок</DataPath>
 			<TitleLocation>None</TitleLocation>
@@ -227,72 +111,6 @@
 			<ContextMenu name="ТабПолеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ТабПолеExtendedTooltip" id="67"/>
 		</SpreadSheetDocumentField>
-		<Table name="ТабКод" id="13">
-			<Representation>List</Representation>
-			<Visible>false</Visible>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<FileDragMode>AsFile</FileDragMode>
-			<DataPath>ТабКод</DataPath>
-			<SearchStringLocation>None</SearchStringLocation>
-			<ViewStatusLocation>None</ViewStatusLocation>
-			<SearchControlLocation>None</SearchControlLocation>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ТабКодКонтекстноеМеню" id="14"/>
-			<AutoCommandBar name="ТабКодКоманднаяПанель" id="15"/>
-			<ExtendedTooltip name="ТабКодExtendedTooltip" id="68"/>
-			<SearchStringAddition name="ТабКодSearchString" id="69">
-				<AdditionSource>
-					<Item>ТабКод</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ТабКодSearchStringContextMenu" id="70"/>
-				<ExtendedTooltip name="ТабКодSearchStringExtendedTooltip" id="71"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ТабКодViewStatus" id="72">
-				<AdditionSource>
-					<Item>ТабКод</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ТабКодViewStatusContextMenu" id="73"/>
-				<ExtendedTooltip name="ТабКодViewStatusExtendedTooltip" id="74"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ТабКодSearchControl" id="75">
-				<AdditionSource>
-					<Item>ТабКод</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ТабКодSearchControlContextMenu" id="76"/>
-				<ExtendedTooltip name="ТабКодSearchControlExtendedTooltip" id="77"/>
-			</SearchControlAddition>
-			<ChildItems>
-				<InputField name="ТабКодКодТипаМероприятия" id="16">
-					<DataPath>ТабКод.КодТипаМероприятия</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТабКодКодТипаМероприятияКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ТабКодКодТипаМероприятияExtendedTooltip" id="78"/>
-				</InputField>
-				<InputField name="ТабКодКодДопРеквизитаМероприятия" id="18">
-					<DataPath>ТабКод.КодДопРеквизитаМероприятия</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТабКодКодДопРеквизитаМероприятияКонтекстноеМеню" id="19"/>
-					<ExtendedTooltip name="ТабКодКодДопРеквизитаМероприятияExtendedTooltip" id="79"/>
-				</InputField>
-				<InputField name="ТабКодНомерКолонки" id="20">
-					<DataPath>ТабКод.НомерКолонки</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТабКодНомерКолонкиКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ТабКодНомерКолонкиExtendedTooltip" id="80"/>
-				</InputField>
-				<InputField name="ТабКодКодРезультата" id="25">
-					<DataPath>ТабКод.КодРезультата</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТабКодКодРезультатаКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="ТабКодКодРезультатаExtendedTooltip" id="81"/>
-				</InputField>
-			</ChildItems>
-		</Table>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Отчет" id="1">

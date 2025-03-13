@@ -3391,8 +3391,8 @@
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
 							<SearchControlLocation>None</SearchControlLocation>
-							<AutoRefresh>false</AutoRefresh>
-							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>3</AutoRefreshPeriod>
 							<Period>
 								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
 								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
@@ -3435,75 +3435,16 @@
 								<ExtendedTooltip name="НайденныеИПУправлениеПоискомРасширеннаяПодсказка" id="1140"/>
 							</SearchControlAddition>
 							<ChildItems>
-								<LabelField name="НайденныеИПИП" id="1141">
-									<DataPath>НайденныеИП.ИП</DataPath>
-									<ContextMenu name="НайденныеИПИПКонтекстноеМеню" id="1142"/>
-									<ExtendedTooltip name="НайденныеИПИПРасширеннаяПодсказка" id="1143"/>
-								</LabelField>
 								<LabelField name="НайденныеИПДатаПроверки" id="1144">
 									<DataPath>НайденныеИП.ДатаПроверки</DataPath>
 									<ContextMenu name="НайденныеИПДатаПроверкиКонтекстноеМеню" id="1145"/>
 									<ExtendedTooltip name="НайденныеИПДатаПроверкиРасширеннаяПодсказка" id="1146"/>
 								</LabelField>
-								<LabelField name="НайденныеИПДолжник" id="1147">
-									<DataPath>НайденныеИП.Должник</DataPath>
-									<ContextMenu name="НайденныеИПДолжникКонтекстноеМеню" id="1148"/>
-									<ExtendedTooltip name="НайденныеИПДолжникРасширеннаяПодсказка" id="1149"/>
-								</LabelField>
-								<LabelField name="НайденныеИПОСП" id="1150">
-									<DataPath>НайденныеИП.ОСП</DataPath>
-									<ContextMenu name="НайденныеИПОСПКонтекстноеМеню" id="1151"/>
-									<ExtendedTooltip name="НайденныеИПОСПРасширеннаяПодсказка" id="1152"/>
-								</LabelField>
-								<LabelField name="НайденныеИПИД" id="1153">
-									<DataPath>НайденныеИП.ИД</DataPath>
-									<ContextMenu name="НайденныеИПИДКонтекстноеМеню" id="1154"/>
-									<ExtendedTooltip name="НайденныеИПИДРасширеннаяПодсказка" id="1155"/>
-								</LabelField>
-								<LabelField name="НайденныеИПВзыскатель" id="1156">
-									<DataPath>НайденныеИП.Взыскатель</DataPath>
-									<ContextMenu name="НайденныеИПВзыскательКонтекстноеМеню" id="1157"/>
-									<ExtendedTooltip name="НайденныеИПВзыскательРасширеннаяПодсказка" id="1158"/>
-								</LabelField>
-								<LabelField name="НайденныеИПСПИ" id="1159">
-									<DataPath>НайденныеИП.СПИ</DataPath>
-									<ContextMenu name="НайденныеИПСПИКонтекстноеМеню" id="1160"/>
-									<ExtendedTooltip name="НайденныеИПСПИРасширеннаяПодсказка" id="1161"/>
-								</LabelField>
-								<LabelField name="НайденныеИПТелефонСПИ" id="1162">
-									<DataPath>НайденныеИП.ТелефонСПИ</DataPath>
-									<ContextMenu name="НайденныеИПТелефонСПИКонтекстноеМеню" id="1163"/>
-									<ExtendedTooltip name="НайденныеИПТелефонСПИРасширеннаяПодсказка" id="1164"/>
-								</LabelField>
-								<LabelField name="НайденныеИПДатаВозбуждения" id="1165">
-									<DataPath>НайденныеИП.ДатаВозбуждения</DataPath>
-									<ContextMenu name="НайденныеИПДатаВозбужденияКонтекстноеМеню" id="1166"/>
-									<ExtendedTooltip name="НайденныеИПДатаВозбужденияРасширеннаяПодсказка" id="1167"/>
-								</LabelField>
-								<LabelField name="НайденныеИПСуммаЗадолженности" id="1168">
-									<DataPath>НайденныеИП.СуммаЗадолженности</DataPath>
-									<ContextMenu name="НайденныеИПСуммаЗадолженностиКонтекстноеМеню" id="1169"/>
-									<ExtendedTooltip name="НайденныеИПСуммаЗадолженностиРасширеннаяПодсказка" id="1170"/>
-								</LabelField>
-								<LabelField name="НайденныеИПСуммаИсполнительскогоСбора" id="1171">
-									<DataPath>НайденныеИП.СуммаИсполнительскогоСбора</DataPath>
-									<ContextMenu name="НайденныеИПСуммаИсполнительскогоСбораКонтекстноеМеню" id="1172"/>
-									<ExtendedTooltip name="НайденныеИПСуммаИсполнительскогоСбораРасширеннаяПодсказка" id="1173"/>
-								</LabelField>
-								<LabelField name="НайденныеИПВсего" id="1174">
-									<DataPath>НайденныеИП.Всего</DataPath>
-									<ContextMenu name="НайденныеИПВсегоКонтекстноеМеню" id="1175"/>
-									<ExtendedTooltip name="НайденныеИПВсегоРасширеннаяПодсказка" id="1176"/>
-								</LabelField>
-								<LabelField name="НайденныеИПТипИД" id="1177">
-									<DataPath>НайденныеИП.ТипИД</DataPath>
-									<ContextMenu name="НайденныеИПТипИДКонтекстноеМеню" id="1178"/>
-									<ExtendedTooltip name="НайденныеИПТипИДРасширеннаяПодсказка" id="1179"/>
-								</LabelField>
-								<LabelField name="НайденныеИПСтатусИД" id="1180">
-									<DataPath>НайденныеИП.СтатусИД</DataPath>
-									<ContextMenu name="НайденныеИПСтатусИДКонтекстноеМеню" id="1181"/>
-									<ExtendedTooltip name="НайденныеИПСтатусИДРасширеннаяПодсказка" id="1182"/>
+								<LabelField name="НайденныеИПРезультатПроверки" id="1245">
+									<DataPath>НайденныеИП.РезультатПроверки</DataPath>
+									<AutoCellHeight>true</AutoCellHeight>
+									<ContextMenu name="НайденныеИПРезультатПроверкиКонтекстноеМеню" id="1246"/>
+									<ExtendedTooltip name="НайденныеИПРезультатПроверкиРасширеннаяПодсказка" id="1247"/>
 								</LabelField>
 							</ChildItems>
 						</Table>
@@ -5035,7 +4976,7 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>ДатаВозбуждения</dcsset:field>
+							<dcsset:field>ДатаПроверки</dcsset:field>
 							<dcsset:orderType>Desc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

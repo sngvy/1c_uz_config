@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<Width>40</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
@@ -44,10 +45,11 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.2.15.1 от 19.02.2025&lt;/&gt;&lt;/&gt;
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.4.2 от 02.04.2025&lt;/&gt;&lt;/&gt;
 
-&lt;i&gt;Версия модуля интеграции с Федресурсом: 4.11.29&lt;/&gt;
-&lt;i&gt;Версия модуля интеграции с ФССП: 5.2.15&lt;/&gt;</v8:content>
+&lt;color #808080&gt;Версия модуля интеграции с Федресурсом: 4.11.29&lt;/&gt;
+&lt;color #808080&gt;Версия модуля интеграции с ФССП: 5.4.2&lt;/&gt;
+&lt;color #808080&gt;Версия модуля интеграции с WhatsApp: 3.11.20&lt;/&gt;</v8:content>
 						</v8:item>
 					</Title>
 					<GroupVerticalAlign>Center</GroupVerticalAlign>
@@ -96,11 +98,11 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Исправлена ошибка, когда у рководителя колл-центра могли не отображаться уведомления о нарушениях 230-ФЗ
+									<v8:content>● Исправлено длительное нахождение отправленных СМС в статусе "В очереди"
 
-● Общее исправление ошибок от разработчика за декабрь 2024 г.
+● Применены исправления для корректной работы интеграции с ФССП
 
-● Повышена стабильность соединения с ФССП</v8:content>
+● Мелкие улучшения интерфейса и общих модулей</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформацияОВерсииИсправленияКонтекстноеМеню" id="15"/>
@@ -132,13 +134,7 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Добавлена возможность загружать реестры с адресами эл. почты совместно с телефонами должников
-
-● Для руководителя колл-центра добавлено оповещение о наличии новых записей в журнале банкротств
-
-● Рашсирена функциональность по формированию КИ (Интеграция с НБКИ → Управление КИ)
-
-● Добавлена поддержка единого формата кредитных историй</v8:content>
+									<v8:content>● Добавлена возможность проведения массовых рассылок СМС с учетом соблюдения 230-ФЗ (Информирование → Массовая отправка СМС)</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>
@@ -166,14 +162,6 @@
 					<ExtendedTooltip name="ГруппаИзмененияРасширеннаяПодсказка" id="34"/>
 					<ChildItems>
 						<LabelDecoration name="ИнформацияОВерсииИзменения" id="24">
-							<Title formatted="false">
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>● Изменено поведение поля "Результат" в форме мероприятия: нажатие на поле вызывает быстрый выбор из наиболее часто используемых результатов, а кнопка "..." вызывает полный список результатов по мероприятию
-
-● Интеграции с ФССП и Федресурсом вынесены в отдельные разделы</v8:content>
-								</v8:item>
-							</Title>
 							<ContextMenu name="ИнформацияОВерсииИзмененияКонтекстноеМеню" id="25"/>
 							<ExtendedTooltip name="ИнформацияОВерсииИзмененияРасширеннаяПодсказка" id="26"/>
 						</LabelDecoration>
@@ -182,7 +170,13 @@
 			</ChildItems>
 		</Pages>
 		<LabelDecoration name="ИнформацияОВерсииДополнительнаяИнформация" id="35">
-			<Title formatted="true"/>
+			<Visible>false</Visible>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;color #ff0000&gt;&lt;img :b0dd988f-2d9f-4364-b1f4-a4d5f45ffb78:00000000-0000-0000-0000-000000000000/&gt; Из-за изменений со стороны поставщика информации автоматическое обновление данных по исполнительным производствам временно приостановлено. Для проверки актуальных сведений необходимо вручную обновить информацию в разделе «Исполнительные пр-ва» в карточке ДО.&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
 			<ContextMenu name="ИнформацияОВерсииДополнительнаяИнформацияКонтекстноеМеню" id="36"/>
 			<ExtendedTooltip name="ИнформацияОВерсииДополнительнаяИнформацияРасширеннаяПодсказка" id="37"/>
 		</LabelDecoration>

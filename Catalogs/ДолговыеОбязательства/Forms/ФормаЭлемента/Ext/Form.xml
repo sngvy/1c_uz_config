@@ -214,6 +214,22 @@
 						</Picture>
 						<ExtendedTooltip name="ПередатьПоПричинеСмертиРасширеннаяПодсказка" id="1017"/>
 					</Button>
+					<Button name="ПередатьВЮД" id="1245">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПередатьВЮД</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_ЮД16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Передать в ЮД</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ПередатьВЮДРасширеннаяПодсказка" id="1246"/>
+					</Button>
 				</ChildItems>
 			</Popup>
 		</ChildItems>
@@ -5519,6 +5535,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьМероприятиеОтправкиНаНомер</Action>
+		</Command>
+		<Command name="ПередатьВЮД" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать ВЮД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Передать ВЮД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПередатьВЮД</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

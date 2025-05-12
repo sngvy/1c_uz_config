@@ -6,16 +6,16 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
-			<Button name="ВыполнитьЗапрос" id="1">
+			<Button name="ФормаЗапросить" id="1">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
+				<CommandName>Form.Command.Запросить</CommandName>
 				<Picture>
 					<xr:Ref>StdPicture.GenerateReport</xr:Ref>
 					<xr:LoadTransparent>true</xr:LoadTransparent>
 				</Picture>
-				<ExtendedTooltip name="ВыполнитьЗапросРасширеннаяПодсказка" id="2"/>
+				<ExtendedTooltip name="ФормаЗапроситьРасширеннаяПодсказка" id="2"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -39,10 +39,10 @@
 			<ContextMenu name="ВремяВРегионеКонтекстноеМеню" id="13"/>
 			<ExtendedTooltip name="ВремяВРегионеРасширеннаяПодсказка" id="14"/>
 		</LabelField>
-		<LabelField name="Оператор" id="15">
-			<DataPath>ПеренесенКДругомуОператору</DataPath>
-			<ContextMenu name="ОператорКонтекстноеМеню" id="16"/>
-			<ExtendedTooltip name="ОператорРасширеннаяПодсказка" id="17"/>
+		<LabelField name="ПереносКДругомуОператору" id="15">
+			<DataPath>ПереносКДругомуОператору</DataPath>
+			<ContextMenu name="ПереносКДругомуОператоруКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="ПереносКДругомуОператоруРасширеннаяПодсказка" id="17"/>
 		</LabelField>
 		<HTMLDocumentField name="Определитель" id="3">
 			<DataPath>Определитель</DataPath>
@@ -118,11 +118,11 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПеренесенКДругомуОператору" id="5">
+		<Attribute name="ПереносКДругомуОператору" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перенесен к другому оператору</v8:content>
+					<v8:content>Перенос к другому оператору</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -135,20 +135,20 @@
 		</Attribute>
 	</Attributes>
 	<Commands>
-		<Command name="ВыполнитьЗапрос" id="1">
+		<Command name="Запросить" id="1">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить запрос</v8:content>
+					<v8:content>Запросить</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить запрос</v8:content>
+					<v8:content>Запросить</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ВыполнитьЗапросОпределитель</Action>
+			<Action>Запросить</Action>
 		</Command>
 	</Commands>
 </Form>

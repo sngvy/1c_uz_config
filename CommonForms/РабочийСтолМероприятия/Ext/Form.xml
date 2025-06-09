@@ -474,6 +474,16 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаУправлениеОстаткамиРасширеннаяПодсказка" id="1562"/>
 					</Button>
+					<Button name="ФормаЗапуститьIVR" id="1591">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ЗапуститьIVR</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.ExternalDataSourceCube</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаЗапуститьIVRРасширеннаяПодсказка" id="1592"/>
+					</Button>
 					<Button name="ФормаПосчитатьДолжников" id="1332">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.ПосчитатьДолжников</CommandName>
@@ -9106,6 +9116,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьДО</Action>
+		</Command>
+		<Command name="ЗапуститьIVR" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить IVR</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить IVR</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьIVR</Action>
 		</Command>
 	</Commands>
 </Form>

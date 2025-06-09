@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="РезультатыИнформирования" id="7">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.РезультатыИнформирования</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РезультатыИнформированияКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="РезультатыИнформированияКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="РезультатыИнформированияРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="РезультатыИнформированияСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>РезультатыИнформирования</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыИнформированияСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="РезультатыИнформированияСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РезультатыИнформированияСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>РезультатыИнформирования</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыИнформированияСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="РезультатыИнформированияСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РезультатыИнформированияУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>РезультатыИнформирования</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РезультатыИнформированияУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="РезультатыИнформированияУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="РезультатыИнформированияНомерСтроки" id="20">
+					<DataPath>Объект.РезультатыИнформирования.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РезультатыИнформированияНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="РезультатыИнформированияНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="РезультатыИнформированияДата" id="23">
+					<DataPath>Объект.РезультатыИнформирования.Дата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РезультатыИнформированияДатаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="РезультатыИнформированияДатаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="РезультатыИнформированияСписок" id="26">
+					<DataPath>1/0:854349e5-a3a7-44e3-b884-7f1511d4e27e/0:afe8d301-26d1-42a2-b986-bad229737786</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РезультатыИнформированияСписокКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="РезультатыИнформированияСписокРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="РезультатыИнформированияТелефон" id="29">
+					<DataPath>Объект.РезультатыИнформирования.Телефон</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РезультатыИнформированияТелефонКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="РезультатыИнформированияТелефонРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="РезультатыИнформированияРезультат" id="32">
+					<DataPath>1/0:854349e5-a3a7-44e3-b884-7f1511d4e27e/0:e77d9474-80d9-481a-b14f-48814cd32fe0</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РезультатыИнформированияРезультатКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="РезультатыИнформированияРезультатРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="РезультатыИнформированияДО" id="35">
+					<DataPath>Объект.РезультатыИнформирования.ДО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РезультатыИнформированияДОКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="РезультатыИнформированияДОРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="РезультатыИнформированияДействие" id="38">
+					<DataPath>Объект.РезультатыИнформирования.Действие</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="РезультатыИнформированияДействиеКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="РезультатыИнформированияДействиеРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.IVRИнформирование</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

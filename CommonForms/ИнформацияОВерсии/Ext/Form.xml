@@ -3,8 +3,10 @@
 	<Width>40</Width>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveWindowSettings>false</SaveWindowSettings>
 	<SettingsStorage>SettingsStorage.ХранилищеНастроек</SettingsStorage>
 	<VerticalSpacing>Half</VerticalSpacing>
+	<Customizable>false</Customizable>
 	<CommandBarLocation>None</CommandBarLocation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
@@ -45,7 +47,7 @@
 					<Title formatted="true">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.6.10 от 10.06.2025&lt;/&gt;&lt;/&gt;
+							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.6.10.2 от 23.06.2025&lt;/&gt;&lt;/&gt;
 
 &lt;color #808080&gt;Версия модуля интеграции с Федресурсом: 4.11.29&lt;/&gt;
 &lt;color #808080&gt;Версия модуля интеграции с ФССП: 5.5.12&lt;/&gt;
@@ -98,7 +100,11 @@
 							<Title formatted="false">
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>● Исправлено длительное нахождение отправленных СМС в статусе "В очереди"
+									<v8:content>● Исправлена проблема, которая могла приводить к поступлению второго звонка в момент заполнения комментария по мероприятию
+
+● Исправлена проблема, которая могла приводить к ошибке при отправке СМС из формы ДО
+
+● Исправлено длительное нахождение отправленных СМС в статусе "В очереди"
 
 ● Применены исправления для корректной работы интеграции с ФССП
 
@@ -140,8 +146,7 @@
 
 ● Добавлена возможность передачи договора в ЮД из формы ДО (Служебные → Передать в ЮД)
 
-● Добавлена возможность отключения оповещений от ФССП для РКЦ
-</v8:content>
+● Добавлена возможность отключения оповещений от ФССП для РКЦ</v8:content>
 								</v8:item>
 							</Title>
 							<ContextMenu name="ИнформацияОВерсииНовоеКонтекстноеМеню" id="20"/>

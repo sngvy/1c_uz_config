@@ -5018,6 +5018,7 @@
 					<v8:content>Группа служебная</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
 			<Representation>StrongSeparation</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаСлужебнаяРасширеннаяПодсказка" id="1424"/>
@@ -5035,13 +5036,13 @@
 							<v8:content>Группа навигация</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаНавигацияРасширеннаяПодсказка" id="1581"/>
 					<ChildItems>
 						<InputField name="НомерДО" id="1575">
 							<DataPath>НомерДО</DataPath>
 							<MaxWidth>10</MaxWidth>
-							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="НомерДОКонтекстноеМеню" id="1576"/>
 							<ExtendedTooltip name="НомерДОРасширеннаяПодсказка" id="1577"/>
 						</InputField>
@@ -5058,7 +5059,7 @@
 						<Button name="ФормаИнформацияОВерсии" id="1421">
 							<Type>UsualButton</Type>
 							<Representation>Picture</Representation>
-							<CommandName>Form.Command.ПоказатьСписокИзменений</CommandName>
+							<CommandName>Form.Command.ИнформацияОВерсии</CommandName>
 							<Picture>
 								<xr:Ref>CommonPicture.NC_ИнформацияОВерсии16</xr:Ref>
 								<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -5102,9 +5103,25 @@
 							<v8:content>Группа версия</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаВерсияРасширеннаяПодсказка" id="1583"/>
 					<ChildItems>
+						<PictureDecoration name="ВерсияИконка" id="1593">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Версия иконка</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_1С16</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ВерсияИконкаКонтекстноеМеню" id="1594"/>
+							<ExtendedTooltip name="ВерсияИконкаРасширеннаяПодсказка" id="1595"/>
+						</PictureDecoration>
 						<LabelField name="ВерсияКонфигурацииNC" id="1418">
 							<DataPath>ВерсияКонфигурацииNC</DataPath>
 							<Enabled>false</Enabled>
@@ -5115,7 +5132,6 @@
 									<v8:content>Версия</v8:content>
 								</v8:item>
 							</Title>
-							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="ВерсияКонфигурацииNCКонтекстноеМеню" id="1419"/>
 							<ExtendedTooltip name="ВерсияКонфигурацииNCРасширеннаяПодсказка" id="1420"/>
 						</LabelField>
@@ -5134,14 +5150,29 @@
 							<v8:content>Группа телефон</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаТелефонРасширеннаяПодсказка" id="1585"/>
 					<ChildItems>
+						<PictureDecoration name="ТелефонИконка" id="1596">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Телефон иконка</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Подключен16</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ТелефонИконкаКонтекстноеМеню" id="1597"/>
+							<ExtendedTooltip name="ТелефонИконкаРасширеннаяПодсказка" id="1598"/>
+						</PictureDecoration>
 						<LabelField name="Телефон" id="1563">
 							<DataPath>Телефон</DataPath>
 							<Enabled>false</Enabled>
 							<ReadOnly>true</ReadOnly>
-							<HorizontalStretch>false</HorizontalStretch>
 							<ContextMenu name="ТелефонКонтекстноеМеню" id="1564"/>
 							<ExtendedTooltip name="ТелефонРасширеннаяПодсказка" id="1565"/>
 						</LabelField>
@@ -5160,12 +5191,27 @@
 							<v8:content>Группа настройки</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="1590"/>
 					<ChildItems>
+						<PictureDecoration name="ОповещенияИконка" id="1599">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Оповещения иконка</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Оповещения</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ОповещенияИконкаКонтекстноеМеню" id="1600"/>
+							<ExtendedTooltip name="ОповещенияИконкаРасширеннаяПодсказка" id="1601"/>
+						</PictureDecoration>
 						<CheckBoxField name="ОповещенияФССП" id="1586">
 							<DataPath>ОповещенияФССП</DataPath>
-							<Enabled>false</Enabled>
 							<CheckBoxType>Switcher</CheckBoxType>
 							<ContextMenu name="ОповещенияФССПКонтекстноеМеню" id="1587"/>
 							<ExtendedTooltip name="ОповещенияФССПРасширеннаяПодсказка" id="1588"/>
@@ -8937,20 +8983,20 @@
 			</ToolTip>
 			<Action>ДолжникПогашенияСудебные</Action>
 		</Command>
-		<Command name="ПоказатьСписокИзменений" id="52">
+		<Command name="ИнформацияОВерсии" id="52">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать список изменений</v8:content>
+					<v8:content>Информация о версии</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать список изменений</v8:content>
+					<v8:content>Информация о версии</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ПоказатьСписокИзменений</Action>
+			<Action>ИнформацияОВерсии</Action>
 		</Command>
 		<Command name="ПроверитьПодключение" id="53">
 			<Title>

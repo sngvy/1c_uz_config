@@ -518,6 +518,16 @@
 						</Picture>
 						<ExtendedTooltip name="ФормаПроверкаПо230ФЗРасширеннаяПодсказка" id="1440"/>
 					</Button>
+					<Button name="ФормаПропущенныеВызовы" id="1602">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПропущенныеВызовы</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_НеБеспокоить16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаПропущенныеВызовыРасширеннаяПодсказка" id="1603"/>
+					</Button>
 					<Button name="ФормаОтчетыАТС" id="583">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -9177,6 +9187,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапуститьIVR</Action>
+		</Command>
+		<Command name="ПропущенныеВызовы" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущенные вызовы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пропущенные вызовы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПропущенныеВызовы</Action>
 		</Command>
 	</Commands>
 </Form>

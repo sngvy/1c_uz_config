@@ -81,6 +81,11 @@
 				<ExtendedTooltip name="ПропущенныеВызовыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 			</SearchControlAddition>
 			<ChildItems>
+				<LabelField name="Дата" id="25">
+					<DataPath>ПропущенныеВызовы.Дата</DataPath>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="27"/>
+				</LabelField>
 				<InputField name="Номер" id="14">
 					<DataPath>ПропущенныеВызовы.Номер</DataPath>
 					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
@@ -151,6 +156,7 @@
 				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	analytics.calldate КАК Дата,
 	analytics.src КАК Номер
 ИЗ
 	ВнешнийИсточникДанных.BITPBX_ANALYTICS.Таблица.analytics КАК analytics
@@ -159,7 +165,8 @@
 	И analytics.disposition = "NOANSWERED"
 
 СГРУППИРОВАТЬ ПО
-	analytics.src</QueryText>
+	analytics.src,
+	analytics.calldate</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Номер</dcssch:dataPath>
 					<dcssch:field>Номер</dcssch:field>
@@ -167,6 +174,16 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Номер</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Дата</dcssch:dataPath>
+					<dcssch:field>Дата</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
 						</v8:item>
 					</dcssch:title>
 				</Field>
@@ -211,7 +228,7 @@
 					</dcsset:filter>
 					<dcsset:order>
 						<dcsset:item xsi:type="dcsset:OrderItemField">
-							<dcsset:field>calldate</dcsset:field>
+							<dcsset:field>Дата</dcsset:field>
 							<dcsset:orderType>Desc</dcsset:orderType>
 						</dcsset:item>
 						<dcsset:viewMode>Normal</dcsset:viewMode>

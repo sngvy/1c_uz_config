@@ -12,7 +12,7 @@
 		Заголовки = Новый Соответствие;
 		Заголовки.Вставить("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko");
 		Заголовки.Вставить("Content-Type", "application/json");
-		Заголовки.Вставить("Cookie", "_ym_uid=174601109241701423; _ym_d=1746011092; _ym_isad=2; qrator_jsid2=v2.0.1747223568.409.5d5cc2569nbjY2Th|qsMD1DMAZn4drTVM|7bbLtO0faOw5VDHOww0kyJx6MK6XDOe+igHZERGderSi3/SnSztOo97och9cedJLxlqLEIpbDQKiP5aljT/JIgpcy1EEvhAJimaBCjr1g8qxpNmCIcBPstGKr/nbGdPriVgVOdG9SynrGOuyP6lFQQ==-mhz1slar5nu5MapsrXMHOb1QrS8=; _ym_visorc=b");
+		Заголовки.Вставить("Cookie", "qrator_jsr=v2.0.1756036917.688.5d5cc256zaoKf3ag|OAjcT5D72X8eHHPj|TOvyMi+bEqNTyMsQIizXftimSEwUc4JzSJmShxmEgG/UxaxWV9unCWg38pXvJVfzQphs42mG9rVD3yC71DROMw==-PY0QC5HjxOAT6j5L9/cCX1QdK+8=-00; qrator_jsid2=v2.0.1756036917.688.5d5cc256zaoKf3ag|D3qmITcjZe4lZpWB|mQyIb6/zqbQUEzYGkZRlSrg9jmTvJFCTS4YSr2yS6vedyyXgDQyR/N7Jdsm8wDrotn7HaLdmvFaWTm1MUYTbqrZMot5HADyuVuK/oWuQpPnWOxfeykfqcHH1sD9UN64tKIvQf+3EX4M4WSNczEeAFA==-13rOBNNz3utQXrQ3DwbpXTHU33M=; _ym_uid=1756036920809053398; _ym_d=1756036920; _ym_isad=2; _ym_visorc=w");
 		Заголовки.Вставить("Host", "bankrot.fedresurs.ru");
 		Заголовки.Вставить("Referer", "https://bankrot.fedresurs.ru/bankrupts?searchString=" + КодироватьСтроку(Должник, СпособКодированияСтроки.КодировкаURL) + "&isActiveLegalCase=null&limit=15&offset=0");
 		Запрос = Новый HTTPЗапрос("/backend/prsnbankrupts?searchString=" + Должник + "&regionId=" + КодРегиона + "&isActiveLegalCase=null&offset=0&limit=15", Заголовки);
@@ -74,7 +74,7 @@
 					Заголовки.Вставить("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko");
 					Заголовки.Вставить("Host","fedresurs.ru");
 					Заголовки.Вставить("Content-Type", "application/json");
-					Заголовки.Вставить("Cookie", "_ym_uid=174601109241701423; _ym_d=1746011092; _ym_isad=2; qrator_jsid2=v2.0.1747223568.409.5d5cc2569nbjY2Th|qsMD1DMAZn4drTVM|7bbLtO0faOw5VDHOww0kyJx6MK6XDOe+igHZERGderSi3/SnSztOo97och9cedJLxlqLEIpbDQKiP5aljT/JIgpcy1EEvhAJimaBCjr1g8qxpNmCIcBPstGKr/nbGdPriVgVOdG9SynrGOuyP6lFQQ==-mhz1slar5nu5MapsrXMHOb1QrS8=; _ym_visorc=b");
+					Заголовки.Вставить("Cookie", "qrator_jsr=v2.0.1756036917.688.5d5cc256zaoKf3ag|OAjcT5D72X8eHHPj|TOvyMi+bEqNTyMsQIizXftimSEwUc4JzSJmShxmEgG/UxaxWV9unCWg38pXvJVfzQphs42mG9rVD3yC71DROMw==-PY0QC5HjxOAT6j5L9/cCX1QdK+8=-00; qrator_jsid2=v2.0.1756036917.688.5d5cc256zaoKf3ag|D3qmITcjZe4lZpWB|mQyIb6/zqbQUEzYGkZRlSrg9jmTvJFCTS4YSr2yS6vedyyXgDQyR/N7Jdsm8wDrotn7HaLdmvFaWTm1MUYTbqrZMot5HADyuVuK/oWuQpPnWOxfeykfqcHH1sD9UN64tKIvQf+3EX4M4WSNczEeAFA==-13rOBNNz3utQXrQ3DwbpXTHU33M=; _ym_uid=1756036920809053398; _ym_d=1756036920; _ym_isad=2; _ym_visorc=w");
 					Заголовки.Вставить("Referer", "https://fedresurs.ru/");
 					Запрос = Новый HTTPЗапрос("backend/persons/" + ГУИД, Заголовки);
 					Ответ = Соединение.ВызватьHTTPМетод("GET", Запрос);
@@ -92,7 +92,7 @@
 						Заголовки.Вставить("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko");
 						Заголовки.Вставить("Host","fedresurs.ru");
 						Заголовки.Вставить("Content-Type", "application/json");
-						Заголовки.Вставить("Cookie", "_ym_uid=174601109241701423; _ym_d=1746011092; _ym_isad=2; qrator_jsid2=v2.0.1747223568.409.5d5cc2569nbjY2Th|qsMD1DMAZn4drTVM|7bbLtO0faOw5VDHOww0kyJx6MK6XDOe+igHZERGderSi3/SnSztOo97och9cedJLxlqLEIpbDQKiP5aljT/JIgpcy1EEvhAJimaBCjr1g8qxpNmCIcBPstGKr/nbGdPriVgVOdG9SynrGOuyP6lFQQ==-mhz1slar5nu5MapsrXMHOb1QrS8=; _ym_visorc=b");
+						Заголовки.Вставить("Cookie", "qrator_jsr=v2.0.1756036917.688.5d5cc256zaoKf3ag|OAjcT5D72X8eHHPj|TOvyMi+bEqNTyMsQIizXftimSEwUc4JzSJmShxmEgG/UxaxWV9unCWg38pXvJVfzQphs42mG9rVD3yC71DROMw==-PY0QC5HjxOAT6j5L9/cCX1QdK+8=-00; qrator_jsid2=v2.0.1756036917.688.5d5cc256zaoKf3ag|D3qmITcjZe4lZpWB|mQyIb6/zqbQUEzYGkZRlSrg9jmTvJFCTS4YSr2yS6vedyyXgDQyR/N7Jdsm8wDrotn7HaLdmvFaWTm1MUYTbqrZMot5HADyuVuK/oWuQpPnWOxfeykfqcHH1sD9UN64tKIvQf+3EX4M4WSNczEeAFA==-13rOBNNz3utQXrQ3DwbpXTHU33M=; _ym_uid=1756036920809053398; _ym_d=1756036920; _ym_isad=2; _ym_visorc=w");
 						Заголовки.Вставить("Referer", "https://fedresurs.ru/");
 						Заголовки.Вставить("Referer", "https://fedresurs.ru/");
 						Запрос = Новый HTTPЗапрос("backend/persons/" + ГУИД + "/bankruptcy", Заголовки);
@@ -150,6 +150,13 @@
 						Если Стадия = Неопределено Тогда
 							Попытка							
 								Стадия = Сообщения.legalCases[0].lastPublications[0].typeName
+							Исключение;
+							КонецПопытки;
+						КонецЕсли;
+						// Для внесудебного банкротства
+						Если Стадия = Неопределено Тогда
+							Попытка							
+								Стадия = Сообщения.extrajudicialBankruptcy[0].typeName
 							Исключение;
 							КонецПопытки;
 						КонецЕсли;
@@ -271,6 +278,7 @@
 							ДО = Выборка.Ссылка;
 							Если ОбъектыСервер.ПолучитьЗначениеСвойства(ДО,"0181") <> Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000034")
 								И ОбъектыСервер.ПолучитьЗначениеСвойства(ДО,"0182") <> Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000048") Тогда // Проверка на передачу в ЮД 
+								// Признаки окончания процесса банкротства
 								Если Стадия = "Производство по делу завершено"
 									ИЛИ Стадия = "Производство по делу прекращено"
 									ИЛИ Стадия = "Сообщение о судебном акте"
@@ -278,20 +286,30 @@
 									ИЛИ Стадия = "Сообщение о завершении процедуры внесудебного банкротства гражданина"
 									ИЛИ Стадия = "Реструктуризация долгов гражданина"
 									ИЛИ Стадия = "Реализация имущества гражданина" Тогда
-									ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0181", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000034"));
-									ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0182", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000036"));
-									ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0137", ТекущаяДата());
+									// Не отправлять в архив по внесудебному банкротству
+									Если Управляющий <> "МФЦ" Тогда
+										ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0181", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000034"));
+										ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0182", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000036"));
+										ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0137", ТекущаяДата());
+									КонецЕсли;
 								ИначеЕсли
-									Стадия = "Производство по делу завершено"
+									// Признаки процесса банкротства
+									Стадия <> "Производство по делу завершено"
 									И Стадия <> "Производство по делу прекращено"
 									И Стадия <> "Сообщение о судебном акте"
 									И Стадия <> "Сообщение о собрании кредиторов"
 									И Стадия <> "Сообщение о завершении процедуры внесудебного банкротства гражданина"
 									И Стадия <> "Реструктуризация долгов гражданина"
-									И Стадия <> "Реализация имущества гражданина" Тогда
-									ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0181", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000031"));
-									ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0182", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000051"));
+									И Стадия <> "Реализация имущества гражданина"
+									И Стадия <> "Сообщение о возврате гражданину поданного им заявления о признании гражданина банкротом во внесудебном порядке"
+									И Стадия <> "Аннулирование ранее опубликованного сообщения" Тогда
+									// Не отправлять в СТОП по внесудебному банкротству
+									Если Управляющий <> "МФЦ" Тогда
+										ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0181", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000031"));
+										ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0182", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000051"));
+									КонецЕсли;
 								ИначеЕсли
+									// Признаки остановки процесса банкротства
 									Стадия = "Сообщение о возврате гражданину поданного им заявления о признании гражданина банкротом во внесудебном порядке"
 									ИЛИ Стадия = "Аннулирование ранее опубликованного сообщения" Тогда
 									ОбъектыСервер.ЗаписатьЗначениеСвойства(ДО, "0181", Справочники.тсЗначенияСвойствОбъектов.НайтиПоКоду("000000029"));

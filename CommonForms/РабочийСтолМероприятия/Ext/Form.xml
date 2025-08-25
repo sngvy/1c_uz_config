@@ -5220,6 +5220,12 @@
 							<ContextMenu name="ОповещенияИконкаКонтекстноеМеню" id="1600"/>
 							<ExtendedTooltip name="ОповещенияИконкаРасширеннаяПодсказка" id="1601"/>
 						</PictureDecoration>
+						<CheckBoxField name="ОповещенияЕФРСБ" id="1604">
+							<DataPath>ОповещенияЕФРСБ</DataPath>
+							<CheckBoxType>Switcher</CheckBoxType>
+							<ContextMenu name="ОповещенияЕФРСБКонтекстноеМеню" id="1605"/>
+							<ExtendedTooltip name="ОповещенияЕФРСБРасширеннаяПодсказка" id="1606"/>
+						</CheckBoxField>
 						<CheckBoxField name="ОповещенияФССП" id="1586">
 							<DataPath>ОповещенияФССП</DataPath>
 							<CheckBoxType>Switcher</CheckBoxType>
@@ -7965,6 +7971,20 @@
 			</Type>
 			<Save>
 				<Field>ОповещенияФССП</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОповещенияЕФРСБ" id="100">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оповещения ЕФРСБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОповещенияЕФРСБ</Field>
 			</Save>
 		</Attribute>
 		<ConditionalAppearance>

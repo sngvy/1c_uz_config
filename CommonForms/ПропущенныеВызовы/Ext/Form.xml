@@ -157,7 +157,7 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	analytics.calldate КАК Дата,
-	analytics.src КАК Номер
+	СтрЗаменить(analytics.src, "+", "") КАК Номер
 ИЗ
 	ВнешнийИсточникДанных.BITPBX_ANALYTICS.Таблица.analytics КАК analytics
 ГДЕ
@@ -165,8 +165,8 @@
 	И analytics.disposition = "NOANSWERED"
 
 СГРУППИРОВАТЬ ПО
-	analytics.src,
-	analytics.calldate</QueryText>
+	analytics.calldate,
+	analytics.src</QueryText>
 				<Field xsi:type="dcssch:DataSetFieldField">
 					<dcssch:dataPath>Номер</dcssch:dataPath>
 					<dcssch:field>Номер</dcssch:field>

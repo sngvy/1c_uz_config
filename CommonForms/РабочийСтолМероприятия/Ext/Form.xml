@@ -5188,22 +5188,22 @@
 						</LabelField>
 					</ChildItems>
 				</UsualGroup>
-				<UsualGroup name="ГруппаНастройки" id="1589">
+				<UsualGroup name="ГруппаОповещения" id="1589">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки</v8:content>
+							<v8:content>Оповещения</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа настройки</v8:content>
+							<v8:content>Группа оповещения</v8:content>
 						</v8:item>
 					</ToolTip>
 					<Group>AlwaysHorizontal</Group>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="1590"/>
+					<ExtendedTooltip name="ГруппаОповещенияРасширеннаяПодсказка" id="1590"/>
 					<ChildItems>
 						<PictureDecoration name="ОповещенияИконка" id="1599">
 							<Title formatted="false">
@@ -5231,6 +5231,46 @@
 							<CheckBoxType>Switcher</CheckBoxType>
 							<ContextMenu name="ОповещенияФССПКонтекстноеМеню" id="1587"/>
 							<ExtendedTooltip name="ОповещенияФССПРасширеннаяПодсказка" id="1588"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаБитФон" id="1613">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БитФон</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа бит фон</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаБитФонРасширеннаяПодсказка" id="1614"/>
+					<ChildItems>
+						<PictureDecoration name="БитФонИконка" id="1610">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Бит фон иконка</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<Picture>
+								<xr:Ref>CommonPicture.NC_Запуск</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="БитФонИконкаКонтекстноеМеню" id="1611"/>
+							<ExtendedTooltip name="БитФонИконкаРасширеннаяПодсказка" id="1612"/>
+						</PictureDecoration>
+						<CheckBoxField name="ЗапускатьБИТPhone" id="1607">
+							<DataPath>ЗапускатьБИТPhone</DataPath>
+							<CheckBoxType>Switcher</CheckBoxType>
+							<ContextMenu name="ЗапускатьБИТPhoneКонтекстноеМеню" id="1608"/>
+							<ExtendedTooltip name="ЗапускатьБИТPhoneРасширеннаяПодсказка" id="1609"/>
 						</CheckBoxField>
 					</ChildItems>
 				</UsualGroup>
@@ -7985,6 +8025,21 @@
 			</Type>
 			<Save>
 				<Field>ОповещенияЕФРСБ</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ЗапускатьБИТPhone" id="101">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запускать БИТ.Phone</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Save>
+				<Field>ЗапускатьБИТPhone</Field>
 			</Save>
 		</Attribute>
 		<ConditionalAppearance>

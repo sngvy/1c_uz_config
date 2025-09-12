@@ -19,84 +19,102 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
-		<Table name="Список" id="1">
-			<CommandBarLocation>None</CommandBarLocation>
-			<UseAlternationRowColor>true</UseAlternationRowColor>
-			<EnableStartDrag>true</EnableStartDrag>
-			<DataPath>СписокДО</DataPath>
-			<RowPictureDataPath>СписокДО.DefaultPicture</RowPictureDataPath>
-			<SearchStringLocation>Top</SearchStringLocation>
-			<AutoRefresh>false</AutoRefresh>
-			<AutoRefreshPeriod>60</AutoRefreshPeriod>
-			<Period>
-				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
-				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
-			</Period>
-			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-			<RestoreCurrentRow>false</RestoreCurrentRow>
-			<TopLevelParent xsi:nil="true"/>
-			<ShowRoot>true</ShowRoot>
-			<AllowRootChoice>false</AllowRootChoice>
-			<UpdateOnDataChange>Auto</UpdateOnDataChange>
-			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
-			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
-			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
-			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
-			<SearchStringAddition name="СписокСтрокаПоиска" id="5">
-				<AdditionSource>
-					<Item>Список</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
-				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
-				<AdditionSource>
-					<Item>Список</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
-				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СписокУправлениеПоиском" id="11">
-				<AdditionSource>
-					<Item>Список</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
-				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
-			</SearchControlAddition>
+		<UsualGroup name="ГруппаСписокДО" id="108">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список ДО</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список ДО</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСписокДОРасширеннаяПодсказка" id="109"/>
 			<ChildItems>
-				<LabelField name="СписокСсылка" id="71">
-					<DataPath>СписокДО.Ref</DataPath>
-					<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="72"/>
-					<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="73"/>
-				</LabelField>
-				<LabelField name="СписокДолжник" id="29">
-					<DataPath>СписокДО.Должник</DataPath>
-					<ContextMenu name="СписокДолжникКонтекстноеМеню" id="30"/>
-					<ExtendedTooltip name="СписокДолжникРасширеннаяПодсказка" id="31"/>
-				</LabelField>
-				<LabelField name="СписокКредитор" id="35">
-					<DataPath>СписокДО.Кредитор</DataPath>
-					<ContextMenu name="СписокКредиторКонтекстноеМеню" id="36"/>
-					<ExtendedTooltip name="СписокКредиторРасширеннаяПодсказка" id="37"/>
-				</LabelField>
-				<CheckBoxField name="СписокЗапретАвтообзвона" id="65">
-					<DataPath>СписокДО.ЗапретАвтообзвона</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СписокЗапретАвтообзвонаКонтекстноеМеню" id="66"/>
-					<ExtendedTooltip name="СписокЗапретАвтообзвонаРасширеннаяПодсказка" id="67"/>
-				</CheckBoxField>
-				<CheckBoxField name="СписокНеконтактныеНомера" id="68">
-					<DataPath>СписокДО.НеконтактныеНомера</DataPath>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СписокНеконтактныеНомераКонтекстноеМеню" id="69"/>
-					<ExtendedTooltip name="СписокНеконтактныеНомераРасширеннаяПодсказка" id="70"/>
-				</CheckBoxField>
+				<Table name="Список" id="1">
+					<CommandBarLocation>None</CommandBarLocation>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>СписокДО</DataPath>
+					<RowPictureDataPath>СписокДО.DefaultPicture</RowPictureDataPath>
+					<SearchStringLocation>Top</SearchStringLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="СписокСсылка" id="71">
+							<DataPath>СписокДО.Ref</DataPath>
+							<ContextMenu name="СписокСсылкаКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="СписокСсылкаРасширеннаяПодсказка" id="73"/>
+						</LabelField>
+						<LabelField name="СписокДолжник" id="29">
+							<DataPath>СписокДО.Должник</DataPath>
+							<ContextMenu name="СписокДолжникКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="СписокДолжникРасширеннаяПодсказка" id="31"/>
+						</LabelField>
+						<LabelField name="СписокКредитор" id="35">
+							<DataPath>СписокДО.Кредитор</DataPath>
+							<ContextMenu name="СписокКредиторКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="СписокКредиторРасширеннаяПодсказка" id="37"/>
+						</LabelField>
+						<CheckBoxField name="СписокЗапретАвтообзвона" id="65">
+							<DataPath>СписокДО.ЗапретАвтообзвона</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокЗапретАвтообзвонаКонтекстноеМеню" id="66"/>
+							<ExtendedTooltip name="СписокЗапретАвтообзвонаРасширеннаяПодсказка" id="67"/>
+						</CheckBoxField>
+						<CheckBoxField name="СписокНеконтактныеНомера" id="68">
+							<DataPath>СписокДО.НеконтактныеНомера</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокНеконтактныеНомераКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="СписокНеконтактныеНомераРасширеннаяПодсказка" id="70"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
-		</Table>
+		</UsualGroup>
 		<UsualGroup name="ГруппаНастройки" id="106">
 			<Title>
 				<v8:item>
@@ -123,87 +141,105 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<Table name="СписокРассылки" id="74">
-			<Representation>List</Representation>
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>СписокРассылки</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="СписокРассылкиКонтекстноеМеню" id="75"/>
-			<AutoCommandBar name="СписокРассылкиКоманднаяПанель" id="76">
-				<ChildItems>
-					<Button name="ФормаОтправить" id="92">
-						<Type>CommandBarButton</Type>
-						<Representation>PictureAndText</Representation>
-						<CommandName>Form.Command.Отправить</CommandName>
-						<TextColor>web:White</TextColor>
-						<BackColor>style:ImportantColor</BackColor>
-						<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
-						<Picture>
-							<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
-							<xr:LoadTransparent>true</xr:LoadTransparent>
-						</Picture>
-						<ExtendedTooltip name="ФормаОтправитьРасширеннаяПодсказка" id="93"/>
-					</Button>
-				</ChildItems>
-			</AutoCommandBar>
-			<ExtendedTooltip name="СписокРассылкиРасширеннаяПодсказка" id="77"/>
-			<SearchStringAddition name="СписокРассылкиСтрокаПоиска" id="78">
-				<AdditionSource>
-					<Item>СписокРассылки</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокРассылкиСтрокаПоискаКонтекстноеМеню" id="79"/>
-				<ExtendedTooltip name="СписокРассылкиСтрокаПоискаРасширеннаяПодсказка" id="80"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="СписокРассылкиСостояниеПросмотра" id="81">
-				<AdditionSource>
-					<Item>СписокРассылки</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокРассылкиСостояниеПросмотраКонтекстноеМеню" id="82"/>
-				<ExtendedTooltip name="СписокРассылкиСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="СписокРассылкиУправлениеПоиском" id="84">
-				<AdditionSource>
-					<Item>СписокРассылки</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="СписокРассылкиУправлениеПоискомКонтекстноеМеню" id="85"/>
-				<ExtendedTooltip name="СписокРассылкиУправлениеПоискомРасширеннаяПодсказка" id="86"/>
-			</SearchControlAddition>
+		<UsualGroup name="ГруппаСписокРассылки" id="110">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список рассылки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список рассылки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаСписокРассылкиРасширеннаяПодсказка" id="111"/>
 			<ChildItems>
-				<InputField name="СписокРассылкиДО" id="87">
-					<DataPath>СписокРассылки.ДО</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="СписокРассылкиДОКонтекстноеМеню" id="88"/>
-					<ExtendedTooltip name="СписокРассылкиДОРасширеннаяПодсказка" id="89"/>
-				</InputField>
-				<InputField name="СписокРассылкиНомер" id="97">
-					<DataPath>СписокРассылки.Номер</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="СписокРассылкиНомерКонтекстноеМеню" id="98"/>
-					<ExtendedTooltip name="СписокРассылкиНомерРасширеннаяПодсказка" id="99"/>
-				</InputField>
-				<InputField name="СписокРассылкиТекст" id="100">
-					<DataPath>СписокРассылки.Текст</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-					<ContextMenu name="СписокРассылкиТекстКонтекстноеМеню" id="101"/>
-					<ExtendedTooltip name="СписокРассылкиТекстРасширеннаяПодсказка" id="102"/>
-				</InputField>
-				<CheckBoxField name="СписокРассылкиОтправлено" id="103">
-					<DataPath>СписокРассылки.Отправлено</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<CheckBoxType>Auto</CheckBoxType>
-					<ContextMenu name="СписокРассылкиОтправленоКонтекстноеМеню" id="104"/>
-					<ExtendedTooltip name="СписокРассылкиОтправленоРасширеннаяПодсказка" id="105"/>
-				</CheckBoxField>
+				<Table name="СписокРассылки" id="74">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>СписокРассылки</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="СписокРассылкиКонтекстноеМеню" id="75"/>
+					<AutoCommandBar name="СписокРассылкиКоманднаяПанель" id="76">
+						<ChildItems>
+							<Button name="ФормаОтправить" id="92">
+								<Type>CommandBarButton</Type>
+								<Representation>PictureAndText</Representation>
+								<CommandName>Form.Command.Отправить</CommandName>
+								<TextColor>web:White</TextColor>
+								<BackColor>style:ImportantColor</BackColor>
+								<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+								<Picture>
+									<xr:Ref>CommonPicture.ОтправитьSMS</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ФормаОтправитьРасширеннаяПодсказка" id="93"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="СписокРассылкиРасширеннаяПодсказка" id="77"/>
+					<SearchStringAddition name="СписокРассылкиСтрокаПоиска" id="78">
+						<AdditionSource>
+							<Item>СписокРассылки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокРассылкиСтрокаПоискаКонтекстноеМеню" id="79"/>
+						<ExtendedTooltip name="СписокРассылкиСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокРассылкиСостояниеПросмотра" id="81">
+						<AdditionSource>
+							<Item>СписокРассылки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокРассылкиСостояниеПросмотраКонтекстноеМеню" id="82"/>
+						<ExtendedTooltip name="СписокРассылкиСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокРассылкиУправлениеПоиском" id="84">
+						<AdditionSource>
+							<Item>СписокРассылки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокРассылкиУправлениеПоискомКонтекстноеМеню" id="85"/>
+						<ExtendedTooltip name="СписокРассылкиУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="СписокРассылкиДО" id="87">
+							<DataPath>СписокРассылки.ДО</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СписокРассылкиДОКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="СписокРассылкиДОРасширеннаяПодсказка" id="89"/>
+						</InputField>
+						<InputField name="СписокРассылкиНомер" id="97">
+							<DataPath>СписокРассылки.Номер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СписокРассылкиНомерКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="СписокРассылкиНомерРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="СписокРассылкиТекст" id="100">
+							<DataPath>СписокРассылки.Текст</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="СписокРассылкиТекстКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="СписокРассылкиТекстРасширеннаяПодсказка" id="102"/>
+						</InputField>
+						<CheckBoxField name="СписокРассылкиОтправлено" id="103">
+							<DataPath>СписокРассылки.Отправлено</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="СписокРассылкиОтправленоКонтекстноеМеню" id="104"/>
+							<ExtendedTooltip name="СписокРассылкиОтправленоРасширеннаяПодсказка" id="105"/>
+						</CheckBoxField>
+					</ChildItems>
+				</Table>
 			</ChildItems>
-		</Table>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СписокДО" id="2">

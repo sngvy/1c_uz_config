@@ -8,7 +8,7 @@
 			Соединение = Новый HTTPСоединение("api.xn--80ajbekothchmme5j.xn--p1ai", 443,,,,, SSL);
 			
 			Заголовки = Новый Соответствие;
-			Заголовки.Вставить("Authorization", "Bearer " + "9Y00rwdONZwKMavdeuuINnhuZ-6gNfrE");
+			Заголовки.Вставить("Authorization", "Bearer " + "aG4Ca-zx5gxmW456dtkwrFW3mlKDmn9d");
 			Заголовки.Вставить("Content-Type", "application/json");
 			
 			Данные = Новый Структура();
@@ -24,7 +24,7 @@
 			ЗаписатьJSON(ЗаписьJSON, Данные);            
 			ТелоЗапроса = ЗаписьJSON.Закрыть(); 
 			
-			Запрос = Новый HTTPЗапрос("/fssp/frontend-search?yandexToken=dD0xNzU2MDM2NjM2O2k9OTMuOTIuMTk0Ljg2O0Q9MjhDODE4MEQ0MjU4RTA4NDA5ODQ0MEZCQzEwNTAzQzhFQzk5NkEzRERFMkFGNzVGODlFMzkyQUJCODQ5Q0U4MzdBNjZFRDFDMkZFRjY1NDMxNUY2QUIwMzYxQjQ2RDk0RDc4QjE4NDU4QUVFOUNEM0U1NUQ5MzczNkYzMUVEOTVFOTA4NEM2RUYzMTRBMjI4QTc5NkZBMTBEMTI2RTRCMjt1PTE3NTYwMzY2MzY1ODIwNzU1ODg7aD1lZmM3NDBhNzU5NDBhNDkwMTVjYzQyZjc5N2EyZTgzNA==&lead_source_id=search&lead_source_id_ext=google", Заголовки);
+			Запрос = Новый HTTPЗапрос("/fssp/frontend-search?yandexToken=dD0xNzU3NDUyMzQ5O2k9OTMuOTIuMTk0Ljg2O0Q9NjJENkJDNDY4RjAzRDA1NDZGQzUyODQ5MEJCRjM0RjU3MTIwRjI3NzZBMzUyM0IxQUNGRjc2OTg1NDVBQTIzODdGRkFGNDYxREQyNTE3QUZCMTg0QzMwOTdGNDg0RUU4OEJFMDlFQTFDNUE4NjJFRTdFOTg2ODgxMkNCNzNGQUZGQjY4Q0E2RTkxMkI0NDYzREY2NkM2OUFCRjM4QkI4OTlBO3U9MTc1NzQ1MjM0OTA5Nzk2MjEwOTtoPWI1NGVhYTY5NzdiYTgzNTEwNzkxMWYyNDg0OTI2NWUz&lead_source_id=search&lead_source_id_ext=google", Заголовки);
 			Запрос.УстановитьТелоИзСтроки(ТелоЗапроса);
 			
 			Ответ = Соединение.ВызватьHTTPМетод("POST", Запрос);

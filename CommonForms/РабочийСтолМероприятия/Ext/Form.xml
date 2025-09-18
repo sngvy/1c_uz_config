@@ -215,6 +215,15 @@
 						</Title>
 						<ExtendedTooltip name="ФормаViberРасширеннаяПодсказка" id="1488"/>
 					</Button>
+					<Button name="ФормаEmail" id="1615">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Email</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЭлектронноеПисьмо</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаEmailРасширеннаяПодсказка" id="1616"/>
+					</Button>
 					<Button name="ФормаКонтрольОплаты" id="571">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -8042,6 +8051,15 @@
 				<Field>ЗапускатьБИТPhone</Field>
 			</Save>
 		</Attribute>
+		<Attribute name="ТипEmail" id="102">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип email</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -9277,6 +9295,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПропущенныеВызовы</Action>
+		</Command>
+		<Command name="Email" id="66">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Email</Action>
 		</Command>
 	</Commands>
 </Form>

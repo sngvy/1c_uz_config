@@ -85,6 +85,16 @@
 						</Title>
 						<ExtendedTooltip name="ФормаViberРасширеннаяПодсказка" id="107"/>
 					</Button>
+					<Button name="ФормаEmail" id="110">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.Email</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.ЭлектронноеПисьмо</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаEmailРасширеннаяПодсказка" id="111"/>
+					</Button>
 					<Button name="ФормаЗакрепитьДолжника" id="102">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -972,6 +982,15 @@
 			</Title>
 			<Type/>
 		</Attribute>
+		<Attribute name="ТипEmail" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип email</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОтменитьВыполнение" id="1">
@@ -1134,6 +1153,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗвонокКредитору</Action>
+		</Command>
+		<Command name="Email" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Email</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Email</Action>
 		</Command>
 	</Commands>
 </Form>

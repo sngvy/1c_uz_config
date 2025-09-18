@@ -244,191 +244,208 @@
 		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаНомер" id="50">
+		<UsualGroup name="ГруппаДоговор" id="1247">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа номер</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Nömrə qrupu</v8:content>
+					<v8:content>Договор</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа номер</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Nömrə qrupu</v8:content>
+					<v8:content>Группа договор</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаНомерExtendedTooltip" id="110"/>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаДоговорРасширеннаяПодсказка" id="1248"/>
 			<ChildItems>
-				<InputField name="Наименование" id="6">
-					<DataPath>Объект.Description</DataPath>
-					<TitleHeight>2</TitleHeight>
-					<EditMode>EnterOnInput</EditMode>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<ContextMenu name="НаименованиеКонтекстноеМеню" id="7"/>
-					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="111"/>
-				</InputField>
-				<InputField name="Код" id="51">
-					<DataPath>Объект.Code</DataPath>
-					<ContextMenu name="КодКонтекстноеМеню" id="52"/>
-					<ExtendedTooltip name="КодExtendedTooltip" id="112"/>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ГруппаВладелец" id="55">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа владелец</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа владелец</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Group>Vertical</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаВладелецExtendedTooltip" id="113"/>
-			<ChildItems>
-				<InputField name="Должник" id="102">
-					<DataPath>Должник</DataPath>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<DropListButton>false</DropListButton>
-					<OpenButton>true</OpenButton>
-					<AutoMarkIncomplete>true</AutoMarkIncomplete>
-					<ChooseType>false</ChooseType>
-					<ChoiceListButton>true</ChoiceListButton>
-					<ContextMenu name="ДолжникКонтекстноеМеню" id="103"/>
-					<ExtendedTooltip name="ДолжникExtendedTooltip" id="114"/>
-					<Events>
-						<Event name="OnChange">ПолеПриИзменении</Event>
-						<Event name="Opening">ПолеОткрытие</Event>
-						<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
-						<Event name="Clearing">ПолеОчистка</Event>
-					</Events>
-				</InputField>
-				<InputField name="Контрагент" id="56">
-					<DataPath>Контрагент</DataPath>
-					<Visible>false</Visible>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<OpenButton>true</OpenButton>
-					<ChooseType>false</ChooseType>
-					<ChoiceListButton>true</ChoiceListButton>
-					<ContextMenu name="КонтрагентКонтекстноеМеню" id="57"/>
-					<ExtendedTooltip name="КонтрагентExtendedTooltip" id="115"/>
-					<Events>
-						<Event name="OnChange">ПолеПриИзменении</Event>
-						<Event name="Opening">ПолеОткрытие</Event>
-						<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
-						<Event name="Clearing">ПолеОчистка</Event>
-					</Events>
-				</InputField>
-				<InputField name="Кредитор" id="104">
-					<DataPath>Кредитор</DataPath>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<DropListButton>false</DropListButton>
-					<OpenButton>true</OpenButton>
-					<ChooseType>false</ChooseType>
-					<ChoiceListButton>true</ChoiceListButton>
-					<ContextMenu name="КредиторКонтекстноеМеню" id="105"/>
-					<ExtendedTooltip name="КредиторExtendedTooltip" id="116"/>
-					<Events>
-						<Event name="OnChange">ПолеПриИзменении</Event>
-						<Event name="Opening">ПолеОткрытие</Event>
-						<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
-						<Event name="Clearing">ПолеОчистка</Event>
-					</Events>
-				</InputField>
-				<InputField name="Услуга" id="100">
-					<DataPath>Услуга</DataPath>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<DropListButton>false</DropListButton>
-					<OpenButton>true</OpenButton>
-					<ChooseType>false</ChooseType>
-					<ChoiceListButton>true</ChoiceListButton>
-					<ContextMenu name="УслугаКонтекстноеМеню" id="101"/>
-					<ExtendedTooltip name="УслугаExtendedTooltip" id="117"/>
-					<Events>
-						<Event name="OnChange">ПолеПриИзменении</Event>
-						<Event name="Opening">ПолеОткрытие</Event>
-						<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
-						<Event name="Clearing">ПолеОчистка</Event>
-					</Events>
-				</InputField>
-			</ChildItems>
-		</UsualGroup>
-		<UsualGroup name="ШапкаНомера" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка номера</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Шапка номера</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Width>60</Width>
-			<Group>Horizontal</Group>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ШапкаНомераExtendedTooltip" id="118"/>
-			<ChildItems>
-				<InputField name="ТипДолговогоОбязательства" id="9">
-					<DataPath>Объект.ТипДолговогоОбязательства</DataPath>
+				<UsualGroup name="ГруппаНомер" id="50">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Тип ДО</v8:content>
-						</v8:item>
-					</Title>
-					<AutoMaxWidth>false</AutoMaxWidth>
-					<AutoMaxHeight>false</AutoMaxHeight>
-					<DropListButton>false</DropListButton>
-					<OpenButton>false</OpenButton>
-					<ContextMenu name="ТипДолговогоОбязательстваКонтекстноеМеню" id="10"/>
-					<ExtendedTooltip name="ТипДолговогоОбязательстваExtendedTooltip" id="119"/>
-					<Events>
-						<Event name="OnChange">ТипДолговогоОбязательстваПриИзменении</Event>
-					</Events>
-				</InputField>
-				<InputField name="ВалютаДоговора" id="11">
-					<DataPath>Объект.ВалютаДоговора</DataPath>
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Валюта</v8:content>
+							<v8:content>Группа номер</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>az</v8:lang>
-							<v8:content>Valyuta</v8:content>
+							<v8:content>Nömrə qrupu</v8:content>
 						</v8:item>
 					</Title>
-					<DropListButton>false</DropListButton>
-					<OpenButton>false</OpenButton>
-					<ContextMenu name="ВалютаДоговораКонтекстноеМеню" id="12"/>
-					<ExtendedTooltip name="ВалютаДоговораExtendedTooltip" id="120"/>
-				</InputField>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа номер</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>az</v8:lang>
+							<v8:content>Nömrə qrupu</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаНомерExtendedTooltip" id="110"/>
+					<ChildItems>
+						<InputField name="Наименование" id="6">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="НаименованиеExtendedTooltip" id="111"/>
+						</InputField>
+						<InputField name="Код" id="51">
+							<DataPath>Объект.Code</DataPath>
+							<ContextMenu name="КодКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="КодExtendedTooltip" id="112"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВладелец" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа владелец</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа владелец</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВладелецExtendedTooltip" id="113"/>
+					<ChildItems>
+						<InputField name="Должник" id="102">
+							<DataPath>Должник</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<DropListButton>false</DropListButton>
+							<OpenButton>true</OpenButton>
+							<AutoMarkIncomplete>true</AutoMarkIncomplete>
+							<ChooseType>false</ChooseType>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="ДолжникКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="ДолжникExtendedTooltip" id="114"/>
+							<Events>
+								<Event name="OnChange">ПолеПриИзменении</Event>
+								<Event name="Opening">ПолеОткрытие</Event>
+								<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="Контрагент" id="56">
+							<DataPath>Контрагент</DataPath>
+							<Visible>false</Visible>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<OpenButton>true</OpenButton>
+							<ChooseType>false</ChooseType>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="КонтрагентExtendedTooltip" id="115"/>
+							<Events>
+								<Event name="OnChange">ПолеПриИзменении</Event>
+								<Event name="Opening">ПолеОткрытие</Event>
+								<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="Кредитор" id="104">
+							<DataPath>Кредитор</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<DropListButton>false</DropListButton>
+							<OpenButton>true</OpenButton>
+							<ChooseType>false</ChooseType>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="КредиторКонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="КредиторExtendedTooltip" id="116"/>
+							<Events>
+								<Event name="OnChange">ПолеПриИзменении</Event>
+								<Event name="Opening">ПолеОткрытие</Event>
+								<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+						<InputField name="Услуга" id="100">
+							<DataPath>Услуга</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<DropListButton>false</DropListButton>
+							<OpenButton>true</OpenButton>
+							<ChooseType>false</ChooseType>
+							<ChoiceListButton>true</ChoiceListButton>
+							<ContextMenu name="УслугаКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="УслугаExtendedTooltip" id="117"/>
+							<Events>
+								<Event name="OnChange">ПолеПриИзменении</Event>
+								<Event name="Opening">ПолеОткрытие</Event>
+								<Event name="StartListChoice">ПолеНачалоВыбораИзСписка</Event>
+								<Event name="Clearing">ПолеОчистка</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ШапкаНомера" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка номера</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка номера</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>60</Width>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаНомераExtendedTooltip" id="118"/>
+					<ChildItems>
+						<InputField name="ТипДолговогоОбязательства" id="9">
+							<DataPath>Объект.ТипДолговогоОбязательства</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Тип ДО</v8:content>
+								</v8:item>
+							</Title>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<DropListButton>false</DropListButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ТипДолговогоОбязательстваКонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ТипДолговогоОбязательстваExtendedTooltip" id="119"/>
+							<Events>
+								<Event name="OnChange">ТипДолговогоОбязательстваПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВалютаДоговора" id="11">
+							<DataPath>Объект.ВалютаДоговора</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Валюта</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>az</v8:lang>
+									<v8:content>Valyuta</v8:content>
+								</v8:item>
+							</Title>
+							<DropListButton>false</DropListButton>
+							<OpenButton>false</OpenButton>
+							<ContextMenu name="ВалютаДоговораКонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="ВалютаДоговораExtendedTooltip" id="120"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<InputField name="Организация" id="48">
@@ -2599,8 +2616,7 @@
 					<ChildItems>
 						<Button name="ОбновитьОтчетЗадолженности" id="813">
 							<Type>UsualButton</Type>
-							<Representation>Picture</Representation>
-							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Representation>PictureAndText</Representation>
 							<CommandName>Form.Command.ОбновитьОтчетЗадолженности</CommandName>
 							<Picture>
 								<xr:Ref>StdPicture.Reread</xr:Ref>
@@ -2612,7 +2628,7 @@
 							<DataPath>ТабличныйДокумент</DataPath>
 							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
-							<Height>4</Height>
+							<VerticalStretch>false</VerticalStretch>
 							<VerticalScrollBar>false</VerticalScrollBar>
 							<HorizontalScrollBar>false</HorizontalScrollBar>
 							<SelectionShowMode>WhenActive</SelectionShowMode>
@@ -2641,8 +2657,6 @@
 					<ExtendedTooltip name="ГруппаТелефонныеНомераРасширеннаяПодсказка" id="544"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаКонтактностьНомеров" id="933">
-							<Enabled>false</Enabled>
-							<ReadOnly>true</ReadOnly>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -2661,7 +2675,6 @@
 							<ChildItems>
 								<CheckBoxField name="ЗапретАвтообзвона" id="923">
 									<DataPath>Объект.ЗапретАвтообзвона</DataPath>
-									<Enabled>false</Enabled>
 									<ReadOnly>true</ReadOnly>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="ЗапретАвтообзвонаКонтекстноеМеню" id="924"/>
@@ -2669,7 +2682,6 @@
 								</CheckBoxField>
 								<CheckBoxField name="НеконтактныеНомера" id="930">
 									<DataPath>Объект.НеконтактныеНомера</DataPath>
-									<Enabled>false</Enabled>
 									<ReadOnly>true</ReadOnly>
 									<CheckBoxType>Auto</CheckBoxType>
 									<ContextMenu name="НеконтактныеНомераКонтекстноеМеню" id="931"/>
@@ -2678,6 +2690,8 @@
 							</ChildItems>
 						</UsualGroup>
 						<Table name="ДолжникТелефоны" id="200">
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -2930,8 +2944,11 @@
 					<ChildItems>
 						<Table name="АктыПередачи" id="937">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>АктыПередачи</DataPath>
 							<RowPictureDataPath>АктыПередачи.DefaultPicture</RowPictureDataPath>
@@ -3022,8 +3039,11 @@
 					<ChildItems>
 						<Table name="Файлы" id="973">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>Файлы</DataPath>
 							<RowPictureDataPath>Файлы.DefaultPicture</RowPictureDataPath>
@@ -3122,8 +3142,11 @@
 					<ChildItems>
 						<Table name="Документы" id="889">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>ЗапросыДокументов</DataPath>
 							<RowPictureDataPath>ЗапросыДокументов.DefaultPicture</RowPictureDataPath>
@@ -3234,8 +3257,11 @@
 					<ChildItems>
 						<Table name="ДисконтИРестрктуризация" id="829">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>ДисконтИРестрктуризация</DataPath>
 							<RowPictureDataPath>ДисконтИРестрктуризация.DefaultPicture</RowPictureDataPath>
@@ -3399,8 +3425,11 @@
 						</CommandBar>
 						<Table name="НайденныеИП" id="1128">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>НайденныеИП</DataPath>
 							<RowPictureDataPath>НайденныеИП.DefaultPicture</RowPictureDataPath>
@@ -3580,8 +3609,11 @@
 						</CommandBar>
 						<Table name="НайденныеДелаОБанкротстве" id="1194">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>НайденныеДелаОБанкротстве</DataPath>
 							<RowPictureDataPath>НайденныеДелаОБанкротстве.DefaultPicture</RowPictureDataPath>
@@ -3697,7 +3729,10 @@
 					<ChildItems>
 						<Table name="СобытияКИ" id="1072">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>СобытияКИ</DataPath>
 							<RowPictureDataPath>СобытияКИ.DefaultPicture</RowPictureDataPath>
@@ -3775,8 +3810,11 @@
 						</Table>
 						<Table name="ЖурналВыгрузокНБКИ" id="1026">
 							<CommandBarLocation>None</CommandBarLocation>
+							<Height>5</Height>
+							<HeightControlVariant>UseHeightInFormRows</HeightControlVariant>
 							<UseAlternationRowColor>true</UseAlternationRowColor>
 							<InitialListView>Beginning</InitialListView>
+							<VerticalStretch>false</VerticalStretch>
 							<EnableStartDrag>true</EnableStartDrag>
 							<DataPath>ЖурналВыгрузокНБКИ</DataPath>
 							<RowPictureDataPath>ЖурналВыгрузокНБКИ.DefaultPicture</RowPictureDataPath>

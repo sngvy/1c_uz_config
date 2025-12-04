@@ -10,11 +10,11 @@
 	<CommandBarLocation>None</CommandBarLocation>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
-		<UsualGroup name="ГруппаСписокИзменений" id="7">
+		<UsualGroup name="ГруппаГлавная" id="7">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа список изменений</v8:content>
+					<v8:content>Группа главная</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -27,7 +27,7 @@
 			<Group>AlwaysHorizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
-			<ExtendedTooltip name="ГруппаСписокИзмененийРасширеннаяПодсказка" id="8"/>
+			<ExtendedTooltip name="ГруппаГлавнаяРасширеннаяПодсказка" id="8"/>
 			<ChildItems>
 				<PictureDecoration name="ИнформацияОВерсииИконка" id="1">
 					<Title formatted="false">
@@ -43,21 +43,69 @@
 					<ContextMenu name="ИнформацияОВерсииИконкаКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="ИнформацияОВерсииИконкаРасширеннаяПодсказка" id="3"/>
 				</PictureDecoration>
-				<LabelDecoration name="ИнформацияОВерсииВерсия" id="4">
-					<Title formatted="true">
+				<UsualGroup name="ГруппаВерсии" id="43">
+					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.9.7.7 от 18.11.2025&lt;/&gt;&lt;/&gt;
-
-&lt;color #808080&gt;Версия модуля интеграции с Федресурсом: 5.9.4&lt;/&gt;
-&lt;color #808080&gt;Версия модуля интеграции с ФССП: 5.5.12&lt;/&gt;
-&lt;color #808080&gt;Версия модуля интеграции с WhatsApp: 3.11.20&lt;/&gt;</v8:content>
+							<v8:content>Группа версии</v8:content>
 						</v8:item>
 					</Title>
-					<GroupVerticalAlign>Center</GroupVerticalAlign>
-					<ContextMenu name="ИнформацияОВерсииВерсияКонтекстноеМеню" id="5"/>
-					<ExtendedTooltip name="ИнформацияОВерсииВерсияРасширеннаяПодсказка" id="6"/>
-				</LabelDecoration>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа версии</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВерсииРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<LabelDecoration name="ИнформацияОВерсииВерсия" id="4">
+							<Title formatted="true">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;font Arial&gt;&lt;fontsize 14&gt;Версия&lt;/&gt;&lt;/&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;: 5.12.5 от 05.12.2025&lt;/&gt;&lt;/&gt;</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="ИнформацияОВерсииВерсияКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ИнформацияОВерсииВерсияРасширеннаяПодсказка" id="6"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаВерсииМодулей" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Версии модулей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа версии модулей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Collapsible</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Picture</ControlRepresentation>
+							<ExtendedTooltip name="ГруппаВерсииМодулейРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<LabelDecoration name="ИнформацияОВерсииМодулей" id="40">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия модуля интеграции с Федресурсом: 5.9.4
+Версия модуля интеграции с ФССП: 5.5.12
+Версия модуля интеграции с WhatsApp: 3.11.20
+Версия набора исправлений для БИТ.Phone: 1.0.0</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ИнформацияОВерсииМодулейКонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="ИнформацияОВерсииМодулейРасширеннаяПодсказка" id="42"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="ГруппаСлужебнаяСтраницы" id="29">

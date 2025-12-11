@@ -569,6 +569,16 @@
 						</Title>
 						<ExtendedTooltip name="ФормаПереустановитьWhatsAppРасширеннаяПодсказка" id="1492"/>
 					</Button>
+					<Button name="ФормаСменитьРежимМероприятий" id="1617">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.СменитьРежимМероприятий</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_Подсказка</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаСменитьРежимМероприятийРасширеннаяПодсказка" id="1618"/>
+					</Button>
 				</ChildItems>
 			</Popup>
 			<Button name="ОткрытьВЦ" id="1346">
@@ -9310,6 +9320,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Email</Action>
+		</Command>
+		<Command name="СменитьРежимМероприятий" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить режим мероприятий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сменить режим мероприятий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СменитьРежимМероприятий</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -12,48 +12,11 @@
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
-		<ChildItems>
-			<Button name="ФормаСохранитьНастройки" id="155">
-				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.СохранитьНастройки</CommandName>
-				<Picture>
-					<xr:Ref>StdPicture.Write</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
-				</Picture>
-				<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="156"/>
-			</Button>
-		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 	</Events>
 	<ChildItems>
-		<UsualGroup name="ГруппаНастройки" id="157">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Настройки</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настройки</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Representation>StrongSeparation</Representation>
-			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="158"/>
-			<ChildItems>
-				<CheckBoxField name="РазрешитьРедактированиеШаблоновСообщений" id="152">
-					<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСообщений</DataPath>
-					<CheckBoxType>Switcher</CheckBoxType>
-					<ContextMenu name="РазрешитьРедактированиеШаблоновСообщенийКонтекстноеМеню" id="153"/>
-					<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСообщенийРасширеннаяПодсказка" id="154"/>
-				</CheckBoxField>
-			</ChildItems>
-		</UsualGroup>
 		<Table name="СписокШаблонов" id="159">
 			<CommandBarLocation>None</CommandBarLocation>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
@@ -115,6 +78,33 @@
 				</LabelField>
 			</ChildItems>
 		</Table>
+		<UsualGroup name="ГруппаНастройки" id="157">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="158"/>
+			<ChildItems>
+				<CheckBoxField name="РазрешитьРедактированиеШаблоновСообщений" id="152">
+					<DataPath>НаборКонстант.РазрешитьРедактированиеШаблоновСообщений</DataPath>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="РазрешитьРедактированиеШаблоновСообщенийКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="РазрешитьРедактированиеШаблоновСообщенийРасширеннаяПодсказка" id="154"/>
+					<Events>
+						<Event name="OnChange">СохранитьНастройки</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="СкрытоеПолеНомерДО" id="9">

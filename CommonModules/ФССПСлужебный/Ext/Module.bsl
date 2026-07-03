@@ -8,7 +8,7 @@
 			Соединение = Новый HTTPСоединение("api.xn--80ajbekothchmme5j.xn--p1ai", 443,,,,, SSL);
 			
 			Заголовки = Новый Соответствие;
-			Заголовки.Вставить("Authorization", "Bearer " + "aG4Ca-zx5gxmW456dtkwrFW3mlKDmn9d");
+			Заголовки.Вставить("Authorization", "Bearer " + "LfuAaLVxlFgjOwg-JBxDOvlvAlm_V9U5");
 			Заголовки.Вставить("Content-Type", "application/json");
 			
 			Данные = Новый Структура();
@@ -18,13 +18,20 @@
 			ИП.Вставить("fio", Эл.Должник);
 			ИП.Вставить("region_id", Эл.КодРегиона);
 			Данные.Вставить("document_value", ИП);
+			Данные.Вставить("is_marketing_allow", Ложь);
+			
+			Заголовки.Вставить("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36");
+			Заголовки.Вставить("Origin", "https://oplata-fssp.ru");
+			Заголовки.Вставить("Referer", "https://oplata-fssp.ru/");
+			Заголовки.Вставить("Accept", "application/json, text/plain, */*");
+			Заголовки.Вставить("Accept-Language", "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7");
 			
 			ЗаписьJSON = Новый ЗаписьJSON;            
 			ЗаписьJSON.УстановитьСтроку();
 			ЗаписатьJSON(ЗаписьJSON, Данные);            
 			ТелоЗапроса = ЗаписьJSON.Закрыть(); 
 			
-			Запрос = Новый HTTPЗапрос("/fssp/frontend-search?yandexToken=dD0xNzU3NDUyMzQ5O2k9OTMuOTIuMTk0Ljg2O0Q9NjJENkJDNDY4RjAzRDA1NDZGQzUyODQ5MEJCRjM0RjU3MTIwRjI3NzZBMzUyM0IxQUNGRjc2OTg1NDVBQTIzODdGRkFGNDYxREQyNTE3QUZCMTg0QzMwOTdGNDg0RUU4OEJFMDlFQTFDNUE4NjJFRTdFOTg2ODgxMkNCNzNGQUZGQjY4Q0E2RTkxMkI0NDYzREY2NkM2OUFCRjM4QkI4OTlBO3U9MTc1NzQ1MjM0OTA5Nzk2MjEwOTtoPWI1NGVhYTY5NzdiYTgzNTEwNzkxMWYyNDg0OTI2NWUz&lead_source_id=search&lead_source_id_ext=google", Заголовки);
+			Запрос = Новый HTTPЗапрос("/fssp/frontend-search?yandexToken=dD0xNzgzMDU4MzM5O2k9OTMuOTIuMTk0Ljg2O0Q9RjI4NzBFNTgyM0RCNjFBQzBGODc5ODJGMDM5QzczQTVBNzNGNjVBNTkzNjJFOEQ2NDM3QUVFQUVDMkM5NEM0QzE3RDEzNjU2OEFDMDc5MkMxRTI4MjcxNjYwM0I0MTgwNjg4NzdERjBFQkNERTg1RDJGN0VGMERGNjAyMzE4OEM2NjRGMEJBNTFFMTlEQUY3RDJEOUZBQzZGNTgwMEUzMEIwO3U9MTc4MzA1ODMzOTQyOTU4NjUxMDtoPWYzNmQ3Y2U5ZGU5NTcwNzFjNzkyYTY5N2UzOTQ4NzNm&lead_source_id=search&lead_source_id_ext=google", Заголовки);
 			Запрос.УстановитьТелоИзСтроки(ТелоЗапроса);
 			
 			Ответ = Соединение.ВызватьHTTPМетод("POST", Запрос);

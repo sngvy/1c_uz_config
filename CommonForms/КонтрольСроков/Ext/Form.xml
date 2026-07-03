@@ -32,6 +32,9 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<Pages name="ГруппаСтраницы" id="82">
 			<Title>
@@ -145,6 +148,11 @@
 									<ContextMenu name="СписокДООбработанныеВовремяДатаПоследнегоМероприятияКонтекстноеМеню" id="44"/>
 									<ExtendedTooltip name="СписокДООбработанныеВовремяДатаПоследнегоМероприятияРасширеннаяПодсказка" id="45"/>
 								</LabelField>
+								<LabelField name="СписокДООбработанныеДнейСОбработки" id="95">
+									<DataPath>СписокДООбработанные.ДнейСОбработки</DataPath>
+									<ContextMenu name="СписокДООбработанныеДнейСОбработкиКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="СписокДООбработанныеДнейСОбработкиРасширеннаяПодсказка" id="97"/>
+								</LabelField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -244,6 +252,12 @@
 									<ContextMenu name="СписокДОПросроченныеДатаПоследнегоМероприятияКонтекстноеМеню" id="69"/>
 									<ExtendedTooltip name="СписокДОПросроченныеДатаПоследнегоМероприятияРасширеннаяПодсказка" id="70"/>
 								</LabelField>
+								<InputField name="СписокДОПросроченныеДнейСОбработки" id="92">
+									<DataPath>СписокДОПросроченные.ДнейСОбработки</DataPath>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СписокДОПросроченныеДнейСОбработкиКонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="СписокДОПросроченныеДнейСОбработкиРасширеннаяПодсказка" id="94"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
@@ -267,7 +281,8 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ДолговыеОбязательства.Ссылка КАК Ссылка,
-	МАКСИМУМ(Мероприятие.ДатаВыполнения) КАК ДатаПоследнегоМероприятия
+	МАКСИМУМ(Мероприятие.ДатаВыполнения) КАК ДатаПоследнегоМероприятия,
+	РАЗНОСТЬДАТ(МАКСИМУМ(Мероприятие.ДатаВыполнения), &amp;ТекущаяДата, ДЕНЬ) КАК ДнейСОбработки
 ИЗ
 	Задача.Мероприятие КАК Мероприятие
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
@@ -275,6 +290,47 @@
 
 СГРУППИРОВАТЬ ПО
 	ДолговыеОбязательства.Ссылка</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоследнегоМероприятия</dcssch:dataPath>
+					<dcssch:field>ДатаПоследнегоМероприятия</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата последнего мероприятия</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДнейСОбработки</dcssch:dataPath>
+					<dcssch:field>ДнейСОбработки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дней с обработки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>ТекущаяДата</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущая дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -328,7 +384,8 @@
 				<DynamicDataRead>false</DynamicDataRead>
 				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
 	ДолговыеОбязательства.Ссылка КАК Ссылка,
-	МАКСИМУМ(Мероприятие.ДатаВыполнения) КАК ДатаПоследнегоМероприятия
+	МАКСИМУМ(Мероприятие.ДатаВыполнения) КАК ДатаПоследнегоМероприятия,
+	РАЗНОСТЬДАТ(МАКСИМУМ(Мероприятие.ДатаВыполнения), &amp;ТекущаяДата, ДЕНЬ) КАК ДнейСОбработки
 ИЗ
 	Задача.Мероприятие КАК Мероприятие
 		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ДолговыеОбязательства КАК ДолговыеОбязательства
@@ -336,6 +393,47 @@
 
 СГРУППИРОВАТЬ ПО
 	ДолговыеОбязательства.Ссылка</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаПоследнегоМероприятия</dcssch:dataPath>
+					<dcssch:field>ДатаПоследнегоМероприятия</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата последнего мероприятия</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДнейСОбработки</dcssch:dataPath>
+					<dcssch:field>ДнейСОбработки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дней с обработки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>ТекущаяДата</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущая дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>true</dcssch:useRestriction>
+				</Parameter>
 				<ListSettings>
 					<dcsset:filter>
 						<dcsset:item xsi:type="dcsset:FilterItemComparison">

@@ -139,6 +139,22 @@
 				</Title>
 				<ExtendedTooltip name="ФормаДолжникМероприятияРасширеннаяПодсказка" id="105"/>
 			</Button>
+			<Button name="ФормаПоискПоМероприятиям" id="112">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.Command.ПоискПоМероприятиям</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Find</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Поиск</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаПоискПоМероприятиямРасширеннаяПодсказка" id="113"/>
+			</Button>
 			<Button name="ФормаОтменитьВыполнение" id="73">
 				<Type>CommandBarButton</Type>
 				<UserVisible>
@@ -1168,6 +1184,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>Email</Action>
+		</Command>
+		<Command name="ПоискПоМероприятиям" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по мероприятиям</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск по мероприятиям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоискПоМероприятиям</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -473,6 +473,16 @@
 						<CommandName>Form.Command.Отладка</CommandName>
 						<ExtendedTooltip name="ФормаОтладкаExtendedTooltip" id="215"/>
 					</Button>
+					<Button name="ФормаУправлениеАТС" id="1619">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.УправлениеАвтообзвоном</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.NC_Настройки16</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ФормаУправлениеАТСРасширеннаяПодсказка" id="1620"/>
+					</Button>
 					<Button name="ФормаУправлениеОстатками" id="1561">
 						<Type>CommandBarButton</Type>
 						<Representation>PictureAndText</Representation>
@@ -9335,6 +9345,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СменитьРежимМероприятий</Action>
+		</Command>
+		<Command name="УправлениеАвтообзвоном" id="68">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление автообзвоном</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление автообзвоном</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УправлениеАвтообзвоном</Action>
 		</Command>
 	</Commands>
 </Form>

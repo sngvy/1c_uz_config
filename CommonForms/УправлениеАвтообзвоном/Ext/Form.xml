@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+	<VerticalSpacing>Single</VerticalSpacing>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="ГруппаОбщая" id="64">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общая</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОбщаяРасширеннаяПодсказка" id="65"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЗадачиНаАТС" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи на АТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи на АТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаЗадачиНаАТСРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<Table name="ЗадачиНаАТС" id="5">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ЗадачиНаАТС</DataPath>
+							<RowPictureDataPath>ЗадачиНаАТС.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>5</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ЗадачиНаАТСКонтекстноеМеню" id="6">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="ЗадачиНаАТСКоманднаяПанель" id="7">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ЗадачиНаАТСЗапустить" id="55">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<DefaultButton>true</DefaultButton>
+										<CommandName>Form.Command.Запустить</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ЗадачиНаАТСЗапуститьРасширеннаяПодсказка" id="56"/>
+									</Button>
+									<Button name="ЗадачиНаАТСОстановить" id="57">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.Остановить</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ЗадачиНаАТСОстановитьРасширеннаяПодсказка" id="58"/>
+									</Button>
+									<Button name="ЗадачиНаАТСВыбратьСписок" id="59">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ВыбратьСписок</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ЗадачиНаАТСВыбратьСписокРасширеннаяПодсказка" id="60"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗадачиНаАТСРасширеннаяПодсказка" id="8"/>
+							<SearchStringAddition name="ЗадачиНаАТССтрокаПоиска" id="9">
+								<AdditionSource>
+									<Item>ЗадачиНаАТС</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиНаАТССтрокаПоискаКонтекстноеМеню" id="10"/>
+								<ExtendedTooltip name="ЗадачиНаАТССтрокаПоискаРасширеннаяПодсказка" id="11"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗадачиНаАТССостояниеПросмотра" id="12">
+								<AdditionSource>
+									<Item>ЗадачиНаАТС</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиНаАТССостояниеПросмотраКонтекстноеМеню" id="13"/>
+								<ExtendedTooltip name="ЗадачиНаАТССостояниеПросмотраРасширеннаяПодсказка" id="14"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗадачиНаАТСУправлениеПоиском" id="15">
+								<AdditionSource>
+									<Item>ЗадачиНаАТС</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиНаАТСУправлениеПоискомКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="ЗадачиНаАТСУправлениеПоискомРасширеннаяПодсказка" id="17"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗадачиНаАТСВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЗадачиНаАТСID" id="18">
+									<DataPath>ЗадачиНаАТС.ID</DataPath>
+									<ContextMenu name="ЗадачиНаАТСIDКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="ЗадачиНаАТСIDРасширеннаяПодсказка" id="20"/>
+								</LabelField>
+								<LabelField name="ЗадачиНаАТСЗадача" id="33">
+									<DataPath>ЗадачиНаАТС.Задача</DataPath>
+									<ContextMenu name="ЗадачиНаАТСЗадачаКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="ЗадачиНаАТСЗадачаРасширеннаяПодсказка" id="35"/>
+								</LabelField>
+								<LabelField name="ЗадачиНаАТСВремяНачала" id="27">
+									<DataPath>ЗадачиНаАТС.ВремяНачала</DataPath>
+									<ContextMenu name="ЗадачиНаАТСВремяНачалаКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ЗадачиНаАТСВремяНачалаРасширеннаяПодсказка" id="29"/>
+								</LabelField>
+								<LabelField name="ЗадачиНаАТСВремяОкончания" id="30">
+									<DataPath>ЗадачиНаАТС.ВремяОкончания</DataPath>
+									<ContextMenu name="ЗадачиНаАТСВремяОкончанияКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ЗадачиНаАТСВремяОкончанияРасширеннаяПодсказка" id="32"/>
+								</LabelField>
+								<LabelField name="ЗадачиНаАТСIDСписка" id="21">
+									<DataPath>ЗадачиНаАТС.IDСписка</DataPath>
+									<ContextMenu name="ЗадачиНаАТСIDСпискаКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="ЗадачиНаАТСIDСпискаРасширеннаяПодсказка" id="23"/>
+								</LabelField>
+								<LabelField name="ЗадачиНаАТСАктивна" id="24">
+									<DataPath>ЗадачиНаАТС.Активна</DataPath>
+									<ContextMenu name="ЗадачиНаАТСАктивнаКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="ЗадачиНаАТСАктивнаРасширеннаяПодсказка" id="26"/>
+								</LabelField>
+								<LabelField name="ЗадачиНаАТСЗавершена" id="61">
+									<DataPath>ЗадачиНаАТС.Завершена</DataPath>
+									<ContextMenu name="ЗадачиНаАТСЗавершенаКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ЗадачиНаАТСЗавершенаРасширеннаяПодсказка" id="63"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСпискиНаАТС" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Списки на АТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Списки на АТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>StrongSeparation</Representation>
+					<ExtendedTooltip name="ГруппаСпискиНаАТСРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<Table name="СпискиНаАТС" id="36">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialListView>Beginning</InitialListView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СпискиНаАТС</DataPath>
+							<RowPictureDataPath>СпискиНаАТС.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>5</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СпискиНаАТСКонтекстноеМеню" id="37">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="СпискиНаАТСКоманднаяПанель" id="38">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СпискиНаАТСОбновитьСписки" id="68">
+										<Type>CommandBarButton</Type>
+										<Representation>PictureAndText</Representation>
+										<CommandName>Form.Command.ОбновитьСписки</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Refresh</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="СпискиНаАТСОбновитьСпискиРасширеннаяПодсказка" id="69"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СпискиНаАТСРасширеннаяПодсказка" id="39"/>
+							<SearchStringAddition name="СпискиНаАТССтрокаПоиска" id="40">
+								<AdditionSource>
+									<Item>СпискиНаАТС</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СпискиНаАТССтрокаПоискаКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="СпискиНаАТССтрокаПоискаРасширеннаяПодсказка" id="42"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СпискиНаАТССостояниеПросмотра" id="43">
+								<AdditionSource>
+									<Item>СпискиНаАТС</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СпискиНаАТССостояниеПросмотраКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="СпискиНаАТССостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СпискиНаАТСУправлениеПоиском" id="46">
+								<AdditionSource>
+									<Item>СпискиНаАТС</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СпискиНаАТСУправлениеПоискомКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="СпискиНаАТСУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">СпискиНаАТСВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СпискиНаАТСID" id="49">
+									<DataPath>СпискиНаАТС.ID</DataPath>
+									<ContextMenu name="СпискиНаАТСIDКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="СпискиНаАТСIDРасширеннаяПодсказка" id="51"/>
+								</LabelField>
+								<LabelField name="СпискиНаАТССписок" id="52">
+									<DataPath>СпискиНаАТС.Список</DataPath>
+									<ContextMenu name="СпискиНаАТССписокКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="СпискиНаАТССписокРасширеннаяПодсказка" id="54"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ЗадачиНаАТС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи на АТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer.Ссылка КАК ID,
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer.name КАК Задача,
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer.phonelist_id КАК IDСписка,
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer.time_start КАК ВремяНачала,
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer.time_end КАК ВремяОкончания,
+	ВЫБОР
+		КОГДА ВнешнийИсточникДанныхBITPBXТаблицаautodialer.active = 1
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Активна,
+	ВЫБОР
+		КОГДА ВнешнийИсточникДанныхBITPBXТаблицаautodialer.finished = 1
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК Завершена
+ИЗ
+	ВнешнийИсточникДанных.BITPBX.Таблица.autodialer КАК ВнешнийИсточникДанныхBITPBXТаблицаautodialer</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ID</dcssch:dataPath>
+					<dcssch:field>ID</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>queue_id</dcssch:dataPath>
+					<dcssch:field>queue_id</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>scheme_id</dcssch:dataPath>
+					<dcssch:field>scheme_id</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>time_end</dcssch:dataPath>
+					<dcssch:field>time_end</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>name</dcssch:dataPath>
+					<dcssch:field>name</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>phonelist_id</dcssch:dataPath>
+					<dcssch:field>phonelist_id</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>limit_days</dcssch:dataPath>
+					<dcssch:field>limit_days</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>announcement_id</dcssch:dataPath>
+					<dcssch:field>announcement_id</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>time_start</dcssch:dataPath>
+					<dcssch:field>time_start</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>time_interval</dcssch:dataPath>
+					<dcssch:field>time_interval</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>timeout</dcssch:dataPath>
+					<dcssch:field>timeout</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>repeats</dcssch:dataPath>
+					<dcssch:field>repeats</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>limit_lines</dcssch:dataPath>
+					<dcssch:field>limit_lines</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>limit_daycalls</dcssch:dataPath>
+					<dcssch:field>limit_daycalls</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>active</dcssch:dataPath>
+					<dcssch:field>active</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>finished</dcssch:dataPath>
+					<dcssch:field>finished</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Задача</dcssch:dataPath>
+					<dcssch:field>Задача</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Активна</dcssch:dataPath>
+					<dcssch:field>Активна</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активна</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>IDСписка</dcssch:dataPath>
+					<dcssch:field>IDСписка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ID cписка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВремяНачала</dcssch:dataPath>
+					<dcssch:field>ВремяНачала</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время начала</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВремяОкончания</dcssch:dataPath>
+					<dcssch:field>ВремяОкончания</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время окончания</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>id1</dcssch:dataPath>
+					<dcssch:field>id1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Id1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Завершена</dcssch:dataPath>
+					<dcssch:field>Завершена</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Завершена</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>ExternalDataSource.BITPBX.Table.autodialer</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ID</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Активна</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветФона</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">web:LightGreen</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СпискиНаАТС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки на АТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer_phonelists.Ссылка КАК ID,
+	ВнешнийИсточникДанныхBITPBXТаблицаautodialer_phonelists.name КАК Список
+ИЗ
+	ВнешнийИсточникДанных.BITPBX.Таблица.autodialer_phonelists КАК ВнешнийИсточникДанныхBITPBXТаблицаautodialer_phonelists</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ID</dcssch:dataPath>
+					<dcssch:field>ID</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>name</dcssch:dataPath>
+					<dcssch:field>name</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Список</dcssch:dataPath>
+					<dcssch:field>Список</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>id1</dcssch:dataPath>
+					<dcssch:field>id1</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Id1</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>ExternalDataSource.BITPBX.Table.autodialer_phonelists</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>ID</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Запустить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Запустить</Action>
+		</Command>
+		<Command name="Остановить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Остановить</Action>
+		</Command>
+		<Command name="ВыбратьСписок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьСписок</Action>
+		</Command>
+		<Command name="ОбновитьЗадачи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить задачи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить задачи</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ОбновитьСписки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить списки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить списки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСписки</Action>
+		</Command>
+	</Commands>
+</Form>
